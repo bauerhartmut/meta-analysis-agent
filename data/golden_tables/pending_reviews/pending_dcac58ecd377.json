@@ -1,0 +1,79 @@
+{
+  "case_id": "pending_dcac58ecd377",
+  "source_file": "dcac58ecd377576d6fab8e05aea1f027.txt",
+  "annotated_by": "machine-candidate (order §4.2: needs human review)",
+  "created_at": "2026-11-01T21:58:06.542967+00:00",
+  "expected_blocks": [
+    {
+      "table_label": "Table 1",
+      "caption_startswith": "Table 1. Corpus statistics. Dep. = depressed (SGDS≥8).",
+      "min_lines": 3,
+      "expected_effect_cells": 0,
+      "body_preview_first_3_lines": [
+        "Year N Dep. Non-d. Age MMSE SGDS",
+        "Y1 61 14 47 77.7±5.8 23.8±3.3 4.5±3.9",
+        "Y2 72 13 59 78.5±6.1 23.2±3.5 4.0±4.1"
+      ]
+    },
+    {
+      "table_label": "Table 3",
+      "caption_startswith": "Table 3. Group-level analysis: LMM SGDS coefficient and par-",
+      "min_lines": 6,
+      "expected_effect_cells": 0,
+      "body_preview_first_3_lines": [
+        "der, applied to PC1 of each group. ∗p < .05.",
+        "LMM Pcorr",
+        "Groupd%PC1β p r p"
+      ]
+    },
+    {
+      "table_label": "Table 4",
+      "caption_startswith": "Table 4. Depression classification (LOSO CV ,N=209). †Linear",
+      "min_lines": 14,
+      "expected_effect_cells": 0,
+      "body_preview_first_3_lines": [
+        "Best UAR in bold.",
+        "MethoddUAR Sens Spec Acc F1",
+        "Baselines"
+      ]
+    },
+    {
+      "table_label": "Table 5",
+      "caption_startswith": "Table 5. Formant subgroup classification. Same setup as Ta-",
+      "min_lines": 5,
+      "expected_effect_cells": 0,
+      "body_preview_first_3_lines": [
+        "ble 4. Best UAR in bold.",
+        "SubgroupdUAR Sens Spec Acc F1",
+        "F1 6 .618 .634 .601 .608 .388"
+      ]
+    }
+  ],
+  "effect_cells_total_in_document": 0,
+  "annotations_needed": [
+    {
+      "block_0": {
+        "confirm_or_fix_caption": true,
+        "mark_cell_values": []
+      }
+    },
+    {
+      "block_1": {
+        "confirm_or_fix_caption": true,
+        "mark_cell_values": []
+      }
+    },
+    {
+      "block_2": {
+        "confirm_or_fix_caption": true,
+        "mark_cell_values": []
+      }
+    },
+    {
+      "block_3": {
+        "confirm_or_fix_caption": true,
+        "mark_cell_values": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "case_id": "pending_17c7628ed0e8",
+  "source_file": "17c7628ed0e8f01d4ec063e2b730dc36.txt",
+  "annotated_by": "machine-candidate (order §4.2: needs human review)",
+  "created_at": "2026-11-01T21:58:06.614682+00:00",
+  "expected_blocks": [
+    {
+      "table_label": "Table 2",
+      "caption_startswith": "Table 2. Baseline characteristics of participants by risk of",
+      "min_lines": 3,
+      "expected_effect_cells": 1,
+      "body_preview_first_3_lines": [
+        "",
+        "Full size table",
+        ""
+      ]
+    }
+  ],
+  "effect_cells_total_in_document": 2,
+  "annotations_needed": [
+    {
+      "block_0": {
+        "confirm_or_fix_caption": true,
+        "mark_cell_values": [
+          {
+            "line_first_50": "We employed Cox proportional hazards regression mo",
+            "keyword": "HR",
+            "value": "1.163",
+            "ci_low": "",
+            "ci_high": ""
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,125 @@
+{
+  "case_id": "pending_5ddb805e444b",
+  "source_file": "5ddb805e444ba9bcfbc68dd4671e6546.txt",
+  "annotated_by": "machine-candidate (order §4.2: needs human review)",
+  "created_at": "2026-11-01T21:58:06.597667+00:00",
+  "expected_blocks": [
+    {
+      "table_label": "(pipe table)",
+      "caption_startswith": "(pipe table at char 35750)",
+      "min_lines": 32,
+      "expected_effect_cells": 0,
+      "body_preview_first_3_lines": [
+        "(N = 1,880)",
+        "Age at recruitment (years)a 58.0 [50.0, 63.0] 62.0 [57.0, 66.0] 63.00 [58.0, 66.0] 64.00 [59.0, 67.0] 61.00 [55.0, 65.0] 61.00 [55.0, ",
+        "65.0]"
+      ]
+    },
+    {
+      "table_label": "(pipe table)",
+      "caption_startswith": "(pipe table at char 40028)",
+      "min_lines": 3,
+      "expected_effect_cells": 0,
+      "body_preview_first_3_lines": [
+        "ciated with a 0.14 (95% CI 0.12–0.15), 0.11 (95% CI 0.09–",
+        "0.14), 0.13 (95% CI 0.12–0.14), 0.10 (95% CI 0.07–0.13), ",
+        "and 0.17 (95% CI 0.16–0.18) increase in the risk of isch -"
+      ]
+    },
+    {
+      "table_label": "(pipe table)",
+      "caption_startswith": "(pipe table at char 41093)",
+      "min_lines": 41,
+      "expected_effect_cells": 4,
+      "body_preview_first_3_lines": [
+        "dial infarction (HR = 0.74, 95% CI 0.72–0.76) and a 29% ",
+        "reduction in the risk of unstable angina (HR = 0.71, 95% ",
+        "CI 0.67–0.76). Similarly, each 1-SD increase in M-HDL-"
+      ]
+    },
+    {
+      "table_label": "(pipe table)",
+      "caption_startswith": "(pipe table at char 49127)",
+      "min_lines": 3,
+      "expected_effect_cells": 0,
+      "body_preview_first_3_lines": [
+        "from 1.03% to 6.48%, 1.05% to 4.88%, and 0.37% to 1.48%, ",
+        "respectively. The ID increased from 0.76 to 4.98, 0.78 to ",
+        "3.77, and 0.28 to 1.13 per 1,000 person-years, respec -"
+      ]
+    },
+    {
+      "table_label": "(pipe table)",
+      "caption_startswith": "(pipe table at char 50913)",
+      "min_lines": 5,
+      "expected_effect_cells": 0,
+      "body_preview_first_3_lines": [
+        "Page 14 of 19",
+        "Zhang et al. Cardiovascular Diabetology          (2025) 24:153 ",
+        "risks of 1.21 (95% CI 1.11–1.32) in the moderate-risk "
+      ]
+    }
+  ],
+  "effect_cells_total_in_document": 10,
+  "annotations_needed": [
+    {
+      "block_0": {
+        "confirm_or_fix_caption": true,
+        "mark_cell_values": []
+      }
+    },
+    {
+      "block_1": {
+        "confirm_or_fix_caption": true,
+        "mark_cell_values": []
+      }
+    },
+    {
+      "block_2": {
+        "confirm_or_fix_caption": true,
+        "mark_cell_values": [
+          {
+            "line_first_50": "dial infarction (HR = 0.74, 95% CI 0.72–0.76) and ",
+            "keyword": "HR",
+            "value": "0.74",
+            "ci_low": "",
+            "ci_high": ""
+          },
+          {
+            "line_first_50": "reduction in the risk of unstable angina (HR = 0.7",
+            "keyword": "HR",
+            "value": "0.71",
+            "ci_low": "",
+            "ci_high": ""
+          },
+          {
+            "line_first_50": "infarction risk (HR = 0.83, 95% CI 0.81–0.86) and ",
+            "keyword": "HR",
+            "value": "0.83",
+            "ci_low": "",
+            "ci_high": ""
+          },
+          {
+            "line_first_50": "reduction in unstable angina risk (HR = 0.85, 95% ",
+            "keyword": "HR",
+            "value": "0.85",
+            "ci_low": "",
+            "ci_high": ""
+          }
+        ]
+      }
+    },
+    {
+      "block_3": {
+        "confirm_or_fix_caption": true,
+        "mark_cell_values": []
+      }
+    },
+    {
+      "block_4": {
+        "confirm_or_fix_caption": true,
+        "mark_cell_values": []
+      }
+    }
+  ]
+}

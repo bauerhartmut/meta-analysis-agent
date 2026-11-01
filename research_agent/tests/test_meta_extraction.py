@@ -258,5 +258,22 @@ class SourceIdentityTest(unittest.TestCase):
         self.assertEqual(db._get("sources", "s1")["doi"], "10.1038/ng.3285")
 
 
+class PassComparisonFieldTest(unittest.TestCase):
+    def test_unit_design_population_ci_bounds_mark_disputed(self):
+        base = {"outcome": "bp", "comparison": "med vs ctrl", "id": "r1",
+                "effect": -1.2, "se": 0.3, "ci_low": -1.8, "ci_high": -0.6}
+        a = {**base, "unit": "mmHg", "design": "rct", "population": "adults", "n": 400}
+        b = {**base, "unit": "mmHg", "design": "rct", "population": "adults", "n": 400}
+        out = compare_extraction_passes([a], [b])
+        self.assertEqual(out["conflicts"], [])
+        # unit disagrees -> both rows carry the dispute, none is averaged
+        b2 = {**b, "unit": "ratio"}
+        out = compare_extraction_passes([a], [b2])
+        self.assertEqual(out["conflicts"], ["bp/?: unit"])
+        self.assertEqual(a["disputed"], 1)
+        self.assertEqual(b2["disputed"], 1)
+        self.assertTrue(out["conflict_ratio"] > 0)
+
+
 if __name__ == "__main__":
     unittest.main()

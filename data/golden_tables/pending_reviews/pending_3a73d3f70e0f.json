@@ -1,0 +1,62 @@
+{
+  "case_id": "pending_3a73d3f70e0f",
+  "source_file": "3a73d3f70e0f2844b052ac848c3cdd41.txt",
+  "annotated_by": "machine-candidate (order §4.2: needs human review)",
+  "created_at": "2026-11-01T21:58:06.751382+00:00",
+  "expected_blocks": [
+    {
+      "table_label": "(pipe table)",
+      "caption_startswith": "(pipe table at char 9740)",
+      "min_lines": 3,
+      "expected_effect_cells": 0,
+      "body_preview_first_3_lines": [
+        "i = a + b · i + c · i2 + d · i3 (1)",
+        "where i indicates the pixel (i = 0, ..., 1023) and",
+        "a = 337.92288208 nm"
+      ]
+    },
+    {
+      "table_label": "(pipe table)",
+      "caption_startswith": "(pipe table at char 10872)",
+      "min_lines": 4,
+      "expected_effect_cells": 0,
+      "body_preview_first_3_lines": [
+        "678 nm",
+        "722 nm",
+        "678 nm"
+      ]
+    },
+    {
+      "table_label": "(pipe table)",
+      "caption_startswith": "(pipe table at char 12883)",
+      "min_lines": 12,
+      "expected_effect_cells": 0,
+      "body_preview_first_3_lines": [
+        "D03 0.35 8.4 0.123 1.435 26 VOO",
+        "D04 0.34 8.6 0.108 1.403 40 VOO",
+        "D05 0.36 10.3 0.112 1.44 18 VOO"
+      ]
+    }
+  ],
+  "effect_cells_total_in_document": 0,
+  "annotations_needed": [
+    {
+      "block_0": {
+        "confirm_or_fix_caption": true,
+        "mark_cell_values": []
+      }
+    },
+    {
+      "block_1": {
+        "confirm_or_fix_caption": true,
+        "mark_cell_values": []
+      }
+    },
+    {
+      "block_2": {
+        "confirm_or_fix_caption": true,
+        "mark_cell_values": []
+      }
+    }
+  ]
+}

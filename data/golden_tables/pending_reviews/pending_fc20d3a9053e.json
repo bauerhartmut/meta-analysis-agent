@@ -1,0 +1,202 @@
+{
+  "case_id": "pending_fc20d3a9053e",
+  "source_file": "fc20d3a9053e6e3261dc1c7791562873.txt",
+  "annotated_by": "machine-candidate (order §4.2: needs human review)",
+  "created_at": "2026-11-01T21:58:06.511879+00:00",
+  "expected_blocks": [
+    {
+      "table_label": "(pipe table)",
+      "caption_startswith": "(pipe table at char 1011)",
+      "min_lines": 5,
+      "expected_effect_cells": 0,
+      "body_preview_first_3_lines": [
+        "622 West 168th Street, PH9-103H ",
+        "New York, NY 10032 ",
+        "ms2554@cumc.columbia.edu "
+      ]
+    },
+    {
+      "table_label": "(pipe table)",
+      "caption_startswith": "(pipe table at char 16575)",
+      "min_lines": 3,
+      "expected_effect_cells": 4,
+      "body_preview_first_3_lines": [
+        "associated with increased diabetes risk in AMR (PRS-SS and HbA1C: β=0.019, p-0.014) and ",
+        "EAS (PRS-SS and fasting glucose: β=0.160, p=0.017) populations, it was linked to decreased ",
+        "diabetes risk in AFR (PRS-SS and HbA1C: β=-0.017, p=0.013) and MID (PRS-SD and fasting "
+      ]
+    },
+    {
+      "table_label": "Table 1",
+      "caption_startswith": "Table 1. Characteristics of AoU participants included in the",
+      "min_lines": 14,
+      "expected_effect_cells": 0,
+      "body_preview_first_3_lines": [
+        " ",
+        " N % ",
+        "Number of participants with genomic "
+      ]
+    },
+    {
+      "table_label": "Table 3",
+      "caption_startswith": "Table 3. Pooled longitudinal analysis results. PRS-C PRS-C w",
+      "min_lines": 21,
+      "expected_effect_cells": 6,
+      "body_preview_first_3_lines": [
+        "β 95% CI p-",
+        "value  ",
+        "β 95% CI p-"
+      ]
+    },
+    {
+      "table_label": "(pipe table)",
+      "caption_startswith": "(pipe table at char 36050)",
+      "min_lines": 49,
+      "expected_effect_cells": 0,
+      "body_preview_first_3_lines": [
+        "BMI 0.002 [-0.003, ",
+        "0.007] ",
+        "0.424 -0.006 [-0.029, "
+      ]
+    },
+    {
+      "table_label": "(pipe table)",
+      "caption_startswith": "(pipe table at char 54293)",
+      "min_lines": 60,
+      "expected_effect_cells": 0,
+      "body_preview_first_3_lines": [
+        "190,876  89.8% 0.002 ",
+        "[-0.003, ",
+        "0.007] 0.424 0.012*** "
+      ]
+    },
+    {
+      "table_label": "(pipe table)",
+      "caption_startswith": "(pipe table at char 55866)",
+      "min_lines": 16,
+      "expected_effect_cells": 0,
+      "body_preview_first_3_lines": [
+        "[-0.071, ",
+        "0.025] 0.347 -0.012 ",
+        "[-0.061, "
+      ]
+    }
+  ],
+  "effect_cells_total_in_document": 25,
+  "annotations_needed": [
+    {
+      "block_0": {
+        "confirm_or_fix_caption": true,
+        "mark_cell_values": []
+      }
+    },
+    {
+      "block_1": {
+        "confirm_or_fix_caption": true,
+        "mark_cell_values": [
+          {
+            "line_first_50": "associated with increased diabetes risk in AMR (PR",
+            "keyword": "β",
+            "value": "0.019",
+            "ci_low": "",
+            "ci_high": ""
+          },
+          {
+            "line_first_50": "EAS (PRS-SS and fasting glucose: β=0.160, p=0.017)",
+            "keyword": "β",
+            "value": "0.160",
+            "ci_low": "",
+            "ci_high": ""
+          },
+          {
+            "line_first_50": "diabetes risk in AFR (PRS-SS and HbA1C: β=-0.017, ",
+            "keyword": "β",
+            "value": "-0.017",
+            "ci_low": "",
+            "ci_high": ""
+          },
+          {
+            "line_first_50": "glucose: β=0.427, p=0.013) populations. These find",
+            "keyword": "β",
+            "value": "0.427",
+            "ci_low": "",
+            "ci_high": ""
+          }
+        ]
+      }
+    },
+    {
+      "block_2": {
+        "confirm_or_fix_caption": true,
+        "mark_cell_values": []
+      }
+    },
+    {
+      "block_3": {
+        "confirm_or_fix_caption": true,
+        "mark_cell_values": [
+          {
+            "line_first_50": "β 95% CI p-",
+            "keyword": "β",
+            "value": "95",
+            "ci_low": "",
+            "ci_high": ""
+          },
+          {
+            "line_first_50": "β 95% CI p-",
+            "keyword": "β",
+            "value": "95",
+            "ci_low": "",
+            "ci_high": ""
+          },
+          {
+            "line_first_50": "β 95% CI p-",
+            "keyword": "β",
+            "value": "95",
+            "ci_low": "",
+            "ci_high": ""
+          },
+          {
+            "line_first_50": "β 95% CI p-",
+            "keyword": "β",
+            "value": "95",
+            "ci_low": "",
+            "ci_high": ""
+          },
+          {
+            "line_first_50": "β 95% CI p-",
+            "keyword": "β",
+            "value": "95",
+            "ci_low": "",
+            "ci_high": ""
+          },
+          {
+            "line_first_50": "β 95% CI p-",
+            "keyword": "β",
+            "value": "95",
+            "ci_low": "",
+            "ci_high": ""
+          }
+        ]
+      }
+    },
+    {
+      "block_4": {
+        "confirm_or_fix_caption": true,
+        "mark_cell_values": []
+      }
+    },
+    {
+      "block_5": {
+        "confirm_or_fix_caption": true,
+        "mark_cell_values": []
+      }
+    },
+    {
+      "block_6": {
+        "confirm_or_fix_caption": true,
+        "mark_cell_values": []
+      }
+    }
+  ]
+}

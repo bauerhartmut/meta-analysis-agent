@@ -57,11 +57,40 @@ def _now() -> str:
     return datetime.now(timezone.utc).isoformat()
 
 
+def _strip_tags(seg: str) -> str:
+    text = re.sub(r"<[^>]+>", " ", seg)
+    return re.sub(r"\s+", " ", html.unescape(text)).strip()
+
+
+def _render_table_wrap(match) -> str:
+    """One <table-wrap> -> caption line plus pipe-separated rows.
+
+    Nothing is normalised: cells are verbatim unescaped text of the XML, so
+    numbers keep their original characters and the table locator can quote
+    them for verified extraction later. The caption paragraph is preserved
+    verbatim as its own line; missing captions fall back to a plain marker.
+    """
+    seg = match.group(0)
+    cap = re.search(r"<caption[\s\S]*?</caption>", seg, re.I | re.S)
+    caption = _strip_tags(cap.group(0)) if cap else "table"
+    rows = []
+    for row in re.findall(r"<tr[\s\S]*?</tr>", seg, re.I):
+        cells = [_strip_tags(c) for c in re.findall(
+            r"<t[hd]\b[^>]*>[\s\S]*?</t[hd]>", row, re.I)]
+        if cells and any(c for c in cells):
+            rows.append("|" + "|".join((c if c else " ") for c in cells))
+    if not rows:
+        return " [table omitted - no rows] "
+    return "\n" + caption.strip() + "\n" + "\n".join(rows) + "\n"
+
+
 def _xml_to_text(raw: str) -> str:
     """PMC/Europe-PMC XML -> plain text with paragraph breaks kept."""
-    # Drop reference lists and tables: they explode into noise, not evidence.
+    # Reference lists drop; tables are KEPT (order §4.2): rows render pipe-
+    # separated so the deterministic table extractor can find and quote them.
     raw = re.sub(r"<ref-list[\s\S]*?</ref-list>", " ", raw, flags=re.I)
-    raw = re.sub(r"<table-wrap[\s\S]*?</table-wrap>", "[table omitted] ", raw, flags=re.I)
+    raw = re.sub(r"<table-wrap[\s\S]*?</table-wrap>",
+                 _render_table_wrap, raw, flags=re.I)
     raw = re.sub(r"</(p|div|title|sec|h\d)>", "\n\n", raw, flags=re.I)
     raw = re.sub(r"<[^>]+>", " ", raw)
     text = html.unescape(raw)

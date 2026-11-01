@@ -1,0 +1,243 @@
+{
+  "case_id": "pending_fb6895e6a4cb",
+  "source_file": "fb6895e6a4cbe3c06e192e313e196b7c.txt",
+  "annotated_by": "machine-candidate (order §4.2: needs human review)",
+  "created_at": "2026-11-01T21:58:06.431328+00:00",
+  "expected_blocks": [
+    {
+      "table_label": "(pipe table)",
+      "caption_startswith": "(pipe table at char 35280)",
+      "min_lines": 15,
+      "expected_effect_cells": 1,
+      "body_preview_first_3_lines": [
+        "Baseline Scenario β = 0",
+        "CCA 0.045 0.014 0.014 0.033 0.888 -0.050 0.014 0.014 0.059 —–",
+        "IPW 0.045 0.011 0.011 0.001 0.984 -0.050 0.010 0.011 0.003 —–"
+      ]
+    },
+    {
+      "table_label": "(pipe table)",
+      "caption_startswith": "(pipe table at char 42669)",
+      "min_lines": 9,
+      "expected_effect_cells": 0,
+      "body_preview_first_3_lines": [
+        "R2 = 0.1% R2 = 0.5%",
+        "CCA 0.042 0.014 0.014 0.017 0.841 0.043 0.014 0.014 0.019 0.860",
+        "IPW 0.042 0.011 0.011 0.001 0.968 0.043 0.011 0.011 0.001 0.973"
+      ]
+    },
+    {
+      "table_label": "Table 3",
+      "caption_startswith": "Table 3. Performance of the various selection bias adjustmen",
+      "min_lines": 18,
+      "expected_effect_cells": 0,
+      "body_preview_first_3_lines": [
+        "One-sample MR - Y → R",
+        "CCA 0.143 0.056 0.059 0.847 0.696 -0.001 0.054 0.054 0.052",
+        "IPW 0.143 0.039 0.049 0.847 0.886 -0.001 0.038 0.044 0.023"
+      ]
+    },
+    {
+      "table_label": "Table 4",
+      "caption_startswith": "Table 4. Performance of the various selection bias adjustmen",
+      "min_lines": 18,
+      "expected_effect_cells": 0,
+      "body_preview_first_3_lines": [
+        "One-sample MR (2SLS) - Y → R",
+        "CCA 0.159 0.053 0.055 0.889 0.823 0.013 0.051 0.052 0.042",
+        "IPW 0.152 0.040 0.046 0.872 0.940 0.006 0.037 0.043 0.028"
+      ]
+    },
+    {
+      "table_label": "(pipe table)",
+      "caption_startswith": "(pipe table at char 94613)",
+      "min_lines": 3,
+      "expected_effect_cells": 1,
+      "body_preview_first_3_lines": [
+        "logitP(Y = 1|X, Z, R= 1) = X T β + ω(X) − log (eω(X)λ(X, Z) + 1 − λ(X, Z)) (2)",
+        "where λ(X, Z) = P(R = 1|X, Z, Y= 0) satisfies",
+        "π(X, Z) = 11 + eX T β λ(X, Z) + eX T β1 + eX T β 11 + (1 − λ(X, Z))e−ω(X)/λ(X, Z) (3)"
+      ]
+    },
+    {
+      "table_label": "Table 1",
+      "caption_startswith": "Table 1. Performance of the various selection bias adjustmen",
+      "min_lines": 3,
+      "expected_effect_cells": 1,
+      "body_preview_first_3_lines": [
+        "various simulation scenarios and β = 0."
+      ]
+    },
+    {
+      "table_label": "(pipe table)",
+      "caption_startswith": "(pipe table at char 101041)",
+      "min_lines": 11,
+      "expected_effect_cells": 0,
+      "body_preview_first_3_lines": [
+        "CCA -0.050 0.014 0.014 0.942 -0.103 0.028 0.028 0.951",
+        "IPW -0.050 0.011 0.011 0.997 -0.103 0.020 0.021 0.999",
+        "Heckman 0.000 0.022 0.022 0.050 0.000 0.046 0.046 0.047"
+      ]
+    },
+    {
+      "table_label": "Table 2",
+      "caption_startswith": "Table 2. Performance of the various selection bias adjustmen",
+      "min_lines": 3,
+      "expected_effect_cells": 1,
+      "body_preview_first_3_lines": [
+        "weak binary instrument for selection.",
+        "Method β = 0.1 β = 0Mean Emp SD StdErr Cover Power Mean Emp SD StdErr Type I",
+        "CCA 0.042 0.014 0.014 0.018 0.848 -0.053 0.014 0.014 0.962"
+      ]
+    },
+    {
+      "table_label": "Table 3",
+      "caption_startswith": "Table 3. Performance of the various selection bias adjustmen",
+      "min_lines": 7,
+      "expected_effect_cells": 2,
+      "body_preview_first_3_lines": [
+        "Method β = 0.1 β = 0Mean Emp SD StdErr Cover Power Mean Emp SD StdErr Type I",
+        "CCA 0.075 0.016 0.016 0.666 0.996 -0.025 0.016 0.016 0.341",
+        "IPW 0.075 0.012 0.012 0.455 1.000 -0.025 0.012 0.012 0.545"
+      ]
+    },
+    {
+      "table_label": "(pipe table)",
+      "caption_startswith": "(pipe table at char 116694)",
+      "min_lines": 8,
+      "expected_effect_cells": 0,
+      "body_preview_first_3_lines": [
+        "CCA 0.022 0.020 0.020 0.030 0.208 -0.072 0.020 0.020 0.950",
+        "IPW 0.021 0.016 0.016 0.000 0.264 -0.074 0.016 0.016 0.998",
+        "Heckman 0.100 0.033 0.033 0.956 0.871 0.000 0.031 0.031 0.047"
+      ]
+    },
+    {
+      "table_label": "(pipe table)",
+      "caption_startswith": "(pipe table at char 120016)",
+      "min_lines": 8,
+      "expected_effect_cells": 0,
+      "body_preview_first_3_lines": [
+        "CCA 0.147 0.054 0.061 0.900 0.686 0.008 0.051 0.057 0.025",
+        "IPW 0.147 0.038 0.049 0.889 0.911 0.006 0.037 0.044 0.026",
+        "Heckman 0.207 0.059 0.067 0.975 0.901 0.010 0.055 0.061 0.030"
+      ]
+    }
+  ],
+  "effect_cells_total_in_document": 17,
+  "annotations_needed": [
+    {
+      "block_0": {
+        "confirm_or_fix_caption": true,
+        "mark_cell_values": [
+          {
+            "line_first_50": "Baseline Scenario β = 0",
+            "keyword": "β",
+            "value": "0",
+            "ci_low": "",
+            "ci_high": ""
+          }
+        ]
+      }
+    },
+    {
+      "block_1": {
+        "confirm_or_fix_caption": true,
+        "mark_cell_values": []
+      }
+    },
+    {
+      "block_2": {
+        "confirm_or_fix_caption": true,
+        "mark_cell_values": []
+      }
+    },
+    {
+      "block_3": {
+        "confirm_or_fix_caption": true,
+        "mark_cell_values": []
+      }
+    },
+    {
+      "block_4": {
+        "confirm_or_fix_caption": true,
+        "mark_cell_values": [
+          {
+            "line_first_50": "π(X, Z) = 11 + eX T β λ(X, Z) + eX T β1 + eX T β 1",
+            "keyword": "β",
+            "value": "1",
+            "ci_low": "",
+            "ci_high": ""
+          }
+        ]
+      }
+    },
+    {
+      "block_5": {
+        "confirm_or_fix_caption": true,
+        "mark_cell_values": [
+          {
+            "line_first_50": "various simulation scenarios and β = 0.",
+            "keyword": "β",
+            "value": "0",
+            "ci_low": "",
+            "ci_high": ""
+          }
+        ]
+      }
+    },
+    {
+      "block_6": {
+        "confirm_or_fix_caption": true,
+        "mark_cell_values": []
+      }
+    },
+    {
+      "block_7": {
+        "confirm_or_fix_caption": true,
+        "mark_cell_values": [
+          {
+            "line_first_50": "Method β = 0.1 β = 0Mean Emp SD StdErr Cover Power",
+            "keyword": "β",
+            "value": "0.1",
+            "ci_low": "",
+            "ci_high": ""
+          }
+        ]
+      }
+    },
+    {
+      "block_8": {
+        "confirm_or_fix_caption": true,
+        "mark_cell_values": [
+          {
+            "line_first_50": "Method β = 0.1 β = 0Mean Emp SD StdErr Cover Power",
+            "keyword": "β",
+            "value": "0.1",
+            "ci_low": "",
+            "ci_high": ""
+          },
+          {
+            "line_first_50": "implemented the simulation for either β = 0 .1 or ",
+            "keyword": "β",
+            "value": "0",
+            "ci_low": "",
+            "ci_high": ""
+          }
+        ]
+      }
+    },
+    {
+      "block_9": {
+        "confirm_or_fix_caption": true,
+        "mark_cell_values": []
+      }
+    },
+    {
+      "block_10": {
+        "confirm_or_fix_caption": true,
+        "mark_cell_values": []
+      }
+    }
+  ]
+}

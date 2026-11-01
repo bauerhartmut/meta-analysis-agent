@@ -1,0 +1,79 @@
+{
+  "case_id": "pending_44be346def34",
+  "source_file": "44be346def34a73606489082d8b9e29b.txt",
+  "annotated_by": "machine-candidate (order §4.2: needs human review)",
+  "created_at": "2026-11-01T21:58:06.745348+00:00",
+  "expected_blocks": [
+    {
+      "table_label": "(pipe table)",
+      "caption_startswith": "(pipe table at char 9013)",
+      "min_lines": 6,
+      "expected_effect_cells": 0,
+      "body_preview_first_3_lines": [
+        "111",
+        "1/2 2",
+        "21/2"
+      ]
+    },
+    {
+      "table_label": "(pipe table)",
+      "caption_startswith": "(pipe table at char 21970)",
+      "min_lines": 5,
+      "expected_effect_cells": 0,
+      "body_preview_first_3_lines": [
+        "0.00",
+        "0.02",
+        "0.04"
+      ]
+    },
+    {
+      "table_label": "(pipe table)",
+      "caption_startswith": "(pipe table at char 33672)",
+      "min_lines": 33,
+      "expected_effect_cells": 0,
+      "body_preview_first_3_lines": [
+        "n=250",
+        "n=500",
+        "n=1000"
+      ]
+    },
+    {
+      "table_label": "(pipe table)",
+      "caption_startswith": "(pipe table at char 34912)",
+      "min_lines": 4,
+      "expected_effect_cells": 0,
+      "body_preview_first_3_lines": [
+        "500",
+        "1000",
+        "1500"
+      ]
+    }
+  ],
+  "effect_cells_total_in_document": 0,
+  "annotations_needed": [
+    {
+      "block_0": {
+        "confirm_or_fix_caption": true,
+        "mark_cell_values": []
+      }
+    },
+    {
+      "block_1": {
+        "confirm_or_fix_caption": true,
+        "mark_cell_values": []
+      }
+    },
+    {
+      "block_2": {
+        "confirm_or_fix_caption": true,
+        "mark_cell_values": []
+      }
+    },
+    {
+      "block_3": {
+        "confirm_or_fix_caption": true,
+        "mark_cell_values": []
+      }
+    }
+  ]
+}

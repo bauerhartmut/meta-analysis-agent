@@ -1,0 +1,28 @@
+{
+  "case_id": "pending_f33268d5f72a",
+  "source_file": "f33268d5f72a74aefe874b6987b2b320.txt",
+  "annotated_by": "machine-candidate (order §4.2: needs human review)",
+  "created_at": "2026-11-01T21:58:06.653721+00:00",
+  "expected_blocks": [
+    {
+      "table_label": "TABLE I",
+      "caption_startswith": "TABLE I. I",
+      "min_lines": 17,
+      "expected_effect_cells": 0,
+      "body_preview_first_3_lines": [
+        "COMPARISON OF IIOT S ECURITY MEASURES",
+        "Long-lived",
+        "components"
+      ]
+    }
+  ],
+  "effect_cells_total_in_document": 0,
+  "annotations_needed": [
+    {
+      "block_0": {
+        "confirm_or_fix_caption": true,
+        "mark_cell_values": []
+      }
+    }
+  ]
+}

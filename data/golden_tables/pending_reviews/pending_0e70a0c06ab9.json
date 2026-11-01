@@ -1,0 +1,130 @@
+{
+  "case_id": "pending_0e70a0c06ab9",
+  "source_file": "0e70a0c06ab9967d5908bd56edb0754c.txt",
+  "annotated_by": "machine-candidate (order §4.2: needs human review)",
+  "created_at": "2026-11-01T21:58:06.463327+00:00",
+  "expected_blocks": [
+    {
+      "table_label": "Table 1",
+      "caption_startswith": "Table 1. ICF code descriptions and frequencies in Physical T",
+      "min_lines": 8,
+      "expected_effect_cells": 0,
+      "body_preview_first_3_lines": [
+        "preferred name of each code in the ICF. ",
+        "Code Description Frequency ",
+        "d410 Changing basic body position 838 "
+      ]
+    },
+    {
+      "table_label": "Table 2",
+      "caption_startswith": "Table 2. Text corpora used to pre-train embedding models for",
+      "min_lines": 10,
+      "expected_effect_cells": 0,
+      "body_preview_first_3_lines": [
+        "Paradigm (method) Name Corpus Num. Words (Approx.) Description Representativeness | Size ",
+        "Static (word2vec) ",
+        "GoogleNews (47) Google News 100 billion Large-scale web text Low | Large "
+      ]
+    },
+    {
+      "table_label": "(pipe table)",
+      "caption_startswith": "(pipe table at char 39673)",
+      "min_lines": 8,
+      "expected_effect_cells": 0,
+      "body_preview_first_3_lines": [
+        "d430",
+        "d450",
+        "d430"
+      ]
+    },
+    {
+      "table_label": "(pipe table)",
+      "caption_startswith": "(pipe table at char 45688)",
+      "min_lines": 47,
+      "expected_effect_cells": 0,
+      "body_preview_first_3_lines": [
+        "52.3",
+        "57.6",
+        "64.9"
+      ]
+    },
+    {
+      "table_label": "(pipe table)",
+      "caption_startswith": "(pipe table at char 48557)",
+      "min_lines": 26,
+      "expected_effect_cells": 0,
+      "body_preview_first_3_lines": [
+        "16.4",
+        "56.1",
+        "16.7"
+      ]
+    },
+    {
+      "table_label": "(pipe table)",
+      "caption_startswith": "(pipe table at char 51900)",
+      "min_lines": 14,
+      "expected_effect_cells": 0,
+      "body_preview_first_3_lines": [
+        "65.4",
+        "84.6",
+        "54.9"
+      ]
+    },
+    {
+      "table_label": "(pipe table)",
+      "caption_startswith": "(pipe table at char 53408)",
+      "min_lines": 36,
+      "expected_effect_cells": 0,
+      "body_preview_first_3_lines": [
+        "98.3",
+        "94.6",
+        "96.9"
+      ]
+    }
+  ],
+  "effect_cells_total_in_document": 0,
+  "annotations_needed": [
+    {
+      "block_0": {
+        "confirm_or_fix_caption": true,
+        "mark_cell_values": []
+      }
+    },
+    {
+      "block_1": {
+        "confirm_or_fix_caption": true,
+        "mark_cell_values": []
+      }
+    },
+    {
+      "block_2": {
+        "confirm_or_fix_caption": true,
+        "mark_cell_values": []
+      }
+    },
+    {
+      "block_3": {
+        "confirm_or_fix_caption": true,
+        "mark_cell_values": []
+      }
+    },
+    {
+      "block_4": {
+        "confirm_or_fix_caption": true,
+        "mark_cell_values": []
+      }
+    },
+    {
+      "block_5": {
+        "confirm_or_fix_caption": true,
+        "mark_cell_values": []
+      }
+    },
+    {
+      "block_6": {
+        "confirm_or_fix_caption": true,
+        "mark_cell_values": []
+      }
+    }
+  ]
+}

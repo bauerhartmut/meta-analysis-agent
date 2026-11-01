@@ -111,7 +111,21 @@ class TestCoverageManager(unittest.TestCase):
         out = _xml_to_text(raw)
         self.assertIn("Methods section text.", out)
         self.assertNotIn("<ref", out)
-        self.assertIn("[table omitted]", out)
+        # Implementation order §4.2: a table-wrap WITHOUT table rows still
+        # stays an omission marker; one WITH rows now renders as caption +
+        # pipe rows, so the deterministic table locator can find the numbers.
+        self.assertIn("table omitted", out)
+
+    def test_xml_to_text_keeps_table_rows(self):
+        raw = ("<?xml?><article><body><p>Methods text.</p>"
+               "<table-wrap><caption>Baseline characteristics.</caption>"
+               "<tr><td>Age, years</td><td>63.2</td></tr>"
+               "<tr><td>BMI</td><td>27.4</td></tr></table-wrap>"
+               "</body></article>")
+        out = _xml_to_text(raw)
+        self.assertIn("Baseline characteristics.", out)
+        self.assertIn("|Age, years|63.2", out)
+        self.assertIn("|BMI|27.4", out)
 
     # ------------------------------------------------------------ author requests
     def test_author_request_user_gate(self):

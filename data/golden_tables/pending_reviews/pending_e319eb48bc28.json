@@ -1,0 +1,79 @@
+{
+  "case_id": "pending_e319eb48bc28",
+  "source_file": "e319eb48bc2840c064060335f8b1e9b6.txt",
+  "annotated_by": "machine-candidate (order §4.2: needs human review)",
+  "created_at": "2026-11-01T21:58:06.693761+00:00",
+  "expected_blocks": [
+    {
+      "table_label": "(pipe table)",
+      "caption_startswith": "(pipe table at char 16778)",
+      "min_lines": 9,
+      "expected_effect_cells": 0,
+      "body_preview_first_3_lines": [
+        "0.00",
+        "0.25",
+        "0.50"
+      ]
+    },
+    {
+      "table_label": "Table 2",
+      "caption_startswith": "Table 2. Survival effects in the additional experiment. The ",
+      "min_lines": 3,
+      "expected_effect_cells": 0,
+      "body_preview_first_3_lines": [
+        "the continuous difficulty test.",
+        "Comparison Effect 95% CIp",
+        "Preference, difficult layouts (primary)−0.008 [−0.025,+0.016] 0.5793"
+      ]
+    },
+    {
+      "table_label": "(pipe table)",
+      "caption_startswith": "(pipe table at char 22585)",
+      "min_lines": 3,
+      "expected_effect_cells": 0,
+      "body_preview_first_3_lines": [
+        "Posterior entropy (10−3)−1.37 [-1.95,-0.84]−0.26 [-0.83,0.28]−1.18 [-1.77,-0.58]",
+        "Visited-state entropy+0.00 [-0.09,0.07]−0.05 [-0.14,0.02]−0.15 [-0.24,-0.08]",
+        "Minimum headroom+0.01 [-0.02,0.04] +0.05 [0.01,0.09] +0.11 [0.07,0.15]"
+      ]
+    },
+    {
+      "table_label": "Table S1",
+      "caption_startswith": "Table S1. Constants, identical across the four conditions.",
+      "min_lines": 8,
+      "expected_effect_cells": 0,
+      "body_preview_first_3_lines": [
+        "Quantity Symbol Value",
+        "Interoceptive channels M 3 (hunger, thirst, oxygen)",
+        "Ordinal levels per channeln 6"
+      ]
+    }
+  ],
+  "effect_cells_total_in_document": 0,
+  "annotations_needed": [
+    {
+      "block_0": {
+        "confirm_or_fix_caption": true,
+        "mark_cell_values": []
+      }
+    },
+    {
+      "block_1": {
+        "confirm_or_fix_caption": true,
+        "mark_cell_values": []
+      }
+    },
+    {
+      "block_2": {
+        "confirm_or_fix_caption": true,
+        "mark_cell_values": []
+      }
+    },
+    {
+      "block_3": {
+        "confirm_or_fix_caption": true,
+        "mark_cell_values": []
+      }
+    }
+  ]
+}

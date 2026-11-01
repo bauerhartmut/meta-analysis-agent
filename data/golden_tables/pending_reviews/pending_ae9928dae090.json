@@ -1,0 +1,28 @@
+{
+  "case_id": "pending_ae9928dae090",
+  "source_file": "ae9928dae0906218ffae6e6c789b3f71.txt",
+  "annotated_by": "machine-candidate (order §4.2: needs human review)",
+  "created_at": "2026-11-01T21:58:06.656721+00:00",
+  "expected_blocks": [
+    {
+      "table_label": "(pipe table)",
+      "caption_startswith": "(pipe table at char 3282)",
+      "min_lines": 24,
+      "expected_effect_cells": 0,
+      "body_preview_first_3_lines": [
+        "INPLASY2024100072",
+        "doi: 10.37766/inplasy2024.10.0072 ",
+        "Received: 16 October 2024"
+      ]
+    }
+  ],
+  "effect_cells_total_in_document": 0,
+  "annotations_needed": [
+    {
+      "block_0": {
+        "confirm_or_fix_caption": true,
+        "mark_cell_values": []
+      }
+    }
+  ]
+}

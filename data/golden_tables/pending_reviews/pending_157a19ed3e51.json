@@ -1,0 +1,45 @@
+{
+  "case_id": "pending_157a19ed3e51",
+  "source_file": "157a19ed3e51f2f7e01312f431a6e150.txt",
+  "annotated_by": "machine-candidate (order §4.2: needs human review)",
+  "created_at": "2026-11-01T21:58:06.394810+00:00",
+  "expected_blocks": [
+    {
+      "table_label": "(pipe table)",
+      "caption_startswith": "(pipe table at char 2339)",
+      "min_lines": 4,
+      "expected_effect_cells": 0,
+      "body_preview_first_3_lines": [
+        "4.4 Gliotransmission . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 21",
+        "4.5 Ion homeostasis . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 21",
+        "4.6 Regulation of the blood ﬂow . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 22"
+      ]
+    },
+    {
+      "table_label": "(pipe table)",
+      "caption_startswith": "(pipe table at char 87272)",
+      "min_lines": 38,
+      "expected_effect_cells": 0,
+      "body_preview_first_3_lines": [
+        "Rise time 5.2–7.7 s",
+        "Decay time 5.5–7.8 s",
+        "FWHM 11.6–16.8 s"
+      ]
+    }
+  ],
+  "effect_cells_total_in_document": 0,
+  "annotations_needed": [
+    {
+      "block_0": {
+        "confirm_or_fix_caption": true,
+        "mark_cell_values": []
+      }
+    },
+    {
+      "block_1": {
+        "confirm_or_fix_caption": true,
+        "mark_cell_values": []
+      }
+    }
+  ]
+}

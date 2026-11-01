@@ -1,0 +1,62 @@
+{
+  "case_id": "pending_7acd1af872c5",
+  "source_file": "7acd1af872c5a89dc79489b359a71c27.txt",
+  "annotated_by": "machine-candidate (order §4.2: needs human review)",
+  "created_at": "2026-11-01T21:58:06.630704+00:00",
+  "expected_blocks": [
+    {
+      "table_label": "Table 1",
+      "caption_startswith": "Table 1. GWAS characteristic",
+      "min_lines": 3,
+      "expected_effect_cells": 0,
+      "body_preview_first_3_lines": [
+        "Sample Sample Size (N) Age Group Reference",
+        "ASD 46,350 (ASD = 18,381, CON=27,969) Adult and Children Grove et al., 2019",
+        "INT 269,867 Adult and Children Savage et al., 2018"
+      ]
+    },
+    {
+      "table_label": "Table 2",
+      "caption_startswith": "Table 2. Novel shared SNP’s between ASD and INT, and ASD and",
+      "min_lines": 60,
+      "expected_effect_cells": 0,
+      "body_preview_first_3_lines": [
+        "last column marks overlapping SNP’s between INT and EDU.",
+        "",
+        "Page 16/20"
+      ]
+    },
+    {
+      "table_label": "(pipe table)",
+      "caption_startswith": "(pipe table at char 48256)",
+      "min_lines": 60,
+      "expected_effect_cells": 0,
+      "body_preview_first_3_lines": [
+        "16843737-",
+        "16879208 rs7625233 0.042 3.86",
+        "1.14E-"
+      ]
+    }
+  ],
+  "effect_cells_total_in_document": 0,
+  "annotations_needed": [
+    {
+      "block_0": {
+        "confirm_or_fix_caption": true,
+        "mark_cell_values": []
+      }
+    },
+    {
+      "block_1": {
+        "confirm_or_fix_caption": true,
+        "mark_cell_values": []
+      }
+    },
+    {
+      "block_2": {
+        "confirm_or_fix_caption": true,
+        "mark_cell_values": []
+      }
+    }
+  ]
+}

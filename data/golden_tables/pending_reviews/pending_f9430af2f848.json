@@ -1,0 +1,147 @@
+{
+  "case_id": "pending_f9430af2f848",
+  "source_file": "f9430af2f848963fc02bd5df8c5d7e25.txt",
+  "annotated_by": "machine-candidate (order §4.2: needs human review)",
+  "created_at": "2026-11-01T21:58:06.779033+00:00",
+  "expected_blocks": [
+    {
+      "table_label": "Table 2",
+      "caption_startswith": "Table 2. Dimensionality of the six datasets used to perform",
+      "min_lines": 8,
+      "expected_effect_cells": 0,
+      "body_preview_first_3_lines": [
+        "an in-depth analysis.",
+        "Dataset # samples # features",
+        "airfoil 1503 5"
+      ]
+    },
+    {
+      "table_label": "Table 3",
+      "caption_startswith": "Table 3. FEAT hyper-parameters shared between all evalu- ate",
+      "min_lines": 7,
+      "expected_effect_cells": 0,
+      "body_preview_first_3_lines": [
+        "tion used just with the 6 datasets.",
+        "Parameter Value",
+        "objectives [\"fitness\", \"complexity\"]"
+      ]
+    },
+    {
+      "table_label": "(pipe table)",
+      "caption_startswith": "(pipe table at char 20633)",
+      "min_lines": 19,
+      "expected_effect_cells": 0,
+      "body_preview_first_3_lines": [
+        "0 100 200 300",
+        "101",
+        "2 × 101"
+      ]
+    },
+    {
+      "table_label": "(pipe table)",
+      "caption_startswith": "(pipe table at char 22160)",
+      "min_lines": 18,
+      "expected_effect_cells": 0,
+      "body_preview_first_3_lines": [
+        "spread between[0.3, 0.8].",
+        "0 100 200 300",
+        "101"
+      ]
+    },
+    {
+      "table_label": "(pipe table)",
+      "caption_startswith": "(pipe table at char 23923)",
+      "min_lines": 14,
+      "expected_effect_cells": 0,
+      "body_preview_first_3_lines": [
+        "123",
+        "2.61S-Split",
+        "1.83FEAT(e-lex)"
+      ]
+    },
+    {
+      "table_label": "(pipe table)",
+      "caption_startswith": "(pipe table at char 29614)",
+      "min_lines": 3,
+      "expected_effect_cells": 0,
+      "body_preview_first_3_lines": [
+        "10.0",
+        "12.5",
+        "15.0%"
+      ]
+    },
+    {
+      "table_label": "(pipe table)",
+      "caption_startswith": "(pipe table at char 30614)",
+      "min_lines": 4,
+      "expected_effect_cells": 0,
+      "body_preview_first_3_lines": [
+        "10−2",
+        "10−1",
+        "100"
+      ]
+    },
+    {
+      "table_label": "(pipe table)",
+      "caption_startswith": "(pipe table at char 31351)",
+      "min_lines": 4,
+      "expected_effect_cells": 0,
+      "body_preview_first_3_lines": [
+        "10−2",
+        "10−1",
+        "100"
+      ]
+    }
+  ],
+  "effect_cells_total_in_document": 0,
+  "annotations_needed": [
+    {
+      "block_0": {
+        "confirm_or_fix_caption": true,
+        "mark_cell_values": []
+      }
+    },
+    {
+      "block_1": {
+        "confirm_or_fix_caption": true,
+        "mark_cell_values": []
+      }
+    },
+    {
+      "block_2": {
+        "confirm_or_fix_caption": true,
+        "mark_cell_values": []
+      }
+    },
+    {
+      "block_3": {
+        "confirm_or_fix_caption": true,
+        "mark_cell_values": []
+      }
+    },
+    {
+      "block_4": {
+        "confirm_or_fix_caption": true,
+        "mark_cell_values": []
+      }
+    },
+    {
+      "block_5": {
+        "confirm_or_fix_caption": true,
+        "mark_cell_values": []
+      }
+    },
+    {
+      "block_6": {
+        "confirm_or_fix_caption": true,
+        "mark_cell_values": []
+      }
+    },
+    {
+      "block_7": {
+        "confirm_or_fix_caption": true,
+        "mark_cell_values": []
+      }
+    }
+  ]
+}

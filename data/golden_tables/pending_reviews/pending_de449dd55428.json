@@ -1,0 +1,79 @@
+{
+  "case_id": "pending_de449dd55428",
+  "source_file": "de449dd55428cf4ce07f8ccbd23c2b0b.txt",
+  "annotated_by": "machine-candidate (order §4.2: needs human review)",
+  "created_at": "2026-11-01T21:54:06.357606+00:00",
+  "expected_blocks": [
+    {
+      "table_label": "TABLE 1",
+      "caption_startswith": "TABLE 1. Basic information on the study population.",
+      "min_lines": 20,
+      "expected_effect_cells": 0,
+      "body_preview_first_3_lines": [
+        "Categorical scalar (%) All (N  =  2,927) Male (N  =  1,330) Female (N  =  1,597) p-value",
+        "PA level (MET-min/week) <0.0001",
+        "High level 51.20 42.50 54.05"
+      ]
+    },
+    {
+      "table_label": "TABLE 2",
+      "caption_startswith": "TABLE 2. Association between PA and CF stratified by gender.",
+      "min_lines": 8,
+      "expected_effect_cells": 0,
+      "body_preview_first_3_lines": [
+        "β (95% CI)",
+        "Male Female Total",
+        "Model 1"
+      ]
+    },
+    {
+      "table_label": "TABLE 3",
+      "caption_startswith": "TABLE 3. Threshold effect analysis of PA on overall CF.",
+      "min_lines": 4,
+      "expected_effect_cells": 0,
+      "body_preview_first_3_lines": [
+        "β (95% CI)",
+        "Male Female Total",
+        "One-line linear regression model 0.00 (−0.00, 0.00) 0.2718 0.00 (0.00, 0.00) 0.0142 0.00 (0.00, 0.00) 0.0248"
+      ]
+    },
+    {
+      "table_label": "TABLE 4",
+      "caption_startswith": "TABLE 4. Mendelian randomization analysis results. Exposure ",
+      "min_lines": 44,
+      "expected_effect_cells": 0,
+      "body_preview_first_3_lines": [
+        "OR ",
+        "(95%CI)",
+        "p Q p Egger_"
+      ]
+    }
+  ],
+  "effect_cells_total_in_document": 0,
+  "annotations_needed": [
+    {
+      "block_0": {
+        "confirm_or_fix_caption": true,
+        "mark_cell_values": []
+      }
+    },
+    {
+      "block_1": {
+        "confirm_or_fix_caption": true,
+        "mark_cell_values": []
+      }
+    },
+    {
+      "block_2": {
+        "confirm_or_fix_caption": true,
+        "mark_cell_values": []
+      }
+    },
+    {
+      "block_3": {
+        "confirm_or_fix_caption": true,
+        "mark_cell_values": []
+      }
+    }
+  ]
+}

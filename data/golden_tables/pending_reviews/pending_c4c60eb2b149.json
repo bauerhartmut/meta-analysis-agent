@@ -1,0 +1,45 @@
+{
+  "case_id": "pending_c4c60eb2b149",
+  "source_file": "c4c60eb2b1491d0edab6a0acd3a3d08b.txt",
+  "annotated_by": "machine-candidate (order §4.2: needs human review)",
+  "created_at": "2026-11-01T21:58:06.720833+00:00",
+  "expected_blocks": [
+    {
+      "table_label": "Table 1",
+      "caption_startswith": "Table 1. Daily dietary intake before and after the restricte",
+      "min_lines": 12,
+      "expected_effect_cells": 0,
+      "body_preview_first_3_lines": [
+        "Mediterranean Diet",
+        "MEDAS MEDiterranean Diet Adherence Score",
+        "Pre-intervention Post-"
+      ]
+    },
+    {
+      "table_label": "(pipe table)",
+      "caption_startswith": "(pipe table at char 25986)",
+      "min_lines": 17,
+      "expected_effect_cells": 0,
+      "body_preview_first_3_lines": [
+        " BW (kg) 43.59 19.80 40.41 18.85  < 0.001",
+        " BMI (kg/m2) 30.47 8.09 28.07 7.53  < 0.001",
+        " WC (cm) 83.61 18.38 79.61 17.79  < 0.001"
+      ]
+    }
+  ],
+  "effect_cells_total_in_document": 0,
+  "annotations_needed": [
+    {
+      "block_0": {
+        "confirm_or_fix_caption": true,
+        "mark_cell_values": []
+      }
+    },
+    {
+      "block_1": {
+        "confirm_or_fix_caption": true,
+        "mark_cell_values": []
+      }
+    }
+  ]
+}
