@@ -102,3 +102,61 @@ dass ein Seiten/Bounding-Box-Parser ohne Aufrufer-Anpassung einschieben kann.
 - `a1 baseline`: Projektlage/X ohne Sprint-Änderungen + Status-HANDOFF.
 - `p0 metrics`: metrics.py + Tests + Baseline-Artefakte.
 - `p1 tables`: table_extractor.py + goldens + Integration + schema migration.
+
+## Sprint 2 (02.11.2026): Phasenlücken-Audit + Phase-1-Vollendungsteile + Phase 9 + Phase 2
+
+### Bestand-audit: bereits gebaut (keine Duplikate mehr!)
+- coverage/manager.py (= Auftrag §2 ä canonical workflow
+  states": studies-Registry, studies_status_log, legal-first acquisition,
+  Author-Requests mit user-only approval) — integriert in orchestrator
+  (_note_coverage), Tests test_coverage.py (165 Zeilen).
+- evals/ (Paket D/H): deterministisches claim-recall/number-accuracy eval
+  gegen golden_answers.json. Phase-9-Anteil, aber NICHT der §12-Review-
+  Benchmark → neu gebaut (unten).
+- meta/extraction.compare_extraction_passes: doble pass on fields (§4.4)
+  existed with effect/se/ci_level/n.
+
+### Phase 1 (§4.4/§4.2/§5.2 rest) — Umsetzung
+- compare_extraction_passes erweitert: unit, design, direction, population
+  (case-insensitiv), ci_bounds (ohne „SE ok aber KI falsch"-Loch). Tests.
+- coverage/manager._xml_to_text: Tables werden nicht mehr still weggeworfen
+  ([table omitted]); stattdessen caption + verbatim pipe-rows (§4.2), so
+  textbasierte Tabellenhinweise überhaupt möglich. Regressionstest + neuer
+  Keep-rows-Test.
+- table_extractor: ICCaption-Trennzeichen ggelockert (Space allowed), Z-
+  Offsets der Zell-Kandidaten korrigiert (caption,line Issues), und pipe-
+  block-Erkennung ohne Caption (≥3 aufeinanderfolgend tabularrows), da XML-
+  tabellen ohne „Table N.“-Caption real vorkommen.
+- table_annotation.py: Annotations-Workflow build/promote. 22 Machine-
+  Kandidaten in data/golden_tables/pending_reviews/ (nicht gold!). Ehrliche
+  Limitation: der BESTEHENDE Textkorpus versorgt ~22 Blockkandidaten; mehr
+  Blöcke entstehen erst in neuen Läufen mit §4.2-Fix (§16.7 erfüllbar
+  abnavigation in data/reanalysis).
+
+### Phase 9 — Benchmark-Grundgerüst (order §12)
+- evals/meta_benchmark.py: ReferenceCase-Struktur + Validator, deterministisch
+  Holdout-Split (sha256-prefix), Metric-Runner (screening recall/precision,
+  fulltext retrieval mit dokumentiertem Nenner, extraction exact match,
+  provenance, critical_errors) aus Roh-DB-Artefakten; Thresholds vorab
+  festzusetzen, der Runner weigert sich, ohne zu filtern. CLI + output JSON.
+- 8/8 Tests grün (inkl. direction-critical, precision, threshold blockers,
+  deterministischer holdout).
+- **Offen:** die 20–30 veröffentlichten Referenz-Reviews + manuelle Gold-
+  Standards müssen beschafft werden (Aufgabenbeschaffung, keine Software).
+
+### Phase 2 — Study-level Datenmodell (order §5.1/§5.2)
+- meta/studies.py: additive Migration (meta_publications, meta_studies,
+  meta_overlap_candidates; study_effects.study_id addil), Registry-API:
+  register/link (mit Pflicht-Rationale), mark_overlap_candidate (never
+  auto-resolved), resolve_overlap fixed status list + rationale/decided_by
+  Pflicht. Kein stillender Mehrfach-Publikation-Zusammenfuehren.
+- 4/4 Tests grün.
+
+### Test-Status Sprint 2
+- 86/86 (extraction 18, pooling 34, coverage 8, benchmark 8, golden 1, studies
+  4, table 9+1, metrics 2) + e2e 2/2 (86 s) grün. py_compile alle Module.
+
+### Typo-Fund im Commit-Protokoll der vorherigen Sprints
+Die bereitstehenden Commit-Nummern dokumentieren den Startpunkt. Phase 3, 4
+(Referenz-Tabellentests), 5 (RoB 2/ROBINS-I/AMSTAR2), 6, 7, 8 Areach open und
+werden je nach Sprint-Priorität (§15) abgearbeitet.
