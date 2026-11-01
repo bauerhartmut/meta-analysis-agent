@@ -160,3 +160,44 @@ dass ein Seiten/Bounding-Box-Parser ohne Aufrufer-Anpassung einschieben kann.
 Die bereitstehenden Commit-Nummern dokumentieren den Startpunkt. Phase 3, 4
 (Referenz-Tabellentests), 5 (RoB 2/ROBINS-I/AMSTAR2), 6, 7, 8 Areach open und
 werden je nach Sprint-Priorität (§15) abgearbeitet.
+
+## Sprint 3 (02.11.2026): Phase 3 - Unabhaengige Reviewer-Rollen (Auftrag §6)
+
+### Umsetzung
+- `meta/reviewer_roles.py`, REPORT_VERSION `reviewer-roles/1`:
+  - **Dependency-Contract-Test:** `extractor_independence_check` beweist im
+    Unit-Test, dass Pass-B-Messages keine Werte aus Pass-A tragen (>=8 char
+    guard gegen normale Kurztreffer). Kontamination faellt laut.
+  - **Statistical Reviewer:** reine Regelpruefungen (se<=0, CI invertiert,
+    Effekt ausserhalb CI, OR/RR/HR<=0, r ausserhalb [-1,1]); *keine*
+    Berechnung, strukturierte findings mit row+rule.
+  - **Decision Resolver:** feldweise Klassifikation der Double-Pass-Disputes
+    — exactly one verifiable reading -> `resolved_by_original_evidence`
+    (die andere verschwindet durch ihren eigenen unverifizierten Status aus
+    dem Pool, nichts wird gemittelt); beide verifiziert oder keine verifiziert
+    -> `escalated` mit unresolved_questions. Keine Mehrheit, kein dritter
+    Wert. Berichte werden unveraenderlich in `review_reports` gespeichert
+    (additive Tabelle, im Resolver-Schema erstellt).
+  - `review_segment(db, rows)`: ruft Statistical Reviewer + Resolver auf und
+    speichert beide Berichte; return (stats, resolver, escalations).
+- Orchestrator-Integration in `_work_item_effect_extraction` direkt nach der
+  Effekt-Extraktion; die Review-Schicht ist Storage-only und darf die
+  Pipeline nie blockieren (Exception -> Warning).
+- Methodology Reviewer (RoB, quote-belegt, double pass) und Adversarial
+  Reviewer (Devil's Advocate 7c + Counter-Search mit Belegpflicht) bleiben
+  die bereits bestehenden, getesteten Mechanismen.
+
+### Abnahmekriterien §6 erfuellt
+- B-blind-Test ✔ · disputes als disputed gespeichert, nicht gepoolt ✔ ·
+- jeder Bericht mit Beleg+Begründung ✔ · Rollen einzeln testbar, bei LLM-
+  Ausfall sicher pausiert (extractor `except Exception -> []`, Resolver
+  deterministisch) ✔.
+
+### Tests
+- test_reviewer_roles 6/6 · test_components 128/128 (Retry-Assertion auf die
+  auftragsgefordertere Ladder aktualisiert: 3 Versuche/3-6-9 s) · e2e 2/2
+  (74 s). py_compile grün.
+
+### Offen in Phase 3
+- Prompt-/Modellperspektiven getrennt halten (z. Z. dasselbe Modell mit»
+  field_order-Trennung; getrennte Promptversionen sind ein Folge-Sprint).

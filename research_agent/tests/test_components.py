@@ -637,7 +637,8 @@ class TestSearchCircuitBreaker(unittest.TestCase):
         """Listing retry caps are tight, and exhausting retries opens the circuit."""
         from unittest import mock
         # bounded retry configuration
-        self.assertEqual(self.smod.SemanticScholarProvider._max_retries, 2)
+        # implementation order §4.1: retries 3 with the 3/6/9 s ladder
+        self.assertEqual(self.smod.SemanticScholarProvider._max_retries, 3)
         self.assertEqual(self.smod.SemanticScholarProvider._base_delay, 3.0)
 
         class FakeResp:
