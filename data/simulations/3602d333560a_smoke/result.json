@@ -1,0 +1,32 @@
+{
+  "n": 30,
+  "metric": "Difference in causal effect estimates (Naive Beta - Adjusted Beta)",
+  "test": "Two-sided z-test on attenuation",
+  "alpha": 0.05,
+  "seed": 42,
+  "replications": 1,
+  "value": -0.044436436787309644,
+  "ci_low": -0.044436436787309644,
+  "ci_high": -0.044436436787309644,
+  "p_value": 0.8077045384065824,
+  "values": [
+    -0.044436436787309644
+  ],
+  "p_values": [
+    0.8077045384065824
+  ],
+  "significant_share": 0.0,
+  "direction_share": 0.0,
+  "sensitivity": [
+    {
+      "noise_multiplier": 0.5,
+      "value": -0.046579377014743295,
+      "p_value": 0.6098752691992557
+    },
+    {
+      "noise_multiplier": 2.0,
+      "value": -0.03969358598235264,
+      "p_value": 0.9134361886790252
+    }
+  ]
+}

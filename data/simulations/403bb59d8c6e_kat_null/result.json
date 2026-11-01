@@ -1,0 +1,40 @@
+{
+  "n": 500000,
+  "metric": "Genetic correlation (rg) estimated from z-scores (MHC excluded)",
+  "test": "One-sided test of rg_excl < 0.1",
+  "alpha": 0.05,
+  "seed": 42,
+  "replications": 5,
+  "value": 0.048208029405756754,
+  "ci_low": 0.04685903869368989,
+  "ci_high": 0.04992495281264974,
+  "p_value": 0.0,
+  "values": [
+    0.04680779047661356,
+    0.05005985789868389,
+    0.048710807038342414,
+    0.04732027264737682,
+    0.04814141896776707
+  ],
+  "p_values": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "significant_share": 1.0,
+  "direction_share": 1.0,
+  "sensitivity": [
+    {
+      "noise_multiplier": 0.5,
+      "value": 0.04752750419755427,
+      "p_value": 0.0
+    },
+    {
+      "noise_multiplier": 2.0,
+      "value": 0.044187171936618565,
+      "p_value": 0.0
+    }
+  ]
+}

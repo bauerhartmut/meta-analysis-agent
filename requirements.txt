@@ -1,0 +1,51 @@
+# =============================================================
+# Autonomous Research Agent - Dependencies
+# =============================================================
+# Core: everything needed to run the research agent + dashboard
+# Fine-tuning: only needed for local model training (not Kaggle)
+
+# === Core Dependencies (run.py + dashboard) ===
+aiohttp>=3.9.0
+beautifulsoup4>=4.12.0
+lxml>=5.0.0
+requests>=2.31.0
+# Open-access full-text recovery (Unpaywall PDFs)
+pypdf>=4.0.0
+
+# === Search & Knowledge ===
+# duckduckgo-search 3.7.0 needs `primp` + httpx<0.28 (0.28 renamed proxies->proxy and
+# crashes the library). Allowlist quickly: pip install duckduckgo-search primp "httpx<0.28"
+duckduckgo-search>=3.7.0
+
+# === Database (SQLite via stdlib, no extra dep) ===
+
+# === Kaggle Integration ===
+kaggle>=2.0.0
+
+# === Data Processing ===
+numpy>=1.26.0
+pandas>=2.1.0
+scipy>=1.12.0
+
+# === ML / Fine-Tuning (only needed for local training) ===
+# For Kaggle GPU training, these are pre-installed on the platform.
+# Install locally only if you want to fine-tune on your own GPU.
+torch>=2.1.0
+transformers>=4.45.0
+peft>=0.13.0
+trl>=0.12.0
+accelerate>=1.0.0
+datasets>=3.0.0
+bitsandbytes>=0.44.0
+sentencepiece>=0.2.0
+safetensors>=0.4.0
+huggingface-hub>=0.25.0
+
+# === Monitoring ===
+wandb>=0.16.0
+
+# === Testing ===
+pytest>=8.0.0
+
+# === Utilities ===
+python-dotenv>=1.0.0

@@ -1,0 +1,35 @@
+{
+  "n": 2000,
+  "metric": "power",
+  "test": "one-sided (less)",
+  "alpha": 0.05,
+  "seed": 42,
+  "replications": 1,
+  "value": 0.3525,
+  "ci_low": NaN,
+  "ci_high": NaN,
+  "p_value": 5.31437664446168e-84,
+  "values": [
+    0.3525
+  ],
+  "p_values": [
+    5.31437664446168e-84
+  ],
+  "significant_share": 1.0,
+  "direction_share": 1.0,
+  "sensitivity": {
+    "noise_half": 0.87,
+    "noise_double": 0.115
+  },
+  "cells": [
+    {
+      "n": 2000,
+      "metric": 0.3525,
+      "trials": 400
+    }
+  ],
+  "grid": [
+    2000
+  ],
+  "trend": null
+}

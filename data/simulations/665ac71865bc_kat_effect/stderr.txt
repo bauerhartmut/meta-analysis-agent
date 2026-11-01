@@ -1,0 +1,2 @@
+D:/daswu/AIResearch/data/simulations/665ac71865bc_kat_effect/sim.py:183: SmallSampleWarning: One or more sample arguments is too small; all returned values will be NaN. See documentation for sample size requirements.
+  ci = stats.t.interval(0.95, len(rep_values)-1, loc=mean_val, scale=stats.sem(rep_values))

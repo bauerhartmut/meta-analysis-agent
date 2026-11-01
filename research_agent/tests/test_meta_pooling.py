@@ -1,0 +1,368 @@
+"""Tests for the pooling engine: analytic anchors, coverage, determinism, locks.
+
+The claim under test is not "the function returns a number": it is that the number
+is the right one where the answer can be computed by hand, that its interval
+actually covers the truth about 95 % of the time, and that the engine refuses
+rather than invents when the material cannot support a pooled estimate.
+"""
+
+import math
+import random
+import sys
+import unittest
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).parent.parent.parent))
+
+from research_agent.meta.extraction import z_for_level
+from research_agent.meta.pooling import (
+    aggregate_design, build_analysis, egger, forest_table, leave_one_out, pool,
+    standardize, subgroups, SCALE_G, SCALE_LOG, SCALE_Z,
+)
+
+
+def _effect(est, se, label="Study", **extra):
+    row = {"est": est, "se": se, "label": label}
+    row.update(extra)
+    return row
+
+
+class TestScales(unittest.TestCase):
+    def test_correlation_becomes_fisher_z(self):
+        est, se, scale, reason = standardize(
+            {"effect_type": "r", "effect": 0.5, "n": 100}
+        )
+        self.assertEqual(scale, SCALE_Z)
+        self.assertEqual(reason, "")
+        self.assertAlmostEqual(est, math.atanh(0.5), places=10)
+        self.assertAlmostEqual(se, 1.0 / math.sqrt(97), places=10)
+
+    def test_r_without_n_cannot_be_standardised(self):
+        _, _, _, reason = standardize({"effect_type": "r", "effect": 0.3})
+        self.assertIn("n > 3", reason)
+
+    def test_ratio_is_pooled_on_the_log_scale(self):
+        est, se, scale, reason = standardize({
+            "effect_type": "or", "effect": 2.0,
+            "ci_low": 1.2, "ci_high": 3.3, "ci_level": 0.95,
+        })
+        self.assertEqual(scale, SCALE_LOG)
+        self.assertEqual(reason, "")
+        self.assertAlmostEqual(est, math.log(2.0), places=10)
+        z = z_for_level(0.95)
+        self.assertAlmostEqual(se, (math.log(3.3) - math.log(1.2)) / (2 * z), places=10)
+
+    def test_heritability_stays_its_own_scale(self):
+        _, _, scale, reason = standardize(
+            {"effect_type": "heritability", "effect": 0.8, "se": 0.05}
+        )
+        self.assertEqual(reason, "")
+        self.assertIn("heritability", scale)
+
+    def test_missing_precision_is_refused_with_a_reason(self):
+        _, _, _, reason = standardize({"effect_type": "smd", "effect": 0.4})
+        self.assertIn("Standardfehler", reason)
+
+    def test_mixed_scales_are_not_pooled_together(self):
+        rows = [
+            {"effect_type": "smd", "effect": 0.4, "se": 0.1, "outcome": "cognition"},
+            {"effect_type": "r", "effect": 0.3, "se": 0.05, "outcome": "cognition",
+             "n": 500},
+        ]
+        analysis = build_analysis(rows)
+        self.assertEqual(len(analysis["groups"]), 2,
+                         "SMD and Fisher-z must not share a pooled estimate")
+        for group in analysis["groups"].values():
+            self.assertEqual(group["k"], 1)
+            self.assertIsNone(group["pooled"])
+
+
+class TestAnalyticAnchors(unittest.TestCase):
+    def test_two_equal_variances_equal_their_mean(self):
+        # Equal variances, different estimates: both models must return the
+        # arithmetic mean, and the difference between the studies must show up as
+        # heterogeneity instead of being averaged away.
+        analysis = pool([_effect(0.2, 0.1, "A"), _effect(0.6, 0.1, "B")])
+        self.assertAlmostEqual(analysis["fixed"], 0.4, places=10)
+        self.assertAlmostEqual(analysis["pooled"], 0.4, places=10)
+        self.assertGreater(analysis["tau2"], 0.0)
+
+    def test_zero_heterogeneity_makes_random_effects_equal_fixed_effect(self):
+        # Q = 0 with identical estimates: tau^2 stays at zero, so the random
+        # effects weights are the fixed effect weights.
+        rows = [_effect(0.5, 0.1, "A"), _effect(0.5, 0.2, "B")]
+        analysis = pool(rows)
+        self.assertAlmostEqual(analysis["tau2"], 0.0, places=12)
+        self.assertAlmostEqual(analysis["pooled"], analysis["fixed"], places=10)
+        self.assertAlmostEqual(analysis["i2"], 0.0, places=6)
+
+    def test_sign_flip_flips_the_pooled_effect_and_keeps_the_interval(self):
+        rows = [_effect(0.2, 0.1, "A"), _effect(0.5, 0.1, "B")]
+        flipped = [_effect(-0.2, 0.1, "A"), _effect(-0.5, 0.1, "B")]
+        first, second = pool(rows), pool(flipped)
+        self.assertAlmostEqual(first["pooled"], -second["pooled"], places=10)
+        self.assertAlmostEqual(first["ci_high"] - first["ci_low"],
+                               second["ci_high"] - second["ci_low"], places=10)
+
+    def test_heterogeneity_is_reported_not_hidden(self):
+        rows = [_effect(-0.2, 0.1, "A"), _effect(0.8, 0.1, "B"),
+                _effect(1.1, 0.1, "C")]
+        analysis = pool(rows)
+        self.assertGreater(analysis["tau2"], 0.05)
+        self.assertGreater(analysis["i2"], 70)
+        self.assertIsNotNone(analysis["pi_low"])
+        # A prediction interval is wider than the confidence interval.
+        self.assertLess(analysis["pi_low"], analysis["ci_low"])
+        self.assertGreater(analysis["pi_high"], analysis["ci_high"])
+
+
+class TestCoverage(unittest.TestCase):
+    """The 95 % interval must cover the true effect about 95 % of the time."""
+
+    def test_hksj_interval_covers_the_truth(self):
+        random.seed(20261027)
+        true_effect, tau, se, k, reps = 0.30, 0.25, 0.12, 8, 400
+        covered = 0
+        for _ in range(reps):
+            rows = []
+            for index in range(k):
+                study = random.gauss(true_effect, math.sqrt(tau ** 2 + se ** 2))
+                rows.append(_effect(study, se, f"S{index}"))
+            analysis = pool(rows, method="hksj")
+            if analysis["ci_low"] <= true_effect <= analysis["ci_high"]:
+                covered += 1
+        coverage = covered / reps
+        # The interval is a statistic: 0.94-0.96 expected, 0.90 tolerated for the
+        # small k. Anything below that means the interval is too narrow.
+        self.assertGreater(coverage, 0.90, f"HKSJ coverage too low: {coverage:.3f}")
+        self.assertLess(coverage, 0.995, f"HKSJ coverage implausibly high: {coverage:.3f}")
+
+    def test_tau2_estimate_recovers_the_true_value(self):
+        random.seed(7)
+        true_effect, tau, se, k, reps = 0.0, 0.30, 0.10, 20, 300
+        estimates = []
+        for _ in range(reps):
+            rows = [
+                _effect(random.gauss(true_effect, math.sqrt(tau ** 2 + se ** 2)),
+                        se, f"S{i}")
+                for i in range(k)
+            ]
+            estimates.append(pool(rows)["tau2_reml"])
+        mean_estimate = sum(estimates) / len(estimates)
+        self.assertLess(abs(mean_estimate - tau ** 2), 0.05,
+                        f"REML tau^2 off: {mean_estimate:.3f} vs {tau ** 2:.3f}")
+
+
+class TestLocks(unittest.TestCase):
+    def test_no_effects_means_no_pooled_value(self):
+        analysis = pool([])
+        self.assertIsNone(analysis["pooled"])
+        self.assertIn("keine poolbaren", analysis["note"])
+
+    def test_one_study_is_not_pooled(self):
+        analysis = pool([_effect(0.4, 0.1, "A")])
+        self.assertIsNone(analysis["pooled"])
+        self.assertIn("kein Pooling", analysis["note"])
+        self.assertIsNotNone(analysis["fixed"])
+
+    def test_rows_without_precision_are_excluded_and_counted(self):
+        rows = [
+            {"effect_type": "smd", "effect": 0.4, "se": 0.1, "outcome": "cog"},
+            {"effect_type": "smd", "effect": 0.9, "outcome": "cog"},  # no precision
+        ]
+        analysis = build_analysis(rows)
+        group = analysis["groups"]["cog [hedges_g]"]
+        self.assertEqual(group["k"], 1)
+        self.assertEqual(len(analysis["excluded"]), 1)
+        self.assertIn("Standardfehler", analysis["excluded"][0]["reason"])
+
+    def test_disputed_rows_are_never_pooled(self):
+        # Two readings of the same sentence that disagree are not a number:
+        # averaging them would hide the disagreement the double pass found.
+        rows = [
+            {"effect_type": "smd", "effect": 0.4, "se": 0.1, "outcome": "cog"},
+            {"effect_type": "smd", "effect": 0.9, "se": 0.1, "outcome": "cog",
+             "disputed": 1},
+        ]
+        analysis = build_analysis(rows)
+        self.assertEqual(analysis["groups"]["cog [hedges_g]"]["k"], 1)
+        self.assertEqual(analysis["excluded"][0]["reason"],
+                         "Doppel-Extraktion widersprüchlich")
+
+    def test_rejected_rows_are_excluded_with_their_reason(self):
+        rows = [
+            {"effect_type": "smd", "effect": 0.4, "se": 0.1, "outcome": "cog"},
+            {"effect_type": "smd", "effect": 1.9, "se": 0.1, "outcome": "cog",
+             "rejection_reason": "KI enthält den Punktschätzer nicht"},
+        ]
+        analysis = build_analysis(rows)
+        self.assertEqual(analysis["groups"]["cog [hedges_g]"]["k"], 1)
+        self.assertIn("Plausibilitätsgate", analysis["excluded"][0]["reason"])
+        self.assertIn("Punktschätzer", analysis["excluded"][0]["reason"])
+
+    def test_the_same_cohort_under_two_urls_counts_once(self):
+        # Two rows of one cohort would count the same people twice and narrow the
+        # interval without adding information.
+        rows = [
+            {"effect_type": "smd", "effect": 0.4, "se": 0.2, "outcome": "cog",
+             "doi": "10.1/one", "label": "Paper (A)"},
+            {"effect_type": "smd", "effect": 0.42, "se": 0.1, "outcome": "cog",
+             "doi": "10.1/one", "label": "Paper (B)"},
+        ]
+        analysis = build_analysis(rows)
+        group = analysis["groups"]["cog [hedges_g]"]
+        self.assertEqual(group["k"], 1)
+        # The more precise reading is the one that stays.
+        self.assertAlmostEqual(group["rows"][0]["est"], 0.42, places=6)
+        self.assertIn("dieselbe Studie", analysis["excluded"][0]["reason"])
+        self.assertIn("10.1/one", analysis["excluded"][0]["reason"])
+
+    def test_rows_without_a_doi_are_not_merged_by_guesswork(self):
+        rows = [
+            {"effect_type": "smd", "effect": 0.4, "se": 0.1, "outcome": "cog"},
+            {"effect_type": "smd", "effect": 0.42, "se": 0.1, "outcome": "cog"},
+        ]
+        analysis = build_analysis(rows)
+        self.assertEqual(analysis["groups"]["cog [hedges_g]"]["k"], 2)
+        self.assertEqual(analysis["excluded"], [])
+
+    def test_determinism(self):
+        rows = [_effect(0.2, 0.1, "A"), _effect(0.5, 0.15, "B"),
+                _effect(0.35, 0.2, "C")]
+        first, second = pool(rows), pool(rows)
+        self.assertEqual(first["pooled"], second["pooled"])
+        self.assertEqual(first["ci_low"], second["ci_low"])
+        self.assertEqual(first["tau2"], second["tau2"])
+
+
+class TestSubgroupsAndBias(unittest.TestCase):
+    def test_two_clearly_different_subgroups_raise_q_between(self):
+        rows = [
+            _effect(-0.6, 0.1, "A1", design="twin"),
+            _effect(-0.5, 0.1, "A2", design="twin"),
+            _effect(0.8, 0.1, "B1", design="cohort"),
+            _effect(0.9, 0.1, "B2", design="cohort"),
+        ]
+        result = subgroups(rows, "design")
+        self.assertEqual(len(result["groups"]), 2)
+        self.assertGreater(result["q_between"], 10)
+        self.assertLess(result["p"], 0.01)
+
+    def test_leave_one_out_reports_the_range(self):
+        rows = [_effect(0.2, 0.05, "A"), _effect(0.25, 0.05, "B"),
+                _effect(0.3, 0.05, "C"), _effect(1.4, 0.6, "outlier")]
+        result = leave_one_out(rows)
+        self.assertTrue(result["available"])
+        self.assertEqual(len(result["entries"]), 4)
+        low, high = result["range"]
+        self.assertLess(low, high)
+        without_outlier = min(e["estimate"] for e in result["entries"])
+        self.assertNotAlmostEqual(without_outlier, result["estimate"], places=6)
+
+    def test_egger_intercept_sees_an_asymmetric_funnel(self):
+        """Small-study bias shows up as a non-zero intercept, not as a slope.
+
+        Asymmetric: the observed effect grows as the study shrinks
+        (effect = 0.2 + 0.3 * se). Symmetric: the same effect at every precision,
+        with a little noise so the residuals are not exactly zero.
+        """
+        ses = [0.05, 0.10, 0.20, 0.30, 0.50]
+        asymmetric = [_effect(0.2 + 0.3 * se, se, f"small{index}")
+                      for index, se in enumerate(ses)]
+        symmetric = [_effect(0.30 + (0.01 if index % 2 else -0.01), se, f"even{index}")
+                     for index, se in enumerate(ses)]
+
+        bad, good = egger(asymmetric), egger(symmetric)
+
+        self.assertTrue(bad["available"])
+        self.assertLess(bad["p"], 0.05)
+        self.assertGreater(abs(bad["intercept"]), abs(good["intercept"]))
+        self.assertGreater(good["p"], 0.05)
+
+    def test_egger_needs_three_studies(self):
+        result = egger([_effect(0.2, 0.1), _effect(0.3, 0.2)])
+        self.assertFalse(result["available"])
+        self.assertIn("k < 3", result["note"])
+
+
+class TestForestTable(unittest.TestCase):
+    def test_table_carries_every_study_and_the_pooled_rows(self):
+        analysis = pool([_effect(0.2, 0.1, "Studie A"), _effect(0.6, 0.1, "Studie B"),
+                         _effect(0.45, 0.12, "Studie C")])
+        table = "\n".join(forest_table(analysis))
+        self.assertIn("Studie A", table)
+        self.assertIn("Studie B", table)
+        self.assertIn("Random Effects", table)
+        self.assertIn("Prediction Interval", table)
+        analysis = pool([_effect(0.2, 0.1, "Studie A"), _effect(0.6, 0.1, "Studie B"),
+                         _effect(0.45, 0.12, "Studie C")])
+        self.assertIn(f"{analysis['pooled']:.3f}", table)
+
+
+def _row(**overrides):
+    """A stored effect row as the database hands it over."""
+    row = {
+        "id": "e1", "source_id": "s1", "title": "Study", "doi": "",
+        "outcome": "depressive symptoms", "effect_type": "smd",
+        "effect": -0.4, "se": 0.1, "disputed": 0, "rejection_reason": "",
+        "design": "randomized controlled trial",
+    }
+    row.update(overrides)
+    return row
+
+
+class TestAggregateDesigns(unittest.TestCase):
+    """A review is not a study - its number already contains other studies."""
+
+    def test_review_designs_are_recognised(self):
+        for design in ("Network Meta-Analysis", "meta-analysis of randomized trials",
+                       "metaanalysis", "meta analysis", "systematic review",
+                       "umbrella review of meta-analyses", "pooled analysis of cohorts",
+                       "Randomized controlled trial (meta-analysis of 37 RCTs)"):
+            self.assertTrue(aggregate_design(design), design)
+
+    def test_primary_designs_pass(self):
+        for design in ("randomized controlled trial", "cluster-randomized trial",
+                       "prospective cohort", "longitudinal panel study",
+                       "cross-over trial"):
+            self.assertEqual(aggregate_design(design), "", design)
+
+    def test_an_unknown_design_is_not_dropped(self):
+        # Silence is a gap in the extraction, not a finding about the paper.
+        self.assertEqual(aggregate_design(""), "")
+        self.assertEqual(aggregate_design(None), "")
+        self.assertEqual(aggregate_design("unclear"), "")
+
+    def test_a_review_row_is_refused_with_its_reason(self):
+        est, se, scale, reason = standardize(
+            _row(design="Network Meta-Analysis", effect=-2.02, se=0.42)
+        )
+        self.assertIsNone(est)
+        self.assertIsNone(se)
+        self.assertEqual(scale, "")
+        self.assertIn("Übersichtsarbeit", reason)
+        self.assertIn("keine Primärstudie", reason)
+
+    def test_reviews_do_not_enter_the_pool(self):
+        analysis = build_analysis([
+            _row(source_id="s1", effect=-0.30),
+            _row(source_id="s2", effect=-0.55),
+            _row(source_id="s3", design="Network Meta-Analysis", effect=-2.02),
+        ])
+        group = analysis["groups"]["depressive symptoms [hedges_g]"]
+        self.assertEqual(group["k"], 2)
+        self.assertAlmostEqual(group["pooled"], -0.425, places=3)
+        self.assertEqual(len(analysis["excluded"]), 1)
+        self.assertIn("Übersichtsarbeit", analysis["excluded"][0]["reason"])
+
+    def test_a_review_alone_leaves_nothing_to_pool(self):
+        analysis = build_analysis([
+            _row(source_id="s1", design="meta-analysis of randomized controlled trials")
+        ])
+        self.assertNotIn("depressive symptoms [hedges_g]", analysis["groups"])
+        self.assertEqual(analysis["usable"], 0)
+        self.assertEqual(len(analysis["excluded"]), 1)
+
+
+if __name__ == "__main__":
+    unittest.main()

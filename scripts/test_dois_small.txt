@@ -1,0 +1,11 @@
+# Prototype test set (10 DOIs)
+# 5 DOIs from the live topic database:
+10.3389/fpsyt.2025.1525631
+10.1249/mss.0000000000001512
+10.1186/s12889-026-26504-3
+10.1038/s41598-025-91680-y
+10.3389/fnut.2023.1051444
+# Known reference works of the field:
+10.1136/bmj-2022-071690
+10.1016/j.jad.2015.08.018
+10.1002/14651858.CD004366.pub8

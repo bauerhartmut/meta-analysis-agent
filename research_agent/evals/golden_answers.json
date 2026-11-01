@@ -1,0 +1,336 @@
+{
+  "meta": {
+    "description": "Golden ground-truth eval set for the eugenics/embryo-selection research agent.",
+    "created": "2026-08-31",
+    "claims_grounded_in": "research_agent/data/research.db (facts table, hypotheses, sources, journal findings). Each claim cites the DB fact/hypothesis it is based on. No new domain knowledge was invented.",
+    "evaluation": "Deterministic recall + number-accuracy of the golden claims against the current knowledge base.",
+    "re_research_note": "On 2026-08-31 the golden set was EXTENDED with re-researched, externally sourced claims (not derived from research.db) to de-saturate the score: Polderman 2015, Lee 2018, Savage 2018, Yengo 2022, HFEA PGT-M, Agar 2004, Bratsberg&Rogeberg 2018, Turley 2021, Karavani 2019. These claims are intentionally NOT in the DB, so claim_recall/number_accuracy now discriminate between good and weak pipelines."
+  },
+  "questions": [
+    {
+      "id": "q01_wilson_effect",
+      "question": "Was demonstriert der Wilson-Effekt ueber die Erblichkeit von IQ von der Kindheit zum Erwachsenenalter?",
+      "claims": [
+        {
+          "claim": "The heritability of IQ increases from about 0.40 in childhood to 0.80 in adulthood.",
+          "source": "fact 3cab2651366a (Wilson Effect)",
+          "numbers": [
+            "0.40",
+            "0.80"
+          ]
+        },
+        {
+          "claim": "The heritability of IQ reaches an asymptote of approximately 0.80 at 18-20 years of age and continues at that level into adulthood.",
+          "source": "fact 4bcb66847b35 / fbb9b96305e3",
+          "numbers": [
+            "0.80",
+            "18",
+            "20"
+          ]
+        },
+        {
+          "claim": "As individuals grow older, heritability estimates of behavior tend to increase, for some phenotypes like IQ by extreme amounts.",
+          "source": "fact 7d1c1993f101"
+        },
+        {
+          "claim": "A meta-analysis of fifty years of twin studies (Polderman et al., 2015; 2,748 studies) found that the average heritability across all human traits is about 49%.",
+          "source": "re-research: Polderman et al., Nat. Genet. 2015 (PMID 25985137)",
+          "numbers": [
+            "2748",
+            "49"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q02_gwas_intelligence",
+      "question": "Was sind die neuesten GWAS-Ergebnisse zu Genen, die mit Intelligenz und kognitiver Faehigkeit assoziiert sind?",
+      "claims": [
+        {
+          "claim": "Genome-wide association studies have delivered an increasingly broad view of the genetic basis of human phenotypic variation.",
+          "source": "fact b10b64d91f88"
+        },
+        {
+          "claim": "A GWAS of educational attainment in a sample of about 3 million individuals identified 3,952 approximately uncorrelated genome-wide-significant SNPs.",
+          "source": "fact 89fbc72f6cf4",
+          "numbers": [
+            "3 million",
+            "3952"
+          ]
+        },
+        {
+          "claim": "A polygenic score for educational attainment explains between 0.6% and 3% of the variance in personality traits such as Openness.",
+          "source": "fact 4511e1ed3cbf",
+          "numbers": [
+            "0.6",
+            "3"
+          ]
+        },
+        {
+          "claim": "The SNP selection method greatly affects type 1 error rates, with published studies having used methods expected to substantially inflate type 1 error rates.",
+          "source": "fact 06303be4b52a"
+        },
+        {
+          "claim": "A genome-wide association study of educational attainment in approximately 1.1 million individuals (Lee et al., 2018) identified 1,271 associated variants; its polygenic score predicted about 7-10% of the variance in cognitive performance.",
+          "source": "re-research: Lee et al., Nat. Genet. 2018 (PMID 30038396)",
+          "numbers": [
+            "1.1 million",
+            "1271",
+            "7",
+            "10"
+          ]
+        },
+        {
+          "claim": "The largest intelligence GWAS meta-analysis (Savage et al., 2018; n=269,867) identified 205 genomic loci associated with intelligence, 190 of them newly discovered.",
+          "source": "re-research: Savage et al., Nat. Genet. 2018 (PMID 29942086)",
+          "numbers": [
+            "269867",
+            "205",
+            "190"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q03_pgt_outcomes",
+      "question": "Was sind die gemessenen kognitiven und gesundheitlichen Outcomes von Kindern, die per PGT-A und PGT-M gezeugt wurden?",
+      "claims": [
+        {
+          "claim": "Preimplantation genetic testing (PGT) was introduced in 2017 as a substitute for preimplantation genetic diagnosis (PGD) and preimplantation genetic screening (PGS).",
+          "source": "fact d1af12c3e759",
+          "numbers": [
+            "2017"
+          ]
+        },
+        {
+          "claim": "The average success rate of IVF is 20-40%.",
+          "source": "fact 827fda9b9ec0",
+          "numbers": [
+            "20",
+            "40"
+          ]
+        },
+        {
+          "claim": "There was a tenfold increase in global research output on PGT's ELSI from 1999 to 2019.",
+          "source": "fact ca4928357e64",
+          "numbers": [
+            "1999",
+            "2019"
+          ]
+        },
+        {
+          "claim": "The potential for genetic selection for non-disease traits, such as intelligence and sex, raises ethical concerns.",
+          "source": "fact bd9728f9746c"
+        },
+        {
+          "claim": "The UK fertility regulator (HFEA) has approved preimplantation genetic testing for monogenic disorders (PGT-M) for over 2,000 single-gene conditions.",
+          "source": "re-research: HFEA guidance on PGT-M",
+          "numbers": [
+            "2000"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q04_selection_response",
+      "question": "Wie sieht die Selektionsantwort fuer IQ in quantitativen genetischen Modellen aus?",
+      "claims": [
+        {
+          "claim": "A meta-analysis of fifty years of twin studies found that the heritability of human traits ranges from 15% to 80% depending on the trait.",
+          "source": "fact 5e9ee71a3d76",
+          "numbers": [
+            "15",
+            "80"
+          ]
+        },
+        {
+          "claim": "The genetic variance maintained by mutation-selection balance is 2 mu / S per locus, where mu is the mutation rate and S is the strength of stabilizing selection.",
+          "source": "fact a70be51d24be"
+        },
+        {
+          "claim": "Selection for IQ may involve trade-offs in other genetically correlated traits due to pleiotropy.",
+          "source": "hypothesis 62ad875ca16d"
+        },
+        {
+          "claim": "A genome-wide association meta-analysis of height in about 5.4 million individuals (Yengo et al., 2022) identified 12,111 independent genome-wide-significant SNPs that account for about 40% of height variation in populations of European ancestry.",
+          "source": "re-research: Yengo et al., Nature 2022 (PMID 36224396)",
+          "numbers": [
+            "5.4 million",
+            "12111",
+            "40"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q05_polygenic_scores",
+      "question": "Wie gut sagen polygene Scores fuer Bildungsabschluss reale kognitive Outcomes voraus?",
+      "claims": [
+        {
+          "claim": "A polygenic score for educational attainment explains between 0.6% and 3% of the variance in personality traits such as Openness, Conscientiousness, and Agreeableness.",
+          "source": "fact 4511e1ed3cbf",
+          "numbers": [
+            "0.6",
+            "3"
+          ]
+        },
+        {
+          "claim": "For some highly heritable complex phenotypes such as height, reasonable accuracy in predicting the phenotype from DNA alone is already achievable.",
+          "source": "fact aa3b0b2c55cc"
+        },
+        {
+          "claim": "Polygenic risk scores have emerged as a promising tool for predicting disease risk and treatment outcomes using genomic data.",
+          "source": "fact bbce5fc3714a"
+        }
+      ]
+    },
+    {
+      "id": "q06_cost_benefit",
+      "question": "Was sind die Kosten-Nutzen-Analysen von genetischer Selektion vs. Umgebungsanreicherung zur Anhebung des Bevoelkerungs-IQ?",
+      "claims": [
+        {
+          "claim": "IQ scores have increased by several points per decade on some tests, especially visuospatial and matrix-like items (Flynn Effect).",
+          "source": "fact 44de162902d1"
+        },
+        {
+          "claim": "Genetic selection for IQ may offer greater long-term gains compared to environmental enrichment, especially as genetic factors become more influential with age (Wilson Effect).",
+          "source": "journal finding cycle 36"
+        },
+        {
+          "claim": "Environmental interventions may be reaching their limits, as indicated by a plateauing Flynn Effect.",
+          "source": "hypothesis 9ed666b98170"
+        }
+      ]
+    },
+    {
+      "id": "q07_countries_selection",
+      "question": "Welche Laender erlauben oder praktizieren Embryoselektion und welche Outcomes gibt es?",
+      "gap_checks": [
+        {
+          "label": "concrete jurisdictions that legally allow embryo selection",
+          "type": "any_of",
+          "values": [
+            "iceland",
+            "finland",
+            "embryo selection is legal"
+          ]
+        }
+      ],
+      "claims": [
+        {
+          "claim": "Forced sterilization is a medical or surgical intervention that prevents reproduction without free and informed consent (eugenics history).",
+          "source": "fact 48f98af3371f"
+        },
+        {
+          "claim": "The historical misuse of eugenics has created a legacy of ethical and social distrust influencing public and political resistance to modern embryo selection technologies.",
+          "source": "hypothesis 6fd023b72d9c"
+        },
+        {
+          "claim": "The potential for genetic selection for non-disease traits, such as intelligence, raises ethical concerns.",
+          "source": "fact bd9728f9746c"
+        }
+      ]
+    },
+    {
+      "id": "q08_transhumanist_ethics",
+      "question": "Welche transhumanistischen ethischen Rahmenwerke unterstuetzen die genetische Verbesserung kognitiver Faehigkeiten?",
+      "gap_checks": [
+        {
+          "label": "a named transhumanist framework (e.g. liberal eugenics)",
+          "type": "any_of",
+          "values": [
+            "liberal eugenics",
+            "morphological freedom"
+          ]
+        }
+      ],
+      "claims": [
+        {
+          "claim": "Genes associated with cognitive ability may have pleiotropic effects, complicating the ethical and practical implementation of genetic selection for IQ.",
+          "source": "hypothesis 054d7f0017b0"
+        },
+        {
+          "claim": "The use of AI-driven frameworks for cognitive prediction could enable more precise identification of embryos with optimal cognitive potential.",
+          "source": "hypothesis ed147da7e121"
+        },
+        {
+          "claim": "Nicholas Agar (2004), in 'Liberal Eugenics', defends genetic enhancement including embryo selection for non-medical traits, arguing parents may be permitted to choose characteristics that promote the future child's welfare.",
+          "source": "re-research: Agar, Liberal Eugenics: In Defence of Human Enhancement (2004)"
+        }
+      ]
+    },
+    {
+      "id": "q09_flynn_plateau",
+      "question": "Wie unterstuetzt das Plateaubildende Flynn-Effekt den Fall fuer genetische statt Umgebungsansaetze zum IQ?",
+      "claims": [
+        {
+          "claim": "IQ scores have increased by several points per decade on some tests, especially visuospatial and matrix-like items.",
+          "source": "fact 44de162902d1"
+        },
+        {
+          "claim": "The plateauing of the Flynn Effect may be attributed to the saturation of environmental improvements, making genetic interventions more critical for further IQ gains.",
+          "source": "hypothesis 9ed666b98170"
+        },
+        {
+          "claim": "The plateauing of the Flynn Effect indicates environmental interventions have reached their limits, making genetic selection a more viable path.",
+          "source": "hypothesis 3a3b36bc5760"
+        },
+        {
+          "claim": "Analyzing about 730,000 Norwegian conscripts, Bratsberg & Rogeberg (2018) found that Norwegian IQ peaked for the 1975 birth cohort and then declined by about 0.2 points per year, roughly 7 points per generation.",
+          "source": "re-research: Bratsberg & Rogeberg, PNAS 2018",
+          "numbers": [
+            "730000",
+            "1975",
+            "0.2",
+            "7"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q10_max_iq_gain",
+      "question": "Was ist der theoretisch maximale IQ-Gewinn durch Embryoselektion mit aktuellen polygenen Scores?",
+      "gap_checks": [
+        {
+          "label": "a quantitative estimate of achievable IQ gain",
+          "type": "any_of",
+          "values": [
+            "iq points",
+            "expected iq gain",
+            "gain of "
+          ]
+        }
+      ],
+      "claims": [
+        {
+          "claim": "For some highly heritable complex phenotypes such as height, reasonable accuracy in predicting the phenotype from DNA alone is already achievable.",
+          "source": "fact aa3b0b2c55cc"
+        },
+        {
+          "claim": "Polygenic risk scores have emerged as a promising tool for predicting traits and outcomes using genomic data.",
+          "source": "fact bbce5fc3714a"
+        },
+        {
+          "claim": "GWAS studies may identify SNPs with moderate effect sizes that, when combined, contribute to cognitive ability, but individual variants may not suffice for meaningful IQ optimization in isolation.",
+          "source": "hypothesis 29bd06f1f6cf"
+        },
+        {
+          "claim": "Turley et al. (2021) report that, with current polygenic scores and screening a typical set of about 10 embryos, the expected gain from polygenic embryo selection is roughly 2.5 IQ points.",
+          "source": "re-research: Turley et al., NEJM 2021 (10.1056/NEJMsr2105065)",
+          "numbers": [
+            "10",
+            "2.5"
+          ]
+        },
+        {
+          "claim": "Karavani et al. (2019) estimated a gain of about 2.5 IQ points when selecting among five viable embryos, with current predictors.",
+          "source": "re-research: Karavani et al., Cell 2019 (PMC6957074)",
+          "numbers": [
+            "5",
+            "2.5"
+          ]
+        }
+      ]
+    }
+  ]
+}

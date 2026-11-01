@@ -1,0 +1,40 @@
+{
+  "n": 50000,
+  "metric": "Difference in MR point estimates (Young - Old)",
+  "test": "Independent t-test on variant ratio estimates per replication",
+  "alpha": 0.05,
+  "seed": 42,
+  "replications": 5,
+  "value": 0.0076979369951184875,
+  "ci_low": -0.009525942952066612,
+  "ci_high": 0.026513037267306996,
+  "p_value": 0.3584948136835878,
+  "values": [
+    0.018056717568639316,
+    0.02745262834493674,
+    -0.01068672757778135,
+    0.0009211186793660316,
+    0.0027459479604316998
+  ],
+  "p_values": [
+    0.5932324719435347,
+    0.3584948136835878,
+    0.8365688222474197,
+    0.2523110661754444,
+    0.1917380396384048
+  ],
+  "significant_share": 0.0,
+  "direction_share": 0.8,
+  "sensitivity": [
+    {
+      "noise_multiplier": 0.5,
+      "value": 0.007121050595646035,
+      "p_value": 0.564390199241757
+    },
+    {
+      "noise_multiplier": 2.0,
+      "value": 0.04276933242057818,
+      "p_value": 0.8480854342449136
+    }
+  ]
+}

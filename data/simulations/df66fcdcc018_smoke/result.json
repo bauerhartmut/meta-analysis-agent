@@ -1,0 +1,32 @@
+{
+  "n": 30,
+  "metric": "Low-SES Effect Size",
+  "test": "Stratified OLS with Interaction Check",
+  "alpha": 0.05,
+  "seed": 42,
+  "replications": 1,
+  "value": -0.013756713714497108,
+  "ci_low": -0.013756713714497108,
+  "ci_high": -0.013756713714497108,
+  "p_value": 0.9706742917688058,
+  "values": [
+    -0.013756713714497108
+  ],
+  "p_values": [
+    0.9706742917688058
+  ],
+  "significant_share": 0.0,
+  "direction_share": 0.0,
+  "sensitivity": [
+    {
+      "noise_multiplier": 0.5,
+      "value": 0.018121643142751487,
+      "p_value": 0.9228553721816939
+    },
+    {
+      "noise_multiplier": 2.0,
+      "value": -0.07751342742899422,
+      "p_value": 0.9175263465614133
+    }
+  ]
+}

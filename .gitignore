@@ -1,0 +1,47 @@
+# --- virtual env / artifacts ---
+.venv/
+__pycache__/
+*.pyc
+finetune/
+kaggle_upload*/
+
+# --- data: research databases, logs, snapshots (large, reproducible) ---
+data/*.db
+data/*.db-usage.db
+data/*.pid
+data/backups/
+data/fulltext/
+data/fulltext_inbox/
+data/fulltext_logs/
+data/fulltext_metadata/
+data/manual_acquisition_queue/
+data/dataset/
+data/journal/
+data/kaggle_output*
+data/reports/*.pdf
+data/*.log
+data/agent_*.log
+data/_snapshot_before_run.json
+data/finetune.pid
+
+# --- misc artifacts / logs / env ---
+.env
+.env.*
+!.env.example
+agent.err.log
+agent.log
+agent.out.log
+agent_console.log
+agent_output.log
+bytegpt*
+pc_server.log
+datafinetune_output.log
+supervisor.pid
+.cloud-attachments/
+.freebuff/
+backups/
+reports/
+dataset/
+nul
+=*
+*.log
