@@ -201,3 +201,43 @@ werden je nach Sprint-Priorität (§15) abgearbeitet.
 ### Offen in Phase 3
 - Prompt-/Modellperspektiven getrennt halten (z. Z. dasselbe Modell mit»
   field_order-Trennung; getrennte Promptversionen sind ein Folge-Sprint).
+
+## Sprint 4 (02.11.2026): Phase 4 - Statistische Engine abgesichert (Auftrag §7)
+
+### Bestand-audit (keine Duplikate)
+- pool() enthaelt bereits pi_low/pi_high (Vorhersageintervall), dt. HKSJ/REML,
+  Q/I2/tau2, kleine-k-Gates; _collapse_same_study hat die vorab definierte
+  Min-SE-Auswahlregel fuer Dependenz (§7.2) inkl. Arme/Kontraste/zweite
+  Lesung erfasst.
+
+### Neu umgesetzt
+- **pooling/2** (POOL_VERSION): Pools splitten nach
+  * Adjustierungsstatus (adjusted/unadjusted/unknown; Spalte `adjusted`,
+    -1 = der Text sagt es nicht) — nie stillschweigende Mischung (§7.1);
+  * berichtetem Follow-up-Zeitpunkt (`time_point`, verbatim aus dem Text,
+    leer = nicht getrennt) — unterschiedliche Zeitpunkte = unterschiedliche
+    Pools (§7.1);
+  * unknown staatliert je eigenen Teilpool und schlie0pt sich nie einem
+    bekannten an.
+- **study_id-Kollaps** (Phase 2/§5.2): mehrere Publikationen einer Kohorte
+  kollabieren auf dieselbe Min-SE-Regel; Grund liegt sichtbar in der
+  Ausschlussliste.
+- **Referenzwerte** (§7.1 Abnahme) in test_meta_pooling: Fisher-z
+  (r=0.5,n=40 -> 0.5493061/se=1/sqrt(37)), log-ratio SE aus CI auf dem
+  berichteten Level (95 % *and* 90 %-Sensitivitaet), ratio-0-Refusal, SMD-/
+  raw-Passthrough ("raw:beta"-Skalen-Verbund).
+- **Extractor /2** (EXTRACTOR_VERSION "meta-extraction/2"): additive Felder
+  `adjusted` (0/1/leer; "Never guess") und `time_point` verbatim; Norm-
+  alisierung traegt sie durch; `StudyEffect`/DDL um adjusted/time_point/
+  study_id additiv erweitert (ALTER-idempotent).
+- **evals/stat_repro.py** (§7.3 Abnahme): liest study_effects readonly, rechnet
+  pools neu (dieselbe getestete Engine, isolierter Prozess), schreibt JSON +
+  CSV-Export fuer ein externes Referenzskript (metafor/R). Live-Lauf auf der
+  Baseline-DB: 129 Zeilen, 22 Pool-Eintraege, 13 Gruppen.
+- **Offen (§7.2/Abnahme):** multivariate Metaanalyse/RVE korrekt zu
+  modellieren ist noch nicht implementiert; bis dahin gilt die Min-SE-Regel
+  (vorbefixiert) und die externe Referenzreproduktion ( CSV-Export).
+
+### Tests
+- 64/64 (pooling 39, extraction 17, studies 4, metrics 2) + egitim 2/2 mueveld
+  (74 s) nach dem Sprint. py_compile alle Module gruen.

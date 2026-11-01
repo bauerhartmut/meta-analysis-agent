@@ -274,6 +274,26 @@ class PassComparisonFieldTest(unittest.TestCase):
         self.assertEqual(b2["disputed"], 1)
         self.assertTrue(out["conflict_ratio"] > 0)
 
+class NormalizerFieldsTest(unittest.TestCase):
+    """Phase 4 additive fields ride through normalization (§7.1)."""
+
+    def _normalize(self, item):
+        from research_agent.meta.extraction import EffectExtractor
+        ex = EffectExtractor(object(), Database(":memory:"), double_pass=False)
+        return ex._normalize(item, targets=None)
+
+    def test_adjusted_and_time_point_passthrough(self):
+        row = self._normalize({"outcome": "bp", "effect_type": "smd",
+                               "effect": -0.4, "se": 0.1,
+                               "adjusted": 1, "time_point": " 12-month follow-up "})
+        self.assertEqual(row["adjusted"], 1)
+        self.assertEqual(row["time_point"], "12-month follow-up")
+
+    def test_adjusted_stays_unknown_without_statement(self):
+        row = self._normalize({"outcome": "bp", "effect_type": "smd",
+                               "effect": -0.4, "se": 0.1})
+        self.assertEqual(row["adjusted"], -1)
+        self.assertEqual(row["time_point"], "")
 
 if __name__ == "__main__":
     unittest.main()

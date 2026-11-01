@@ -145,6 +145,13 @@ class StudyEffect:
     moderators: str = "{}"  # JSON object
     direction: str = ""  # what "higher" means - without it a sign is unreadable
     unit: str = ""
+    # Phase 4 (order §7.1): 0 = unadjusted, 1 = adjusted model, -1 = text says
+    # nothing. Pooling refuses to mix these states silently (pooling/2).
+    adjusted: int = -1
+    # Reported follow-up wording, verbatim; '' = single timepoint not stated.
+    time_point: str = ""
+    # Study-level link (Phase 2); '' = assignment unknown and unclaimed.
+    study_id: str = ""
     quote: str = ""
     quote_start: int = -1
     quote_end: int = -1

@@ -68,12 +68,16 @@ def ensure_study_schema(db) -> None:
             """)
         # additive column on the existing table (kept inside a try: column
         # already existing on older DBs is the normal path, not an error).
-        try:
-            conn.execute("ALTER TABLE study_effects ADD COLUMN "
-                         "study_id TEXT DEFAULT ''")
-            logger.info("study_effects: added additive column study_id")
-        except sqlite3.OperationalError:
-            pass
+        for col, ddl, label in (
+                ("study_id", "TEXT DEFAULT ''", "study_id"),
+                ("adjusted", "INTEGER DEFAULT -1", "adjusted"),
+                ("time_point", "TEXT DEFAULT ''", "time_point"),
+        ):
+            try:
+                conn.execute(f"ALTER TABLE study_effects ADD COLUMN {col} {ddl}")
+                logger.info("study_effects: added additive column %s", label)
+            except sqlite3.OperationalError:
+                pass
         conn.execute(
             "CREATE INDEX IF NOT EXISTS idx_study_effects_study "
             "ON study_effects(study_id)")

@@ -1,0 +1,23 @@
+group,label,source_id,study_id,doi,outcome,scale,est,se,adjusted,time_point,disputed
+all-cause mortality [log_ratio],d0bcfaef83ff,d0bcfaef83ff,,,all-cause mortality,log_ratio,-1.3093333199837622,0.21000393764922265,-1,,0
+chronic disease incidence [raw:beta],4927a0818af5,4927a0818af5,,,chronic disease incidence,raw:beta,0.005,0.001785747099236289,-1,,0
+colorectal cancer risk [log_ratio],9ac49ce663bc,9ac49ce663bc,,,colorectal cancer risk,log_ratio,-0.05129329438755058,0.04797338955875509,-1,,0
+depressive symptoms [fisher_z],a84dccb170c1,a84dccb170c1,,,depressive symptoms,fisher_z,-0.1511404359364668,0.012141073279465802,-1,,0
+depressive symptoms [hedges_g],56d4ec710151,56d4ec710151,,,depressive symptoms,hedges_g,-0.28,0.0765320185386981,-1,,0
+depressive symptoms [hedges_g],416e085ec44c,416e085ec44c,,,depressive symptoms,hedges_g,-0.82,0.18877897906212196,-1,,0
+depressive symptoms [hedges_g],35431909c5de,35431909c5de,,,depressive symptoms,hedges_g,-0.73,0.13520656608503331,-1,,0
+depressive symptoms [log_ratio],a42759121db5,a42759121db5,,,depressive symptoms,log_ratio,0.09531017980432493,0.03221837909279987,-1,,0
+depressive symptoms [log_ratio],0b17f1af2a47,0b17f1af2a47,,,depressive symptoms,log_ratio,0.6981347220709843,0.3175555287405722,-1,,0
+depressive symptoms [log_ratio],6a99402f41ff,6a99402f41ff,,,depressive symptoms,log_ratio,-0.4620354595965587,0.13348412212975913,-1,,0
+depressive symptoms [log_ratio],182b05a12853,182b05a12853,,,depressive symptoms,log_ratio,0.08617769624105241,0.015210315799295233,-1,,0
+depressive symptoms [log_ratio],92652d45b39a,92652d45b39a,,,depressive symptoms,log_ratio,1.0905801169708453,0.350267260667515,-1,,0
+depressive symptoms [log_ratio],bebe022e1a33,bebe022e1a33,,,depressive symptoms,log_ratio,-0.18632957819149348,0.15086105941604303,-1,,0
+depressive symptoms [raw:beta],4927a0818af5,4927a0818af5,,,depressive symptoms,raw:beta,0.216,0.05892965427479754,-1,,0
+depressive symptoms [raw:beta],3b12e506307b,3b12e506307b,,,depressive symptoms,raw:beta,-0.11,0.03316387470010251,-1,,0
+depressive symptoms [raw:beta],9d341af7b02a,9d341af7b02a,,,depressive symptoms,raw:beta,-0.18,0.07908308582332137,-1,,0
+major depressive disorder [log_ratio],fc4ee901a081,fc4ee901a081,,,major depressive disorder,log_ratio,-0.3011050927839216,0.11333145319187425,-1,,0
+obesity [log_ratio],a4347abcc06f,a4347abcc06f,,,obesity,log_ratio,0.28517894223366247,0.1456607241483904,-1,,0
+physical activity [raw:beta],9d341af7b02a,9d341af7b02a,,,physical activity,raw:beta,-0.09,0.053572412977088674,-1,,0
+physical activity agreement [fisher_z],ad24b3f96a7e,ad24b3f96a7e,,,physical activity agreement,fisher_z,0.2121254414235694,0.050898659855928764,-1,,0
+physical activity at 2 years [log_ratio],b181ec03741f,b181ec03741f,,,physical activity at 2 years,log_ratio,0.6259384308664954,0.16036229858833095,-1,,0
+recreational walking [log_ratio],e65d1440ba18,e65d1440ba18,,,recreational walking,log_ratio,2.66374994220563,0.46556887235001904,-1,,0

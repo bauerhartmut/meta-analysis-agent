@@ -1,0 +1,2714 @@
+{
+  "generated": "2026-11-01T22:28:57.069367+00:00",
+  "db": "data/research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+  "pool_version": "pooling/2",
+  "n_rows": 129,
+  "n_pool_rows": 22,
+  "rows": [
+    {
+      "group": "all-cause mortality [log_ratio]",
+      "label": "d0bcfaef83ff",
+      "source_id": "d0bcfaef83ff",
+      "study_id": "",
+      "doi": "",
+      "outcome": "all-cause mortality",
+      "scale": "log_ratio",
+      "est": -1.3093333199837622,
+      "se": 0.21000393764922265,
+      "adjusted": -1,
+      "time_point": "",
+      "disputed": 0
+    },
+    {
+      "group": "chronic disease incidence [raw:beta]",
+      "label": "4927a0818af5",
+      "source_id": "4927a0818af5",
+      "study_id": "",
+      "doi": "",
+      "outcome": "chronic disease incidence",
+      "scale": "raw:beta",
+      "est": 0.005,
+      "se": 0.001785747099236289,
+      "adjusted": -1,
+      "time_point": "",
+      "disputed": 0
+    },
+    {
+      "group": "colorectal cancer risk [log_ratio]",
+      "label": "9ac49ce663bc",
+      "source_id": "9ac49ce663bc",
+      "study_id": "",
+      "doi": "",
+      "outcome": "colorectal cancer risk",
+      "scale": "log_ratio",
+      "est": -0.05129329438755058,
+      "se": 0.04797338955875509,
+      "adjusted": -1,
+      "time_point": "",
+      "disputed": 0
+    },
+    {
+      "group": "depressive symptoms [fisher_z]",
+      "label": "a84dccb170c1",
+      "source_id": "a84dccb170c1",
+      "study_id": "",
+      "doi": "",
+      "outcome": "depressive symptoms",
+      "scale": "fisher_z",
+      "est": -0.1511404359364668,
+      "se": 0.012141073279465802,
+      "adjusted": -1,
+      "time_point": "",
+      "disputed": 0
+    },
+    {
+      "group": "depressive symptoms [hedges_g]",
+      "label": "56d4ec710151",
+      "source_id": "56d4ec710151",
+      "study_id": "",
+      "doi": "",
+      "outcome": "depressive symptoms",
+      "scale": "hedges_g",
+      "est": -0.28,
+      "se": 0.0765320185386981,
+      "adjusted": -1,
+      "time_point": "",
+      "disputed": 0
+    },
+    {
+      "group": "depressive symptoms [hedges_g]",
+      "label": "416e085ec44c",
+      "source_id": "416e085ec44c",
+      "study_id": "",
+      "doi": "",
+      "outcome": "depressive symptoms",
+      "scale": "hedges_g",
+      "est": -0.82,
+      "se": 0.18877897906212196,
+      "adjusted": -1,
+      "time_point": "",
+      "disputed": 0
+    },
+    {
+      "group": "depressive symptoms [hedges_g]",
+      "label": "35431909c5de",
+      "source_id": "35431909c5de",
+      "study_id": "",
+      "doi": "",
+      "outcome": "depressive symptoms",
+      "scale": "hedges_g",
+      "est": -0.73,
+      "se": 0.13520656608503331,
+      "adjusted": -1,
+      "time_point": "",
+      "disputed": 0
+    },
+    {
+      "group": "depressive symptoms [log_ratio]",
+      "label": "a42759121db5",
+      "source_id": "a42759121db5",
+      "study_id": "",
+      "doi": "",
+      "outcome": "depressive symptoms",
+      "scale": "log_ratio",
+      "est": 0.09531017980432493,
+      "se": 0.03221837909279987,
+      "adjusted": -1,
+      "time_point": "",
+      "disputed": 0
+    },
+    {
+      "group": "depressive symptoms [log_ratio]",
+      "label": "0b17f1af2a47",
+      "source_id": "0b17f1af2a47",
+      "study_id": "",
+      "doi": "",
+      "outcome": "depressive symptoms",
+      "scale": "log_ratio",
+      "est": 0.6981347220709843,
+      "se": 0.3175555287405722,
+      "adjusted": -1,
+      "time_point": "",
+      "disputed": 0
+    },
+    {
+      "group": "depressive symptoms [log_ratio]",
+      "label": "6a99402f41ff",
+      "source_id": "6a99402f41ff",
+      "study_id": "",
+      "doi": "",
+      "outcome": "depressive symptoms",
+      "scale": "log_ratio",
+      "est": -0.4620354595965587,
+      "se": 0.13348412212975913,
+      "adjusted": -1,
+      "time_point": "",
+      "disputed": 0
+    },
+    {
+      "group": "depressive symptoms [log_ratio]",
+      "label": "182b05a12853",
+      "source_id": "182b05a12853",
+      "study_id": "",
+      "doi": "",
+      "outcome": "depressive symptoms",
+      "scale": "log_ratio",
+      "est": 0.08617769624105241,
+      "se": 0.015210315799295233,
+      "adjusted": -1,
+      "time_point": "",
+      "disputed": 0
+    },
+    {
+      "group": "depressive symptoms [log_ratio]",
+      "label": "92652d45b39a",
+      "source_id": "92652d45b39a",
+      "study_id": "",
+      "doi": "",
+      "outcome": "depressive symptoms",
+      "scale": "log_ratio",
+      "est": 1.0905801169708453,
+      "se": 0.350267260667515,
+      "adjusted": -1,
+      "time_point": "",
+      "disputed": 0
+    },
+    {
+      "group": "depressive symptoms [log_ratio]",
+      "label": "bebe022e1a33",
+      "source_id": "bebe022e1a33",
+      "study_id": "",
+      "doi": "",
+      "outcome": "depressive symptoms",
+      "scale": "log_ratio",
+      "est": -0.18632957819149348,
+      "se": 0.15086105941604303,
+      "adjusted": -1,
+      "time_point": "",
+      "disputed": 0
+    },
+    {
+      "group": "depressive symptoms [raw:beta]",
+      "label": "4927a0818af5",
+      "source_id": "4927a0818af5",
+      "study_id": "",
+      "doi": "",
+      "outcome": "depressive symptoms",
+      "scale": "raw:beta",
+      "est": 0.216,
+      "se": 0.05892965427479754,
+      "adjusted": -1,
+      "time_point": "",
+      "disputed": 0
+    },
+    {
+      "group": "depressive symptoms [raw:beta]",
+      "label": "3b12e506307b",
+      "source_id": "3b12e506307b",
+      "study_id": "",
+      "doi": "",
+      "outcome": "depressive symptoms",
+      "scale": "raw:beta",
+      "est": -0.11,
+      "se": 0.03316387470010251,
+      "adjusted": -1,
+      "time_point": "",
+      "disputed": 0
+    },
+    {
+      "group": "depressive symptoms [raw:beta]",
+      "label": "9d341af7b02a",
+      "source_id": "9d341af7b02a",
+      "study_id": "",
+      "doi": "",
+      "outcome": "depressive symptoms",
+      "scale": "raw:beta",
+      "est": -0.18,
+      "se": 0.07908308582332137,
+      "adjusted": -1,
+      "time_point": "",
+      "disputed": 0
+    },
+    {
+      "group": "major depressive disorder [log_ratio]",
+      "label": "fc4ee901a081",
+      "source_id": "fc4ee901a081",
+      "study_id": "",
+      "doi": "",
+      "outcome": "major depressive disorder",
+      "scale": "log_ratio",
+      "est": -0.3011050927839216,
+      "se": 0.11333145319187425,
+      "adjusted": -1,
+      "time_point": "",
+      "disputed": 0
+    },
+    {
+      "group": "obesity [log_ratio]",
+      "label": "a4347abcc06f",
+      "source_id": "a4347abcc06f",
+      "study_id": "",
+      "doi": "",
+      "outcome": "obesity",
+      "scale": "log_ratio",
+      "est": 0.28517894223366247,
+      "se": 0.1456607241483904,
+      "adjusted": -1,
+      "time_point": "",
+      "disputed": 0
+    },
+    {
+      "group": "physical activity [raw:beta]",
+      "label": "9d341af7b02a",
+      "source_id": "9d341af7b02a",
+      "study_id": "",
+      "doi": "",
+      "outcome": "physical activity",
+      "scale": "raw:beta",
+      "est": -0.09,
+      "se": 0.053572412977088674,
+      "adjusted": -1,
+      "time_point": "",
+      "disputed": 0
+    },
+    {
+      "group": "physical activity agreement [fisher_z]",
+      "label": "ad24b3f96a7e",
+      "source_id": "ad24b3f96a7e",
+      "study_id": "",
+      "doi": "",
+      "outcome": "physical activity agreement",
+      "scale": "fisher_z",
+      "est": 0.2121254414235694,
+      "se": 0.050898659855928764,
+      "adjusted": -1,
+      "time_point": "",
+      "disputed": 0
+    },
+    {
+      "group": "physical activity at 2 years [log_ratio]",
+      "label": "b181ec03741f",
+      "source_id": "b181ec03741f",
+      "study_id": "",
+      "doi": "",
+      "outcome": "physical activity at 2 years",
+      "scale": "log_ratio",
+      "est": 0.6259384308664954,
+      "se": 0.16036229858833095,
+      "adjusted": -1,
+      "time_point": "",
+      "disputed": 0
+    },
+    {
+      "group": "recreational walking [log_ratio]",
+      "label": "e65d1440ba18",
+      "source_id": "e65d1440ba18",
+      "study_id": "",
+      "doi": "",
+      "outcome": "recreational walking",
+      "scale": "log_ratio",
+      "est": 2.66374994220563,
+      "se": 0.46556887235001904,
+      "adjusted": -1,
+      "time_point": "",
+      "disputed": 0
+    }
+  ],
+  "groups": {
+    "all-cause mortality [log_ratio]": {
+      "k": 1,
+      "method": "hksj",
+      "pooled": null,
+      "ci_low": null,
+      "ci_high": null,
+      "fixed": -1.3093333199837622,
+      "fixed_ci_low": -1.7209410377762386,
+      "fixed_ci_high": -0.8977256021912858,
+      "q": null,
+      "df": null,
+      "p_q": null,
+      "i2": null,
+      "h2": null,
+      "tau2": null,
+      "tau2_reml": null,
+      "tau": null,
+      "pi_low": null,
+      "pi_high": null,
+      "excluded": [],
+      "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+      "scale": "log_ratio",
+      "outcome": "all-cause mortality",
+      "pool_version": "pooling/2",
+      "subgroups_design": {
+        "key": "design",
+        "groups": {
+          "prospective cohort": {
+            "k": 1,
+            "method": "hksj",
+            "pooled": null,
+            "ci_low": null,
+            "ci_high": null,
+            "fixed": -1.3093333199837622,
+            "fixed_ci_low": -1.7209410377762386,
+            "fixed_ci_high": -0.8977256021912858,
+            "q": null,
+            "df": null,
+            "p_q": null,
+            "i2": null,
+            "h2": null,
+            "tau2": null,
+            "tau2_reml": null,
+            "tau": null,
+            "pi_low": null,
+            "pi_high": null,
+            "rows": [
+              {
+                "label": "d0bcfaef83ff",
+                "source_id": "d0bcfaef83ff",
+                "study_id": "",
+                "doi": "",
+                "outcome": "all-cause mortality",
+                "scale": "log_ratio",
+                "adjusted": -1,
+                "time_point": "",
+                "est": -1.3093333199837622,
+                "se": 0.21000393764922265,
+                "raw": 0.27,
+                "unit": "HR",
+                "design": "prospective cohort",
+                "year": "",
+                "disputed": 0,
+                "quote_start": 2681,
+                "n": 1551.0,
+                "population": "adults with COPD",
+                "scope_flag": ""
+              }
+            ],
+            "excluded": [],
+            "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling"
+          }
+        },
+        "q_between": null,
+        "df": null,
+        "p": null
+      },
+      "leave_one_out": {
+        "available": false,
+        "entries": [],
+        "estimate": null,
+        "range": null
+      },
+      "egger": {
+        "available": false,
+        "k": 1,
+        "intercept": null,
+        "se": null,
+        "t": null,
+        "p": null,
+        "slope": null,
+        "note": "zu wenige Studien (k < 3)"
+      },
+      "funnel": [
+        {
+          "label": "d0bcfaef83ff",
+          "est": -1.3093333199837622,
+          "se": 0.21000393764922265,
+          "precision": 4.7618154744809456
+        }
+      ],
+      "scope_flags": []
+    },
+    "chronic disease incidence [raw:beta]": {
+      "k": 1,
+      "method": "hksj",
+      "pooled": null,
+      "ci_low": null,
+      "ci_high": null,
+      "fixed": 0.005,
+      "fixed_ci_low": 0.0014999356854968737,
+      "fixed_ci_high": 0.008500064314503127,
+      "q": null,
+      "df": null,
+      "p_q": null,
+      "i2": null,
+      "h2": null,
+      "tau2": null,
+      "tau2_reml": null,
+      "tau": null,
+      "pi_low": null,
+      "pi_high": null,
+      "excluded": [],
+      "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+      "scale": "raw:beta",
+      "outcome": "chronic disease incidence",
+      "pool_version": "pooling/2",
+      "subgroups_design": {
+        "key": "design",
+        "groups": {
+          "prospective cohort": {
+            "k": 1,
+            "method": "hksj",
+            "pooled": null,
+            "ci_low": null,
+            "ci_high": null,
+            "fixed": 0.005,
+            "fixed_ci_low": 0.0014999356854968737,
+            "fixed_ci_high": 0.008500064314503127,
+            "q": null,
+            "df": null,
+            "p_q": null,
+            "i2": null,
+            "h2": null,
+            "tau2": null,
+            "tau2_reml": null,
+            "tau": null,
+            "pi_low": null,
+            "pi_high": null,
+            "rows": [
+              {
+                "label": "4927a0818af5",
+                "source_id": "4927a0818af5",
+                "study_id": "",
+                "doi": "",
+                "outcome": "chronic disease incidence",
+                "scale": "raw:beta",
+                "adjusted": -1,
+                "time_point": "",
+                "est": 0.005,
+                "se": 0.001785747099236289,
+                "raw": 0.005,
+                "unit": "unstandardized beta coefficient",
+                "design": "prospective cohort",
+                "year": "",
+                "disputed": 0,
+                "quote_start": 2876,
+                "n": 7279.0,
+                "population": "adults (mean age 62.5) from the Irish Longitudinal Study on Ageing",
+                "scope_flag": ""
+              }
+            ],
+            "excluded": [],
+            "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling"
+          }
+        },
+        "q_between": null,
+        "df": null,
+        "p": null
+      },
+      "leave_one_out": {
+        "available": false,
+        "entries": [],
+        "estimate": null,
+        "range": null
+      },
+      "egger": {
+        "available": false,
+        "k": 1,
+        "intercept": null,
+        "se": null,
+        "t": null,
+        "p": null,
+        "slope": null,
+        "note": "zu wenige Studien (k < 3)"
+      },
+      "funnel": [
+        {
+          "label": "4927a0818af5",
+          "est": 0.005,
+          "se": 0.001785747099236289,
+          "precision": 559.9897098685868
+        }
+      ],
+      "scope_flags": []
+    },
+    "colorectal cancer risk [log_ratio]": {
+      "k": 1,
+      "method": "hksj",
+      "pooled": null,
+      "ci_low": null,
+      "ci_high": null,
+      "fixed": -0.05129329438755058,
+      "fixed_ci_low": -0.14532113792271056,
+      "fixed_ci_high": 0.042734549147609394,
+      "q": null,
+      "df": null,
+      "p_q": null,
+      "i2": null,
+      "h2": null,
+      "tau2": null,
+      "tau2_reml": null,
+      "tau": null,
+      "pi_low": null,
+      "pi_high": null,
+      "excluded": [],
+      "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+      "scale": "log_ratio",
+      "outcome": "colorectal cancer risk",
+      "pool_version": "pooling/2",
+      "subgroups_design": {
+        "key": "design",
+        "groups": {
+          "cohort study with validation sub-study": {
+            "k": 1,
+            "method": "hksj",
+            "pooled": null,
+            "ci_low": null,
+            "ci_high": null,
+            "fixed": -0.05129329438755058,
+            "fixed_ci_low": -0.14532113792271056,
+            "fixed_ci_high": 0.042734549147609394,
+            "q": null,
+            "df": null,
+            "p_q": null,
+            "i2": null,
+            "h2": null,
+            "tau2": null,
+            "tau2_reml": null,
+            "tau": null,
+            "pi_low": null,
+            "pi_high": null,
+            "rows": [
+              {
+                "label": "9ac49ce663bc",
+                "source_id": "9ac49ce663bc",
+                "study_id": "",
+                "doi": "",
+                "outcome": "colorectal cancer risk",
+                "scale": "log_ratio",
+                "adjusted": -1,
+                "time_point": "",
+                "est": -0.05129329438755058,
+                "se": 0.04797338955875509,
+                "raw": 0.95,
+                "unit": "hazard ratio",
+                "design": "cohort study with validation sub-study",
+                "year": "",
+                "disputed": 0,
+                "quote_start": 2481,
+                "n": null,
+                "population": "Australian adults (Melbourne Collaborative Cohort Study)",
+                "scope_flag": ""
+              }
+            ],
+            "excluded": [],
+            "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling"
+          }
+        },
+        "q_between": null,
+        "df": null,
+        "p": null
+      },
+      "leave_one_out": {
+        "available": false,
+        "entries": [],
+        "estimate": null,
+        "range": null
+      },
+      "egger": {
+        "available": false,
+        "k": 1,
+        "intercept": null,
+        "se": null,
+        "t": null,
+        "p": null,
+        "slope": null,
+        "note": "zu wenige Studien (k < 3)"
+      },
+      "funnel": [
+        {
+          "label": "9ac49ce663bc",
+          "est": -0.05129329438755058,
+          "se": 0.04797338955875509,
+          "precision": 20.84488941051907
+        }
+      ],
+      "scope_flags": []
+    },
+    "depressive symptoms [fisher_z]": {
+      "k": 1,
+      "method": "hksj",
+      "pooled": null,
+      "ci_low": null,
+      "ci_high": null,
+      "fixed": -0.1511404359364668,
+      "fixed_ci_low": -0.1749369395642198,
+      "fixed_ci_high": -0.12734393230871383,
+      "q": null,
+      "df": null,
+      "p_q": null,
+      "i2": null,
+      "h2": null,
+      "tau2": null,
+      "tau2_reml": null,
+      "tau": null,
+      "pi_low": null,
+      "pi_high": null,
+      "excluded": [],
+      "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+      "scale": "fisher_z",
+      "outcome": "depressive symptoms",
+      "pool_version": "pooling/2",
+      "subgroups_design": {
+        "key": "design",
+        "groups": {
+          "longitudinal cohort": {
+            "k": 1,
+            "method": "hksj",
+            "pooled": null,
+            "ci_low": null,
+            "ci_high": null,
+            "fixed": -0.1511404359364668,
+            "fixed_ci_low": -0.1749369395642198,
+            "fixed_ci_high": -0.12734393230871383,
+            "q": null,
+            "df": null,
+            "p_q": null,
+            "i2": null,
+            "h2": null,
+            "tau2": null,
+            "tau2_reml": null,
+            "tau": null,
+            "pi_low": null,
+            "pi_high": null,
+            "rows": [
+              {
+                "label": "a84dccb170c1",
+                "source_id": "a84dccb170c1",
+                "study_id": "",
+                "doi": "",
+                "outcome": "depressive symptoms",
+                "scale": "fisher_z",
+                "adjusted": -1,
+                "time_point": "",
+                "est": -0.1511404359364668,
+                "se": 0.012141073279465802,
+                "raw": -0.15,
+                "unit": "CES-D 8-item scale",
+                "design": "longitudinal cohort",
+                "year": "",
+                "disputed": 0,
+                "quote_start": 29497,
+                "n": 6787.0,
+                "population": "adults aged 50 and older in the UK",
+                "scope_flag": ""
+              }
+            ],
+            "excluded": [],
+            "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling"
+          }
+        },
+        "q_between": null,
+        "df": null,
+        "p": null
+      },
+      "leave_one_out": {
+        "available": false,
+        "entries": [],
+        "estimate": null,
+        "range": null
+      },
+      "egger": {
+        "available": false,
+        "k": 1,
+        "intercept": null,
+        "se": null,
+        "t": null,
+        "p": null,
+        "slope": null,
+        "note": "zu wenige Studien (k < 3)"
+      },
+      "funnel": [
+        {
+          "label": "a84dccb170c1",
+          "est": -0.1511404359364668,
+          "se": 0.012141073279465802,
+          "precision": 82.365041127896
+        }
+      ],
+      "scope_flags": []
+    },
+    "depressive symptoms [hedges_g]": {
+      "k": 3,
+      "method": "hksj",
+      "pooled": -0.5858165227193031,
+      "ci_low": -1.3190344469408934,
+      "ci_high": 0.1474014015022873,
+      "fixed": -0.43688161752935295,
+      "fixed_ci_low": -0.5599856393827439,
+      "fixed_ci_high": -0.313777595675962,
+      "q": 13.020623921223375,
+      "df": 2,
+      "p_q": 0.0014880154484360017,
+      "i2": 84.63975296345026,
+      "h2": 6.510311960611688,
+      "tau2": 0.08916820551443605,
+      "tau2_reml": 0.07441173321322894,
+      "tau": 0.29861045781157103,
+      "pi_low": -5.079652167522156,
+      "pi_high": 3.9080191220835507,
+      "excluded": [],
+      "note": "",
+      "se": 0.1895153207572566,
+      "weight_type": "DL",
+      "se_hksj": 0.17041066762396392,
+      "hksj_low": -1.3190344469408934,
+      "hksj_high": 0.1474014015022873,
+      "scale": "hedges_g",
+      "outcome": "depressive symptoms",
+      "pool_version": "pooling/2",
+      "subgroups_design": {
+        "key": "design",
+        "groups": {
+          "Randomized controlled trial": {
+            "k": 1,
+            "method": "hksj",
+            "pooled": null,
+            "ci_low": null,
+            "ci_high": null,
+            "fixed": -0.28,
+            "fixed_ci_low": -0.4300027563358483,
+            "fixed_ci_high": -0.12999724366415177,
+            "q": null,
+            "df": null,
+            "p_q": null,
+            "i2": null,
+            "h2": null,
+            "tau2": null,
+            "tau2_reml": null,
+            "tau": null,
+            "pi_low": null,
+            "pi_high": null,
+            "rows": [
+              {
+                "label": "56d4ec710151",
+                "source_id": "56d4ec710151",
+                "study_id": "",
+                "doi": "",
+                "outcome": "depressive symptoms",
+                "scale": "hedges_g",
+                "adjusted": -1,
+                "time_point": "",
+                "est": -0.28,
+                "se": 0.0765320185386981,
+                "raw": -0.28,
+                "unit": "Hedges' g",
+                "design": "Randomized controlled trial",
+                "year": "",
+                "disputed": 0,
+                "quote_start": 23556,
+                "n": 723.0,
+                "population": "Adolescents",
+                "scope_flag": "Population außerhalb des Protokolls (nicht Erwachsene): 'Adolescents'"
+              }
+            ],
+            "excluded": [],
+            "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling"
+          },
+          "randomized controlled trials": {
+            "k": 1,
+            "method": "hksj",
+            "pooled": null,
+            "ci_low": null,
+            "ci_high": null,
+            "fixed": -0.82,
+            "fixed_ci_low": -1.1900067989617589,
+            "fixed_ci_high": -0.4499932010382409,
+            "q": null,
+            "df": null,
+            "p_q": null,
+            "i2": null,
+            "h2": null,
+            "tau2": null,
+            "tau2_reml": null,
+            "tau": null,
+            "pi_low": null,
+            "pi_high": null,
+            "rows": [
+              {
+                "label": "416e085ec44c",
+                "source_id": "416e085ec44c",
+                "study_id": "",
+                "doi": "",
+                "outcome": "depressive symptoms",
+                "scale": "hedges_g",
+                "adjusted": -1,
+                "time_point": "",
+                "est": -0.82,
+                "se": 0.18877897906212196,
+                "raw": -0.82,
+                "unit": "SMD",
+                "design": "randomized controlled trials",
+                "year": "",
+                "disputed": 0,
+                "quote_start": 1942,
+                "n": 1346.0,
+                "population": "older adults aged ≥60 years",
+                "scope_flag": ""
+              }
+            ],
+            "excluded": [],
+            "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling"
+          },
+          "randomised controlled trials": {
+            "k": 1,
+            "method": "hksj",
+            "pooled": null,
+            "ci_low": null,
+            "ci_high": null,
+            "fixed": -0.7300000000000001,
+            "fixed_ci_low": -0.9950048695266653,
+            "fixed_ci_high": -0.4649951304733348,
+            "q": null,
+            "df": null,
+            "p_q": null,
+            "i2": null,
+            "h2": null,
+            "tau2": null,
+            "tau2_reml": null,
+            "tau": null,
+            "pi_low": null,
+            "pi_high": null,
+            "rows": [
+              {
+                "label": "35431909c5de",
+                "source_id": "35431909c5de",
+                "study_id": "",
+                "doi": "",
+                "outcome": "depressive symptoms",
+                "scale": "hedges_g",
+                "adjusted": -1,
+                "time_point": "",
+                "est": -0.73,
+                "se": 0.13520656608503331,
+                "raw": -0.73,
+                "unit": "Hedges' g",
+                "design": "randomised controlled trials",
+                "year": "",
+                "disputed": 0,
+                "quote_start": 1810,
+                "n": 2500.0,
+                "population": "adults with chronic illness and comorbid depression",
+                "scope_flag": ""
+              }
+            ],
+            "excluded": [],
+            "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling"
+          }
+        },
+        "q_between": null,
+        "df": null,
+        "p": null
+      },
+      "leave_one_out": {
+        "available": true,
+        "entries": [
+          {
+            "label": "56d4ec710151",
+            "estimate": -0.7605141822570911,
+            "ci_low": -1.3018583159765598,
+            "ci_high": -0.21917004853762234,
+            "k": 2
+          },
+          {
+            "label": "416e085ec44c",
+            "estimate": -0.49119592705455684,
+            "ci_low": -3.3447064797923654,
+            "ci_high": 2.3623146256832515,
+            "k": 2
+          },
+          {
+            "label": "35431909c5de",
+            "estimate": -0.5224255990054357,
+            "ci_low": -3.9351629967129376,
+            "ci_high": 2.8903117987020663,
+            "k": 2
+          }
+        ],
+        "estimate": -0.5858165227193031,
+        "range": [
+          -0.7605141822570911,
+          -0.49119592705455684
+        ]
+      },
+      "egger": {
+        "available": true,
+        "k": 3,
+        "intercept": -5.616848791373914,
+        "se": 1.5832842423741684,
+        "t": -3.5475934396664806,
+        "p": 0.174912755003557,
+        "slope": 0.13389498401727537,
+        "note": "k < 10: der Test ist schwach, ein nicht-signifikantes Ergebnis beweist keine Symmetrie"
+      },
+      "funnel": [
+        {
+          "label": "56d4ec710151",
+          "est": -0.28,
+          "se": 0.0765320185386981,
+          "precision": 13.066426563600361
+        },
+        {
+          "label": "416e085ec44c",
+          "est": -0.82,
+          "se": 0.18877897906212196,
+          "precision": 5.297199958216362
+        },
+        {
+          "label": "35431909c5de",
+          "est": -0.73,
+          "se": 0.13520656608503331,
+          "precision": 7.396090507698316
+        }
+      ],
+      "scope_flags": [
+        [
+          "56d4ec710151",
+          "Population außerhalb des Protokolls (nicht Erwachsene): 'Adolescents'"
+        ]
+      ]
+    },
+    "depressive symptoms [log_ratio]": {
+      "k": 6,
+      "method": "hksj",
+      "pooled": 0.03258083611964441,
+      "ci_low": -0.34165648037959157,
+      "ci_high": 0.4068181526188804,
+      "fixed": 0.08253443052671296,
+      "fixed_ci_low": 0.05587179510880254,
+      "fixed_ci_high": 0.10919706594462338,
+      "q": 32.07497703273998,
+      "df": 5,
+      "p_q": 5.741562314309383e-06,
+      "i2": 84.41152430165005,
+      "h2": 6.414995406547996,
+      "tau2": 0.015263500150809272,
+      "tau2_reml": 0.21486539672277113,
+      "tau": 0.12354553877339834,
+      "pi_low": -0.36307066526150134,
+      "pi_high": 0.42823233750079015,
+      "excluded": [],
+      "note": "",
+      "se": 0.07101815708975401,
+      "weight_type": "DL",
+      "se_hksj": 0.1455846732094403,
+      "hksj_low": -0.34165648037959157,
+      "hksj_high": 0.4068181526188804,
+      "scale": "log_ratio",
+      "outcome": "depressive symptoms",
+      "pool_version": "pooling/2",
+      "subgroups_design": {
+        "key": "design",
+        "groups": {
+          "Target trial emulation (longitudinal cohort)": {
+            "k": 1,
+            "method": "hksj",
+            "pooled": null,
+            "ci_low": null,
+            "ci_high": null,
+            "fixed": 0.09531017980432493,
+            "fixed_ci_low": 0.032162156782437196,
+            "fixed_ci_high": 0.15845820282621267,
+            "q": null,
+            "df": null,
+            "p_q": null,
+            "i2": null,
+            "h2": null,
+            "tau2": null,
+            "tau2_reml": null,
+            "tau": null,
+            "pi_low": null,
+            "pi_high": null,
+            "rows": [
+              {
+                "label": "a42759121db5",
+                "source_id": "a42759121db5",
+                "study_id": "",
+                "doi": "",
+                "outcome": "depressive symptoms",
+                "scale": "log_ratio",
+                "adjusted": -1,
+                "time_point": "",
+                "est": 0.09531017980432493,
+                "se": 0.03221837909279987,
+                "raw": 1.1,
+                "unit": "Relative Risk",
+                "design": "Target trial emulation (longitudinal cohort)",
+                "year": "",
+                "disputed": 0,
+                "quote_start": 2046,
+                "n": 11192.0,
+                "population": "Community-dwelling older adults (≥70 years) in Australia",
+                "scope_flag": ""
+              }
+            ],
+            "excluded": [],
+            "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling"
+          },
+          "cross-sectional": {
+            "k": 3,
+            "method": "hksj",
+            "pooled": -0.06557598102606205,
+            "ci_low": -1.4702739703253975,
+            "ci_high": 1.3391220082732733,
+            "fixed": -0.24727446988170423,
+            "fixed_ci_low": -0.4341717553513087,
+            "fixed_ci_high": -0.060377184412099744,
+            "q": 11.615119029299468,
+            "df": 2,
+            "p_q": 0.0030047541900716343,
+            "i2": 82.7810632421851,
+            "h2": 5.807559514649734,
+            "tau2": 0.15288934596871326,
+            "tau2_reml": 0.2710003986249294,
+            "tau": 0.3910106724486088,
+            "pi_low": -5.990501413747019,
+            "pi_high": 5.859349451694895,
+            "rows": [
+              {
+                "label": "0b17f1af2a47",
+                "source_id": "0b17f1af2a47",
+                "study_id": "",
+                "doi": "",
+                "outcome": "depressive symptoms",
+                "scale": "log_ratio",
+                "adjusted": -1,
+                "time_point": "",
+                "est": 0.6981347220709843,
+                "se": 0.3175555287405722,
+                "raw": 2.01,
+                "unit": "odds ratio",
+                "design": "cross-sectional",
+                "year": "",
+                "disputed": 0,
+                "quote_start": 13238,
+                "n": 303.0,
+                "population": "older adults in Nepal",
+                "scope_flag": ""
+              },
+              {
+                "label": "6a99402f41ff",
+                "source_id": "6a99402f41ff",
+                "study_id": "",
+                "doi": "",
+                "outcome": "depressive symptoms",
+                "scale": "log_ratio",
+                "adjusted": -1,
+                "time_point": "",
+                "est": -0.4620354595965587,
+                "se": 0.13348412212975913,
+                "raw": 0.63,
+                "unit": "odds ratio",
+                "design": "cross-sectional",
+                "year": "",
+                "disputed": 0,
+                "quote_start": 15532,
+                "n": 9309.0,
+                "population": "British Whitehall II prospective cohort study participants",
+                "scope_flag": ""
+              },
+              {
+                "label": "bebe022e1a33",
+                "source_id": "bebe022e1a33",
+                "study_id": "",
+                "doi": "",
+                "outcome": "depressive symptoms",
+                "scale": "log_ratio",
+                "adjusted": -1,
+                "time_point": "",
+                "est": -0.18632957819149348,
+                "se": 0.15086105941604303,
+                "raw": 0.83,
+                "unit": "odds ratio",
+                "design": "cross-sectional",
+                "year": "",
+                "disputed": 0,
+                "quote_start": 30290,
+                "n": 1191.0,
+                "population": "Spanish nursing professionals",
+                "scope_flag": ""
+              }
+            ],
+            "excluded": [],
+            "note": "",
+            "se": 0.25406292688846815,
+            "weight_type": "DL",
+            "se_hksj": 0.3264725455541323,
+            "hksj_low": -1.4702739703253975,
+            "hksj_high": 1.3391220082732733
+          },
+          "longitudinal cohort": {
+            "k": 2,
+            "method": "hksj",
+            "pooled": 0.527419376012704,
+            "ci_low": -5.806467453207263,
+            "ci_high": 6.861306205232671,
+            "fixed": 0.0880681538100671,
+            "fixed_ci_low": 0.058284003911193455,
+            "fixed_ci_high": 0.11785230370894076,
+            "q": 8.207260586277165,
+            "df": 1,
+            "p_q": 0.0041723094587865946,
+            "i2": 87.81566651274561,
+            "h2": 8.207260586277165,
+            "tau2": 0.4429528575828012,
+            "tau2_reml": 0.44295425601493005,
+            "tau": 0.6655470363413852,
+            "pi_low": null,
+            "pi_high": null,
+            "rows": [
+              {
+                "label": "182b05a12853",
+                "source_id": "182b05a12853",
+                "study_id": "",
+                "doi": "",
+                "outcome": "depressive symptoms",
+                "scale": "log_ratio",
+                "adjusted": -1,
+                "time_point": "",
+                "est": 0.08617769624105241,
+                "se": 0.015210315799295233,
+                "raw": 1.09,
+                "unit": "hazard ratio",
+                "design": "longitudinal cohort",
+                "year": "",
+                "disputed": 0,
+                "quote_start": 1140,
+                "n": 8994.0,
+                "population": "middle-aged and older adults in China",
+                "scope_flag": ""
+              },
+              {
+                "label": "92652d45b39a",
+                "source_id": "92652d45b39a",
+                "study_id": "",
+                "doi": "",
+                "outcome": "depressive symptoms",
+                "scale": "log_ratio",
+                "adjusted": -1,
+                "time_point": "",
+                "est": 1.0905801169708453,
+                "se": 0.350267260667515,
+                "raw": 2.976,
+                "unit": "odds ratio",
+                "design": "longitudinal cohort",
+                "year": "",
+                "disputed": 0,
+                "quote_start": 19202,
+                "n": 1225.0,
+                "population": "Japanese adolescents (11-14 years) without depressive symptoms at baseline",
+                "scope_flag": "Population außerhalb des Protokolls (nicht Erwachsene): 'Japanese adolescents (11-14 years) without depressive sympto'"
+              }
+            ],
+            "excluded": [],
+            "note": "",
+            "se": 0.49848770428347755,
+            "weight_type": "DL",
+            "se_hksj": 0.49848770428348405,
+            "hksj_low": -5.806467453207263,
+            "hksj_high": 6.861306205232671
+          }
+        },
+        "q_between": 1.134677771060956,
+        "df": 1,
+        "p": 0.28677975683440105
+      },
+      "leave_one_out": {
+        "available": true,
+        "entries": [
+          {
+            "label": "a42759121db5",
+            "estimate": 0.11907733889071428,
+            "ci_low": -0.6061606879293117,
+            "ci_high": 0.8443153657107402,
+            "k": 5
+          },
+          {
+            "label": "0b17f1af2a47",
+            "estimate": 0.004080028628195205,
+            "ci_low": -0.40240732546930474,
+            "ci_high": 0.4105673827256952,
+            "k": 5
+          },
+          {
+            "label": "6a99402f41ff",
+            "estimate": 0.10276666393230989,
+            "ci_low": -0.18270198129958154,
+            "ci_high": 0.3882353091642013,
+            "k": 5
+          },
+          {
+            "label": "182b05a12853",
+            "estimate": 0.12571544410074129,
+            "ci_low": -0.6031546084272099,
+            "ci_high": 0.8545854966286925,
+            "k": 5
+          },
+          {
+            "label": "92652d45b39a",
+            "estimate": 0.0005168352578973451,
+            "ci_low": -0.3350352971690217,
+            "ci_high": 0.3360689676848164,
+            "k": 5
+          },
+          {
+            "label": "bebe022e1a33",
+            "estimate": 0.0653834908326025,
+            "ci_low": -0.39752388563234275,
+            "ci_high": 0.5282908672975477,
+            "k": 5
+          }
+        ],
+        "estimate": 0.03258083611964441,
+        "range": [
+          0.0005168352578973451,
+          0.12571544410074129
+        ]
+      },
+      "egger": {
+        "available": true,
+        "k": 6,
+        "intercept": -0.11792600627942673,
+        "se": 1.5188292473245766,
+        "t": -0.07764270176331792,
+        "p": 0.9418409925729428,
+        "slope": 0.0850856326022958,
+        "note": "k < 10: der Test ist schwach, ein nicht-signifikantes Ergebnis beweist keine Symmetrie"
+      },
+      "funnel": [
+        {
+          "label": "a42759121db5",
+          "est": 0.09531017980432493,
+          "se": 0.03221837909279987,
+          "precision": 31.038184668436003
+        },
+        {
+          "label": "0b17f1af2a47",
+          "est": 0.6981347220709843,
+          "se": 0.3175555287405722,
+          "precision": 3.149055549327099
+        },
+        {
+          "label": "6a99402f41ff",
+          "est": -0.4620354595965587,
+          "se": 0.13348412212975913,
+          "precision": 7.491527711647277
+        },
+        {
+          "label": "182b05a12853",
+          "est": 0.08617769624105241,
+          "se": 0.015210315799295233,
+          "precision": 65.74485455761115
+        },
+        {
+          "label": "92652d45b39a",
+          "est": 1.0905801169708453,
+          "se": 0.350267260667515,
+          "precision": 2.8549628021022273
+        },
+        {
+          "label": "bebe022e1a33",
+          "est": -0.18632957819149348,
+          "se": 0.15086105941604303,
+          "precision": 6.628615786411857
+        }
+      ],
+      "scope_flags": [
+        [
+          "92652d45b39a",
+          "Population außerhalb des Protokolls (nicht Erwachsene): 'Japanese adolescents (11-14 years) without depressive sympto'"
+        ]
+      ]
+    },
+    "depressive symptoms [raw:beta]": {
+      "k": 3,
+      "method": "hksj",
+      "pooled": -0.023090776522521197,
+      "ci_low": -0.5449636754416773,
+      "ci_high": 0.49878212239663494,
+      "fixed": -0.049073111386730116,
+      "fixed_ci_low": -0.10227831396793739,
+      "fixed_ci_high": 0.004132091194477161,
+      "q": 26.349142280278084,
+      "df": 2,
+      "p_q": 1.8982633043380227e-06,
+      "i2": 92.40962009796817,
+      "h2": 13.174571140139042,
+      "tau2": 0.03645254000809411,
+      "tau2_reml": 0.04029977197802722,
+      "tau": 0.19092548286725403,
+      "pi_low": -2.8577299870084363,
+      "pi_high": 2.811548433963394,
+      "excluded": [],
+      "note": "",
+      "se": 0.11539943382912714,
+      "weight_type": "DL",
+      "se_hksj": 0.12129096436653658,
+      "hksj_low": -0.5449636754416773,
+      "hksj_high": 0.49878212239663494,
+      "scale": "raw:beta",
+      "outcome": "depressive symptoms",
+      "pool_version": "pooling/2",
+      "subgroups_design": {
+        "key": "design",
+        "groups": {
+          "prospective cohort": {
+            "k": 1,
+            "method": "hksj",
+            "pooled": null,
+            "ci_low": null,
+            "ci_high": null,
+            "fixed": 0.216,
+            "fixed_ci_low": 0.10049787762139682,
+            "fixed_ci_high": 0.33150212237860316,
+            "q": null,
+            "df": null,
+            "p_q": null,
+            "i2": null,
+            "h2": null,
+            "tau2": null,
+            "tau2_reml": null,
+            "tau": null,
+            "pi_low": null,
+            "pi_high": null,
+            "rows": [
+              {
+                "label": "4927a0818af5",
+                "source_id": "4927a0818af5",
+                "study_id": "",
+                "doi": "",
+                "outcome": "depressive symptoms",
+                "scale": "raw:beta",
+                "adjusted": -1,
+                "time_point": "",
+                "est": 0.216,
+                "se": 0.05892965427479754,
+                "raw": 0.216,
+                "unit": "unstandardized beta coefficient per unit increase in chronic disease incidence",
+                "design": "prospective cohort",
+                "year": "",
+                "disputed": 0,
+                "quote_start": 3009,
+                "n": 7279.0,
+                "population": "adults (mean age 62.5) from the Irish Longitudinal Study on Ageing",
+                "scope_flag": ""
+              }
+            ],
+            "excluded": [],
+            "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling"
+          },
+          "longitudinal observational (ESM)": {
+            "k": 1,
+            "method": "hksj",
+            "pooled": null,
+            "ci_low": null,
+            "ci_high": null,
+            "fixed": -0.11,
+            "fixed_ci_low": -0.1750011944122009,
+            "fixed_ci_high": -0.04499880558779909,
+            "q": null,
+            "df": null,
+            "p_q": null,
+            "i2": null,
+            "h2": null,
+            "tau2": null,
+            "tau2_reml": null,
+            "tau": null,
+            "pi_low": null,
+            "pi_high": null,
+            "rows": [
+              {
+                "label": "3b12e506307b",
+                "source_id": "3b12e506307b",
+                "study_id": "",
+                "doi": "",
+                "outcome": "depressive symptoms",
+                "scale": "raw:beta",
+                "adjusted": -1,
+                "time_point": "",
+                "est": -0.11,
+                "se": 0.03316387470010251,
+                "raw": -0.11,
+                "unit": "standardized beta per unit increase in physical activity",
+                "design": "longitudinal observational (ESM)",
+                "year": "",
+                "disputed": 0,
+                "quote_start": 21272,
+                "n": 37.0,
+                "population": "adults with higher baseline depressive symptoms (PHQ-9 > 6/7)",
+                "scope_flag": ""
+              }
+            ],
+            "excluded": [],
+            "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling"
+          },
+          "longitudinal cohort": {
+            "k": 1,
+            "method": "hksj",
+            "pooled": null,
+            "ci_low": null,
+            "ci_high": null,
+            "fixed": -0.18,
+            "fixed_ci_low": -0.33500284821370985,
+            "fixed_ci_high": -0.02499715178629011,
+            "q": null,
+            "df": null,
+            "p_q": null,
+            "i2": null,
+            "h2": null,
+            "tau2": null,
+            "tau2_reml": null,
+            "tau": null,
+            "pi_low": null,
+            "pi_high": null,
+            "rows": [
+              {
+                "label": "9d341af7b02a",
+                "source_id": "9d341af7b02a",
+                "study_id": "",
+                "doi": "",
+                "outcome": "depressive symptoms",
+                "scale": "raw:beta",
+                "adjusted": -1,
+                "time_point": "",
+                "est": -0.18,
+                "se": 0.07908308582332137,
+                "raw": -0.18,
+                "unit": "PASE z score change per unit increase in depressive symptoms status",
+                "design": "longitudinal cohort",
+                "year": "",
+                "disputed": 0,
+                "quote_start": 2559,
+                "n": 2602.0,
+                "population": "adults with knee osteoarthritis",
+                "scope_flag": ""
+              }
+            ],
+            "excluded": [],
+            "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling"
+          }
+        },
+        "q_between": null,
+        "df": null,
+        "p": null
+      },
+      "leave_one_out": {
+        "available": true,
+        "entries": [
+          {
+            "label": "4927a0818af5",
+            "estimate": -0.12046902654867256,
+            "ci_low": -0.43767436780066316,
+            "ci_high": 0.196736314703318,
+            "k": 2
+          },
+          {
+            "label": "3b12e506307b",
+            "estimate": 0.021511906957565233,
+            "ci_low": -2.4939208627186797,
+            "ci_high": 2.5369446766338104,
+            "k": 2
+          },
+          {
+            "label": "9d341af7b02a",
+            "estimate": 0.049360641767142534,
+            "ci_low": -2.0212344304232532,
+            "ci_high": 2.1199557139575385,
+            "k": 2
+          }
+        ],
+        "estimate": -0.023090776522521197,
+        "range": [
+          -0.12046902654867256,
+          0.049360641767142534
+        ]
+      },
+      "egger": {
+        "available": true,
+        "k": 3,
+        "intercept": 2.7340067778768855,
+        "se": 8.010966083134615,
+        "t": 0.34128302997471865,
+        "p": 0.79062330884152,
+        "slope": -0.16948282070884374,
+        "note": "k < 10: der Test ist schwach, ein nicht-signifikantes Ergebnis beweist keine Symmetrie"
+      },
+      "funnel": [
+        {
+          "label": "4927a0818af5",
+          "est": 0.216,
+          "se": 0.05892965427479754,
+          "precision": 16.969385147532932
+        },
+        {
+          "label": "3b12e506307b",
+          "est": -0.11,
+          "se": 0.03316387470010251,
+          "precision": 30.153292069846987
+        },
+        {
+          "label": "9d341af7b02a",
+          "est": -0.18,
+          "se": 0.07908308582332137,
+          "precision": 12.644928932516477
+        }
+      ],
+      "scope_flags": []
+    },
+    "major depressive disorder [log_ratio]": {
+      "k": 1,
+      "method": "hksj",
+      "pooled": null,
+      "ci_low": null,
+      "ci_high": null,
+      "fixed": -0.3011050927839216,
+      "fixed_ci_low": -0.5232347410399951,
+      "fixed_ci_high": -0.07897544452784808,
+      "q": null,
+      "df": null,
+      "p_q": null,
+      "i2": null,
+      "h2": null,
+      "tau2": null,
+      "tau2_reml": null,
+      "tau": null,
+      "pi_low": null,
+      "pi_high": null,
+      "excluded": [],
+      "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+      "scale": "log_ratio",
+      "outcome": "major depressive disorder",
+      "pool_version": "pooling/2",
+      "subgroups_design": {
+        "key": "design",
+        "groups": {
+          "Mendelian randomization": {
+            "k": 1,
+            "method": "hksj",
+            "pooled": null,
+            "ci_low": null,
+            "ci_high": null,
+            "fixed": -0.3011050927839216,
+            "fixed_ci_low": -0.5232347410399951,
+            "fixed_ci_high": -0.07897544452784808,
+            "q": null,
+            "df": null,
+            "p_q": null,
+            "i2": null,
+            "h2": null,
+            "tau2": null,
+            "tau2_reml": null,
+            "tau": null,
+            "pi_low": null,
+            "pi_high": null,
+            "rows": [
+              {
+                "label": "fc4ee901a081",
+                "source_id": "fc4ee901a081",
+                "study_id": "",
+                "doi": "",
+                "outcome": "major depressive disorder",
+                "scale": "log_ratio",
+                "adjusted": -1,
+                "time_point": "",
+                "est": -0.3011050927839216,
+                "se": 0.11333145319187425,
+                "raw": 0.74,
+                "unit": "odds ratio per 1-SD increase in mean acceleration",
+                "design": "Mendelian randomization",
+                "year": "",
+                "disputed": 0,
+                "quote_start": 1818,
+                "n": 611583.0,
+                "population": "adults of European ancestry",
+                "scope_flag": ""
+              }
+            ],
+            "excluded": [],
+            "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling"
+          }
+        },
+        "q_between": null,
+        "df": null,
+        "p": null
+      },
+      "leave_one_out": {
+        "available": false,
+        "entries": [],
+        "estimate": null,
+        "range": null
+      },
+      "egger": {
+        "available": false,
+        "k": 1,
+        "intercept": null,
+        "se": null,
+        "t": null,
+        "p": null,
+        "slope": null,
+        "note": "zu wenige Studien (k < 3)"
+      },
+      "funnel": [
+        {
+          "label": "fc4ee901a081",
+          "est": -0.3011050927839216,
+          "se": 0.11333145319187425,
+          "precision": 8.823675791988336
+        }
+      ],
+      "scope_flags": []
+    },
+    "obesity [log_ratio]": {
+      "k": 1,
+      "method": "hksj",
+      "pooled": null,
+      "ci_low": null,
+      "ci_high": null,
+      "fixed": 0.28517894223366247,
+      "fixed_ci_low": -0.000316077097182732,
+      "fixed_ci_high": 0.5706739615645077,
+      "q": null,
+      "df": null,
+      "p_q": null,
+      "i2": null,
+      "h2": null,
+      "tau2": null,
+      "tau2_reml": null,
+      "tau": null,
+      "pi_low": null,
+      "pi_high": null,
+      "excluded": [],
+      "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+      "scale": "log_ratio",
+      "outcome": "obesity",
+      "pool_version": "pooling/2",
+      "subgroups_design": {
+        "key": "design",
+        "groups": {
+          "prospective cohort": {
+            "k": 1,
+            "method": "hksj",
+            "pooled": null,
+            "ci_low": null,
+            "ci_high": null,
+            "fixed": 0.28517894223366247,
+            "fixed_ci_low": -0.000316077097182732,
+            "fixed_ci_high": 0.5706739615645077,
+            "q": null,
+            "df": null,
+            "p_q": null,
+            "i2": null,
+            "h2": null,
+            "tau2": null,
+            "tau2_reml": null,
+            "tau": null,
+            "pi_low": null,
+            "pi_high": null,
+            "rows": [
+              {
+                "label": "a4347abcc06f",
+                "source_id": "a4347abcc06f",
+                "study_id": "",
+                "doi": "",
+                "outcome": "obesity",
+                "scale": "log_ratio",
+                "adjusted": -1,
+                "time_point": "",
+                "est": 0.28517894223366247,
+                "se": 0.1456607241483904,
+                "raw": 1.33,
+                "unit": "odds ratio",
+                "design": "prospective cohort",
+                "year": "",
+                "disputed": 0,
+                "quote_start": 2532,
+                "n": 4154.0,
+                "population": "British government employees (Whitehall II study)",
+                "scope_flag": ""
+              }
+            ],
+            "excluded": [],
+            "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling"
+          }
+        },
+        "q_between": null,
+        "df": null,
+        "p": null
+      },
+      "leave_one_out": {
+        "available": false,
+        "entries": [],
+        "estimate": null,
+        "range": null
+      },
+      "egger": {
+        "available": false,
+        "k": 1,
+        "intercept": null,
+        "se": null,
+        "t": null,
+        "p": null,
+        "slope": null,
+        "note": "zu wenige Studien (k < 3)"
+      },
+      "funnel": [
+        {
+          "label": "a4347abcc06f",
+          "est": 0.28517894223366247,
+          "se": 0.1456607241483904,
+          "precision": 6.86526862918284
+        }
+      ],
+      "scope_flags": []
+    },
+    "physical activity [raw:beta]": {
+      "k": 1,
+      "method": "hksj",
+      "pooled": null,
+      "ci_low": null,
+      "ci_high": null,
+      "fixed": -0.09,
+      "fixed_ci_low": -0.1950019294350938,
+      "fixed_ci_high": 0.015001929435093805,
+      "q": null,
+      "df": null,
+      "p_q": null,
+      "i2": null,
+      "h2": null,
+      "tau2": null,
+      "tau2_reml": null,
+      "tau": null,
+      "pi_low": null,
+      "pi_high": null,
+      "excluded": [],
+      "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+      "scale": "raw:beta",
+      "outcome": "physical activity",
+      "pool_version": "pooling/2",
+      "subgroups_design": {
+        "key": "design",
+        "groups": {
+          "longitudinal": {
+            "k": 1,
+            "method": "hksj",
+            "pooled": null,
+            "ci_low": null,
+            "ci_high": null,
+            "fixed": -0.09,
+            "fixed_ci_low": -0.1950019294350938,
+            "fixed_ci_high": 0.015001929435093805,
+            "q": null,
+            "df": null,
+            "p_q": null,
+            "i2": null,
+            "h2": null,
+            "tau2": null,
+            "tau2_reml": null,
+            "tau": null,
+            "pi_low": null,
+            "pi_high": null,
+            "rows": [
+              {
+                "label": "9d341af7b02a",
+                "source_id": "9d341af7b02a",
+                "study_id": "",
+                "doi": "",
+                "outcome": "physical activity",
+                "scale": "raw:beta",
+                "adjusted": -1,
+                "time_point": "",
+                "est": -0.09,
+                "se": 0.053572412977088674,
+                "raw": -0.09,
+                "unit": "PASE z scores",
+                "design": "longitudinal",
+                "year": "",
+                "disputed": 0,
+                "quote_start": 2277,
+                "n": 2602.0,
+                "population": "adults with knee osteoarthritis",
+                "scope_flag": ""
+              }
+            ],
+            "excluded": [],
+            "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling"
+          }
+        },
+        "q_between": null,
+        "df": null,
+        "p": null
+      },
+      "leave_one_out": {
+        "available": false,
+        "entries": [],
+        "estimate": null,
+        "range": null
+      },
+      "egger": {
+        "available": false,
+        "k": 1,
+        "intercept": null,
+        "se": null,
+        "t": null,
+        "p": null,
+        "slope": null,
+        "note": "zu wenige Studien (k < 3)"
+      },
+      "funnel": [
+        {
+          "label": "9d341af7b02a",
+          "est": -0.09,
+          "se": 0.053572412977088674,
+          "precision": 18.666323662286228
+        }
+      ],
+      "scope_flags": []
+    },
+    "physical activity agreement [fisher_z]": {
+      "k": 1,
+      "method": "hksj",
+      "pooled": null,
+      "ci_low": null,
+      "ci_high": null,
+      "fixed": 0.2121254414235694,
+      "fixed_ci_low": 0.11236406810594902,
+      "fixed_ci_high": 0.3118868147411898,
+      "q": null,
+      "df": null,
+      "p_q": null,
+      "i2": null,
+      "h2": null,
+      "tau2": null,
+      "tau2_reml": null,
+      "tau": null,
+      "pi_low": null,
+      "pi_high": null,
+      "excluded": [],
+      "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+      "scale": "fisher_z",
+      "outcome": "physical activity agreement",
+      "pool_version": "pooling/2",
+      "subgroups_design": {
+        "key": "design",
+        "groups": {
+          "cross-sectional": {
+            "k": 1,
+            "method": "hksj",
+            "pooled": null,
+            "ci_low": null,
+            "ci_high": null,
+            "fixed": 0.2121254414235694,
+            "fixed_ci_low": 0.11236406810594902,
+            "fixed_ci_high": 0.3118868147411898,
+            "q": null,
+            "df": null,
+            "p_q": null,
+            "i2": null,
+            "h2": null,
+            "tau2": null,
+            "tau2_reml": null,
+            "tau": null,
+            "pi_low": null,
+            "pi_high": null,
+            "rows": [
+              {
+                "label": "ad24b3f96a7e",
+                "source_id": "ad24b3f96a7e",
+                "study_id": "",
+                "doi": "",
+                "outcome": "physical activity agreement",
+                "scale": "fisher_z",
+                "adjusted": -1,
+                "time_point": "",
+                "est": 0.2121254414235694,
+                "se": 0.050898659855928764,
+                "raw": 0.209,
+                "unit": "Spearman rho",
+                "design": "cross-sectional",
+                "year": "",
+                "disputed": 0,
+                "quote_start": 3691,
+                "n": 389.0,
+                "population": "university students in Kuwait",
+                "scope_flag": ""
+              }
+            ],
+            "excluded": [],
+            "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling"
+          }
+        },
+        "q_between": null,
+        "df": null,
+        "p": null
+      },
+      "leave_one_out": {
+        "available": false,
+        "entries": [],
+        "estimate": null,
+        "range": null
+      },
+      "egger": {
+        "available": false,
+        "k": 1,
+        "intercept": null,
+        "se": null,
+        "t": null,
+        "p": null,
+        "slope": null,
+        "note": "zu wenige Studien (k < 3)"
+      },
+      "funnel": [
+        {
+          "label": "ad24b3f96a7e",
+          "est": 0.2121254414235694,
+          "se": 0.050898659855928764,
+          "precision": 19.6468827043885
+        }
+      ],
+      "scope_flags": []
+    },
+    "physical activity at 2 years [log_ratio]": {
+      "k": 1,
+      "method": "hksj",
+      "pooled": null,
+      "ci_low": null,
+      "ci_high": null,
+      "fixed": 0.6259384308664954,
+      "fixed_ci_low": 0.3116283256333667,
+      "fixed_ci_high": 0.940248536099624,
+      "q": null,
+      "df": null,
+      "p_q": null,
+      "i2": null,
+      "h2": null,
+      "tau2": null,
+      "tau2_reml": null,
+      "tau": null,
+      "pi_low": null,
+      "pi_high": null,
+      "excluded": [],
+      "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+      "scale": "log_ratio",
+      "outcome": "physical activity at 2 years",
+      "pool_version": "pooling/2",
+      "subgroups_design": {
+        "key": "design",
+        "groups": {
+          "randomized clinical trial": {
+            "k": 1,
+            "method": "hksj",
+            "pooled": null,
+            "ci_low": null,
+            "ci_high": null,
+            "fixed": 0.6259384308664954,
+            "fixed_ci_low": 0.3116283256333667,
+            "fixed_ci_high": 0.940248536099624,
+            "q": null,
+            "df": null,
+            "p_q": null,
+            "i2": null,
+            "h2": null,
+            "tau2": null,
+            "tau2_reml": null,
+            "tau": null,
+            "pi_low": null,
+            "pi_high": null,
+            "rows": [
+              {
+                "label": "b181ec03741f",
+                "source_id": "b181ec03741f",
+                "study_id": "",
+                "doi": "",
+                "outcome": "physical activity at 2 years",
+                "scale": "log_ratio",
+                "adjusted": -1,
+                "time_point": "",
+                "est": 0.6259384308664954,
+                "se": 0.16036229858833095,
+                "raw": 1.87,
+                "unit": "odds ratio",
+                "design": "randomized clinical trial",
+                "year": "",
+                "disputed": 0,
+                "quote_start": 1886,
+                "n": 1100.0,
+                "population": "older adults at risk for dementia",
+                "scope_flag": ""
+              }
+            ],
+            "excluded": [],
+            "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling"
+          }
+        },
+        "q_between": null,
+        "df": null,
+        "p": null
+      },
+      "leave_one_out": {
+        "available": false,
+        "entries": [],
+        "estimate": null,
+        "range": null
+      },
+      "egger": {
+        "available": false,
+        "k": 1,
+        "intercept": null,
+        "se": null,
+        "t": null,
+        "p": null,
+        "slope": null,
+        "note": "zu wenige Studien (k < 3)"
+      },
+      "funnel": [
+        {
+          "label": "b181ec03741f",
+          "est": 0.6259384308664954,
+          "se": 0.16036229858833095,
+          "precision": 6.235879684957115
+        }
+      ],
+      "scope_flags": []
+    },
+    "recreational walking [log_ratio]": {
+      "k": 1,
+      "method": "hksj",
+      "pooled": null,
+      "ci_low": null,
+      "ci_high": null,
+      "fixed": 2.66374994220563,
+      "fixed_ci_low": 1.7512349523995927,
+      "fixed_ci_high": 3.5762649320116675,
+      "q": null,
+      "df": null,
+      "p_q": null,
+      "i2": null,
+      "h2": null,
+      "tau2": null,
+      "tau2_reml": null,
+      "tau": null,
+      "pi_low": null,
+      "pi_high": null,
+      "excluded": [],
+      "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+      "scale": "log_ratio",
+      "outcome": "recreational walking",
+      "pool_version": "pooling/2",
+      "subgroups_design": {
+        "key": "design",
+        "groups": {
+          "Observational Study": {
+            "k": 1,
+            "method": "hksj",
+            "pooled": null,
+            "ci_low": null,
+            "ci_high": null,
+            "fixed": 2.66374994220563,
+            "fixed_ci_low": 1.7512349523995927,
+            "fixed_ci_high": 3.5762649320116675,
+            "q": null,
+            "df": null,
+            "p_q": null,
+            "i2": null,
+            "h2": null,
+            "tau2": null,
+            "tau2_reml": null,
+            "tau": null,
+            "pi_low": null,
+            "pi_high": null,
+            "rows": [
+              {
+                "label": "e65d1440ba18",
+                "source_id": "e65d1440ba18",
+                "study_id": "",
+                "doi": "",
+                "outcome": "recreational walking",
+                "scale": "log_ratio",
+                "adjusted": -1,
+                "time_point": "",
+                "est": 2.66374994220563,
+                "se": 0.46556887235001904,
+                "raw": 14.35,
+                "unit": "odds ratio",
+                "design": "Observational Study",
+                "year": "",
+                "disputed": 0,
+                "quote_start": 899,
+                "n": 646.0,
+                "population": "adults in West Cheshire UK",
+                "scope_flag": ""
+              }
+            ],
+            "excluded": [],
+            "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling"
+          }
+        },
+        "q_between": null,
+        "df": null,
+        "p": null
+      },
+      "leave_one_out": {
+        "available": false,
+        "entries": [],
+        "estimate": null,
+        "range": null
+      },
+      "egger": {
+        "available": false,
+        "k": 1,
+        "intercept": null,
+        "se": null,
+        "t": null,
+        "p": null,
+        "slope": null,
+        "note": "zu wenige Studien (k < 3)"
+      },
+      "funnel": [
+        {
+          "label": "e65d1440ba18",
+          "est": 2.66374994220563,
+          "se": 0.46556887235001904,
+          "precision": 2.147909921366458
+        }
+      ],
+      "scope_flags": []
+    }
+  },
+  "excluded": [
+    {
+      "label": "2e0974309df9",
+      "outcome": "",
+      "reason": "Plausibilitätsgate: unbekannter Effekttyp '(leer)'"
+    },
+    {
+      "label": "182b05a12853",
+      "outcome": "",
+      "reason": "Plausibilitätsgate: unbekannter Effekttyp '(leer)'"
+    },
+    {
+      "label": "d25d0626c882",
+      "outcome": "",
+      "reason": "Plausibilitätsgate: unbekannter Effekttyp '(leer)'"
+    },
+    {
+      "label": "f55b2ca4d966",
+      "outcome": "",
+      "reason": "Plausibilitätsgate: unbekannter Effekttyp '(leer)'"
+    },
+    {
+      "label": "04f05664ccea",
+      "outcome": "",
+      "reason": "Plausibilitätsgate: unbekannter Effekttyp '(leer)'"
+    },
+    {
+      "label": "04f05664ccea",
+      "outcome": "",
+      "reason": "Plausibilitätsgate: unbekannter Effekttyp '(leer)'"
+    },
+    {
+      "label": "b1c8768d7fc1",
+      "outcome": "",
+      "reason": "Plausibilitätsgate: unbekannter Effekttyp '(leer)'"
+    },
+    {
+      "label": "d45fa5b310ca",
+      "outcome": "",
+      "reason": "Plausibilitätsgate: unbekannter Effekttyp '(leer)'"
+    },
+    {
+      "label": "d45fa5b310ca",
+      "outcome": "",
+      "reason": "Plausibilitätsgate: unbekannter Effekttyp '(leer)'"
+    },
+    {
+      "label": "b0e4bca955f2",
+      "outcome": "treatment resistance (TRD vs non-TRD)",
+      "reason": "Plausibilitätsgate: kein Effektwert gelesen"
+    },
+    {
+      "label": "4ed4d3592910",
+      "outcome": "physical activity (moderate to vigorous, perceived intensity)",
+      "reason": "Fisher-z braucht n > 3"
+    },
+    {
+      "label": "78724545a3f7",
+      "outcome": "",
+      "reason": "Plausibilitätsgate: unbekannter Effekttyp '(leer)'"
+    },
+    {
+      "label": "3cb26f9defbe",
+      "outcome": "mental health",
+      "reason": "Übersichtsarbeit ('meta-analysis of RCTs'), keine Primärstudie"
+    },
+    {
+      "label": "3cb26f9defbe",
+      "outcome": "mental health",
+      "reason": "Übersichtsarbeit ('meta-analysis of RCTs'), keine Primärstudie"
+    },
+    {
+      "label": "ad24b3f96a7e",
+      "outcome": "physical activity agreement",
+      "reason": "kein Standardfehler"
+    },
+    {
+      "label": "f8f920ccfcd5",
+      "outcome": "dietary intake measurement error bias",
+      "reason": "kein Standardfehler"
+    },
+    {
+      "label": "f8f920ccfcd5",
+      "outcome": "",
+      "reason": "Plausibilitätsgate: unbekannter Effekttyp '(leer)'"
+    },
+    {
+      "label": "391f5e3b8980",
+      "outcome": "body mass index",
+      "reason": "Übersichtsarbeit ('Systematic Review'), keine Primärstudie"
+    },
+    {
+      "label": "9bfd7d13666e",
+      "outcome": "",
+      "reason": "Plausibilitätsgate: unbekannter Effekttyp '(leer)'"
+    },
+    {
+      "label": "4dab71e575fc",
+      "outcome": "health-related quality of life",
+      "reason": "Plausibilitätsgate: kein Effektwert gelesen"
+    },
+    {
+      "label": "472eee5b140e",
+      "outcome": "",
+      "reason": "Plausibilitätsgate: unbekannter Effekttyp '(leer)'"
+    },
+    {
+      "label": "1959d58f1a81",
+      "outcome": "health related quality of life",
+      "reason": "Doppel-Extraktion widersprüchlich"
+    },
+    {
+      "label": "1959d58f1a81",
+      "outcome": "health related quality of life",
+      "reason": "Doppel-Extraktion widersprüchlich"
+    },
+    {
+      "label": "b00d3a857f23",
+      "outcome": "depressive symptoms",
+      "reason": "Übersichtsarbeit ('Network Meta-Analysis'), keine Primärstudie"
+    },
+    {
+      "label": "b00d3a857f23",
+      "outcome": "depressive symptoms",
+      "reason": "Übersichtsarbeit ('Network Meta-Analysis'), keine Primärstudie"
+    },
+    {
+      "label": "f027bbdf5c25",
+      "outcome": "depressive symptoms",
+      "reason": "Übersichtsarbeit ('meta-analysis of randomized controlled trials'), keine Primärstudie"
+    },
+    {
+      "label": "f027bbdf5c25",
+      "outcome": "depressive symptoms",
+      "reason": "Übersichtsarbeit ('meta-analysis of randomized controlled trials'), keine Primärstudie"
+    },
+    {
+      "label": "0833277c2b20",
+      "outcome": "depressive symptoms",
+      "reason": "Übersichtsarbeit ('Randomized controlled trial (meta-analysis of 37 RCTs)'), keine Primärstudie"
+    },
+    {
+      "label": "0833277c2b20",
+      "outcome": "depressive symptoms",
+      "reason": "Plausibilitätsgate: kein Effektwert gelesen"
+    },
+    {
+      "label": "1b31e5653413",
+      "outcome": "depressive symptoms",
+      "reason": "kein Standardfehler"
+    },
+    {
+      "label": "1b31e5653413",
+      "outcome": "depressive symptoms",
+      "reason": "kein Standardfehler"
+    },
+    {
+      "label": "42ea75e6f0e4",
+      "outcome": "depressive symptoms",
+      "reason": "Plausibilitätsgate: kein Effektwert gelesen"
+    },
+    {
+      "label": "42ea75e6f0e4",
+      "outcome": "depressive symptoms",
+      "reason": "Plausibilitätsgate: kein Effektwert gelesen"
+    },
+    {
+      "label": "7568e1447231",
+      "outcome": "depressive symptoms",
+      "reason": "Übersichtsarbeit ('Network meta-analysis of randomized controlled trials'), keine Primärstudie"
+    },
+    {
+      "label": "7568e1447231",
+      "outcome": "depressive symptoms",
+      "reason": "Übersichtsarbeit ('Network meta-analysis of randomized controlled trials'), keine Primärstudie"
+    },
+    {
+      "label": "56d4ec710151",
+      "outcome": "depressive symptoms",
+      "reason": "Übersichtsarbeit ('Randomized controlled trial (meta-analysis of 12 RCTs)'), keine Primärstudie"
+    },
+    {
+      "label": "2e0974309df9",
+      "outcome": "depressive symptoms",
+      "reason": "Plausibilitätsgate: kein Effektwert gelesen"
+    },
+    {
+      "label": "5ef5a65e7724",
+      "outcome": "depressive symptoms",
+      "reason": "Übersichtsarbeit ('Systematic Review and Meta-Analysis'), keine Primärstudie"
+    },
+    {
+      "label": "5ef5a65e7724",
+      "outcome": "depressive symptoms",
+      "reason": "Übersichtsarbeit ('Systematic Review and Meta-Analysis'), keine Primärstudie"
+    },
+    {
+      "label": "0f539db0e818",
+      "outcome": "depressive symptoms",
+      "reason": "Übersichtsarbeit ('Randomized controlled trials (pairwise meta-analysis)'), keine Primärstudie"
+    },
+    {
+      "label": "0f539db0e818",
+      "outcome": "depressive symptoms",
+      "reason": "Übersichtsarbeit ('pairwise meta-analysis'), keine Primärstudie"
+    },
+    {
+      "label": "e22219dd7a8d",
+      "outcome": "depressive symptoms",
+      "reason": "Übersichtsarbeit ('Bayesian network meta-analysis of RCTs'), keine Primärstudie"
+    },
+    {
+      "label": "d25d0626c882",
+      "outcome": "depressive symptoms",
+      "reason": "Plausibilitätsgate: kein Effektwert gelesen"
+    },
+    {
+      "label": "f15f632b3554",
+      "outcome": "depressive symptoms",
+      "reason": "Übersichtsarbeit ('Meta-analysis'), keine Primärstudie"
+    },
+    {
+      "label": "f15f632b3554",
+      "outcome": "depressive symptoms",
+      "reason": "Übersichtsarbeit ('meta-analysis'), keine Primärstudie"
+    },
+    {
+      "label": "416e085ec44c",
+      "outcome": "depressive symptoms",
+      "reason": "Übersichtsarbeit ('meta-analysis of RCTs'), keine Primärstudie"
+    },
+    {
+      "label": "f55b2ca4d966",
+      "outcome": "depressive symptoms",
+      "reason": "Plausibilitätsgate: kein Effektwert gelesen"
+    },
+    {
+      "label": "64b6145886c3",
+      "outcome": "depressive symptoms",
+      "reason": "Plausibilitätsgate: kein Effektwert gelesen"
+    },
+    {
+      "label": "64b6145886c3",
+      "outcome": "depressive symptoms",
+      "reason": "Plausibilitätsgate: kein Effektwert gelesen"
+    },
+    {
+      "label": "909976857d9b",
+      "outcome": "depressive symptoms",
+      "reason": "Plausibilitätsgate: kein Effektwert gelesen"
+    },
+    {
+      "label": "909976857d9b",
+      "outcome": "depressive symptoms",
+      "reason": "Plausibilitätsgate: kein Effektwert gelesen"
+    },
+    {
+      "label": "dab5bc3e2dd4",
+      "outcome": "depressive symptoms",
+      "reason": "Übersichtsarbeit ('systematic review and dose-response meta-analysis of randomi'), keine Primärstudie"
+    },
+    {
+      "label": "dab5bc3e2dd4",
+      "outcome": "depressive symptoms",
+      "reason": "Übersichtsarbeit ('systematic review and dose-response meta-analysis of randomi'), keine Primärstudie"
+    },
+    {
+      "label": "29f3cdd535bf",
+      "outcome": "depressive symptoms",
+      "reason": "Plausibilitätsgate: kein Effektwert gelesen"
+    },
+    {
+      "label": "29f3cdd535bf",
+      "outcome": "depressive symptoms",
+      "reason": "Plausibilitätsgate: kein Effektwert gelesen"
+    },
+    {
+      "label": "b20f960c76e1",
+      "outcome": "depressive symptoms",
+      "reason": "Plausibilitätsgate: kein Effektwert gelesen"
+    },
+    {
+      "label": "b20f960c76e1",
+      "outcome": "depressive symptoms",
+      "reason": "Plausibilitätsgate: kein Effektwert gelesen"
+    },
+    {
+      "label": "b1c8768d7fc1",
+      "outcome": "depressive symptoms",
+      "reason": "Plausibilitätsgate: kein Effektwert gelesen"
+    },
+    {
+      "label": "d3980992b4d5",
+      "outcome": "depressive symptoms",
+      "reason": "kein Standardfehler"
+    },
+    {
+      "label": "d3980992b4d5",
+      "outcome": "depressive symptoms",
+      "reason": "kein Standardfehler"
+    },
+    {
+      "label": "bfb75b2529f8",
+      "outcome": "depressive symptoms",
+      "reason": "Plausibilitätsgate: kein Effektwert gelesen"
+    },
+    {
+      "label": "bfb75b2529f8",
+      "outcome": "depressive symptoms",
+      "reason": "Plausibilitätsgate: kein Effektwert gelesen"
+    },
+    {
+      "label": "0dcee572d36c",
+      "outcome": "depressive symptoms",
+      "reason": "kein Standardfehler"
+    },
+    {
+      "label": "0dcee572d36c",
+      "outcome": "depressive symptoms",
+      "reason": "kein Standardfehler"
+    },
+    {
+      "label": "f9ad2baee3fd",
+      "outcome": "depressive symptoms",
+      "reason": "Plausibilitätsgate: kein Effektwert gelesen"
+    },
+    {
+      "label": "f9ad2baee3fd",
+      "outcome": "depressive symptoms",
+      "reason": "Plausibilitätsgate: kein Effektwert gelesen"
+    },
+    {
+      "label": "b0e4bca955f2",
+      "outcome": "depressive symptoms",
+      "reason": "Plausibilitätsgate: kein Effektwert gelesen"
+    },
+    {
+      "label": "4ed4d3592910",
+      "outcome": "depressive symptoms",
+      "reason": "Plausibilitätsgate: kein Effektwert gelesen"
+    },
+    {
+      "label": "9b0c60e0fa92",
+      "outcome": "depressive symptoms",
+      "reason": "kein Standardfehler"
+    },
+    {
+      "label": "9b0c60e0fa92",
+      "outcome": "depressive symptoms",
+      "reason": "kein Standardfehler"
+    },
+    {
+      "label": "49e19b4d0a39",
+      "outcome": "depressive symptoms",
+      "reason": "kein Standardfehler"
+    },
+    {
+      "label": "49e19b4d0a39",
+      "outcome": "depressive symptoms",
+      "reason": "kein Standardfehler"
+    },
+    {
+      "label": "b181ec03741f",
+      "outcome": "depressive symptoms",
+      "reason": "Plausibilitätsgate: kein Effektwert gelesen"
+    },
+    {
+      "label": "2e269a76f4e7",
+      "outcome": "depressive symptoms",
+      "reason": "Plausibilitätsgate: kein Effektwert gelesen"
+    },
+    {
+      "label": "2e269a76f4e7",
+      "outcome": "depressive symptoms",
+      "reason": "Plausibilitätsgate: kein Effektwert gelesen"
+    },
+    {
+      "label": "15f76505daee",
+      "outcome": "depressive symptoms",
+      "reason": "Doppel-Extraktion widersprüchlich"
+    },
+    {
+      "label": "15f76505daee",
+      "outcome": "depressive symptoms",
+      "reason": "Doppel-Extraktion widersprüchlich"
+    },
+    {
+      "label": "b6de9d165987",
+      "outcome": "depressive symptoms",
+      "reason": "Plausibilitätsgate: kein Effektwert gelesen"
+    },
+    {
+      "label": "b6de9d165987",
+      "outcome": "depressive symptoms",
+      "reason": "Plausibilitätsgate: kein Effektwert gelesen"
+    },
+    {
+      "label": "b053a354ca88",
+      "outcome": "depressive symptoms",
+      "reason": "Plausibilitätsgate: kein Effektwert gelesen"
+    },
+    {
+      "label": "b053a354ca88",
+      "outcome": "depressive symptoms",
+      "reason": "Plausibilitätsgate: kein Effektwert gelesen"
+    },
+    {
+      "label": "fc12f2364abe",
+      "outcome": "depressive symptoms",
+      "reason": "Übersichtsarbeit ('Systematic review and meta-analysis of randomised controlled'), keine Primärstudie"
+    },
+    {
+      "label": "fc12f2364abe",
+      "outcome": "depressive symptoms",
+      "reason": "Übersichtsarbeit ('Systematic review and meta-analysis of randomised controlled'), keine Primärstudie"
+    },
+    {
+      "label": "391f5e3b8980",
+      "outcome": "depressive symptoms",
+      "reason": "Plausibilitätsgate: kein Effektwert gelesen"
+    },
+    {
+      "label": "f9d8fbabbc39",
+      "outcome": "depressive symptoms",
+      "reason": "Doppel-Extraktion widersprüchlich"
+    },
+    {
+      "label": "f9d8fbabbc39",
+      "outcome": "depressive symptoms",
+      "reason": "Doppel-Extraktion widersprüchlich"
+    },
+    {
+      "label": "9bfd7d13666e",
+      "outcome": "depressive symptoms",
+      "reason": "Plausibilitätsgate: kein Effektwert gelesen"
+    },
+    {
+      "label": "1883b7769589",
+      "outcome": "depressive symptoms",
+      "reason": "kein Standardfehler"
+    },
+    {
+      "label": "1883b7769589",
+      "outcome": "depressive symptoms",
+      "reason": "kein Standardfehler"
+    },
+    {
+      "label": "310906591e56",
+      "outcome": "depressive symptoms",
+      "reason": "Plausibilitätsgate: kein Effektwert gelesen"
+    },
+    {
+      "label": "310906591e56",
+      "outcome": "depressive symptoms",
+      "reason": "Plausibilitätsgate: kein Effektwert gelesen"
+    },
+    {
+      "label": "57dc9c1feceb",
+      "outcome": "depressive symptoms",
+      "reason": "Plausibilitätsgate: kein Effektwert gelesen"
+    },
+    {
+      "label": "57dc9c1feceb",
+      "outcome": "depressive symptoms",
+      "reason": "Plausibilitätsgate: kein Effektwert gelesen"
+    },
+    {
+      "label": "ab0e7f8d8707",
+      "outcome": "depressive symptoms",
+      "reason": "Übersichtsarbeit ('Meta-Analysis of RCTs'), keine Primärstudie"
+    },
+    {
+      "label": "ab0e7f8d8707",
+      "outcome": "depressive symptoms",
+      "reason": "Übersichtsarbeit ('Meta-Analysis of RCTs'), keine Primärstudie"
+    },
+    {
+      "label": "d0bcfaef83ff",
+      "outcome": "all-cause mortality",
+      "reason": "dieselbe Quelle mehrfach zum selben Outcome (abhängige Zeilen: Arme, Kontraste oder zweite Lesung)"
+    },
+    {
+      "label": "9ac49ce663bc",
+      "outcome": "colorectal cancer risk",
+      "reason": "dieselbe Quelle mehrfach zum selben Outcome (abhängige Zeilen: Arme, Kontraste oder zweite Lesung)"
+    },
+    {
+      "label": "a84dccb170c1",
+      "outcome": "depressive symptoms",
+      "reason": "dieselbe Quelle mehrfach zum selben Outcome (abhängige Zeilen: Arme, Kontraste oder zweite Lesung)"
+    },
+    {
+      "label": "35431909c5de",
+      "outcome": "depressive symptoms",
+      "reason": "dieselbe Quelle mehrfach zum selben Outcome (abhängige Zeilen: Arme, Kontraste oder zweite Lesung)"
+    },
+    {
+      "label": "a42759121db5",
+      "outcome": "depressive symptoms",
+      "reason": "dieselbe Quelle mehrfach zum selben Outcome (abhängige Zeilen: Arme, Kontraste oder zweite Lesung)"
+    },
+    {
+      "label": "0b17f1af2a47",
+      "outcome": "depressive symptoms",
+      "reason": "dieselbe Quelle mehrfach zum selben Outcome (abhängige Zeilen: Arme, Kontraste oder zweite Lesung)"
+    },
+    {
+      "label": "6a99402f41ff",
+      "outcome": "depressive symptoms",
+      "reason": "dieselbe Quelle mehrfach zum selben Outcome (abhängige Zeilen: Arme, Kontraste oder zweite Lesung)"
+    },
+    {
+      "label": "92652d45b39a",
+      "outcome": "depressive symptoms",
+      "reason": "dieselbe Quelle mehrfach zum selben Outcome (abhängige Zeilen: Arme, Kontraste oder zweite Lesung)"
+    },
+    {
+      "label": "bebe022e1a33",
+      "outcome": "depressive symptoms",
+      "reason": "dieselbe Quelle mehrfach zum selben Outcome (abhängige Zeilen: Arme, Kontraste oder zweite Lesung)"
+    },
+    {
+      "label": "3b12e506307b",
+      "outcome": "depressive symptoms",
+      "reason": "dieselbe Quelle mehrfach zum selben Outcome (abhängige Zeilen: Arme, Kontraste oder zweite Lesung)"
+    },
+    {
+      "label": "fc4ee901a081",
+      "outcome": "major depressive disorder",
+      "reason": "dieselbe Quelle mehrfach zum selben Outcome (abhängige Zeilen: Arme, Kontraste oder zweite Lesung)"
+    },
+    {
+      "label": "a4347abcc06f",
+      "outcome": "obesity",
+      "reason": "dieselbe Quelle mehrfach zum selben Outcome (abhängige Zeilen: Arme, Kontraste oder zweite Lesung)"
+    }
+  ],
+  "off_target": []
+}

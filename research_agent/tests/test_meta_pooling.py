@@ -18,6 +18,7 @@ from research_agent.meta.extraction import z_for_level
 from research_agent.meta.pooling import (
     aggregate_design, build_analysis, egger, forest_table, leave_one_out, pool,
     standardize, subgroups, SCALE_G, SCALE_LOG, SCALE_Z,
+    SCALE_RAW,
 )
 
 
@@ -362,6 +363,91 @@ class TestAggregateDesigns(unittest.TestCase):
         self.assertNotIn("depressive symptoms [hedges_g]", analysis["groups"])
         self.assertEqual(analysis["usable"], 0)
         self.assertEqual(len(analysis["excluded"]), 1)
+
+class TransformationReferenceTest(unittest.TestCase):
+    """Order §7.1: every transformation proves itself with reference values."""
+
+    def test_fisher_z_reference(self):
+        est, se, scale, _ = standardize(_row(effect_type="r", effect=0.5, n=40))
+        self.assertEqual(scale, SCALE_Z)
+        self.assertAlmostEqual(est, 0.5493061443, places=6)   # atanh(0.5)
+        self.assertAlmostEqual(se, 1.0 / math.sqrt(37.0), places=6)
+
+    def test_log_ratio_from_ci_on_reported_level(self):
+        # OR 1.30 (95% CI 1.10-1.50): se = (ln 1.5 - ln 1.1) / (2*z95)
+        est, se, scale, _ = standardize(_row(
+            effect_type="or", effect=1.30, ci_low=1.10, ci_high=1.50, ci_level=0.95))
+        self.assertEqual(scale, SCALE_LOG)
+        self.assertAlmostEqual(est, math.log(1.30), places=6)
+        self.assertAlmostEqual(se, (math.log(1.5) - math.log(1.1)) /
+                               (2 * 1.959963984540054), places=6)
+
+    def test_log_ratio_is_level_sensitive(self):
+        # same interval, reported level 0.90 -> wider SE than at 0.95
+        _, se90, _, _ = standardize(_row(
+            effect_type="or", effect=1.30, ci_low=1.10, ci_high=1.50, ci_level=0.90))
+        _, se95, _, _ = standardize(_row(
+            effect_type="or", effect=1.30, ci_low=1.10, ci_high=1.50, ci_level=0.95))
+        self.assertGreater(se90, se95)
+
+    def test_ratio_zero_refused(self):
+        est, se, scale, _ = standardize(_row(
+            effect_type="hr", effect=0.0, ci_low=0.1, ci_high=0.9, ci_level=0.95))
+        self.assertIsNone(est)
+        self.assertEqual(scale, "")
+
+    def test_smd_and_raw_pass_through(self):
+        est, se, scale, _ = standardize(_row(effect_type="smd", effect=-0.4, se=0.1))
+        self.assertEqual((est, se, scale), (-0.4, 0.1, SCALE_G))
+        est, se, scale, _ = standardize(_row(effect_type="beta", effect=1.2, se=0.05))
+        # raw pools stay per-effect-type ('heritability' pools against the
+        # same proportion kind only)
+        self.assertEqual(scale, "raw:beta")
+
+
+class PoolingConditionsTest(unittest.TestCase):
+    """pooling/2: adjustment and timepoint never silently merge (§7.1)."""
+
+    def test_mixed_adjustment_splits_pools(self):
+        a = _row(source_id="s1", effect=-0.4, se=0.1)
+        a["adjusted"] = 1
+        b = _row(source_id="s2", effect=-0.5, se=0.1)
+        b["adjusted"] = 0
+        analysis = build_analysis([a, b])
+        keys = list(analysis["groups"])
+        self.assertEqual(len(keys), 2)
+        self.assertTrue(any("Adjustierung: adjusted" in k for k in keys))
+        self.assertTrue(any("Adjustierung: unadjusted" in k for k in keys))
+        self.assertTrue(all(g["pool_version"] == "pooling/2"
+                            for g in analysis["groups"].values()))
+
+    def test_unknown_adjustment_stays_in_its_own_pool(self):
+        a = _row(source_id="s1", effect=-0.4, se=0.1)
+        a["adjusted"] = 1
+        res = build_analysis([a, _row(source_id="s2", effect=-0.5, se=0.1)])
+        keys = list(res["groups"])
+        self.assertEqual(len(keys), 2)
+        self.assertTrue(any("Adjustierung: unknown" in k for k in keys))
+
+    def test_timepoint_mixture_splits(self):
+        t1 = _row(source_id="s1", effect=-0.4, se=0.1)
+        t1["time_point"] = "12-month follow-up"
+        t2 = _row(source_id="s2", effect=-0.5, se=0.1)
+        t2["time_point"] = "6-month follow-up"
+        analysis = build_analysis([t1, t2])
+        keys = list(analysis["groups"])
+        self.assertEqual(len(keys), 2)
+        self.assertTrue(any("| T: 12-month" in k for k in keys))
+
+    def test_study_id_collapse_with_min_se_rule(self):
+        a = _row(source_id="s1", doi="", effect=-0.4, se=0.14)
+        a["study_id"] = "coh-A"
+        b = _row(source_id="s2", doi="", effect=-0.40, se=0.08)
+        b["study_id"] = "coh-A"
+        analysis = build_analysis([a, b])
+        group = analysis["groups"]["depressive symptoms [hedges_g]"]
+        self.assertEqual(group["k"], 1)   # one cohort, one estimate
+        self.assertEqual(group["rows"][0]["se"], 0.08)  # the more precise one
 
 
 if __name__ == "__main__":
