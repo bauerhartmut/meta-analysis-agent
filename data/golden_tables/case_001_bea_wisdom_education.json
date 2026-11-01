@@ -1,0 +1,33 @@
+{
+  "case_id": "case_001_bea_wisdom_education",
+  "source_file": "0171a4d5d731852f9caac7aae79446a9.txt",
+  "regexes": { "labels_present_in_dataset": [] },
+  "regex": null,
+  "annotated_by": "human review, 01.11.2026 (Codebuff session; blocks re-read from the stored text)",
+  "expected_blocks": [
+    {
+      "table_label": "Table 1",
+      "caption_startswith": "Table 1. Coding for years of education in UK Biobank",
+      "min_lines": 3,
+      "expected_effect_cells": []
+    },
+    {
+      "table_label": "Table 2",
+      "caption_startswith": "Table 2. Information about instrumental variables.",
+      "min_lines": 5,
+      "expected_effect_cells": []
+    }
+  ],
+  "must_not_be_completed": [
+    {
+      "caption_startswith": "Table 1. No sensitivity analyses",
+      "reason": "narrative reference in prose, not a table"
+    }
+  ],
+  "expected_effect_cells_in_prose": [
+    { "keyword": "\u03b2", "value": "0.18", "ci_low": "0.17", "ci_high": "0.20" },
+    { "keyword": "\u03b2", "value": "-0.05", "ci_low": "-0.06", "ci_high": "-0.04" },
+    { "keyword": "\u03b2", "value": "-0.06", "ci_low": "-0.12", "ci_high": "0.01" },
+    { "keyword": "\u03b2", "value": "-0.37", "ci_low": "-0.39", "ci_high": "-0.35" }
+  ]
+}

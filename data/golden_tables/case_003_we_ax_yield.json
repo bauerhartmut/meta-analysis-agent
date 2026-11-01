@@ -1,0 +1,15 @@
+{
+  "case_id": "case_003_we_ax_yield",
+  "source_file": "0731ebe86f04334b0f47ed541eecabf1.txt",
+  "annotated_by": "human review, 01.11.2026 (Codebuff session)",
+  "expected_blocks": [
+    {
+      "table_label": "Table 1",
+      "caption_startswith": "Table 1. Water-extractable arabinoxylan (WE-AX) yield and purity",
+      "min_lines": 3,
+      "expected_effect_cells": [],
+      "reason": "chemistry yield table: purely numeric rows, still a valid block"
+    }
+  ],
+  "no_effect_cells_expected_in_tables": true
+}

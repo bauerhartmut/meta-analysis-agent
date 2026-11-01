@@ -1,0 +1,15 @@
+{
+  "case_id": "case_002_pin3_retest",
+  "source_file": "0288bd6b82d4bc80c8e7d49118ec2089.txt",
+  "annotated_by": "human review, 01.11.2026 (Codebuff session)",
+  "expected_blocks": [
+    {
+      "table_label": "Table 5",
+      "caption_startswith": "Table 5. Test-retest reliability of PIN3 physical activity",
+      "min_lines": 10,
+      "expected_effect_cells": [],
+      "reason": "correlation/reliability table: numeric rows, no HR/CI cells"
+    }
+  ],
+  "no_effect_cells_expected_in_tables": true
+}
