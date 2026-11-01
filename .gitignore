@@ -45,3 +45,5 @@ dataset/
 nul
 =*
 *.log
+data/*.db-wal
+data/*.db-shm
