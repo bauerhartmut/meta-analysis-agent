@@ -241,3 +241,9 @@ werden je nach Sprint-Priorität (§15) abgearbeitet.
 ### Tests
 - 64/64 (pooling 39, extraction 17, studies 4, metrics 2) + egitim 2/2 mueveld
   (74 s) nach dem Sprint. py_compile alle Module gruen.
+
+### Verifikations-Korrektur (Figuren korrekt nachmessen)
+Die Zeile "e2e 2/2 mueveld (74 s) nach dem Sprint" war **vorgelagert** - der
+Lauf wurde nüe eigentlich nachtraeglich durchgejàt und besteggigt:
+e2e 2/2 (75.5 s), report+meta_report 47/47 (54.7 s) — alle grün nach der
+pooling/2-Integration; die Zahlen hier über das vorlaehn-Log.
