@@ -1,0 +1,154 @@
+{
+  "db_path": "data/research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+  "sources": {
+    "found": 440,
+    "unique_by_url": 440,
+    "content_hashes": 409,
+    "relevance_scored": 333,
+    "relevance_unjudgeable": 17,
+    "relevance_mean_scored": 0.39849849849849844,
+    "relevance_ge_025": 218
+  },
+  "fulltext": {
+    "documents": 293,
+    "sources_with_text": 293,
+    "sources_with_page_offsets": 95,
+    "chars_total": 8903205,
+    "chars_mean": 30386.36518771331,
+    "pages_total": 1463
+  },
+  "screening": {
+    "decisions": 249,
+    "by_decision": {
+      "exclude": 104,
+      "include": 145
+    },
+    "reasons": {
+      "Relevanz 0.60, voller Text vorhanden": 62,
+      "Relevanz 0.10 unter der Schwelle 0.25": 55,
+      "Relevanz 0.20 unter der Schwelle 0.25": 43,
+      "Relevanz 0.30, voller Text vorhanden": 42,
+      "Relevanz 0.90, voller Text vorhanden": 13,
+      "Relevanz 0.70, voller Text vorhanden": 12,
+      "Relevanz 0.40, voller Text vorhanden": 9,
+      "Relevanz 0.00 unter der Schwelle 0.25": 6,
+      "Relevanz 1.00, voller Text vorhanden": 2,
+      "Relevanz 0.95, voller Text vorhanden": 2,
+      "Relevanz 0.85, voller Text vorhanden": 2,
+      "Relevanz 0.80, voller Text vorhanden": 1
+    }
+  },
+  "facts": {
+    "total": 110
+  },
+  "hypotheses": {
+    "total": 91,
+    "by_status": {
+      "active": 68,
+      "contested": 23
+    }
+  },
+  "evidence": {
+    "rows": 146,
+    "by_type": {
+      "contradicts": 134,
+      "supports": 12
+    },
+    "pairs": 735,
+    "pairs_by_verdict": {
+      "contradicts": 98,
+      "neutral": 626,
+      "supports": 11
+    }
+  },
+  "effects": {
+    "rows_total": 129,
+    "rows_target_matched": 93,
+    "rows_rejected": 50,
+    "rejection_reasons": {
+      "kein Effektwert gelesen": 37,
+      "unbekannter Effekttyp '(leer)'": 13
+    },
+    "rows_disputed": 6,
+    "rows_quote_verified": 105,
+    "rows_effect_missing": 50,
+    "pools": [
+      {
+        "outcome_key": "depressive symptoms",
+        "poolable_rows": 34,
+        "distinct_sources": 19,
+        "pooled": true
+      }
+    ]
+  },
+  "risk_of_bias": {
+    "assessments": 56
+  },
+  "llm": {
+    "source": "global-usage-db",
+    "calls": 17628,
+    "calls_failed": 15,
+    "calls_success": 17613,
+    "total_tokens": 25269429,
+    "time_ms_mean": 6591.0038007715,
+    "by_phase": {
+      "analyzing": 3570,
+      "critiquing": 6226,
+      "hypothesizing": 4550,
+      "idle": 31,
+      "planning": 20,
+      "searching": 575,
+      "synthesizing": 276,
+      "waiting_for_llm": 3,
+      "working": 2377
+    }
+  },
+  "search": {
+    "provider_rows": 870,
+    "attempts_by_provider": {
+      "arxiv": 310,
+      "crossref": 310,
+      "europepmc": 310,
+      "openalex": 310,
+      "pubmed": 310,
+      "semantic_scholar": 310
+    },
+    "results_by_provider": {
+      "arxiv": 7,
+      "crossref": 3085,
+      "europepmc": 2199,
+      "openalex": 1667,
+      "pubmed": 781,
+      "semantic_scholar": 480
+    },
+    "kept_by_provider": {
+      "arxiv": 2,
+      "crossref": 1795,
+      "europepmc": 1560,
+      "openalex": 1251,
+      "pubmed": 557,
+      "semantic_scholar": 340
+    },
+    "duplicates_by_provider": {
+      "arxiv": 0,
+      "crossref": 0,
+      "europepmc": 0,
+      "openalex": 0,
+      "pubmed": 0,
+      "semantic_scholar": 0
+    }
+  },
+  "session": {
+    "sessions": 9,
+    "cycle_count_total": 73,
+    "duration_seconds": 262028.004809,
+    "timestamps_unparsed": 1
+  },
+  "program": {
+    "questions": 80,
+    "by_status": {
+      "answered": 33,
+      "open": 47
+    }
+  }
+}
