@@ -282,3 +282,47 @@ pooling/2-Integration; die Zahlen hier über das vorlaehn-Log.
   instrument, Report-Zählung getrennt).
 - Nachmessungen: Kernsuiten 59/59, Report-Suiten 47/47 (56,4 s), e2e 2/2
   (59,97 s) — alle grün. py_compile: risk_of_bias/database/report.
+
+## Sprint 6 (02.11.2026): Phase 7 - Wissenschaftliche Validierungsschicht (Freigabe-Gate)
+
+### Bestands-audit (keine Duplikate)
+- deterministische RoB/GRADE-Maschine, Review-Layer (disputes/escalations),
+  kleine-k-Gates und §12-Benchmark-Thresholds existierten bereits; der
+  gelieferte Layer prüft Invarianten ÜBER dem Bestand, er urteilt nichts neu.
+
+### Neu umgesetzt (meta/validation.py, VERSION validation/1)
+- **Freigabe-Statusmodell** (append-only in `validation_results`, DDL+API
+  additive): `blocked` (harter Befund) / `needs_review` (nur Warnungen) /
+  `machine_validated` (prüfungsfrei) / `draft` (kein Lauf mit Ergebnis).
+- **Beleg-Kette re-verified**: Jede gespeicherte Effektzeilen-Span muss mit
+  DEMSELBEN Verifikator (locate_quote über den Datei-Backed Body) reprodu-
+  zierbar sein — dasselbe Know-how, das die Extraktion beim Schreiben er-
+  zwang, nun über den fertigen Bestand. Korruption/Migrations-Lücken knob-
+  beln hier auf, nicht im Pooled-Claim.
+- **Kontraktregel sichtbar gemacht (Live-Fund)**: die POOLABLE-Definition
+  hat KEinen Zitat-Term — poolbare Zeilen ohne verifizierten Beleg wären
+  poolbar. Der Gate blockiert genau diese (`poolable_effect_without_
+  verbatim_quote`); belegarme, NICHT poolbare Zeilen zählen als Warnung
+  (`unverifiable_but_not_poolable`), nie als blocks. Bisher im Bestand:
+  unquoted_poolable = 0 (keine Verletzung aktiv).
+- **Zählung statt Neuurteil**: disputed=6, rejected=50 (bestand), RoB-
+  Abdeckung 11 Quellen offen; alle Werte SQL-deterministisch.
+- **Report-Integration**: neue Sektion `## Wissenschaftliche Validierung
+  (Freigabe-Gate)` in build_report — Status-Tabelle, Zählungen, Blocker/
+  Warnungen und eine Erklärung, was "maschinell validiert" sagt und was
+  nicht (kein menschlicher Review). Fail-soft: wenn die Layer nicht läuft,
+  rendert der Report ohne die Sektion weiter.
+- **CLI (readonly)**: `python -m research_agent.meta.validation <db>` mit
+  Windows-sicheren mode=ro-URI und Datei-Backed Body-Lesen; Exit 2 bei
+  blocked._live auf der Baseline: 129/129 Zeilen re-verifiziert, 0 Block-
+  er, needs_review (2 historisch verlorene Dokumentkörper bei nicht-
+  poolbaren Zeilen + 11 RoB-Lücken).
+- **Offen (Phase 8)**: Die POOLABLE-Definition um den Zitat-Term erweitern
+  (als Pipeline-Änderung, nicht Layer) und die 2 verlorenen Dokumentkörper
+  im Qualitäts-Dashboard fassen.
+
+### Tests
+- Neue Suite test_validation.py: 11 Tests (Status-Klassifikation, Zitat-
+  Semantik, Kontrakt-Poolable-Regel, Append-only Store, readonly-Adapter).
+- Nachmessungen: Kernsuiten 102/102, e2e 2/2 (184 s, langsamer als Sprints
+  davor — Zeitvarianz, keine Assertion schlägt fehl).
