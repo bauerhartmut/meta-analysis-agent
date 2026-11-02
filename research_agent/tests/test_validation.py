@@ -46,6 +46,7 @@ def _seed_source(db, source_id="src1", text=DOC):
     db._insert("source_texts", {
         "id": text_id, "source_id": source_id, "kind": "fulltext",
         "chars": 4000, "text": text, "created_at": "2026-01-01",
+        "recovery_status": Database.RECOVERY_FULLTEXT,
     })
     return source_id, text_id
 
@@ -165,6 +166,37 @@ class ValidationStatusTest(unittest.TestCase):
         self.assertEqual(result["checks"]["disputed"]["disputed"], 1)
         self.assertEqual(result["checks"]["disputed"]["rejected"], 1)
         self.assertEqual(result["status"], STATUS_NEEDS_REVIEW)
+
+
+class RecoveryCoverageTest(unittest.TestCase):
+    """Lost bodies warn; the gate never invents a missing-document story."""
+
+    def setUp(self):
+        self.tmp = tempfile.mkdtemp(prefix="validation_rec_")
+        self.addCleanup(shutil.rmtree, self.tmp, ignore_errors=True)
+        _path, self.db = _mk_db(self.tmp)
+
+    def test_lost_body_warns(self):
+        _seed_source(self.db)
+        _seed_spanned_effect(self.db, "src1", DOC, "txt_src1")
+        # A row that remembers a document but lost it: chars counted,
+        # no file and no in-row characters.
+        self.db._insert("source_texts", {
+            "id": "lost1", "source_id": "src1", "kind": "fulltext",
+            "chars": 4000, "path": "", "text": "",
+            "created_at": "2026-01-01"})
+        result = run_validation(self.db)
+        self.assertEqual(result["status"], STATUS_NEEDS_REVIEW)
+        self.assertTrue(any(w["rule"] == "document_body_lost"
+                            for w in result["warnings"]))
+        checks = result["checks"]["recovery"]
+        self.assertEqual(checks["lost_bodies"], 1)
+
+    def test_recovery_counts_render(self):
+        _seed_source(self.db)
+        result = run_validation(self.db)
+        recovery = result["checks"]["recovery"]
+        self.assertEqual(recovery.get("fulltext_available"), 1)
 
 
 class GateClassificationTest(unittest.TestCase):

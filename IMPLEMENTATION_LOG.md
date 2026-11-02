@@ -431,3 +431,22 @@ pooling/2-Integration; die Zahlen hier über das vorlaehn-Log.
 - Neue Suite test_fulltext_recovery.py: 6 Tests (Regel, Schreibzeit,
   Zählung, Leer-Text; Legacy-Backfill-Name identisch + idempotent).
 - Suits: 190 Bestehende grün (Work-Queue + Components).
+
+## Sprint 11 (02.11.2026): Software-Lücken 3 - Abdeckungs-Dashboard im Gate
+
+### Neu umgesetzt
+- Validation-Layer um `_recovery_coverage` erweitert: Volltext-Recovery-
+  Zählung (217/73/3 auf der Baseline) + `count_lost_text_bodies()` (Rows
+  mit chars>0, ohne Datei und ohne Textfeld - der Body ist weg).
+- `document_body_lost` als Warnung (nie Blocker: eine erinnerte, aber
+  verlorene Zeile kann keine Zahl schmieden - sie ist nicht poolbar).
+- Report-Gate-Sektion rendert jetzt auch die Recovery-Zeile
+  (fulltext_available / abstract_only / snippet_only / verlorene Körper).
+- Zählregel einheitlich SQL-CASE (identische 3000-char-Schwelle), legacy-
+  fähig auch vor Migration; readonly-Adapter bringt alle Methoden mit.
+- Live (readonly CLI, Baseline): recovery 217/73/3, lost_bodies = 4,
+  needs_review (2 unverifiable-but-not-poolable + 11 RoB-Lücken).
+
+### Tests
+- test_validation +13 (Recovery-Zählung, lost-body-Warnung); Suits
+  40/40 inkl. Report.

@@ -195,7 +195,32 @@ def _rob_coverage(db) -> Tuple[List[dict], Dict[str, int]]:
     return warnings, counts
 
 
+def _recovery_coverage(db) -> Tuple[List[dict], Dict[str, int]]:
+    """Corpus health without judgement: recovery statuses + lost bodies."""
+    warnings: List[dict] = []
+    counts: Dict[str, int] = {"lost_bodies": 0}
+    try:
+        recovery = db.get_fulltext_recovery_counts() or {}
+        for key, value in recovery.items():
+            counts[str(key)] = int(value)
+    except Exception:
+        pass  # old read-only adapters may not carry the counting methods
+    try:
+        lost = int(db.count_lost_text_bodies() or 0)
+        counts["lost_bodies"] = lost
+    except Exception:
+        lost = 0
+    if lost:
+        warnings.append({
+            "rule": "document_body_lost", "ids": [],
+            "detail": f"{lost} Dokumenttext(e) sind nur als Zeile "
+                      "erinnerbar - der Body (Datei UND Textfeld) fehlt.",
+        })
+    return warnings, counts
+
+
 def release_gate_status(blockers: List[dict], warnings: List[dict]) -> str:
+
     if blockers:
         return STATUS_BLOCKED
     if warnings:
@@ -217,6 +242,7 @@ def run_validation(db) -> dict:
         })
     disputed_counts, disputed_warnings = _disputed_effect_counts(db)
     rob_warnings, rob_counts = _rob_coverage(db)
+    recovery_warnings, recovery_counts = _recovery_coverage(db)
     if rob_counts.get("without_rob"):
         rob_warnings.append({
             "rule": "effects_without_rob",
@@ -225,12 +251,13 @@ def run_validation(db) -> dict:
                       "Effektzeilen haben noch keine maschinelle "
                       "Risk-of-Bias-Lektüre.",
         })
-    warnings = list(quote_warnings) + list(disputed_warnings) + list(
-        rob_warnings)
+    warnings = (list(quote_warnings) + list(disputed_warnings)
+                + list(rob_warnings) + list(recovery_warnings))
     checks = {
         "effect_quotes": quote_counts,
         "disputed": disputed_counts,
         "rob_coverage": rob_counts,
+        "recovery": recovery_counts,
     }
     return {
         "version": VERSION,
@@ -313,6 +340,20 @@ class _ReadOnlyAdapter:
             "SELECT 1 FROM study_effects e WHERE e.source_id = s.id) "
             "AND NOT EXISTS (SELECT 1 FROM risk_of_bias r "
             "WHERE r.source_id = s.id)")
+
+    def get_fulltext_recovery_counts(self) -> Dict[str, int]:
+        rows = self._fetch(
+            "SELECT CASE WHEN kind = 'abstract' THEN 'abstract_only' "
+            "ELSE CASE WHEN chars >= 3000 THEN 'fulltext_available' "
+            "ELSE 'snippet_only' END END AS status, COUNT(*) AS n "
+            "FROM source_texts GROUP BY status")
+        return {str(r["status"]): int(r["n"]) for r in rows}
+
+    def count_lost_text_bodies(self) -> int:
+        rows = self._fetch(
+            "SELECT COUNT(*) AS n FROM source_texts "
+            "WHERE chars > 0 AND path = '' AND text = ''")
+        return int(rows[0]["n"]) if rows else 0
 
 
 def main(argv=None) -> int:
