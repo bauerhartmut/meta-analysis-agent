@@ -31,7 +31,7 @@ def _effect(est, se, label="Study", **extra):
 class TestScales(unittest.TestCase):
     def test_correlation_becomes_fisher_z(self):
         est, se, scale, reason = standardize(
-            {"effect_type": "r", "effect": 0.5, "n": 100}
+            {"effect_type": "r", "effect": 0.5, "n": 100, "quote_start": 0}
         )
         self.assertEqual(scale, SCALE_Z)
         self.assertEqual(reason, "")
@@ -39,12 +39,12 @@ class TestScales(unittest.TestCase):
         self.assertAlmostEqual(se, 1.0 / math.sqrt(97), places=10)
 
     def test_r_without_n_cannot_be_standardised(self):
-        _, _, _, reason = standardize({"effect_type": "r", "effect": 0.3})
+        _, _, _, reason = standardize({"effect_type": "r", "effect": 0.3, "quote_start": 0})
         self.assertIn("n > 3", reason)
 
     def test_ratio_is_pooled_on_the_log_scale(self):
         est, se, scale, reason = standardize({
-            "effect_type": "or", "effect": 2.0,
+            "effect_type": "or", "effect": 2.0, "quote_start": 0,
             "ci_low": 1.2, "ci_high": 3.3, "ci_level": 0.95,
         })
         self.assertEqual(scale, SCALE_LOG)
@@ -55,20 +55,20 @@ class TestScales(unittest.TestCase):
 
     def test_heritability_stays_its_own_scale(self):
         _, _, scale, reason = standardize(
-            {"effect_type": "heritability", "effect": 0.8, "se": 0.05}
+            {"effect_type": "heritability", "effect": 0.8, "se": 0.05, "quote_start": 0}
         )
         self.assertEqual(reason, "")
         self.assertIn("heritability", scale)
 
     def test_missing_precision_is_refused_with_a_reason(self):
-        _, _, _, reason = standardize({"effect_type": "smd", "effect": 0.4})
+        _, _, _, reason = standardize({"effect_type": "smd", "effect": 0.4, "quote_start": 0})
         self.assertIn("Standardfehler", reason)
 
     def test_mixed_scales_are_not_pooled_together(self):
         rows = [
-            {"effect_type": "smd", "effect": 0.4, "se": 0.1, "outcome": "cognition"},
+            {"effect_type": "smd", "effect": 0.4, "se": 0.1, "outcome": "cognition", "quote_start": 0},
             {"effect_type": "r", "effect": 0.3, "se": 0.05, "outcome": "cognition",
-             "n": 500},
+             "n": 500, "quote_start": 0},
         ]
         analysis = build_analysis(rows)
         self.assertEqual(len(analysis["groups"]), 2,
@@ -168,8 +168,8 @@ class TestLocks(unittest.TestCase):
 
     def test_rows_without_precision_are_excluded_and_counted(self):
         rows = [
-            {"effect_type": "smd", "effect": 0.4, "se": 0.1, "outcome": "cog"},
-            {"effect_type": "smd", "effect": 0.9, "outcome": "cog"},  # no precision
+            {"effect_type": "smd", "effect": 0.4, "se": 0.1, "outcome": "cog", "quote_start": 0},
+            {"effect_type": "smd", "effect": 0.9, "outcome": "cog", "quote_start": 0},  # no precision
         ]
         analysis = build_analysis(rows)
         group = analysis["groups"]["cog [hedges_g]"]
@@ -181,7 +181,7 @@ class TestLocks(unittest.TestCase):
         # Two readings of the same sentence that disagree are not a number:
         # averaging them would hide the disagreement the double pass found.
         rows = [
-            {"effect_type": "smd", "effect": 0.4, "se": 0.1, "outcome": "cog"},
+            {"effect_type": "smd", "effect": 0.4, "se": 0.1, "outcome": "cog", "quote_start": 0},
             {"effect_type": "smd", "effect": 0.9, "se": 0.1, "outcome": "cog",
              "disputed": 1},
         ]
@@ -192,7 +192,7 @@ class TestLocks(unittest.TestCase):
 
     def test_rejected_rows_are_excluded_with_their_reason(self):
         rows = [
-            {"effect_type": "smd", "effect": 0.4, "se": 0.1, "outcome": "cog"},
+            {"effect_type": "smd", "effect": 0.4, "se": 0.1, "outcome": "cog", "quote_start": 0},
             {"effect_type": "smd", "effect": 1.9, "se": 0.1, "outcome": "cog",
              "rejection_reason": "KI enthält den Punktschätzer nicht"},
         ]
@@ -206,9 +206,9 @@ class TestLocks(unittest.TestCase):
         # interval without adding information.
         rows = [
             {"effect_type": "smd", "effect": 0.4, "se": 0.2, "outcome": "cog",
-             "doi": "10.1/one", "label": "Paper (A)"},
+             "doi": "10.1/one", "label": "Paper (A)", "quote_start": 0},
             {"effect_type": "smd", "effect": 0.42, "se": 0.1, "outcome": "cog",
-             "doi": "10.1/one", "label": "Paper (B)"},
+             "doi": "10.1/one", "label": "Paper (B)", "quote_start": 0},
         ]
         analysis = build_analysis(rows)
         group = analysis["groups"]["cog [hedges_g]"]
@@ -220,8 +220,8 @@ class TestLocks(unittest.TestCase):
 
     def test_rows_without_a_doi_are_not_merged_by_guesswork(self):
         rows = [
-            {"effect_type": "smd", "effect": 0.4, "se": 0.1, "outcome": "cog"},
-            {"effect_type": "smd", "effect": 0.42, "se": 0.1, "outcome": "cog"},
+            {"effect_type": "smd", "effect": 0.4, "se": 0.1, "outcome": "cog", "quote_start": 0},
+            {"effect_type": "smd", "effect": 0.42, "se": 0.1, "outcome": "cog", "quote_start": 0},
         ]
         analysis = build_analysis(rows)
         self.assertEqual(analysis["groups"]["cog [hedges_g]"]["k"], 2)
@@ -234,6 +234,31 @@ class TestLocks(unittest.TestCase):
         self.assertEqual(first["pooled"], second["pooled"])
         self.assertEqual(first["ci_low"], second["ci_low"])
         self.assertEqual(first["tau2"], second["tau2"])
+
+
+class QuoteContractTest(unittest.TestCase):
+    """Phase 8: a number lives only as long as its verbatim reading does.
+
+    The extractor stores quote_start = -1 for quotes that never verified;
+    such a row keeps its data but is never pooled (one reason, visible in
+    the report), and the POOLABLE filter agrees.
+    """
+
+    def test_unverified_span_is_a_pooling_rejection(self):
+        est, se, scale, reason = standardize(_row(quote_start=-1))
+        self.assertIsNone(est)
+        self.assertIsNone(se)
+        self.assertEqual(reason, "Kein verifizierter Beleg (Zitat-Span fehlt)")
+
+    def test_span_zero_is_a_valid_start(self):
+        est, se, scale, reason = standardize(_row(quote_start=0))
+        self.assertEqual(est, -0.4)
+        self.assertEqual(reason, "")
+
+    def test_poolable_filter_includes_the_quote_term(self):
+        from research_agent.database import Database
+        db = Database(":memory:")
+        self.assertIn("quote_start >= 0", db.POOLABLE)
 
 
 class TestSubgroupsAndBias(unittest.TestCase):
@@ -307,6 +332,9 @@ def _row(**overrides):
         "outcome": "depressive symptoms", "effect_type": "smd",
         "effect": -0.4, "se": 0.1, "disputed": 0, "rejection_reason": "",
         "design": "randomized controlled trial",
+        # Phase 8 contract: the fixture stores a verified span, exactly as
+        # the extractor does for every poolable row.
+        "quote_start": 0,
     }
     row.update(overrides)
     return row

@@ -326,3 +326,31 @@ pooling/2-Integration; die Zahlen hier über das vorlaehn-Log.
   Semantik, Kontrakt-Poolable-Regel, Append-only Store, readonly-Adapter).
 - Nachmessungen: Kernsuiten 102/102, e2e 2/2 (184 s, langsamer als Sprints
   davor — Zeitvarianz, keine Assertion schlägt fehl).
+
+## Sprint 7 (02.11.2026): Phase 8 (Teil 1) - POOLABLE-Kontraktfix
+
+### Bestands-audit
+- Review-Queue ist abgedeckt: work_queue (7 Kinds inkl. effect_extraction/
+  bias_assessment), reviewer_roles pipeline (targets -> segment -> reports)
+  ist im Orchestrator integriert; die Phase-8-Rest-Lücke war die
+  POOLABLE-Definition ohne Zitat-Terms (im Sprint 6 als Kontraktverstoß
+  benannt, jetzt geschlossen).
+
+### Neu umgesetzt
+- **standardize** (meta/pooling): rows mit quote_start < 0 werden JEHTZT
+  mit dem Grund "Kein verifizierter Beleg (Zitat-Span fehlt)" aus dem Pool
+  verweigert (sichtbar in "Warum Zeilen nicht gepoolt wurden"), nicht mehr
+  stillschweigend mitteleitbar. quote_start = 0 ist ein GÜLTIGER Start-
+  (kein Falsy-Trap: `0 or -1` wäre falsch; explizite None/-1-Behandlung).
+- **Database.POOLABLE** (eine Definition für work_queue, Report, pooling):
+  um `quote_start >= 0` erweitert.
+- **validation.py** bleibt als Component-Wächter (defence in depth): die
+  Phase-7-Prüfung beweist die geschlossene Kontraktlage weiterhin.
+
+### Verifikation
+- Neue QuoteContractTest-Gruppe (3 Tests): unverified-span-rejection,
+  span-0-Start gültig, POOLABLE-Filterwith quote_term.
+- test_meta_pooling 43/43; Kernsuits 118/118; e2e 2/2 (42.1 s).
+- **stat_repro Identität**: pools nach dem Fix zeilenweise identisch mit
+  der Referenz (ts-normalisiert) — der Kontraktfix verändert den Bestand
+  nicht (Live-Befund: unquoted_poolable = 0, 129 Zeilen).

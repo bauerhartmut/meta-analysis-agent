@@ -71,8 +71,9 @@ def _verify_effect_quotes(
     surfaces here, not inside a pooled claim.
 
     The contract check rides on top: a row WITHOUT a verbatim span must
-    never be poolable (the POOLABLE filter has no quote term yet - Phase 7
-    names that violation instead of silently scoring past it).
+    never be poolable. Phase 8 added the quote term to POOLABLE and to
+    standardize; this layer now guards the closed contract (defence in
+    depth - a rollback would resurface here as a blocker).
     """
     try:
         from .extraction import locate_quote  # the same verifier
