@@ -247,3 +247,38 @@ Die Zeile "e2e 2/2 mueveld (74 s) nach dem Sprint" war **vorgelagert** - der
 Lauf wurde nüe eigentlich nachtraeglich durchgejàt und besteggigt:
 e2e 2/2 (75.5 s), report+meta_report 47/47 (54.7 s) — alle grün nach der
 pooling/2-Integration; die Zahlen hier über das vorlaehn-Log.
+
+## Sprint 5 (02.11.2026): Phase 5 - designspezifische RoB-/GRADE-Maschine (Auftrag §8)
+
+### Bestands-audit (keine Duplikate)
+- BiasAssessor existierte (Doppelpass, wörtliche Zitatpflicht, disputed-
+  Markierung statt Mittelung) und grade_group war deterministisch
+  (Startlevel nach Design,Transparente Abwertungsregeln, bekannte Grenzen).
+
+### Neu umgesetzt
+- **Instrument-Routing** `instrument_for_design()`: RCT → RoB 2,
+  Review/„pooled/umbrella" → AMSTAR 2, alles andere → ROBINS-I. Das
+  Designfeld entscheidet (maschinell), nicht das Modell.
+- **ROBINS-I-Vokabular** (low/moderate/serious/critical + unclear): die
+  Domäne `classification_of_interventions` ergänzt (7. Domäne); Gesamtbild
+  collapse deterministisch auf die Berichtsskala (critical/serious → high,
+  moderate → some_concerns).
+- **AMSTAR 2** für Review-Quellen (kommen nie in einen Pool): 9 Items mit
+  kritisch-/nicht-kritisch-Markierung; `overall_amstar2()` als feste Regel
+  (kritischer Fehlschlag → „critically low", 1-2 nicht-kritische → moderate,
+  >2 → low, ohne Schwäche → high). Wörtliches Zitat ist auch hier Pflicht:
+  ohne verifizierten Beleg fällt ein yes/no automatisch auf no_information.
+- **DB/spaltenadditiv**: `risk_of_bias.instrument` (DDL + idempotentes ALTER
+  + INSERT), Speicherplatz im Record.
+- **Bericht**: AMSTAR-2-Audits werden getrennt von der Studien-RoB-Tabelle
+  gezählt (eigene Labels) und fließen nie in die GRADE-Maschine.
+- Offen: RoB 2-Signalling-Baum als eigenständige Algorithmus-Abhandlung
+  (aktuell vereinfachte Domänenaggregation, dokumentiert); GRADE-
+  Upgrade-Schritte (large effort) sind aktuell nicht aktiviert.
+
+### Tests
+- Neue Suite test_meta_instruments.py: 12 Tests (Instrument-Mapping,
+  ROBINS-I-Vokabular-Collapse, AMSTAR-2-Regeln, DB-Roundtrip With
+  instrument, Report-Zählung getrennt).
+- Nachmessungen: Kernsuiten 59/59, Report-Suiten 47/47 (56,4 s), e2e 2/2
+  (59,97 s) — alle grün. py_compile: risk_of_bias/database/report.
