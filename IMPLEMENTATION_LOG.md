@@ -383,3 +383,34 @@ pooling/2-Integration; die Zahlen hier über das vorlaehn-Log.
 - Live-Smoke gegen die echte API: 3 NCT-Records mit Status/n zurück
   (Rekruting/Unknown/Completed dokumentiert wie gefunden).
 - test_components 128/128, e2e 2/2 (29.8 s).
+
+## Sprint 9 (02.11.2026): Software-Lücken 1 - RoB 2-Signalling-Baum
+
+### Neu umgesetzt (meta/rob2_signalling.py)
+- **Offizielle Signalfragen (22 Stück)** aus dem verbatim-Transkript des
+  RoB-2-Cribsheets (22.08.2019; riskofbias.info; Cochrane Handbook Ch. 8):
+  3 (Randomisation) + 7 (Deviations, assignment-variante) + 4 (Missing
+  outcome data) + 5 (Measurement) + 3 (Selection of the reported result).
+- **Antwort-Vokabular mit Kollapsregeln** (Handbook 8.2.3): y/py gleich,
+  n/pn gleich, ni domeinenspezifisch (nicht verwaschen). Fehlende
+  Antworten = NI - die Maschine erfindet keine Klarheit.
+- **Domänen-Algorithmen als deterministische Regeln** (die zwei Arme, die
+  die Literatur als diagrammabhängig flaggt - D3 "3.2=N & 3.3=N" und D4
+  "4.1=Y/4.2=Y" - sind konservativ gepinnt und im Code als RECONSTRUCTED
+  markiert: Unklarheit loost niemals Richtung 'low'.
+- **Overall-Regel verbatim** aus der Gesamttabelle (Low wenn alle Domänen
+  low; High wenn eine Domäne high ODER >= 3 Domänen mit concerns - die
+  deterministische Kern-Formel der "substantially lowers confidence"
+  Klausel; das weichere Gerrenne bleibt der Review-Layer).
+- `rob2_pass_summary()` liefert maschinenlesbare Domänenurteile + overall.
+
+### Ehrlicher Verifikationsrest
+- Die offiziellen Algorithmus-Diagramme waren nur als PDF/Excel zugänglich
+  (Leseblockade); die zwei RECONSTRUCTED-Arme sind als solche im Code
+  gepinnt und DURCH die Tests gesichert - ein Diagrammcheck kann sie
+  korrigieren, ohne die Treutregel zu verletzen (niemals Richtung low).
+
+### Tests
+- Neue Suite test_rob2_signalling.py: 31 Tests (Alle Domänenarme, Kollaps
+  y/py/n/pn/ni, Overall-Kern, 22-Fragen-Registry, NI-Semantik).
+- Komponentr-Suiten unverändert grün (38 Fälle läuft).
