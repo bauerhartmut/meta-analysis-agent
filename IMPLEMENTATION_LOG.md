@@ -414,3 +414,20 @@ pooling/2-Integration; die Zahlen hier über das vorlaehn-Log.
 - Neue Suite test_rob2_signalling.py: 31 Tests (Alle Domänenarme, Kollaps
   y/py/n/pn/ni, Overall-Kern, 22-Fragen-Registry, NI-Semantik).
 - Komponentr-Suiten unverändert grün (38 Fälle läuft).
+
+## Sprint 10 (02.11.2026): Software-Lücken 2 - Volltext-Recovery-Status (§4.1)
+
+### Neu umgesetzt
+- `recovery_status`-Spalte (DDL additiv + ALTER + idempotenter Backfill,
+  UPDATE nur für leere Status, läuft bei jedem Open): Schreibzeit-Regel
+  `classify_recovery(kind, chars)` - abstract → abstract_only, sonst
+  chars ≥ 3000 → fulltext_available, sonst snippet_only (identische
+  3000-char-Grenze wie die Coverage-Maschine; kein Proxy mehr).
+- `get_fulltext_recovery_counts()`: Grüzzählstatus je Status.
+- Live-Verifikation auf einer Kopie der Baseline-DB (original unberührt):
+  293 Textzeilen → 217 Volltexte, 73 abstract_only, 3 snippet_only.
+
+### Tests
+- Neue Suite test_fulltext_recovery.py: 6 Tests (Regel, Schreibzeit,
+  Zählung, Leer-Text; Legacy-Backfill-Name identisch + idempotent).
+- Suits: 190 Bestehende grün (Work-Queue + Components).
