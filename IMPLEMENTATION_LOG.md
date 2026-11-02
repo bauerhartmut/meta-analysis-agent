@@ -354,3 +354,32 @@ pooling/2-Integration; die Zahlen hier über das vorlaehn-Log.
 - **stat_repro Identität**: pools nach dem Fix zeilenweise identisch mit
   der Referenz (ts-normalisiert) — der Kontraktfix verändert den Bestand
   nicht (Live-Befund: unquoted_poolable = 0, 129 Zeilen).
+
+## Sprint 8 (02.11.2026): Phase 6 - Citation-Chaining (Audit) + Studienregister
+
+### Bestands-audit (keine Duplikate)
+- **Backward/Forward-Chaining existiert vollständig**: citation_neighbors
+  (openalex -> semantic_scholar -> crossref, beide Richtungen: References +
+  cited-by, Status-Contract ok/unsupported/rate_limited/error), Queue-Kind
+  citation + Prioritätsregeln, Orchestrator-_work_item_citation mit
+  process_search_result-Route. Kein Bauneustart.
+- **Studienregister fehlten komplett** - Neu umgesetzt:
+
+### Neu umgesetzt
+- `ClinicalTrialsRegisterProvider` (ClinicalTrials.gov API v2, ohne Key):
+  query.term-Suche, NCT-Id/Titel/Status/Enrollment/Kondition/BriefSummary
+  parsen; Records werden ganz normale SearchResult (source_type
+  "clinicaltrials", URL https://clinicaltrials.gov/study/<NCT>);
+  negativ-Regeln: ohne NCT-Id oder Titel wird der Record übersprungen
+  (kein wertloses Inventar), ohne Enrollment KEIN erfundener n-Wert.
+- **Registrierung** im SearchManager-Defaults (nach Crossref); die
+  etablierte Reihenfolge bleibt (arxiv führt), kein flaschenhals.
+- Citation chaining skips NCT-only entries (kein DOI) — same rule as
+  before, kein Verhalten geändert.
+
+### Tests + Live
+- Neue Suite test_studies_registry.py: 5 Tests (Parsing-Regeln, negative
+  Fälle, Fehlerstatus, Registrierung-Contract).
+- Live-Smoke gegen die echte API: 3 NCT-Records mit Status/n zurück
+  (Rekruting/Unknown/Completed dokumentiert wie gefunden).
+- test_components 128/128, e2e 2/2 (29.8 s).
