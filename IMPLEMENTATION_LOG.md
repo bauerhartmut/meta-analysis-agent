@@ -493,3 +493,40 @@ pooling/2-Integration; die Zahlen hier über das vorlaehn-Log.
 - Suits: pooling 48/48 (5 neue RVE-Tests), report+pooling 69/69, e2e 2/2 (27,9 s).
 - Live (readonly, Baseline): 74 Zeilen, 13 Gruppen analysiert, 3 mit RVE
   (Beispiel: RVE-Punkt −0.489, M = 3 vs. kollabierter RE −0.586).
+
+## Sprint 14 (03.11.2026): Volltestsuite-Audit + Fixture-Nachzug
+
+### Neu umgesetzt
+- Voelliger Test-Audit ueber ALLE 38 Suiten (erste vollstaendige Lauf
+  inkl. der bislang nie gesamt gelaufenen Plattform-Platten).
+- **Befund:** 30 Tests in 4 aelteren Suiten (report, targets,
+  quality_gates, screening) schlug schon vor Sprint 13 fehl: ihre
+  Fixtures erzeugen Effektzeilen ohne quote_start; seit der
+  POOLABLE-Belegpflicht (Sprint 7, 6071fa6) werden die Zeilen zu Recht
+  nicht gepoolt - die Frames waren nie nachgezogen worden. Sprint 13
+  war unbelastet (Worktree-Kontrolle von dd369b5 identische Faelle).
+- **Fix:** die 4 Fixture-Helfer tragen jetzt verbatim-Belege
+  (quote/quote_start/quote_end); Assertions bleiben unveraendert, keine
+  Test-Abschwaechung. Der Beleg-fehlt-Fall selbst bleibt in der eigenen
+  Pooling-Suite getestet (dort unangetastet).
+- Commit 1baae37.
+- **Live-Report-Demo** aus einer Kopie der Baseline (Original unberuehrt,
+  Kopie danach wieder entfernt): Report
+  data/reports/20261103-1128-Exercise-and-depressive-symptoms-in-adul.md
+  rendert Gate-Sektion mit Beleg-Kette 129/129, Recovery 217/73/3 +
+  4 verlorene Koerper, needs_review sowie 3 RVE-Zeilen (M und df)
+  neben den Random-Effects-Intervallen (Beispiel hedges_g: RE
+  -0.586 [-1.319; 0.147] vs. RVE -0.489 [-1.264; 0.286], M = 3).
+
+### Tests (Endstand Vollaudit, alles gruen)
+- Meta-Kern 186 + 4 Nachzugsuiten 77 + Plattform 293 + Rest 302
+  = 858 + e2e 2/2 = 860 Testaeufe, 0 Fehlschlaege (e2e 29,7 s).
+
+### Offen (unveraendert, alles Material-/Review-abhaengig)
+1. 20-30 publizierte Referenz-Reviews + Gold-Standard-Annotationen
+   (Besorgung, kein Software-Rest).
+2. pypdf-Adapter + Vision-Fallback (PDF-Original-Page-Bilder liegen
+   nicht lokal; Adapter-Schnittstellen sind im Code geformt).
+3. RoB 2 attempt-adherence-Varianten: Cribsheet-Original nicht im
+   Workspace - nichts erfinden.
+4. Golden-Set-Ausbau (>22 Kandidaten) nur mit neuem Volltextmaterial.
