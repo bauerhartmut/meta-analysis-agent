@@ -188,11 +188,31 @@ class PdfLayoutAdapterTest(unittest.TestCase):
                          [("-22.3", "6.2"), ("-14.1", "5.0")])
         self.assertEqual([(c.ci_low, c.ci_high) for c in cells],
                          [("-34.4", "-10.2"), ("-23.9", "-4.3")])
-        # In_table und verbatim-Zeile: die Zelle selbes soát exakten
+        # In_table und verbatim-Zeile: die Zelle trägt den exakten
         # Layout-Text, aus dem sie gelesen wurde.
         self.assertTrue(all(c.in_table for c in cells))
         self.assertIn("-22.3", cells[0].line)
         self.assertIn("95% CI -34.4 to -10.2", cells[0].line)
+
+    def test_cells_carry_their_column_context(self):
+        """Auftrag v2 §2.1: welche Spalte gehört zu welcher Zahl - die
+        Zuordnung folgt der x-Position am Spaltenkopf (pypdf-layout)."""
+        blocks = pdf_page_blocks(str(self.fixture))
+        mapping = blocks[1].effect_cells[0].columns
+        self.assertEqual(mapping.get("Outcome"), "Simple RT")
+        self.assertEqual(mapping.get("Direction"), "lower is better")
+        # Der Effektwert erscheint als Wert einer zugeordneten Spalte.
+        self.assertTrue(
+            any("-22.3" in str(value) for value in mapping.values()),
+            f"kein Spaltenwert -22.3: {mapping}")
+        # Der CI-Bereich liegt unter der '95% CI'-Spalte.
+        self.assertTrue(
+            any("-34.4" in str(value) for value in mapping.values()),
+            f"kein CI-Wert zugeordnet: {mapping}")
+        # Tabelle 1 der Fixize trägt nur Mittelwerte ohne CI-Zitatformat:
+        # dort entstehen bewusst keine Effektzellen (der Header-Spalten-
+        # kontext allein erzeugt keine - nichts wird erschlossen).
+        self.assertEqual([c.columns for c in blocks[0].effect_cells], [])
 
     def test_layout_header_lines_count_as_table_rows(self):
         self.assertTrue(_layout_header(

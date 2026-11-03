@@ -680,3 +680,27 @@ table 8+6=14/14 (4 neue Gate-Tests verifiable_quotes), fulltext 38/38
 - Header-Spaltenkontext im Layout-Scanner (Zelle -> Spaltenbeschriftung).
 - §6.3 Hypothesenbremse-Aufnahmeprüfung.
 - Run-Resume (§10); §9-Zielwerte sobald Goldstandard da.
+
+## Sprint 24 (03.11.2026): Header-Spaltenkontext im Layout-Scanner (Auftrag v2 §2.1)
+
+### Neu umgesetzt
+- _split_cols: Zellintervalle einer Layout-Zeile, getrennt an Spalten-
+  abständen (>= 2 Leerzeichen) - 'Mean RT' bleibt eine Zelle.
+- _map_columns: Datenzellen werden über die x-Position dem Spaltenkopf
+  zugeordnet (pypdf-layout hält die Positionen stabil).
+- _layout_page_blocks: Spaltenköpfe liefern die x-Achse; jede neue
+  Effektzelle trägt columns = {Spaltenname: Zellwert} verbatim.
+- _layout_header verschärft: Datenzeilen wurden als Köpfe klassifizierbar
+  (zu großzügige Ziffernrelation) und im neuen Loop übersprungen - echte
+  Köpfe tragen <= 4 Ziffern ('n', '95% CI'), Datenzeilen viele.
+
+### Tests
+table 19/19 (neu: test_cells_carry_their_column_context, an der Fixize
+verhandverifiziert: Outcome->Simple RT, Direction->lower is better,
+Effekt-/CI-Werte unter ihren Spalten), golden 8/8, fulltext 39/39.
+
+### Offen (Sprint 25+)
+- §6.3 Hypothesenbremse-Aufnahmeprüfung (Volumensbremse existiert, Wert-
+  Kriterien fehlen).
+- Run-Resume (§10); Meta-Regression mit k-Gate (§5.2); Egger-Filter k>=10 (§5.3).
+- §9-Zielwerte sobald Goldstandard-Material da.
