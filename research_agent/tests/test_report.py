@@ -97,6 +97,61 @@ class TestLaufzustand(unittest.TestCase):
         self.assertIn("Teilweise abgeschlossen", text)
 
 
+class TestSearchStrategySection(unittest.TestCase):
+    """Auftrag v2 §3.3: die Suche lasst sich dokumentieren, nicht beschreiben.
+
+    Die Sektion zählt je Suchquelle Anfragen/Treffer/Duplikate aus der
+    Suchtelemetrie und benennt Ausfälle als UNVOLLSTÄNDIG - ohne Ausfall-
+    statistik wird keine Vollständigkeit behauptet."""
+
+    def setUp(self):
+        self.tmp = tempfile.mkdtemp(prefix="search_doc_")
+        self.addCleanup(shutil.rmtree, self.tmp, ignore_errors=True)
+        self.db = Database(":memory:")
+
+    def _report(self, provider_health=None, topic="caffeine"):
+        path = build_report(self.db, topic, reason="budget reached",
+                            out_dir=self.tmp, provider_health=provider_health)
+        return Path(path).read_text(encoding="utf-8")
+
+    def test_stats_and_duplicates_are_documented_per_provider(self):
+        self.db.record_query_stat("caffeine", "caffeine reaction time",
+                                  provider="pubmed", results=10,
+                                  duplicates=2, cycle=1)
+        self.db.record_query_stat("caffeine", "caffeine reaction time",
+                                  provider="pubmed", results=10,
+                                  duplicates=1, cycle=2)
+        self.db.record_query_kept("caffeine", "caffeine reaction time",
+                                  provider="pubmed", kept=4, cycle=2)
+        self.db.record_query_stat("caffeine", "caffeine withdrawal design",
+                                  provider="openalex", results=5,
+                                  cycle=1)
+        text = self._report()
+
+        self.assertIn("## Suchstrategie und Abdeckung", text)
+        self.assertIn("| pubmed | 2 | 1 | 20 | 4 | 3 |", text)
+        self.assertIn("| openalex | 1 | 1 | 5 | 0 | 0 |", text)
+        self.assertIn("**Duplikate (DOI-/Titel-Merge):** 3 entfernt", text)
+        # Reihenfolge: die Sektion liegt zwischen Methode und Ergebnis.
+        self.assertLess(text.index("## Suchstrategie und Abdeckung"),
+                        text.index("## Ergebnis"))
+
+    def test_failed_providers_name_the_gap(self):
+        self.db.record_query_stat("caffeine", "q1", provider="pubmed",
+                                  results=8, cycle=1)
+        text = self._report(provider_health={
+            "semantic_scholar": {"failures": 12, "skipped": 30, "blocked": 1},
+        })
+        self.assertIn("UNVOLLSTÄNDIG", text)
+        self.assertIn("semantic_scholar (12x ausgefallen, 30x übersprungen)", text)
+
+    def test_no_health_data_means_no_completeness_claim(self):
+        self.db.record_query_stat("caffeine", "q1", provider="pubmed",
+                                  results=8, cycle=1)
+        text = self._report(provider_health=None)
+        self.assertIn("Suchdecke: unbestimmt", text)
+
+
 class TestManuscriptForm(ReportTest):
     def test_has_the_sections_a_reviewer_reads_in_order(self):
         _source(self.db)

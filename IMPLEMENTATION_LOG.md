@@ -574,3 +574,28 @@ Sektion-fuer-Sektion gegen den Sprints-1..15-Bestand gemappt:
 5. Material-slots: pypdf-Adapter (2.1) sobald die 972eac-PDFs als gold case Annotationsgetragen sind; Goldstandard (§9) mit Nutzer-Material.
 
 Commits: - (Bestandsaufnahme ist Dokumentation).
+
+## Sprint 20 (03.11.2026): Suchdecke dokumentiert + Delta-Korrektur
+
+### Delta-Korrektur zur Sprint-17-Tabelle
+- §3.1a Unpaywall: **bereits im Bestand** - fetch_open_access_text fragt
+  Europe-PMC-Volltext -> arXiv-PDF -> Unpaywall-OA-Locations (DOI) ab;
+  im Log fälschlich als Lücke benannt, korrigiert. Offen bleibt nur
+  §3.1b.
+
+### Neu umgesetzt (§3.1b + §3.3)
+- Report-Sektion "## Suchstrategie und Abdeckung" aus query_stats
+  (je Suchquelle: Suchanfragen, verschiedene Queries, Treffer, über
+  Relevanz-Schwelle, Duplikate entfernt), DOI/Titel-Merge-Zeile,
+  letzte Suchrunde.
+- Ausfälle aus der Health-Schicht werden als "Suchdecke:
+  UNVOLLSTÄNDIG geblieben" benannt (§3.1b: ein fehlgeschlagener Aufruf
+  darf nicht wie Vollständigkeit aussehen); ohne übergebene Ausfall-
+  statistik lautet der Kennsatz "Suchdecke: unbestimmt" - keine
+  Vollständigkeit ohne Beleg.
+- Position: zwischen Methode und Ergebnis; TestManuscriptForm-
+  Reihenfolge bleibt grün.
+
+### Tests
+test_report 28/28 (3 neue Sektions-Tests), meta_report+targets 60/60.
+Commits: siehe git log (Sprint 20).
