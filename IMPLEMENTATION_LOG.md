@@ -450,3 +450,25 @@ pooling/2-Integration; die Zahlen hier über das vorlaehn-Log.
 ### Tests
 - test_validation +13 (Recovery-Zählung, lost-body-Warnung); Suits
   40/40 inkl. Report.
+
+## Sprint 12 (02.11.2026): Software-Lücken 4 - getrennte Reviewer-Prompts (Phase 3)
+
+### Neu umgesetzt
+- Die A/B-Doppel-Pässe bekommen EIGENE System-Framings (_frame_intro,
+  frame-Parameter in _messages): Pass A bleibt Erstleser, Pass B ist ein
+  INDEPENDENT SECOND READER (kein Blick auf Pass A, kein Anker außer dem
+  Text selbst; eigene задачи: vom Anfang arbeiten, strikt nach Textlage).
+- Die harten Regeln (keine Rechnung, Reported-CI-Level, direction/adjusted
+  Pflicht, verbatim quote) bleiben in BEIDEN Frames wortidentisch -
+  nur das Framing trennt die Leser, nie der Regelsatz.
+- Feldlisten: gleiche Satzart, gleiche Feldmenge (Reihenfolge bleibt die
+  bewusste effect_first/precision_first-Trennung).
+- EXTRACTOR_VERSION auf "meta-extraction/3" angehoben (Prompt-Split ist
+  ein Verhaltensänder, identifizierbar pro Zeile).
+
+### Tests
+- Neue Suite PromptSplitTest: 7 Tests (>=8-Zeichen-Framing-Abstand,
+ 独立-second-reader-Guard, Identitäts-Frame, identische Return-Klausel,
+  pass-2-Framing-Travel, Reihenfolge A-then-B, Versionspin).
+- Suits: extraction 27/27, components 128/128, validation 13/13,
+  e2e 2/2 (38,4 s).

@@ -297,3 +297,79 @@ class NormalizerFieldsTest(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class _RecordingLLM:
+    """Queues payloads AND keeps every message list it was sent."""
+
+    def __init__(self, payloads):
+        self.payloads = list(payloads)
+        self.seen = []
+
+    async def chat_json(self, messages, **kwargs):
+        self.seen.append(list(messages))
+        if not self.payloads:
+            return []
+        return self.payloads.pop(0)
+
+
+class PromptSplitTest(unittest.TestCase):
+    """Pass A and pass B are separate readers: same hard rules, own framing."""
+
+    def setUp(self):
+        self.ex = EffectExtractor(_FakeLLM([]), Database(":memory:"))
+
+    def _system(self, frame, order):
+        msgs = self.ex._messages(
+            TEXT, "cognition and health", None,
+            field_order=order, frame=frame)
+        return msgs[0]["content"]
+
+    def test_frames_differ_by_at_least_8_chars(self):
+        a = self._system("first", "effect_first")
+        b = self._system("second", "precision_first")
+        self.assertNotEqual(a, b)
+        self.assertGreaterEqual(abs(len(a) - len(b)), 8)
+
+    def test_second_frame_is_independent_reader(self):
+        b = self._system("second", "precision_first")
+        self.assertIn("INDEPENDENT SECOND READER", b)
+        self.assertNotIn(
+            "You read effect sizes out of research papers for the topic:",
+            b.split("Return a JSON array")[0][:400])
+
+    def test_first_frame_keeps_its_shape(self):
+        a = self._system("first", "effect_first")
+        self.assertIn("You read effect sizes out of research papers", a)
+        self.assertNotIn("INDEPENDENT SECOND READER", a)
+
+    def test_return_contract_identical_both_frames(self):
+        a = self._system("first", "effect_first")
+        b = self._system("second", "precision_first")
+        self.assertIn("Return a JSON array", a)
+        self.assertIn("Return a JSON array", b)
+        # Same field set as a set; only the (intended) order differs.
+        import re
+        fa = re.findall(r"[a-z_]+", a.split("Return a JSON array")[1])
+        fb = re.findall(r"[a-z_]+", b.split("Return a JSON array")[1])
+        self.assertEqual(set(fa), set(fb))
+
+    def test_pass_two_sends_second_frame(self):
+        llm = _RecordingLLM([[]])
+        extractor = EffectExtractor(llm, Database(":memory:"))
+        asyncio.run(extractor._one_pass(
+            "s1", TEXT, "cognition and health", None, pass_number=2))
+        sent = llm.seen[0][0]["content"]
+        self.assertIn("INDEPENDENT SECOND READER", sent)
+
+    def test_double_pass_frames_travel_in_order(self):
+        llm = _RecordingLLM([[], []])
+        extractor = EffectExtractor(llm, Database(":memory:"), double_pass=True)
+        asyncio.run(extractor.extract(
+            "s1", TEXT, topic="cognition and health"))
+        self.assertEqual(len(llm.seen), 2)
+        self.assertNotIn("INDEPENDENT SECOND READER", llm.seen[0][0]["content"])
+        self.assertIn("INDEPENDENT SECOND READER", llm.seen[1][0]["content"])
+
+    def test_version_bumped_for_prompt_split(self):
+        self.assertEqual(EXTRACTOR_VERSION, "meta-extraction/3")
