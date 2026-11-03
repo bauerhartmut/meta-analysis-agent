@@ -18,7 +18,7 @@ from research_agent.config import Config
 from research_agent.database import Database
 from research_agent.meta.extraction import (
     EXTRACTOR_VERSION, EffectExtractor, check_plausibility, compare_extraction_passes,
-    derive_se, infer_effect_type,
+    derive_se, infer_effect_type, resolve_third_attempt,
 )
 
 TEXT = (
@@ -372,4 +372,126 @@ class PromptSplitTest(unittest.TestCase):
         self.assertIn("INDEPENDENT SECOND READER", llm.seen[1][0]["content"])
 
     def test_version_bumped_for_prompt_split(self):
-        self.assertEqual(EXTRACTOR_VERSION, "meta-extraction/3")
+        # meta-extraction/4: der dritte unabhaengige Lesever (Auftrag v2 §2.3)
+        # ist eine Verhaltensaenderung und muss je Zeile identifizierbar sein.
+        self.assertEqual(EXTRACTOR_VERSION, "meta-extraction/4")
+
+    def test_third_frame_is_also_an_independent_reader(self):
+        c = self._system("third", "effect_first")
+        self.assertIn("INDEPENDENT THIRD READER", c)
+        self.assertNotIn("INDEPENDENT SECOND READER", c)
+        # Dieselben harten Regeln wie in beiden anderen Framings:
+        self.assertIn("Never estimate, never compute", c)
+        self.assertIn("Return a JSON array", c)
+
+    def test_frames_all_differ(self):
+        a = self._system("first", "effect_first")
+        b = self._system("second", "precision_first")
+        c = self._system("third", "effect_first")
+        self.assertNotEqual(a, b)
+        self.assertNotEqual(b, c)
+        self.assertNotEqual(a, c)
+
+
+class ThirdAttemptTest(unittest.TestCase):
+    """Auftrag v2 §2.3: bei Diskrepanz ein dritter UNABHAENGIGER Versuch.
+
+    Die Resolution klärt - sie mittelt nie: nur die bestätigte Seite wird
+    poolbar, die nicht reproduzierte bleibt disputed; bleibt der Widerspruch,
+    bleibt alles disputed - ungeklärt, niemals gemittelt."""
+
+    def _pair(self, effect_a=0.42, effect_b=0.52):
+        a = _effect_payload(effect=effect_a)
+        b = _effect_payload(effect=effect_b)
+        return a, b
+
+    def test_third_attempt_confirms_first_reading(self):
+        a, b = self._pair()
+        compare_extraction_passes([a], [b])
+        self.assertTrue(a["disputed"] and b["disputed"])
+        third = [_effect_payload(effect=0.42)]
+        res = resolve_third_attempt([a], [b], third)
+        self.assertEqual(res["first_confirmed"], 1)
+        self.assertEqual(a["disputed"], 0)
+        self.assertEqual(b["disputed"], 1)
+
+    def test_third_attempt_confirms_second_reading(self):
+        a, b = self._pair()
+        compare_extraction_passes([a], [b])
+        third = [_effect_payload(effect=0.52)]
+        res = resolve_third_attempt([a], [b], third)
+        self.assertEqual(res["second_confirmed"], 1)
+        self.assertEqual(b["disputed"], 0)
+        self.assertEqual(a["disputed"], 1)
+
+    def test_third_attempt_with_a_third_value_leaves_it_unresolved(self):
+        a, b = self._pair()
+        compare_extraction_passes([a], [b])
+        third = [_effect_payload(effect=0.47)]
+        res = resolve_third_attempt([a], [b], third)
+        self.assertEqual(res["unresolved"], 1)
+        self.assertEqual(a["disputed"], 1)
+        self.assertEqual(b["disputed"], 1)
+
+    def test_absent_third_reading_keeps_the_conflict(self):
+        a, b = self._pair()
+        compare_extraction_passes([a], [b])
+        res = resolve_third_attempt([a], [b], [])
+        self.assertEqual(res["absent_in_third"], 1)
+        self.assertEqual(a["disputed"], 1)
+        self.assertEqual(b["disputed"], 1)
+
+    def test_uncontested_rows_are_untouched(self):
+        a, b = self._pair(effect_a=0.42, effect_b=0.42)  # identisch, kein Streit
+        compare_extraction_passes([a], [b])
+        res = resolve_third_attempt([a], [b], [_effect_payload()])
+        self.assertEqual(res, {"first_confirmed": 0, "second_confirmed": 0,
+                               "unresolved": 0, "absent_in_third": 0})
+
+
+class ThirdAttemptRunTest(unittest.TestCase):
+    """Die Verdrahtung: ein strittiges A/B-Lauf startet Pass 3 und wendet
+    die Resolution an - ohne Streit bleibt es bei zwei Passes."""
+
+    def setUp(self):
+        self.db = Database(":memory:")
+        self.text_row = self.db.save_source_text(
+            "s1", TEXT, kind="html", origin_url="https://example.org/paper",
+        )
+        self.db.save_source({
+            "id": "s1", "title": "Cognition and health", "author": "Doe, Jane",
+            "publication_date": "2024-03-01", "url": "https://doi.org/10.1000/xyz",
+            "relevance": 0.7, "relevance_scored": 1,
+        })
+
+    def _run(self, payloads):
+        llm = _FakeLLM(payloads)
+        extractor = EffectExtractor(llm, self.db, double_pass=True)
+        asyncio.run(extractor.extract(
+            "s1", TEXT, topic="cognition and health",
+            source_text_id=(self.text_row or {}).get("id", ""),
+        ))
+        return llm, self.db.get_study_effects(source_id="s1")
+
+    def test_conflicting_pair_triggers_the_third_attempt(self):
+        llm, stored = self._run([
+            [_effect_payload(effect=0.42)],
+            [_effect_payload(effect=0.52)],
+            [_effect_payload(effect=0.42)],
+        ])
+        self.assertEqual(llm.calls, 3)
+        self.assertEqual(len(stored), 3)
+        by_pass = {r["extraction_pass"]: r for r in stored}
+        # Pass 3 bestatigt Pass A: A wird poolbar, B tragt die nicht
+        # reproduzierte Lesung weiter (disputed), die 3. Lesung ist belegt.
+        self.assertEqual(by_pass[1]["disputed"], 0)
+        self.assertEqual(by_pass[2]["disputed"], 1)
+        self.assertEqual(by_pass[3]["disputed"], 0)
+
+    def test_agreeing_pair_runs_only_two_passes(self):
+        llm, stored = self._run([
+            [_effect_payload(effect=0.42)],
+            [_effect_payload(effect=0.42)],
+        ])
+        self.assertEqual(llm.calls, 2)   # kein dritter Versuch ohne Streit
+        self.assertEqual(len(stored), 2)
