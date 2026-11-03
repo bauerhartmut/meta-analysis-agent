@@ -530,3 +530,47 @@ pooling/2-Integration; die Zahlen hier über das vorlaehn-Log.
 3. RoB 2 attempt-adherence-Varianten: Cribsheet-Original nicht im
    Workspace - nichts erfinden.
 4. Golden-Set-Ausbau (>22 Kandidaten) nur mit neuem Volltextmaterial.
+
+## Sprint 16 (03.11.2026, Abend): Auftrag v2 archiviert + ehrliche Laufzustaende
+
+(Eintrag maximal dienend erganzt; Details im Commit daa640e.)
+- ENTWICKLUNGSAUFTRAG_v2.md/.pdf mit md-PDF-Pipeline archiviert.
+- §10-Verstoß geschlossen: Session-Status jetzt ehrlich
+  (resource_limit_reached/completed/error/stopped); Report rendert
+  Laufzustand-Zeile, "Ressourcenlimit" wird als TEILWEISE abgeschlossen
+  benannt. Tests: Session 7/7, report 25/25, e2e 2/2.
+
+## Sprint 17 (03.11.2026): Phase-1-Bestandsaufnahme zu Auftrag v2 (Deltas)
+
+Sektion-fuer-Sektion gegen den Sprints-1..15-Bestand gemappt:
+
+| § | Thema | Bestand (erfuellt) | Rest-Delta (neu im v2) |
+|---|---|---|---|
+| 1 | Ziel | Agent-Architektur laeuft live | - |
+| 2.1 | Strukturierte Extraktion | Felder n/se/ci/design/population/adjusted/time_point; Verbatim-Pflicht; Tabellen-MVP (table_extractor, goldens, extracted_tables, Orchestrator-Integration) | (a) pypdf-Adapter fuert die 25 im 972eac-Corpus gespeicherten Studien-PDFs (Material ist JETZT im Workspace); (b) Felder Means±SD je Arm, Dosierung, primaerer/sekundaerer Endpunkt, Maessezeitpunkte-Anzahl; (c) Abbildungen/Supplementary (Vision-Fallback) |
+| 2.2 | Crossover/paare Designs | design verbatim; Design-Routing für RoB; RVE cluster auf study_id; adjusted/time_point-Split | Design-KATEGORIEN fehlen (parallel/crossover/cluster/faktoriell/multi-arm/rep measures); gepaarte SE-Semantik unmarkiert; Within-Subject-Korrelation als Feld absent -> Design-Gate im Pooling |
+| 2.3 | Doppel-Extraktion | 2 Pässe mit eigenen Framings (Sprint 12), compare auf 9 Feldern, Statistical Reviewer + Resolver (Sprints 3/4), disputed nie gemittelt | (a) dritter unabhaengiger Versuch bei Diskrepanz (heute: escalated markiert, kein 3. Versuch); (b) Abgleich mit Originaltabellen (haengt an 2.1) |
+| 3.1 | Suchquellen | 7 Provider, Circuit-Breaker, Rate-Memory, query_stats, Duplikat-Merge DOI/Titel, SEARCH_PROVIDERS (Sprint 15) | (a) Unpaywall/CORE als Volltext-Resolution; (b) unvollstaendige Suchlauf-Erkennung (circuit-OPEN am Runde-Ende -> Suche=incomplete protokollieren) |
+| 3.2 | Citation Chaining | beide Richtungen (Sprint 8-Audit), Queue-Kind citation | Marginal-Ertrag je Runde messen + Sattigungskriterium dokumentieren |
+| 3.3 | Suchvollstaendigkeit | query_stats + Coverage-Machine | Report-Sektion Suchstrategie (DBs, Strings, Ausfaelle, Duplikate, Ausschlussgruende, letzte Aktualisierung); "abgeschlossen" vs "budget-abgebrochen" auf Laufebehen erledigt (Sprint 16) |
+| 4 | RoB | RoB 2 Signal-Fragen (Sprint 9), ROBINS-I 7 Domänen, AMSTAR-2 (Sprint 5), quote-Pflicht, NI=missing information | (a) Konfidenz-Feld + alternative Interpretation je Bewertung; (b) QUADAS-2 falls diagnostische Genauigkeit; (c) attempt-adherence holds without Cribsheet original |
+| 5.1 | Effektgrößen | MD/SMD/Hedges g/RR/OR/HR + Referenztests (Sprint 4) | - |
+| 5.2 | Modelle | Fixed/Random, REML, HKSJ, PI, Leave-one-out, Subgruppen, kleine-k-Gates | Meta-Regression ALLEIN mit k-Gate + Begruendung (bewusst nicht ohne Datenbasis) |
+| 5.3 | Datenprobleme | Arme/Zeitpunkte/Outcomes = Pool-Split; Min-SE + RVE; fehlende SD = Verwerfung; kleine Stichproben-Gates; verlorene Koerper nie poolbar | publikations Bias mechanisch (Egger/Funnel) bereits im Report benannt als schwach unter k<10: Implementation erst ab k-Schwellwert |
+| 5.4 | Reproduzierbarkeit | stat_repro JSON+CSV, Versionsstempel, Beleg-Kette im Gate | Modellparameter+Formeln als Report-Appendix ausweisen |
+| 6 | Evidenz/Hypothesen | disputed-Regeln, Gate, Rollen | **groeste Lücke v2:** 4 Evidenz-Kategorien, deterministische Konfidenz aus Evidenzzeilen (n, Qualität, Praezision, Konsistenz, Direktheit), Hypothesen ohne Evidenz nicht als Erkenntnis, Hypothesenbremse-Aufnahmeprüfung |
+| 7 | Autonomie | work_queue mit Prioritäten, Aging, Anti-Verhungern, reports_precision (Effektbeschaffung vor Spekulativen) | dynamische Re-Priorisierung "keine poolbare Zeile -> Extraktion/Beschaffung boosten", Selbst-Reparatur-Regeln, Zyklus-Doku bündeln |
+| 8 | Critic | Statistical Reviewer (deterministisch), Devil's Advocate + Counter-Search, Freigabe-Gate | konkrete Critic-Befunde im Report-Text ausweisen (heute nur Log/DB) |
+| 9 | Benchmarks | meta_benchmark +goldens+evals, 860-Test-Audit (Sprint 14) | Goldstandard-Beschaffung (Material), Zielwerte je Kennzahl fixieren |
+| 10 | Zuverlaessigkeit | persistente Queue, Retry/Backoff, Circuit-Breaker, ehrliche Zustaende (Sprint 16) | (a) Run-Resume (unterbrochene Session fort setzen statt neu seeden); (b) Ressourcenbudget je Teilaufgabe |
+| 11 | Report | Sections nach §11 teils, Gate-Sektion, RVE, PRISMA-Zaehlungen (test_meta_screening) | (a) Suchstrategie-Sektion (s. 3.3); (b) narrative Synthese explizit benannt, wenn nichts poolbar; (c) PRISMA-Diagramm als Text | 
+| 12/13 | Plan/Abnahme | Sprint-Priorisierung + Kennzahlen im Log | Zielwerte je §9.2-Kennzahl setzen, wenn Goldstandard da |
+
+**Prioritaet für Phase 2 (náechste Sprints, nach Auftragsrang):**
+1. Sprint 18: Design-Taxonomie + gepaart-Design-Gate im Pooling (§2.2).
+2. Sprint 19: Dritter Extraktionsversuch bei Diskrepanz (§2.3).
+3. Sprint 20: Unpaywall-Volltext-Resolution (§3.1a) + incomplete-Suche-Markierung (§3.1b).
+4. Sprint 21: Evidenz-Kategorien + deterministische Hypothesen-Konfidenz (§6).
+5. Material-slots: pypdf-Adapter (2.1) sobald die 972eac-PDFs als gold case Annotationsgetragen sind; Goldstandard (§9) mit Nutzer-Material.
+
+Commits: - (Bestandsaufnahme ist Dokumentation).
