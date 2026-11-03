@@ -625,3 +625,34 @@ im Render geprüft), meta_report+targets 60/60. Commit siehe git log.
 - Hypothesenbremse-Aufnahmeprüfung (§6.3) als eigener Schleifer.
 - pypdf-Tabellen-Adapter (§2.1) mit den 972eac-PDFs.
 - Run-Resume (§10), Zielwerte für §9-Kennzahlen sobald Goldstandard-Material da.
+
+## Sprint 22 (03.11.2026): pypdf-Layout-Adapter + Original-PDF-Persistenz (Auftrag v2 §2.1)
+
+### Neu umgesetzt
+- ContentExtractor._fetch_pdf legt die ORIGINAL-PDF-Bytes persistent ab
+  (data/origpdf/<sha256-16>.pdf, idempotent, fail-soft); Ergebnisdict
+  traegt optional original_pdf_path. Damit entfaellt der Sprint-1-Befund
+  "PDF-Original liegen nicht lokal" fuer zukuenftige Läufe.
+- table_extractor.pdf_page_blocks(): der lange offene pypdf-Adapter -
+  liest Original-PDF-Seiten mit extraction_mode="layout"
+  (spaltenstabil), eigener Layout-Blockscan (Caption oeffnet, 2 leere
+  Zeilen oder Prosa schliessen), Header-Zeilen zaehlen als Tabellenzeilen
+  (_layout_header),.StylePriorityseigneure: CI-Bereichs-Zellen
+  "{val} {se} ... 95% CI {lo} to {hi}" verbatim (parser
+  "pypdf-layout/1", page_hint echte Seitennummer, Offsets seitenlokal).
+  find_table_blocks wurde NICHT angeruehrt (Regressionskontrolle).
+  Offen dokumentiert: Header-Spaltenkontext (Zelle -> Spalten-Urteil)
+  ist der naechste Schritt; der Adapter liefert nur belegte Zellen.
+- Fixize: tests/assets/table_fixture.html/.pdf (per Edge gedruckt),
+  Erwartungswerte manuell am Dokument verifiziert (-22.3/6.2/-34.4/-10.2
+  und -14.1/5.0/-23.9/-4.3).
+
+### Tests
+test_table_extractor 14/14 (4 neue Adaptertests, skip wenn Fixize fehlt),
+test_golden_tables 8/8, test_fulltext 38/38 (2 neue Persistenztests:
+idempotent by hash, fail-soft bei belegtem Pfad). Commit siehe git log.
+
+### Offen
+- Orchestrator-Integration: beim Effekt-Lauf Original-PDF nutzen, wenn
+  vorhanden (Sprint 23).
+- Header-Spaltenkontext im Layout-Scanner (Zelle -> Spaltenbeschriftung).

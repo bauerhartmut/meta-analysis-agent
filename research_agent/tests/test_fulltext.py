@@ -588,5 +588,49 @@ class TestOrchestratorFullText(unittest.TestCase):
         self.assertTrue(kwargs["page_offsets"])
 
 
+class TestOriginalPdfPersistence(unittest.TestCase):
+    """Auftrag v2 §2.1: neben dem Textabzug liegt die ORIGINAL-PDF persistent,
+    damit der pypdf-Layout-Adapter dort lesen kann. Das Ablegen ist
+    idempotent und scheitert nie (fail-soft)."""
+
+    def test_bytes_are_stored_idempotently_by_hash(self):
+        tmp = tempfile.mkdtemp(prefix="origpdf_")
+        old_cwd = os.getcwd()
+        try:
+            os.chdir(tmp)
+            pdf = _pdf_bytes(["Persistenzprobe für die Originaldatei."])
+            path = ContentExtractor._persist_original_pdf(pdf)
+            self.assertTrue(path)
+            self.assertTrue(path.startswith("origpdf/"))
+            #Relative zu data/ - dieselbe Konvention wie die Textabzuege
+            # "fulltext/...", die read_source_text ueber die DB auflöst.
+            target = Path("data") / path
+            self.assertTrue(target.exists())
+            second = ContentExtractor._persist_original_pdf(pdf)
+            self.assertEqual(second, path)  # idempotent: gleicher Hash, keine Doppel
+            self.assertEqual(target.read_bytes(), pdf)
+        finally:
+            os.chdir(old_cwd)
+            shutil.rmtree(tmp, ignore_errors=True)
+
+    def test_bad_target_location_fails_soft(self):
+        """Ein mean Fehler beim Speichern (unwritters Verzeichnis) darf nie
+        die Weiterverarbeitung blockieren - die Rückgabe ist dann leer."""
+        old_cwd = os.getcwd()
+        tmp = tempfile.mkdtemp(prefix="origpdf_bad_")
+        try:
+            os.chdir(tmp)
+            Path("data").mkdir(parents=True, exist_ok=True)
+            blocker = Path("data") / "origpdf"
+            blocker.write_text("belegt den Pfad als DATEI\n")
+            # data/origpdf ist jetzt selbst eine DATEI: mkdir und Schreiben
+            # scheitern; _persist_original_pdf fällt weich und liefert leer.
+            result = ContentExtractor._persist_original_pdf(b"%PDF-1.4 x")
+            self.assertEqual(result, "")
+        finally:
+            os.chdir(old_cwd)
+            shutil.rmtree(tmp, ignore_errors=True)
+
+
 if __name__ == "__main__":
     unittest.main()

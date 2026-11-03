@@ -19,9 +19,11 @@ from unittest import mock
 from research_agent.research.table_extractor import (
     EffectCell,
     TableBlock,
+    _layout_header,
     _parse_effect_line,
     find_effect_cells,
     find_table_blocks,
+    pdf_page_blocks,
     augment_document_text,
 )
 
@@ -116,6 +118,50 @@ class TableBlockTest(unittest.TestCase):
         new_text, blocks = augment_document_text(doc)
         self.assertEqual(blocks, [])
         self.assertEqual(new_text, doc)
+
+
+class PdfLayoutAdapterTest(unittest.TestCase):
+    """Auftrag v2 §2.1: der pypdf-Adapter liest ORIGINAL-PDF-Seiten mit
+    Layout-Wahrung (Sprint 1 offene Stelle). Fixize: eine per Edge
+    gerenderte Zwei-Tabelle-Seite (tests/assets/table_fixture.pdf); die
+    erwarteten Werte wurden manuell am Dokument verifiziert."""
+
+    def setUp(self):
+        self.fixture = (Path(__file__).parent / "assets"
+                        / "table_fixture.pdf")
+        if not self.fixture.exists():
+            self.skipTest("Fixize-PDF fehlt (table_fixture.pdf)")
+
+    def test_finds_both_tables_on_the_fixture_page(self):
+        blocks = pdf_page_blocks(str(self.fixture))
+        self.assertEqual(len(blocks), 2)
+        self.assertEqual([b.table_label for b in blocks],
+                         ["Table 1", "Table 2"])
+        self.assertTrue(all(b.page_hint == 1 for b in blocks))
+        self.assertTrue(all(b.parser == "pypdf-layout/1" for b in blocks))
+
+    def test_layout_reader_pulls_value_se_and_ci_verbatim(self):
+        blocks = pdf_page_blocks(str(self.fixture))
+        cells = [c for c in blocks[1].effect_cells]
+        self.assertEqual([(c.value, c.se) for c in cells],
+                         [("-22.3", "6.2"), ("-14.1", "5.0")])
+        self.assertEqual([(c.ci_low, c.ci_high) for c in cells],
+                         [("-34.4", "-10.2"), ("-23.9", "-4.3")])
+        # In_table und verbatim-Zeile: die Zelle selbes soát exakten
+        # Layout-Text, aus dem sie gelesen wurde.
+        self.assertTrue(all(c.in_table for c in cells))
+        self.assertIn("-22.3", cells[0].line)
+        self.assertIn("95% CI -34.4 to -10.2", cells[0].line)
+
+    def test_layout_header_lines_count_as_table_rows(self):
+        self.assertTrue(_layout_header(
+            "   Group            n         Mean RT            SD            95% CI"))
+        self.assertFalse(_layout_header(
+            "This short document exists to exercise the pypdf layout adapter."))
+        self.assertFalse(_layout_header(""))
+
+    def test_missing_file_returns_empty_list_not_error(self):
+        self.assertEqual(pdf_page_blocks(str(self.fixture) + ".fehlt.pdf"), [])
 
 
 if __name__ == "__main__":
