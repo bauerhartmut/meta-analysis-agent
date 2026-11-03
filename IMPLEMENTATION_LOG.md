@@ -599,3 +599,29 @@ Commits: - (Bestandsaufnahme ist Dokumentation).
 ### Tests
 test_report 28/28 (3 neue Sektions-Tests), meta_report+targets 60/60.
 Commits: siehe git log (Sprint 20).
+
+## Sprint 21 (03.11.2026): Evidenz-Kategorien + deterministische Hypothesen-Konfident (Auftrag v2 §6)
+
+### Neu umgesetzt (meta/evidence.py, rein, ohne DB-Zugriff)
+- 4 Kategorien nach §6.1: empirisch_belegt (≥2 stützende Zeilen, kein
+  Widerspruch) / evidenzgestuetzt_unsicher (genau 1 stützende) /
+  widerspruechlich_ungeklaert (stützend UND widersprechend, oder nur
+  widersprechend - negative Evidenz ist Evidenz) / spekulativ (keine
+  richtungsweisende Zeile).
+- evidence_confidence deterministisch: 0.5 + 0.45 * (s-c)/(s+c);
+  Widerspruch deckelt auf 0.60; eine einzige Zeile deckelt auf 0.70;
+  ohne Zeilen -> None (KEINE Erkenntnisangabe, §6.2).
+- Report-Hypothesenköpfe umgestellt: ohne Evidenz erscheint der
+  LLM-Wert als "Modell-Plausibilität, KEINE Evidenzsicherheit" und die
+  Zeile ist spekulativ markiert; mit Evidenz steht die
+  Evidenz-Konfidenz neben der Modell-Plausibilität (§6.2-Trennung
+  Plausibilität vs Evidenzqualität vs Schluss).
+
+### Tests
+test_meta_evidence 11/11 (neue Suite), report 28/28 (Spekulativ-Verhalten
+im Render geprüft), meta_report+targets 60/60. Commit siehe git log.
+
+### Offen (Phase 2 Rest nach dieser Sprints)
+- Hypothesenbremse-Aufnahmeprüfung (§6.3) als eigener Schleifer.
+- pypdf-Tabellen-Adapter (§2.1) mit den 972eac-PDFs.
+- Run-Resume (§10), Zielwerte für §9-Kennzahlen sobald Goldstandard-Material da.
