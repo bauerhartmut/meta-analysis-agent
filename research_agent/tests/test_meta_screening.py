@@ -113,11 +113,13 @@ class TestPrismaCounts(ScreeningTest):
         self.db.save_study_effect({
             "id": "e1", "source_id": "in1", "outcome": "cog",
             "effect_type": "smd", "effect": 0.3, "se": 0.1, "ci_level": 0.95,
+            "quote": "effect 0.30 (unit: SD)", "quote_start": 0, "quote_end": 24,
             "disputed": 0, "rejection_reason": "", "created_at": "2026-01-01T00:00:00Z",
         })
         self.db.save_study_effect({
             "id": "e2", "source_id": "in1", "outcome": "cog",
             "effect_type": "smd", "effect": 0.5, "se": 0.2, "ci_level": 0.95,
+            "quote": "effect 0.50 (unit: SD)", "quote_start": 0, "quote_end": 24,
             "disputed": 1, "rejection_reason": "", "created_at": "2026-01-01T00:00:00Z",
         })
 
@@ -139,12 +141,15 @@ class TestPrismaCounts(ScreeningTest):
             "id": "e1", "source_id": "in1", "outcome": "cog",
             "effect_type": "smd", "effect": 0.3, "se": 0.1, "ci_level": 0.95,
             "design": "randomized controlled trial",
+            "quote": "effect 0.30 (unit: SD)", "quote_start": 0, "quote_end": 24,
             "disputed": 0, "rejection_reason": "", "created_at": "2026-01-01T00:00:00Z",
         })
         self.db.save_study_effect({
             "id": "e2", "source_id": "in2", "outcome": "cog",
             "effect_type": "smd", "effect": -2.0, "se": 0.4, "ci_level": 0.95,
             "design": "Network Meta-Analysis",
+            "quote": "pooled estimate -2.00 (unit: SD)", "quote_start": 0,
+            "quote_end": 30,
             "disputed": 0, "rejection_reason": "", "created_at": "2026-01-01T00:00:00Z",
         })
 

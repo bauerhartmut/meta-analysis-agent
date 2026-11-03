@@ -39,6 +39,9 @@ def _row(**over):
         "n": 500,
         "design": "cohort",
         "population": "older adults",
+        "quote": "effect 1.25 (unit: SD)",
+        "quote_start": 0,
+        "quote_end": 24,
         "disputed": 0,
         "rejection_reason": "",
     }

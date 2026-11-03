@@ -40,7 +40,8 @@ class MetaReportTest(unittest.TestCase):
             "id": eid, "source_id": sid, "outcome": outcome, "effect_type": "smd",
             "effect": effect, "ci_level": 0.95, "n": 1000, "design": design,
             "disputed": disputed, "rejection_reason": rejection,
-            "unit": "SD", "created_at": "2026-01-01T00:00:00Z",
+            "quote": f"effect {effect} (unit: SD)", "quote_start": 0,
+            "quote_end": 24, "unit": "SD", "created_at": "2026-01-01T00:00:00Z",
         }
         if se is not None:
             row["se"] = se
@@ -202,7 +203,9 @@ class MetaTargetReportTest(MetaReportTest):
                    "outcome_key": "Kognition", "effect_type": "smd",
                    "effect": 0.3, "se": 0.1, "ci_level": 0.95, "n": 900,
                    "design": "cohort", "unit": "SD", "disputed": 0,
-                   "rejection_reason": "", "created_at": "2026-01-01T00:00:00Z"}
+                   "quote": "effect 0.30 (unit: SD)", "quote_start": 0,
+                   "quote_end": 24, "rejection_reason": "",
+                   "created_at": "2026-01-01T00:00:00Z"}
             self.db.save_study_effect(row)
         section = self.section()
         self.assertIn("aus k = 2 Studien", section)
