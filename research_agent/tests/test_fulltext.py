@@ -588,6 +588,27 @@ class TestOrchestratorFullText(unittest.TestCase):
         self.assertTrue(kwargs["page_offsets"])
 
 
+class TestOriginalPdfLink(unittest.TestCase):
+    """Auftrag v2 §2.1: die Textzeile kennt ihre ORIGINAL-PDF
+    (grid-Kandidatenquelle für den Tabellen-Adapter)."""
+
+    def test_source_text_row_carries_the_pdf_path(self):
+        db = Database(":memory:")
+        body = "A short reaction-time document body for the pdf-link test."
+        db.save_source_text(
+            "s1", body, kind="pdf",
+            origin_url="https://example.org/paper.pdf",
+            original_pdf_path="origpdf/abc123deadbeef.pdf",
+        )
+        row = db.get_source_text_for_source("s1")
+        self.assertEqual(row.get("original_pdf_path"),
+                         "origpdf/abc123deadbeef.pdf")
+        # Default bleibt leer: legacy-Zeilen ohne Original-PDF.
+        db.save_source_text("s2", body, kind="html")
+        row2 = db.get_source_text_for_source("s2")
+        self.assertEqual(row2.get("original_pdf_path"), "")
+
+
 class TestOriginalPdfPersistence(unittest.TestCase):
     """Auftrag v2 §2.1: neben dem Textabzug liegt die ORIGINAL-PDF persistent,
     damit der pypdf-Layout-Adapter dort lesen kann. Das Ablegen ist

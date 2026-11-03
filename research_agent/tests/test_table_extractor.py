@@ -24,6 +24,7 @@ from research_agent.research.table_extractor import (
     find_effect_cells,
     find_table_blocks,
     pdf_page_blocks,
+    blocks_with_verifiable_quotes,
     augment_document_text,
 )
 
@@ -118,6 +119,46 @@ class TableBlockTest(unittest.TestCase):
         new_text, blocks = augment_document_text(doc)
         self.assertEqual(blocks, [])
         self.assertEqual(new_text, doc)
+
+
+class VerifiableQuotesGateTest(unittest.TestCase):
+    """Auftrag v2 §2.1: nur Layout-Zellen, deren Zeilen im gespeicherten
+    Text auffindbar sind, gehen in den Lese-Prompt. Unverifizierbare
+    Blöcke bleiben Artefakt - sie koennten nie ein gepooltes Zitat tragen."""
+
+    def _block(self, line: str) -> TableBlock:
+        cell = EffectCell(line=line, offset=0, keyword="layout",
+                          value="-22.3", se="6.2",
+                          ci_low="-34.4", ci_high="-10.2", in_table=True)
+        return TableBlock(caption="Table 1. RT.", table_label="Table 1",
+                          body=line, n_lines=1, effect_cells=[cell])
+
+    def test_locatable_cell_lines_keep_the_block(self):
+        line = "Simple RT      -22.3     6.2    95% CI -34.4 to -10.2"
+        block = self._block(line)
+        stored = "...\n" + line + "\n..."
+        self.assertEqual(blocks_with_verifiable_quotes([block], stored),
+                         [block])
+
+    def test_whitespace_variation_still_locates(self):
+        line = "Simple RT -22.3 6.2 95% CI -34.4 to -10.2"
+        stored = ("Simple RT\nlower is better\n-22.3 (se 6.2, 95% CI "
+                  "-34.4 to -10.2)\n")
+        # Die exakte Normalisierung findet die Zeile nicht (Reihenfolge
+        # weicht); der Anker-Fuzzy-Pass braucht >=80 % Worttreffer.
+        self.assertEqual(blocks_with_verifiable_quotes([self._block(line)],
+                                                       stored), [])
+
+    def test_absent_lines_drop_the_block(self):
+        line = "Simple RT -22.3 6.2 95% CI -34.4 to -10.2"
+        self.assertEqual(blocks_with_verifiable_quotes(
+            [self._block(line)], "irgendein anderer Text ohne die Zahlen"), [])
+
+    def test_blocks_without_cells_are_never_routed(self):
+        empty = TableBlock(caption="Table 2. Notes.", table_label="Table 2",
+                           body="keine Zahlen", n_lines=1)
+        self.assertEqual(blocks_with_verifiable_quotes(
+            [empty], empty.body), [])
 
 
 class PdfLayoutAdapterTest(unittest.TestCase):

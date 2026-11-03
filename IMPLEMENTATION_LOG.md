@@ -656,3 +656,27 @@ idempotent by hash, fail-soft bei belegtem Pfad). Commit siehe git log.
 - Orchestrator-Integration: beim Effekt-Lauf Original-PDF nutzen, wenn
   vorhanden (Sprint 23).
 - Header-Spaltenkontext im Layout-Scanner (Zelle -> Spaltenbeschriftung).
+
+## Sprint 23 (03.11.2026): Original-PDF im Effekt-Lauf verdrahtet (Auftrag v2 §2.1)
+
+### Neu umgesetzt
+- DB: additive Spalte source_texts.original_pdf_path (idempotentes ALTER,
+  wie recovery_status); save_source_text nimmt sie entgegen.
+- Orchestrator: beim Volltext-Download transportiert die Position
+  original_pdf_path aus dem Extraktor-Ergebnis in die neue Spalte.
+- Effekt-Work-Item: wenn die Original-PDF existiert, lädt pdf_page_blocks
+  die Originalseiten (spaltenstabil), speichert die Layout-Blöcke als
+  Artefakte und hängt NUR Blöcke in den Lese-Prompt, deren
+  Effektzellen-Zeilen im gespeicherten Text auffindbar sind
+  (blocks_with_verifiable_quotes; locate_quote, Whitespace-tolerant).
+  Unverifizierbare Blöcke bleiben Artefakte und können kein gepooltes
+  Zitat erzeugen - der Sprint-7-Kontrakt bleibt intakt.
+
+### Tests
+table 8+6=14/14 (4 neue Gate-Tests verifiable_quotes), fulltext 38/38
+(+1 Verknüpfungs-Test), golden 8/8, e2e 2/2 (72 s). py_compile grün.
+
+### Offen (Sprint 24+)
+- Header-Spaltenkontext im Layout-Scanner (Zelle -> Spaltenbeschriftung).
+- §6.3 Hypothesenbremse-Aufnahmeprüfung.
+- Run-Resume (§10); §9-Zielwerte sobald Goldstandard da.
