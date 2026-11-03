@@ -480,3 +480,99 @@ class PoolingConditionsTest(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class RVETest(unittest.TestCase):
+    """CR0 sandwich variance with M/(M-1) correction over real clusters."""
+
+    def _rows(self):
+        # Four rows, two cohorts of two (same study_id). se = 1 -> w = 1.
+        # theta = 11/4 = 2.75; D_1 = (1-2.75)+(2-2.75) = -2.5,
+        # D_2 = (3-2.75)+(5-2.75) = 2.5; Var = (12.5/16)*2 = 1.5625;
+        # se = 1.25; t(0.975, 1) = 12.706 -> ci +/- 15.8828...
+        bibli = [
+            {"est": 1.0, "se": 1.0, "study_id": "cohort-a", "source_id": "s1"},
+            {"est": 2.0, "se": 1.0, "study_id": "cohort-a", "source_id": "s1"},
+            {"est": 3.0, "se": 1.0, "study_id": "cohort-b", "source_id": "s2"},
+            {"est": 5.0, "se": 1.0, "study_id": "cohort-b", "source_id": "s2"},
+        ]
+        return bibli
+
+    def test_reference_case_two_clusters_of_two(self):
+        from research_agent.meta.pooling import pool_rve
+        result = pool_rve(self._rows())
+        self.assertTrue(result["available"])
+        self.assertAlmostEqual(result["pooled"], 2.75, places=10)
+        self.assertAlmostEqual(result["se"], 1.25, places=10)
+        self.assertAlmostEqual(result["M"], 2)
+        self.assertEqual(result["df"], 1)
+        from research_agent.meta.pooling import _t_quantile
+        expected_half = _t_quantile(0.975, 1) * 1.25
+        self.assertAlmostEqual(result["ci_low"], 2.75 - expected_half, places=6)
+        self.assertAlmostEqual(result["ci_high"], 2.75 + expected_half, places=6)
+        # The interval is enormous on purpose: M = 2 clusters means df = 1.
+        self.assertGreater(result["ci_high"] - result["ci_low"], 10.0)
+
+    def test_cluster_key_falls_back_to_source(self):
+        from research_agent.meta.pooling import pool_rve
+        rows = [
+            {"est": 1.0, "se": 1.0, "source_id": "s1"},   # no study_id
+            {"est": 2.0, "se": 1.0, "source_id": "s1"},   # same paper: arms
+            {"est": 4.0, "se": 1.0, "source_id": "s2"},
+        ]
+        result = pool_rve(rows)
+        # clusters: s1 (2 rows), s2 (1 row) -> M = 2, theta = (1+2+4)/3
+        self.assertTrue(result["available"])
+        self.assertEqual(result["M"], 2)
+        self.assertAlmostEqual(result["pooled"], 7.0 / 3.0, places=10)
+
+    def test_single_cluster_refuses(self):
+        from research_agent.meta.pooling import pool_rve
+        rows = [
+            {"est": 1.0, "se": 1.0, "study_id": "one", "source_id": "s1"},
+            {"est": 2.0, "se": 1.0, "study_id": "one", "source_id": "s2"},
+        ]
+        result = pool_rve(rows)
+        self.assertFalse(result["available"])
+        self.assertIn("mindestens 2", result["reason"])
+
+    def test_rows_without_identity_are_own_clusters(self):
+        from research_agent.meta.pooling import pool_rve
+        rows = [
+            {"est": 1.0, "se": 1.0}, {"est": 2.0, "se": 1.0},
+            {"est": 3.0, "se": 1.0},
+        ]
+        result = pool_rve(rows)
+        # three unrelated rows -> M = 3, independent seeds
+        self.assertTrue(result["available"])
+        self.assertEqual(result["M"], 3)
+
+    def test_standardize_carries_rve_block(self):
+        from research_agent.meta.pooling import build_analysis
+        rows = [
+            self._db_row("s1", 1.0, "cohort-a"),
+            self._db_row("s1", 2.0, "cohort-a"),
+            self._db_row("s2", 3.0, "cohort-b"),
+        ]
+        result = build_analysis(rows)
+        self.assertTrue(result.get("groups"))
+        # The Min-SE collapse still documents its merge; RVE is the view
+        # that keeps every dependent row (they coexist on purpose).
+        self.assertEqual(len(result.get("excluded")), 1)
+        first = next(iter(result["groups"].values()))
+        rve = first.get("rve")
+        self.assertIsNotNone(rve)
+        # 3 rows, 2 study-id clusters -> dependent row survives for RVE
+        self.assertEqual(rve["M"], 2)
+        self.assertTrue(rve["available"])
+
+    def _db_row(self, source_id, est, study_id=None):
+        # minimal db-shaped row that build_analysis accepts (quote contract).
+        return {
+            "outcome": "cognition", "effect_type": "smd", "effect": est,
+            "se": 1.0, "ci_low": None, "ci_high": None, "n": 40,
+            "design": "rct", "direction": "higher cognition",
+            "quote_start": 0, "quote_text": "x",
+            "disputed": 0, "rejected": 0, "source_id": source_id,
+            "study_id": study_id or "",
+        }

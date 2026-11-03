@@ -472,3 +472,24 @@ pooling/2-Integration; die Zahlen hier über das vorlaehn-Log.
   pass-2-Framing-Travel, Reihenfolge A-then-B, Versionspin).
 - Suits: extraction 27/27, components 128/128, validation 13/13,
   e2e 2/2 (38,4 s).
+
+## Sprint 13 (02.11.2026): §7.2 Rest - Cluster-robuste Varianz (RVE)
+
+### Neu umgesetzt
+- `pool_rve()` in meta/pooling.py: cluster-robustes CR0-Intervall
+  (Hedges-Tipton) auf inverse-variance Punkt-Schätzung; Cluster-Key ist
+  `study_id`, sonst `source_id` (Arme/Kontraste/Doppellesung sind abhängig);
+  Zeilen ohne jede Identität bleiben eigener Cluster (nie erfundene
+  Abhängigkeit). Var = [Σ_m D_m²/W²] · M/(M−1), CI: t auf M−1 df.
+- `build_analysis` liefert `rve` je Sub-Pool als Alternativsicht NEBEN dem
+  Min-SE-Kollaps (der Kollaps bleibt dokumentiert, RVE zählt jede Zeile
+  einmal durch ihren Cluster). M < 2 → ausdrückliche Absage mit Grund.
+- Report: RVE-Zeile unter dem gepoolten Effekt (fail-soft, M und df im Text).
+
+### Verifikation
+- Referenzfall im Test per Hand nachvollzogen (2 Cluster à 2, se=1:
+  θ̂=2.75, se=1.25, df=1, CI über t(0.975,1)); Cluster-Fallback-, 
+  M<2-Absage-, unidentifizierte-Zeilen- und build_analysis-Integration-Test.
+- Suits: pooling 48/48 (5 neue RVE-Tests), report+pooling 69/69, e2e 2/2 (27,9 s).
+- Live (readonly, Baseline): 74 Zeilen, 13 Gruppen analysiert, 3 mit RVE
+  (Beispiel: RVE-Punkt −0.489, M = 3 vs. kollabierter RE −0.586).
