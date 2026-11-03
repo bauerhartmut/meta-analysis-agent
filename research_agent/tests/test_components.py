@@ -478,11 +478,47 @@ class TestSessionLifecycle(unittest.TestCase):
 
             rows = orch.db._get_all("research_sessions")
             self.assertEqual(len(rows), 1)
-            self.assertEqual(rows[0]["status"], "completed")
+            # Auftrag v2 §10: Ein SIGINT-Abbruch ist kein wissenschaftlicher
+            # Abschluss - die Session muss das sagen, nicht 'completed'.
+            self.assertEqual(rows[0]["status"], "stopped")
             self.assertTrue(rows[0]["end_time"])
-            self.assertEqual(orch.current_session["status"], "completed")
+            self.assertEqual(orch.current_session["status"], "stopped")
         finally:
             shutil.rmtree(tmp, ignore_errors=True)
+
+    def _orch_for_state(self):
+        """Orchestrator auf :memory: nur fuer die Close-Status-Mapping-Tests."""
+        from research_agent.config import Config
+        from research_agent.orchestrator import ResearchOrchestrator
+        cfg = Config()
+        cfg.database_url = ":memory:"
+        return ResearchOrchestrator(cfg)
+
+    def test_close_status_distinguishes_budget_from_completion(self):
+        """Auftrag v2 §10: Budget- und Zyklus-Limits sind keine Abschluesse."""
+        from research_agent.orchestrator import ResearchOrchestrator
+        orch = self._orch_for_state()
+        orch._conclude_reason = "run budget of 110 min reached after 14 cycle(s)"
+        self.assertEqual(orch._session_close_status(), "resource_limit_reached")
+        orch._conclude_reason = "max cycles reached (30)"
+        self.assertEqual(orch._session_close_status(), "resource_limit_reached")
+        orch._conclude_reason = (
+            "3 cycle(s) without a usable source or finished backlog item, "
+            "and the queue is empty"
+        )
+        self.assertEqual(orch._session_close_status(), "completed")
+        orch._conclude_reason = ""
+        self.assertEqual(orch._session_close_status(), "stopped")
+
+    def test_close_status_error_beats_the_reason(self):
+        from research_agent.orchestrator import ResearchOrchestrator
+        orch = self._orch_for_state()
+        try:
+            orch._conclude_reason = "run budget of 110 min reached"
+            orch.status["phase"] = "error"
+            self.assertEqual(orch._session_close_status(), "error")
+        finally:
+            del orch
 
     def test_interrupted_process_exits_zero(self):
         """main()'s KeyboardInterrupt handler exits with code 0 (not 130)."""

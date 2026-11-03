@@ -136,7 +136,8 @@ async def run_with_dashboard(args):
         )
 
         await orchestrator.stop()
-        # Ensure the research task's cleanup (writing end_time/status=completed)
+        # Ensure the research task's cleanup (writes end_time plus the honest
+        # close status - completed only when the queue really drained)
         # finishes before we tear down resources and exit the process.
         await asyncio.gather(research_task, return_exceptions=True)
     else:

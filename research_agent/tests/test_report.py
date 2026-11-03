@@ -55,6 +55,48 @@ class ReportTest(unittest.TestCase):
         return text, bib
 
 
+class TestLaufzustand(unittest.TestCase):
+    """Auftrag v2 §10/§11: der Bericht muss Sagen, WAS er ist - nicht nur
+    wann er aufgehört hat. Budget-Limit ist kein wissenschaftlicher Abschluss."""
+
+    def setUp(self):
+        self.tmp = tempfile.mkdtemp(prefix="state_doc_")
+        self.addCleanup(shutil.rmtree, self.tmp, ignore_errors=True)
+
+    def _report(self, session, reason):
+        db = Database(":memory:")
+        path = build_report(db, "caffeine", reason=reason,
+                            out_dir=self.tmp, session=session)
+        return Path(path).read_text(encoding="utf-8")
+
+    def test_budget_limit_is_not_claimed_as_completion(self):
+        text = self._report(
+            {"id": "s1", "status": "resource_limit_reached", "cycle_count": 14},
+            "run budget of 110 min reached after 14 cycle(s)")
+        self.assertIn("Ressourcenlimit erreicht", text)
+        self.assertIn("TEILWEISE abgeschlossen", text)
+        self.assertNotIn("Wissenschaftlich abgeschlossen", text)
+
+    def test_drained_queue_earns_the_completion_state(self):
+        text = self._report(
+            {"id": "s1", "status": "completed", "cycle_count": 9},
+            "3 cycle(s) without a usable source or finished backlog item, "
+            "and the queue is empty")
+        self.assertIn("Wissenschaftlich abgeschlossen", text)
+
+    def test_error_session_is_reported_as_technically_blocked(self):
+        text = self._report(
+            {"id": "s1", "status": "error", "cycle_count": 2},
+            "")
+        self.assertIn("Technisch blockiert", text)
+
+    def test_bare_stop_lmits_the_claim(self):
+        text = self._report(
+            {"id": "s1", "status": "stopped", "cycle_count": 5},
+            "run stopped")
+        self.assertIn("Teilweise abgeschlossen", text)
+
+
 class TestManuscriptForm(ReportTest):
     def test_has_the_sections_a_reviewer_reads_in_order(self):
         _source(self.db)
