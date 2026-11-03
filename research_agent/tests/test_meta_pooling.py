@@ -14,6 +14,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 
+from research_agent.meta.designs import classify_design, is_paired_design
 from research_agent.meta.extraction import z_for_level
 from research_agent.meta.pooling import (
     aggregate_design, build_analysis, egger, forest_table, leave_one_out, pool,
@@ -323,6 +324,66 @@ class TestForestTable(unittest.TestCase):
         analysis = pool([_effect(0.2, 0.1, "Studie A"), _effect(0.6, 0.1, "Studie B"),
                          _effect(0.45, 0.12, "Studie C")])
         self.assertIn(f"{analysis['pooled']:.3f}", table)
+
+
+class DesignCategoryTest(unittest.TestCase):
+    """Auftrag v2 §2.2: die Design-Kategorie entscheidet, zu welcher
+    Stichproben-Semantik eine Stored-Präzision gehört - crossover/Mess-
+    wiederholung ist die paarige Familie, nicht independent groups."""
+
+    def test_classification_is_deterministic_and_specific(self):
+        self.assertEqual(classify_design("randomised, double-masked, "
+                                         "placebo-controlled crossover"),
+                         "crossover_rct")
+        self.assertEqual(classify_design("within-subjects design"),
+                         "crossover_rct")
+        self.assertEqual(classify_design("repeated measures (3 visits)"),
+                         "crossover_rct")
+        self.assertEqual(classify_design("cluster randomized trial"),
+                         "cluster_rct")
+        self.assertEqual(classify_design("2x2 factorial randomized trial"),
+                         "factorial")
+        self.assertEqual(classify_design("three-arm randomized"), "multi_arm")
+        self.assertEqual(classify_design("quasi-experimental with "
+                                         "pretest-posttest"),
+                         "quasi_experimental")
+        self.assertEqual(classify_design("randomized controlled trial"),
+                         "parallel_rct")
+        self.assertEqual(classify_design("longitudinal cohort"),
+                         "observational")
+        self.assertEqual(classify_design(""), "")
+
+    def test_crossover_outranks_the_generic_rct_label(self):
+        # Ein 'randomized crossover' gehört in die paarige Familie,
+        # obwohl im Label auch "randomized" steht - Reihenfolge zählt.
+        self.assertEqual(
+            classify_design("randomized controlled trial (crossover)"),
+            "crossover_rct")
+        self.assertTrue(is_paired_design(
+            "randomized controlled trial (crossover)"))
+        self.assertFalse(is_paired_design("randomized controlled trial"))
+
+    def test_build_analysis_discloses_the_design_mix(self):
+        """Der Pool sagt, aus welcher Design-Mischung er besteht -#/.
+        Handles a paired and a parallel row in one group."""
+        x = _row(source_id="s1", effect=-0.4, se=0.1)
+        x["design"] = "randomised controlled trial (crossover)"
+        y = _row(source_id="s2", effect=-0.5, se=0.1)
+        y["design"] = "randomized controlled trial"
+        analysis = build_analysis([x, y])
+        group = analysis["groups"]["depressive symptoms [hedges_g]"]
+        self.assertEqual(group["design_mix"],
+                         {"crossover_rct": 1, "parallel_rct": 1})
+        self.assertEqual(group["paired_rows"], 1)
+        self.assertEqual(group["k"], 2)  # Mischpool bleibt ein Pool
+
+    def test_pooled_rows_carry_their_category(self):
+        x = _row(source_id="s1")
+        x["design"] = "cross-over trial"
+        analysis = build_analysis([x])
+        group = analysis["groups"]["depressive symptoms [hedges_g]"]
+        self.assertEqual(group["rows"][0].get("design_category"),
+                         "crossover_rct")
 
 
 def _row(**overrides):

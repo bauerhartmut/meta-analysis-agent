@@ -40,6 +40,62 @@ _AGGREGATE_DESIGN = re.compile(
 )
 
 
+# Auftrag v2 §2.2: the study design decides the variance semantics. Within-
+# subject designs (crossover, repeated measures) pool on paired contrasts; an
+# SE that came from an independent-groups formula would be too narrow here.
+# The extractor never calculates, so every stored SE is verbatim from the text
+# - but the PAIRED FAMILY is still marked, because a paired row sources its
+# precision for a different estimand (the within-pair difference), and the
+# pool must be able to say what mixture it holds instead of treating every row
+# as independent. Categorisation is deterministic on the design label alone;
+# order matters: the specific families are matched before the generic "RCT".
+DESIGN_CATEGORIES_ORDER = (
+    ("crossover_rct", re.compile(
+        r"cros[s\- ]{0,2}over|within[-\s]?subject|within[-\s]?pair|paired"
+        r"|repeated[-\s]?measures|messwiederholung", re.IGNORECASE)),
+    ("cluster_rct", re.compile(r"cluster.random", re.IGNORECASE)),
+    ("factorial", re.compile(r"factorial|faktoriell|2\s*[x×]\s*2", re.IGNORECASE)),
+    ("multi_arm", re.compile(
+        r"(?:multi|three|four|3|4)[-\s]?arm", re.IGNORECASE)),
+    ("quasi_experimental", re.compile(
+        r"quasi.experimental|pretest.posttest|non\.?randomi[sz]ed"
+        r"|nonequivalent", re.IGNORECASE)),
+    ("parallel_rct", re.compile(
+        r"randomi[sz]ed|randomised|r\.c\.t", re.IGNORECASE)),
+    ("observational", re.compile(
+        r"cross.sectional|cohort|case.control|longitudinal|observational"
+        r"|registry|survey", re.IGNORECASE)),
+)
+
+DESIGN_CATEGORY_LABELS = {
+    "crossover_rct": "Crossover/Messwiederholung (paarig)",
+    "cluster_rct": "Cluster-RCT",
+    "factorial": "faktorielles Design",
+    "multi_arm": "mehrarmige Studie",
+    "quasi_experimental": "quasi-experimentell (nicht randomisiert)",
+    "parallel_rct": "Parallelgruppen-RCT",
+    "observational": "beobachtende Studie",
+    "": "nicht klassifizierbar",
+}
+
+PAIRED_CATEGORIES = ("crossover_rct",)
+
+
+def classify_design(design: str) -> str:
+    """One of DESIGN_CATEGORY_LABELS' keys (or '' when nothing matched)."""
+    text = str(design or "").strip()
+    for category, pattern in DESIGN_CATEGORIES_ORDER:
+        if pattern.search(text):
+            return category
+    return ""
+
+
+def is_paired_design(design: str) -> bool:
+    """True for the within-subject family: its precision belongs to a
+    within-pair contrast, never to an independent-groups formula."""
+    return classify_design(design) in PAIRED_CATEGORIES
+
+
 def aggregate_design(design: str) -> str:
     """The review design a row's ``design`` names, or '' for a primary study."""
     text = str(design or "").strip()
