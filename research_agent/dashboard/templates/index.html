@@ -55,7 +55,7 @@ a:hover{text-decoration:underline}
 .main{padding:16px 24px;max-width:1600px;margin:0 auto}
 
 /* PHASE BAR */
-.phase-bar{display:flex;gap:3px;margin-bottom:16px;background:var(--bg2);border:1px solid var(--bdr);border-radius:10px;padding:6px 10px;overflow-x:auto}
+.phase-bar{display:flex;flex-wrap:wrap;gap:3px;margin-bottom:16px;background:var(--bg2);border:1px solid var(--bdr);border-radius:10px;padding:6px 10px}
 .phase{padding:5px 12px;border-radius:7px;font-size:11px;font-weight:600;color:var(--t3);transition:all .3s;white-space:nowrap}
 .phase.active{color:#fff;box-shadow:0 0 12px rgba(77,166,255,.3)}
 .phase.active[data-p="planning"]{background:var(--ac);color:#fff}
@@ -69,13 +69,13 @@ a:hover{text-decoration:underline}
 .phase.active[data-p="idle"]{background:var(--bg4);color:var(--t2)}
 
 /* STAT CARDS */
-.stats{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin-bottom:16px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-bottom:16px}
 .stat{background:var(--bg2);border:1px solid var(--bdr);border-radius:10px;padding:14px;text-align:center}
 .stat .num{font-size:28px;font-weight:800;background:linear-gradient(135deg,var(--ac),var(--purp));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
 .stat .lbl{font-size:10px;color:var(--t3);text-transform:uppercase;letter-spacing:.8px;margin-top:2px}
 
 /* FOCUS BOX */
-.focus{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:16px}
+.focus{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:12px;margin-bottom:16px}
 .focus-card{background:var(--bg2);border:1px solid var(--bdr);border-radius:10px;padding:14px;border-left:3px solid var(--ac)}
 .focus-card.q{border-left-color:var(--purp)}
 .focus-card.f{border-left-color:var(--or)}
@@ -83,7 +83,7 @@ a:hover{text-decoration:underline}
 .focus-card .fc-value{font-size:14px;margin-top:6px;line-height:1.5;color:var(--t1)}
 
 /* TABS */
-.tabs{display:flex;gap:2px;margin-bottom:12px;background:var(--bg2);border:1px solid var(--bdr);border-radius:10px;padding:4px;overflow-x:auto}
+.tabs{display:flex;flex-wrap:wrap;gap:2px;margin-bottom:12px;background:var(--bg2);border:1px solid var(--bdr);border-radius:10px;padding:4px}
 .tab{padding:8px 16px;border-radius:8px;font-size:12px;font-weight:600;color:var(--t3);cursor:pointer;transition:all .2s;white-space:nowrap}
 .tab:hover{color:var(--t1);background:var(--bg3)}
 .tab.active{background:var(--bg4);color:var(--ac)}
@@ -100,7 +100,7 @@ a:hover{text-decoration:underline}
 .items{max-height:420px;overflow-y:auto;scrollbar-width:thin;scrollbar-color:var(--bdr) transparent}
 .items::-webkit-scrollbar{width:5px}
 .items::-webkit-scrollbar-thumb{background:var(--bdr);border-radius:3px}
-.item{padding:10px 12px;border-bottom:1px solid var(--bdr);transition:background .15s}
+.item{padding:10px 12px;border-bottom:1px solid var(--bdr);transition:background .15s;overflow-wrap:anywhere;word-break:break-word;min-width:0}
 .item:last-child{border-bottom:none}
 .item:hover{background:var(--bg3)}
 .item-top{display:flex;justify-content:space-between;align-items:flex-start;gap:8px}
@@ -412,7 +412,7 @@ a:hover{text-decoration:underline}
     <div class="tab" data-tab="journal">Journal</div>
     <div class="tab" data-tab="contras">Contradictions</div>
     <div class="tab" data-tab="coverage">Coverage</div>
-    <div class="tab" data-tab="meta">Metaanalyse</div>
+    <div class="tab" data-tab="meta">Meta-Analysis</div>
     <div class="tab" data-tab="graph">Knowledge Graph</div>
     <div class="tab" data-tab="monitoring">Monitoring</div>
   </div>
@@ -420,7 +420,7 @@ a:hover{text-decoration:underline}
   <!-- HYPOTHESES -->
   <div class="tab-panel active" id="tp-hyps">
     <div class="panel" style="border-left:3px solid var(--ac);margin-bottom:12px">
-      <h3>Forschungsprogramm <span class="cnt" id="progCnt">0/0</span></h3>
+      <h3>Research Program <span class="cnt" id="progCnt">0/0</span></h3>
       <div id="progActive" style="font-size:13px;margin-bottom:8px"></div>
       <div class="items" id="progList"><div class="empty">Noch kein Programm</div></div>
     </div>
@@ -937,8 +937,13 @@ function render(d){
 
   // Focus
   document.getElementById('fQuestion').textContent=d.current_question||'Waiting for research to start...';
-  document.getElementById('fTask').textContent=d.current_task||'--';
-  document.getElementById('fFinding').textContent=truncate(d.last_finding,200)||'--';
+  const fTaskElr=document.getElementById('fTask');
+  const fFindElr=document.getElementById('fFinding');
+  fTaskElr.textContent=d.current_task||'--';
+  fFindElr.textContent=truncate(d.last_finding,200)||'--';
+  const fcTask=fTaskElr.closest('.focus-card'), fcFind=fFindElr.closest('.focus-card');
+  if(fcTask) fcTask.style.display=(d.current_task||'').trim()?'':'none';
+  if(fcFind) fcFind.style.display=(d.last_finding||'').trim()?'':'none';
 
   // Forschungsprogramm: welche Teilfrage gerade läuft, was abgeschlossen ist
   // und warum - die Agenda des Laufs.
@@ -1496,9 +1501,23 @@ function renderExperiments(d){
     : '<div style="padding:4px 10px;background:var(--bg);border-radius:6px;font-size:11px;color:var(--t3)">Keine Simulationen</div>';
 }
 
+let parStatsUnavailable=false;
 async function pollParallelStats(){
+  if(parStatsUnavailable) return;
   try{
-    const r=await fetch(API+'/api/parallel-stats');const d=await r.json();
+    const r=await fetch(API+'/api/parallel-stats');
+    if(r.status===404){
+      // Standalone-Server kennt diesen Endpunkt nicht - einmal degradieren,
+      // danach wird nicht weiter gepolt (keine permanenten 404-Fehler).
+      parStatsUnavailable=true;
+      const hint='<div style="padding:4px 10px;background:var(--bg);border-radius:6px;'
+        +'font-size:11px;color:var(--t3)">Nur im Live-Betrieb verfuegbar '
+        +'(interner Orchestrator-Endpunkt)</div>';
+      const bt=document.getElementById('pPhaseTimings');if(bt)bt.innerHTML=hint;
+      const at=document.getElementById('pActiveTasks');if(at)at.innerHTML=hint;
+      return;
+    }
+    const d=await r.json();
     renderParallelStats(d);
   }catch(e){}
 }
