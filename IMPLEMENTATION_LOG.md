@@ -704,3 +704,26 @@ Effekt-/CI-Werte unter ihren Spalten), golden 8/8, fulltext 39/39.
   Kriterien fehlen).
 - Run-Resume (§10); Meta-Regression mit k-Gate (§5.2); Egger-Filter k>=10 (§5.3).
 - §9-Zielwerte sobald Goldstandard-Material da.
+
+## Sprint 25 (03.11.2026): Aufnahmepruefung fuer Hypothesen (Auftrag v2 §6.3)
+
+### Neu umgesetzt
+- MemoryStore.admission_review: deterministische Aufnahmepruefung beim
+  Erzeugen einer Hypothese. Eintritt als 'active' nur, wenn die Behauptung
+  genuegend Inhaltswoerter traegt UND Falsifizierungsbedingungen UND
+  testfaehige Voraussagen mitbringt.
+- Abgelehnte Hypothesen bleiben als status='speculative' dokumentiert
+  (DB-Wissensstand bleibt ehrlich), landen aber NICHT im Evidenz-Backlog
+  (get_active_hypotheses laedt sie nicht) und erscheinen nicht als
+  neu erzeugte Arbeit. Grund wird im Log erlaeutert.
+- Report: eigene Offenlegungszeile "Aufnahmeprüfung: N Hypothesen nicht
+  aufgenommen (...)" - der Verwerfungsakt ist sichtbar, nicht still.
+
+### Tests
+backlog_work 47/47 (4 neue Aufnahmepruefungs-Tests + 1 Offenlegungs-
+Test), report 27/27. py_compile gruen.
+
+### Offen (Sprint 26+)
+- Run-Resume (§10); Meta-Regression mit k-Gate (§5.2); Egger-Filter
+  k>=10 (§5.3).
+- §9-Zielwerte sobald Goldstandard-Material da.

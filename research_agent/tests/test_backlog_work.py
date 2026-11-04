@@ -463,6 +463,29 @@ class TestClosingReport(unittest.TestCase):
         self.assertIn("Hypothesen ohne Evidenz: 40", text)
         self.assertIn("Bremse greift, Schwelle 25", text)
 
+    def test_report_discloses_refused_hypotheses(self):
+        """Auftrag v2 §6.3: durch die Aufnahmeprüfung abgelehnte
+        Hypothesen sind im Report sichtlich dokumentiert."""
+        self.db.save_hypothesis({
+            "id": gen_id(),
+            "claim": "Something vague without falsification.",
+            "status": "speculative", "confidence": 0.3,
+            "topic": "intelligence", "date_added": now_iso(),
+        })
+        path = build_report(self.db, "intelligence", out_dir=self.tmp,
+                            work_stats={"open": 0, "in_progress": 0, "done": 0,
+                                        "blocked": 0})
+        text = Path(path).read_text(encoding="utf-8")
+        self.assertIn("Aufnahmeprüfung: 1 Hypothesen nicht aufgenommen", text)
+
+    def test_report_without_refused_hypotheses_has_no_admission_line(self):
+        """Keine abgelehnten Hypothesen -> keine Offenlegungszeile."""
+        path = build_report(self.db, "intelligence", out_dir=self.tmp,
+                            work_stats={"open": 0, "in_progress": 0, "done": 0,
+                                        "blocked": 0})
+        text = Path(path).read_text(encoding="utf-8")
+        self.assertNotIn("Aufnahmeprüfung", text)
+
     def test_empty_database_still_produces_a_report(self):
         empty = Database(":memory:")
         path = build_report(empty, "", reason="", out_dir=self.tmp)
@@ -600,6 +623,80 @@ class TestEvidenceBudget(unittest.TestCase):
         orch._evidence_yield = [(20, 0), (20, 0), (20, 0)]
 
         self.assertEqual(orch._evidence_budget(6), 4)
+
+
+class _AdmissionFakeLLM:
+    """LLM-Stub: liefert die.generateierten Hypothesen-Rohobjekte."""
+
+    def __init__(self, items):
+        self.items = items
+
+    async def chat_json(self, messages, temperature=0.0, max_tokens=2048):
+        return self.items
+
+
+class TestHypothesisAdmission(unittest.TestCase):
+    """Auftrag v2 §6.3: nicht jede generierte Hypothese tritt ins
+    Forschungsprogramm ein - nur pruefbare werden 'active';
+    unwertvolle bleiben als 'speculative' dokumentiert und belasten
+    den Evidenz-Backlog nicht."""
+
+    def _memory(self, items):
+        from research_agent.memory.store import MemoryStore
+        return MemoryStore(Database(":memory:"), _AdmissionFakeLLM(items))
+
+    _TESTABLE = {
+        "claim": "Acute caffeine ingestion lowers reaction time in healthy adults",
+        "confidence": 0.4,
+        "predictions": ["crossover trials show shorter RT after caffeine"],
+        "falsification_conditions": ["no RT difference in placebo-controlled RCTs"],
+    }
+
+    def run_generate(self, items):
+        mem = self._memory(items)
+        kept = asyncio.run(
+            mem.generate_hypotheses([], [], "caffeine", "RT?"))
+        return mem, kept
+
+    def test_testable_hypothesis_enters_the_program(self):
+        mem, kept = self.run_generate([self._TESTABLE])
+        self.assertEqual(len(kept), 1)
+        self.assertEqual(kept[0].status, "active")
+        self.assertEqual(len(mem.get_active_hypotheses()), 1)
+
+    def test_without_falsification_conditions_it_stays_speculative(self):
+        item = dict(self._TESTABLE, falsification_conditions=[])
+        mem, kept = self.run_generate([item])
+        self.assertEqual(kept, [])
+        # In der DB dokumentiert, aber NICHT im Evidenz-Backlog:
+        hyps = mem.db.get_hypotheses()
+        self.assertEqual([h["status"] for h in hyps], ["speculative"])
+        self.assertEqual(mem.get_active_hypotheses(), [])
+
+    def test_contentless_claim_is_refused(self):
+        item = {
+            "claim": "It might be interesting.",
+            "confidence": 0.9,
+            "predictions": ["x"],
+            "falsification_conditions": ["y"],
+        }
+        mem, kept = self.run_generate([item])
+        self.assertEqual(kept, [])
+        hyps = mem.db.get_hypotheses()
+        self.assertEqual([h["status"] for h in hyps], ["speculative"])
+
+    def test_admission_review_is_pure(self):
+        from research_agent.memory.store import MemoryStore
+        cases = [
+            ("short claim", [], [], "speculative"),
+            ("a substantive testable statement here",
+             ["cannot hold"], ["forecast"], "active"),
+            ("a substantive testable statement here", [], ["forecast"],
+             "speculative"),
+        ]
+        for claim, fals, preds, expected in cases:
+            status, _ = MemoryStore.admission_review(claim, fals, preds)
+            self.assertEqual(status, expected, claim)
 
 
 if __name__ == "__main__":
