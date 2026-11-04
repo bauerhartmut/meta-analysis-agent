@@ -110,15 +110,33 @@ class MetaReportTest(unittest.TestCase):
         self.assertIn("Leave-one-out", section)
 
     def test_two_filled_design_groups_raise_the_between_group_test(self):
-        for sid in ("s1", "s2", "s3", "s4"):
+        """k-Gate §5.2 erfüllt: je Design 3 Studien. Die Schwelle wird
+        im Auszug benannt."""
+        for sid in ("s1", "s2", "s3", "s4", "s5", "s6"):
+            self.source(sid)
+        values = [
+            ("e1", "s1", -0.6, "twin"), ("e2", "s2", -0.5, "twin"),
+            ("e3", "s3", -0.7, "twin"), ("e4", "s4", 0.8, "cohort"),
+            ("e5", "s5", 0.9, "cohort"), ("e6", "s6", 0.9, "cohort"),
+        ]
+        for eid, sid, effect, design in values:
+            self.effect(eid, sid, effect, se=0.1, design=design)
+        section = self.section()
+        self.assertIn("Subgruppen nach Design: Q_between", section)
+        self.assertIn("p = 0.000", section)
+        self.assertIn("k-Gate", section)
+
+    def test_below_gate_design_groups_do_not_get_an_interpretation(self):
+        """k-Gate §5.2: die Einstudien-Gruppe erscheint, aber ohne
+        zwischen-Gruppen-Qualifikation - mit transparentem Ausschluss."""
+        for sid in ("s1", "s2", "s3"):
             self.source(sid)
         self.effect("e1", "s1", -0.6, se=0.1, design="twin")
         self.effect("e2", "s2", -0.5, se=0.1, design="twin")
         self.effect("e3", "s3", 0.8, se=0.1, design="cohort")
-        self.effect("e4", "s4", 0.9, se=0.1, design="cohort")
         section = self.section()
-        self.assertIn("Subgruppen nach Design: Q_between", section)
-        self.assertIn("p = 0.000", section)
+        self.assertIn("keine zwischen-Gruppen-Aussage möglich (k-Gate:", section)
+        self.assertIn("unter der Schwelle", section)
 
     def test_the_configured_minimum_study_count_gates_the_pooled_value(self):
         self.source("s1")

@@ -264,16 +264,45 @@ class QuoteContractTest(unittest.TestCase):
 
 class TestSubgroupsAndBias(unittest.TestCase):
     def test_two_clearly_different_subgroups_raise_q_between(self):
+        """Auftrag v2 §5.2: die k-Gate-Schwelle (3) ist hier gerade erfüllt."""
         rows = [
-            _effect(-0.6, 0.1, "A1", design="twin"),
-            _effect(-0.5, 0.1, "A2", design="twin"),
-            _effect(0.8, 0.1, "B1", design="cohort"),
-            _effect(0.9, 0.1, "B2", design="cohort"),
+            _effect(-0.6, 0.1, f"A{index}", design="twin") for index in range(3)
+        ] + [
+            _effect(0.8, 0.1, f"B{index}", design="cohort") for index in range(3)
         ]
         result = subgroups(rows, "design")
         self.assertEqual(len(result["groups"]), 2)
         self.assertGreater(result["q_between"], 10)
         self.assertLess(result["p"], 0.01)
+        self.assertEqual(result["below_gate"], {})
+
+    def test_single_study_group_is_shown_but_never_interpreted(self):
+        """k-Gate §5.2: eine k=1-Gruppe bleibt sichtbar, trägt aber
+        keine Moderatoren-Aussage - Q_between entfällt."""
+        rows = [
+            _effect(-0.6, 0.1, f"A{index}", design="twin") for index in range(3)
+        ]
+        rows.append(_effect(2.0, 0.05, "X", design="cohort"))
+        result = subgroups(rows, "design")
+        self.assertEqual(result.get("below_gate"), {"cohort": 1})
+        self.assertIn("twin", result.get("groups", {}))
+        self.assertIn("cohort", result.get("groups", {}))
+        self.assertIsNone(result.get("q_between"))
+
+    def test_gate_blocked_group_does_not_distort_q_between(self):
+        """k=2-Gruppe mit einem Heiß-Effekt verfälscht die Q-Aussage nicht."""
+        base = [
+            _effect(-0.6, 0.1, f"A{index}", design="twin") for index in range(3)
+        ] + [
+            _effect(0.8, 0.1, f"B{index}", design="cohort") for index in range(3)
+        ]
+        without_small = subgroups(base, "design")
+        hot = base + [_effect(3.0, 0.05, f"C{index}", design="case-control")
+                      for index in range(2)]
+        with_small = subgroups(hot, "design")
+        self.assertEqual(with_small.get("below_gate"), {"case-control": 2})
+        self.assertAlmostEqual(
+            with_small.get("q_between"), without_small.get("q_between"), places=10)
 
     def test_leave_one_out_reports_the_range(self):
         rows = [_effect(0.2, 0.05, "A"), _effect(0.25, 0.05, "B"),

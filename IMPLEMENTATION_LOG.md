@@ -727,3 +727,28 @@ Test), report 27/27. py_compile gruen.
 - Run-Resume (§10); Meta-Regression mit k-Gate (§5.2); Egger-Filter
   k>=10 (§5.3).
 - §9-Zielwerte sobald Goldstandard-Material da.
+
+## Sprint 26 (03.11.2026): k-Gate in der Gruppen-Metaregression (Auftrag v2 §5.2)
+
+### Neu umgesetzt
+- subgroups(…, min_per_group=3): Gruppen unter k=3 bleiben sichtbar im
+  ausgeschnittenen Baum, gehen aber NICHT in die zwischen-Gruppen-Aussage
+  (Q_between) ein; below_gate weist die gesperrten Gruppen mit k aus.
+- Referenzwert-Korrektur: der Gesamt-Schätzer der Q_between-Aussage wird
+  nur über die interpretierten Gruppen gerechnet - unter der Schwelle
+  gebliebene Heiß-Zeilen verfälschen die Aussage nicht mehr (durch einen
+  Präzedenz-Bug erkannt: `or` band schwächer als `in`).
+- Report: die Schwelle wird benannt ("k-Gate: Gruppen unter k = 3 ohne
+  Moderatoren-Ausssage"); wenn KEINE Gruppenaussage möglich ist, steht
+  deutlich "keine zwischen-Gruppen-Aussage möglich (k-Gate)".
+- Log-Delta korrigiert: §5.3 (Egger-Abwärtsbewertung erst ab k >= 10) ist
+  bereits im Bestand sauber umgesetzt (meta/grade.py, Schwelle _EGGER_P
+  k>=10) - kein neuer Code nötig.
+
+### Tests
+pooling 32/32 (2 k=2-Tests auf k=3 geschärft + 2 neue Gate-Tests),
+report/meta 28/28, grade 20/20, benchmark 25/25, e2e 2/2 (73 s).
+
+### Offen (Sprint 27+)
+- Run-Resume (§10).
+- §9-Zielwerte sobald Goldstandard-Material da.
