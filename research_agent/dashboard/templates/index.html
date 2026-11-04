@@ -6,7 +6,7 @@
 <title>Research Agent -- Dashboard</title>
 <script src="https://d3js.org/d3.v7.min.js"></script>
 <link rel="icon" href="data:,">
-<link rel="stylesheet" href="style.css?v=3">
+<link rel="stylesheet" href="style.css?v=6">
 </head>
 <body>
 
@@ -21,20 +21,17 @@
   </div>
 </div>
 
-<!-- CONTROLS -->
+<!-- LAUFSCHIENE (Steuerung + Phasen-Route) -->
 <div class="ctrl">
   <input type="text" id="topicInput" placeholder="Enter research topic, e.g. 'The Origin of Consciousness'..." />
   <button class="btn btn-go" onclick="doStart()">&#9654; Start</button>
   <button class="btn btn-warn" onclick="doPause()">&#10074;&#10074; Pause</button>
   <button class="btn" onclick="doResume()">&#9654; Resume</button>
   <button class="btn btn-stop" onclick="doStop()">&#9632; Stop</button>
-  <button class="btn" onclick="doExport()" style="margin-left:auto">Export Dataset</button>
+  <button class="btn" onclick="doExport()">Export Dataset</button>
   <button class="btn" onclick="doFinetune()">Export Fine-tune</button>
-</div>
 
-<div class="main">
-
-  <!-- PHASE BAR -->
+  <!-- PHASEN-ROUTE (Signatur: nummerierte Messstationen) -->
   <div class="phase-bar" id="phaseBar">
     <div class="phase" data-p="planning">Planning</div>
     <div class="phase" data-p="searching">Searching</div>
@@ -46,8 +43,11 @@
     <div class="phase" data-p="updating">Updating</div>
     <div class="phase active" data-p="idle">Idle</div>
   </div>
+</div>
 
-  <!-- STATS -->
+<div class="main">
+
+  <!-- STATUS-BAND -->
   <div class="stats">
     <div class="stat"><div class="num" id="sCycles">0</div><div class="lbl">Research Cycles</div></div>
     <div class="stat"><div class="num" id="sSources">0</div><div class="lbl">Sources</div></div>
