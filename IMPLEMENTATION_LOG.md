@@ -777,3 +777,31 @@ components 130/130, fulltext 39/39, e2e 2/2 (33 s).
 
 ### Offen (Sprint 28+)
 - §9-Zielwerte sobald Goldstandard-Material im Workspace liegt.
+
+## Goldstandard-Fundus (04.11.2026): Grundlage fuer Auftrags-v2 §9.2 angelegt
+
+### Neu umgesetzt
+- data/goldstandard/: README (Verifizierungsregeln), goldstandard.md
+  (Referenz-Metaanalysen zum Caffeine/RT-Benchmark mit verbatim-Zitaten),
+  goldstandard.csv (7 maschinenlesbare Einträge), pflegeblatt.md
+  (Toleranzregeln: Pool-Abweichung PASS bei |Dg| <= 0.15 + CI-Überschneidung,
+  Populations-Kontraste ohne Zahlenvergleich).
+- Ehrliche Statuskennzeichnung: 4 Einträge agent-geprüft (Verbatim-Quote
+  am Original gelesen), 2 agent-Sekundärquelle (Springer-Originale in der
+  Recherchesession 403; PMID angegeben), 1 Kontrasteintrag (Schlafentzug,
+  explizit kein Normwert). "Menschlich verifiziert" erst nach Abnickung
+  durch den Nutzer - bis dahin Warnstempel, kein stiller FAIL: Der
+  Benchmark-Harness (Sprint 28) behandelt nicht Verifiziertes informativ.
+- Bestes Vergleichsmaß im Fundus: Klove & Petersen 2025, RT
+  Hedges' g = 0.28 [0.21, 0.36], k = 31 (PMID 40335666).
+- Literatur berichtet fast ausschließlich Hedges's g/SMD, keine
+  Millisekunden-Pools - dokumentiert.
+
+### Tests
+CSV-Parse-Test (7 Zeilen, Spaltensatz vollständig) + keine
+Formatrestentaufe in den Dateien. Kein Produktionscode geändert.
+
+### Offen (Sprint 28)
+- Benchmark-Runner: goldstandard.csv gegen die Run-DB confuse
+  (Studienauswahl, Zahlensextraktion, Pool-Abweichung) und Report-Abschnitt.
+- Referenzwerte von Nutzer abnicken lassen (Status 'menschlich verifiziert').
