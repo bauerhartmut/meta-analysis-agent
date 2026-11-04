@@ -630,6 +630,8 @@ class DashboardHandler(SimpleHTTPRequestHandler):
         routes = {
             "/": self._serve_html,
             "/index.html": self._serve_html,
+            "/style.css": lambda: self._serve_static("style.css", "text/css; charset=utf-8"),
+            "/app.js": lambda: self._serve_static("app.js", "application/javascript; charset=utf-8"),
             "/api/status": lambda: self._json(api_status()),
             "/api/stats": lambda: self._json(api_stats()),
             "/api/hypotheses": lambda: self._json(api_hypotheses()),
@@ -697,16 +699,33 @@ class DashboardHandler(SimpleHTTPRequestHandler):
             content = TEMPLATE_PATH.read_text(encoding="utf-8")
             self.send_response(200)
             self.send_header("Content-Type", "text/html; charset=utf-8")
+            # Ohne cachen: die Seite reflektiert den aktiven Agent-Zustand.
+            self.send_header("Cache-Control", "no-cache")
             self.end_headers()
             self.wfile.write(content.encode("utf-8"))
         else:
             self.send_error(404, "Dashboard HTML not found")
+
+    def _serve_static(self, name, content_type):
+        """Statische Frontend-Dateien mit moderatem Cache (Kernbaustein
+        getrennter HTML/CSS/JS-Aufteilung)."""
+        p = TEMPLATE_PATH.parent / name
+        if not p.exists():
+            self.send_error(404, f"{name} not found")
+            return
+        content = p.read_bytes()
+        self.send_response(200)
+        self.send_header("Content-Type", content_type)
+        self.send_header("Cache-Control", "max-age=300")
+        self.end_headers()
+        self.wfile.write(content)
 
     def _json(self, data):
         body = json.dumps(data, default=str, ensure_ascii=False).encode("utf-8")
         self.send_response(200)
         self.send_header("Content-Type", "application/json; charset=utf-8")
         self.send_header("Access-Control-Allow-Origin", "*")
+        self.send_header("Cache-Control", "no-store")
         self.end_headers()
         self.wfile.write(body)
 

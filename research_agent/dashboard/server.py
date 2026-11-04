@@ -68,6 +68,10 @@ class DashboardHandler(SimpleHTTPRequestHandler):
 
         if path == "/" or path == "/index.html":
             self._serve_html()
+        elif path == "/style.css":
+            self._serve_static("style.css", "text/css; charset=utf-8")
+        elif path == "/app.js":
+            self._serve_static("app.js", "application/javascript; charset=utf-8")
         elif path == "/api/status":
             self._json_response(self._get_status())
         elif path == "/api/stats":
@@ -142,16 +146,33 @@ class DashboardHandler(SimpleHTTPRequestHandler):
             content = html_path.read_text(encoding="utf-8")
             self.send_response(200)
             self.send_header("Content-Type", "text/html; charset=utf-8")
+            # Ohne cachen: die Seite reflektiert den aktiven Agent-Zustand.
+            self.send_header("Cache-Control", "no-cache")
             self.end_headers()
             self.wfile.write(content.encode("utf-8"))
         else:
             self.send_error(404, "Dashboard HTML not found")
+
+    def _serve_static(self, name, content_type):
+        """Statische Frontend-Dateien mit moderatem Cache (HTML/CSS/JS
+        getrennt)."""
+        p = Path(__file__).parent / "templates" / name
+        if not p.exists():
+            self.send_error(404, f"{name} not found")
+            return
+        content = p.read_bytes()
+        self.send_response(200)
+        self.send_header("Content-Type", content_type)
+        self.send_header("Cache-Control", "max-age=300")
+        self.end_headers()
+        self.wfile.write(content)
 
     def _json_response(self, data):
         body = json.dumps(data, default=str, ensure_ascii=False).encode("utf-8")
         self.send_response(200)
         self.send_header("Content-Type", "application/json")
         self.send_header("Access-Control-Allow-Origin", "*")
+        self.send_header("Cache-Control", "no-store")
         self.end_headers()
         self.wfile.write(body)
 
