@@ -47,3 +47,27 @@ nul
 *.log
 data/*.db-wal
 data/*.db-shm
+
+# --- Kernbausteine: nicht oeffentlich ---
+# Das Herzstueck des Research-Agents (Orchestrierung, Statistik-Engine,
+# Extraktions-IP, Agentenlogik). Die zugehoerigen *_PRIVAT.md-Dateien
+# im Repo erlaeutern den jeweiligen Baustein.
+research_agent/orchestrator.py
+research_agent/config.py
+research_agent/database.py
+research_agent/work_queue.py
+research_agent/deep_research.py
+research_agent/report.py
+research_agent/meta/pooling.py
+research_agent/meta/extraction.py
+research_agent/meta/risk_of_bias.py
+research_agent/research/table_extractor.py
+research_agent/research/vision_table.py
+research_agent/research/extractor.py
+research_agent/research/search.py
+research_agent/research/engine.py
+research_agent/agents/debate.py
+research_agent/agents/roles.py
+research_agent/agents/devils_advocate.py
+research_agent/llm/engine.py
+research_agent/memory/store.py
