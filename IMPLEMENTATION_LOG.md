@@ -752,3 +752,28 @@ report/meta 28/28, grade 20/20, benchmark 25/25, e2e 2/2 (73 s).
 ### Offen (Sprint 27+)
 - Run-Resume (§10).
 - §9-Zielwerte sobald Goldstandard-Material da.
+
+## Sprint 27 (03.11.2026): Run-Resume - Fortsetzungs-Anschluss bei Neustart (Auftrag v2 §10a)
+
+### Neu umgesetzt
+- DB: additive Spalte research_sessions.previous_session_id (idempotentes
+  ALTER) + get_last_unfinished_session(topic): die zuletzt beendete,
+  NICHT abgeschlossene Session eines Themas (resource_limit_reached,
+  stopped, error) ist der Fortsetzungs-Anschluss; 'completed' zählt als
+  abgeschlossen und löst keinen Anschluss aus.
+- Orchestrator-Start: endete die letzte Runde unvollständig, verweist
+  die neue Session darauf (previous_session_id), der Status trägt
+  resumed_from (session_id/status/zyklen) und der Eröffnungs-Journal-Eintrag
+  benennt die Fortsetzung samt übernommener Zyklen. Der Backlog war schon
+  über Neustarts hinweg persistent (release_stale + seed), dies macht die
+  Kette sichtbar und dokumentiert.
+- test_components-Einklang: das Fake-Hypothesen-Item trägt jetzt die
+  pruefbaren Felder der §6.3-Aufnahmeprüfung (ein Item ohne
+  Falsifizierung bleibt korrekterweise speculative).
+
+### Tests
+backlog_work 50/50 (2 neue Resume-Tests + 2 DB-Roundtrip-Tests),
+components 130/130, fulltext 39/39, e2e 2/2 (33 s).
+
+### Offen (Sprint 28+)
+- §9-Zielwerte sobald Goldstandard-Material im Workspace liegt.

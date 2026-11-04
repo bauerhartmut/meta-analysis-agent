@@ -861,7 +861,14 @@ class TestConfidenceSnapshots(unittest.TestCase):
 
         class FakeLLM:
             def __init__(self):
-                self.snap = {"claim": "Testable new hypothesis", "confidence": 0.4}
+                # §6.3-Aufnahmeprüfung: das Fake trägt jetzt die
+                # pruefbaren Felder mit - ein Item ohne Falsifizierung
+                # bleibt 'speculative' und wuerde keinen Snapshot
+                # aufnehmen (das decken die backlog_work-Tests ab).
+                self.snap = {"claim": "Testable new hypothesis about the claimed effect in adults",
+                             "confidence": 0.4,
+                             "predictions": ["observed effect follows"],
+                             "falsification_conditions": ["effect absent"]}
             async def chat_json(self, *a, **k):
                 return self.snap
 

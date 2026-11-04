@@ -625,6 +625,73 @@ class TestEvidenceBudget(unittest.TestCase):
         self.assertEqual(orch._evidence_budget(6), 4)
 
 
+class TestRunResume(unittest.TestCase):
+    """Auftrag v2 §10a: endet die letzte Runde eines Themas unvollständig,
+    ist der Neustart eine dokumentierte Fortsetzung - Session-Kette via
+    previous_session_id, sichtbar im Status, kein stiller Neuanfang."""
+
+    def _save_session(self, db, sid, topic="test topic", status="stopped"):
+        db.save_session({
+            "id": sid, "topic": topic, "status": status,
+            "start_time": "2026-11-01T10:00:00+00:00",
+            "end_time": "2026-11-01T11:00:00+00:00",
+            "cycle_count": 14,
+            "sources_found": 74, "hypotheses_generated": 49,
+            "questions_answered": 0, "summary": "",
+        })
+
+    def test_unfinished_session_is_the_resume_anchor(self):
+        db = Database(":memory:")
+        self._save_session(db, "s_done", status="completed")
+        self.assertIsNone(db.get_last_unfinished_session("test topic"))
+        self._save_session(db, "s_stopped", status="stopped")
+        row = db.get_last_unfinished_session("test topic")
+        self.assertEqual(row["id"], "s_stopped")
+        # Anderes Thema ist kein Anschluss:
+        self.assertIsNone(db.get_last_unfinished_session("anderes Thema"))
+
+    def test_session_row_carries_the_previous_id(self):
+        db = Database(":memory:")
+        db.save_session({
+            "id": "s_child", "topic": "t", "status": "active",
+            "start_time": "2026-11-01T10:00:00+00:00",
+            "previous_session_id": "s_parent",
+        })
+        row = db.get_session("s_child")
+        self.assertEqual(row.get("previous_session_id"), "s_parent")
+
+    def test_restart_after_resource_limit_resumes_the_run(self):
+        orch = _orch()
+        self._save_session(orch.db, "s_limited",
+                           status="resource_limit_reached")
+
+        async def _noop_loop():
+            return
+
+        self.orch_loop = orch
+        orch._research_loop = _noop_loop
+        asyncio.run(orch.start("test topic"))
+
+        # Der neue Lauf verweist auf die unvollständige Runde:
+        current = orch.current_session
+        self.assertEqual(current.get("previous_session_id"), "s_limited")
+        resumed = orch.status.get("resumed_from") or {}
+        self.assertEqual(resumed.get("session_id"), "s_limited")
+        self.assertEqual(resumed.get("cycles"), 14)
+
+    def test_fresh_topic_starts_without_resume_hook(self):
+        orch = _orch()
+
+        async def _noop_loop():
+            return
+
+        orch._research_loop = _noop_loop
+        asyncio.run(orch.start("test topic"))
+        self.assertNotIn("resumed_from", orch.status)
+        self.assertEqual(orch.current_session.get("previous_session_id") or
+                         "", "")
+
+
 class _AdmissionFakeLLM:
     """LLM-Stub: liefert die.generateierten Hypothesen-Rohobjekte."""
 
