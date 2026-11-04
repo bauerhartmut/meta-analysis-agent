@@ -468,7 +468,7 @@ pooling/2-Integration; die Zahlen hier über das vorlaehn-Log.
 
 ### Tests
 - Neue Suite PromptSplitTest: 7 Tests (>=8-Zeichen-Framing-Abstand,
- 独立-second-reader-Guard, Identitäts-Frame, identische Return-Klausel,
+  unabhängiger Second-Reader-Guard, Identitäts-Frame, identische Return-Klausel,
   pass-2-Framing-Travel, Reihenfolge A-then-B, Versionspin).
 - Suits: extraction 27/27, components 128/128, validation 13/13,
   e2e 2/2 (38,4 s).
@@ -801,7 +801,52 @@ components 130/130, fulltext 39/39, e2e 2/2 (33 s).
 CSV-Parse-Test (7 Zeilen, Spaltensatz vollständig) + keine
 Formatrestentaufe in den Dateien. Kein Produktionscode geändert.
 
-### Offen (Sprint 28)
-- Benchmark-Runner: goldstandard.csv gegen die Run-DB confuse
-  (Studienauswahl, Zahlensextraktion, Pool-Abweichung) und Report-Abschnitt.
-- Referenzwerte von Nutzer abnicken lassen (Status 'menschlich verifiziert').
+## Sprint 28 (04.11.2026): Benchmark-Runner fuer den Goldstandard-Abgleich (Auftrag v2 §9.2/§9.3)
+
+### Neu umgesetzt
+- research_agent/meta/benchmark.py:
+  - resolve_benchmark_csv: der Fundus liegt neben der Run-DB
+    (data/<name>.db -> data/goldstandard/goldstandard.csv); ohne Fundus
+    entfaellt der Berichtsabschnitt schweigend.
+  - load_benchmark_entries/_normalize_entry: toleranter CSV-Lesung;
+    Zahlen werden auf wert_num/k_num normalisiert, Unlesbares wird None
+    (Eintrag bleibt sichtbar, kein stiller Verlust).
+  - run_benchmark: laedt study_effects (nur lesend) und baut die
+    Analyse ueber build_analysis(rows, outcomes=None); Abgleich pro
+    Fundus-Eintrag gegen die gepoolte Hedges'-g-Gruppe per deterministischem
+    Alias-Match (Reaktionszeit/Genauigkeit/Erfolgsrate).
+  - Toleranzen des Pflegeblatts fest verdrahtet: PASS bei |D g| <= 0.15
+    UND CI-Ueberschneidung, grenzwertig <= 0.30, darueber Abweichung.
+  - Decken-Warnung (informativ): Lauf-k < Fundus-k wird im
+    Ergebnis notiert (publizierte Metaanalyse deckt mehr ab).
+  - Ehrlichkeitsregel: Referenzen ohne Status 'menschlich verifiziert'
+    erzeugen keinen harten FAIL (hard_fails zaehlt nur verifizierte
+    Abweichungen); Ergebnistraeger bekommen den Warnstempel.
+  - Zahlensextraktion: Anteil der Zeilen mit Wert, die SE oder CI tragen
+    (Extraktionsdeckung); Zeilen ohne Wert zaehlen, werden nicht gepoolt.
+  - format_benchmark_lines: Berichtstext (Zaehlungen + Einzelergebnisse).
+- research_agent/report.py: neuer Abschnitt 'Goldstandard-Abgleich (§9.2)'
+  nach der Meta-Synthese; Fehlschlag nur als logger.debug, der Bericht
+  endet nicht am Benchmark.
+
+### Tests
+- research_agent/tests/test_benchmark.py (11 Tests): PASS-Grenze mit
+  CI-Ueberschneidung, nicht verifizierte Abweichung ohne harten FAIL,
+  verifizierte Abweichung zaehlt als harter FAIL, Ergebnis ohne gepoolte
+  Gruppe (kein_gepools), Richtungs-Eintrag ohne Zahlenvergleich,
+  Extraktionsdeckung zaehlt wertlose Zeilen, Berichtszeilen spiegeln die
+  Massstaebe wider, fehlender Fundus = nicht verfuegbar,
+  In-Memory-DB ohne Fundusauflauf, Fundus neben DB-Datei wird gefunden,
+  toleranter CSV-Parser.
+- Suite-Ergebnis: 11/11; danach regression: test_report.py +
+  test_meta_report.py 56/56, test_e2e.py 2/2.
+- Erster echter Abgleich (readonly) gegen die Kaffee-Runde 972eac:
+  7 Fundus-Eintraege - 5x kein gepoolter Wert im Lauf, 2x kein
+  Zahlenvergleich; Extraktionsdeckung 0% (2 Zeilen mit Wert, keine mit
+  SE/CI). Stimmig mit der Live-Beobachtung (8 Effektzeilen, 7 ohne
+  SE/CI) - der Benchmark macht die Luecke maschinenpruefbar.
+
+### Offen
+- Referenzwerte von Nutzer abnicken lassen (Status
+  'menschlich verifiziert'); bis dahin bleiben alle Fundus-Vergleiche
+  informativ mit Warnstempel.
