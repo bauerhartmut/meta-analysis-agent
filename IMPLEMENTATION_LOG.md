@@ -850,3 +850,59 @@ Formatrestentaufe in den Dateien. Kein Produktionscode geändert.
 - Referenzwerte von Nutzer abnicken lassen (Status
   'menschlich verifiziert'); bis dahin bleiben alle Fundus-Vergleiche
   informativ mit Warnstempel.
+
+## Sprint 29 (04.11.2026): Vision-Tabellenlesung via TUDaGPT (Auftrag v2 §2.1)
+
+### Was bewiesen wurde (Probe, readonly)
+- Endpoint-Analyse: TUDaGPT (tudagpt2.hrz.tu-darmstadt.de/api) listet
+  20 Modelle; vision-faehig ist 'hessian.ai/qwen3-vl-30b-a3b-instruct-awq'.
+  Basistext-Lauf des Agents ist bereits komplett auf TUDaGPT
+  (config.py: llm_backend tudagpt, Key via TUDAGPT_API_KEY aus .env).
+- Renderer: PyMuPDF und Pillow scheitern unter msys64 (kein Wheel);
+  pypdfium2 + numpy + eigener zlib-PNG-Encoder (kein Pillow noetig)
+  rastern funktionierend.
+- Ground-Truth-Fixture (table_fixture.pdf): ZWEI unabhaengige Lesungen
+  (Temperature 0) lesen Tabelle 2 exakt: -22.3/6.2/[-34.4, -10.2] und
+  -14.1/5.0/[-23.9, -4.3] - inklusive SE und CI, d. h. exakt die Deckung,
+  die im Live-Run 972eac bei 0% lag.
+- Bounding-Boxen: Qwen3-VL liefert Zeilen-Boxes auf 0-1000-Skala
+  (bbox_row) - der Lesungsausschnitt ist nachpruefbar (Evidenz-Anker
+  fuer Sprint 30).
+- Bekannte Macke: das Modell klebt gern alle Zeilen in EIN Objekt mit
+  Doppel-Keys (label/effect mehrfach); ein naiver json.loads verloere
+  die erste Zeile still. Ebenso faellt Kopf-Lesen ('Caffeine'/'Placebo')
+  als zeile ohne Zahlen in der Ausgabe auf.
+
+### Neu umgesetzt
+- research_agent/research/vision_table.py:
+  - render_pdf_pages: pypdfium2-Rendering + eigener PNG-Encoder
+    (png_bytes, zlib-only, kein Pillow).
+  - crop_bounds: 0-1000-Box -> Pixel-Grenzen mit 2% Sicherheitsrand.
+  - parse_vision_rows: zeilenweiser Regex-Leser, verankert am 'label'-Feld;
+    ueberlebt Doppel-Keys UND sauberes JSON; null-Felder bleiben None.
+  - rows_equal/compare_double_read: Doppelleitung - Zeilen-Paare muessen
+    numerisch identisch sein (tol=0), sonst bleiben sie disputed;
+    nichts wird gemittelt, nichts still korrigiert. Zeilen ohne irgendeine
+    Zahl (Kopf) fallen weg; halbgelesene Zeilen (eine Zahl, Rest None)
+    bleiben disputed.
+  - VisionTableReader (aiohttp): read_once + read_double; Key nur im
+    Authorization-Header, nie geloggt; HTTP-Fehler -> kein Crash, sauber
+    0 Zeilen.
+- research_agent/tests/test_vision_table.py (13 Tests): PNG-Kopferhalten
+  (Breite/Hoehe bei Byte 16..24), Fixture-Rendering, Doppel-Key-Parsen
+  (Probe-Ausschnitt), null-Felder, Kauderwelsch -> 0 Zeilen,
+  uebereinstimmende/disputed/ungleiche Zeilenzahlen, Kopfzeilen-Filter,
+  0-1000-Box-Mapping mit Rand, HTTP 401/200-Fallback mit Fake-Session.
+- Suite-Ergebnis: 13/13.
+
+### Offen (Sprint 30)
+- Orchestrator-Integration: Effekt-Work-Item ruft den Reader als
+  Fallback, wenn der Textlayer-Weg 0 poolbare Zeilen liefert
+  (Moment: _work_item_effect_extraction, orchestrator.py:3479).
+- DB-Kontrakt: neue Evidenzart 'vision_table_row' (Bild-Kuerzung mit
+  bbox statt nur Quote-Span); Verbatim-Vertrag wird ERWEITERT, nicht
+  umgeben - unuebereinstimmende Doppelleitungen werden nie gepoolt.
+- Modellschritt downdaten (config tudagpt_model nominell Textmodell;
+  Vision-Lesung nutzt konstant VISION_MODEL).
+- Beweis: Testlauf mit Extraktionsdeckung > 0%, weiterhin der
+  Benchmark gegen den Goldstandard-Fundus.
