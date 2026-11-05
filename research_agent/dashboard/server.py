@@ -17,6 +17,8 @@ class ThreadingHTTPServer(ThreadingMixIn, HTTPServer):
     daemon_threads = True
 from urllib.parse import urlparse, parse_qs
 
+from .api_manifest import capabilities as _api_capabilities
+
 logger = logging.getLogger(__name__)
 
 
@@ -80,8 +82,17 @@ class DashboardHandler(SimpleHTTPRequestHandler):
             self._json_response(self._get_coverage())
         elif path == "/api/metaanalysis":
             self._json_response(self._get_metaanalysis())
+        elif path == "/api/capabilities":
+            # Eine Quelle der Uhr (Claude-Vorschlag 9): das UI fragt die
+            # Endpunkt-Sichtbarkeit einmal, statt 404 als Rätsel zu raten.
+            self._json_response(_api_capabilities("live"))
         elif path == "/api/hypotheses":
             self._json_response(self._get_hypotheses())
+        elif path.startswith("/api/hypothesis/"):
+            # Contract (Vorschlag 9): dieselbe Detail-Route wie im Standalone
+            # — der Contract-Test hindert das Wiederauftauchen des Loches.
+            hyp_id = path.split("/api/hypothesis/", 1)[1]
+            self._json_response(self._get_hypothesis_detail(hyp_id))
         elif path == "/api/questions":
             self._json_response(self._get_questions())
         elif path == "/api/sources":
@@ -399,6 +410,34 @@ class DashboardHandler(SimpleHTTPRequestHandler):
         if self.orchestrator:
             return self.orchestrator.db.get_hypotheses(limit=50)
         return []
+
+    def _get_hypothesis_detail(self, hyp_id: str):
+        """Detail einer Hypothese inkl. Evidence (Contract: in BEIDEN Servern).
+
+        Der Standonly bietet dieselbe Route (api_hypothesis_detail); der
+        Live-Server liest ueber die Orchestrator-DB statt direkt.
+        """
+        if not self.orchestrator:
+            return {"error": "Hypothesis detail needs the live orchestrator"}
+        db = self.orchestrator.db
+        try:
+            hyp = db.get_hypothesis(hyp_id)
+        except Exception as e:
+            return {"error": f"Hypothesis read failed: {e}"}
+        if not hyp:
+            return {"error": "Hypothesis not found"}
+        for field in ("supporting_evidence", "contradicting_evidence",
+                      "alternative_explanations", "predictions",
+                      "falsification_conditions"):
+            try:
+                hyp[field] = json.loads(hyp.get(field) or "[]")
+            except (json.JSONDecodeError, TypeError):
+                hyp[field] = []
+        try:
+            hyp["evidence_records"] = db.get_evidence_for_hypothesis(hyp_id)
+        except Exception:
+            hyp["evidence_records"] = []
+        return hyp
 
     def _get_questions(self):
         if self.orchestrator:

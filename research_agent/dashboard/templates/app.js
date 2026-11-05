@@ -1,6 +1,17 @@
 const API='';
 let lastPhase='', feedItems=[], pollTimer, lastSources=[];
 
+// === CAPABILITIES (Vorschlag 9): Endpunkt-Sichtbarkeit aus EINER Quelle ===
+// Das UI fragt GET /api/capabilities einmal beim Boot. Endpunkte mit
+// "live only" werden hier lokal abgeschirmt, statt Poll-404-Zyklen zu
+// fahren. Fehlt das Manifest, bleibt das alte Verhalten (Degradierung).
+let dashCaps=null;
+(async()=>{try{const c=await fetch(API+'/api/capabilities');if(c.ok)dashCaps=await c.json();}catch(e){}})();
+function liveOnly(path){
+  return !!dashCaps && Array.isArray(dashCaps.live_only)
+         && dashCaps.live_only.includes(path);
+}
+
 // === THEME (hell/dunkel): gespeicherte Wahl > Systemvorgabe > dunkel ===
 (function(){
   const stored=localStorage.getItem('dash-theme');
@@ -714,7 +725,7 @@ function renderExperiments(d){
 
 let parStatsUnavailable=false;
 async function pollParallelStats(){
-  if(parStatsUnavailable) return;
+  if(parStatsUnavailable||liveOnly('/api/parallel-stats')) return;
   try{
     const r=await fetch(API+'/api/parallel-stats');
     if(r.status===404){
@@ -1247,6 +1258,7 @@ setInterval(pollMonitoring, 3000);
 async function pollCoverage(){
   const covTab=document.querySelector('.tab[data-tab="coverage"]');
   if(!covTab||!covTab.classList.contains('active'))return;
+  if(liveOnly('/api/coverage'))return;
   try{
     const r=await fetch(API+'/api/coverage');const d=await r.json();
     const set=(id,v)=>{const el=document.getElementById(id);if(el)el.textContent=v;};
@@ -1275,6 +1287,7 @@ setInterval(pollCoverage,3000);
 async function pollMeta(){
   const tab=document.querySelector('.tab[data-tab="meta"]');
   if(!tab||!tab.classList.contains('active'))return;
+  if(liveOnly('/api/metaanalysis'))return;
   try{
     const r=await fetch(API+'/api/metaanalysis');const d=await r.json();
     const set=(id,v)=>{const el=document.getElementById(id);if(el)el.textContent=v;};

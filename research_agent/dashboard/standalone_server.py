@@ -19,6 +19,20 @@ SCRIPT_DIR = Path(__file__).parent.resolve()
 PROJECT_DIR = SCRIPT_DIR.parent.parent  # AIResearch root
 TEMPLATE_PATH = SCRIPT_DIR / "templates" / "index.html"
 
+# Sichtbarkeit der API-Routen aus EINER Quelle (Claude-Vorschlag 9):
+# das Manifest wird auch im Skriptmodus geladen, damit der Standalone
+# Server /api/capabilities ehrlich beantworten kann statt 404-Raten.
+if str(PROJECT_DIR) not in sys.path:
+    sys.path.insert(0, str(PROJECT_DIR))
+try:
+    from research_agent.dashboard.api_manifest import (
+        capabilities as _api_capabilities,
+        LIVE_ONLY_APIS as _LIVE_ONLY_APIS,
+    )
+except Exception:  # Manifest fehlt: Server laeuft trotzdem (ohne Caps)
+    _api_capabilities = None
+    _LIVE_ONLY_APIS = ()
+
 
 def _topic_databases():
     """Per-topic databases in <root>/data, newest first.
@@ -648,6 +662,9 @@ class DashboardHandler(SimpleHTTPRequestHandler):
             "/api/confidence-history": lambda: self._json(api_confidence_history()),
             "/api/llm-stats": lambda: self._json(api_llm_stats()),
             "/api/health": lambda: self._json({"status": "ok"}),
+            "/api/capabilities": lambda: self._json(
+                _api_capabilities("standalone") if _api_capabilities
+                else {"server": "standalone", "manifest": "missing"}),
         }
 
         handler = routes.get(path)
@@ -656,6 +673,12 @@ class DashboardHandler(SimpleHTTPRequestHandler):
         elif path.startswith("/api/hypothesis/"):
             hyp_id = path.split("/api/hypothesis/", 1)[1]
             self._json(api_hypothesis_detail(hyp_id))
+        elif path in _LIVE_ONLY_APIS:
+            # Ehrlich statt 404: Endpunkt bekannt, aber nicht unterstützt.
+            # das UI fragt /api/capabilities beim Boot und ruft diese
+            # Pfade trotzdem nicht mehr (kein Poll-404-Zyklus mehr).
+            self._json({"supported": False, "server": "standalone",
+                        "reason": "live only (Claude-Vorschlag 9)"})
         else:
             self.send_error(404)
 
