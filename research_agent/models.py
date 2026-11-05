@@ -152,6 +152,13 @@ class StudyEffect:
     time_point: str = ""
     # Study-level link (Phase 2); '' = assignment unknown and unclaimed.
     study_id: str = ""
+    # Kohorten-Verbindung (Claude-Vorschlag 6): nur gesetzt, wenn der Text
+    # die Zuordnung WOERTLICH belegt (z. B. "UK Biobank cohort A"); '' =
+    # unbekannt, nie geschätzt. Zeilen mit derselben kohort_id sind
+    # abhängige Schätzungen, auch wenn sie aus verschiedenen DOIs
+    # kommen - das Pooling gruppiert und weist die Abhängigkeit aus,
+    # statt die Teilnehmer still doppelt zu zählen.
+    cohort_id: str = ""
     quote: str = ""
     quote_start: int = -1
     quote_end: int = -1
