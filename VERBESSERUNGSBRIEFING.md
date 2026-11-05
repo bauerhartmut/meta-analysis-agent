@@ -193,7 +193,7 @@ Workplan als viele Slogans.
   Seite, Region), Ausschlusslexikon (was gilt nicht als Verbatim), Blick auf neue Tests.
 - **Doppel-Lesung als Architekturprinzip:** Lohnt sie sich generisch — z. B. auch für
   Text-Tabellenlesung (Sprint 22–24-Pfad) oder Web-Auszüge? Koste-Nutzen-Abwägung.
-- **Benchmarks ohne Selbstbetrug:** Sprint 28 misst den Agenten an Fixtures, an denen
+- **Benchmarks ohne Selbstbetrug:** Sprint 28 misst den Agenten — aber wie verhindern
   wir Overfitting auf den eigenen Goldstandard (das ist die eigentliche Benchmark-Frage)?
 - **LLM-Kosten-Governance:** TUDaGPT-Endpunkt, Vision-Aufrufe sind teuer — Budget-
   Regler?teborg­stop per Session? Nachweisbarer Spar-Effekt (Report-artig)?
