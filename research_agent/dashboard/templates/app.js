@@ -675,7 +675,7 @@ function renderWorkQueue(d){
   if(next){
     const items=q.next||[];
     next.innerHTML=items.length
-      ? items.map(i=>`<div style="padding:4px 10px;background:var(--bg);border-radius:6px;font-size:11px;color:var(--t2)">[${i.kind}] ${(i.title||'').slice(0,110)}</div>`).join('')
+      ? items.map(i=>`<div style="padding:4px 10px;background:var(--bg);border-radius:6px;font-size:11px;color:var(--t2)">[${i.kind}]        ${esc((i.title||'').slice(0,110))}</div>`).join('')
       : '<div style="padding:4px 10px;background:var(--bg);border-radius:6px;font-size:11px;color:var(--t3)">Queue empty</div>';
   }
 }

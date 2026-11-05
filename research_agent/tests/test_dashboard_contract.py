@@ -111,6 +111,12 @@ class TestAppJsContract(unittest.TestCase):
         self.assertIn("liveOnly('/api/coverage')", text)
         self.assertIn("liveOnly('/api/metaanalysis')", text)
 
-
-if __name__ == "__main__":
-    unittest.main()
+    def test_jede_title_interpolation_hat_schutz(self):
+        """Anti-XSS (Claude-Vorschlag 2, UI-Teil): Quellentitel stammen
+        aus Web bzw. PDFs - ein "<script>" im Titel darf NIE roh in
+        innerHTML landen. Der statische Test erzwingt esc() auf JEDE
+        .title-Interpolation in app.js."""
+        text = _read(APP_JS)
+        for m in re.finditer(r"\$\{([^}]*\.title[^}]*?)\}", text):
+            self.assertIn("esc(", (m.group(1) or m.group(0)),
+                          f"unescapte Titel-Interpolation: {m.group(0)[:70]}")
