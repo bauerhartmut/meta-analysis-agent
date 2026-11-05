@@ -967,3 +967,24 @@ Fall ist durch die Doppel-Lesung allein nicht abfangbar (fehlerkorreliert)
 - Vorschlag: Leserstaffelung (z. B. Ganzseite vs Crop) fuer die
 zweite Lesung.
 
+
+## Sprint 30 restend (05.11.2026): Textlayer-Gegenprobe fuer Vision-Zeilen
+
+Dritte Pruef quelle (Claude-Vorschlag, Rueckstand aus den Grenzen): Hat
+die PDF eine Textebene, prueft sie die Doppelleitung nach. Die Gegenprobe
+liest NACH definition arbeite Normalisierung die Rohlesungen (effect,
+se) und sucht jede Zahl WORDBOUND im klaren Normalisierten dokumenttext:
+Teilzeichensuche (0.53 in 0.532) ist KEIN Treffer. Fehlt eine Zahl,
+steht die Zeile disputed - nicht mitteln, nicht still korrigiert; die
+fehlenden Felder stehen in _text_layer_check nachklaerbar. Bereits
+disputed Zeilen bekommen KEINE gute Schrift - disputed bleibt disputed.
+
+Suchseiten-Regel: '- 0.53' im Fliesstext ist dasselbe Minus wie '-0.53'
+in einer Zelle (nur fuer die Suche, nicht fuer den Zeilenvergleich).
+
+7 neue Tests (test_text_layer_check.py): Genau-Treffer, Ziffern-
+fehler 发现 disput, Teilzeichenkette kein Treffer, disputed bleibt,
+leerer Text passierbar, U+2212 normalisiert. 46 Vision-Suizide gruen.
+Verdrahtet im orchestrator `_vision_fallback_effects` (lokal): Gegen-
+probe laeuft nur bei page_status='verified' und vorhandenem Text;
+Abweichung dreht page_status auf disputed.
