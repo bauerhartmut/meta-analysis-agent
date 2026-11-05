@@ -983,8 +983,8 @@ Suchseiten-Regel: '- 0.53' im Fliesstext ist dasselbe Minus wie '-0.53'
 in einer Zelle (nur fuer die Suche, nicht fuer den Zeilenvergleich).
 
 7 neue Tests (test_text_layer_check.py): Genau-Treffer, Ziffern-
-fehler 发现 disput, Teilzeichenkette kein Treffer, disputed bleibt,
-leerer Text passierbar, U+2212 normalisiert. 46 Vision-Suizide gruen.
+fehler -> disputed, Teilzeichenkette kein Treffer, disputed bleibt,
+leerer Text passierbar, U+2212 normalisiert. 46 Vision-Suiten gruen.
 Verdrahtet im orchestrator `_vision_fallback_effects` (lokal): Gegen-
 probe laeuft nur bei page_status='verified' und vorhandenem Text;
 Abweichung dreht page_status auf disputed.
