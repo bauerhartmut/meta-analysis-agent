@@ -159,19 +159,37 @@ class ScriptRunner:
         timed_out = False
         stdout = stderr = ""
         exit_code = -1
+        job_attached = False
         try:
-            completed = subprocess.run(
+            from .win_job import attach_job_limits
+            # Kindprozess statt subprocess.run: So kann der OS-Limit-Job
+            # (Vorschlag 2: fst concreto Speichergrenze + Kill-on-Close)
+            # an das HANDLE investiert werden, bevor der Code laeuft.
+            child = subprocess.Popen(
                 [self.python, "-I", str(wrapper_path), str(script_path)],
                 cwd=str(directory),
                 env=self._environment(),
                 stdin=subprocess.DEVNULL,
-                capture_output=True,
+                stdout=subprocess.PIPE,
+                stderr=subprocess.PIPE,
                 text=True,
-                timeout=limit,
             )
-            stdout = (completed.stdout or "")[: self.max_output]
-            stderr = (completed.stderr or "")[: self.max_output]
-            exit_code = completed.returncode
+            job_attached = attach_job_limits(child)
+            try:
+                out, errout = child.communicate(timeout=limit)
+            except subprocess.TimeoutExpired:
+                child.kill()
+                out, errout = child.communicate()
+                raise
+            stdout = (out or "")[: self.max_output]
+            stderr = (errout or "")[: self.max_output]
+            exit_code = child.returncode
+            if not job_attached:
+                import logging
+                logging.getLogger(__name__).debug(
+                    "Job-Object-Begrenz nicht angewandt (nicht-Windows "
+                    "oder API-Misserfolg): die Import-Allowlist bleibt "
+                    "die einzige Schutzschicht fuer dieses Kind.")
         except subprocess.TimeoutExpired as exc:
             timed_out = True
             stdout = (exc.stdout or "")[: self.max_output] if isinstance(exc.stdout, str) else ""
