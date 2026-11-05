@@ -30,6 +30,7 @@ from research_agent.research.vision_table import (
 )
 from research_agent.meta.pooling import standardize
 from research_agent.meta import validation as _validation
+from research_agent.orchestrator import ResearchOrchestrator
 
 
 def _row(effect=None, se=None, ci_low=-0.2, ci_high=0.8, label="row"):
@@ -191,6 +192,63 @@ class TestEvidenzAggregat(unittest.TestCase):
 async def _ev_read(pdf, page, png, reader):
     from research_agent.research.vision_table import read_table_evidence
     return await read_table_evidence(pdf, page, png, reader)
+
+
+from types import SimpleNamespace
+
+
+def _textlayer_row(disputed=False, rejection="", se=None, ci_low=None,
+                   ci_high=None):
+    """Text-Layer-Zeile als Attr-Objekt - die Extraktion liefert Objekte
+    (StudyEffect), nicht Dicts; SimpleNamespace reicht fuer den Trigger."""
+    return SimpleNamespace(
+        disputed=disputed, rejection_reason=rejection,
+        se=se, ci_low=ci_low, ci_high=ci_high)
+
+
+class TestVisionFallbackTrigger(unittest.TestCase):
+    """Netzlauffund 2026-11-05: der Fallback lief nur bei `not rows`.
+
+    Der Melatonin-Netzlauf 2 produzierte Zeilen ohne Effektwert und ohne
+    SE/CI - und die Bildlesung blieb im ganzen Lauf bei 0 Aufrufen, obwohl
+    VISION_TABLE_ENABLED an war. Diese Faelle pinnen den erweiterten
+    Trigger (_vision_fallback_due).
+    """
+
+    def _due(self, rows, pdf="/a/b.pdf", enabled=True):
+        return ResearchOrchestrator._vision_fallback_due(rows, pdf, enabled)
+
+    def test_rows_leer_durch_pdf_fallt_fallback(self):
+        self.assertTrue(self._due([]))
+        self.assertTrue(self._due(None))
+
+    def test_nur_effektlose_zeilen_verlangen_fallback(self):
+        rows = [_textlayer_row()] * 3
+        self.assertEqual(ResearchOrchestrator._count_poolable(rows), 0)
+        self.assertTrue(self._due(rows))
+
+    def test_eine_poolbare_zeile_verhindert_fallback(self):
+        rows = [_textlayer_row(), _textlayer_row(se=0.1)]
+        self.assertEqual(ResearchOrchestrator._count_poolable(rows), 1)
+        self.assertFalse(self._due(rows))
+
+    def test_ci_traegt_als_poolbar_ohne_se(self):
+        rows = [_textlayer_row(ci_low=-0.2, ci_high=0.8)]
+        self.assertEqual(ResearchOrchestrator._count_poolable(rows), 1)
+        self.assertFalse(self._due(rows))
+
+    def test_disputed_und_rejection_zaehlen_nicht_als_poolbar(self):
+        rows = [_textlayer_row(disputed=True, se=0.1)]
+        self.assertEqual(ResearchOrchestrator._count_poolable(rows), 0)
+        rows2 = [_textlayer_row(rejection="kein Effektwert gelesen", se=0.1)]
+        self.assertEqual(ResearchOrchestrator._count_poolable(rows2), 0)
+        self.assertTrue(self._due(rows))
+        self.assertTrue(self._due(rows2))
+
+    def test_ohne_pdf_oder_ohne_enabled_kein_fallback(self):
+        self.assertFalse(self._due([], pdf=""))
+        self.assertFalse(self._due([], enabled=False))
+        self.assertFalse(self._due([_textlayer_row(se=0.1)], pdf=""))
 
 
 def _vision_row(status, **kw):
