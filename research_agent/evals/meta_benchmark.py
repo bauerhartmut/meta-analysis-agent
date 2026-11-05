@@ -55,6 +55,45 @@ def _now() -> str:
     return datetime.now(timezone.utc).isoformat()
 
 
+# Claude-Vorschlag 8: ein Benchmark-Ergebnis ist nur nachvollziehbar, wenn
+# es seine eigene Geschichte traegt. Der Config-Fingerprint schliesst
+# SECRET-Felder bewusst aus - nur Laufverhalten, niemals Zugaenge.
+_CONFIG_FINGERPRINT_FIELDS = (
+    "max_research_cycles", "research_interval", "fulltext_per_cycle",
+    "analysis_backfill_per_cycle", "contradiction_pairs_per_cycle",
+    "source_eval_per_cycle", "source_relevance_threshold",
+    "llm_failure_threshold", "vision_table_enabled",
+    "vision_max_pages_per_run", "run_token_budget",
+)
+
+
+def _commit_hash() -> str:
+    """Kurzer Commit-Hash des aktuellen Bestands (unbekannt = 'unknown')."""
+    try:
+        import subprocess
+        out = subprocess.run(
+            ["git", "rev-parse", "HEAD"], capture_output=True, text=True,
+            timeout=10)
+        if out.returncode == 0 and out.stdout.strip():
+            return out.stdout.strip()[:12]
+    except Exception:
+        pass
+    return "unknown"
+
+
+def _config_fingerprint() -> str:
+    """sha256 ueber WHITELIST-Configfelder - KEINE Keys, niemals."""
+    try:
+        from ..config import get_config
+        cfg = get_config()
+        parts = [f"{k}={getattr(cfg, k, None)}"
+                 for k in _CONFIG_FINGERPRINT_FIELDS]
+        return hashlib.sha256(
+            "|".join(parts).encode("utf-8")).hexdigest()[:16]
+    except Exception:
+        return "unknown"
+
+
 def validate_reference_case(case: Dict[str, Any]) -> List[str]:
     """Field-level contract check; returns the list of violations."""
     errors: List[str] = []
@@ -181,6 +220,7 @@ def evaluate_case(case: Dict[str, Any], db_path: str) -> Dict[str, Any]:
     exact = 0
     provenance_ok = 0
     checks = 0
+    poolable_hits = 0
     critical_errors: List[str] = []
     for st in gold_studies:
         if st["gold"] != "include":
@@ -191,13 +231,22 @@ def evaluate_case(case: Dict[str, Any], db_path: str) -> Dict[str, Any]:
         for gold_eff in (st.get("extracted_effects") or []):
             checks += 1
             row = conn.execute(
-                "SELECT effect, ci_low, quote_start, source_text_id "
+                "SELECT effect, se, ci_low, ci_high, quote_start, "
+                "source_text_id "
                 "FROM study_effects WHERE source_id = ? AND "
                 "LOWER(TRIM(outcome)) = LOWER(?) AND disputed = 0 "
                 "AND TRIM(rejection_reason) = ''", (
                     src, gold_eff.get("outcome", ""))).fetchone()
             if not row:
                 continue
+            # Claude-Vorschlag 8, Fehlerart Pooling: die Zeile wurde
+            # gelesen und ist nicht disputed - aber ohne Praezision
+            # verhindert sie das Poolen. Getrennt ausgewiesen, nicht in
+            # 'extraction' verdeckt.
+            if (row["se"] is not None
+                    or (row["ci_low"] is not None
+                        and row["ci_high"] is not None)):
+                poolable_hits += 1
             try:
                 want = float(gold_eff["effect"])
             except (KeyError, ValueError, TypeError):
@@ -222,6 +271,16 @@ def evaluate_case(case: Dict[str, Any], db_path: str) -> Dict[str, Any]:
         "provenance": (provenance_ok / (tp or 1)) if checks else None,
         "critical_errors": critical_errors,
         "critical_error_count": len(critical_errors),
+    }
+    # Fehlerart-Ausweis (Claude-Vorschlag 8), getrennt:
+    # - Auswahl: screening.recall/missed (oben)
+    # - Extraktion: extraction.exact/critical_errors (oben)
+    # - Pooling: hier - Zeile gelesen, aber Praezision oder Status
+    #   verhindern das Poolen.
+    out["pooling"] = {
+        "expected": checks,
+        "poolable": poolable_hits,
+        "not_poolable": checks - poolable_hits,
     }
     conn.close()
     return out
@@ -262,6 +321,10 @@ def run_benchmark(reference_paths: List[str], db_path: str,
                   if r.get("extraction", {}).get("exact") is not None]
         crit = sum(r["extraction"]["critical_error_count"]
                    for r in results if r.get("extraction"))
+        pooled_expected = [int(r["pooling"]["expected"]) for r in results
+                           if r.get("pooling")]
+        pooled_ok = [int(r["pooling"]["poolable"]) for r in results
+                     if r.get("pooling")]
         return {
             "cases": len(results),
             "screening_recall_mean": sum(recs) / len(recs) if recs else None,
@@ -270,11 +333,18 @@ def run_benchmark(reference_paths: List[str], db_path: str,
             "extraction_exact_mean": (sum(exacts) / len(exacts))
                                     if exacts else None,
             "critical_error_total": crit,
+            "pooling_expected_mean": (sum(pooled_expected)
+                                      / len(pooled_expected))
+                                     if pooled_expected else None,
+            "pooling_poolable_mean": (sum(pooled_ok) / len(pooled_ok))
+                                     if pooled_ok else None,
         }
 
     summary = {
         "generated": _now(),
         "db": db_path,
+        "commit_hash": _commit_hash(),
+        "config_fingerprint": _config_fingerprint(),
         "cases_loaded": len(cases),
         "cases_rejected": rejected,
         "dev": _agg(dev_results),

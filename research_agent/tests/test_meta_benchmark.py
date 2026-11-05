@@ -179,6 +179,49 @@ class BenchmarkHarnessTest(unittest.TestCase):
         self.assertEqual(bucket["cases"], 1)
         self.assertEqual(bucket["critical_error_total"], 0)
 
+    # --------------------------------- Fehlerart Pooling + Herkunft
+
+    def test_pooling_ohne_praezision_nicht_poolbar(self):
+        res = evaluate_case(self.ref_case, self.db_path)
+        pooling = res["pooling"]
+        self.assertEqual(pooling["expected"], 1)
+        # e1 hat effect, aber kein se und kein CI: gelesen, nicht poolbar
+        self.assertEqual(pooling["poolable"], 0)
+        self.assertEqual(pooling["not_poolable"], 1)
+
+    def test_pooling_praezise_zeile_ist_poolbar(self):
+        conn = sqlite3.connect(self.db_path)
+        conn.execute("UPDATE study_effects SET se=0.1, ci_low=0.2, ci_high=0.6 "
+                     "WHERE id='e1'")
+        conn.commit()
+        conn.close()
+        res = evaluate_case(self.ref_case, self.db_path)
+        self.assertEqual(res["pooling"]["poolable"], 1)
+        self.assertEqual(res["pooling"]["not_poolable"], 0)
+
+    def test_pooling_ignoriert_disputed_und_rejectiert(self):
+        conn = sqlite3.connect(self.db_path)
+        conn.execute("UPDATE study_effects SET se=0.1 WHERE id='e1'")
+        conn.execute("UPDATE study_effects SET se=0.1, disputed=1 "
+                     "WHERE id='e1'")
+        conn.commit()
+        conn.close()
+        res = evaluate_case(self.ref_case, self.db_path)
+        # disputed/abgelehnte Zeilen sind bereits aus der Suche raus;
+        # die pooling-Zaehlung bleibt ehrlich bei 0 poolbar.
+        self.assertEqual(res["pooling"]["poolable"], 0)
+
+    def test_summary_traegt_commit_und_config_fingerprint(self):
+        res = run_benchmark([self.ref_path], self.db_path)
+        self.assertIn("commit_hash", res)
+        self.assertIn("config_fingerprint", res)
+        # niemals leer: unknown ist zulaessig, kein Feld fehlen darf
+        self.assertTrue(str(res["commit_hash"]))
+        self.assertTrue(str(res["config_fingerprint"]))
+        dev = res["dev"]
+        self.assertEqual(res["dev"]["pooling_expected_mean"], 1.0)
+        self.assertEqual(dev["pooling_poolable_mean"], 0.0)
+
 
 if __name__ == "__main__":
     unittest.main()
