@@ -988,3 +988,28 @@ leerer Text passierbar, U+2212 normalisiert. 46 Vision-Suiten gruen.
 Verdrahtet im orchestrator `_vision_fallback_effects` (lokal): Gegen-
 probe laeuft nur bei page_status='verified' und vorhandenem Text;
 Abweichung dreht page_status auf disputed.
+
+
+## Sprint 31 (05.11.2026): Windows-Job-Object-Sandbox fuer Simulationskinder
+
+**Lieferumfang:** research_agent/experiments/win_job.py — Job-Object via
+ctypes (kernel32, kein pywin32): PROCESS_MEMORY-LIMIT + KILL_ON_JOB_CLOSE.
+attach_job_limits haengt den Kindprozess ein; auf Nicht-Windows stummer
+No-op (Rueckgabe False), im Runner ehrlich geloggt statt still.
+runner.py: create_subprocess_shell -> Popen + attach vor dem Timeout.
+
+**Fundierter Befund (Hanger-Diagnose):** Das erste DEFAULT von 2048 MB
+blockierte numpy/OpenBLAS-Importe im bereits-kommitierten Job-Limit
+(2-GB-Probe haengt nach 20 s, 4-GB- und 8-GB-Probe laufen in 0,2 s,
+Kill-on-Close-only ohne Memory-Limit laeuft auch). Default jetzt 4096
+MB, ueberschrieben mit SIM_MEM_MB.
+
+**Tests:** test_win_job.py (Speicherfresser vom Limit gestoppt, normaler
+Prozess laeuft; Windows-only-Faelle skippen auf Plattformen ohne Job-
+Objekte). Ohne Sandbox-Namen: die Import-Allowlist im Sandbox-Wrapper
+bleibt die erste Schicht; Job-Limits nur zweite Schicht auf Windows.
+
+**Ergebnis:** test_simulations.py 53/53 (vorher 6 Failed mit
+'smoke test failed: timeout'), Sandbox-Suiten gruen; Fokus-Lauf
+185 passed, 2 skipped (test_simulations + test_win_job +
+test_components). Commits 81ee6f8 + d05f46e (Briefing-Satz), gepusht.
