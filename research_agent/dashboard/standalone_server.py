@@ -95,7 +95,7 @@ def _resolve_usage_db_path():
 DB_PATH = _resolve_db_path()
 USAGE_DB_PATH = _resolve_usage_db_path()
 
-HOST = os.environ.get("DASHBOARD_HOST", "0.0.0.0")
+HOST = os.environ.get("DASHBOARD_HOST", "127.0.0.1")
 PORT = int(os.environ.get("DASHBOARD_PORT", "8080"))
 
 
@@ -749,6 +749,11 @@ def main():
         sys.exit(1)
 
     server = ThreadingHTTPServer((HOST, PORT), DashboardHandler)
+    if HOST not in ("127.0.0.1", "localhost"):
+        print(f"WARNUNG: Dashboard lauscht auf ({HOST}:{PORT}). Es hat keine "
+              f"Authentifizierung und Start/Stop-Steuerung – im Netz exposed "
+              "ist es von fremden Geraeten bedienbar! Nur bewusst und mit "
+              "abschirmendem Netz starten.")
     print(f"\nDashboard running at http://localhost:{PORT}")
     print(f"   Press Ctrl+C to stop.\n")
 

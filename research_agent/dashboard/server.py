@@ -602,6 +602,12 @@ class DashboardServer:
         DashboardHandler.orchestrator = orchestrator
         DashboardHandler._runner = _AsyncRunner()
         self.server = ThreadingHTTPServer((self.host, self.port), DashboardHandler)
+        if self.host not in ("127.0.0.1", "localhost"):
+            logger.warning(
+                "Dashboard lauscht auf %s:%s ohne Authentifizierung (Start/Stop "
+                "steuerbar von jedem Geraet im Netz). Nur bewusst starten.",
+                self.host, self.port,
+            )
         self.thread = threading.Thread(target=self.server.serve_forever, daemon=True)
         self.thread.start()
         logger.info(f"Dashboard running at http://{self.host}:{self.port}")
