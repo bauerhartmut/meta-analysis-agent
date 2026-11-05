@@ -44,7 +44,7 @@ research_agent/
 ├── utf8_logging.py          # Windows-UTF8-Logging-Fix
 ├── agents/                  # debate.py, devils_advocate.py, roles.py, evidence_scorer.py, base.py
 ├── memory/                  # Laufzustand / Store
-├── llm/                     # LLM-Engine (Multi-LLM), Zulltufe, Timeout-Absicherung
+├── llm/                     # LLM-Engine (Multi-LLM, TUDaGPT), Rate-Limits, Timeout-Absicherung
 ├── meta/                    # Statistik: pooling.py, Gruppen-Metaregression, k-Gate (Sprint 26)
 ├── research/                # table_extractor.py, vision_table.py (Sprint 29), pypdf-Adapter
 ├── coverage/ evals/ experiments/
@@ -64,7 +64,7 @@ warum sie den Vertrag *stärken*.
 
 1. **Verbatim-Kontrakt:** Jede zitierte Tatsache ist Wort für Wort aus der Quelle
    übernommen (mit Seiten-/Abschnittsverweis). Keine Paraphrase in Zitaten. Der Kontrakt
-   selbst ist ein Konsfokus: Er darf **erweitert** werden (z. B. um die Bild-Evidenzart,
+   selbst ist ein Grundpfeiler: Er darf **erweitert** werden (z. B. um die Bild-Evidenzart,
    siehe Sprint 30), aber seine strenge Wortform bleibt.
 2. **Doppel-Lesung bei Vision:** Bei Bild-basierter Tabellenlesung wird parallel in zwei
    unabhängigen Leitungen gelesen (Modell n. Modell, Bitte n. Bitte). Bei Abweichung →
@@ -79,7 +79,9 @@ warum sie den Vertrag *stärken*.
 
 ## 4. Was der Agent derzeit kann (Sprint-Rückbasis)
 
-Chronik komplett in `IMPLEMENTATION_LOG.md`. Kernmeilensteine der letzten Sprints:
+Chronik komplett in `IMPLEMENTATION_LOG.md` (26 Einträge — die Zählung enthält Zwischen-
+sprints ohne eigenen Eintrag; der letzte dokumentierte Sprint ist Sprint 29).
+Kernmeilensteine der letzten Sprints:
 
 | Sprint | Inhalt | Auftrag | Status |
 |--------|--------|--------|--------|
@@ -104,7 +106,7 @@ Priorisierung und Methodenvorschläge an:
 1. **Sprint 30 (geplant, der nächste große Schritt):** Den Sprint-29-Vision-Reader in den
    Orchestrator **einbinden**: Currently läuft er nur als eigenes Modul + Fixture-Tests;
    er muss an der Pipeline (Extracting-Phase) hängen und der Verbatim-Vertrag muss um
-   die Evidenzart „aus Bild gelesen (Vision)" erweitert werden — woabra alle Grenzen des
+   die Evidenzart „aus Bild gelesen (Vision)" erweitert werden — dabei gelten alle Grenzen des
    Kontrakts respektiert werden (siehe Abschnitt 3).
 2. **Goldstandard-Testlauf in Aktion:** Den Benchmark-Runner (Sprint 28) einmal ECHT
    anlaufen lassen, gegen den Fundus, und die Schulleistung statistisch bereihen.
@@ -129,7 +131,7 @@ Priorisierung und Methodenvorschläge an:
   Verbesserungsvorschlag.
 - **Statistik:** `meta/pooling.py` mit k-Gate (Sprint 26), Gruppen-Metaregression,
   Konfidenzbänder; Berichte via `report.py`/`report_pdf.py`; Benchmark via
-  `benchmark.py` gegen §9.2-Datengrundfähigkeit.
+  `benchmark.py` gegen §9.2-Datengrundlage.
 - **Robustheits-Fix bereits drin:** Windows/PDF-UTF8-Fix (`utf8_logging.py`),
   Lauf-Fragmente (db-wal) nicht im Git-Bestand, UI-Poll degradiert bei 404.
 - **Testland:** 42 Testdateien in `research_agent/tests/` (pytest), UTF-8-Fix per
@@ -191,7 +193,7 @@ Workplan als viele Slogans.
   Seite, Region), Ausschlusslexikon (was gilt nicht als Verbatim), Blick auf neue Tests.
 - **Doppel-Lesung als Architekturprinzip:** Lohnt sie sich generisch — z. B. auch für
   Text-Tabellenlesung (Sprint 22–24-Pfad) oder Web-Auszüge? Koste-Nutzen-Abwägung.
-- **Benchmarks ohne „Selbsttauscher":** Sprint 28 misst den Agenten — aber wie verhindern
+- **Benchmarks ohne Selbstbetrug:** Sprint 28 misst den Agenten an Fixtures, an denen
   wir Overfitting auf den eigenen Goldstandard (das ist die eigentliche Benchmark-Frage)?
 - **LLM-Kosten-Governance:** TUDaGPT-Endpunkt, Vision-Aufrufe sind teuer — Budget-
   Regler?teborg­stop per Session? Nachweisbarer Spar-Effekt (Report-artig)?

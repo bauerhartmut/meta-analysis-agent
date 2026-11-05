@@ -1707,7 +1707,12 @@ class TestGraphRelationRepair(unittest.TestCase):
 
     def test_repair_downgrades_only_unevidenced_directions(self):
         import sqlite3
-        import repair_knowledge_graph as repair
+        import importlib.util
+        script = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(
+            os.path.abspath(__file__)))), "scripts", "repair_knowledge_graph.py")
+        spec = importlib.util.spec_from_file_location("repair_knowledge_graph", script)
+        repair = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(repair)
 
         tmp = tempfile.mkdtemp()
         path = os.path.join(tmp, "graph.db")
