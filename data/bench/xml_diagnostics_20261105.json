@@ -1,0 +1,4250 @@
+{
+  "aggregate": {
+    "generated": "2026-11-05T21:06:43.830776+00:00",
+    "n_documents": 62,
+    "with_tables": 50,
+    "with_supplement_refs": 27,
+    "with_stat_rich_table_rows": 26,
+    "total_tables": 155,
+    "total_candidate_poolable_rows": 211,
+    "docs_with_se_evidence": 29,
+    "docs_with_ci_evidence": 35
+  },
+  "documents": [
+    {
+      "document_id": "10.1001-jamanetworkopen.2026.26983.xml",
+      "doi": "10.1001/jamanetworkopen.2026.26983",
+      "pmid": "42560676",
+      "pmcid": "PMC13448793",
+      "available_assets": [],
+      "parser_warnings": [],
+      "table_count": 3,
+      "tables": [
+        {
+          "label": "Table 1.",
+          "rows": 23,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "Table 2.",
+          "rows": 8,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "Table 3.",
+          "rows": 17,
+          "stat_rich_rows": 16,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        }
+      ],
+      "has_xml_tables": true,
+      "supplement_refs": 2,
+      "supplement_elements": 2,
+      "statistical_token_counts": {
+        "se": 1,
+        "sd": 12,
+        "ci": 19,
+        "n": 15,
+        "effect_metric": 48,
+        "ci_range": 101,
+        "supp_ref": 0
+      },
+      "candidate_effect_rows": 3,
+      "candidate_se_rows": 0,
+      "candidate_ci_rows": 16,
+      "candidate_sd_rows": 3,
+      "candidate_n_rows": 1,
+      "candidate_poolable_rows": 16,
+      "token_plusminus": 0,
+      "title": "Melatonin Use and Polysomnographic Sleep Architecture in Children"
+    },
+    {
+      "document_id": "10.1002-14651858.CD008473.pub2.xml",
+      "doi": "10.1002/14651858.CD008473.pub2",
+      "pmid": "22071850",
+      "pmcid": "PMC13418075",
+      "available_assets": [],
+      "parser_warnings": [],
+      "table_count": 0,
+      "tables": [],
+      "has_xml_tables": false,
+      "supplement_refs": 0,
+      "supplement_elements": 0,
+      "statistical_token_counts": {
+        "se": 0,
+        "sd": 0,
+        "ci": 0,
+        "n": 0,
+        "effect_metric": 10,
+        "ci_range": 3,
+        "supp_ref": 0
+      },
+      "candidate_effect_rows": 0,
+      "candidate_se_rows": 0,
+      "candidate_ci_rows": 0,
+      "candidate_sd_rows": 0,
+      "candidate_n_rows": 0,
+      "candidate_poolable_rows": 0,
+      "token_plusminus": 0,
+      "title": "Melatonin for non‐respiratory sleep disorders in visually impaired children"
+    },
+    {
+      "document_id": "10.1002-fsn3.71823.xml",
+      "doi": "10.1002/fsn3.71823",
+      "pmid": "42058225",
+      "pmcid": "PMC13121932",
+      "available_assets": [],
+      "parser_warnings": [],
+      "table_count": 6,
+      "tables": [
+        {
+          "label": "TABLE 1",
+          "rows": 6,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "TABLE 2",
+          "rows": 15,
+          "stat_rich_rows": 4,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "TABLE 3",
+          "rows": 6,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "TABLE 4",
+          "rows": 13,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "TABLE 5",
+          "rows": 3,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "TABLE 6",
+          "rows": 6,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        }
+      ],
+      "has_xml_tables": true,
+      "supplement_refs": 1,
+      "supplement_elements": 1,
+      "statistical_token_counts": {
+        "se": 5,
+        "sd": 0,
+        "ci": 0,
+        "n": 11,
+        "effect_metric": 59,
+        "ci_range": 107,
+        "supp_ref": 0
+      },
+      "candidate_effect_rows": 3,
+      "candidate_se_rows": 4,
+      "candidate_ci_rows": 0,
+      "candidate_sd_rows": 8,
+      "candidate_n_rows": 1,
+      "candidate_poolable_rows": 4,
+      "token_plusminus": 0,
+      "title": "Effectiveness of Melatonin‐Containing Foods on Promoting Sleep: A Scoping Review"
+    },
+    {
+      "document_id": "10.1002-hsr2.73458.xml",
+      "doi": "10.1002/hsr2.73458",
+      "pmid": "42964503",
+      "pmcid": "PMC13720239",
+      "available_assets": [],
+      "parser_warnings": [],
+      "table_count": 5,
+      "tables": [
+        {
+          "label": "Table 1",
+          "rows": 10,
+          "stat_rich_rows": 2,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "Table 2",
+          "rows": 21,
+          "stat_rich_rows": 2,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "Table 3",
+          "rows": 23,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "Table 4",
+          "rows": 21,
+          "stat_rich_rows": 3,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "Table 5",
+          "rows": 29,
+          "stat_rich_rows": 6,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        }
+      ],
+      "has_xml_tables": true,
+      "supplement_refs": 0,
+      "supplement_elements": 0,
+      "statistical_token_counts": {
+        "se": 0,
+        "sd": 7,
+        "ci": 5,
+        "n": 13,
+        "effect_metric": 47,
+        "ci_range": 176,
+        "supp_ref": 0
+      },
+      "candidate_effect_rows": 0,
+      "candidate_se_rows": 0,
+      "candidate_ci_rows": 13,
+      "candidate_sd_rows": 20,
+      "candidate_n_rows": 5,
+      "candidate_poolable_rows": 13,
+      "token_plusminus": 0,
+      "title": "Effect of Melatonin on 24‐Hour Urinary Protein Excretion and Sleep Quality in Patients With Stage 3–4 Chronic Kidney Dis"
+    },
+    {
+      "document_id": "10.1007-s00405-026-10350-5.xml",
+      "doi": "10.1007/s00405-026-10350-5",
+      "pmid": "42223614",
+      "pmcid": "PMC13615124",
+      "available_assets": [],
+      "parser_warnings": [],
+      "table_count": 3,
+      "tables": [
+        {
+          "label": "Table 1",
+          "rows": 9,
+          "stat_rich_rows": 3,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "Table 2",
+          "rows": 7,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "Table 3",
+          "rows": 5,
+          "stat_rich_rows": 3,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        }
+      ],
+      "has_xml_tables": true,
+      "supplement_refs": 0,
+      "supplement_elements": 0,
+      "statistical_token_counts": {
+        "se": 3,
+        "sd": 4,
+        "ci": 0,
+        "n": 5,
+        "effect_metric": 17,
+        "ci_range": 109,
+        "supp_ref": 0
+      },
+      "candidate_effect_rows": 0,
+      "candidate_se_rows": 0,
+      "candidate_ci_rows": 6,
+      "candidate_sd_rows": 2,
+      "candidate_n_rows": 1,
+      "candidate_poolable_rows": 6,
+      "token_plusminus": 0,
+      "title": "Melatonin and oxidative DNA damage in REM- and NREM-related obstructive sleep apnea: an exploratory analysis of sleep-st"
+    },
+    {
+      "document_id": "10.1016-j.cub.2026.03.059.xml",
+      "doi": "10.1016/j.cub.2026.03.059",
+      "pmid": "42013861",
+      "pmcid": "PMC13112078",
+      "available_assets": [],
+      "parser_warnings": [],
+      "table_count": 1,
+      "tables": [
+        {
+          "label": "",
+          "rows": 55,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        }
+      ],
+      "has_xml_tables": true,
+      "supplement_refs": 1,
+      "supplement_elements": 1,
+      "statistical_token_counts": {
+        "se": 0,
+        "sd": 3,
+        "ci": 2,
+        "n": 0,
+        "effect_metric": 51,
+        "ci_range": 77,
+        "supp_ref": 0
+      },
+      "candidate_effect_rows": 0,
+      "candidate_se_rows": 0,
+      "candidate_ci_rows": 0,
+      "candidate_sd_rows": 0,
+      "candidate_n_rows": 0,
+      "candidate_poolable_rows": 0,
+      "token_plusminus": 0,
+      "title": "Melatonin promotes sleep by suppressing responses to visual stimuli\nvia MT1 receptors"
+    },
+    {
+      "document_id": "10.1016_j.jesf.2024.03.001.xml",
+      "doi": "10.1016/j.jesf.2024.03.001",
+      "pmid": "38559906",
+      "pmcid": "PMC10979278",
+      "available_assets": [],
+      "parser_warnings": [],
+      "table_count": 1,
+      "tables": [
+        {
+          "label": "Table 1",
+          "rows": 21,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        }
+      ],
+      "has_xml_tables": true,
+      "supplement_refs": 2,
+      "supplement_elements": 2,
+      "statistical_token_counts": {
+        "se": 2,
+        "sd": 1,
+        "ci": 0,
+        "n": 0,
+        "effect_metric": 36,
+        "ci_range": 117,
+        "supp_ref": 0
+      },
+      "candidate_effect_rows": 0,
+      "candidate_se_rows": 0,
+      "candidate_ci_rows": 0,
+      "candidate_sd_rows": 0,
+      "candidate_n_rows": 0,
+      "candidate_poolable_rows": 0,
+      "token_plusminus": 0,
+      "title": "Study protocol for a comparative randomized controlled trial of Tai Chi and conventional exercise training on alleviatin"
+    },
+    {
+      "document_id": "10.1021-acsomega.6c03837.xml",
+      "doi": "10.1021/acsomega.6c03837",
+      "pmid": "42662326",
+      "pmcid": "PMC13520511",
+      "available_assets": [],
+      "parser_warnings": [],
+      "table_count": 4,
+      "tables": [
+        {
+          "label": "1",
+          "rows": 3,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "2",
+          "rows": 5,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "3",
+          "rows": 3,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "4",
+          "rows": 3,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        }
+      ],
+      "has_xml_tables": true,
+      "supplement_refs": 1,
+      "supplement_elements": 1,
+      "statistical_token_counts": {
+        "se": 0,
+        "sd": 10,
+        "ci": 0,
+        "n": 5,
+        "effect_metric": 6,
+        "ci_range": 47,
+        "supp_ref": 0
+      },
+      "candidate_effect_rows": 0,
+      "candidate_se_rows": 0,
+      "candidate_ci_rows": 0,
+      "candidate_sd_rows": 14,
+      "candidate_n_rows": 0,
+      "candidate_poolable_rows": 0,
+      "token_plusminus": 0,
+      "title": "μPADs for a Safer Night’s Sleep: An Alternative\nfor Quality Control of Melatonin Pharmaceutical Formulations"
+    },
+    {
+      "document_id": "10.1051-sicotj-2026029.xml",
+      "doi": "10.1051/sicotj/2026029",
+      "pmid": "42735358",
+      "pmcid": "PMC13574313",
+      "available_assets": [],
+      "parser_warnings": [],
+      "table_count": 5,
+      "tables": [
+        {
+          "label": "Table 1",
+          "rows": 14,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "Table 2",
+          "rows": 5,
+          "stat_rich_rows": 1,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "Table 3",
+          "rows": 14,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "Table 4",
+          "rows": 6,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "Table 5",
+          "rows": 7,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        }
+      ],
+      "has_xml_tables": true,
+      "supplement_refs": 0,
+      "supplement_elements": 0,
+      "statistical_token_counts": {
+        "se": 0,
+        "sd": 0,
+        "ci": 3,
+        "n": 4,
+        "effect_metric": 28,
+        "ci_range": 46,
+        "supp_ref": 0
+      },
+      "candidate_effect_rows": 0,
+      "candidate_se_rows": 0,
+      "candidate_ci_rows": 1,
+      "candidate_sd_rows": 0,
+      "candidate_n_rows": 1,
+      "candidate_poolable_rows": 1,
+      "token_plusminus": 0,
+      "title": "Natural history of sleep before and after total joint arthroplasty is poor and unimproved by melatonin: A randomized con"
+    },
+    {
+      "document_id": "10.1093-europace-euag105.076.xml",
+      "doi": "10.1093/europace/euag105.076",
+      "pmid": "",
+      "pmcid": "PMC13302516",
+      "available_assets": [],
+      "parser_warnings": [],
+      "table_count": 0,
+      "tables": [],
+      "has_xml_tables": false,
+      "supplement_refs": 0,
+      "supplement_elements": 0,
+      "statistical_token_counts": {
+        "se": 0,
+        "sd": 0,
+        "ci": 1,
+        "n": 0,
+        "effect_metric": 3,
+        "ci_range": 4,
+        "supp_ref": 0
+      },
+      "candidate_effect_rows": 0,
+      "candidate_se_rows": 0,
+      "candidate_ci_rows": 0,
+      "candidate_sd_rows": 0,
+      "candidate_n_rows": 0,
+      "candidate_poolable_rows": 0,
+      "token_plusminus": 0,
+      "title": "Do sleep aids differ in cardiac safety? A comparative eudravigilance analysis of melatonin and zolpidem arrhythmia repor"
+    },
+    {
+      "document_id": "10.1093-rb-rbag180.xml",
+      "doi": "10.1093/rb/rbag180",
+      "pmid": "42836179",
+      "pmcid": "PMC13637851",
+      "available_assets": [],
+      "parser_warnings": [],
+      "table_count": 0,
+      "tables": [],
+      "has_xml_tables": false,
+      "supplement_refs": 1,
+      "supplement_elements": 1,
+      "statistical_token_counts": {
+        "se": 2,
+        "sd": 18,
+        "ci": 0,
+        "n": 1,
+        "effect_metric": 35,
+        "ci_range": 80,
+        "supp_ref": 0
+      },
+      "candidate_effect_rows": 0,
+      "candidate_se_rows": 0,
+      "candidate_ci_rows": 0,
+      "candidate_sd_rows": 0,
+      "candidate_n_rows": 0,
+      "candidate_poolable_rows": 0,
+      "token_plusminus": 0,
+      "title": "Niosome-mediated melatonin delivery via SilMA/GelMA microneedles promotes healing of sleep deprivation-aggravated oral u"
+    },
+    {
+      "document_id": "10.1093_sleep_zsab177.xml",
+      "doi": "10.1093/sleep/zsab177",
+      "pmid": "34255075",
+      "pmcid": "PMC8598185",
+      "available_assets": [],
+      "parser_warnings": [],
+      "table_count": 5,
+      "tables": [
+        {
+          "label": "Table 1.",
+          "rows": 12,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "Table 2.",
+          "rows": 21,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "Table 3.",
+          "rows": 8,
+          "stat_rich_rows": 1,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "Table 4.",
+          "rows": 11,
+          "stat_rich_rows": 1,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "Table 5.",
+          "rows": 6,
+          "stat_rich_rows": 1,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        }
+      ],
+      "has_xml_tables": true,
+      "supplement_refs": 4,
+      "supplement_elements": 2,
+      "statistical_token_counts": {
+        "se": 3,
+        "sd": 3,
+        "ci": 14,
+        "n": 6,
+        "effect_metric": 53,
+        "ci_range": 84,
+        "supp_ref": 2
+      },
+      "candidate_effect_rows": 0,
+      "candidate_se_rows": 3,
+      "candidate_ci_rows": 3,
+      "candidate_sd_rows": 0,
+      "candidate_n_rows": 1,
+      "candidate_poolable_rows": 3,
+      "token_plusminus": 0,
+      "title": "The acute effects of aerobic exercise on sleep in patients with unipolar depression: a randomized controlled trial"
+    },
+    {
+      "document_id": "10.1111-cpr.70138.xml",
+      "doi": "10.1111/cpr.70138",
+      "pmid": "41146589",
+      "pmcid": "PMC13114791",
+      "available_assets": [],
+      "parser_warnings": [],
+      "table_count": 0,
+      "tables": [],
+      "has_xml_tables": false,
+      "supplement_refs": 1,
+      "supplement_elements": 1,
+      "statistical_token_counts": {
+        "se": 0,
+        "sd": 121,
+        "ci": 0,
+        "n": 13,
+        "effect_metric": 16,
+        "ci_range": 67,
+        "supp_ref": 0
+      },
+      "candidate_effect_rows": 0,
+      "candidate_se_rows": 0,
+      "candidate_ci_rows": 0,
+      "candidate_sd_rows": 0,
+      "candidate_n_rows": 0,
+      "candidate_poolable_rows": 0,
+      "token_plusminus": 0,
+      "title": "Gestational Melatonin Supplementation Attenuates Maternal Sleep Deprivation‐Induced Steatohepatitis Susceptibility in Of"
+    },
+    {
+      "document_id": "10.1136-bmjopen-2026-119965.xml",
+      "doi": "10.1136/bmjopen-2026-119965",
+      "pmid": "42810800",
+      "pmcid": "PMC13629908",
+      "available_assets": [],
+      "parser_warnings": [],
+      "table_count": 0,
+      "tables": [],
+      "has_xml_tables": false,
+      "supplement_refs": 3,
+      "supplement_elements": 3,
+      "statistical_token_counts": {
+        "se": 0,
+        "sd": 1,
+        "ci": 0,
+        "n": 0,
+        "effect_metric": 60,
+        "ci_range": 24,
+        "supp_ref": 0
+      },
+      "candidate_effect_rows": 0,
+      "candidate_se_rows": 0,
+      "candidate_ci_rows": 0,
+      "candidate_sd_rows": 0,
+      "candidate_n_rows": 0,
+      "candidate_poolable_rows": 0,
+      "token_plusminus": 0,
+      "title": "Melatonin to improve sleep in patients undergoing major surgery: protocol for a double-blind, randomised placebo-control"
+    },
+    {
+      "document_id": "10.1136_bmj-2022-071690.xml",
+      "doi": "10.1136/bmj-2022-071690",
+      "pmid": "36302556",
+      "pmcid": "PMC9600164",
+      "available_assets": [],
+      "parser_warnings": [],
+      "table_count": 0,
+      "tables": [],
+      "has_xml_tables": false,
+      "supplement_refs": 0,
+      "supplement_elements": 0,
+      "statistical_token_counts": {
+        "se": 0,
+        "sd": 1,
+        "ci": 0,
+        "n": 0,
+        "effect_metric": 2,
+        "ci_range": 52,
+        "supp_ref": 0
+      },
+      "candidate_effect_rows": 0,
+      "candidate_se_rows": 0,
+      "candidate_ci_rows": 0,
+      "candidate_sd_rows": 0,
+      "candidate_n_rows": 0,
+      "candidate_poolable_rows": 0,
+      "token_plusminus": 0,
+      "title": "Adolescent wellbeing and climate crisis: adolescents are responding, what about health professionals?"
+    },
+    {
+      "document_id": "10.1177-02537176261472435.xml",
+      "doi": "10.1177/02537176261472435",
+      "pmid": "42620628",
+      "pmcid": "PMC13486400",
+      "available_assets": [],
+      "parser_warnings": [],
+      "table_count": 5,
+      "tables": [
+        {
+          "label": "Table 1.",
+          "rows": 0,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": true,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "Table 2.",
+          "rows": 0,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": true,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "Table 3.",
+          "rows": 0,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": true,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "Table 4.",
+          "rows": 0,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": true,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "Table 5.",
+          "rows": 0,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": true,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        }
+      ],
+      "has_xml_tables": true,
+      "supplement_refs": 1,
+      "supplement_elements": 1,
+      "statistical_token_counts": {
+        "se": 0,
+        "sd": 19,
+        "ci": 4,
+        "n": 10,
+        "effect_metric": 31,
+        "ci_range": 84,
+        "supp_ref": 0
+      },
+      "candidate_effect_rows": 0,
+      "candidate_se_rows": 0,
+      "candidate_ci_rows": 0,
+      "candidate_sd_rows": 0,
+      "candidate_n_rows": 0,
+      "candidate_poolable_rows": 0,
+      "token_plusminus": 0,
+      "title": "Sleep and Stroop Performance with Adjunctive Melatonin in Pharmacotherapy-stable Pediatric ADHD: A Prospective Open-labe"
+    },
+    {
+      "document_id": "10.1177_19417381231210286.xml",
+      "doi": "10.1177/19417381231210286",
+      "pmid": "37994044",
+      "pmcid": "PMC10916777",
+      "available_assets": [],
+      "parser_warnings": [],
+      "table_count": 1,
+      "tables": [
+        {
+          "label": "Table 1.",
+          "rows": 6,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        }
+      ],
+      "has_xml_tables": true,
+      "supplement_refs": 2,
+      "supplement_elements": 2,
+      "statistical_token_counts": {
+        "se": 0,
+        "sd": 1,
+        "ci": 10,
+        "n": 8,
+        "effect_metric": 41,
+        "ci_range": 46,
+        "supp_ref": 0
+      },
+      "candidate_effect_rows": 0,
+      "candidate_se_rows": 0,
+      "candidate_ci_rows": 0,
+      "candidate_sd_rows": 0,
+      "candidate_n_rows": 0,
+      "candidate_poolable_rows": 0,
+      "token_plusminus": 0,
+      "title": "Analysis of the Effect of Different Physical Exercise Protocols on Depression in Adults: Systematic Review and Meta-anal"
+    },
+    {
+      "document_id": "10.1186-s12888-026-08538-4.xml",
+      "doi": "10.1186/s12888-026-08538-4",
+      "pmid": "42642740",
+      "pmcid": "PMC13508435",
+      "available_assets": [],
+      "parser_warnings": [],
+      "table_count": 2,
+      "tables": [
+        {
+          "label": "Table 1",
+          "rows": 14,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "Table 2",
+          "rows": 8,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        }
+      ],
+      "has_xml_tables": true,
+      "supplement_refs": 0,
+      "supplement_elements": 0,
+      "statistical_token_counts": {
+        "se": 5,
+        "sd": 7,
+        "ci": 0,
+        "n": 0,
+        "effect_metric": 56,
+        "ci_range": 269,
+        "supp_ref": 0
+      },
+      "candidate_effect_rows": 0,
+      "candidate_se_rows": 0,
+      "candidate_ci_rows": 0,
+      "candidate_sd_rows": 0,
+      "candidate_n_rows": 0,
+      "candidate_poolable_rows": 0,
+      "token_plusminus": 0,
+      "title": "Implementation and real-world effectiveness of a weighted blanket intervention and standard melatonin treatment for chil"
+    },
+    {
+      "document_id": "10.1186-s12912-026-04995-0.xml",
+      "doi": "10.1186/s12912-026-04995-0",
+      "pmid": "42934636",
+      "pmcid": "PMC13711754",
+      "available_assets": [],
+      "parser_warnings": [],
+      "table_count": 3,
+      "tables": [
+        {
+          "label": "Table 1",
+          "rows": 23,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": true,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "Table 2",
+          "rows": 12,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "Table 3",
+          "rows": 13,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": true,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        }
+      ],
+      "has_xml_tables": true,
+      "supplement_refs": 0,
+      "supplement_elements": 0,
+      "statistical_token_counts": {
+        "se": 0,
+        "sd": 6,
+        "ci": 0,
+        "n": 8,
+        "effect_metric": 19,
+        "ci_range": 88,
+        "supp_ref": 0
+      },
+      "candidate_effect_rows": 0,
+      "candidate_se_rows": 0,
+      "candidate_ci_rows": 0,
+      "candidate_sd_rows": 10,
+      "candidate_n_rows": 2,
+      "candidate_poolable_rows": 0,
+      "token_plusminus": 0,
+      "title": "The effect of an eye mask-based blackout protocol on patients’ sleep quality and melatonin levels: a randomised controll"
+    },
+    {
+      "document_id": "10.1186_s12889-024-19348-2.xml",
+      "doi": "10.1186/s12889-024-19348-2",
+      "pmid": "38977980",
+      "pmcid": "PMC11229230",
+      "available_assets": [],
+      "parser_warnings": [],
+      "table_count": 1,
+      "tables": [
+        {
+          "label": "Table 1",
+          "rows": 11,
+          "stat_rich_rows": 1,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        }
+      ],
+      "has_xml_tables": true,
+      "supplement_refs": 2,
+      "supplement_elements": 2,
+      "statistical_token_counts": {
+        "se": 10,
+        "sd": 7,
+        "ci": 22,
+        "n": 9,
+        "effect_metric": 58,
+        "ci_range": 108,
+        "supp_ref": 0
+      },
+      "candidate_effect_rows": 0,
+      "candidate_se_rows": 0,
+      "candidate_ci_rows": 1,
+      "candidate_sd_rows": 0,
+      "candidate_n_rows": 0,
+      "candidate_poolable_rows": 1,
+      "token_plusminus": 0,
+      "title": "Effects of exercise on depression and anxiety in postmenopausal women: a pairwise and network meta-analysis of randomize"
+    },
+    {
+      "document_id": "10.1186_s12889-026-26504-3.xml",
+      "doi": "10.1186/s12889-026-26504-3",
+      "pmid": "41639791",
+      "pmcid": "PMC12973666",
+      "available_assets": [],
+      "parser_warnings": [],
+      "table_count": 2,
+      "tables": [
+        {
+          "label": "Table 1",
+          "rows": 13,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "Table 2",
+          "rows": 5,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        }
+      ],
+      "has_xml_tables": true,
+      "supplement_refs": 2,
+      "supplement_elements": 2,
+      "statistical_token_counts": {
+        "se": 1,
+        "sd": 5,
+        "ci": 2,
+        "n": 1,
+        "effect_metric": 35,
+        "ci_range": 100,
+        "supp_ref": 0
+      },
+      "candidate_effect_rows": 1,
+      "candidate_se_rows": 0,
+      "candidate_ci_rows": 0,
+      "candidate_sd_rows": 0,
+      "candidate_n_rows": 0,
+      "candidate_poolable_rows": 0,
+      "token_plusminus": 0,
+      "title": "Aerobic exercise for depression symptoms in adolescents: a systematic review and dose-response meta-analysis"
+    },
+    {
+      "document_id": "10.1186_s13063-022-06567-4.xml",
+      "doi": "10.1186/s13063-022-06567-4",
+      "pmid": "35908008",
+      "pmcid": "PMC9338474",
+      "available_assets": [],
+      "parser_warnings": [],
+      "table_count": 2,
+      "tables": [
+        {
+          "label": "Table 1",
+          "rows": 5,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "Table 2",
+          "rows": 6,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        }
+      ],
+      "has_xml_tables": true,
+      "supplement_refs": 0,
+      "supplement_elements": 0,
+      "statistical_token_counts": {
+        "se": 2,
+        "sd": 0,
+        "ci": 0,
+        "n": 0,
+        "effect_metric": 32,
+        "ci_range": 85,
+        "supp_ref": 0
+      },
+      "candidate_effect_rows": 0,
+      "candidate_se_rows": 0,
+      "candidate_ci_rows": 0,
+      "candidate_sd_rows": 0,
+      "candidate_n_rows": 0,
+      "candidate_poolable_rows": 0,
+      "token_plusminus": 0,
+      "title": "Short-term aerobic exercise for depression in acute geriatric psychiatry: study protocol for a randomized controlled tri"
+    },
+    {
+      "document_id": "10.1186_s13063-024-08495-x.xml",
+      "doi": "10.1186/s13063-024-08495-x",
+      "pmid": "39375728",
+      "pmcid": "PMC11460085",
+      "available_assets": [],
+      "parser_warnings": [],
+      "table_count": 1,
+      "tables": [
+        {
+          "label": "Table 1",
+          "rows": 0,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        }
+      ],
+      "has_xml_tables": true,
+      "supplement_refs": 0,
+      "supplement_elements": 0,
+      "statistical_token_counts": {
+        "se": 1,
+        "sd": 7,
+        "ci": 0,
+        "n": 3,
+        "effect_metric": 72,
+        "ci_range": 125,
+        "supp_ref": 0
+      },
+      "candidate_effect_rows": 0,
+      "candidate_se_rows": 0,
+      "candidate_ci_rows": 0,
+      "candidate_sd_rows": 0,
+      "candidate_n_rows": 0,
+      "candidate_poolable_rows": 0,
+      "token_plusminus": 0,
+      "title": "Protocol for a randomized controlled trial: exercise-priming of CBT for depression (the CBT+ trial)"
+    },
+    {
+      "document_id": "10.1186_s13075-015-0533-5.xml",
+      "doi": "10.1186/s13075-015-0533-5",
+      "pmid": "25645739",
+      "pmcid": "PMC4467075",
+      "available_assets": [],
+      "parser_warnings": [],
+      "table_count": 3,
+      "tables": [
+        {
+          "label": "Table 1",
+          "rows": 30,
+          "stat_rich_rows": 4,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "Table 2",
+          "rows": 9,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "Table 3",
+          "rows": 15,
+          "stat_rich_rows": 1,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        }
+      ],
+      "has_xml_tables": true,
+      "supplement_refs": 10,
+      "supplement_elements": 0,
+      "statistical_token_counts": {
+        "se": 4,
+        "sd": 76,
+        "ci": 45,
+        "n": 68,
+        "effect_metric": 130,
+        "ci_range": 261,
+        "supp_ref": 10
+      },
+      "candidate_effect_rows": 23,
+      "candidate_se_rows": 0,
+      "candidate_ci_rows": 1,
+      "candidate_sd_rows": 33,
+      "candidate_n_rows": 29,
+      "candidate_poolable_rows": 5,
+      "token_plusminus": 0,
+      "title": "Effects of exercise on depression in adults with arthritis: a systematic review with meta-analysis of randomized control"
+    },
+    {
+      "document_id": "10.1192-j.eurpsy.2026.11986.xml",
+      "doi": "10.1192/j.eurpsy.2026.11986",
+      "pmid": "",
+      "pmcid": "PMC13444509",
+      "available_assets": [],
+      "parser_warnings": [],
+      "table_count": 0,
+      "tables": [],
+      "has_xml_tables": false,
+      "supplement_refs": 0,
+      "supplement_elements": 0,
+      "statistical_token_counts": {
+        "se": 0,
+        "sd": 0,
+        "ci": 0,
+        "n": 0,
+        "effect_metric": 3,
+        "ci_range": 8,
+        "supp_ref": 0
+      },
+      "candidate_effect_rows": 0,
+      "candidate_se_rows": 0,
+      "candidate_ci_rows": 0,
+      "candidate_sd_rows": 0,
+      "candidate_n_rows": 0,
+      "candidate_poolable_rows": 0,
+      "token_plusminus": 0,
+      "title": "Tryptophan–Serotonin–Melatonin Pathway and It Contribution to Mood and Cognitive Changes During Sleep Deprivation?"
+    },
+    {
+      "document_id": "10.1371_journal.pone.0312992.xml",
+      "doi": "10.1371/journal.pone.0312992",
+      "pmid": "39527532",
+      "pmcid": "PMC11554215",
+      "available_assets": [],
+      "parser_warnings": [],
+      "table_count": 5,
+      "tables": [
+        {
+          "label": "Table 1",
+          "rows": 27,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": true,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "Table 2",
+          "rows": 5,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": true,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "Table 3",
+          "rows": 8,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": true,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "Table 4",
+          "rows": 7,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": true,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "Table 5",
+          "rows": 9,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": true,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        }
+      ],
+      "has_xml_tables": true,
+      "supplement_refs": 10,
+      "supplement_elements": 10,
+      "statistical_token_counts": {
+        "se": 0,
+        "sd": 6,
+        "ci": 0,
+        "n": 29,
+        "effect_metric": 83,
+        "ci_range": 102,
+        "supp_ref": 0
+      },
+      "candidate_effect_rows": 6,
+      "candidate_se_rows": 0,
+      "candidate_ci_rows": 0,
+      "candidate_sd_rows": 19,
+      "candidate_n_rows": 1,
+      "candidate_poolable_rows": 0,
+      "token_plusminus": 0,
+      "title": "A live online exercise program for older adults improves depression and life-space mobility: A mixed-methods pilot rando"
+    },
+    {
+      "document_id": "10.14814-phy2.70805.xml",
+      "doi": "10.14814/phy2.70805",
+      "pmid": "41814853",
+      "pmcid": "PMC13097372",
+      "available_assets": [],
+      "parser_warnings": [],
+      "table_count": 3,
+      "tables": [
+        {
+          "label": "TABLE 1",
+          "rows": 13,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "TABLE 2",
+          "rows": 7,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "TABLE 3",
+          "rows": 9,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        }
+      ],
+      "has_xml_tables": true,
+      "supplement_refs": 0,
+      "supplement_elements": 0,
+      "statistical_token_counts": {
+        "se": 2,
+        "sd": 2,
+        "ci": 3,
+        "n": 20,
+        "effect_metric": 24,
+        "ci_range": 70,
+        "supp_ref": 0
+      },
+      "candidate_effect_rows": 0,
+      "candidate_se_rows": 0,
+      "candidate_ci_rows": 0,
+      "candidate_sd_rows": 0,
+      "candidate_n_rows": 0,
+      "candidate_poolable_rows": 0,
+      "token_plusminus": 0,
+      "title": "Sleep quality and sleepiness in adults with multiple myeloma. Is melatonin a potential treatment?"
+    },
+    {
+      "document_id": "10.1542-hpeds.2026-009244.xml",
+      "doi": "10.1542/hpeds.2026-009244",
+      "pmid": "42686209",
+      "pmcid": "PMC13648292",
+      "available_assets": [],
+      "parser_warnings": [],
+      "table_count": 3,
+      "tables": [
+        {
+          "label": "Table 1.",
+          "rows": 37,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "Table 2.",
+          "rows": 47,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "Table 3.",
+          "rows": 23,
+          "stat_rich_rows": 1,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        }
+      ],
+      "has_xml_tables": true,
+      "supplement_refs": 19,
+      "supplement_elements": 6,
+      "statistical_token_counts": {
+        "se": 0,
+        "sd": 1,
+        "ci": 2,
+        "n": 11,
+        "effect_metric": 41,
+        "ci_range": 63,
+        "supp_ref": 13
+      },
+      "candidate_effect_rows": 0,
+      "candidate_se_rows": 0,
+      "candidate_ci_rows": 1,
+      "candidate_sd_rows": 0,
+      "candidate_n_rows": 2,
+      "candidate_poolable_rows": 1,
+      "token_plusminus": 0,
+      "title": "Sleep Management And Recovery after TBI in Kids (SMART-Kids): Pilot trial using melatonin"
+    },
+    {
+      "document_id": "10.1590-1806-9282.20251486.xml",
+      "doi": "10.1590/1806-9282.20251486",
+      "pmid": "42138936",
+      "pmcid": "PMC13167047",
+      "available_assets": [],
+      "parser_warnings": [],
+      "table_count": 4,
+      "tables": [
+        {
+          "label": "Table 1",
+          "rows": 30,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "Table 2",
+          "rows": 23,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "Table 3",
+          "rows": 7,
+          "stat_rich_rows": 2,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "Table 4",
+          "rows": 5,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        }
+      ],
+      "has_xml_tables": true,
+      "supplement_refs": 0,
+      "supplement_elements": 0,
+      "statistical_token_counts": {
+        "se": 9,
+        "sd": 12,
+        "ci": 1,
+        "n": 0,
+        "effect_metric": 19,
+        "ci_range": 34,
+        "supp_ref": 0
+      },
+      "candidate_effect_rows": 0,
+      "candidate_se_rows": 2,
+      "candidate_ci_rows": 0,
+      "candidate_sd_rows": 9,
+      "candidate_n_rows": 0,
+      "candidate_poolable_rows": 2,
+      "token_plusminus": 0,
+      "title": "The effect of preoperative melatonin patches on sleep quality in patients undergoing urological surgery"
+    },
+    {
+      "document_id": "10.1590_1516-4446-2016-1915.xml",
+      "doi": "10.1590/1516-4446-2016-1915",
+      "pmid": "27611903",
+      "pmcid": "PMC7194268",
+      "available_assets": [],
+      "parser_warnings": [],
+      "table_count": 3,
+      "tables": [
+        {
+          "label": "Table 1",
+          "rows": 10,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "Table 2",
+          "rows": 25,
+          "stat_rich_rows": 4,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "Table 3",
+          "rows": 11,
+          "stat_rich_rows": 11,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        }
+      ],
+      "has_xml_tables": true,
+      "supplement_refs": 0,
+      "supplement_elements": 0,
+      "statistical_token_counts": {
+        "se": 3,
+        "sd": 5,
+        "ci": 27,
+        "n": 6,
+        "effect_metric": 68,
+        "ci_range": 121,
+        "supp_ref": 0
+      },
+      "candidate_effect_rows": 0,
+      "candidate_se_rows": 0,
+      "candidate_ci_rows": 15,
+      "candidate_sd_rows": 0,
+      "candidate_n_rows": 0,
+      "candidate_poolable_rows": 15,
+      "token_plusminus": 0,
+      "title": "Exercise for depression in older adults: a meta-analysis of randomized controlled trials adjusting for publication bias"
+    },
+    {
+      "document_id": "10.21203-rs.3.rs-9740601-v1.xml",
+      "doi": "10.21203/rs.3.rs-9740601/v1",
+      "pmid": "42396504",
+      "pmcid": "PMC13321238",
+      "available_assets": [],
+      "parser_warnings": [],
+      "table_count": 3,
+      "tables": [
+        {
+          "label": "Table 1",
+          "rows": 42,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "Table 2",
+          "rows": 42,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "Table 3",
+          "rows": 41,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        }
+      ],
+      "has_xml_tables": true,
+      "supplement_refs": 0,
+      "supplement_elements": 0,
+      "statistical_token_counts": {
+        "se": 0,
+        "sd": 0,
+        "ci": 22,
+        "n": 14,
+        "effect_metric": 41,
+        "ci_range": 50,
+        "supp_ref": 0
+      },
+      "candidate_effect_rows": 18,
+      "candidate_se_rows": 0,
+      "candidate_ci_rows": 0,
+      "candidate_sd_rows": 3,
+      "candidate_n_rows": 3,
+      "candidate_poolable_rows": 0,
+      "token_plusminus": 0,
+      "title": "Association between circadian rhythm sleep disorder and open-angle glaucoma: The modifying role of melatonin"
+    },
+    {
+      "document_id": "10.2147-NSS.S646824.xml",
+      "doi": "10.2147/NSS.S646824",
+      "pmid": "42634665",
+      "pmcid": "PMC13499951",
+      "available_assets": [],
+      "parser_warnings": [],
+      "table_count": 0,
+      "tables": [],
+      "has_xml_tables": false,
+      "supplement_refs": 0,
+      "supplement_elements": 0,
+      "statistical_token_counts": {
+        "se": 0,
+        "sd": 0,
+        "ci": 0,
+        "n": 0,
+        "effect_metric": 0,
+        "ci_range": 1,
+        "supp_ref": 0
+      },
+      "candidate_effect_rows": 0,
+      "candidate_se_rows": 0,
+      "candidate_ci_rows": 0,
+      "candidate_sd_rows": 0,
+      "candidate_n_rows": 0,
+      "candidate_poolable_rows": 0,
+      "token_plusminus": 0,
+      "title": "Melatonin and Cortisol Concentration Before and After CPAP Treatment of Obstructive Sleep Apnea [Retraction]"
+    },
+    {
+      "document_id": "10.2147_copd.s578054.xml",
+      "doi": "10.2147/COPD.S578054",
+      "pmid": "42117057",
+      "pmcid": "PMC13157818",
+      "available_assets": [],
+      "parser_warnings": [],
+      "table_count": 3,
+      "tables": [
+        {
+          "label": "Table 1",
+          "rows": 12,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": true,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "Table 2",
+          "rows": 12,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": true,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "Table 3",
+          "rows": 11,
+          "stat_rich_rows": 1,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": true,
+            "supp_ref": false
+          }
+        }
+      ],
+      "has_xml_tables": true,
+      "supplement_refs": 0,
+      "supplement_elements": 0,
+      "statistical_token_counts": {
+        "se": 5,
+        "sd": 4,
+        "ci": 62,
+        "n": 17,
+        "effect_metric": 110,
+        "ci_range": 145,
+        "supp_ref": 0
+      },
+      "candidate_effect_rows": 11,
+      "candidate_se_rows": 0,
+      "candidate_ci_rows": 1,
+      "candidate_sd_rows": 11,
+      "candidate_n_rows": 0,
+      "candidate_poolable_rows": 1,
+      "token_plusminus": 0,
+      "title": "Exercise Training Improves Depression and Anxiety in Patients with COPD: A Dose-Response Meta-Analysis of Randomized Con"
+    },
+    {
+      "document_id": "10.2174-011570159X379708250702084616.xml",
+      "doi": "10.2174/011570159X379708250702084616",
+      "pmid": "40698692",
+      "pmcid": "PMC13084770",
+      "available_assets": [],
+      "parser_warnings": [],
+      "table_count": 10,
+      "tables": [
+        {
+          "label": "Table 1",
+          "rows": 24,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "Table 2",
+          "rows": 19,
+          "stat_rich_rows": 1,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "Table 3",
+          "rows": 16,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "Table 4",
+          "rows": 10,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "Table 5",
+          "rows": 8,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "Table 6",
+          "rows": 7,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "Table 7",
+          "rows": 7,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "Table 8",
+          "rows": 5,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "Table 1",
+          "rows": 7,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "Table 2",
+          "rows": 12,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        }
+      ],
+      "has_xml_tables": true,
+      "supplement_refs": 2,
+      "supplement_elements": 1,
+      "statistical_token_counts": {
+        "se": 0,
+        "sd": 0,
+        "ci": 0,
+        "n": 0,
+        "effect_metric": 90,
+        "ci_range": 109,
+        "supp_ref": 1
+      },
+      "candidate_effect_rows": 3,
+      "candidate_se_rows": 0,
+      "candidate_ci_rows": 1,
+      "candidate_sd_rows": 0,
+      "candidate_n_rows": 0,
+      "candidate_poolable_rows": 1,
+      "token_plusminus": 0,
+      "title": "Exogenous Melatonin as a Sleep-promoting Agent beyond its Chronobiotic Properties: A Scoping Review of its Effects on Ke"
+    },
+    {
+      "document_id": "10.3389-fimmu.2026.1781288.xml",
+      "doi": "10.3389/fimmu.2026.1781288",
+      "pmid": "42136655",
+      "pmcid": "PMC13168031",
+      "available_assets": [],
+      "parser_warnings": [],
+      "table_count": 2,
+      "tables": [
+        {
+          "label": "Table 1",
+          "rows": 6,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "Table 2",
+          "rows": 5,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        }
+      ],
+      "has_xml_tables": true,
+      "supplement_refs": 0,
+      "supplement_elements": 0,
+      "statistical_token_counts": {
+        "se": 1,
+        "sd": 0,
+        "ci": 0,
+        "n": 0,
+        "effect_metric": 44,
+        "ci_range": 120,
+        "supp_ref": 0
+      },
+      "candidate_effect_rows": 0,
+      "candidate_se_rows": 0,
+      "candidate_ci_rows": 0,
+      "candidate_sd_rows": 0,
+      "candidate_n_rows": 0,
+      "candidate_poolable_rows": 0,
+      "token_plusminus": 0,
+      "title": "Sleep and circadian disruption reshape immune homeostasis in oral tissues: mechanistic roles of melatonin and cortisol i"
+    },
+    {
+      "document_id": "10.3389-fnut.2026.1890075.xml",
+      "doi": "10.3389/fnut.2026.1890075",
+      "pmid": "42662821",
+      "pmcid": "PMC13520769",
+      "available_assets": [],
+      "parser_warnings": [],
+      "table_count": 4,
+      "tables": [
+        {
+          "label": "Table 1",
+          "rows": 37,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": true,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "Table 2",
+          "rows": 40,
+          "stat_rich_rows": 39,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": true,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "Table 3",
+          "rows": 13,
+          "stat_rich_rows": 12,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "Table 4",
+          "rows": 16,
+          "stat_rich_rows": 16,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        }
+      ],
+      "has_xml_tables": true,
+      "supplement_refs": 3,
+      "supplement_elements": 1,
+      "statistical_token_counts": {
+        "se": 11,
+        "sd": 2,
+        "ci": 20,
+        "n": 5,
+        "effect_metric": 62,
+        "ci_range": 141,
+        "supp_ref": 2
+      },
+      "candidate_effect_rows": 0,
+      "candidate_se_rows": 3,
+      "candidate_ci_rows": 67,
+      "candidate_sd_rows": 40,
+      "candidate_n_rows": 1,
+      "candidate_poolable_rows": 67,
+      "token_plusminus": 0,
+      "title": "Dietary melatonin, chronotype, and night eating syndrome in relation to sleep quality among adults"
+    },
+    {
+      "document_id": "10.3389-fphar.2026.1839440.xml",
+      "doi": "10.3389/fphar.2026.1839440",
+      "pmid": "42465992",
+      "pmcid": "PMC13373100",
+      "available_assets": [],
+      "parser_warnings": [],
+      "table_count": 4,
+      "tables": [
+        {
+          "label": "TABLE 1",
+          "rows": 20,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "TABLE 2",
+          "rows": 10,
+          "stat_rich_rows": 1,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "TABLE 3",
+          "rows": 10,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "TABLE 4",
+          "rows": 15,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        }
+      ],
+      "has_xml_tables": true,
+      "supplement_refs": 0,
+      "supplement_elements": 0,
+      "statistical_token_counts": {
+        "se": 0,
+        "sd": 9,
+        "ci": 1,
+        "n": 11,
+        "effect_metric": 45,
+        "ci_range": 45,
+        "supp_ref": 0
+      },
+      "candidate_effect_rows": 0,
+      "candidate_se_rows": 0,
+      "candidate_ci_rows": 0,
+      "candidate_sd_rows": 15,
+      "candidate_n_rows": 5,
+      "candidate_poolable_rows": 1,
+      "token_plusminus": 0,
+      "title": "Dexmedetomidine-flurbiprofen axetil-based opioid-free analgesia attenuates postoperative melatonin suppression and impro"
+    },
+    {
+      "document_id": "10.3389_fnut.2023.1051444.xml",
+      "doi": "10.3389/fnut.2023.1051444",
+      "pmid": "36845051",
+      "pmcid": "PMC9947483",
+      "available_assets": [],
+      "parser_warnings": [],
+      "table_count": 2,
+      "tables": [
+        {
+          "label": "Table 1",
+          "rows": 30,
+          "stat_rich_rows": 29,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "Table 2",
+          "rows": 30,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        }
+      ],
+      "has_xml_tables": true,
+      "supplement_refs": 18,
+      "supplement_elements": 2,
+      "statistical_token_counts": {
+        "se": 3,
+        "sd": 0,
+        "ci": 28,
+        "n": 4,
+        "effect_metric": 83,
+        "ci_range": 222,
+        "supp_ref": 16
+      },
+      "candidate_effect_rows": 12,
+      "candidate_se_rows": 0,
+      "candidate_ci_rows": 29,
+      "candidate_sd_rows": 1,
+      "candidate_n_rows": 0,
+      "candidate_poolable_rows": 29,
+      "token_plusminus": 0,
+      "title": "Association between dietary caffeine, coffee, and tea consumption and depressive symptoms in adults: A systematic review"
+    },
+    {
+      "document_id": "10.3389_fphys.2024.1513746.xml",
+      "doi": "10.3389/fphys.2024.1513746",
+      "pmid": "39959813",
+      "pmcid": "PMC11825786",
+      "available_assets": [],
+      "parser_warnings": [],
+      "table_count": 3,
+      "tables": [
+        {
+          "label": "TABLE 1",
+          "rows": 4,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "TABLE 2",
+          "rows": 20,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "TABLE 3",
+          "rows": 22,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        }
+      ],
+      "has_xml_tables": true,
+      "supplement_refs": 2,
+      "supplement_elements": 2,
+      "statistical_token_counts": {
+        "se": 0,
+        "sd": 9,
+        "ci": 12,
+        "n": 0,
+        "effect_metric": 56,
+        "ci_range": 110,
+        "supp_ref": 0
+      },
+      "candidate_effect_rows": 0,
+      "candidate_se_rows": 0,
+      "candidate_ci_rows": 0,
+      "candidate_sd_rows": 1,
+      "candidate_n_rows": 0,
+      "candidate_poolable_rows": 0,
+      "token_plusminus": 0,
+      "title": "Effects of exercise dose based on the ACSM recommendations on depression in hemodialysis patients: a systematic review a"
+    },
+    {
+      "document_id": "10.3389_fpsyg.2022.974382.xml",
+      "doi": "10.3389/fpsyg.2022.974382",
+      "pmid": "36687827",
+      "pmcid": "PMC9846179",
+      "available_assets": [],
+      "parser_warnings": [],
+      "table_count": 3,
+      "tables": [
+        {
+          "label": "TABLE 1",
+          "rows": 73,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "TABLE 2",
+          "rows": 17,
+          "stat_rich_rows": 1,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "TABLE 3",
+          "rows": 5,
+          "stat_rich_rows": 3,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        }
+      ],
+      "has_xml_tables": true,
+      "supplement_refs": 14,
+      "supplement_elements": 10,
+      "statistical_token_counts": {
+        "se": 0,
+        "sd": 1,
+        "ci": 35,
+        "n": 0,
+        "effect_metric": 72,
+        "ci_range": 98,
+        "supp_ref": 4
+      },
+      "candidate_effect_rows": 3,
+      "candidate_se_rows": 0,
+      "candidate_ci_rows": 4,
+      "candidate_sd_rows": 0,
+      "candidate_n_rows": 0,
+      "candidate_poolable_rows": 4,
+      "token_plusminus": 0,
+      "title": "The strategies of exercise intervention for adolescent depression: A meta-analysis of randomized controlled trials"
+    },
+    {
+      "document_id": "10.3389_fpsyg.2024.1400590.xml",
+      "doi": "10.3389/fpsyg.2024.1400590",
+      "pmid": "39399263",
+      "pmcid": "PMC11466880",
+      "available_assets": [],
+      "parser_warnings": [],
+      "table_count": 2,
+      "tables": [
+        {
+          "label": "Table 1",
+          "rows": 24,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "Table 2",
+          "rows": 17,
+          "stat_rich_rows": 4,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        }
+      ],
+      "has_xml_tables": true,
+      "supplement_refs": 0,
+      "supplement_elements": 0,
+      "statistical_token_counts": {
+        "se": 5,
+        "sd": 10,
+        "ci": 6,
+        "n": 11,
+        "effect_metric": 26,
+        "ci_range": 100,
+        "supp_ref": 0
+      },
+      "candidate_effect_rows": 0,
+      "candidate_se_rows": 0,
+      "candidate_ci_rows": 0,
+      "candidate_sd_rows": 12,
+      "candidate_n_rows": 5,
+      "candidate_poolable_rows": 4,
+      "token_plusminus": 0,
+      "title": "The impact of exercise intensity on depression in fibromyalgia: a randomized controlled trial"
+    },
+    {
+      "document_id": "10.3389_fpsyt.2022.799600.xml",
+      "doi": "10.3389/fpsyt.2022.799600",
+      "pmid": "35599775",
+      "pmcid": "PMC9115753",
+      "available_assets": [],
+      "parser_warnings": [],
+      "table_count": 4,
+      "tables": [
+        {
+          "label": "Table 1",
+          "rows": 27,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "Table 2",
+          "rows": 6,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "Table 3",
+          "rows": 8,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "Table 4",
+          "rows": 21,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": true,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        }
+      ],
+      "has_xml_tables": true,
+      "supplement_refs": 0,
+      "supplement_elements": 0,
+      "statistical_token_counts": {
+        "se": 1,
+        "sd": 6,
+        "ci": 0,
+        "n": 22,
+        "effect_metric": 43,
+        "ci_range": 95,
+        "supp_ref": 0
+      },
+      "candidate_effect_rows": 0,
+      "candidate_se_rows": 0,
+      "candidate_ci_rows": 0,
+      "candidate_sd_rows": 1,
+      "candidate_n_rows": 4,
+      "candidate_poolable_rows": 0,
+      "token_plusminus": 0,
+      "title": "Feasibility of an Exercise and CBT Intervention for Treatment of Depression: A Pilot Randomized Controlled Trial"
+    },
+    {
+      "document_id": "10.3389_fpsyt.2025.1525631.xml",
+      "doi": "10.3389/fpsyt.2025.1525631",
+      "pmid": "40046991",
+      "pmcid": "PMC11880210",
+      "available_assets": [],
+      "parser_warnings": [],
+      "table_count": 2,
+      "tables": [
+        {
+          "label": "Table 1",
+          "rows": 49,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": true,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "Table 2",
+          "rows": 32,
+          "stat_rich_rows": 1,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        }
+      ],
+      "has_xml_tables": true,
+      "supplement_refs": 0,
+      "supplement_elements": 0,
+      "statistical_token_counts": {
+        "se": 0,
+        "sd": 2,
+        "ci": 5,
+        "n": 2,
+        "effect_metric": 72,
+        "ci_range": 59,
+        "supp_ref": 0
+      },
+      "candidate_effect_rows": 0,
+      "candidate_se_rows": 0,
+      "candidate_ci_rows": 1,
+      "candidate_sd_rows": 0,
+      "candidate_n_rows": 1,
+      "candidate_poolable_rows": 1,
+      "token_plusminus": 0,
+      "title": "Dose-response relationship between carotenoid intake and risk of depressive symptoms in postmenopausal women"
+    },
+    {
+      "document_id": "10.3390-biomedicines14061275.xml",
+      "doi": "10.3390/biomedicines14061275",
+      "pmid": "42351703",
+      "pmcid": "PMC13296431",
+      "available_assets": [],
+      "parser_warnings": [],
+      "table_count": 5,
+      "tables": [
+        {
+          "label": "Table 1",
+          "rows": 21,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "Table 2",
+          "rows": 12,
+          "stat_rich_rows": 1,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "Table 3",
+          "rows": 38,
+          "stat_rich_rows": 1,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "Table 4",
+          "rows": 12,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "Table 5",
+          "rows": 6,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        }
+      ],
+      "has_xml_tables": true,
+      "supplement_refs": 1,
+      "supplement_elements": 1,
+      "statistical_token_counts": {
+        "se": 0,
+        "sd": 34,
+        "ci": 6,
+        "n": 22,
+        "effect_metric": 19,
+        "ci_range": 62,
+        "supp_ref": 0
+      },
+      "candidate_effect_rows": 0,
+      "candidate_se_rows": 0,
+      "candidate_ci_rows": 2,
+      "candidate_sd_rows": 4,
+      "candidate_n_rows": 4,
+      "candidate_poolable_rows": 2,
+      "token_plusminus": 0,
+      "title": "Association of Sleep Quality, Nutritional Factors, and Salivary Melatonin and Cortisol Levels with Oral Lichen Planus: A"
+    },
+    {
+      "document_id": "10.3390-clockssleep8020015.xml",
+      "doi": "10.3390/clockssleep8020015",
+      "pmid": "42029558",
+      "pmcid": "PMC13108063",
+      "available_assets": [],
+      "parser_warnings": [],
+      "table_count": 4,
+      "tables": [
+        {
+          "label": "Table 1",
+          "rows": 26,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "Table 2",
+          "rows": 34,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "Table 3",
+          "rows": 26,
+          "stat_rich_rows": 1,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "Table 4",
+          "rows": 12,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        }
+      ],
+      "has_xml_tables": true,
+      "supplement_refs": 0,
+      "supplement_elements": 0,
+      "statistical_token_counts": {
+        "se": 16,
+        "sd": 28,
+        "ci": 0,
+        "n": 31,
+        "effect_metric": 33,
+        "ci_range": 27,
+        "supp_ref": 0
+      },
+      "candidate_effect_rows": 0,
+      "candidate_se_rows": 1,
+      "candidate_ci_rows": 0,
+      "candidate_sd_rows": 4,
+      "candidate_n_rows": 4,
+      "candidate_poolable_rows": 1,
+      "token_plusminus": 0,
+      "title": "Comparative Evaluation of Ashwagandha ( Withania somnifera ) Root Extract and Melatonin for Improving Sleep Quality in A"
+    },
+    {
+      "document_id": "10.3390-clockssleep8020031.xml",
+      "doi": "10.3390/clockssleep8020031",
+      "pmid": "42345841",
+      "pmcid": "PMC13297780",
+      "available_assets": [],
+      "parser_warnings": [],
+      "table_count": 2,
+      "tables": [
+        {
+          "label": "Table 1",
+          "rows": 7,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "Table 2",
+          "rows": 24,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        }
+      ],
+      "has_xml_tables": true,
+      "supplement_refs": 0,
+      "supplement_elements": 0,
+      "statistical_token_counts": {
+        "se": 22,
+        "sd": 10,
+        "ci": 5,
+        "n": 13,
+        "effect_metric": 47,
+        "ci_range": 44,
+        "supp_ref": 0
+      },
+      "candidate_effect_rows": 0,
+      "candidate_se_rows": 0,
+      "candidate_ci_rows": 0,
+      "candidate_sd_rows": 0,
+      "candidate_n_rows": 1,
+      "candidate_poolable_rows": 0,
+      "token_plusminus": 0,
+      "title": "Efficacy and Safety of Sustained-Release Melatonin Capsules (2 mg) in Healthy Adults with Poor Sleep Quality: A Randomiz"
+    },
+    {
+      "document_id": "10.3390-foods15183230.xml",
+      "doi": "10.3390/foods15183230",
+      "pmid": "42794015",
+      "pmcid": "PMC13606917",
+      "available_assets": [],
+      "parser_warnings": [],
+      "table_count": 2,
+      "tables": [
+        {
+          "label": "Table 1",
+          "rows": 9,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "Table 2",
+          "rows": 2,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        }
+      ],
+      "has_xml_tables": true,
+      "supplement_refs": 3,
+      "supplement_elements": 1,
+      "statistical_token_counts": {
+        "se": 0,
+        "sd": 6,
+        "ci": 0,
+        "n": 14,
+        "effect_metric": 26,
+        "ci_range": 71,
+        "supp_ref": 2
+      },
+      "candidate_effect_rows": 0,
+      "candidate_se_rows": 0,
+      "candidate_ci_rows": 0,
+      "candidate_sd_rows": 1,
+      "candidate_n_rows": 0,
+      "candidate_poolable_rows": 0,
+      "token_plusminus": 0,
+      "title": "Bifidobacterium longum  B18 Modulates Pharmacologically Induced Sleep Parameters in Rats in Association with Altered Try"
+    },
+    {
+      "document_id": "10.3390-ijms27125209.xml",
+      "doi": "10.3390/ijms27125209",
+      "pmid": "42352934",
+      "pmcid": "PMC13300100",
+      "available_assets": [],
+      "parser_warnings": [],
+      "table_count": 3,
+      "tables": [
+        {
+          "label": "Table 1",
+          "rows": 12,
+          "stat_rich_rows": 8,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "Table 2",
+          "rows": 6,
+          "stat_rich_rows": 3,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "Table 3",
+          "rows": 7,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        }
+      ],
+      "has_xml_tables": true,
+      "supplement_refs": 0,
+      "supplement_elements": 0,
+      "statistical_token_counts": {
+        "se": 0,
+        "sd": 1,
+        "ci": 0,
+        "n": 3,
+        "effect_metric": 34,
+        "ci_range": 91,
+        "supp_ref": 0
+      },
+      "candidate_effect_rows": 0,
+      "candidate_se_rows": 0,
+      "candidate_ci_rows": 11,
+      "candidate_sd_rows": 3,
+      "candidate_n_rows": 1,
+      "candidate_poolable_rows": 11,
+      "token_plusminus": 0,
+      "title": "Tryptophan-Serotonin-Melatonin Pathway as a Contributor to Changes in Mood and Cognitive Functions Induced by Sleep Depr"
+    },
+    {
+      "document_id": "10.3390-ijms27146320.xml",
+      "doi": "10.3390/ijms27146320",
+      "pmid": "42511663",
+      "pmcid": "PMC13409838",
+      "available_assets": [],
+      "parser_warnings": [],
+      "table_count": 3,
+      "tables": [
+        {
+          "label": "Table 1",
+          "rows": 43,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "Table 2",
+          "rows": 4,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "Table 3",
+          "rows": 11,
+          "stat_rich_rows": 8,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        }
+      ],
+      "has_xml_tables": true,
+      "supplement_refs": 0,
+      "supplement_elements": 0,
+      "statistical_token_counts": {
+        "se": 0,
+        "sd": 6,
+        "ci": 5,
+        "n": 23,
+        "effect_metric": 27,
+        "ci_range": 92,
+        "supp_ref": 0
+      },
+      "candidate_effect_rows": 1,
+      "candidate_se_rows": 0,
+      "candidate_ci_rows": 8,
+      "candidate_sd_rows": 10,
+      "candidate_n_rows": 4,
+      "candidate_poolable_rows": 8,
+      "token_plusminus": 0,
+      "title": "Plasma Melatonin Levels, Seasonal Variation, and Sleep Quality: A Stratified Analysis of Adults Aged 25–65 Years Using t"
+    },
+    {
+      "document_id": "10.3390-ijms27156906.xml",
+      "doi": "10.3390/ijms27156906",
+      "pmid": "42589559",
+      "pmcid": "PMC13466267",
+      "available_assets": [],
+      "parser_warnings": [],
+      "table_count": 0,
+      "tables": [],
+      "has_xml_tables": false,
+      "supplement_refs": 1,
+      "supplement_elements": 1,
+      "statistical_token_counts": {
+        "se": 1,
+        "sd": 3,
+        "ci": 0,
+        "n": 12,
+        "effect_metric": 60,
+        "ci_range": 84,
+        "supp_ref": 0
+      },
+      "candidate_effect_rows": 0,
+      "candidate_se_rows": 0,
+      "candidate_ci_rows": 0,
+      "candidate_sd_rows": 0,
+      "candidate_n_rows": 0,
+      "candidate_poolable_rows": 0,
+      "token_plusminus": 0,
+      "title": "Effects of Melatonin Formulations on Caffeine-Evoked Cortical Activity and Pentobarbital-Induced Sleep in Mice"
+    },
+    {
+      "document_id": "10.3390-medicina62091762.xml",
+      "doi": "10.3390/medicina62091762",
+      "pmid": "42796368",
+      "pmcid": "PMC13608926",
+      "available_assets": [],
+      "parser_warnings": [],
+      "table_count": 4,
+      "tables": [
+        {
+          "label": "Table 1",
+          "rows": 5,
+          "stat_rich_rows": 1,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "Table 2",
+          "rows": 3,
+          "stat_rich_rows": 3,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "Table 3",
+          "rows": 4,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "Table 4",
+          "rows": 3,
+          "stat_rich_rows": 3,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        }
+      ],
+      "has_xml_tables": true,
+      "supplement_refs": 0,
+      "supplement_elements": 0,
+      "statistical_token_counts": {
+        "se": 9,
+        "sd": 6,
+        "ci": 10,
+        "n": 4,
+        "effect_metric": 56,
+        "ci_range": 52,
+        "supp_ref": 0
+      },
+      "candidate_effect_rows": 0,
+      "candidate_se_rows": 1,
+      "candidate_ci_rows": 7,
+      "candidate_sd_rows": 3,
+      "candidate_n_rows": 2,
+      "candidate_poolable_rows": 7,
+      "token_plusminus": 0,
+      "title": "Salivary Melatonin and MMP-9 Levels in Stage III Periodontitis: A Pilot Study Using Standardized Pre-Sleep Saliva Collec"
+    },
+    {
+      "document_id": "10.3390-nu18091425.xml",
+      "doi": "10.3390/nu18091425",
+      "pmid": "42124027",
+      "pmcid": "PMC13165432",
+      "available_assets": [],
+      "parser_warnings": [],
+      "table_count": 2,
+      "tables": [
+        {
+          "label": "Table 1",
+          "rows": 8,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": true,
+            "effect_metric": true,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "Table 2",
+          "rows": 6,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": true,
+            "effect_metric": true,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        }
+      ],
+      "has_xml_tables": true,
+      "supplement_refs": 2,
+      "supplement_elements": 1,
+      "statistical_token_counts": {
+        "se": 1,
+        "sd": 4,
+        "ci": 5,
+        "n": 7,
+        "effect_metric": 61,
+        "ci_range": 87,
+        "supp_ref": 1
+      },
+      "candidate_effect_rows": 1,
+      "candidate_se_rows": 0,
+      "candidate_ci_rows": 0,
+      "candidate_sd_rows": 5,
+      "candidate_n_rows": 0,
+      "candidate_poolable_rows": 0,
+      "token_plusminus": 0,
+      "title": "Melatonin, Caffeine, or Their Combination: Effects on Sleep, Performance, Perceived Exertion in a Placebo-Controlled Cro"
+    },
+    {
+      "document_id": "10.3390_ijerph18179205.xml",
+      "doi": "10.3390/ijerph18179205",
+      "pmid": "34501792",
+      "pmcid": "PMC8430543",
+      "available_assets": [],
+      "parser_warnings": [],
+      "table_count": 3,
+      "tables": [
+        {
+          "label": "Table 1",
+          "rows": 19,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "Table 2",
+          "rows": 40,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "Table 3",
+          "rows": 41,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        }
+      ],
+      "has_xml_tables": true,
+      "supplement_refs": 0,
+      "supplement_elements": 0,
+      "statistical_token_counts": {
+        "se": 0,
+        "sd": 8,
+        "ci": 0,
+        "n": 12,
+        "effect_metric": 24,
+        "ci_range": 86,
+        "supp_ref": 0
+      },
+      "candidate_effect_rows": 0,
+      "candidate_se_rows": 0,
+      "candidate_ci_rows": 0,
+      "candidate_sd_rows": 3,
+      "candidate_n_rows": 2,
+      "candidate_poolable_rows": 0,
+      "token_plusminus": 0,
+      "title": "Effects of Intradialytic Exercise on Dialytic Parameters, Health-Related Quality of Life, and Depression Status in Hemod"
+    },
+    {
+      "document_id": "10.3390_life15020285.xml",
+      "doi": "10.3390/life15020285",
+      "pmid": "40003693",
+      "pmcid": "PMC11857396",
+      "available_assets": [],
+      "parser_warnings": [],
+      "table_count": 0,
+      "tables": [],
+      "has_xml_tables": false,
+      "supplement_refs": 2,
+      "supplement_elements": 2,
+      "statistical_token_counts": {
+        "se": 1,
+        "sd": 2,
+        "ci": 12,
+        "n": 3,
+        "effect_metric": 41,
+        "ci_range": 97,
+        "supp_ref": 0
+      },
+      "candidate_effect_rows": 0,
+      "candidate_se_rows": 0,
+      "candidate_ci_rows": 0,
+      "candidate_sd_rows": 0,
+      "candidate_n_rows": 0,
+      "candidate_poolable_rows": 0,
+      "token_plusminus": 0,
+      "title": "Effects of Exercise on Post-Stroke Depression: A Systematic Review and Meta-Analysis of Randomized Controlled Trials"
+    },
+    {
+      "document_id": "10.3390_metabo13090981.xml",
+      "doi": "10.3390/metabo13090981",
+      "pmid": "37755261",
+      "pmcid": "PMC10536584",
+      "available_assets": [],
+      "parser_warnings": [],
+      "table_count": 1,
+      "tables": [
+        {
+          "label": "Table 1",
+          "rows": 10,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        }
+      ],
+      "has_xml_tables": true,
+      "supplement_refs": 0,
+      "supplement_elements": 0,
+      "statistical_token_counts": {
+        "se": 0,
+        "sd": 3,
+        "ci": 0,
+        "n": 0,
+        "effect_metric": 30,
+        "ci_range": 87,
+        "supp_ref": 0
+      },
+      "candidate_effect_rows": 0,
+      "candidate_se_rows": 0,
+      "candidate_ci_rows": 0,
+      "candidate_sd_rows": 0,
+      "candidate_n_rows": 0,
+      "candidate_poolable_rows": 0,
+      "token_plusminus": 0,
+      "title": "Effects of Exercise on Functional Recovery in Patients with Bipolar Depression: A Study Protocol for a Randomized Contro"
+    },
+    {
+      "document_id": "10.3390_metabo16090679.xml",
+      "doi": "10.3390/metabo16090679",
+      "pmid": "42783804",
+      "pmcid": "PMC13609384",
+      "available_assets": [],
+      "parser_warnings": [],
+      "table_count": 4,
+      "tables": [
+        {
+          "label": "Table 1",
+          "rows": 32,
+          "stat_rich_rows": 2,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "Table 2",
+          "rows": 12,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "Table 3",
+          "rows": 9,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "Table 4",
+          "rows": 28,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        }
+      ],
+      "has_xml_tables": true,
+      "supplement_refs": 5,
+      "supplement_elements": 2,
+      "statistical_token_counts": {
+        "se": 1,
+        "sd": 3,
+        "ci": 0,
+        "n": 14,
+        "effect_metric": 23,
+        "ci_range": 68,
+        "supp_ref": 3
+      },
+      "candidate_effect_rows": 0,
+      "candidate_se_rows": 0,
+      "candidate_ci_rows": 0,
+      "candidate_sd_rows": 29,
+      "candidate_n_rows": 2,
+      "candidate_poolable_rows": 2,
+      "token_plusminus": 0,
+      "title": "Effects of Adjunctive Exercise Therapy in Patients with Bipolar Depression: A Pilot Multicenter Cluster-Randomized Contr"
+    },
+    {
+      "document_id": "10.4103-jfmpc.jfmpc_150_25.xml",
+      "doi": "10.4103/jfmpc.jfmpc_150_25",
+      "pmid": "42257163",
+      "pmcid": "PMC13241146",
+      "available_assets": [],
+      "parser_warnings": [],
+      "table_count": 0,
+      "tables": [],
+      "has_xml_tables": false,
+      "supplement_refs": 0,
+      "supplement_elements": 0,
+      "statistical_token_counts": {
+        "se": 0,
+        "sd": 0,
+        "ci": 0,
+        "n": 0,
+        "effect_metric": 26,
+        "ci_range": 27,
+        "supp_ref": 0
+      },
+      "candidate_effect_rows": 0,
+      "candidate_se_rows": 0,
+      "candidate_ci_rows": 0,
+      "candidate_sd_rows": 0,
+      "candidate_n_rows": 0,
+      "candidate_poolable_rows": 0,
+      "token_plusminus": 0,
+      "title": "Melatonin and sleep: Exploring its role in regulating the circadian rhythm and sleep-wake cycle"
+    },
+    {
+      "document_id": "10.4103-jrpp.jrpp_63_25.xml",
+      "doi": "10.4103/jrpp.jrpp_63_25",
+      "pmid": "41969592",
+      "pmcid": "PMC13067964",
+      "available_assets": [],
+      "parser_warnings": [],
+      "table_count": 2,
+      "tables": [
+        {
+          "label": "Table 1",
+          "rows": 7,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "Table 2",
+          "rows": 9,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        }
+      ],
+      "has_xml_tables": true,
+      "supplement_refs": 0,
+      "supplement_elements": 0,
+      "statistical_token_counts": {
+        "se": 1,
+        "sd": 2,
+        "ci": 0,
+        "n": 8,
+        "effect_metric": 18,
+        "ci_range": 18,
+        "supp_ref": 0
+      },
+      "candidate_effect_rows": 0,
+      "candidate_se_rows": 0,
+      "candidate_ci_rows": 0,
+      "candidate_sd_rows": 13,
+      "candidate_n_rows": 2,
+      "candidate_poolable_rows": 0,
+      "token_plusminus": 0,
+      "title": "Melatonin Supplementation Improves Pain, Sleep Quality, and Total Plasma Antioxidant Capacity in Women with Fibrocystic "
+    },
+    {
+      "document_id": "10.5152-tjg.2026.25808.xml",
+      "doi": "10.5152/tjg.2026.25808",
+      "pmid": "41846526",
+      "pmcid": "PMC13182925",
+      "available_assets": [],
+      "parser_warnings": [],
+      "table_count": 3,
+      "tables": [
+        {
+          "label": "Table 1.",
+          "rows": 8,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "Table 2.",
+          "rows": 5,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "Table 3.",
+          "rows": 5,
+          "stat_rich_rows": 5,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        }
+      ],
+      "has_xml_tables": true,
+      "supplement_refs": 0,
+      "supplement_elements": 0,
+      "statistical_token_counts": {
+        "se": 0,
+        "sd": 2,
+        "ci": 3,
+        "n": 6,
+        "effect_metric": 42,
+        "ci_range": 72,
+        "supp_ref": 0
+      },
+      "candidate_effect_rows": 0,
+      "candidate_se_rows": 0,
+      "candidate_ci_rows": 5,
+      "candidate_sd_rows": 4,
+      "candidate_n_rows": 2,
+      "candidate_poolable_rows": 5,
+      "token_plusminus": 0,
+      "title": "Nocturnal Melatonin Deficiency in Colorectal Cancer: Independent Predictive Value Beyond Sleep Quality"
+    },
+    {
+      "document_id": "10.5664-jcsm.11650.xml",
+      "doi": "10.5664/jcsm.11650",
+      "pmid": "40135692",
+      "pmcid": "PMC12320674",
+      "available_assets": [],
+      "parser_warnings": [],
+      "table_count": 0,
+      "tables": [],
+      "has_xml_tables": false,
+      "supplement_refs": 0,
+      "supplement_elements": 0,
+      "statistical_token_counts": {
+        "se": 0,
+        "sd": 0,
+        "ci": 0,
+        "n": 0,
+        "effect_metric": 1,
+        "ci_range": 4,
+        "supp_ref": 0
+      },
+      "candidate_effect_rows": 0,
+      "candidate_se_rows": 0,
+      "candidate_ci_rows": 0,
+      "candidate_sd_rows": 0,
+      "candidate_n_rows": 0,
+      "candidate_poolable_rows": 0,
+      "token_plusminus": 0,
+      "title": "The relationship between sleep and circadian-sleep phase angles based on dim light melatonin onset predicted from light "
+    },
+    {
+      "document_id": "10.7759-cureus.107734.xml",
+      "doi": "10.7759/cureus.107734",
+      "pmid": "42205627",
+      "pmcid": "PMC13205452",
+      "available_assets": [],
+      "parser_warnings": [],
+      "table_count": 3,
+      "tables": [
+        {
+          "label": "Table 1",
+          "rows": 5,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "Table 2",
+          "rows": 7,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        },
+        {
+          "label": "Table 3",
+          "rows": 5,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": true,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        }
+      ],
+      "has_xml_tables": true,
+      "supplement_refs": 0,
+      "supplement_elements": 0,
+      "statistical_token_counts": {
+        "se": 0,
+        "sd": 6,
+        "ci": 1,
+        "n": 2,
+        "effect_metric": 41,
+        "ci_range": 25,
+        "supp_ref": 0
+      },
+      "candidate_effect_rows": 0,
+      "candidate_se_rows": 0,
+      "candidate_ci_rows": 0,
+      "candidate_sd_rows": 6,
+      "candidate_n_rows": 0,
+      "candidate_poolable_rows": 0,
+      "token_plusminus": 0,
+      "title": "Evaluating Whether Melatonin Impacts Postoperative Sleep Following Total Joint Arthroplasty: A Systematic Review and Met"
+    },
+    {
+      "document_id": "10.7759-cureus.117474.xml",
+      "doi": "10.7759/cureus.117474",
+      "pmid": "",
+      "pmcid": "PMC13732753",
+      "available_assets": [],
+      "parser_warnings": [],
+      "table_count": 1,
+      "tables": [
+        {
+          "label": "Table 1",
+          "rows": 4,
+          "stat_rich_rows": 0,
+          "caption_stats": {
+            "se": false,
+            "sd": false,
+            "ci": false,
+            "n": false,
+            "effect_metric": false,
+            "plusminus": false,
+            "ci_range": false,
+            "supp_ref": false
+          }
+        }
+      ],
+      "has_xml_tables": true,
+      "supplement_refs": 0,
+      "supplement_elements": 0,
+      "statistical_token_counts": {
+        "se": 0,
+        "sd": 0,
+        "ci": 0,
+        "n": 0,
+        "effect_metric": 20,
+        "ci_range": 18,
+        "supp_ref": 0
+      },
+      "candidate_effect_rows": 0,
+      "candidate_se_rows": 0,
+      "candidate_ci_rows": 0,
+      "candidate_sd_rows": 0,
+      "candidate_n_rows": 0,
+      "candidate_poolable_rows": 0,
+      "token_plusminus": 0,
+      "title": "Altered Melatonin Secretion and Recurrent Sleep-Related Headache in a Patient With a Pineal Cyst: A Case Report"
+    }
+  ]
+}
