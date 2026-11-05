@@ -1,0 +1,38 @@
+{
+  "generated": "2026-11-05T22:12Z",
+  "head_commit": "215098e",
+  "recent_commits": [
+    "215098e feat: JATS-Tabellenleser mit Header-Semantik (T4 Stufe 1)",
+    "9a78229 plan: T1 Referenz-Reports + XML-Diagnostik (T2)",
+    "de4cd5c test: Vision-Fallback-Trigger deckt SE-CI-lose Textzeilen ab",
+    "fc5bcdd test: arXiv-Gate-Verbesserung mit Realfällen aus dem Melatonin-Netzlauf"
+  ],
+  "local_only_changes": "orchestrator.py (gitignored): arXiv-Gate-Fix (2a), Vision-Fallback-Trigger (3a-i), LF-Normalisierung; niemals committen",
+  "run2": {
+    "pid": 24920,
+    "topic": "does melatonin improve sleep onset latency and sleep quality in adults",
+    "command": "nohup env DATABASE_URL=data/research2.db python -m research_agent.main -t \"...\" --no-dashboard",
+    "db": "data/research2-does-melatonin-improve-sleep-onset-laten-382747.db",
+    "log": "data/runs/melatonin_net_run2.log",
+    "started": "2026-11-05 19:30",
+    "planned_end": "~23:00",
+    "status_at_manifest": "laeuft (OpenAlex/S2 429/503-Backoff, keine Abbrueche)"
+  },
+  "reference_dbs_hashes_note": "sha256 vor/nach in data/bench/regreports/*_report_meta.json; Quelle-Laeufe unveraendert (source_untouched=true)",
+  "artifacts": {
+    "t1_reports": [
+      "data/reports/20261105-2104-Exercise-and-depressive-symptoms-in-adul.md",
+      "data/reports/20261105-2104-Mediterrane-Ernaehrung-und-kardiovaskula.md",
+      "data/reports/20261105-2104-Kognition-und-Gesundheit--Ist-der-Zusamm.md"
+    ],
+    "t1_meta": "data/bench/regreports/t1_summary.json",
+    "t2_diagnostics": [
+      "data/bench/xml_diagnostics_20261105.json",
+      "data/bench/xml_diagnose_20261105.md"
+    ],
+    "t2_t1_report": "data/bench/t1_t2_ergebnisse_20261105.md",
+    "t4_module": "research_agent/research/jats_tables.py"
+  },
+  "test_status": "Fokus-Suiten gruen (40 passed); letzte Voll-Suite 1024 passed / 2 skipped (commit de4cd5c)",
+  "t0_pending": "Endvergleich Run 1 vs Run 2 nach Laufende (eval_run_results.py + Vision-Trigger-Telemetrie)"
+}
