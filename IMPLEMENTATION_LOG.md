@@ -906,3 +906,64 @@ Formatrestentaufe in den Dateien. Kein Produktionscode geändert.
   Vision-Lesung nutzt konstant VISION_MODEL).
 - Beweis: Testlauf mit Extraktionsdeckung > 0%, weiterhin der
   Benchmark gegen den Goldstandard-Fundus.
+
+## Sprint 30 (05.11.2026): Verbatim-Vertrag fuer Bild-Evidenz + Vision-Fallback im Orchestrator (Auftrag v2 §2.1)
+
+**Problem.** Die Doppel-Lesung der Sprint-29-Vision-Tabellenlesung lief als Modul,
+aber der Verbatim-Vertrag prueft Zitate gegen den Textlayer - eine Bildlesung
+hat keinen Textzitat-Span und waere falschlich als "unbelegt" geendet.
+Zugleich fehlte die Anbindung in der Extracting-Phase des Orchestrators und der
+Bericht wies die Evidenzart nicht aus.
+
+**Loesung (3 Ebenen).**
+1. Definierte Normalisierung statt numerischer Toleranz:
+   `normalise_number_text()` in research/vision_table.py - Unicode-Minus
+   (U+2212 -> ASCII), Dezimalkomma -> Punkt (bewusst ohne Tausender-
+   heuristik), Whitespace vereinzelt, ± ohne Umgebungsleerzeichen. Der
+   Doppelleitungs-Vergleich (rows_equal) laeuft STRENG ueber die Rohlesungen
+   ("raw_effect" a. s. f.), nie mit numerischer Toleranz: 0,58 vs 0,53 bleibt
+   disputed; "0,53" vs "0.53" ist verified. Zeilen ohne Rohlesung (handge-
+   baute Fixtures) fallen auf strikte Float-Gleichheit zurueck. Promptversion
+   ist Belegbestandteil: PROMPT_VERSION = "vision_table/2".
+2. Datenmodell + DB: StudyEffect.evidence_kind ("text_verbatim" | "vision_read"),
+   vision_status ("verified" | "disputed"), vision_meta = Belegkette (pdf_hash,
+   crop_hash, page, dpi, model, prompt_version, bbox_row, page_status) als JSON
+   - SQLite-Migrationen sind additiv (ALTER TABLE, idempotent) an
+   study_effects (evidence_kind/vision_status/vision_meta) und an
+   facts.evidence_kind.
+3. Verdrahtung: read_table_evidence() baut als async das Evidenz-Aggregat mit
+   Hashes und Status; der Orchestrator (`_work_item_effect_extraction`) ruft
+   `_vision_fallback_effects()` NUR wenn der Text-Layer keine Effektzeilen
+   liefert und die Original-PDF vorliegt: rasterisiert die Seiten
+   (pypdfium2, max 12/run), liest doppelt, speichert Zeilen mit
+   evidence_kind/vision_status/vision_meta und quote = Zellstring aus den
+   Rohlesungen (label | effect | SE ... | [low;high]).
+
+**Gates** (alle deterministisch, kein LLM):
+- meta/pooling.standardize: eine vision_read-Zeile ist nur poolbar bei
+  vision_status == "verified"; disputed/leer -> nicht poolbar (niemals
+  Mittelung, niemals "bessere Lesung" gewaehlt). quote_start = -1 ist fuer
+  vision_read erwartbar und kein Mangel; text_verbatim-Zeilen fallen
+  unverandert auf den Zitat-Span-Check.
+- meta/validation._verify_effect_quotes: vision-Zeilen werden NICHT als
+  "unbelegt" gewertet; statt dessen: poolbare Zeile ohne verified ->
+  Blocker "vision_poolable_without_verified"; Zeile ohne Status -> Warnung
+  "vision_row_without_status"; text_verbatim unverändert.
+
+**23 neue Tests** (test_sprint30_vision.py): Ziffernverwechslung bleibt
+disputed; "-.53" vs "-0.53" bleibt disputed (streng); halbgelesene Zeilen
+(Wert + Rohlesung fehlend) bleiben disputed - auch wenn BEIDE Lesungen
+dasselbe Feld verlieren; Belegkette komplett (Hashes, page, dpi, model,
+prompt_version); Pooling- und Validierungsbeschluesse je vision_status.
+103 Tests in den betroffenen Suiten gruen (test_sprint30 23 +
+vision_table 13 + meta_pooling + validation).
+meta_pooling + validation).
+
+**Grenzen (bewusst nicht geloest):** Ein Zellstring-Quote ist als
+Rohlesung gespeichert, aber gegen keine dritte Quelle (Textlayer) geprueft
+- der Zusatzpruefungspfad (Textlayer vorhanden -> dritte Gegenprobe,
+Abweichung -> disputed) steht offen. Der "beide Lesungen falsch identisch"-
+Fall ist durch die Doppel-Lesung allein nicht abfangbar (fehlerkorreliert)
+- Vorschlag: Leserstaffelung (z. B. Ganzseite vs Crop) fuer die
+zweite Lesung.
+

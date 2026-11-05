@@ -83,7 +83,8 @@ def _verify_effect_quotes(
     blockers: List[dict] = []
     warnings: List[dict] = []
     counts: Dict[str, int] = {"total": 0, "checked": 0, "unsupported": 0,
-                              "unquoted_poolable": 0}
+                              "unquoted_poolable": 0, "vision_rows": 0,
+                              "vision_unverified": 0}
     try:
         counts["total"] = int(db.count_study_effects() or 0)
         rows = db.get_study_effects(limit=limit) or []
@@ -100,15 +101,45 @@ def _verify_effect_quotes(
                 "OR (ci_low IS NOT NULL AND ci_high IS NOT NULL))")
     for row in rows:
         ids = [str(row.get("id") or "")]
-        quote = str(row.get("quote") or "")
-        text = _text_for(db, str(row.get("source_text_id") or ""))
-        start = int(row.get("quote_start") or -1)
-        end = int(row.get("quote_end") or -1)
         is_poolable = (int(row.get("disputed") or 0) == 0
                        and not str(row.get("rejection_reason") or "")
                        and (row.get("se") is not None
                             or (row.get("ci_low") is not None
                                 and row.get("ci_high") is not None)))
+        # Sprint 30: Bildlesungen (evidence_kind == "vision_read") haben
+        # keinen Textzitat-Span - der locate_quote-Check wuerde die Zeile
+        # sinnlos als "unbelegt" werten. Statt dessen deterministische
+        # Statusregeln: poolbar nur bei verified (dasselbe Gate wie im
+        # Pooling), jede unverified-markierte poolbare Zeile ist ein Blocker.
+        is_vision = (str(row.get("evidence_kind") or "").strip().lower()
+                     == "vision_read")
+        vstatus = str(row.get("vision_status") or "").strip().lower()
+        if is_vision:
+            counts["vision_rows"] += 1
+            if vstatus != "verified":
+                counts["vision_unverified"] += 1
+                if is_poolable:
+                    blockers.append({
+                        "rule": "vision_poolable_without_verified",
+                        "ids": ids,
+                        "detail": "Eine poolbare Bildlesung (disputed=0, "
+                                  "Praezision da) traegt vision_status="
+                                  f"'{vstatus or "leer"}' - der "
+                                  "Verbatim-Vertrag verlangt verified "
+                                  "(Uebereinstimmung beider Lesungen).",
+                    })
+                if not vstatus:
+                    warnings.append({
+                        "rule": "vision_row_without_status",
+                        "ids": ids,
+                        "detail": "Eine Bildlesung ohne vision_status - "
+                                  "nicht poolbar, solange kein Status da ist.",
+                    })
+            continue
+        quote = str(row.get("quote") or "")
+        text = _text_for(db, str(row.get("source_text_id") or ""))
+        start = int(row.get("quote_start") or -1)
+        end = int(row.get("quote_end") or -1)
         if start < 0 or end <= start:
             counts["unsupported"] += 1
             if is_poolable:

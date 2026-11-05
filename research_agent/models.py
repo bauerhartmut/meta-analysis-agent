@@ -163,6 +163,19 @@ class StudyEffect:
     # 1 when the two extraction passes disagree; disputed rows are never pooled.
     disputed: int = 0
     rejection_reason: str = ""
+    # Evidenzart (Sprint 30): "text_verbatim" = aus dem Textlayer gelsesen,
+    # quote/quote_start verifizieren gegen den gespeicherten Text.
+    # "vision_read" = aus der gerasterten PDF-Seite doppelgelesen; quote ist
+    # dann der Zellstring, quote_start bleibt -1. Pooling nimmt eine
+    # vision_read-Zeile nur bei vision_status == "verified" an.
+    evidence_kind: str = "text_verbatim"
+    # verified | disputed - nur gefuellt bei evidence_kind == "vision_read".
+    vision_status: str = ""
+    # Belegkette der Bildlesung (JSON): pdf_hash, crop_hash, page, dpi, model,
+    # prompt_version, beide Rohlesungen. Kein Feld in vision_meta wird je
+    # dazu benutzt, die Zahlen selbst zu pruefen: die Zahlen selbst laufen
+    # nur verglichen, nie gemittelt.
+    vision_meta: str = "{}"
     created_at: str = field(default_factory=now_iso)
 
     def to_dict(self) -> dict:
