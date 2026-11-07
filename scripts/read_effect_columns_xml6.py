@@ -46,19 +46,25 @@ DOCUMENTS = [
 def main(argv=None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--xml-dir", default="data/bench/xml6")
+    parser.add_argument("--manifest", default="",
+                        help="JSON-Liste [{\"doi\": ..., \"pmc\": ...}] statt der sechs Dokumente")
     parser.add_argument("--db", default="data/bench/xml6/direct.db")
     parser.add_argument("--json", default="data/bench/xml6/effect_columns_20261107.json")
     parser.add_argument("--md", default="data/bench/xml6/effect_columns_20261107.md")
     args = parser.parse_args(argv)
 
     xml_dir = Path(args.xml_dir)
+    documents = list(DOCUMENTS)
+    if args.manifest:
+        raw = json.loads(Path(args.manifest).read_text(encoding="utf-8"))
+        documents = [(str(entry["doi"]), str(entry["pmc"])) for entry in raw]
     db_path = Path(args.db)
     if db_path.exists():
         db_path.unlink()
     db = Database(str(db_path))
 
-    documents, totals = [], Counter()
-    for doi, pmc in DOCUMENTS:
+    doc_reports, totals = [], Counter()
+    for doi, pmc in documents:
         xml_path = xml_dir / f"{pmc}.xml"
         xml = xml_path.read_text(encoding="utf-8", errors="replace")
         text = _xml_to_text(xml)
@@ -97,7 +103,7 @@ def main(argv=None) -> int:
             "stored": len(stored),
             "rejected": len(rejected),
         })
-        documents.append({
+        doc_reports.append({
             "doi": doi,
             "pmc": pmc,
             "table_rows": table_rows,
@@ -125,7 +131,7 @@ def main(argv=None) -> int:
 
     report = {
         "generated": dt.datetime.now().isoformat(timespec="seconds"),
-        "documents": documents,
+        "documents": doc_reports,
         "totals": dict(totals),
     }
     out = Path(args.json)
@@ -142,7 +148,7 @@ def main(argv=None) -> int:
         "| DOI | Tabellenzeilen | Kopf=Zeile | Kandidaten | gespeichert |",
         "|---|---:|---:|---:|---:|",
     ]
-    for doc in documents:
+    for doc in doc_reports:
         lines.append(f"| {doc['doi']} | {doc['table_rows']} | {doc['aligned_rows']} | "
                      f"{doc['candidates']} | {doc['stored']} |")
     lines += [
@@ -153,12 +159,12 @@ def main(argv=None) -> int:
         "",
     ]
     all_reasons = Counter()
-    for doc in documents:
+    for doc in doc_reports:
         all_reasons.update(doc["reasons"])
     for reason, count in all_reasons.most_common():
         lines.append(f"- {count:4d}  {reason}")
     lines += ["", "## Gespeicherte Effekte", ""]
-    for doc in documents:
+    for doc in doc_reports:
         if not doc["effects"]:
             continue
         lines.append(f"### {doc['doi']}")
@@ -178,7 +184,7 @@ def main(argv=None) -> int:
     for reason, count in all_reasons.most_common():
         print(f"  {count:4d}  {reason}")
     kinds = Counter()
-    for doc in documents:
+    for doc in doc_reports:
         kinds.update(doc["kinds"])
     print("  Typen:", dict(kinds))
     print(f"JSON: {args.json}")
