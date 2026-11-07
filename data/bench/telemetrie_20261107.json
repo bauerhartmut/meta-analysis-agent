@@ -1,0 +1,213 @@
+{
+ "usage": {
+  "run2": {
+   "by_phase": [
+    {
+     "phase": "hypothesizing",
+     "calls": 352,
+     "tokens": 481810,
+     "secs": 1802.4,
+     "errors": 0
+    },
+    {
+     "phase": "analyzing",
+     "calls": 247,
+     "tokens": 466976,
+     "secs": 2125.0,
+     "errors": 0
+    },
+    {
+     "phase": "critiquing",
+     "calls": 476,
+     "tokens": 336627,
+     "secs": 2918.6,
+     "errors": 0
+    },
+    {
+     "phase": "working",
+     "calls": 182,
+     "tokens": 267945,
+     "secs": 1187.7,
+     "errors": 0
+    },
+    {
+     "phase": "synthesizing",
+     "calls": 17,
+     "tokens": 50342,
+     "secs": 296.9,
+     "errors": 0
+    },
+    {
+     "phase": "searching",
+     "calls": 46,
+     "tokens": 26044,
+     "secs": 132.3,
+     "errors": 0
+    },
+    {
+     "phase": "planning",
+     "calls": 3,
+     "tokens": 3006,
+     "secs": 29.0,
+     "errors": 0
+    },
+    {
+     "phase": "idle",
+     "calls": 1,
+     "tokens": 27,
+     "secs": 3.7,
+     "errors": 0
+    }
+   ],
+   "total": {
+    "calls": 1324,
+    "tokens": 1632777,
+    "secs": 8495.6,
+    "errors": 0
+   },
+   "window": {
+    "first": "2026-11-05T19:29:33.746952+01:00",
+    "last": "2026-11-05T22:42:17.258257+01:00"
+   },
+   "days": [
+    "2026-11-05"
+   ]
+  },
+  "thema": {
+   "by_phase": [
+    {
+     "phase": "analyzing",
+     "calls": 4497,
+     "tokens": 9203518,
+     "secs": 46204.9,
+     "errors": 0
+    },
+    {
+     "phase": "hypothesizing",
+     "calls": 5596,
+     "tokens": 8893614,
+     "secs": 27440.4,
+     "errors": 3
+    },
+    {
+     "phase": "working",
+     "calls": 2938,
+     "tokens": 5760926,
+     "secs": 21938.4,
+     "errors": 10
+    },
+    {
+     "phase": "critiquing",
+     "calls": 7731,
+     "tokens": 5648510,
+     "secs": 38293.5,
+     "errors": 0
+    },
+    {
+     "phase": "synthesizing",
+     "calls": 337,
+     "tokens": 1060253,
+     "secs": 7228.4,
+     "errors": 0
+    },
+    {
+     "phase": "searching",
+     "calls": 727,
+     "tokens": 434005,
+     "secs": 2615.2,
+     "errors": 0
+    },
+    {
+     "phase": "planning",
+     "calls": 28,
+     "tokens": 26702,
+     "secs": 343.7,
+     "errors": 0
+    },
+    {
+     "phase": "idle",
+     "calls": 34,
+     "tokens": 921,
+     "secs": 5.2,
+     "errors": 0
+    },
+    {
+     "phase": "waiting_for_llm",
+     "calls": 3,
+     "tokens": 28,
+     "secs": 3.0,
+     "errors": 2
+    }
+   ],
+   "total": {
+    "calls": 21891,
+    "tokens": 31028477,
+    "secs": 144072.7,
+    "errors": 15
+   },
+   "window": {
+    "first": "2026-10-27T11:22:34.329362+01:00",
+    "last": "2026-11-05T19:14:12.476841+01:00"
+   },
+   "days": [
+    "2026-10-27",
+    "2026-10-28",
+    "2026-10-29",
+    "2026-10-31",
+    "2026-11-01",
+    "2026-11-03",
+    "2026-11-05"
+   ]
+  }
+ },
+ "topic": {
+  "run2": {
+   "counts": {
+    "sources": 101,
+    "texts": 59,
+    "studies": 22,
+    "effects": 8,
+    "tables": 8,
+    "hypotheses": 46
+   },
+   "effects": {
+    "with_se": 2,
+    "with_ci": 2,
+    "with_quote": 8
+   },
+   "queries": {
+    "n": 154,
+    "q": 22
+   },
+   "session": {
+    "status": "active",
+    "start_time": "2026-11-05T18:29:33.774951+00:00",
+    "end_time": ""
+   }
+  }
+ },
+ "logs": {
+  "run2": {
+   "lines": 3829,
+   "http_429": 636,
+   "rate_limit_mentions": 635,
+   "cycles_complete": 15,
+   "cycles_error": 7,
+   "backoff_waits": 1532
+  },
+  "run1": {
+   "lines": 5662,
+   "http_429": 1042,
+   "rate_limit_mentions": 1234,
+   "cycles_complete": 30,
+   "cycles_error": 7,
+   "backoff_waits": 2030
+  }
+ },
+ "derived": {
+  "share_heavy_phases_pct": 78.7,
+  "tokens_per_effect": 204097,
+  "tokens_per_source": 16166,
+  "tokens_per_study": 74217
+ }
+}
