@@ -119,13 +119,41 @@ def _classify(cells: list[str], header: list[str] | None = None) -> JatsRow:
     return row
 
 
+def _colspan(cell: ET.Element) -> int:
+    """Spaltenbreite einer Kopfzelle (colspan), mindestens 1."""
+    raw = cell.get("colspan") or cell.get("cols") or "1"
+    try:
+        return max(1, int(str(raw).strip()))
+    except (TypeError, ValueError):
+        return 1
+
+
 def _rows_from(element: ET.Element) -> tuple[list[str], list[JatsRow]]:
-    """Header (erste th-Zeile) und Datenzeilen eines table-Elements."""
+    """Header (erste th-Zeile) und Datenzeilen eines table-Elements.
+
+    Zusammengefasste Kopfzellen (colspan, z. B. "Median (IQR)" ueber zwei
+    Arme) werden auf ihre echte Breite expandiert. Ohne das hat der Kopf
+    weniger Eintraege als die Datenzeile, jede Spalte rutscht nach links,
+    und ein Spaltenleser wuerde den Placebo-Median als Treatment-Effekt
+    lesen. Datenzellen bleiben unveraendert: eine zusammengefasste
+    Datenzelle laesst sich nicht zerlegen, die Zeile faellt dann im
+    Abgleich von Kopfbreite und Zellenzahl auf.
+    """
     header: list[str] = []
     rows: list[JatsRow] = []
     for i, tr in enumerate(el for el in element.iter() if _tag(el) == "tr"):
-        cells = [_text(td) for td in tr if _tag(td) in ("td", "th")]
-        tags = [_tag(td) for td in tr if _tag(td) in ("td", "th")]
+        cells: list[str] = []
+        tags: list[str] = []
+        for td in tr:
+            tag = _tag(td)
+            if tag not in ("td", "th"):
+                continue
+            tags.append(tag)
+            text = _text(td)
+            # Nur Kopfzellen werden expandiert; eine colspan-Datenzelle
+            # wuerde ihren Wert doppeln und damit Zahlen erfinden.
+            span = _colspan(td) if (i == 0 and tag == "th") else 1
+            cells.extend([text] * span)
         if not cells:
             continue
         if i == 0 and "th" in tags:
