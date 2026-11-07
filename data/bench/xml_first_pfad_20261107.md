@@ -60,3 +60,20 @@ Vor den Renderer-Fixes waren 752 Zeilen nicht auffindbar, 480 nach der
   gegen den Live-Endpunkt.
 - `orchestrator.py` bleibt gitignored: die Ablage der JATS-Bloecke ist dort
   lokal verdrahtet und nicht Teil des Commits.
+
+## Live-Gegenprobe (07.11.2026, ein Request)
+
+- DOI `10.3389/fnut.2026.1890075` -> PMCID `PMC13520769` ueber die
+  Europe-PMC-Suche, `fullTextXML` in einem Zug: 54.597 Zeichen Text,
+  4 Tabellenbloecke, 632 Pipe-Zeichen im Text.
+- Der Pfad funktioniert also gegen den echten Endpunkt; die Testfakes
+  bilden dieselbe Kette ab.
+
+## Was nicht im Commit steckt
+
+`research_agent/research/extractor.py` und `research_agent/orchestrator.py`
+sind gitignored (`.gitignore:66` bzw. `:55`). Die Abrufreihenfolge (XML vor
+PDF) und die Ablage der JATS-Bloecke existieren nur lokal; im Repo sind der
+Parser (`jats_tables.py`), der Tabellen-Renderer (`coverage/manager.py`) und
+die Tests versioniert. Ein frischer Klon hat diese Dateien nicht - dort
+fehlen sie dann komplett, nicht nur die Aenderung.
