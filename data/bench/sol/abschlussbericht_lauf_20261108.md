@@ -22,10 +22,14 @@ nachrechenbar. Es gab in diesem Lauf keinen Netzzugriff und keinen Modellaufruf.
 | erkannte Tabellen | 2.735 | ebenda |
 | Tabellenzeilen | 41.821 | ebenda |
 | Saetze (Fliesstext) | 315.857 | ebenda |
-| Kandidaten (Effekte) | 1.115 | ebenda |
+| Kandidaten (Effekte) | 1.179 | `funnel_label2_20261108.json` |
 | gespeichert | 1099 | `funnel_label2_20261108.json` |
-| durch Pruefungen verworfen | 6 | ebenda |
+| durch Pruefungen verworfen | 6 | `effect_columns_label2_*.json` |
 | poolbar (Zeilen) | 422 | `funnel_label2_20261108.json` |
+
+Der Kopfzeilen-Fix allein ergab 1.115 Kandidaten (funnel_20261108.json); die
+Arm-Paarung hebt die Zahl auf 1.179, ohne eine zusaetzliche Zeile zu speichern
+(1.099).
 
 Die 6 Verwuerfe haben einen einzigen Grund: `unbekannter Effekttyp 'irr'` im
 Plausibilitaetsgate. Kein Zitatfehler, kein fehlender Standardfehler.
@@ -72,7 +76,7 @@ Drei Verbesserungen wurden in diesem Lauf gebaut und **einzeln gemessen**:
 
 | Aenderung | Gewinn bei SOL |
 |---|---|
-| mehrzeilige Kopfzeilen, colspan/rowspan (`0cfd1cc`) | 0 (Kandidaten 539 -> 1.115, SOL unveraendert) |
+| mehrzeilige Kopfzeilen, colspan/rowspan (`0cfd1cc`) | 0 (Kandidaten 539 -> 1.115) |
 | Outcome-Label aus Zwischenueberschrift/Caption (`0e8f3a9`) | 0 (ohne Label 232 -> 2, SOL 13 -> 13) |
 | Arm-Rechner paart getrennte Mean-/SD-Spalten (`857b924`) | 0 (lesbar 18 -> 18) |
 | Messung des Fliesstext-Lesers (`6514a60`) | 0 (316 SOL-Saetze mit SD, keiner lesbar) |
