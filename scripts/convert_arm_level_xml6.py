@@ -50,10 +50,17 @@ def _outcome_label(cells, caption: str) -> str:
 def main(argv=None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--xml-dir", default="data/bench/xml6")
+    parser.add_argument("--manifest", default="",
+                        help="JSON-Liste [{\"doi\": ..., \"pmc\": ...}] statt der sechs Dokumente")
     parser.add_argument("--db", default="data/bench/xml6/arm_level.db")
     parser.add_argument("--json", default="data/bench/xml6/arm_level_20261107.json")
     parser.add_argument("--md", default="data/bench/xml6/arm_level_20261107.md")
     args = parser.parse_args(argv)
+
+    sources = list(DOCUMENTS)
+    if args.manifest:
+        raw = json.loads(Path(args.manifest).read_text(encoding="utf-8"))
+        sources = [(str(entry["doi"]), str(entry["pmc"])) for entry in raw]
 
     xml_dir = Path(args.xml_dir)
     db_path = Path(args.db)
@@ -62,7 +69,7 @@ def main(argv=None) -> int:
     db = Database(str(db_path))
 
     documents, totals = [], Counter()
-    for doi, pmc in DOCUMENTS:
+    for doi, pmc in sources:
         xml = (xml_dir / f"{pmc}.xml").read_text(encoding="utf-8", errors="replace")
         text = _xml_to_text(xml)
         source_id = f"doi:{doi}"

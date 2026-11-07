@@ -1,0 +1,509 @@
+{
+  "rows_total": 23,
+  "adjusted_rows": 0,
+  "crude_rows": 0,
+  "deduped_rows": 23,
+  "dropped_duplicates": 0,
+  "variant_all": {
+    "usable": 23,
+    "groups": [
+      {
+        "group": "daytime sleepiness duration min [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1093/gerona/glag105"
+        ]
+      },
+      {
+        "group": "mvpa min [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1111/sms.70277"
+        ]
+      },
+      {
+        "group": "number of night time awakenings [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1093/gerona/glag105"
+        ]
+      },
+      {
+        "group": "proportion of days meeting mvpa guideline pct [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1111/sms.70277"
+        ]
+      },
+      {
+        "group": "rem sleep duration min [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1093/gerona/glag105"
+        ]
+      },
+      {
+        "group": "sleep efficiency pct [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1111/sms.70277"
+        ]
+      },
+      {
+        "group": "sleep onset latency [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1186/s12877-026-07365-2"
+        ]
+      },
+      {
+        "group": "sleep onset latency min [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1111/sms.70277"
+        ]
+      },
+      {
+        "group": "table 2 comparisons of physical activity levels timing of exercise and sleep parameters [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1111/sms.70277"
+        ]
+      },
+      {
+        "group": "table 2 mean values and temporal changes in sleep characteristics of the intervention and [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1093/gerona/glag105"
+        ]
+      },
+      {
+        "group": "table 3 comparison of temporal changes in epworth sleepiness scale scores between th ess [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1093/gerona/glag105"
+        ]
+      },
+      {
+        "group": "table 4 comparison of pittsburgh sleep quality index total scores between the inter psqi [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1093/gerona/glag105"
+        ]
+      },
+      {
+        "group": "table 5 comparison of blessed orientation memory concentration test scores between [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1093/gerona/glag105"
+        ]
+      },
+      {
+        "group": "time to fall asleep min [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1093/gerona/glag105"
+        ]
+      },
+      {
+        "group": "total sleep time min [hedges_g]",
+        "k": 2,
+        "pooled": -0.22416055929049078,
+        "ci_low": -5.758477815154537,
+        "ci_high": 5.310156696573555,
+        "i2": 88.31191211502352,
+        "tau2": 0.3366541094759998,
+        "note": "",
+        "rows": [
+          "doi:10.1093/gerona/glag105",
+          "doi:10.1111/sms.70277"
+        ]
+      },
+      {
+        "group": "wake after sleep onset min [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1111/sms.70277"
+        ]
+      }
+    ],
+    "k_distribution": {
+      "1": 15,
+      "2": 1
+    },
+    "groups_k_ge_2": 1,
+    "excluded": [
+      {
+        "label": "doi:10.1111/sms.70277",
+        "outcome": "TABLE 2 Comparisons of physical activity levels, timing of exercise, and sleep parameters",
+        "reason": "dieselbe Quelle mehrfach zum selben Outcome (abhängige Zeilen: Arme, Kontraste oder zweite Lesung)"
+      },
+      {
+        "label": "doi:10.1111/sms.70277",
+        "outcome": "TABLE 2 Comparisons of physical activity levels, timing of exercise, and sleep parameters",
+        "reason": "dieselbe Quelle mehrfach zum selben Outcome (abhängige Zeilen: Arme, Kontraste oder zweite Lesung)"
+      },
+      {
+        "label": "doi:10.1093/gerona/glag105",
+        "outcome": "Table 2 Mean values and temporal changes in sleep characteristics of the intervention and",
+        "reason": "dieselbe Quelle mehrfach zum selben Outcome (abhängige Zeilen: Arme, Kontraste oder zweite Lesung)"
+      },
+      {
+        "label": "doi:10.1093/gerona/glag105",
+        "outcome": "Table 3 Comparison of temporal changes in Epworth Sleepiness Scale (ESS) scores between th",
+        "reason": "dieselbe Quelle mehrfach zum selben Outcome (abhängige Zeilen: Arme, Kontraste oder zweite Lesung)"
+      },
+      {
+        "label": "doi:10.1093/gerona/glag105",
+        "outcome": "Table 4 Comparison of Pittsburgh Sleep Quality Index (PSQI) total scores between the inter",
+        "reason": "dieselbe Quelle mehrfach zum selben Outcome (abhängige Zeilen: Arme, Kontraste oder zweite Lesung)"
+      },
+      {
+        "label": "doi:10.1093/gerona/glag105",
+        "outcome": "Table 5 Comparison of Blessed Orientation–Memory–Concentration Test (BOMCT) scores between",
+        "reason": "dieselbe Quelle mehrfach zum selben Outcome (abhängige Zeilen: Arme, Kontraste oder zweite Lesung)"
+      }
+    ]
+  },
+  "variant_deduped": {
+    "usable": 23,
+    "groups": [
+      {
+        "group": "daytime sleepiness duration min [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1093/gerona/glag105"
+        ]
+      },
+      {
+        "group": "mvpa min [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1111/sms.70277"
+        ]
+      },
+      {
+        "group": "number of night time awakenings [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1093/gerona/glag105"
+        ]
+      },
+      {
+        "group": "proportion of days meeting mvpa guideline pct [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1111/sms.70277"
+        ]
+      },
+      {
+        "group": "rem sleep duration min [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1093/gerona/glag105"
+        ]
+      },
+      {
+        "group": "sleep efficiency pct [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1111/sms.70277"
+        ]
+      },
+      {
+        "group": "sleep onset latency [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1186/s12877-026-07365-2"
+        ]
+      },
+      {
+        "group": "sleep onset latency min [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1111/sms.70277"
+        ]
+      },
+      {
+        "group": "table 2 comparisons of physical activity levels timing of exercise and sleep parameters [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1111/sms.70277"
+        ]
+      },
+      {
+        "group": "table 2 mean values and temporal changes in sleep characteristics of the intervention and [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1093/gerona/glag105"
+        ]
+      },
+      {
+        "group": "table 3 comparison of temporal changes in epworth sleepiness scale scores between th ess [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1093/gerona/glag105"
+        ]
+      },
+      {
+        "group": "table 4 comparison of pittsburgh sleep quality index total scores between the inter psqi [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1093/gerona/glag105"
+        ]
+      },
+      {
+        "group": "table 5 comparison of blessed orientation memory concentration test scores between [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1093/gerona/glag105"
+        ]
+      },
+      {
+        "group": "time to fall asleep min [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1093/gerona/glag105"
+        ]
+      },
+      {
+        "group": "total sleep time min [hedges_g]",
+        "k": 2,
+        "pooled": -0.22416055929049078,
+        "ci_low": -5.758477815154537,
+        "ci_high": 5.310156696573555,
+        "i2": 88.31191211502352,
+        "tau2": 0.3366541094759998,
+        "note": "",
+        "rows": [
+          "doi:10.1093/gerona/glag105",
+          "doi:10.1111/sms.70277"
+        ]
+      },
+      {
+        "group": "wake after sleep onset min [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1111/sms.70277"
+        ]
+      }
+    ],
+    "k_distribution": {
+      "1": 15,
+      "2": 1
+    },
+    "groups_k_ge_2": 1,
+    "excluded": [
+      {
+        "label": "doi:10.1111/sms.70277",
+        "outcome": "TABLE 2 Comparisons of physical activity levels, timing of exercise, and sleep parameters",
+        "reason": "dieselbe Quelle mehrfach zum selben Outcome (abhängige Zeilen: Arme, Kontraste oder zweite Lesung)"
+      },
+      {
+        "label": "doi:10.1111/sms.70277",
+        "outcome": "TABLE 2 Comparisons of physical activity levels, timing of exercise, and sleep parameters",
+        "reason": "dieselbe Quelle mehrfach zum selben Outcome (abhängige Zeilen: Arme, Kontraste oder zweite Lesung)"
+      },
+      {
+        "label": "doi:10.1093/gerona/glag105",
+        "outcome": "Table 2 Mean values and temporal changes in sleep characteristics of the intervention and",
+        "reason": "dieselbe Quelle mehrfach zum selben Outcome (abhängige Zeilen: Arme, Kontraste oder zweite Lesung)"
+      },
+      {
+        "label": "doi:10.1093/gerona/glag105",
+        "outcome": "Table 3 Comparison of temporal changes in Epworth Sleepiness Scale (ESS) scores between th",
+        "reason": "dieselbe Quelle mehrfach zum selben Outcome (abhängige Zeilen: Arme, Kontraste oder zweite Lesung)"
+      },
+      {
+        "label": "doi:10.1093/gerona/glag105",
+        "outcome": "Table 4 Comparison of Pittsburgh Sleep Quality Index (PSQI) total scores between the inter",
+        "reason": "dieselbe Quelle mehrfach zum selben Outcome (abhängige Zeilen: Arme, Kontraste oder zweite Lesung)"
+      },
+      {
+        "label": "doi:10.1093/gerona/glag105",
+        "outcome": "Table 5 Comparison of Blessed Orientation–Memory–Concentration Test (BOMCT) scores between",
+        "reason": "dieselbe Quelle mehrfach zum selben Outcome (abhängige Zeilen: Arme, Kontraste oder zweite Lesung)"
+      }
+    ]
+  }
+}
