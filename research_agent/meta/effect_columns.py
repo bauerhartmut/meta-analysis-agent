@@ -273,6 +273,11 @@ def effects_from_row(header: Sequence[str], cells: Sequence[str],
                     f"({len(cells)} Zellen) - colspan nicht aufloesbar")
     if _MODEL_ROW.match(str(cells[0] or "").strip()):
         return [], "Modelltabelle (Intercept-Zeile), keine Behandlungseffekte"
+
+    from .design_gates import design_violation
+    violation = design_violation(caption, header)
+    if violation:
+        return [], violation
     outcome = _outcome_label(cells, caption, row_group)
     found: List[Dict] = []
     found_columns: List[int] = []

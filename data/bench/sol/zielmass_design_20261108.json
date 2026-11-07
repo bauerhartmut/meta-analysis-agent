@@ -1,0 +1,153 @@
+{
+  "generated": "2026-11-07T21:42:04",
+  "question": "Zielmass Einschlaflatenz (sleep onset latency)",
+  "dbs": {
+    "effektspalten": {
+      "rows": 838,
+      "classes": {
+        "anderes": 534,
+        "schlaf": 293,
+        "sol": 11
+      },
+      "poolable": {
+        "anderes": 174,
+        "schlaf": 62,
+        "sol": 11
+      },
+      "poolable_rows": 247
+    },
+    "arm_tabelle": {
+      "rows": 159,
+      "classes": {
+        "anderes": 122,
+        "schlaf": 23,
+        "ohne_label": 14
+      },
+      "poolable": {
+        "anderes": 122,
+        "schlaf": 23,
+        "ohne_label": 14
+      },
+      "poolable_rows": 159
+    },
+    "fliesstext": {
+      "error": "DB fehlt",
+      "rows": 0
+    },
+    "veraenderung": {
+      "error": "DB fehlt",
+      "rows": 0
+    }
+  },
+  "totals": {
+    "rows": 997,
+    "classes": {
+      "anderes": 656,
+      "schlaf": 316,
+      "sol": 11,
+      "ohne_label": 14
+    },
+    "sol_share": 0.011033099297893681
+  },
+  "sol_rows": [
+    {
+      "db": "effektspalten",
+      "source": "doi:10.1093/sleep/zsae250",
+      "outcome": "Sleep latency (min)",
+      "outcome_key": "Sleep latency (min)",
+      "effect_type": "mean_diff",
+      "effect": -4.2,
+      "poolable": true
+    },
+    {
+      "db": "effektspalten",
+      "source": "doi:10.1093/sleep/zsae250",
+      "outcome": "Sleep latency (min)",
+      "outcome_key": "Sleep latency (min)",
+      "effect_type": "mean_diff",
+      "effect": -2.3,
+      "poolable": true
+    },
+    {
+      "db": "effektspalten",
+      "source": "doi:10.1093/sleep/zsae250",
+      "outcome": "Sleep latency (min)",
+      "outcome_key": "Sleep latency (min)",
+      "effect_type": "mean_diff",
+      "effect": 1.3,
+      "poolable": true
+    },
+    {
+      "db": "effektspalten",
+      "source": "doi:10.1111/jsr.70311",
+      "outcome": "Sleep onset latency",
+      "outcome_key": "Sleep onset latency",
+      "effect_type": "mean_diff",
+      "effect": 3.8,
+      "poolable": true
+    },
+    {
+      "db": "effektspalten",
+      "source": "doi:10.1111/jsr.70311",
+      "outcome": "Sleep onset latency",
+      "outcome_key": "Sleep onset latency",
+      "effect_type": "mean_diff",
+      "effect": 3.4,
+      "poolable": true
+    },
+    {
+      "db": "effektspalten",
+      "source": "doi:10.1111/jsr.70311",
+      "outcome": "Sleep onset latency",
+      "outcome_key": "Sleep onset latency",
+      "effect_type": "mean_diff",
+      "effect": 5.7,
+      "poolable": true
+    },
+    {
+      "db": "effektspalten",
+      "source": "doi:10.1111/jsr.70311",
+      "outcome": "Sleep onset latency",
+      "outcome_key": "Sleep onset latency",
+      "effect_type": "mean_diff",
+      "effect": 4.6,
+      "poolable": true
+    },
+    {
+      "db": "effektspalten",
+      "source": "doi:10.1093/sleep/zsaa194",
+      "outcome": "Sleep onset latency",
+      "outcome_key": "Sleep onset latency",
+      "effect_type": "mean_diff",
+      "effect": -5.1,
+      "poolable": true
+    },
+    {
+      "db": "effektspalten",
+      "source": "doi:10.2188/jea.je20140201",
+      "outcome": "Sleep onset latency, log min",
+      "outcome_key": "Sleep onset latency, log min",
+      "effect_type": "mean_diff",
+      "effect": -0.1,
+      "poolable": true
+    },
+    {
+      "db": "effektspalten",
+      "source": "doi:10.2188/jea.je20140201",
+      "outcome": "Sleep onset latency, log min",
+      "outcome_key": "Sleep onset latency, log min",
+      "effect_type": "mean_diff",
+      "effect": -0.002,
+      "poolable": true
+    },
+    {
+      "db": "effektspalten",
+      "source": "doi:10.1001/jamanetworkopen.2026.26983",
+      "outcome": "Sleep onset latency, min",
+      "outcome_key": "Sleep onset latency, min",
+      "effect_type": "g",
+      "effect": 0.07,
+      "poolable": true
+    }
+  ]
+}
