@@ -550,7 +550,9 @@ def convert_row(header: Sequence[str], cells: Sequence[str], outcome: str = "",
 
 def store_arm_level_effects(db, source_id: str, source_text_id: str,
                             document_text: str,
-                            candidates: Iterable[Dict]) -> Tuple[List[Dict], List[Dict]]:
+                            candidates: Iterable[Dict],
+                            extractor: str = ARM_LEVEL_VERSION
+                            ) -> Tuple[List[Dict], List[Dict]]:
     """Vollstaendige, belegte Zeilen speichern; den Rest zurueckmelden.
 
     Gespeichert wird nur, wenn
@@ -605,7 +607,7 @@ def store_arm_level_effects(db, source_id: str, source_text_id: str,
             "quote_start": span.start,
             "quote_end": span.end,
             "source_text_id": source_text_id,
-            "extractor": ARM_LEVEL_VERSION,
+            "extractor": extractor,
             "extraction_pass": 1,
             "disputed": 0,
             "rejection_reason": "",
