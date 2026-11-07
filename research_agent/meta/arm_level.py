@@ -410,7 +410,8 @@ def _paired_arms(header: Sequence[str], cells: Sequence[str],
 
 
 def arms_from_row(header: Sequence[str], cells: Sequence[str],
-                  n_per_arm: Optional[Sequence[int]] = None
+                  n_per_arm: Optional[Sequence[int]] = None,
+                  row_group: str = ""
                   ) -> Tuple[List[ArmStats], str]:
     """Zwei Arme aus einer Tabellenzeile, oder ([], Grund).
 
@@ -478,6 +479,12 @@ def arms_from_row(header: Sequence[str], cells: Sequence[str],
         return [], _REASONS["arm_count"]
     chosen = chosen[:2]
 
+    from .baseline_columns import baseline_violation
+    violation = baseline_violation(
+        header or [], [column for column, _m, _s, _k in chosen], row_group)
+    if violation:
+        return [], violation
+
     labels = []
     for index, _m, _s, _k in chosen:
         text = (str(header[index]).strip()
@@ -544,7 +551,7 @@ def _n_for_column(header: Sequence[str], cells: Sequence[str], index: int,
 
 def convert_row(header: Sequence[str], cells: Sequence[str], outcome: str = "",
                 quote: str = "", n_per_arm: Optional[Sequence[int]] = None,
-                caption: str = "") -> Dict:
+                caption: str = "", row_group: str = "") -> Dict:
     """Eine Tabellenzeile umrechnen; Ergebnis ist speicherfertig oder leer.
 
     Der ``quote`` muss die Zeile woertlich enthalten - der Aufrufer prueft
@@ -590,7 +597,8 @@ def convert_row(header: Sequence[str], cells: Sequence[str], outcome: str = "",
         derived = text[:90]
         break
 
-    arms, reason = arms_from_row(header, cells, n_per_arm)
+    arms, reason = arms_from_row(header, cells, n_per_arm,
+                                  row_group=row_group)
     if not arms:
         return {"ok": False, "reason": reason}
     named = [arm for arm in arms if _named_group(str(arm.label or ""))]

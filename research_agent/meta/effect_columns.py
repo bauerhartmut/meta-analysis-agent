@@ -275,6 +275,7 @@ def effects_from_row(header: Sequence[str], cells: Sequence[str],
         return [], "Modelltabelle (Intercept-Zeile), keine Behandlungseffekte"
     outcome = _outcome_label(cells, caption, row_group)
     found: List[Dict] = []
+    found_columns: List[int] = []
     saw_effect_column = False
     saw_pooled = False
     for index, head in enumerate(header):
@@ -297,12 +298,17 @@ def effects_from_row(header: Sequence[str], cells: Sequence[str],
             quote=quote, outcome=outcome,
             comparison=str(head).strip(),
         ).to_dict())
+        found_columns.append(index)
     if not found:
         if saw_pooled:
             return [], "gepoolte Schaetzung (Metaanalyse), keine Studienzeile"
         if saw_effect_column:
             return [], "Effektspalte ohne lesbares Intervall"
         return [], "keine Effektspalte im Kopf"
+    from .baseline_columns import baseline_violation
+    violation = baseline_violation(header, found_columns, row_group)
+    if violation:
+        return [], violation
     return found, ""
 
 

@@ -63,8 +63,8 @@ verursacht, ist offen und nicht Teil dieser Aenderung.
 Der Fix war noetig - ein Kopf "mean +- SE" darf nicht als SD gelesen werden,
 sonst ist g um ein Vielfaches zu gross. Er aendert aber am SOL-Befund nichts:
 Das Problem sind nicht die Streuungen der Arm-Zeilen, sondern die
-13 Effektspalten-Zeilen, von denen 5 aus Baseline-Tabellen und eine aus einer
-Metaanalyse stammen.
+13 Effektspalten-Zeilen, von denen eine aus einer Praediktortabelle und eine
+aus einer Metaanalyse stammt (siehe `baseline_columns_gate_20261108.md`).
 
 Reihenfolge bleibt daher: erst das Baseline-/Spalten-Gate und das Gate gegen
 gepoolte Zeilen, dann ueber eine Erweiterung des Zielmasses entscheiden. Ohne
