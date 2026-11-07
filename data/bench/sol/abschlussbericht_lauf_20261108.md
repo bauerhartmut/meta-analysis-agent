@@ -68,6 +68,11 @@ eine Untergrenze.
   ueber beide Skalen waere falsch.
 - Zwei Quellen liefern 4 bzw. 3 Zeilen (`10.1111/jsr.70311`,
   `10.1093/sleep/zsae250`); bei derselben Studie sind das abhaengige Zeilen.
+- **Korrektur 08.11.2026:** `10.1093/sleep/zsaa194` stand oben mit -5,1 min;
+  das war die untere CI-Grenze. Der Punktschaetzer ist **-1,7 min (-5,1 bis
+  1,7)**. Der Leserfehler ist behoben und betraf 37 Zeilen im Korpus
+  (`schaetzer_pruefung_20261108.md`). Nach den spaeteren Gates bleiben 11
+  SOL-Zeilen aus 5 Quellen.
 
 **Folge:** Es gibt keine Gruppe, in der mehrere unabhaengige Studien dieselbe
 Groesse auf derselben Skala berichten. Der Bericht gibt daher keinen gepoolten

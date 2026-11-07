@@ -99,14 +99,17 @@ _NOT_EFFECT = re.compile(
     re.IGNORECASE)
 
 
-def header_effect_kind(header_cell: str) -> Tuple[str, float, bool]:
-    """(Effekttyp, CI-Niveau, adjustiert) aus einem Spaltenkopf.
+def effect_word(header_cell: str) -> Tuple[str, bool]:
+    """Effektwort eines Kopfes, ohne die CI-Bedingung.
 
-    Leerer Typ heisst: diese Spalte traegt keinen direkt berichteten Effekt.
+    Getrennt von ``header_effect_kind``, weil Tabellen den Punktschaetzer und
+    sein Intervall in zwei Spalten fuehren ("Difference Estimate" /
+    "Difference 95% CI"). Die Punktspalte traegt kein CI und waere sonst keine
+    Effektspalte; zusammen mit der CI-Spalte daneben ist sie eine.
     """
     text = str(header_cell or "").strip()
-    if not text or _NOT_EFFECT.search(text) or not _CI.search(text):
-        return "", 0.0, False
+    if not text or _NOT_EFFECT.search(text) or _POOLED.search(text):
+        return "", False
     kind = ""
     for candidate in ("irr", "hr", "rr", "or"):
         if _UPPER[candidate].search(text) or _WORDS[candidate].search(text):
@@ -125,15 +128,27 @@ def header_effect_kind(header_cell: str) -> Tuple[str, float, bool]:
         elif _BETA.search(text):
             kind = "beta"
     if not kind:
+        return "", False
+    return kind, bool(_ADJUSTED.search(text))
+
+
+def header_effect_kind(header_cell: str) -> Tuple[str, float, bool]:
+    """(Effekttyp, CI-Niveau, adjustiert) aus einem Spaltenkopf.
+
+    Leerer Typ heisst: diese Spalte traegt keinen direkt berichteten Effekt.
+    """
+    text = str(header_cell or "").strip()
+    if not text or not _CI.search(text):
         return "", 0.0, False
-    if _POOLED.search(text):
+    kind, adjusted = effect_word(text)
+    if not kind:
         return "", 0.0, False
     match = _LEVEL.search(text)
     level = 0.95
     if match:
         value = match.group(1) or match.group(2)
         level = int(value) / 100.0
-    return kind, level, bool(_ADJUSTED.search(text))
+    return kind, level, adjusted
 
 
 # Ein Label, das nur ein Code ist ("T2", "Model 1", "M3"), benennt kein
@@ -239,11 +254,14 @@ def parse_effect_cell(cell: str) -> Optional[Tuple[float, float, float]]:
     # unveraenderte Originalzeile.
     clean = (text.replace("\u2212", "-").replace("\u2013", "-")
                  .replace("\u2014", "-"))
-    point = parse_number(text)
-    if point is None:
-        return None
     span = _RANGE.search(clean)
     if not span:
+        return None
+    # Eine Zelle, die nur das Intervall enthaelt ("-5.1 to 1.7"), nennt keinen
+    # Punktschaetzer - die erste Zahl ist eine Grenze. Frueher wurde sie als
+    # Effekt gespeichert (zsaa194: -5.1 statt -1.7 Minuten).
+    point = parse_number(clean[:span.start()] + clean[span.end():])
+    if point is None:
         return None
     low = parse_number(span.group(1))
     high = parse_number(span.group(2))
@@ -252,6 +270,50 @@ def parse_effect_cell(cell: str) -> Optional[Tuple[float, float, float]]:
     if not (min(low, high) <= point <= max(low, high)):
         return None      # der Punktschaetzer liegt nicht im Intervall
     return point, low, high
+
+
+def ci_only_range(cell: str) -> Optional[Tuple[float, float]]:
+    """(low, high) einer Zelle, die nur das Intervall enthaelt - oder None."""
+    text = str(cell or "").strip()
+    if not text:
+        return None
+    clean = (text.replace("−", "-").replace("–", "-")
+                 .replace("—", "-"))
+    span = _RANGE.search(clean)
+    if not span:
+        return None
+    if parse_number(clean[:span.start()] + clean[span.end():]) is not None:
+        return None
+    low = parse_number(span.group(1))
+    high = parse_number(span.group(2))
+    if low is None or high is None or high <= low:
+        return None
+    return low, high
+
+
+def _paired_point(header: Sequence[str], cells: Sequence[str], index: int,
+                  low: float, high: float) -> Optional[float]:
+    """Punktschaetzer in der Spalte links neben ihrer CI-Spalte.
+
+    Nur wenn diese Spalte ein Effektwort im Kopf traegt, selbst kein Intervall
+    fuehrt und ihr Wert im Intervall liegt. Sonst waere die Zahl eine
+    Arm-Statistik ("Mean (SD)") und der "Effekt" eine Verwechslung.
+    """
+    if index == 0:
+        return None
+    previous = str(header[index - 1] or "")
+    if _CI.search(previous):
+        return None
+    if not effect_word(previous)[0]:
+        return None
+    cell = str(cells[index - 1] or "").strip()
+    clean = cell.replace("−", "-").replace("–", "-")
+    if not cell or _RANGE.search(clean):
+        return None
+    value = parse_number(clean)
+    if value is None or not (low <= value <= high):
+        return None
+    return value
 
 
 def effects_from_row(header: Sequence[str], cells: Sequence[str],
@@ -292,14 +354,21 @@ def effects_from_row(header: Sequence[str], cells: Sequence[str],
             continue
         saw_effect_column = True
         parsed = parse_effect_cell(cells[index])
+        adjusted_flag = adjusted
         if not parsed:
-            continue
+            span = ci_only_range(cells[index])
+            point = (_paired_point(header, cells, index, span[0], span[1])
+                     if span else None)
+            if point is None:
+                continue
+            parsed = (point, span[0], span[1])
+            adjusted_flag = adjusted_flag or effect_word(str(header[index - 1] or ""))[1]
         point, low, high = parsed
         if not MIN_POINT <= point <= MAX_POINT:
             continue
         found.append(DirectEffect(
             effect_type=kind, effect=point, ci_low=low, ci_high=high,
-            ci_level=level, adjusted=1 if adjusted else 0,
+            ci_level=level, adjusted=1 if adjusted_flag else 0,
             quote=quote, outcome=outcome,
             comparison=str(head).strip(),
         ).to_dict())

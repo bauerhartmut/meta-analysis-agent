@@ -294,5 +294,61 @@ class TestStore(unittest.TestCase):
         self.assertIn("positiv", rejected[0]["reason"])
 
 
+class TestBareIntervalAndPairedColumn(unittest.TestCase):
+    """Ein Intervall ohne Punktwert ist kein Effekt - die Nachbarspalte schon."""
+
+    # Tabelle 2 aus zsaa194: Punkt und CI stehen in zwei Spalten.
+    HEADER = ["Sleep variables (min)", "Blue-depleted LE Estimate",
+              "Blue-depleted LE 95% CI", "Standard LE Estimate",
+              "Standard LE 95% CI", "Difference Estimate",
+              "Difference 95% CI", "P"]
+    CELLS = ["Sleep onset latency", "10.3", "7.6 to 12.9", "11.9",
+             "9.3 to 14.6", "\u22121.7", "\u22125.1 to 1.7", "0.34"]
+
+    def test_range_only_cell_has_no_point_estimate(self):
+        self.assertIsNone(parse_effect_cell("\u22125.1 to 1.7"))
+        self.assertIsNone(parse_effect_cell("-5.1 to 1.7"))
+        self.assertIsNone(parse_effect_cell("(-5.1, 1.7)"))
+
+    def test_point_column_next_to_its_ci_column_is_paired(self):
+        found, reason = effects_from_row(self.HEADER, self.CELLS, quote="row")
+        self.assertEqual(reason, "", reason)
+        self.assertEqual(len(found), 1)
+        effect = found[0]
+        self.assertEqual(effect["effect_type"], "mean_diff")
+        self.assertAlmostEqual(effect["effect"], -1.7)
+        self.assertAlmostEqual(effect["ci_low"], -5.1)
+        self.assertAlmostEqual(effect["ci_high"], 1.7)
+        self.assertEqual(effect["adjusted"], 0)
+
+    def test_ci_without_point_column_is_refused(self):
+        found, reason = effects_from_row(
+            ["Outcome", "Difference 95% CI"], ["x", "\u22125.1 to 1.7"],
+            quote="row")
+        self.assertEqual(found, [])
+        self.assertIn("Intervall", reason)
+
+    def test_arm_statistics_are_not_paired(self):
+        # "Mean (SD)" ist ein Armwert; seine Zahl darf kein Effekt werden.
+        found, reason = effects_from_row(
+            ["Outcome", "Mean (SD)", "Difference 95% CI"],
+            ["x", "12.4", "\u22125.1 to 1.7"], quote="row")
+        self.assertEqual(found, [])
+        self.assertIn("Intervall", reason)
+
+    def test_paired_point_must_lie_inside_the_interval(self):
+        found, _reason = effects_from_row(
+            ["Outcome", "Difference Estimate", "Difference 95% CI"],
+            ["x", "9.9", "\u22125.1 to 1.7"], quote="row")
+        self.assertEqual(found, [])
+
+    def test_paired_point_carries_the_adjusted_flag_of_its_column(self):
+        found, reason = effects_from_row(
+            ["Outcome", "Adjusted difference Estimate", "Difference 95% CI"],
+            ["x", "\u22121.7", "\u22125.1 to 1.7"], quote="row")
+        self.assertEqual(reason, "", reason)
+        self.assertEqual(found[0]["adjusted"], 1)
+
+
 if __name__ == "__main__":
     unittest.main()
