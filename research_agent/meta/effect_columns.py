@@ -136,22 +136,54 @@ def header_effect_kind(header_cell: str) -> Tuple[str, float, bool]:
     return kind, level, bool(_ADJUSTED.search(text))
 
 
-def _outcome_label(cells: Sequence[str], caption: str = "") -> str:
+# Ein Label, das nur ein Code ist ("T2", "Model 1", "M3"), benennt kein
+# Outcome. Es entsteht, wenn die eigentliche Beschriftung in einer
+# rowspan-Zelle der Zeile darueber steht.
+_CODE_LABEL = re.compile(r"^(?:[A-Za-z]{0,3}\s?\d+|model\s?\d+|m\d+|t\d+)$",
+                         re.IGNORECASE)
+_TABLE_PREFIX = re.compile(r"^\s*(?:Table|Tab\.?|Tabelle)\s*\d*\s*[.:]?\s*", re.IGNORECASE)
+
+
+def _outcome_label(cells: Sequence[str], caption: str = "",
+                   row_group: str = "") -> str:
     """Outcome-Name aus der Zeile, nicht aus der Caption.
 
     Frueher galt "Zelle ohne Ziffer" als Label; damit fielen echte Namen
     wie "Short sleep duration (<6 hours per night)" durch und alle Zeilen
     einer Tabelle hiessen wie ihre Caption. Ein Label ist jetzt jeder
     Zelltext mit Buchstaben, der nicht selbst eine Zahl ist.
+
+    ``row_group`` ist die Beschriftung, die eine rowspan-Zelle der Zeile
+    darueber fuer diese Zeile mitgibt ("Sleep parameter"). Sie wird
+    vorangestellt, wenn das eigene Label fehlt oder nur ein Code ist - sonst
+    hiesse die Zeile "T2" statt "Sleep parameter T2".
     """
+    label = ""
     for cell in cells:
         text = str(cell or "").strip()
         if not text or not re.search(r"[A-Za-z]", text):
             continue
         if re.fullmatch(r"[\s\d.,%\-\u2013\u2212+()<>]*", text):
             continue
-        return text[:90]
-    return (caption or "")[:90]
+        label = text[:90]
+        break
+    group = str(row_group or "").strip()
+    code = bool(_CODE_LABEL.match(label))
+    if not group:
+        if label and not code:
+            return label
+        # Ohne Gruppenbeschriftung bleibt die Caption: sie nennt bei
+        # Modelltabellen das Outcome ("Odds ratios for excessive daytime
+        # sleepiness ..."). Besser als "Model 1" ist sie belegt, nicht geraten.
+        text = _TABLE_PREFIX.sub("", str(caption or "")).strip()
+        if code and text:
+            return text[:90]
+        return (label or text[:90])
+    if not label:
+        return group[:90]
+    if code:
+        return f"{group} {label}"[:90]
+    return label
 
 
 # --------------------------------------------------------------------------
@@ -223,7 +255,8 @@ def parse_effect_cell(cell: str) -> Optional[Tuple[float, float, float]]:
 
 
 def effects_from_row(header: Sequence[str], cells: Sequence[str],
-                     quote: str, caption: str = "") -> Tuple[List[Dict], str]:
+                     quote: str, caption: str = "",
+                     row_group: str = "") -> Tuple[List[Dict], str]:
     """Alle direkten Effekte einer Tabellenzeile, oder ([], Grund).
 
     Kopf und Zeile muessen gleich viele Spalten haben; sonst ist die
@@ -240,7 +273,7 @@ def effects_from_row(header: Sequence[str], cells: Sequence[str],
                     f"({len(cells)} Zellen) - colspan nicht aufloesbar")
     if _MODEL_ROW.match(str(cells[0] or "").strip()):
         return [], "Modelltabelle (Intercept-Zeile), keine Behandlungseffekte"
-    outcome = _outcome_label(cells, caption)
+    outcome = _outcome_label(cells, caption, row_group)
     found: List[Dict] = []
     saw_effect_column = False
     saw_pooled = False

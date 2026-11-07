@@ -149,6 +149,43 @@ class TestRows(unittest.TestCase):
         self.assertIn("Intervall", reason)
 
 
+class TestOutcomeLabelFromRowGroup(unittest.TestCase):
+    HEADER = ["Diseases", "Tertile", "OR (95% CI)"]
+
+    def test_code_label_gets_the_group_as_prefix(self):
+        found, reason = effects_from_row(
+            self.HEADER, ["", "T2", "0.574 (0.390-0.843)"], quote="row",
+            row_group="Sleep disorders")
+        self.assertEqual(reason, "", reason)
+        self.assertEqual(found[0]["outcome"], "Sleep disorders T2")
+
+    def test_group_alone_when_the_row_has_no_text_label(self):
+        found, reason = effects_from_row(
+            self.HEADER, ["", "12.5", "0.574 (0.390-0.843)"], quote="row",
+            row_group="Sleep disorders")
+        self.assertEqual(reason, "", reason)
+        self.assertEqual(found[0]["outcome"], "Sleep disorders")
+
+    def test_own_label_wins_over_the_group(self):
+        found, reason = effects_from_row(
+            self.HEADER, ["Depression", "T2", "1.10 (0.90-1.34)"], quote="row",
+            row_group="Sleep disorders")
+        self.assertEqual(found[0]["outcome"], "Depression")
+
+    def test_without_group_or_caption_the_code_stays(self):
+        found, _reason = effects_from_row(
+            self.HEADER, ["", "T2", "0.574 (0.390-0.843)"], quote="row")
+        self.assertEqual(found[0]["outcome"], "T2")
+
+    def test_model_row_falls_back_to_the_caption(self):
+        found, _reason = effects_from_row(
+            ["Model", "Odds Ratio (95% CI) Q1"],
+            ["Model 1", "1.32 (0.78-2.25)"], quote="row",
+            caption="Table 2. Odds ratios for excessive daytime sleepiness")
+        self.assertEqual(found[0]["outcome"],
+                         "Odds ratios for excessive daytime sleepiness")
+
+
 class TestModelTable(unittest.TestCase):
     def test_intercept_row_marks_a_model_table(self):
         self.assertTrue(is_model_table([["(Intercept)", "0.09** [0.04, 0.22]"],

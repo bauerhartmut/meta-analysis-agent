@@ -38,6 +38,11 @@ def _text(el: ET.Element | None) -> str:
 @dataclass
 class JatsRow:
     cells: list[str]
+    # Label aus einer rowspan-Zelle der Zeile darueber (meist die Spalte, die
+    # eine Zeilengruppe benennt). Es steht bewusst NICHT in ``cells``: die
+    # Zellen bleiben woertlich, damit die Zeile als Zitat ein Teilstring des
+    # Dokumenttexts bleibt.
+    row_group: str = ""
     has_se: bool = False
     has_ci: bool = False
     has_sd: bool = False
@@ -85,7 +90,8 @@ def _col_semantics(header: list[str]) -> dict:
     return roles
 
 
-def _classify(cells: list[str], header: list[str] | None = None) -> JatsRow:
+def _classify(cells: list[str], header: list[str] | None = None,
+              row_group: str = "") -> JatsRow:
     joined = " | ".join(cells)
     numbers = sum(bool(NUMBER.search(c)) for c in cells)
     roles = _col_semantics(header or [])
@@ -106,6 +112,7 @@ def _classify(cells: list[str], header: list[str] | None = None) -> JatsRow:
             row_has_n = True
     row = JatsRow(
         cells=cells,
+        row_group=row_group,
         has_se=bool(SE_TOKEN.search(joined)) or row_has_se,
         has_ci=bool(re.search(r"\b(?:95?\s*%?\s*CI|confidence interval)\b", joined, re.I))
                 or row_has_ci,
@@ -246,13 +253,37 @@ def _rows_from(element: ET.Element) -> tuple[list[str], list[JatsRow]]:
     header = _compose_header([block for block in blocks if block])
 
     rows: list[JatsRow] = []
+    # Eine erste Zelle mit rowspan benennt die folgenden Zeilen mit ("Sleep
+    # parameter" ueber drei Messwerte). Diese Zeilen tragen das Label nicht
+    # selbst; ohne Mitschrift hiesse ihr Outcome dann wie ein Code aus der
+    # Nachbarspalte ("T2") oder wie die Caption.
+    pending: list[str] = []
+    section = ""
     for tr in all_rows:
         if id(tr) in head_ids:
             continue
         cells = [_text(td) for td in tr if _tag(td) in ("td", "th")]
         if not cells:
             continue
-        rows.append(_classify(cells, header))
+        filled = [str(c).strip() for c in cells if str(c).strip()]
+        # Eine Zeile mit genau einer gefuellten Zelle und sonst leer heisst
+        # Zwischenueberschrift: sie benennt die folgenden Zeilen ("Total fat"
+        # ueber "Model 1"..."Model 3"). Ohne Mitschrift hiessen diese Zeilen
+        # nach dem Modell ("Model 1") - ein Name, der kein Outcome ist.
+        if len(filled) == 1 and len(cells) > 1 and not re.search(r"\d", filled[0]):
+            section = filled[0]
+            group = ""
+        elif pending:
+            group = pending.pop(0)
+        else:
+            group = section if len(header) > len(cells) or section else ""
+        first = next((td for td in tr if _tag(td) in ("td", "th")), None)
+        depth = _rowspan(first) if first is not None else 1
+        if depth > 1 and cells and not re.search(r"\d", cells[0]):
+            pending = [cells[0]] * (depth - 1)
+        else:
+            pending = []
+        rows.append(_classify(cells, header, row_group=group))
     return header, rows
 
 

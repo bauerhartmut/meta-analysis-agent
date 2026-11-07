@@ -97,7 +97,8 @@ def main(argv=None) -> int:
                 found, reason = effects_from_row(
                     table.header, table_row.cells,
                     quote=_pipe_row(table_row.cells),
-                    caption=(table.label or "") + " " + (table.caption or ""))
+                    caption=(table.label or "") + " " + (table.caption or ""),
+                    row_group=getattr(table_row, "row_group", ""))
                 if found:
                     candidates.extend(found)
                 else:

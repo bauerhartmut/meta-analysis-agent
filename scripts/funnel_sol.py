@@ -297,7 +297,8 @@ def funnel(manifest: Path, xml_dir: Path, out_stem: Path,
                 quote = _pipe_row(table_row.cells)
 
                 direct, reason = effects_from_row(
-                    table.header, table_row.cells, quote=quote, caption=caption)
+                    table.header, table_row.cells, quote=quote, caption=caption,
+                    row_group=getattr(table_row, "row_group", ""))
                 if direct:
                     # Eine Zeile ist ein Kandidat, auch wenn sie mehrere Effekte
                     # traegt: gezaehlt wird die Zeile, nicht der Effekt. Sonst

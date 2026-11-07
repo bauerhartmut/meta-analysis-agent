@@ -136,5 +136,69 @@ class TwoHeaderRowsTest(unittest.TestCase):
         self.assertEqual(self.table.rows[1].cells[1], "88.0 (4.2)")
 
 
+ROWSPAN_GROUP = """<?xml version="1.0" encoding="utf-8"?>
+<article><body><table-wrap id="t7"><label>Table 3</label>
+<caption>Sleep by tertile.</caption><table>
+<thead><tr><th>Diseases</th><th>Tertile</th><th>OR (95% CI)</th></tr></thead>
+<tbody>
+<tr><td rowspan="2">Sleep disorders</td><td>T2</td><td>0.574 (0.390-0.843)</td></tr>
+<tr><td>T3</td><td>0.349 (0.242-0.502)</td></tr>
+<tr><td>Depression</td><td>T2</td><td>1.100 (0.900-1.340)</td></tr>
+</tbody></table></table-wrap></body></article>
+"""
+
+
+class RowspanGroupTest(unittest.TestCase):
+    def setUp(self):
+        self.tmp = tempfile.mkdtemp(prefix="jats_group_")
+        self.path = Path(self.tmp) / "in.xml"
+        self.path.write_text(ROWSPAN_GROUP, encoding="utf-8")
+        self.table = parse_jats(self.path)[0]
+
+    def test_second_row_inherits_the_group_label(self):
+        self.assertEqual(self.table.rows[1].row_group, "Sleep disorders")
+
+    def test_cells_stay_verbatim_for_the_quote(self):
+        # Das geerbte Label darf die Zeile nicht aendern; sie ist ein Zitat.
+        self.assertEqual(self.table.rows[1].cells, ["T3", "0.349 (0.242-0.502)"])
+
+    def test_own_label_rows_carry_no_group(self):
+        self.assertEqual(self.table.rows[0].row_group, "")
+        self.assertEqual(self.table.rows[2].row_group, "")
+        self.assertEqual(self.table.rows[2].cells[0], "Depression")
+
+
+SECTION_ROW = """<?xml version="1.0" encoding="utf-8"?>
+<article><body><table-wrap id="t8"><label>Table 4</label>
+<caption>Odds ratios for daytime sleepiness by nutrient.</caption><table>
+<thead><tr><th>Model</th><th>Q1 OR (95% CI)</th><th>Q2 OR (95% CI)</th></tr></thead>
+<tbody>
+<tr><td>Total fat</td><td></td><td></td></tr>
+<tr><td>Model 1</td><td>1.00</td><td>1.32 (0.78-2.25)</td></tr>
+<tr><td>Model 2</td><td>1.00</td><td>1.21 (0.69-2.12)</td></tr>
+<tr><td>Saturated fat</td><td></td><td></td></tr>
+<tr><td>Model 1</td><td>1.40 (1.08-1.81)</td><td>1.11 (0.94-1.31)</td></tr>
+</tbody></table></table-wrap></body></article>
+"""
+
+
+class SectionRowTest(unittest.TestCase):
+    def setUp(self):
+        self.tmp = tempfile.mkdtemp(prefix="jats_section_")
+        self.path = Path(self.tmp) / "in.xml"
+        self.path.write_text(SECTION_ROW, encoding="utf-8")
+        self.table = parse_jats(self.path)[0]
+
+    def test_model_rows_inherit_the_section_label(self):
+        self.assertEqual(self.table.rows[1].row_group, "Total fat")
+        self.assertEqual(self.table.rows[2].row_group, "Total fat")
+
+    def test_a_new_section_resets_the_label(self):
+        self.assertEqual(self.table.rows[4].row_group, "Saturated fat")
+
+    def test_section_row_itself_has_no_group(self):
+        self.assertEqual(self.table.rows[0].row_group, "")
+
+
 if __name__ == "__main__":
     unittest.main()
