@@ -190,7 +190,7 @@
         ]
       },
       {
-        "group": "waso min [hedges_g]",
+        "group": "wake after sleep onset min [hedges_g]",
         "k": 1,
         "pooled": null,
         "ci_low": null,
@@ -395,7 +395,7 @@
         ]
       },
       {
-        "group": "waso min [hedges_g]",
+        "group": "wake after sleep onset min [hedges_g]",
         "k": 1,
         "pooled": null,
         "ci_low": null,

@@ -22,7 +22,7 @@ Gruppen gesamt: 15 | k-Verteilung: {1: 15} | Gruppen mit k >= 2: **0**
 | stage n3 pct [hedges_g] | 1 | - | - | - |
 | stage rem pct [hedges_g] | 1 | - | - | - |
 | total sleep time min [hedges_g] | 1 | - | - | - |
-| waso min [hedges_g] | 1 | - | - | - |
+| wake after sleep onset min [hedges_g] | 1 | - | - | - |
 
 ## Variante B: adjustiert vor crude (eine Zeile je Quelle/Outcome/Typ)
 
@@ -44,7 +44,7 @@ Gruppen gesamt: 15 | k-Verteilung: {1: 15} | Gruppen mit k >= 2: **0**
 | stage n3 pct [hedges_g] | 1 | - | - |
 | stage rem pct [hedges_g] | 1 | - | - |
 | total sleep time min [hedges_g] | 1 | - | - |
-| waso min [hedges_g] | 1 | - | - |
+| wake after sleep onset min [hedges_g] | 1 | - | - |
 
 ## Vom Pooling aussortierte Zeilen
 

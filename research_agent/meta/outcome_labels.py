@@ -52,6 +52,7 @@ _SYNONYMS = {
     "sleep latency min": "sleep onset latency min",
     "latency to sleep onset": "sleep onset latency",
     "waso": "wake after sleep onset",
+    "waso min": "wake after sleep onset min",
     "waso pct": "wake after sleep onset pct",
     "tst": "total sleep time",
     "psqi": "psqi",

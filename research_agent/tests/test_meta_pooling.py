@@ -666,3 +666,32 @@ class RVETest(unittest.TestCase):
             "disputed": 0, "rejected": 0, "source_id": source_id,
             "study_id": study_id or "",
         }
+
+
+class TestOutcomeGrouping(unittest.TestCase):
+    """Normalisierte Outcome-Namen teilen eine Gruppe, Einheiten nicht."""
+
+    @staticmethod
+    def _row(source_id, outcome, effect):
+        return {
+            "source_id": source_id, "study_id": source_id, "outcome": outcome,
+            "effect_type": "smd", "effect": effect, "se": 0.1, "adjusted": 0,
+            "quote_start": 0,
+        }
+
+    def test_two_studies_with_different_labels_form_one_group(self):
+        result = build_analysis([
+            self._row("s1", "Sleep onset latency, min", -0.22),
+            self._row("s2", "Sleep latency (min)", -0.18),
+        ])
+        self.assertEqual(len(result["groups"]), 1, list(result["groups"]))
+        analysis = next(iter(result["groups"].values()))
+        self.assertEqual(analysis["k"], 2)
+        self.assertEqual(analysis["outcome"], "sleep onset latency min")
+
+    def test_units_still_split_the_group(self):
+        result = build_analysis([
+            self._row("s1", "% Stage N1", -0.05),
+            self._row("s2", "Stage N1 time (min)", -6.07),
+        ])
+        self.assertEqual(len(result["groups"]), 2, list(result["groups"]))

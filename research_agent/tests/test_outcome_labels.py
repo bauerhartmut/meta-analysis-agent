@@ -7,7 +7,6 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 
 from research_agent.meta.outcome_labels import normalize_outcome
-from research_agent.meta.pooling import build_analysis
 
 
 class TestNormalize(unittest.TestCase):
@@ -55,37 +54,6 @@ class TestNormalize(unittest.TestCase):
                          "sleep onset latency min")
         self.assertEqual(normalize_outcome("Sleep latency (min)"),
                          "sleep onset latency min")
-
-
-def _row(source_id: str, outcome: str, effect: float) -> dict:
-    return {
-        "source_id": source_id,
-        "study_id": source_id,
-        "outcome": outcome,
-        "effect_type": "g",
-        "effect": effect,
-        "se": 0.1,
-        "adjusted": 0,
-    }
-
-
-class TestGrouping(unittest.TestCase):
-    def test_two_studies_with_different_labels_form_one_group(self):
-        result = build_analysis([
-            _row("s1", "Sleep onset latency, min", -0.22),
-            _row("s2", "Sleep latency (min)", -0.18),
-        ])
-        self.assertEqual(len(result["groups"]), 1, list(result["groups"]))
-        analysis = next(iter(result["groups"].values()))
-        self.assertEqual(analysis["k"], 2)
-        self.assertEqual(analysis["outcome"], "sleep onset latency min")
-
-    def test_units_still_split_the_group(self):
-        result = build_analysis([
-            _row("s1", "% Stage N1", -0.05),
-            _row("s2", "Stage N1 time (min)", -6.07),
-        ])
-        self.assertEqual(len(result["groups"]), 2, list(result["groups"]))
 
 
 if __name__ == "__main__":
