@@ -89,5 +89,52 @@ class JatsTablesTest(unittest.TestCase):
         self.assertTrue(all("Author note" not in c["cells"] for c in cands))
 
 
+TWO_HEADER_ROWS = """<?xml version="1.0" encoding="utf-8"?>
+<article><body><table-wrap id="t9"><label>Table 2</label>
+<caption>Sleep outcomes by arm.</caption><table>
+<thead>
+<tr><th>Table 2 Sleep outcomes</th></tr>
+<tr><th rowspan="2">Outcome</th><th colspan="2">Treatment</th>
+<th colspan="2">Placebo</th><th rowspan="2">Hedges g (95% CI)</th></tr>
+<tr><th>Mean</th><th>SD</th><th>Mean</th><th>SD</th></tr>
+</thead>
+<tbody>
+<tr><td>Sleep onset latency</td><td>38.2</td><td>4.1</td><td>45.1</td><td>4.7</td>
+<td>-0.22 (-0.32 to -0.17)</td></tr>
+<tr><td>Sleep efficiency</td><td colspan="2">88.0 (4.2)</td><td>85.1</td><td>3.9</td>
+<td>0.11 (-0.02 to 0.24)</td></tr>
+</tbody></table></table-wrap></body></article>
+"""
+
+
+class TwoHeaderRowsTest(unittest.TestCase):
+    def setUp(self):
+        self.tmp = tempfile.mkdtemp(prefix="jats_two_")
+        self.path = Path(self.tmp) / "in.xml"
+        self.path.write_text(TWO_HEADER_ROWS, encoding="utf-8")
+        self.table = parse_jats(self.path)[0]
+
+    def test_both_header_rows_are_composed_per_column(self):
+        self.assertEqual(self.table.header, [
+            "Outcome", "Treatment Mean", "Treatment SD",
+            "Placebo Mean", "Placebo SD", "Hedges g (95% CI)",
+        ])
+
+    def test_title_row_does_not_become_a_column_name(self):
+        self.assertNotIn("Table 2 Sleep outcomes", " | ".join(self.table.header))
+
+    def test_data_rows_are_not_part_of_the_header(self):
+        self.assertEqual(len(self.table.rows), 2)
+        self.assertEqual(self.table.rows[0].cells[0], "Sleep onset latency")
+
+    def test_first_row_has_as_many_cells_as_the_header(self):
+        self.assertEqual(len(self.table.rows[0].cells), len(self.table.header))
+
+    def test_merged_data_cell_stays_one_cell(self):
+        # Eine zusammengefasste Datenzelle darf nicht verdoppelt werden.
+        self.assertEqual(len(self.table.rows[1].cells), 5)
+        self.assertEqual(self.table.rows[1].cells[1], "88.0 (4.2)")
+
+
 if __name__ == "__main__":
     unittest.main()

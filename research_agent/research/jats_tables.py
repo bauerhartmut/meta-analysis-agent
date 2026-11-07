@@ -128,36 +128,129 @@ def _colspan(cell: ET.Element) -> int:
         return 1
 
 
-def _rows_from(element: ET.Element) -> tuple[list[str], list[JatsRow]]:
-    """Header (erste th-Zeile) und Datenzeilen eines table-Elements.
+def _rowspan(cell: ET.Element) -> int:
+    """Zeilentiefe einer Kopfzelle (rowspan), mindestens 1."""
+    raw = cell.get("rowspan") or cell.get("rows") or "1"
+    try:
+        return max(1, int(str(raw).strip()))
+    except (TypeError, ValueError):
+        return 1
 
-    Zusammengefasste Kopfzellen (colspan, z. B. "Median (IQR)" ueber zwei
-    Arme) werden auf ihre echte Breite expandiert. Ohne das hat der Kopf
-    weniger Eintraege als die Datenzeile, jede Spalte rutscht nach links,
-    und ein Spaltenleser wuerde den Placebo-Median als Treatment-Effekt
-    lesen. Datenzellen bleiben unveraendert: eine zusammengefasste
-    Datenzelle laesst sich nicht zerlegen, die Zeile faellt dann im
-    Abgleich von Kopfbreite und Zellenzahl auf.
+
+def _is_head_row(tr: ET.Element) -> bool:
+    """Zeile, deren Zellen alle th sind (Kopfzeile ohne thead-Element)."""
+    tags = [_tag(td) for td in tr if _tag(td) in ("td", "th")]
+    return bool(tags) and all(tag == "th" for tag in tags)
+
+
+def _compose_header(blocks: list[list[tuple[str, int, int]]]) -> list[str]:
+    """Mehrzeiligen Kopf zu einer Beschriftung je Datenspalte zusammensetzen.
+
+    Medizinische Tabellen haben haeufig zwei Kopfzeilen:
+
+        | Outcome     | Treatment |        | Placebo |        |
+        |             | Mean      | SD     | Mean    | SD     |
+
+    Bisher wurde nur die erste Zeile gelesen; die zweite landete als
+    Datenzeile im Leser und verschob jede Zahl. Hier wird ueber alle
+    Kopfzeilen ein Spaltenraster aufgebaut (colspan breitet aus, rowspan
+    traegt die Beschriftung in die naechste Zeile) und je Spalte der Pfad
+    "Treatment Mean" gebildet. Eine Zeile, die nur eine Zelle ueber alle
+    Spalten traegt, ist ein Tabellentitel und wird verworfen.
     """
-    header: list[str] = []
-    rows: list[JatsRow] = []
-    for i, tr in enumerate(el for el in element.iter() if _tag(el) == "tr"):
-        cells: list[str] = []
-        tags: list[str] = []
-        for td in tr:
-            tag = _tag(td)
-            if tag not in ("td", "th"):
+    if not blocks:
+        return []
+    # Eine Kopfzeile mit genau einer Zelle ueber eine Spalte ist, wenn weitere
+    # Kopfzeilen folgen, ein Tabellentitel ("Table 2 Sleep outcomes") und
+    # keine Spaltenbeschriftung: eine echte Beschriftungszeile hat je Spalte
+    # eine Zelle.
+    if len(blocks) > 1:
+        blocks = [block for block in blocks
+                  if not (len(block) == 1 and block[0][1] <= 1)]
+        if not blocks:
+            return []
+    carry: dict[int, tuple[str, int]] = {}
+    grid: list[dict[int, str]] = []
+    for cells in blocks:
+        line: dict[int, str] = {}
+        col = 0
+        index = 0
+        while index < len(cells) or col in carry:
+            if col in carry:
+                text, left = carry[col]
+                line[col] = text
+                if left > 1:
+                    carry[col] = (text, left - 1)
+                else:
+                    del carry[col]
+                col += 1
                 continue
-            tags.append(tag)
-            text = _text(td)
-            # Nur Kopfzellen werden expandiert; eine colspan-Datenzelle
-            # wuerde ihren Wert doppeln und damit Zahlen erfinden.
-            span = _colspan(td) if (i == 0 and tag == "th") else 1
-            cells.extend([text] * span)
-        if not cells:
+            text, span, depth = cells[index]
+            index += 1
+            for offset in range(span):
+                line[col + offset] = text
+                if depth > 1:
+                    carry[col + offset] = (text, depth - 1)
+            col += span
+        grid.append(line)
+
+    width = max((max(line) + 1 for line in grid if line), default=0)
+    if width == 0:
+        return []
+    if len(grid) > 1:
+        # Titelzeile: genau ein Text, der ueber die ganze Breite laeuft.
+        grid = [line for line in grid
+                if not (len({v.strip() for v in line.values() if v.strip()}) == 1
+                        and len(line) >= width)]
+
+    labels: list[str] = []
+    for column in range(width):
+        parts: list[str] = []
+        for line in grid:
+            part = line.get(column, "").strip()
+            if not part:
+                continue
+            if parts and (part == parts[-1] or part in parts[-1]
+                          or parts[-1] in part):
+                continue
+            parts.append(part)
+        labels.append(" ".join(parts))
+    return labels
+
+
+def _rows_from(element: ET.Element) -> tuple[list[str], list[JatsRow]]:
+    """Kopf (alle Kopfzeilen zusammengesetzt) und Datenzeilen einer Tabelle.
+
+    Der Kopf wird aus allen Zeilen des ``thead`` (oder, ohne thead, aus den
+    fuehrenden reinen th-Zeilen) gebaut; colspan und rowspan werden dabei
+    aufgeloest. Datenzellen bleiben woertlich und unexpandiert: eine
+    zusammengefasste Datenzelle laesst sich nicht zerlegen, ohne einen Wert
+    zu doppeln, und die Zeile muss als Zitat weiterhin ein Teilstring des
+    Dokumenttexts sein. Solche Zeilen fallen im Abgleich von Kopfbreite und
+    Zellenzahl auf, statt geraten zu werden.
+    """
+    all_rows = [el for el in element.iter() if _tag(el) == "tr"]
+    head_rows = [tr for thead in element.iter() if _tag(thead) == "thead"
+                 for tr in thead.iter() if _tag(tr) == "tr"]
+    if not head_rows:
+        for tr in all_rows:
+            if _is_head_row(tr):
+                head_rows.append(tr)
+            elif head_rows:
+                break
+
+    head_ids = {id(tr) for tr in head_rows}
+    blocks = [[(_text(td), _colspan(td), _rowspan(td))
+               for td in tr if _tag(td) in ("td", "th")]
+              for tr in head_rows]
+    header = _compose_header([block for block in blocks if block])
+
+    rows: list[JatsRow] = []
+    for tr in all_rows:
+        if id(tr) in head_ids:
             continue
-        if i == 0 and "th" in tags:
-            header = cells
+        cells = [_text(td) for td in tr if _tag(td) in ("td", "th")]
+        if not cells:
             continue
         rows.append(_classify(cells, header))
     return header, rows
