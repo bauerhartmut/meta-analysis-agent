@@ -16,7 +16,7 @@
     "log": "data/runs/melatonin_net_run2.log",
     "started": "2026-11-05 19:30",
     "planned_end": "~23:00",
-    "status_at_manifest": "laeuft (OpenAlex/S2 429/503-Backoff, keine Abbrueche)"
+    "status_at_manifest": "abgebrochen 2026-11-05 22:44 im Rate-Limit-Backoff (kein Prozess, Session-Status active, end_time leer), Zyklus 22/23"
   },
   "reference_dbs_hashes_note": "sha256 vor/nach in data/bench/regreports/*_report_meta.json; Quelle-Laeufe unveraendert (source_untouched=true)",
   "artifacts": {
@@ -34,5 +34,13 @@
     "t4_module": "research_agent/research/jats_tables.py"
   },
   "test_status": "Fokus-Suiten gruen (40 passed); letzte Voll-Suite 1024 passed / 2 skipped (commit de4cd5c)",
-  "t0_pending": "Endvergleich Run 1 vs Run 2 nach Laufende (eval_run_results.py + Vision-Trigger-Telemetrie)"
+  "t0_result": {
+    "report": "data/bench/run2_endvergleich_20261105.md",
+    "raw": ["data/bench/run1_auswertung_20261105.md", "data/bench/run2_auswertung_20261105.md"],
+    "vision_trigger_activity": 0,
+    "vision_status_values": "alle 8 Effekte '' (kein Trigger)",
+    "phase7b_crashes": 7,
+    "phase7b_cause": "asyncio.gather(Generator) -> TypeError; lokal gefixt (*[...])",
+    "regression_test": "research_agent/tests/test_async_gather_guards.py"
+  }
 }
