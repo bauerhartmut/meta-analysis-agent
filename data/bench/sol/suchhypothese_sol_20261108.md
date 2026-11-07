@@ -146,6 +146,11 @@ wird auch so berichtet.
 
 ## 10. Freigabe
 
-Der Lauf startet erst nach ausdruecklicher Freigabe. Vorher wird die Telemetrie
-des letzten Netzlaufs ausgewertet (`scripts/telemetry_report.py`), damit
-Rate-Limits und Zyklusabbrueche nicht erneut unentdeckt bleiben.
+Der Lauf startet erst nach ausdruecklicher Freigabe. Die Telemetrie des letzten
+Netzlaufs ist ausgewertet: `data/bench/sol/telemetrie_befund_20261108.md`.
+Ergebnis fuer diesen Entwurf: Europe PMC und Crossref hatten im letzten Lauf
+kein einziges 429, waehrend OpenAlex (94 Circuit-Breaks), Semantic Scholar (82)
+und PubMed (ESearch/ESummary 429) den Lauf in den Backoff trieben. Deshalb
+bleiben Q1-Q3 auf Europe PMC, Crossref dient nur der Gegenprobe, und PubMed,
+OpenAlex und Semantic Scholar werden nicht angefragt. Die Suche kostete zuletzt
+566 Tokens je Aufruf - die drei Abfragen sind kostenmaessig unerheblich.
