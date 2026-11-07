@@ -1,0 +1,636 @@
+{
+  "generated": "2026-11-07T21:29:52",
+  "documents": [
+    {
+      "doi": "10.3389/frsle.2026.1879110",
+      "pmc": "PMC13625438",
+      "table_rows": 51,
+      "convertible": 0,
+      "stored": 0,
+      "rejected": 0,
+      "reasons": {
+        "kein Mittelwert mit eindeutiger Streuung in zwei Spalten": 39,
+        "Fallzahl je Arm fehlt": 7,
+        "nicht genau zwei Spalten mit Mittelwert und Streuung": 5
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.3389/fnut.2026.1892442",
+      "pmc": "PMC13454318",
+      "table_rows": 92,
+      "convertible": 0,
+      "stored": 0,
+      "rejected": 0,
+      "reasons": {
+        "kein Mittelwert mit eindeutiger Streuung in zwei Spalten": 51,
+        "Fallzahl je Arm fehlt": 30,
+        "zu wenige Spalten": 11
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.3389/fphar.2026.1839440",
+      "pmc": "PMC13373100",
+      "table_rows": 51,
+      "convertible": 0,
+      "stored": 0,
+      "rejected": 0,
+      "reasons": {
+        "kein Mittelwert mit eindeutiger Streuung in zwei Spalten": 40,
+        "zu wenige Spalten": 8,
+        "Baseline-Zeile (Tag 0 / vor Intervention) - kein Behandlungseffekt": 3
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.3389/fnut.2026.1766495",
+      "pmc": "PMC13095836",
+      "table_rows": 60,
+      "convertible": 0,
+      "stored": 0,
+      "rejected": 0,
+      "reasons": {
+        "kein Mittelwert mit eindeutiger Streuung in zwei Spalten": 56,
+        "Fallzahl je Arm fehlt": 3,
+        "nicht genau zwei Spalten mit Mittelwert und Streuung": 1
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.1007/s10072-025-08221-8",
+      "pmc": "PMC12394315",
+      "table_rows": 15,
+      "convertible": 0,
+      "stored": 0,
+      "rejected": 0,
+      "reasons": {
+        "nicht genau zwei Spalten mit Mittelwert und Streuung": 10,
+        "kein Mittelwert mit eindeutiger Streuung in zwei Spalten": 5
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.1097/aln.0000000000005314",
+      "pmc": "PMC11801451",
+      "table_rows": 24,
+      "convertible": 0,
+      "stored": 0,
+      "rejected": 0,
+      "reasons": {
+        "nicht genau zwei Spalten mit Mittelwert und Streuung": 11,
+        "zu wenige Spalten": 8,
+        "kein Mittelwert mit eindeutiger Streuung in zwei Spalten": 5
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.1371/journal.pone.0332366",
+      "pmc": "PMC12449008",
+      "table_rows": 53,
+      "convertible": 0,
+      "stored": 0,
+      "rejected": 0,
+      "reasons": {
+        "kein Mittelwert mit eindeutiger Streuung in zwei Spalten": 46,
+        "zu wenige Spalten": 6,
+        "Baseline-Zeile (Tag 0 / vor Intervention) - kein Behandlungseffekt": 1
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.1371/journal.pone.0321635",
+      "pmc": "PMC12002473",
+      "table_rows": 28,
+      "convertible": 3,
+      "stored": 3,
+      "rejected": 0,
+      "reasons": {
+        "Fallzahl je Arm fehlt": 18,
+        "kein Mittelwert mit eindeutiger Streuung in zwei Spalten": 7
+      },
+      "effects": [
+        {
+          "outcome": "Age (Mean ± SD)",
+          "effect": 0.150129,
+          "se": 0.223922,
+          "n": 80,
+          "arms": [
+            {
+              "label": "Melatonin n=40",
+              "n": 40,
+              "mean": 32.6,
+              "sd": 5.74,
+              "sd_source": "sd"
+            },
+            {
+              "label": "Placebo n=40",
+              "n": 40,
+              "mean": 31.8,
+              "sd": 4.77,
+              "sd_source": "sd"
+            }
+          ],
+          "quote": "|Age (Mean ± SD)|32.6 ± 5.74|31.8 ± 4.77"
+        },
+        {
+          "outcome": "BMI (Mean ± SD)",
+          "effect": -0.077308,
+          "se": 0.22369,
+          "n": 80,
+          "arms": [
+            {
+              "label": "Melatonin n=40",
+              "n": 40,
+              "mean": 25.38,
+              "sd": 3.73,
+              "sd_source": "sd"
+            },
+            {
+              "label": "Placebo n=40",
+              "n": 40,
+              "mean": 25.67,
+              "sd": 3.7,
+              "sd_source": "sd"
+            }
+          ],
+          "quote": "|BMI (Mean ± SD)|25.38 ± 3.73|25.67 ± 3.70"
+        },
+        {
+          "outcome": "Duration of infertility",
+          "effect": 0.154571,
+          "se": 0.22394,
+          "n": 80,
+          "arms": [
+            {
+              "label": "Melatonin n=40",
+              "n": 40,
+              "mean": 4.46,
+              "sd": 3.35,
+              "sd_source": "sd"
+            },
+            {
+              "label": "Placebo n=40",
+              "n": 40,
+              "mean": 4.0,
+              "sd": 2.48,
+              "sd_source": "sd"
+            }
+          ],
+          "quote": "|Duration of infertility|4.46 ± 3.35|4 ± 2.48"
+        }
+      ]
+    },
+    {
+      "doi": "10.1186/s40780-024-00347-9",
+      "pmc": "PMC11137944",
+      "table_rows": 37,
+      "convertible": 0,
+      "stored": 0,
+      "rejected": 0,
+      "reasons": {
+        "kein Mittelwert mit eindeutiger Streuung in zwei Spalten": 29,
+        "nicht genau zwei Spalten mit Mittelwert und Streuung": 8
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.3390/nu16101523",
+      "pmc": "PMC11123999",
+      "table_rows": 79,
+      "convertible": 0,
+      "stored": 0,
+      "rejected": 0,
+      "reasons": {
+        "nicht genau zwei Spalten mit Mittelwert und Streuung": 46,
+        "kein Mittelwert mit eindeutiger Streuung in zwei Spalten": 29,
+        "Fallzahl je Arm fehlt": 4
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.1007/s12325-023-02708-6",
+      "pmc": "PMC10796483",
+      "table_rows": 18,
+      "convertible": 11,
+      "stored": 11,
+      "rejected": 0,
+      "reasons": {
+        "zu wenige Spalten": 7
+      },
+      "effects": [
+        {
+          "outcome": "Age (years)",
+          "effect": -0.296763,
+          "se": 0.237087,
+          "n": 72,
+          "arms": [
+            {
+              "label": "Placebo ( n = 35), mean ± SE",
+              "n": 35,
+              "mean": 33.57,
+              "sd": 6.271045,
+              "sd_source": "se"
+            },
+            {
+              "label": "VE ( n = 37), mean ± SE",
+              "n": 37,
+              "mean": 35.35,
+              "sd": 5.596142,
+              "sd_source": "se"
+            }
+          ],
+          "quote": "|Age (years)|33.57 ± 1.06|35.35 ± 0.92"
+        },
+        {
+          "outcome": "Male, n (%)",
+          "effect": 0.003828,
+          "se": 0.235793,
+          "n": 72,
+          "arms": [
+            {
+              "label": "Placebo ( n = 35), mean ± SE",
+              "n": 35,
+              "mean": 16.0,
+              "sd": 270.424007,
+              "sd_source": "se"
+            },
+            {
+              "label": "VE ( n = 37), mean ± SE",
+              "n": 37,
+              "mean": 15.0,
+              "sd": 246.595193,
+              "sd_source": "se"
+            }
+          ],
+          "quote": "|Male, n (%)|16 (45.71%)|15 (40.54%)"
+        },
+        {
+          "outcome": "Female, n (%)",
+          "effect": -0.008662,
+          "se": 0.235794,
+          "n": 72,
+          "arms": [
+            {
+              "label": "Placebo ( n = 35), mean ± SE",
+              "n": 35,
+              "mean": 19.0,
+              "sd": 321.183971,
+              "sd_source": "se"
+            },
+            {
+              "label": "VE ( n = 37), mean ± SE",
+              "n": 37,
+              "mean": 22.0,
+              "sd": 361.68106,
+              "sd_source": "se"
+            }
+          ],
+          "quote": "|Female, n (%)|19 (54.29%)|22 (59.46%)"
+        },
+        {
+          "outcome": "BMI (kg/m 2 )",
+          "effect": -0.166311,
+          "se": 0.2362,
+          "n": 72,
+          "arms": [
+            {
+              "label": "Placebo ( n = 35), mean ± SE",
+              "n": 35,
+              "mean": 24.96,
+              "sd": 3.017201,
+              "sd_source": "se"
+            },
+            {
+              "label": "VE ( n = 37), mean ± SE",
+              "n": 37,
+              "mean": 25.48,
+              "sd": 3.163037,
+              "sd_source": "se"
+            }
+          ],
+          "quote": "|BMI (kg/m 2 )|24.96 ± 0.51|25.48 ± 0.52"
+        },
+        {
+          "outcome": "Pittsburgh sleep quality index (PSQI)",
+          "effect": -0.36157,
+          "se": 0.237711,
+          "n": 72,
+          "arms": [
+            {
+              "label": "Placebo ( n = 35), mean ± SE",
+              "n": 35,
+              "mean": 11.43,
+              "sd": 1.301538,
+              "sd_source": "se"
+            },
+            {
+              "label": "VE ( n = 37), mean ± SE",
+              "n": 37,
+              "mean": 11.89,
+              "sd": 1.216553,
+              "sd_source": "se"
+            }
+          ],
+          "quote": "|Pittsburgh sleep quality index (PSQI)|11.43 ± 0.22|11.89 ± 0.20"
+        },
+        {
+          "outcome": "Sleep latency (min) by WA",
+          "effect": -0.35817,
+          "se": 0.237675,
+          "n": 72,
+          "arms": [
+            {
+              "label": "Placebo ( n = 35), mean ± SE",
+              "n": 35,
+              "mean": 74.26,
+              "sd": 31.000258,
+              "sd_source": "se"
+            },
+            {
+              "label": "VE ( n = 37), mean ± SE",
+              "n": 37,
+              "mean": 89.39,
+              "sd": 49.878653,
+              "sd_source": "se"
+            }
+          ],
+          "quote": "|Sleep latency (min) by WA|74.26 ± 5.24|89.39 ± 8.20"
+        },
+        {
+          "outcome": "Actual sleep time (min) by WA",
+          "effect": 0.786379,
+          "se": 0.24473,
+          "n": 72,
+          "arms": [
+            {
+              "label": "Placebo ( n = 35), mean ± SE",
+              "n": 35,
+              "mean": 339.8,
+              "sd": 37.862911,
+              "sd_source": "se"
+            },
+            {
+              "label": "VE ( n = 37), mean ± SE",
+              "n": 37,
+              "mean": 306.09,
+              "sd": 46.289823,
+              "sd_source": "se"
+            }
+          ],
+          "quote": "|Actual sleep time (min) by WA|339.80 ± 6.40|306.09 ± 7.61"
+        },
+        {
+          "outcome": "Sleep efficiency (%) by WA",
+          "effect": 0.736357,
+          "se": 0.243647,
+          "n": 72,
+          "arms": [
+            {
+              "label": "Placebo ( n = 35), mean ± SE",
+              "n": 35,
+              "mean": 72.87,
+              "sd": 6.803492,
+              "sd_source": "se"
+            },
+            {
+              "label": "VE ( n = 37), mean ± SE",
+              "n": 37,
+              "mean": 66.4,
+              "sd": 10.158213,
+              "sd_source": "se"
+            }
+          ],
+          "quote": "|Sleep efficiency (%) by WA|72.87 ± 1.15|66.40 ± 1.67"
+        },
+        {
+          "outcome": "Beck anxiety inventory (BAI)",
+          "effect": 0.193763,
+          "se": 0.236345,
+          "n": 72,
+          "arms": [
+            {
+              "label": "Placebo ( n = 35), mean ± SE",
+              "n": 35,
+              "mean": 11.57,
+              "sd": 1.419859,
+              "sd_source": "se"
+            },
+            {
+              "label": "VE ( n = 37), mean ± SE",
+              "n": 37,
+              "mean": 11.3,
+              "sd": 1.338208,
+              "sd_source": "se"
+            }
+          ],
+          "quote": "|Beck anxiety inventory (BAI)|11.57 ± 0.24|11.30 ± 0.22"
+        },
+        {
+          "outcome": "Epworth sleepiness scale (ESS)",
+          "effect": 0.052012,
+          "se": 0.235833,
+          "n": 72,
+          "arms": [
+            {
+              "label": "Placebo ( n = 35), mean ± SE",
+              "n": 35,
+              "mean": 8.74,
+              "sd": 1.893146,
+              "sd_source": "se"
+            },
+            {
+              "label": "VE ( n = 37), mean ± SE",
+              "n": 37,
+              "mean": 8.65,
+              "sd": 1.520691,
+              "sd_source": "se"
+            }
+          ],
+          "quote": "|Epworth sleepiness scale (ESS)|8.74 ± 0.32|8.65 ± 0.25"
+        },
+        {
+          "outcome": "VAS (feeling of waking up refreshed)",
+          "effect": 0.362559,
+          "se": 0.237721,
+          "n": 72,
+          "arms": [
+            {
+              "label": "Placebo ( n = 35), mean ± SE",
+              "n": 35,
+              "mean": 7.29,
+              "sd": 0.76909,
+              "sd_source": "se"
+            },
+            {
+              "label": "VE ( n = 37), mean ± SE",
+              "n": 37,
+              "mean": 6.98,
+              "sd": 0.912414,
+              "sd_source": "se"
+            }
+          ],
+          "quote": "|VAS (feeling of waking up refreshed)|7.29 ± 0.13|6.98 ± 0.15"
+        }
+      ]
+    },
+    {
+      "doi": "10.1186/s12876-023-02760-0",
+      "pmc": "PMC10131443",
+      "table_rows": 145,
+      "convertible": 0,
+      "stored": 0,
+      "rejected": 0,
+      "reasons": {
+        "kein Mittelwert mit eindeutiger Streuung in zwei Spalten": 141,
+        "zu wenige Spalten": 3,
+        "nicht genau zwei Spalten mit Mittelwert und Streuung": 1
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.3389/fnut.2023.1152680",
+      "pmc": "PMC10149792",
+      "table_rows": 44,
+      "convertible": 0,
+      "stored": 0,
+      "rejected": 0,
+      "reasons": {
+        "Fallzahl je Arm fehlt": 28,
+        "kein Mittelwert mit eindeutiger Streuung in zwei Spalten": 14,
+        "zu wenige Spalten": 2
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.5812/ijpr-128817",
+      "pmc": "PMC10024317",
+      "table_rows": 63,
+      "convertible": 0,
+      "stored": 0,
+      "rejected": 0,
+      "reasons": {
+        "kein Mittelwert mit eindeutiger Streuung in zwei Spalten": 63
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.3390/ijerph20010552",
+      "pmc": "PMC9819026",
+      "table_rows": 0,
+      "convertible": 0,
+      "stored": 0,
+      "rejected": 0,
+      "reasons": {},
+      "effects": []
+    },
+    {
+      "doi": "10.3390/jcm11175138",
+      "pmc": "PMC9456584",
+      "table_rows": 56,
+      "convertible": 0,
+      "stored": 0,
+      "rejected": 0,
+      "reasons": {
+        "kein Mittelwert mit eindeutiger Streuung in zwei Spalten": 39,
+        "nicht genau zwei Spalten mit Mittelwert und Streuung": 11,
+        "Fallzahl je Arm fehlt": 4,
+        "zu wenige Spalten": 2
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.2147/nss.s381918",
+      "pmc": "PMC9519126",
+      "table_rows": 10,
+      "convertible": 0,
+      "stored": 0,
+      "rejected": 0,
+      "reasons": {
+        "kein Mittelwert mit eindeutiger Streuung in zwei Spalten": 10
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.5935/1984-0063.20200083",
+      "pmc": "PMC8663735",
+      "table_rows": 2,
+      "convertible": 0,
+      "stored": 0,
+      "rejected": 0,
+      "reasons": {
+        "Fallzahl je Arm fehlt": 2
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.1155/2020/3626120",
+      "pmc": "PMC7647758",
+      "table_rows": 22,
+      "convertible": 0,
+      "stored": 0,
+      "rejected": 0,
+      "reasons": {
+        "kein Mittelwert mit eindeutiger Streuung in zwei Spalten": 22
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.1089/cap.2018.0020",
+      "pmc": "PMC6306655",
+      "table_rows": 58,
+      "convertible": 0,
+      "stored": 0,
+      "rejected": 0,
+      "reasons": {
+        "kein Mittelwert mit eindeutiger Streuung in zwei Spalten": 49,
+        "zu wenige Spalten": 6,
+        "nicht genau zwei Spalten mit Mittelwert und Streuung": 3
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.4103/ijp.ijp_250_18",
+      "pmc": "PMC6302692",
+      "table_rows": 0,
+      "convertible": 0,
+      "stored": 0,
+      "rejected": 0,
+      "reasons": {},
+      "effects": []
+    },
+    {
+      "doi": "",
+      "pmc": "PMC5958333",
+      "table_rows": 44,
+      "convertible": 0,
+      "stored": 0,
+      "rejected": 0,
+      "reasons": {
+        "Fallzahl je Arm fehlt": 29,
+        "kein Mittelwert mit eindeutiger Streuung in zwei Spalten": 15
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.2147/nss.s71838",
+      "pmc": "PMC4319556",
+      "table_rows": 15,
+      "convertible": 0,
+      "stored": 0,
+      "rejected": 0,
+      "reasons": {
+        "kein Mittelwert mit eindeutiger Streuung in zwei Spalten": 15
+      },
+      "effects": []
+    }
+  ],
+  "totals": {
+    "table_rows": 967,
+    "convertible": 14,
+    "stored": 14,
+    "rejected": 0,
+    "missing_xml": 0
+  },
+  "missing_xml": []
+}

@@ -158,6 +158,11 @@ def parse_mean_spread(cell: str, role: str = "") -> Optional[Tuple[float, float,
     nur dann, wenn die Zelle selbst nichts sagt. Alles andere wird
     verworfen: eine Zahl in Klammern ohne Etikett kann SD, SE, CI oder
     Interquartilsabstand sein, und Raten waere hier ein erfundener Wert.
+
+    Ein "\u00b1" ohne Etikett gilt als SD. Nennt die Zelle oder der Kopf
+    dagegen SE, wird daraus ein Standardfehler - sonst wuerde ein Kopf
+    "mean \u00b1 SE" als Standardabweichung gelesen und g um ein Vielfaches
+    zu gross.
     """
     text = str(cell or "").strip()
     if not text:
@@ -166,14 +171,22 @@ def parse_mean_spread(cell: str, role: str = "") -> Optional[Tuple[float, float,
     if mean is None:
         return None
     lowered = text.lower()
-    has_sd = bool(re.search(r"\bsd\b|standard\s+deviation", lowered)) or "\u00b1" in text
+    has_sd = bool(re.search(r"\bsd\b|standard\s+deviation", lowered))
     has_se = bool(re.search(r"\bse\b|standard\s+error", lowered))
     has_ci = bool(re.search(r"95\s*%|confidence\s+interval|\bci\b", lowered))
 
     # "mean ± spread"
     if "\u00b1" in text:
         spread = parse_number(text.split("\u00b1", 1)[1])
-        return (mean, spread, "sd") if spread and spread > 0 else None
+        if not spread or spread <= 0:
+            return None
+        if has_se:
+            return mean, spread, "se"
+        if has_sd:
+            return mean, spread, "sd"
+        if role == "ci":
+            return None      # kein Intervall; nicht umdeuten
+        return mean, spread, role if role in ("sd", "se") else "sd"
 
     inner = re.search(r"\(([^()]*)\)", text)
     if not inner:
