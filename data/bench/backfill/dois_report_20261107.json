@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-07T11:27:46.677020+00:00",
+  "generated": "2026-11-07T11:34:07.838961+00:00",
   "reports": [
     {
       "db": "data/bench/backfill/run1.db",
@@ -533,7 +533,7 @@
         {
           "id": "09f92fbc1fda",
           "title": "The Content of Dietary Melatonin in 119 Food Items and Its Relationship With Chronic Diseases: Results of the CUME+ Study",
-          "doi": "10.1111/jhn.70193/v1/review2",
+          "doi": "10.1111/jhn.70193/v1/review1",
           "method": "crossref",
           "score": 1.0,
           "matched_title": "Review for \"The Content of Dietary Melatonin in 119 Food Items and its Relationship With Chronic Diseases\""
@@ -897,14 +897,14 @@
     {
       "db": "data/bench/backfill/run2.db",
       "stats": {
-        "sources": 96,
+        "sources": 101,
         "with_doi_before": 22,
         "from_url": 10,
-        "from_crossref": 49,
+        "from_crossref": 54,
         "rejected_low_score": 15,
         "no_candidate": 0,
         "still_without_doi": 15,
-        "with_doi_after": 81
+        "with_doi_after": 86
       },
       "results": [
         {
@@ -1518,6 +1518,46 @@
           "method": "crossref",
           "score": 1.0,
           "matched_title": "Wavelet transforms and their applications to MHD and plasma turbulence: a review"
+        },
+        {
+          "id": "3184d5918255",
+          "title": "Responsiveness and minimal clinically important difference of the 6-minute walk distance in patients undergoing colorectal cancer surgery",
+          "doi": "10.1007/s00520-024-08596-y",
+          "method": "crossref",
+          "score": 1.0,
+          "matched_title": "Responsiveness and minimal clinically important difference of the 6-minute walk distance in patients undergoing colorectal cancer surgery"
+        },
+        {
+          "id": "41d0ac696c1f",
+          "title": "Commentary: Statistical significance and clinical significance - A call to consider patient reported outcome measures, effect size, confidence interval and minimal clinically important difference (MCID).",
+          "doi": "10.1016/j.jbmt.2019.02.009",
+          "method": "crossref",
+          "score": 1.0,
+          "matched_title": "Commentary: Statistical significance and clinical significance - A call to consider patient reported outcome measures, effect size, confidence interval and minimal clinically important difference (MCID)"
+        },
+        {
+          "id": "38989dcb6b0b",
+          "title": "Minimal clinically important difference (MCID) of effect sizes other than mean difference",
+          "doi": "10.69854/jcq.2024.0016",
+          "method": "crossref",
+          "score": 1.0,
+          "matched_title": "Minimal Clinically Important Difference (MCID) of Effect Sizes other than Mean Difference"
+        },
+        {
+          "id": "c9ac58b6f79a",
+          "title": "Perspective: Minimal clinically important difference (MCID) and Alzheimer's disease clinical trials",
+          "doi": "10.1002/trc2.70059",
+          "method": "crossref",
+          "score": 1.0,
+          "matched_title": "Perspective: Minimal clinically important difference (MCID) and Alzheimer's disease clinical trials"
+        },
+        {
+          "id": "d15194421d11",
+          "title": "The Role of AI in Peer Support for Young People: A Study of Preferences for Human- and AI-Generated Responses",
+          "doi": "10.1145/3613904.3642574",
+          "method": "crossref",
+          "score": 1.0,
+          "matched_title": "The Role of AI in Peer Support for Young People: A Study of Preferences for Human- and AI-Generated Responses"
         }
       ]
     }

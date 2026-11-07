@@ -1,14 +1,14 @@
 {
-  "generated": "2026-11-07T11:31:11.536027+00:00",
+  "generated": "2026-11-07T11:38:27.503672+00:00",
   "sources": [
     "run1.db",
     "run2.db"
   ],
   "summary": {
-    "dois": 161,
-    "with_pmcid": 58,
-    "with_xml": 42,
-    "with_tables": 39,
+    "dois": 165,
+    "with_pmcid": 59,
+    "with_xml": 43,
+    "with_tables": 40,
     "with_ci_rows": 6,
     "with_se_rows": 7,
     "runs": {
@@ -19,9 +19,9 @@
         "with_ci_rows": 4
       },
       "run2.db": {
-        "dois": 81,
-        "with_pmcid": 30,
-        "with_xml": 22,
+        "dois": 86,
+        "with_pmcid": 31,
+        "with_xml": 23,
         "with_ci_rows": 2
       }
     }
@@ -62,6 +62,24 @@
       "se_rows": 4,
       "ci_rows": 0,
       "sd_n_rows": 3
+    },
+    {
+      "doi": "10.1002/trc2.70059",
+      "title": "Perspective: Minimal clinically important difference (MCID) and Alzheimer's disease clinical trials",
+      "runs": {
+        "run2.db": {
+          "kind": "",
+          "chars": 0
+        }
+      },
+      "pmcid": "PMC11891559",
+      "xml_ok": true,
+      "xml_chars": 90833,
+      "tables": 1,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
     },
     {
       "doi": "10.1007/978-3-032-37044-0_15",
@@ -124,6 +142,24 @@
         "run1.db": {
           "kind": "abstract",
           "chars": 2695
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1007/s00520-024-08596-y",
+      "title": "Responsiveness and minimal clinically important difference of the 6-minute walk distance in patients undergoing colorectal cancer surgery",
+      "runs": {
+        "run2.db": {
+          "kind": "",
+          "chars": 0
         }
       },
       "pmcid": "",
@@ -352,6 +388,24 @@
         "run1.db": {
           "kind": "",
           "chars": 0
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1016/j.jbmt.2019.02.009",
+      "title": "Commentary: Statistical significance and clinical significance - A call to consider patient reported outcome measures, effect size, confidence interval and minimal clinically important difference (MCID).",
+      "runs": {
+        "run2.db": {
+          "kind": "abstract",
+          "chars": 1709
         }
       },
       "pmcid": "",
@@ -802,8 +856,8 @@
       "title": "Wavelet transforms and their applications to MHD and plasma turbulence: a review",
       "runs": {
         "run2.db": {
-          "kind": "",
-          "chars": 0
+          "kind": "pdf",
+          "chars": 80021
         }
       },
       "pmcid": "",
@@ -1646,7 +1700,7 @@
       "sd_n_rows": 0
     },
     {
-      "doi": "10.1111/jhn.70193/v1/review2",
+      "doi": "10.1111/jhn.70193/v1/review1",
       "title": "The Content of Dietary Melatonin in 119 Food Items and Its Relationship With Chronic Diseases: Results of the CUME+ Study",
       "runs": {
         "run1.db": {
@@ -1793,6 +1847,24 @@
         }
       },
       "pmcid": "PMC13229570",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1145/3613904.3642574",
+      "title": "The Role of AI in Peer Support for Young People: A Study of Preferences for Human- and AI-Generated Responses",
+      "runs": {
+        "run2.db": {
+          "kind": "",
+          "chars": 0
+        }
+      },
+      "pmcid": "",
       "xml_ok": false,
       "xml_chars": 0,
       "tables": 0,
@@ -3038,6 +3110,10 @@
       "title": "Minimal clinically important difference (MCID) of effect sizes other than mean difference",
       "runs": {
         "run1.db": {
+          "kind": "",
+          "chars": 0
+        },
+        "run2.db": {
           "kind": "",
           "chars": 0
         }

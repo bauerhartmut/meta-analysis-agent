@@ -1,15 +1,15 @@
 # DOI-Backfill per Crossref und XML-Ausbeute danach
 
 Stand: 07.11.2026. Arbeit auf **Kopien** (`data/bench/backfill/run1.db`,
-`run2.db`); die Lauf-DBs selbst blieben unveraendert (nur gelesen).
+`run2.db`); die Lauf-DBs selbst blieben unveraendert (nur gelesen, 26 bzw. 22
+DOIs vor und nach der Messung).
 
 ## Vorgehen
 
 1. DOI aus der URL, wenn vorhanden (`10.xxxx/...` im Pfad).
 2. Sonst Crossref `query.bibliographic` (3 Treffer, `select=title,DOI,type`).
 3. Uebernahme nur bei **Titeldeckung >= 0.85** der kuerzeren Tokenmenge,
-   **mindestens 6 gemeinsamen Tokens** und **>= 0.6 Abdeckung der Quell-Tokens**;
-   sonst verworfen.
+   **mindestens 6 gemeinsamen Tokens** und **>= 0.6 Abdeckung der Quell-Tokens**.
 
 Die dritte Bedingung kam nach der ersten Messung dazu: kurze, generische
 Treffer wie "Clinical Aspects of Alzheimer Disease" oder "Role of Melatonin
@@ -17,26 +17,30 @@ in the Regulation of Sleep" deckten eine lange Quellzeile scheinbar
 vollstaendig ab (Score 1.0) und waren 8x die falsche Arbeit. Mit der
 verschaerften Regel wurden 31 statt 14 Kandidaten verworfen.
 
+Die Kopien entstehen per SQLite-Backup-API, nicht per `cp`: ein einfaches
+Kopieren der `.db` neben liegengebliebenen `-wal`/`-shm` der Vorgaengerkopie
+hatte in Run 2 fuenf Quellen verschluckt (96 statt 101).
+
 ## DOIs
 
 | Lauf | Quellen | DOI vorher | aus URL | aus Crossref | verworfen | DOI nachher |
 |---|---:|---:|---:|---:|---:|---:|
 | Run 1 | 134 | 26 (19 %) | 18 | 74 | 16 | **118 (88 %)** |
-| Run 2 | 101 | 22 (22 %) | 10 | 49 | 15 | **81 (80 %)** |
+| Run 2 | 101 | 22 (22 %) | 10 | 54 | 15 | **86 (85 %)** |
 
 ## Europe-PMC-XML vorher/nachher (gleiche Messmethode)
 
 | Kennzahl | vorher (Original-DBs) | nachher (Backfill-Kopien) |
 |---|---:|---:|
-| DOIs geprueft | 55 | **161** |
-| mit PMCID | 11 (20 %) | **58 (36 %)** |
-| mit `fullTextXML` | 6 (11 %) | **42 (26 %)** |
-| davon mit Tabellen | 5 | **39** |
+| DOIs geprueft | 55 | **165** |
+| mit PMCID | 11 (20 %) | **59 (36 %)** |
+| mit `fullTextXML` | 6 (11 %) | **43 (26 %)** |
+| davon mit Tabellen | 5 | **40** |
 | DOIs mit CI-Zeilen | 1 | **6** |
 | DOIs mit SE-Zeilen | 1 | **7** |
 
 Je Lauf nachher: Run 1 116 DOIs / 42 PMCID / 30 XML / 4 mit CI-Zeilen;
-Run 2 81 DOIs / 30 PMCID / 22 XML / 2 mit CI-Zeilen.
+Run 2 86 DOIs / 31 PMCID / 23 XML / 2 mit CI-Zeilen.
 
 ## Die sechs ergiebigen XML-Quellen
 
@@ -59,12 +63,12 @@ Disease), also genau die Fraktion, die der XML-Pfad erreicht.
 
 - Geprueft wird nur der Titel, keine Autoren oder Jahre. Die verschaerfte
   Regel verwirft kurze generische Treffer, eine Stichprobe der uebernommenen
-  DOIs (z. B. 10 zufaellige gegen den Verlag) steht aber noch aus.
+  DOIs gegen den Verlag steht aber noch aus.
 - Gemessen ist die **Verfuegbarkeit**, nicht die Extraktionsqualitaet: kein
   LLM, kein Netzlauf. Ob aus den 68 Zeilen poolbare Effekte werden und ob
-  die Arme/Zeitpunkte richtig zugeordnet sind, ist offen.
+  Arme und Zeitpunkte richtig zugeordnet sind, ist offen.
 - `check_xml_availability.py` zaehlt Tabellenzeilen mit SE/CI-Flags, nicht
   Effektwerte; die Zeilen sind Kandidaten, keine Ergebnisse.
-- Der Backfill lief auf Kopien; fuer einen echten Lauf muss der Agent die
-  DOI selbst mitbringen oder der Schritt gehoert in die Pipeline (dann
-  kostet er pro Lauf ~150 Crossref-Anfragen).
+- Der Backfill lief auf Kopien. Fuer einen echten Lauf muss der Agent die DOI
+  selbst mitbringen, oder der Schritt gehoert in die Pipeline (dann ~150
+  Crossref-Anfragen pro Lauf, ohne LLM-Kosten).
