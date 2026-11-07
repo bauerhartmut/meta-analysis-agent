@@ -1,0 +1,179 @@
+{
+ "generated": "2026-11-07T20:18:12.344536+00:00",
+ "limit": 40,
+ "probes": {
+  "frei_melatonin": {
+   "query": "melatonin",
+   "status": 200,
+   "hitCount": 90220,
+   "error": ""
+  },
+  "abstract_melatonin": {
+   "query": "ABSTRACT:\"melatonin\"",
+   "status": 200,
+   "hitCount": 35707,
+   "error": ""
+  },
+  "titel_melatonin": {
+   "query": "TITLE:\"melatonin\"",
+   "status": 200,
+   "hitCount": 25375,
+   "error": ""
+  },
+  "abstract_unsinn": {
+   "query": "ABSTRACT:\"qqzzxx nonsenseterm\"",
+   "status": 200,
+   "hitCount": 0,
+   "error": ""
+  },
+  "bewertung": {
+   "abstract_feld_belegt": true,
+   "verhaeltnis_abstract_zu_frei": 0.396,
+   "begruendung": "Trefferzahl des Abstract-Feldes liegt deutlich unter der freien Suche"
+  }
+ },
+ "queries": [
+  {
+   "name": "Q1",
+   "query": "(TITLE:\"melatonin\" OR ABSTRACT:\"melatonin\") AND (ABSTRACT:\"sleep onset latency\" OR ABSTRACT:\"sleep latency\" OR ABSTRACT:\"SOL\") AND (ABSTRACT:randomized OR ABSTRACT:randomised OR ABSTRACT:placebo OR ABSTRACT:\"double-blind\" OR ABSTRACT:crossover) AND HAS_FULLTEXT:y",
+   "status": 200,
+   "hitCount": 235,
+   "error": "",
+   "returned": 100
+  },
+  {
+   "name": "Q2",
+   "query": "(TITLE:\"melatonin\" OR ABSTRACT:\"melatonin\") AND (ABSTRACT:\"sleep onset latency\" OR ABSTRACT:\"sleep latency\" OR ABSTRACT:\"SOL\") AND (ABSTRACT:randomized OR ABSTRACT:randomised OR ABSTRACT:placebo OR ABSTRACT:\"double-blind\" OR ABSTRACT:crossover) AND HAS_FULLTEXT:y AND (ABSTRACT:\"mean difference\" OR ABSTRACT:\"effect size\" OR ABSTRACT:Hedges OR ABSTRACT:\"confidence interval\" OR ABSTRACT:\"standard deviation\")",
+   "status": 200,
+   "hitCount": 40,
+   "error": "",
+   "returned": 40
+  },
+  {
+   "name": "Q3",
+   "query": "TITLE:\"sleep onset latency\" AND TITLE:melatonin AND HAS_FULLTEXT:y",
+   "status": 200,
+   "hitCount": 1,
+   "error": "",
+   "returned": 1
+  }
+ ],
+ "stats": {
+  "Q1_hits": 235,
+  "Q1_returned": 100,
+  "Q1_ohne_pmcid": 53,
+  "Q1_dublette": 22,
+  "Q2_hits": 40,
+  "Q2_returned": 40,
+  "Q2_ohne_pmcid": 16,
+  "Q2_dublette": 16,
+  "Q3_hits": 1,
+  "Q3_returned": 1,
+  "Q3_ohne_pmcid": 1,
+  "stichprobe": 33
+ },
+ "per_query": {
+  "Q1": 25,
+  "Q2": 8
+ },
+ "download": {
+  "loaded": 23,
+  "present": 0,
+  "failed": 10,
+  "failures": [
+   {
+    "pmc": "PMC8181734",
+    "status": 500
+   },
+   {
+    "pmc": "PMC8094738",
+    "status": 500
+   },
+   {
+    "pmc": "PMC6535156",
+    "status": 500
+   },
+   {
+    "pmc": "PMC4734949",
+    "status": 500
+   },
+   {
+    "pmc": "PMC4425994",
+    "status": 500
+   },
+   {
+    "pmc": "PMC10025070",
+    "status": 500
+   },
+   {
+    "pmc": "PMC3014244",
+    "status": 500
+   },
+   {
+    "pmc": "PMC2982730",
+    "status": 500
+   },
+   {
+    "pmc": "PMC1370968",
+    "status": 500
+   },
+   {
+    "pmc": "PMC1490287",
+    "status": 500
+   }
+  ]
+ },
+ "manifest": "data/bench/sol/q1_stichprobe_20261108.json",
+ "retry": [
+  {
+   "pmc": "PMC8181734",
+   "status": 500,
+   "ok": false
+  },
+  {
+   "pmc": "PMC8094738",
+   "status": 500,
+   "ok": false
+  },
+  {
+   "pmc": "PMC6535156",
+   "status": 500,
+   "ok": false
+  },
+  {
+   "pmc": "PMC4734949",
+   "status": 500,
+   "ok": false
+  },
+  {
+   "pmc": "PMC4425994",
+   "status": 500,
+   "ok": false
+  },
+  {
+   "pmc": "PMC10025070",
+   "status": 500,
+   "ok": false
+  },
+  {
+   "pmc": "PMC3014244",
+   "status": 500,
+   "ok": false
+  },
+  {
+   "pmc": "PMC2982730",
+   "status": 500,
+   "ok": false
+  },
+  {
+   "pmc": "PMC1370968",
+   "status": 500,
+   "ok": false
+  },
+  {
+   "pmc": "PMC1490287",
+   "status": 500,
+   "ok": false
+  }
+ ]
+}

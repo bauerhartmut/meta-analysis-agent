@@ -154,3 +154,18 @@ und PubMed (ESearch/ESummary 429) den Lauf in den Backoff trieben. Deshalb
 bleiben Q1-Q3 auf Europe PMC, Crossref dient nur der Gegenprobe, und PubMed,
 OpenAlex und Semantic Scholar werden nicht angefragt. Die Suche kostete zuletzt
 566 Tokens je Aufruf - die drei Abfragen sind kostenmaessig unerheblich.
+
+## 11. Ergebnis Lauf 1 (08.11.2026)
+
+Freigegeben und ausgefuehrt; vollstaendiger Befund in
+`data/bench/sol/q1_befund_20261108.md`.
+
+- `ABSTRACT` ist belegt (35.707 Treffer gegen 90.220 freie Suche).
+- Q1: 235 Treffer; Stichprobe 33 neue Dokumente (25 aus Q1, 8 aus Q2, nicht 40),
+davon 23 ladbar, 10 mit HTTP 500.
+- **0 lesbare SOL-Zeilen.** Der einzige Kandidat ("Sleep latency (min) by WA")
+steht in Tabelle 1 "Baseline demographics" mit "mean +- SE" - ein
+Baseline-Vergleich, kein Behandlungseffekt.
+- A1 (0 < 2), A2 (53 % ohne PMCID) und A3 (0 < 3) sind erfuellt: **kein zweiter
+Lauf**. Die Vorhersage (mindestens 4 von 40) ist widerlegt, der Bericht bleibt
+bei 13 SOL-Zeilen aus 7 Quellen, k = 1.

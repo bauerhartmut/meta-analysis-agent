@@ -1,0 +1,810 @@
+{
+  "generated": "2026-11-07T21:20:15",
+  "documents": [
+    {
+      "doi": "10.3389/frsle.2026.1879110",
+      "pmc": "PMC13625438",
+      "table_rows": 51,
+      "aligned_rows": 46,
+      "model_tables": 0,
+      "model_rows": 0,
+      "candidates": 0,
+      "stored": 0,
+      "rejected": 0,
+      "kinds": {},
+      "reasons": {
+        "keine Effektspalte im Kopf": 46,
+        "Kopfzeile (7 Spalten) passt nicht zur Zeile (5 Zellen) - colspan nicht aufloesbar": 5
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.3389/fnut.2026.1892442",
+      "pmc": "PMC13454318",
+      "table_rows": 92,
+      "aligned_rows": 77,
+      "model_tables": 0,
+      "model_rows": 0,
+      "candidates": 0,
+      "stored": 0,
+      "rejected": 0,
+      "kinds": {},
+      "reasons": {
+        "keine Effektspalte im Kopf": 77,
+        "Kopfzeile (4 Spalten) passt nicht zur Zeile (1 Zellen) - colspan nicht aufloesbar": 7,
+        "Kopfzeile (4 Spalten) passt nicht zur Zeile (3 Zellen) - colspan nicht aufloesbar": 4,
+        "Kopfzeile (6 Spalten) passt nicht zur Zeile (1 Zellen) - colspan nicht aufloesbar": 4
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.3389/fphar.2026.1839440",
+      "pmc": "PMC13373100",
+      "table_rows": 51,
+      "aligned_rows": 24,
+      "model_tables": 0,
+      "model_rows": 0,
+      "candidates": 0,
+      "stored": 0,
+      "rejected": 0,
+      "kinds": {},
+      "reasons": {
+        "keine Effektspalte im Kopf": 24,
+        "Kopfzeile (5 Spalten) passt nicht zur Zeile (4 Zellen) - colspan nicht aufloesbar": 13,
+        "Kopfzeile (4 Spalten) passt nicht zur Zeile (1 Zellen) - colspan nicht aufloesbar": 8,
+        "Kopfzeile (4 Spalten) passt nicht zur Zeile (3 Zellen) - colspan nicht aufloesbar": 5,
+        "Kopfzeile (4 Spalten) passt nicht zur Zeile (2 Zellen) - colspan nicht aufloesbar": 1
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.3389/fnut.2026.1766495",
+      "pmc": "PMC13095836",
+      "table_rows": 60,
+      "aligned_rows": 60,
+      "model_tables": 0,
+      "model_rows": 0,
+      "candidates": 28,
+      "stored": 28,
+      "rejected": 0,
+      "kinds": {
+        "beta": 28
+      },
+      "reasons": {
+        "keine Effektspalte im Kopf": 50
+      },
+      "effects": [
+        {
+          "outcome": "Sleep duration (min)",
+          "effect_type": "beta",
+          "effect": 2.13,
+          "se": 0.137758,
+          "ci": [
+            1.86,
+            2.4
+          ],
+          "ci_level": 0.95,
+          "adjusted": 0,
+          "column": "Crude β (95% CI)",
+          "quote": "|Sleep duration (min)|2.13 (1.86, 2.40)|−0.04 (−0.27, 0.20)|−0.14 (−0.27, −0.01)|0.039|No|Exploratory"
+        },
+        {
+          "outcome": "Sleep duration (min)",
+          "effect_type": "beta",
+          "effect": -0.04,
+          "se": 0.1199,
+          "ci": [
+            -0.27,
+            0.2
+          ],
+          "ci_level": 0.95,
+          "adjusted": 0,
+          "column": "Model 1 β (95% CI)",
+          "quote": "|Sleep duration (min)|2.13 (1.86, 2.40)|−0.04 (−0.27, 0.20)|−0.14 (−0.27, −0.01)|0.039|No|Exploratory"
+        },
+        {
+          "outcome": "Sleep duration (min)",
+          "effect_type": "beta",
+          "effect": -0.14,
+          "se": 0.066328,
+          "ci": [
+            -0.27,
+            -0.01
+          ],
+          "ci_level": 0.95,
+          "adjusted": 0,
+          "column": "Model 2 β (95% CI)",
+          "quote": "|Sleep duration (min)|2.13 (1.86, 2.40)|−0.04 (−0.27, 0.20)|−0.14 (−0.27, −0.01)|0.039|No|Exploratory"
+        },
+        {
+          "outcome": "Sleep efficiency (%)",
+          "effect_type": "beta",
+          "effect": 0.46,
+          "se": 0.020409,
+          "ci": [
+            0.42,
+            0.5
+          ],
+          "ci_level": 0.95,
+          "adjusted": 0,
+          "column": "Crude β (95% CI)",
+          "quote": "|Sleep efficiency (%)|0.46 (0.42, 0.50)|0.07 (0.04, 0.10)|0.038 (0.022, 0.054)|<0.001|Yes|Primary finding"
+        },
+        {
+          "outcome": "Sleep efficiency (%)",
+          "effect_type": "beta",
+          "effect": 0.07,
+          "se": 0.015306,
+          "ci": [
+            0.04,
+            0.1
+          ],
+          "ci_level": 0.95,
+          "adjusted": 0,
+          "column": "Model 1 β (95% CI)",
+          "quote": "|Sleep efficiency (%)|0.46 (0.42, 0.50)|0.07 (0.04, 0.10)|0.038 (0.022, 0.054)|<0.001|Yes|Primary finding"
+        },
+        {
+          "outcome": "Sleep efficiency (%)",
+          "effect_type": "beta",
+          "effect": 0.038,
+          "se": 0.008163,
+          "ci": [
+            0.022,
+            0.054
+          ],
+          "ci_level": 0.95,
+          "adjusted": 0,
+          "column": "Model 2 β (95% CI)",
+          "quote": "|Sleep efficiency (%)|0.46 (0.42, 0.50)|0.07 (0.04, 0.10)|0.038 (0.022, 0.054)|<0.001|Yes|Primary finding"
+        },
+        {
+          "outcome": "PSQI (global score)",
+          "effect_type": "beta",
+          "effect": -0.079,
+          "se": 0.005102,
+          "ci": [
+            -0.089,
+            -0.069
+          ],
+          "ci_level": 0.95,
+          "adjusted": 0,
+          "column": "Crude β (95% CI)",
+          "quote": "|PSQI (global score)|−0.079 (−0.089, −0.069)|0.016 (0.010, 0.022)|0.022 (0.017, 0.027)|<0.001|Yes|Primary finding"
+        },
+        {
+          "outcome": "PSQI (global score)",
+          "effect_type": "beta",
+          "effect": 0.016,
+          "se": 0.003061,
+          "ci": [
+            0.01,
+            0.022
+          ],
+          "ci_level": 0.95,
+          "adjusted": 0,
+          "column": "Model 1 β (95% CI)",
+          "quote": "|PSQI (global score)|−0.079 (−0.089, −0.069)|0.016 (0.010, 0.022)|0.022 (0.017, 0.027)|<0.001|Yes|Primary finding"
+        },
+        {
+          "outcome": "PSQI (global score)",
+          "effect_type": "beta",
+          "effect": 0.022,
+          "se": 0.002551,
+          "ci": [
+            0.017,
+            0.027
+          ],
+          "ci_level": 0.95,
+          "adjusted": 0,
+          "column": "Model 2 β (95% CI)",
+          "quote": "|PSQI (global score)|−0.079 (−0.089, −0.069)|0.016 (0.010, 0.022)|0.022 (0.017, 0.027)|<0.001|Yes|Primary finding"
+        },
+        {
+          "outcome": "WASO (min)",
+          "effect_type": "beta",
+          "effect": -0.46,
+          "se": 0.030613,
+          "ci": [
+            -0.52,
+            -0.4
+          ],
+          "ci_level": 0.95,
+          "adjusted": 0,
+          "column": "Crude β (95% CI)",
+          "quote": "|WASO (min)|−0.46 (−0.52, −0.40)|0.059 (0.022, 0.096)|0.083 (0.065, 0.102)|<0.001|Yes|Primary finding"
+        },
+        {
+          "outcome": "WASO (min)",
+          "effect_type": "beta",
+          "effect": 0.059,
+          "se": 0.018878,
+          "ci": [
+            0.022,
+            0.096
+          ],
+          "ci_level": 0.95,
+          "adjusted": 0,
+          "column": "Model 1 β (95% CI)",
+          "quote": "|WASO (min)|−0.46 (−0.52, −0.40)|0.059 (0.022, 0.096)|0.083 (0.065, 0.102)|<0.001|Yes|Primary finding"
+        },
+        {
+          "outcome": "WASO (min)",
+          "effect_type": "beta",
+          "effect": 0.083,
+          "se": 0.009439,
+          "ci": [
+            0.065,
+            0.102
+          ],
+          "ci_level": 0.95,
+          "adjusted": 0,
+          "column": "Model 2 β (95% CI)",
+          "quote": "|WASO (min)|−0.46 (−0.52, −0.40)|0.059 (0.022, 0.096)|0.083 (0.065, 0.102)|<0.001|Yes|Primary finding"
+        },
+        {
+          "outcome": "CRP (mg/L)",
+          "effect_type": "beta",
+          "effect": -0.059,
+          "se": 0.002806,
+          "ci": [
+            -0.065,
+            -0.054
+          ],
+          "ci_level": 0.95,
+          "adjusted": 0,
+          "column": "Crude β (95% CI)",
+          "quote": "|CRP (mg/L)|−0.059 (−0.065, −0.054)|−0.003 (−0.006, 0.000)|0.002 (0.00, 0.004)|0.027|No|Exploratory"
+        },
+        {
+          "outcome": "CRP (mg/L)",
+          "effect_type": "beta",
+          "effect": -0.003,
+          "se": 0.001531,
+          "ci": [
+            -0.006,
+            0.0
+          ],
+          "ci_level": 0.95,
+          "adjusted": 0,
+          "column": "Model 1 β (95% CI)",
+          "quote": "|CRP (mg/L)|−0.059 (−0.065, −0.054)|−0.003 (−0.006, 0.000)|0.002 (0.00, 0.004)|0.027|No|Exploratory"
+        },
+        {
+          "outcome": "CRP (mg/L)",
+          "effect_type": "beta",
+          "effect": 0.002,
+          "se": 0.00102,
+          "ci": [
+            0.0,
+            0.004
+          ],
+          "ci_level": 0.95,
+          "adjusted": 0,
+          "column": "Model 2 β (95% CI)",
+          "quote": "|CRP (mg/L)|−0.059 (−0.065, −0.054)|−0.003 (−0.006, 0.000)|0.002 (0.00, 0.004)|0.027|No|Exploratory"
+        },
+        {
+          "outcome": "IL-6 (pg./mL)",
+          "effect_type": "beta",
+          "effect": -0.063,
+          "se": 0.003316,
+          "ci": [
+            -0.07,
+            -0.057
+          ],
+          "ci_level": 0.95,
+          "adjusted": 0,
+          "column": "Crude β (95% CI)",
+          "quote": "|IL-6 (pg./mL)|−0.063 (−0.070, −0.057)|−0.004 (−0.008, 0.000)|0.002 (0.00, 0.004)|0.014|No|Exploratory"
+        },
+        {
+          "outcome": "IL-6 (pg./mL)",
+          "effect_type": "beta",
+          "effect": -0.004,
+          "se": 0.002041,
+          "ci": [
+            -0.008,
+            0.0
+          ],
+          "ci_level": 0.95,
+          "adjusted": 0,
+          "column": "Model 1 β (95% CI)",
+          "quote": "|IL-6 (pg./mL)|−0.063 (−0.070, −0.057)|−0.004 (−0.008, 0.000)|0.002 (0.00, 0.004)|0.014|No|Exploratory"
+        },
+        {
+          "outcome": "IL-6 (pg./mL)",
+          "effect_type": "beta",
+          "effect": 0.002,
+          "se": 0.00102,
+          "ci": [
+            0.0,
+            0.004
+          ],
+          "ci_level": 0.95,
+          "adjusted": 0,
+          "column": "Model 2 β (95% CI)",
+          "quote": "|IL-6 (pg./mL)|−0.063 (−0.070, −0.057)|−0.004 (−0.008, 0.000)|0.002 (0.00, 0.004)|0.014|No|Exploratory"
+        },
+        {
+          "outcome": "LPS (EU/mL)",
+          "effect_type": "beta",
+          "effect": 0.0018,
+          "se": 0.001276,
+          "ci": [
+            -0.001,
+            0.004
+          ],
+          "ci_level": 0.95,
+          "adjusted": 0,
+          "column": "Model 2 β (95% CI)",
+          "quote": "|LPS (EU/mL)|−0.0084 (−0.092, −0.076)|−0.055 (−0.010, −0.001)|0.0018 (−0.001, 0.004)|0.141 (ns)|No|Not significant"
+        },
+        {
+          "outcome": "Zonulin (ng/mL)",
+          "effect_type": "beta",
+          "effect": -1.03,
+          "se": 0.051021,
+          "ci": [
+            -1.13,
+            -0.93
+          ],
+          "ci_level": 0.95,
+          "adjusted": 0,
+          "column": "Crude β (95% CI)",
+          "quote": "|Zonulin (ng/mL)|−1.03 (−1.13, −0.93)|−0.091 (−0.144, −0.038)|−0.032 (−0.078, 0.015)|0.185 (ns in Model 2)|No|Not significant"
+        },
+        {
+          "outcome": "Zonulin (ng/mL)",
+          "effect_type": "beta",
+          "effect": -0.091,
+          "se": 0.027041,
+          "ci": [
+            -0.144,
+            -0.038
+          ],
+          "ci_level": 0.95,
+          "adjusted": 0,
+          "column": "Model 1 β (95% CI)",
+          "quote": "|Zonulin (ng/mL)|−1.03 (−1.13, −0.93)|−0.091 (−0.144, −0.038)|−0.032 (−0.078, 0.015)|0.185 (ns in Model 2)|No|Not significant"
+        },
+        {
+          "outcome": "Zonulin (ng/mL)",
+          "effect_type": "beta",
+          "effect": -0.032,
+          "se": 0.023725,
+          "ci": [
+            -0.078,
+            0.015
+          ],
+          "ci_level": 0.95,
+          "adjusted": 0,
+          "column": "Model 2 β (95% CI)",
+          "quote": "|Zonulin (ng/mL)|−1.03 (−1.13, −0.93)|−0.091 (−0.144, −0.038)|−0.032 (−0.078, 0.015)|0.185 (ns in Model 2)|No|Not significant"
+        },
+        {
+          "outcome": "Cortisol (nmol/L)",
+          "effect_type": "beta",
+          "effect": -2.06,
+          "se": 0.096941,
+          "ci": [
+            -2.25,
+            -1.87
+          ],
+          "ci_level": 0.95,
+          "adjusted": 0,
+          "column": "Crude β (95% CI)",
+          "quote": "|Cortisol (nmol/L)|−2.06 (−2.25, −1.87)|−0.26 (−0.36, −0.15)|−0.071 (−0.156, 0.013)|0.099 (ns in Model 2)|No|Not significant"
+        },
+        {
+          "outcome": "Cortisol (nmol/L)",
+          "effect_type": "beta",
+          "effect": -0.26,
+          "se": 0.053572,
+          "ci": [
+            -0.36,
+            -0.15
+          ],
+          "ci_level": 0.95,
+          "adjusted": 0,
+          "column": "Model 1 β (95% CI)",
+          "quote": "|Cortisol (nmol/L)|−2.06 (−2.25, −1.87)|−0.26 (−0.36, −0.15)|−0.071 (−0.156, 0.013)|0.099 (ns in Model 2)|No|Not significant"
+        },
+        {
+          "outcome": "Cortisol (nmol/L)",
+          "effect_type": "beta",
+          "effect": -0.071,
+          "se": 0.043113,
+          "ci": [
+            -0.156,
+            0.013
+          ],
+          "ci_level": 0.95,
+          "adjusted": 0,
+          "column": "Model 2 β (95% CI)",
+          "quote": "|Cortisol (nmol/L)|−2.06 (−2.25, −1.87)|−0.26 (−0.36, −0.15)|−0.071 (−0.156, 0.013)|0.099 (ns in Model 2)|No|Not significant"
+        },
+        {
+          "outcome": "Melatonin (pg./mL)",
+          "effect_type": "beta",
+          "effect": 0.59,
+          "se": 0.030613,
+          "ci": [
+            0.53,
+            0.65
+          ],
+          "ci_level": 0.95,
+          "adjusted": 0,
+          "column": "Crude β (95% CI)",
+          "quote": "|Melatonin (pg./mL)|0.59 (0.53, 0.65)|0.050 (0.002, 0.098)|−0.011 (−0.038, 0.016)|0.434 (ns)|No|Not significant"
+        },
+        {
+          "outcome": "Melatonin (pg./mL)",
+          "effect_type": "beta",
+          "effect": 0.05,
+          "se": 0.02449,
+          "ci": [
+            0.002,
+            0.098
+          ],
+          "ci_level": 0.95,
+          "adjusted": 0,
+          "column": "Model 1 β (95% CI)",
+          "quote": "|Melatonin (pg./mL)|0.59 (0.53, 0.65)|0.050 (0.002, 0.098)|−0.011 (−0.038, 0.016)|0.434 (ns)|No|Not significant"
+        },
+        {
+          "outcome": "Melatonin (pg./mL)",
+          "effect_type": "beta",
+          "effect": -0.011,
+          "se": 0.013776,
+          "ci": [
+            -0.038,
+            0.016
+          ],
+          "ci_level": 0.95,
+          "adjusted": 0,
+          "column": "Model 2 β (95% CI)",
+          "quote": "|Melatonin (pg./mL)|0.59 (0.53, 0.65)|0.050 (0.002, 0.098)|−0.011 (−0.038, 0.016)|0.434 (ns)|No|Not significant"
+        }
+      ]
+    },
+    {
+      "doi": "10.1007/s10072-025-08221-8",
+      "pmc": "PMC12394315",
+      "table_rows": 15,
+      "aligned_rows": 10,
+      "model_tables": 0,
+      "model_rows": 0,
+      "candidates": 0,
+      "stored": 0,
+      "rejected": 0,
+      "kinds": {},
+      "reasons": {
+        "keine Effektspalte im Kopf": 10,
+        "Kopfzeile (17 Spalten) passt nicht zur Zeile (15 Zellen) - colspan nicht aufloesbar": 2,
+        "Kopfzeile (17 Spalten) passt nicht zur Zeile (16 Zellen) - colspan nicht aufloesbar": 2,
+        "Kopfzeile (17 Spalten) passt nicht zur Zeile (13 Zellen) - colspan nicht aufloesbar": 1
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.1097/aln.0000000000005314",
+      "pmc": "PMC11801451",
+      "table_rows": 24,
+      "aligned_rows": 16,
+      "model_tables": 0,
+      "model_rows": 0,
+      "candidates": 0,
+      "stored": 0,
+      "rejected": 0,
+      "kinds": {},
+      "reasons": {
+        "keine Effektspalte im Kopf": 16,
+        "Kopfzeile (7 Spalten) passt nicht zur Zeile (1 Zellen) - colspan nicht aufloesbar": 8
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.1371/journal.pone.0332366",
+      "pmc": "PMC12449008",
+      "table_rows": 53,
+      "aligned_rows": 32,
+      "model_tables": 0,
+      "model_rows": 0,
+      "candidates": 0,
+      "stored": 0,
+      "rejected": 0,
+      "kinds": {},
+      "reasons": {
+        "keine Effektspalte im Kopf": 32,
+        "Kopfzeile (4 Spalten) passt nicht zur Zeile (3 Zellen) - colspan nicht aufloesbar": 9,
+        "Kopfzeile (4 Spalten) passt nicht zur Zeile (1 Zellen) - colspan nicht aufloesbar": 7,
+        "Kopfzeile (6 Spalten) passt nicht zur Zeile (5 Zellen) - colspan nicht aufloesbar": 5
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.1371/journal.pone.0321635",
+      "pmc": "PMC12002473",
+      "table_rows": 28,
+      "aligned_rows": 19,
+      "model_tables": 0,
+      "model_rows": 0,
+      "candidates": 0,
+      "stored": 0,
+      "rejected": 0,
+      "kinds": {},
+      "reasons": {
+        "keine Effektspalte im Kopf": 19,
+        "Kopfzeile (8 Spalten) passt nicht zur Zeile (7 Zellen) - colspan nicht aufloesbar": 9
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.1186/s40780-024-00347-9",
+      "pmc": "PMC11137944",
+      "table_rows": 37,
+      "aligned_rows": 17,
+      "model_tables": 0,
+      "model_rows": 0,
+      "candidates": 0,
+      "stored": 0,
+      "rejected": 0,
+      "kinds": {},
+      "reasons": {
+        "Kopfzeile (6 Spalten) passt nicht zur Zeile (4 Zellen) - colspan nicht aufloesbar": 18,
+        "keine Effektspalte im Kopf": 9,
+        "Effektspalte ohne lesbares Intervall": 8,
+        "Kopfzeile (6 Spalten) passt nicht zur Zeile (5 Zellen) - colspan nicht aufloesbar": 2
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.3390/nu16101523",
+      "pmc": "PMC11123999",
+      "table_rows": 79,
+      "aligned_rows": 52,
+      "model_tables": 0,
+      "model_rows": 0,
+      "candidates": 0,
+      "stored": 0,
+      "rejected": 0,
+      "kinds": {},
+      "reasons": {
+        "keine Effektspalte im Kopf": 52,
+        "Kopfzeile (8 Spalten) passt nicht zur Zeile (7 Zellen) - colspan nicht aufloesbar": 25,
+        "Kopfzeile (5 Spalten) passt nicht zur Zeile (4 Zellen) - colspan nicht aufloesbar": 2
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.1007/s12325-023-02708-6",
+      "pmc": "PMC10796483",
+      "table_rows": 18,
+      "aligned_rows": 11,
+      "model_tables": 0,
+      "model_rows": 0,
+      "candidates": 0,
+      "stored": 0,
+      "rejected": 0,
+      "kinds": {},
+      "reasons": {
+        "keine Effektspalte im Kopf": 11,
+        "keine Kopfzeile": 7
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.1186/s12876-023-02760-0",
+      "pmc": "PMC10131443",
+      "table_rows": 145,
+      "aligned_rows": 20,
+      "model_tables": 0,
+      "model_rows": 0,
+      "candidates": 0,
+      "stored": 0,
+      "rejected": 0,
+      "kinds": {},
+      "reasons": {
+        "Kopfzeile (7 Spalten) passt nicht zur Zeile (5 Zellen) - colspan nicht aufloesbar": 103,
+        "keine Effektspalte im Kopf": 20,
+        "Kopfzeile (7 Spalten) passt nicht zur Zeile (6 Zellen) - colspan nicht aufloesbar": 15,
+        "Kopfzeile (7 Spalten) passt nicht zur Zeile (1 Zellen) - colspan nicht aufloesbar": 3,
+        "Kopfzeile (7 Spalten) passt nicht zur Zeile (3 Zellen) - colspan nicht aufloesbar": 3,
+        "Kopfzeile (7 Spalten) passt nicht zur Zeile (4 Zellen) - colspan nicht aufloesbar": 1
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.3389/fnut.2023.1152680",
+      "pmc": "PMC10149792",
+      "table_rows": 44,
+      "aligned_rows": 21,
+      "model_tables": 0,
+      "model_rows": 0,
+      "candidates": 0,
+      "stored": 0,
+      "rejected": 0,
+      "kinds": {},
+      "reasons": {
+        "keine Effektspalte im Kopf": 21,
+        "Kopfzeile (4 Spalten) passt nicht zur Zeile (3 Zellen) - colspan nicht aufloesbar": 7,
+        "Kopfzeile (6 Spalten) passt nicht zur Zeile (3 Zellen) - colspan nicht aufloesbar": 6,
+        "Kopfzeile (5 Spalten) passt nicht zur Zeile (3 Zellen) - colspan nicht aufloesbar": 6,
+        "keine Kopfzeile": 2,
+        "Kopfzeile (6 Spalten) passt nicht zur Zeile (4 Zellen) - colspan nicht aufloesbar": 2
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.5812/ijpr-128817",
+      "pmc": "PMC10024317",
+      "table_rows": 63,
+      "aligned_rows": 63,
+      "model_tables": 0,
+      "model_rows": 0,
+      "candidates": 0,
+      "stored": 0,
+      "rejected": 0,
+      "kinds": {},
+      "reasons": {
+        "keine Effektspalte im Kopf": 63
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.3390/ijerph20010552",
+      "pmc": "PMC9819026",
+      "table_rows": 0,
+      "aligned_rows": 0,
+      "model_tables": 0,
+      "model_rows": 0,
+      "candidates": 0,
+      "stored": 0,
+      "rejected": 0,
+      "kinds": {},
+      "reasons": {},
+      "effects": []
+    },
+    {
+      "doi": "10.3390/jcm11175138",
+      "pmc": "PMC9456584",
+      "table_rows": 56,
+      "aligned_rows": 54,
+      "model_tables": 0,
+      "model_rows": 0,
+      "candidates": 0,
+      "stored": 0,
+      "rejected": 0,
+      "kinds": {},
+      "reasons": {
+        "keine Effektspalte im Kopf": 54,
+        "Kopfzeile (8 Spalten) passt nicht zur Zeile (1 Zellen) - colspan nicht aufloesbar": 2
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.2147/nss.s381918",
+      "pmc": "PMC9519126",
+      "table_rows": 10,
+      "aligned_rows": 10,
+      "model_tables": 0,
+      "model_rows": 0,
+      "candidates": 0,
+      "stored": 0,
+      "rejected": 0,
+      "kinds": {},
+      "reasons": {
+        "keine Effektspalte im Kopf": 10
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.5935/1984-0063.20200083",
+      "pmc": "PMC8663735",
+      "table_rows": 2,
+      "aligned_rows": 2,
+      "model_tables": 0,
+      "model_rows": 0,
+      "candidates": 0,
+      "stored": 0,
+      "rejected": 0,
+      "kinds": {},
+      "reasons": {
+        "keine Effektspalte im Kopf": 2
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.1155/2020/3626120",
+      "pmc": "PMC7647758",
+      "table_rows": 22,
+      "aligned_rows": 22,
+      "model_tables": 0,
+      "model_rows": 0,
+      "candidates": 0,
+      "stored": 0,
+      "rejected": 0,
+      "kinds": {},
+      "reasons": {
+        "keine Effektspalte im Kopf": 22
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.1089/cap.2018.0020",
+      "pmc": "PMC6306655",
+      "table_rows": 58,
+      "aligned_rows": 52,
+      "model_tables": 0,
+      "model_rows": 0,
+      "candidates": 0,
+      "stored": 0,
+      "rejected": 0,
+      "kinds": {},
+      "reasons": {
+        "keine Effektspalte im Kopf": 52,
+        "Kopfzeile (4 Spalten) passt nicht zur Zeile (1 Zellen) - colspan nicht aufloesbar": 6
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.4103/ijp.ijp_250_18",
+      "pmc": "PMC6302692",
+      "table_rows": 0,
+      "aligned_rows": 0,
+      "model_tables": 0,
+      "model_rows": 0,
+      "candidates": 0,
+      "stored": 0,
+      "rejected": 0,
+      "kinds": {},
+      "reasons": {},
+      "effects": []
+    },
+    {
+      "doi": "",
+      "pmc": "PMC5958333",
+      "table_rows": 44,
+      "aligned_rows": 28,
+      "model_tables": 0,
+      "model_rows": 0,
+      "candidates": 0,
+      "stored": 0,
+      "rejected": 0,
+      "kinds": {},
+      "reasons": {
+        "keine Effektspalte im Kopf": 28,
+        "Kopfzeile (5 Spalten) passt nicht zur Zeile (4 Zellen) - colspan nicht aufloesbar": 16
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.2147/nss.s71838",
+      "pmc": "PMC4319556",
+      "table_rows": 15,
+      "aligned_rows": 15,
+      "model_tables": 0,
+      "model_rows": 0,
+      "candidates": 0,
+      "stored": 0,
+      "rejected": 0,
+      "kinds": {},
+      "reasons": {
+        "keine Effektspalte im Kopf": 15
+      },
+      "effects": []
+    }
+  ],
+  "totals": {
+    "table_rows": 967,
+    "aligned_rows": 651,
+    "model_tables": 0,
+    "model_rows": 0,
+    "candidates": 28,
+    "stored": 28,
+    "rejected": 0,
+    "missing_xml": 0
+  },
+  "missing_xml": []
+}
