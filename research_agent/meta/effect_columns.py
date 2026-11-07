@@ -53,10 +53,32 @@ _WORDS = {
     "hr": re.compile(r"hazard\s+ratio", re.IGNORECASE),
     "irr": re.compile(r"incidence\s+rate\s+ratio", re.IGNORECASE),
 }
-_G = re.compile(r"hedges\W{0,3}s?\s*g\b|cohen\W{0,3}s\s*d\b"
-                r"|effect\s+size|\bg\s*\(\s*9\d\s*%", re.IGNORECASE)
-_SMD = re.compile(r"\bsmd\b|standard(?:ized|ised)\s+mean\s+(?:difference|contrast)",
-                  re.IGNORECASE)
+# "Effect size" allein nennt keine Skala: In Schlafstudien steht darunter die
+# Minutendifferenz (45.013 (2.891, 87.136)), in anderen die standardisierte
+# Differenz. Nur wenn das Skalenwort dabei steht, ist der Typ belegbar.
+_G = re.compile(r"hedges\W{0,3}s?\s*g\b|cohen\W{0,3}s\s*d\b|\bg\s*\(\s*9\d\s*%",
+                re.IGNORECASE)
+_SMD = re.compile(r"\bsmd\b|standard(?:ized|ised)\s+(?:mean\s+(?:difference|contrast)"
+                  r"|effect\s+size)", re.IGNORECASE)
+# Gepoolte oder meta-analytische Schaetzungen sind keine Studienzeile. Sie in
+# eine Gruppe zu legen, zaehlt dieselben Studien doppelt.
+_POOLED = re.compile(
+    r"pooled|leave[\s-]?one[\s-]?out|meta[\s-]?analy|random[\s-]?effects"
+    r"|overall\s+(?:effect|estimate)|summary\s+(?:effect|estimate)",
+    re.IGNORECASE)
+# Eine Zeile "(Intercept)" beweist eine Regressions- oder Modelltabelle: die
+# uebrigen Zeilen sind dann Praediktoren (Age, Sex, Ethnicity), keine Effekte.
+_MODEL_ROW = re.compile(r"^\(?\s*intercept\s*\)?$|^constant$|^_cons$", re.IGNORECASE)
+
+
+def is_model_table(rows) -> bool:
+    """True, wenn eine Tabellenzeile ein Intercept ist (Modelltabelle)."""
+    for row in rows:
+        cells = getattr(row, "cells", row)
+        cells = list(cells or [])
+        if cells and _MODEL_ROW.match(str(cells[0] or "").strip()):
+            return True
+    return False
 # Rohskalige Differenz, wie Schlaf- und Schmerzstudien sie berichten:
 # "Mean difference (95% CI)", "Difference in means", "MD (95% CI)".
 # "Baseline difference" ist keine Behandlungswirkung und bleibt aussen vor.
@@ -103,6 +125,8 @@ def header_effect_kind(header_cell: str) -> Tuple[str, float, bool]:
         elif _BETA.search(text):
             kind = "beta"
     if not kind:
+        return "", 0.0, False
+    if _POOLED.search(text):
         return "", 0.0, False
     match = _LEVEL.search(text)
     level = 0.95
@@ -214,10 +238,16 @@ def effects_from_row(header: Sequence[str], cells: Sequence[str],
     if len(header) != len(cells):
         return [], (f"Kopfzeile ({len(header)} Spalten) passt nicht zur Zeile "
                     f"({len(cells)} Zellen) - colspan nicht aufloesbar")
+    if _MODEL_ROW.match(str(cells[0] or "").strip()):
+        return [], "Modelltabelle (Intercept-Zeile), keine Behandlungseffekte"
     outcome = _outcome_label(cells, caption)
     found: List[Dict] = []
     saw_effect_column = False
+    saw_pooled = False
     for index, head in enumerate(header):
+        if _POOLED.search(str(head or "")):
+            saw_pooled = True
+            continue
         kind, level, adjusted = header_effect_kind(head)
         if not kind:
             continue
@@ -235,6 +265,8 @@ def effects_from_row(header: Sequence[str], cells: Sequence[str],
             comparison=str(head).strip(),
         ).to_dict())
     if not found:
+        if saw_pooled:
+            return [], "gepoolte Schaetzung (Metaanalyse), keine Studienzeile"
         if saw_effect_column:
             return [], "Effektspalte ohne lesbares Intervall"
         return [], "keine Effektspalte im Kopf"

@@ -1,0 +1,417 @@
+{
+  "rows_total": 15,
+  "adjusted_rows": 0,
+  "crude_rows": 15,
+  "deduped_rows": 15,
+  "dropped_duplicates": 0,
+  "variant_all": {
+    "usable": 15,
+    "groups": [
+      {
+        "group": "% Stage N1 [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1001/jamanetworkopen.2026.26983"
+        ]
+      },
+      {
+        "group": "% Stage N2 [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1001/jamanetworkopen.2026.26983"
+        ]
+      },
+      {
+        "group": "% Stage N3 [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1001/jamanetworkopen.2026.26983"
+        ]
+      },
+      {
+        "group": "% Stage REM (primary) [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1001/jamanetworkopen.2026.26983"
+        ]
+      },
+      {
+        "group": "AHI, events/h [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1001/jamanetworkopen.2026.26983"
+        ]
+      },
+      {
+        "group": "Arousal index, events/h [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1001/jamanetworkopen.2026.26983"
+        ]
+      },
+      {
+        "group": "Central apnea index, events/h [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1001/jamanetworkopen.2026.26983"
+        ]
+      },
+      {
+        "group": "O 2 desaturation index, events/h [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1001/jamanetworkopen.2026.26983"
+        ]
+      },
+      {
+        "group": "Obstructive AHI, events/h [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1001/jamanetworkopen.2026.26983"
+        ]
+      },
+      {
+        "group": "PLMS index, events/h [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1001/jamanetworkopen.2026.26983"
+        ]
+      },
+      {
+        "group": "REM latency, min [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1001/jamanetworkopen.2026.26983"
+        ]
+      },
+      {
+        "group": "Sleep efficiency, % [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1001/jamanetworkopen.2026.26983"
+        ]
+      },
+      {
+        "group": "Sleep onset latency, min [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1001/jamanetworkopen.2026.26983"
+        ]
+      },
+      {
+        "group": "Total sleep time, min [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1001/jamanetworkopen.2026.26983"
+        ]
+      },
+      {
+        "group": "WASO, min [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1001/jamanetworkopen.2026.26983"
+        ]
+      }
+    ],
+    "k_distribution": {
+      "1": 15
+    },
+    "groups_k_ge_2": 0,
+    "excluded": []
+  },
+  "variant_deduped": {
+    "usable": 15,
+    "groups": [
+      {
+        "group": "% Stage N1 [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1001/jamanetworkopen.2026.26983"
+        ]
+      },
+      {
+        "group": "% Stage N2 [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1001/jamanetworkopen.2026.26983"
+        ]
+      },
+      {
+        "group": "% Stage N3 [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1001/jamanetworkopen.2026.26983"
+        ]
+      },
+      {
+        "group": "% Stage REM (primary) [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1001/jamanetworkopen.2026.26983"
+        ]
+      },
+      {
+        "group": "AHI, events/h [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1001/jamanetworkopen.2026.26983"
+        ]
+      },
+      {
+        "group": "Arousal index, events/h [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1001/jamanetworkopen.2026.26983"
+        ]
+      },
+      {
+        "group": "Central apnea index, events/h [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1001/jamanetworkopen.2026.26983"
+        ]
+      },
+      {
+        "group": "O 2 desaturation index, events/h [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1001/jamanetworkopen.2026.26983"
+        ]
+      },
+      {
+        "group": "Obstructive AHI, events/h [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1001/jamanetworkopen.2026.26983"
+        ]
+      },
+      {
+        "group": "PLMS index, events/h [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1001/jamanetworkopen.2026.26983"
+        ]
+      },
+      {
+        "group": "REM latency, min [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1001/jamanetworkopen.2026.26983"
+        ]
+      },
+      {
+        "group": "Sleep efficiency, % [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1001/jamanetworkopen.2026.26983"
+        ]
+      },
+      {
+        "group": "Sleep onset latency, min [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1001/jamanetworkopen.2026.26983"
+        ]
+      },
+      {
+        "group": "Total sleep time, min [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1001/jamanetworkopen.2026.26983"
+        ]
+      },
+      {
+        "group": "WASO, min [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1001/jamanetworkopen.2026.26983"
+        ]
+      }
+    ],
+    "k_distribution": {
+      "1": 15
+    },
+    "groups_k_ge_2": 0,
+    "excluded": []
+  }
+}

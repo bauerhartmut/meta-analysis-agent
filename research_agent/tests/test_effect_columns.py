@@ -10,6 +10,7 @@ from research_agent.database import Database
 from research_agent.meta.effect_columns import (
     effects_from_row,
     header_effect_kind,
+    is_model_table,
     parse_effect_cell,
     store_direct_effects,
 )
@@ -62,6 +63,22 @@ class TestHeader(unittest.TestCase):
     def test_mean_without_difference_is_not_an_effect(self):
         self.assertEqual(header_effect_kind("Mean (SD)")[0], "")
         self.assertEqual(header_effect_kind("Mean difference")[0], "")
+
+    def test_bare_effect_size_names_no_scale(self):
+        # Unter "Effect size (95% CI)" stehen in Schlafstudien Minutendifferenzen
+        # (45.013 (2.891, 87.136)); als Hedges g waere das unmoeglich.
+        self.assertEqual(header_effect_kind("Effect size (95% CI)")[0], "")
+        self.assertEqual(header_effect_kind("Effect size (Hedges g, 95% CI)")[0], "g")
+        # Ohne Intervall gibt es keinen SE; das Skalenwort allein reicht nicht.
+        self.assertEqual(header_effect_kind("Effect size (Cohen's d, 95% CI)")[0], "g")
+        self.assertEqual(header_effect_kind("Effect size (Cohen's d)")[0], "")
+        self.assertEqual(header_effect_kind("Standardized effect size (95% CI)")[0],
+                         "smd")
+
+    def test_pooled_and_leave_one_out_are_not_study_rows(self):
+        self.assertEqual(header_effect_kind("Pooled effect (MD; 95% CI)")[0], "")
+        self.assertEqual(header_effect_kind("Leave-one-out MD range (95% CI)")[0], "")
+        self.assertEqual(header_effect_kind("Random-effects estimate (95% CI)")[0], "")
 
     def test_p_value_and_median_are_not_effects(self):
         self.assertEqual(header_effect_kind("P value")[0], "")
@@ -130,6 +147,37 @@ class TestRows(unittest.TestCase):
             ["Outcome", "OR (95% CI)"], ["x", "2.78"], quote="row")
         self.assertEqual(found, [])
         self.assertIn("Intervall", reason)
+
+
+class TestModelTable(unittest.TestCase):
+    def test_intercept_row_marks_a_model_table(self):
+        self.assertTrue(is_model_table([["(Intercept)", "0.09** [0.04, 0.22]"],
+                                        ["Age", "1.00 [0.99, 1.02]"]]))
+
+    def test_ordinary_effect_table_is_not_a_model_table(self):
+        self.assertFalse(is_model_table([["Sleep onset latency", "-0.22 (-0.32 to -0.11)"],
+                                         ["Sleep efficiency", "0.01 (-0.10 to 0.12)"]]))
+
+    def test_intercept_row_is_refused_with_its_own_reason(self):
+        found, reason = effects_from_row(
+            ["Term", "OR [95% CI]"],
+            ["(Intercept)", "0.09 [0.04, 0.22]"], quote="row")
+        self.assertEqual(found, [])
+        self.assertIn("Modelltabelle", reason)
+
+    def test_covariate_row_after_intercept_is_skipped_by_table_rule(self):
+        # Die Tabellenregel greift im Lauf-Skript; hier nur die Zeilenerkennung.
+        found, reason = effects_from_row(
+            ["Term", "OR [95% CI]"], ["Age", "1.00 [0.99, 1.02]"], quote="row")
+        self.assertEqual(len(found), 1)  # ohne Intercept-Zeile nicht unterscheidbar
+        self.assertEqual(reason, "")
+
+    def test_pooled_row_is_refused_with_its_own_reason(self):
+        found, reason = effects_from_row(
+            ["Outcome", "Pooled effect (MD; 95% CI)"],
+            ["ESS", "1.75 (0.01 to 3.49)"], quote="row")
+        self.assertEqual(found, [])
+        self.assertIn("gepoolte", reason)
 
 
 class TestMeanDiffStore(unittest.TestCase):

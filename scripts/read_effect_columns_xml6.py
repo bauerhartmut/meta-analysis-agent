@@ -29,6 +29,7 @@ from research_agent.coverage.manager import _xml_to_text  # noqa: E402
 from research_agent.database import Database  # noqa: E402
 from research_agent.meta.effect_columns import (  # noqa: E402
     effects_from_row,
+    is_model_table,
     store_direct_effects,
 )
 from research_agent.research.jats_tables import _pipe_row, parse_jats  # noqa: E402
@@ -75,9 +76,15 @@ def main(argv=None) -> int:
         )
         text_id = (row or {}).get("id", "")
 
-        table_rows = aligned = 0
+        table_rows = aligned = model_tables = model_rows = 0
         candidates, reasons = [], Counter()
         for table in parse_jats(xml_path):
+            # Eine Intercept-Zeile beweist eine Modelltabelle: die uebrigen
+            # Zeilen sind dann Praediktoren (Age, Sex, Ethnicity) statt Effekte.
+            if is_model_table(table.rows):
+                model_tables += 1
+                model_rows += len(table.rows)
+                continue
             for table_row in table.rows:
                 table_rows += 1
                 if len(table.header) == len(table_row.cells):
@@ -99,6 +106,8 @@ def main(argv=None) -> int:
         totals.update({
             "table_rows": table_rows,
             "aligned_rows": aligned,
+            "model_tables": model_tables,
+            "model_rows": model_rows,
             "candidates": len(candidates),
             "stored": len(stored),
             "rejected": len(rejected),
@@ -108,6 +117,8 @@ def main(argv=None) -> int:
             "pmc": pmc,
             "table_rows": table_rows,
             "aligned_rows": aligned,
+            "model_tables": model_tables,
+            "model_rows": model_rows,
             "candidates": len(candidates),
             "stored": len(stored),
             "rejected": len(rejected),
@@ -154,6 +165,9 @@ def main(argv=None) -> int:
     lines += [
         f"| **Summe** | {totals['table_rows']} | {totals['aligned_rows']} | "
         f"{totals['candidates']} | **{totals['stored']}** |",
+        "",
+        f"Modelltabellen uebersprungen: {totals.get('model_tables', 0)} "
+        f"({totals.get('model_rows', 0)} Zeilen) - Intercept-Zeile nachgewiesen.",
         "",
         "## Ablehnungsgruende",
         "",
