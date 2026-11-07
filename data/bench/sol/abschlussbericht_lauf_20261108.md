@@ -23,9 +23,9 @@ nachrechenbar. Es gab in diesem Lauf keinen Netzzugriff und keinen Modellaufruf.
 | Tabellenzeilen | 41.821 | ebenda |
 | Saetze (Fliesstext) | 315.857 | ebenda |
 | Kandidaten (Effekte) | 1.115 | ebenda |
-| gespeichert | **1.099** | `effect_columns_label2_*.json`, `arm_level_label2_*.json` |
+| gespeichert | 1099 | `funnel_label2_20261108.json` |
 | durch Pruefungen verworfen | 6 | ebenda |
-| poolbar (Zeilen) | 422 | `funnel` mit den neuen DBs |
+| poolbar (Zeilen) | 422 | `funnel_label2_20261108.json` |
 
 Die 6 Verwuerfe haben einen einzigen Grund: `unbekannter Effekttyp 'irr'` im
 Plausibilitaetsgate. Kein Zitatfehler, kein fehlender Standardfehler.
@@ -124,7 +124,8 @@ Korpus, nicht ueber die Leser.
 
 | Datei | Inhalt |
 |---|---|
-| `funnel_20261108.json/.md` | neun Stufen, Verlust-Rangliste, Gates je Leser |
+| `funnel_20261108.json/.md` | neun Stufen mit den alten Lauf-DBs (523 gespeichert) |
+| `funnel_label2_20261108.json/.md` | neun Stufen mit den neuen DBs (1.099 gespeichert, 422 poolbar) |
 | `konverter_kopf_20261108.md` | Konverterlauf vor der Label-Reparatur |
 | `effect_columns_kopf_20261108.json`, `arm_level_kopf_20261108.json` | 1.000 + 97 gespeichert, 6 Verwuerfe |
 | `label_fix_20261108.md`, `zielmass_schnitt_label2_20261108.json` | Label-Reparatur, 13 SOL-Zeilen |
