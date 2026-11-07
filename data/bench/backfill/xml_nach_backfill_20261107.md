@@ -1,16 +1,16 @@
 # Europe-PMC-XML-Verfuegbarkeit fuer die Lauf-DOIs
 
-Stand: 2026-11-07 11:24 UTC
+Stand: 2026-11-07 11:31 UTC
 Datenbanken: run1.db, run2.db
 
 ## Zusammenfassung
 
 | Kennzahl | Wert |
 |---|---|
-| DOIs gesamt | 174 |
-| mit PMCID | 60 |
-| mit fullTextXML | 43 |
-| davon mit Tabellen | 40 |
+| DOIs gesamt | 161 |
+| mit PMCID | 58 |
+| mit fullTextXML | 42 |
+| davon mit Tabellen | 39 |
 | mit CI-Zeilen | 6 |
 | mit SE-Zeilen | 7 |
 
@@ -18,29 +18,24 @@ Datenbanken: run1.db, run2.db
 
 | Lauf | DOIs | PMCID | XML | mit CI-Zeilen |
 |---|---|---|---|---|
-| run1.db | 125 | 43 | 30 | 4 |
-| run2.db | 88 | 31 | 23 | 2 |
+| run1.db | 116 | 42 | 30 | 4 |
+| run2.db | 81 | 30 | 22 | 2 |
 
 ## Je DOI
 
 | DOI | PMCID | XML | Tabellen | stat. Zeilen | SE | CI | im Lauf |
 |---|---|---|---|---|---|---|---|
 | 10.1001/jamanetworkopen.2026.26983 | PMC13448793 | ja | 3 | 15 | 0 | 15 | run1.db:kein Text |
-| 10.1002/fsn3.70923 | PMC12438961 | ja | 2 | 0 | 0 | 0 | run2.db:html |
 | 10.1002/fsn3.71823 | PMC13121932 | ja | 6 | 6 | 4 | 0 | run2.db:html |
-| 10.1007/978-0-387-78665-0_6110 | - | nein | 0 | 0 | 0 | 0 | run1.db:kein Text |
 | 10.1007/978-3-032-37044-0_15 | - | nein | 0 | 0 | 0 | 0 | run1.db:pdf |
 | 10.1007/978-981-97-8502-5_1 | - | nein | 0 | 0 | 0 | 0 | run2.db:pdf |
 | 10.1007/s00068-024-02708-3 | - | nein | 0 | 0 | 0 | 0 | run1.db:kein Text |
 | 10.1007/s00394-011-0263-7 | - | nein | 0 | 0 | 0 | 0 | run1.db:abstract |
-| 10.1007/s10714-008-0658-9 | - | nein | 0 | 0 | 0 | 0 | run1.db:pdf |
 | 10.1007/s10803-023-06172-7 | - | nein | 0 | 0 | 0 | 0 | run1.db:abstract, run2.db:abstract |
-| 10.1007/s10928-017-9547-8 | - | nein | 0 | 0 | 0 | 0 | run1.db:pdf, run2.db:pdf |
 | 10.1007/s11033-026-11717-x | - | nein | 0 | 0 | 0 | 0 | run1.db:kein Text |
 | 10.1007/s11033-026-12222-x | - | nein | 0 | 0 | 0 | 0 | run2.db:kein Text |
 | 10.1007/s11325-025-03408-x | - | nein | 0 | 0 | 0 | 0 | run2.db:pdf |
 | 10.1007/s11325-025-03432-x | - | nein | 0 | 0 | 0 | 0 | run1.db:kein Text |
-| 10.1007/s12559-010-9034-7 | - | nein | 0 | 0 | 0 | 0 | run1.db:pdf |
 | 10.1007/s40266-012-0018-z | - | nein | 0 | 0 | 0 | 0 | run1.db:kein Text |
 | 10.1007/s44470-026-00076-w | PMC13695647 | ja | 2 | 0 | 0 | 0 | run1.db:kein Text |
 | 10.1007/s44470-026-00180-x | - | nein | 0 | 0 | 0 | 0 | run1.db:abstract, run2.db:abstract |
@@ -51,10 +46,8 @@ Datenbanken: run1.db, run2.db
 | 10.1016/j.jpain.2024.104559 | - | nein | 0 | 0 | 0 | 0 | run1.db:kein Text |
 | 10.1016/j.jpsychires.2023.07.008 | - | nein | 0 | 0 | 0 | 0 | run1.db:kein Text, run2.db:kein Text |
 | 10.1016/j.jsmc.2008.12.002 | PMC2699022 | nein | 0 | 0 | 0 | 0 | run1.db:kein Text |
-| 10.1016/j.msard.2022.103604 | - | nein | 0 | 0 | 0 | 0 | run2.db:kein Text |
 | 10.1016/j.neubiorev.2021.09.035 | - | nein | 0 | 0 | 0 | 0 | run2.db:kein Text |
 | 10.1016/j.pediatrneurol.2011.02.001 | - | nein | 0 | 0 | 0 | 0 | run2.db:kein Text |
-| 10.1016/j.pnpbp.2022.110695 | - | nein | 0 | 0 | 0 | 0 | run1.db:abstract |
 | 10.1016/j.sleep.2008.03.020 | - | nein | 0 | 0 | 0 | 0 | run1.db:kein Text |
 | 10.1016/j.sleep.2013.10.016 | - | nein | 0 | 0 | 0 | 0 | run1.db:kein Text |
 | 10.1016/j.sleep.2018.09.017 | - | nein | 0 | 0 | 0 | 0 | run2.db:pdf |
@@ -67,7 +60,7 @@ Datenbanken: run1.db, run2.db
 | 10.1016/j.sleep.2024.08.027 | - | nein | 0 | 0 | 0 | 0 | run2.db:kein Text |
 | 10.1016/j.sleep.2025.02.023 | - | nein | 0 | 0 | 0 | 0 | run2.db:kein Text |
 | 10.1016/j.sleep.2025.107359 | - | nein | 0 | 0 | 0 | 0 | run2.db:abstract |
-| 10.1016/j.smrv.2004.06.004 | - | nein | 0 | 0 | 0 | 0 | run1.db:abstract, run2.db:kein Text |
+| 10.1016/j.smrv.2004.06.004 | - | nein | 0 | 0 | 0 | 0 | run2.db:kein Text |
 | 10.1016/j.smrv.2016.06.005 | - | nein | 0 | 0 | 0 | 0 | run1.db:abstract |
 | 10.1016/j.smrv.2022.101692 | - | nein | 0 | 0 | 0 | 0 | run1.db:abstract, run2.db:abstract |
 | 10.1016/j.smrv.2024.102016 | PMC11750618 | nein | 0 | 0 | 0 | 0 | run1.db:kein Text, run2.db:kein Text |
@@ -81,7 +74,6 @@ Datenbanken: run1.db, run2.db
 | 10.1039/d5fo00971e | - | nein | 0 | 0 | 0 | 0 | run1.db:kein Text, run2.db:html |
 | 10.1046/j.1365-2869.1996.00003.x | - | nein | 0 | 0 | 0 | 0 | run1.db:abstract |
 | 10.1051/0004-6361/201118085 | - | nein | 0 | 0 | 0 | 0 | run1.db:pdf, run2.db:kein Text |
-| 10.1051/0004-6361/202243107 | - | nein | 0 | 0 | 0 | 0 | run2.db:pdf |
 | 10.1055/s-0043-1761437 | PMC10166641 | ja | 1 | 0 | 0 | 0 | run1.db:kein Text |
 | 10.1080/07420528.2024.2353225 | - | nein | 0 | 0 | 0 | 0 | run1.db:kein Text |
 | 10.1080/07420528.2025.2500404 | - | nein | 0 | 0 | 0 | 0 | run1.db:kein Text, run2.db:kein Text |
@@ -132,7 +124,6 @@ Datenbanken: run1.db, run2.db
 | 10.1177/088307380101600204 | - | nein | 0 | 0 | 0 | 0 | run1.db:kein Text |
 | 10.1186/s12887-026-06611-1 | PMC13069753 | ja | 3 | 5 | 0 | 0 | run1.db:kein Text |
 | 10.1186/s12991-022-00390-6 | PMC9082467 | ja | 6 | 1 | 0 | 0 | run1.db:pdf |
-| 10.1201/9781420001211-10 | - | nein | 0 | 0 | 0 | 0 | run1.db:kein Text |
 | 10.1210/jc.2010-1031 | PMC2928905 | nein | 0 | 0 | 0 | 0 | run1.db:kein Text |
 | 10.1364/solith.2025.sm2e.3 | - | nein | 0 | 0 | 0 | 0 | run2.db:pdf |
 | 10.1371/journal.pcbi.1002650 | PMC3426568 | ja | 1 | 0 | 0 | 0 | run2.db:pdf |
@@ -155,7 +146,6 @@ Datenbanken: run1.db, run2.db
 | 10.2147/nss.s73856 | PMC4259558 | ja | 1 | 0 | 0 | 0 | run1.db:html, run2.db:kein Text |
 | 10.21522/tijph.2013.12.04.art047 | - | nein | 0 | 0 | 0 | 0 | run1.db:abstract, run2.db:abstract |
 | 10.2174/157015910792246209 | PMC3001215 | ja | 2 | 0 | 0 | 0 | run1.db:kein Text |
-| 10.2310/neuro.1334 | - | nein | 0 | 0 | 0 | 0 | run1.db:kein Text, run2.db:html |
 | 10.26226/morressier.5971be86d462b80290b531f3 | - | nein | 0 | 0 | 0 | 0 | run2.db:kein Text |
 | 10.2903/j.efsa.2011.2241 | - | nein | 0 | 0 | 0 | 0 | run1.db:html, run2.db:html |
 | 10.31234/osf.io/bhzrj | - | nein | 0 | 0 | 0 | 0 | run2.db:abstract |
@@ -188,10 +178,7 @@ Datenbanken: run1.db, run2.db
 | 10.4103/jfmpc.jfmpc_150_25 | PMC13241146 | ja | 0 | 0 | 0 | 0 | run1.db:html, run2.db:html |
 | 10.4103/jrpp.jrpp_115_25 | PMC13570694 | ja | 2 | 0 | 0 | 0 | run1.db:html, run2.db:html |
 | 10.4103/mgmj.mgmj_7_22 | - | nein | 0 | 0 | 0 | 0 | run1.db:kein Text, run2.db:kein Text |
-| 10.4310/jdg/1580526015 | - | nein | 0 | 0 | 0 | 0 | run2.db:pdf |
 | 10.4414/smw.2009.12342 | - | nein | 0 | 0 | 0 | 0 | run1.db:html |
-| 10.5152/eurasianjmed.2015.0267 | PMC4970552 | nein | 0 | 0 | 0 | 0 | run1.db:kein Text |
-| 10.5220/0009576801570168 | - | nein | 0 | 0 | 0 | 0 | run2.db:pdf |
 | 10.5664/jcsm.11076 | PMC11217625 | nein | 0 | 0 | 0 | 0 | run1.db:kein Text |
 | 10.5664/jcsm.11648 | PMC12225258 | nein | 0 | 0 | 0 | 0 | run2.db:kein Text |
 | 10.5664/jcsm.11650 | PMC12320674 | nein | 0 | 0 | 0 | 0 | run1.db:kein Text |

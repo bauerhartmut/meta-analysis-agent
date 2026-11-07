@@ -1,27 +1,27 @@
 {
-  "generated": "2026-11-07T11:24:09.842954+00:00",
+  "generated": "2026-11-07T11:31:11.536027+00:00",
   "sources": [
     "run1.db",
     "run2.db"
   ],
   "summary": {
-    "dois": 174,
-    "with_pmcid": 60,
-    "with_xml": 43,
-    "with_tables": 40,
+    "dois": 161,
+    "with_pmcid": 58,
+    "with_xml": 42,
+    "with_tables": 39,
     "with_ci_rows": 6,
     "with_se_rows": 7,
     "runs": {
       "run1.db": {
-        "dois": 125,
-        "with_pmcid": 43,
+        "dois": 116,
+        "with_pmcid": 42,
         "with_xml": 30,
         "with_ci_rows": 4
       },
       "run2.db": {
-        "dois": 88,
-        "with_pmcid": 31,
-        "with_xml": 23,
+        "dois": 81,
+        "with_pmcid": 30,
+        "with_xml": 22,
         "with_ci_rows": 2
       }
     }
@@ -46,24 +46,6 @@
       "sd_n_rows": 0
     },
     {
-      "doi": "10.1002/fsn3.70923",
-      "title": "The Effect of Tart Cherry on Sleep Quality and Sleep Disorders: A Systematic Review.",
-      "runs": {
-        "run2.db": {
-          "kind": "html",
-          "chars": 76278
-        }
-      },
-      "pmcid": "PMC12438961",
-      "xml_ok": true,
-      "xml_chars": 168675,
-      "tables": 2,
-      "stat_rows": 0,
-      "se_rows": 0,
-      "ci_rows": 0,
-      "sd_n_rows": 0
-    },
-    {
       "doi": "10.1002/fsn3.71823",
       "title": "Effectiveness of Melatonin-Containing Foods on Promoting Sleep: A Scoping Review.",
       "runs": {
@@ -80,24 +62,6 @@
       "se_rows": 4,
       "ci_rows": 0,
       "sd_n_rows": 3
-    },
-    {
-      "doi": "10.1007/978-0-387-78665-0_6110",
-      "title": "Minimal clinically important difference in Alzheimer's disease: Rapid review",
-      "runs": {
-        "run1.db": {
-          "kind": "",
-          "chars": 0
-        }
-      },
-      "pmcid": "",
-      "xml_ok": false,
-      "xml_chars": 0,
-      "tables": 0,
-      "stat_rows": 0,
-      "se_rows": 0,
-      "ci_rows": 0,
-      "sd_n_rows": 0
     },
     {
       "doi": "10.1007/978-3-032-37044-0_15",
@@ -172,24 +136,6 @@
       "sd_n_rows": 0
     },
     {
-      "doi": "10.1007/s10714-008-0658-9",
-      "title": "Null-null components of the generalized Einstein tensor for Lovelock models",
-      "runs": {
-        "run1.db": {
-          "kind": "pdf",
-          "chars": 31862
-        }
-      },
-      "pmcid": "",
-      "xml_ok": false,
-      "xml_chars": 0,
-      "tables": 0,
-      "stat_rows": 0,
-      "se_rows": 0,
-      "ci_rows": 0,
-      "sd_n_rows": 0
-    },
-    {
       "doi": "10.1007/s10803-023-06172-7",
       "title": "Comparing the Effectiveness of Physical Exercise Intervention and Melatonin Supplement in Improving Sleep Quality in Children with ASD",
       "runs": {
@@ -200,28 +146,6 @@
         "run2.db": {
           "kind": "abstract",
           "chars": 2181
-        }
-      },
-      "pmcid": "",
-      "xml_ok": false,
-      "xml_chars": 0,
-      "tables": 0,
-      "stat_rows": 0,
-      "se_rows": 0,
-      "ci_rows": 0,
-      "sd_n_rows": 0
-    },
-    {
-      "doi": "10.1007/s10928-017-9547-8",
-      "title": "Fractional Calculus in Pharmacokinetics",
-      "runs": {
-        "run1.db": {
-          "kind": "pdf",
-          "chars": 91102
-        },
-        "run2.db": {
-          "kind": "pdf",
-          "chars": 91102
         }
       },
       "pmcid": "",
@@ -294,24 +218,6 @@
         "run1.db": {
           "kind": "",
           "chars": 0
-        }
-      },
-      "pmcid": "",
-      "xml_ok": false,
-      "xml_chars": 0,
-      "tables": 0,
-      "stat_rows": 0,
-      "se_rows": 0,
-      "ci_rows": 0,
-      "sd_n_rows": 0
-    },
-    {
-      "doi": "10.1007/s12559-010-9034-7",
-      "title": "Cognition and Emotion: Perspectives of a Closing Gap",
-      "runs": {
-        "run1.db": {
-          "kind": "pdf",
-          "chars": 55144
         }
       },
       "pmcid": "",
@@ -516,24 +422,6 @@
       "sd_n_rows": 0
     },
     {
-      "doi": "10.1016/j.msard.2022.103604",
-      "title": "The Impact of Sleep-Related Disorders on the Sleep Quality in Patients With Multiple Sclerosis in a Saudi Cohort.",
-      "runs": {
-        "run2.db": {
-          "kind": "",
-          "chars": 0
-        }
-      },
-      "pmcid": "",
-      "xml_ok": false,
-      "xml_chars": 0,
-      "tables": 0,
-      "stat_rows": 0,
-      "se_rows": 0,
-      "ci_rows": 0,
-      "sd_n_rows": 0
-    },
-    {
       "doi": "10.1016/j.neubiorev.2021.09.035",
       "title": "A network meta-analysis of the long- and short-term efficacy of sleep medicines in adults and older adults.",
       "runs": {
@@ -558,24 +446,6 @@
         "run2.db": {
           "kind": "",
           "chars": 0
-        }
-      },
-      "pmcid": "",
-      "xml_ok": false,
-      "xml_chars": 0,
-      "tables": 0,
-      "stat_rows": 0,
-      "se_rows": 0,
-      "ci_rows": 0,
-      "sd_n_rows": 0
-    },
-    {
-      "doi": "10.1016/j.pnpbp.2022.110695",
-      "title": "Melatonin for sleep disorders in people with autism: Systematic review and meta-analysis.",
-      "runs": {
-        "run1.db": {
-          "kind": "abstract",
-          "chars": 1970
         }
       },
       "pmcid": "",
@@ -815,10 +685,6 @@
       "doi": "10.1016/j.smrv.2004.06.004",
       "title": "Effects of exogenous melatonin on sleep: a meta-analysis",
       "runs": {
-        "run1.db": {
-          "kind": "abstract",
-          "chars": 816
-        },
         "run2.db": {
           "kind": "",
           "chars": 0
@@ -1076,24 +942,6 @@
         "run2.db": {
           "kind": "",
           "chars": 0
-        }
-      },
-      "pmcid": "",
-      "xml_ok": false,
-      "xml_chars": 0,
-      "tables": 0,
-      "stat_rows": 0,
-      "se_rows": 0,
-      "ci_rows": 0,
-      "sd_n_rows": 0
-    },
-    {
-      "doi": "10.1051/0004-6361/202243107",
-      "title": "Large Interferometer For Exoplanets (LIFE): IV. Ideal kernel-nulling array architectures for a space-based mid-infrared nulling interferometer",
-      "runs": {
-        "run2.db": {
-          "kind": "pdf",
-          "chars": 63434
         }
       },
       "pmcid": "",
@@ -2062,24 +1910,6 @@
       "sd_n_rows": 1
     },
     {
-      "doi": "10.1201/9781420001211-10",
-      "title": "New perspectives on the role of melatonin in human sleep, circadian rhythms and their regulation.",
-      "runs": {
-        "run1.db": {
-          "kind": "",
-          "chars": 0
-        }
-      },
-      "pmcid": "",
-      "xml_ok": false,
-      "xml_chars": 0,
-      "tables": 0,
-      "stat_rows": 0,
-      "se_rows": 0,
-      "ci_rows": 0,
-      "sd_n_rows": 0
-    },
-    {
       "doi": "10.1210/jc.2010-1031",
       "title": "Clinical Implications of the Melatonin Phase Response Curve",
       "runs": {
@@ -2478,28 +2308,6 @@
       "xml_ok": true,
       "xml_chars": 136850,
       "tables": 2,
-      "stat_rows": 0,
-      "se_rows": 0,
-      "ci_rows": 0,
-      "sd_n_rows": 0
-    },
-    {
-      "doi": "10.2310/neuro.1334",
-      "title": "Clinical aspects of melatonin intervention in Alzheimer's disease progression.",
-      "runs": {
-        "run1.db": {
-          "kind": "",
-          "chars": 0
-        },
-        "run2.db": {
-          "kind": "html",
-          "chars": 7119
-        }
-      },
-      "pmcid": "",
-      "xml_ok": false,
-      "xml_chars": 0,
-      "tables": 0,
       "stat_rows": 0,
       "se_rows": 0,
       "ci_rows": 0,
@@ -3118,66 +2926,12 @@
       "sd_n_rows": 0
     },
     {
-      "doi": "10.4310/jdg/1580526015",
-      "title": "Explicit ambient metrics and holonomy",
-      "runs": {
-        "run2.db": {
-          "kind": "pdf",
-          "chars": 81440
-        }
-      },
-      "pmcid": "",
-      "xml_ok": false,
-      "xml_chars": 0,
-      "tables": 0,
-      "stat_rows": 0,
-      "se_rows": 0,
-      "ci_rows": 0,
-      "sd_n_rows": 0
-    },
-    {
       "doi": "10.4414/smw.2009.12342",
       "title": "Melatonin in treatment of chronic sleep disorders in adults with autism: a retrospective study",
       "runs": {
         "run1.db": {
           "kind": "html",
           "chars": 5897
-        }
-      },
-      "pmcid": "",
-      "xml_ok": false,
-      "xml_chars": 0,
-      "tables": 0,
-      "stat_rows": 0,
-      "se_rows": 0,
-      "ci_rows": 0,
-      "sd_n_rows": 0
-    },
-    {
-      "doi": "10.5152/eurasianjmed.2015.0267",
-      "title": "A Review of Melatonin, Its Receptors and Drugs",
-      "runs": {
-        "run1.db": {
-          "kind": "",
-          "chars": 0
-        }
-      },
-      "pmcid": "PMC4970552",
-      "xml_ok": false,
-      "xml_chars": 0,
-      "tables": 0,
-      "stat_rows": 0,
-      "se_rows": 0,
-      "ci_rows": 0,
-      "sd_n_rows": 0
-    },
-    {
-      "doi": "10.5220/0009576801570168",
-      "title": "A Systematic Review of Computational Thinking in Early Ages",
-      "runs": {
-        "run2.db": {
-          "kind": "pdf",
-          "chars": 57414
         }
       },
       "pmcid": "",

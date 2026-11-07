@@ -99,6 +99,7 @@ def lookup_title(title: str, timeout: int, rows: int = 3) -> dict:
                  .get("message", {}) or {}).get("items", []) or []
     except ValueError:
         return {}
+    query_tokens = _terms(title)
     best: dict = {}
     for item in items:
         candidate = (item.get("title") or [""])[0] or ""
@@ -106,14 +107,18 @@ def lookup_title(title: str, timeout: int, rows: int = 3) -> dict:
         if not _STRICT_DOI_RE.match(doi):
             continue
         score = title_match(title, candidate)
+        shared = len(query_tokens & _terms(candidate))
+        coverage = shared / max(1, len(query_tokens))
         if score > best.get("score", 0.0):
             best = {"doi": doi, "matched_title": candidate, "score": round(score, 3),
+                    "shared": shared, "cov_query": round(coverage, 3),
                     "type": item.get("type") or ""}
     return best
 
 
 def backfill(db_path: Path, timeout: int, sleep: float, min_score: float,
-             limit: int = 0) -> dict:
+             limit: int = 0, min_shared: int = 6,
+             min_coverage: float = 0.6) -> dict:
     conn = sqlite3.connect(db_path)
     conn.row_factory = sqlite3.Row
     rows = conn.execute(
@@ -153,10 +158,19 @@ def backfill(db_path: Path, timeout: int, sleep: float, min_score: float,
             stats["no_candidate"] += 1
             results.append({"id": row["id"], "title": title, "doi": "",
                             "method": "no-candidate", "score": 0.0})
-        elif best["score"] < min_score:
+        elif (best["score"] < min_score
+              or best.get("shared", 0) < min_shared
+              or best.get("cov_query", 0.0) < min_coverage):
+            # Ein kurzer, generischer Titel ("Clinical Aspects of Alzheimer
+            # Disease") deckt eine lange Quelle scheinbar vollstaendig ab und
+            # war in der ersten Messung 8x die falsche Arbeit. Deshalb neben
+            # der Token-Deckung auch absolute Trefferzahl und Abdeckung der
+            # Quelltokens verlangen.
             stats["rejected_low_score"] += 1
             results.append({"id": row["id"], "title": title, "doi": "",
                             "method": "rejected", "score": best["score"],
+                            "shared": best.get("shared", 0),
+                            "cov_query": best.get("cov_query", 0.0),
                             "matched_title": best.get("matched_title", "")})
         else:
             conn.execute("UPDATE sources SET doi = ? WHERE id = ?",
@@ -186,6 +200,10 @@ def main() -> int:
     ap.add_argument("--timeout", type=int, default=30)
     ap.add_argument("--sleep", type=float, default=0.3)
     ap.add_argument("--min-score", type=float, default=0.85)
+    ap.add_argument("--min-shared", type=int, default=6,
+                    help="mindestens so viele gemeinsame Titel-Tokens")
+    ap.add_argument("--min-coverage", type=float, default=0.6,
+                    help="Anteil der Quell-Tokens, der im Treffer vorkommt")
     ap.add_argument("--limit", type=int, default=0)
     args = ap.parse_args()
 
@@ -197,7 +215,8 @@ def main() -> int:
             continue
         print(f"== {path.name} ==", flush=True)
         reports.append(backfill(path, args.timeout, args.sleep,
-                                args.min_score, args.limit))
+                                args.min_score, args.limit,
+                                args.min_shared, args.min_coverage))
         stats = reports[-1]["stats"]
         print(f"  DOI vorher {stats['with_doi_before']} -> nachher "
               f"{stats['with_doi_after']} (+{stats['from_url']} URL, "

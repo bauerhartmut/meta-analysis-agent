@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-07T11:20:44.514898+00:00",
+  "generated": "2026-11-07T11:27:46.677020+00:00",
   "reports": [
     {
       "db": "data/bench/backfill/run1.db",
@@ -7,11 +7,11 @@
         "sources": 134,
         "with_doi_before": 26,
         "from_url": 18,
-        "from_crossref": 84,
-        "rejected_low_score": 6,
+        "from_crossref": 74,
+        "rejected_low_score": 16,
         "no_candidate": 0,
-        "still_without_doi": 6,
-        "with_doi_after": 128
+        "still_without_doi": 16,
+        "with_doi_after": 118
       },
       "results": [
         {
@@ -183,9 +183,11 @@
         {
           "id": "ab6560ed3f19",
           "title": "Effects of exogenous melatonin on sleep: a meta-analysis",
-          "doi": "10.1016/j.smrv.2004.06.004",
-          "method": "crossref",
+          "doi": "",
+          "method": "rejected",
           "score": 1.0,
+          "shared": 3,
+          "cov_query": 1.0,
           "matched_title": "Effects of exogenous melatonin on sleep: a meta-analysis"
         },
         {
@@ -199,9 +201,11 @@
         {
           "id": "1f01f06472ee",
           "title": "New perspectives on the role of melatonin in human sleep, circadian rhythms and their regulation.",
-          "doi": "10.1201/9781420001211-10",
-          "method": "crossref",
+          "doi": "",
+          "method": "rejected",
           "score": 1.0,
+          "shared": 4,
+          "cov_query": 0.444,
           "matched_title": "Role of Melatonin in the Regulation of Sleep"
         },
         {
@@ -223,9 +227,11 @@
         {
           "id": "1504fb22c8f4",
           "title": "Melatonin for sleep disorders in people with autism: Systematic review and meta-analysis.",
-          "doi": "10.1016/j.pnpbp.2022.110695",
-          "method": "crossref",
+          "doi": "",
+          "method": "rejected",
           "score": 1.0,
+          "shared": 5,
+          "cov_query": 1.0,
           "matched_title": "Melatonin for sleep disorders in people with autism: Systematic review and meta-analysis"
         },
         {
@@ -327,17 +333,21 @@
         {
           "id": "dd98ca85d97f",
           "title": "Clinical aspects of melatonin intervention in Alzheimer's disease progression.",
-          "doi": "10.2310/neuro.1334",
-          "method": "crossref",
+          "doi": "",
+          "method": "rejected",
           "score": 1.0,
+          "shared": 4,
+          "cov_query": 0.571,
           "matched_title": "Clinical Aspects of Alzheimer Disease"
         },
         {
           "id": "033bfe63bfcf",
           "title": "New perspectives on the role of melatonin in human sleep, circadian rhythms and their regulation",
-          "doi": "10.1201/9781420001211-10",
-          "method": "crossref",
+          "doi": "",
+          "method": "rejected",
           "score": 1.0,
+          "shared": 4,
+          "cov_query": 0.444,
           "matched_title": "Role of Melatonin in the Regulation of Sleep"
         },
         {
@@ -359,9 +369,11 @@
         {
           "id": "955e8aaebe5b",
           "title": "Minimal clinically important difference in Alzheimer's disease: Rapid review",
-          "doi": "10.1007/978-0-387-78665-0_6110",
-          "method": "crossref",
+          "doi": "",
+          "method": "rejected",
           "score": 1.0,
+          "shared": 4,
+          "cov_query": 0.571,
           "matched_title": "Minimal Clinically Important Difference"
         },
         {
@@ -463,9 +475,11 @@
         {
           "id": "6d87d65651dc",
           "title": "A Review of Melatonin, Its Receptors and Drugs",
-          "doi": "10.5152/eurasianjmed.2015.0267",
-          "method": "crossref",
+          "doi": "",
+          "method": "rejected",
           "score": 1.0,
+          "shared": 3,
+          "cov_query": 1.0,
           "matched_title": "A Review of Melatonin, Its Receptors and Drugs"
         },
         {
@@ -538,6 +552,8 @@
           "doi": "",
           "method": "rejected",
           "score": 0.75,
+          "shared": 3,
+          "cov_query": 0.75,
           "matched_title": "Review for \"UK Medical Cannabis Registry: Assessment of clinical outcomes in patients with insomnia\""
         },
         {
@@ -546,6 +562,8 @@
           "doi": "",
           "method": "rejected",
           "score": 0.5,
+          "shared": 3,
+          "cov_query": 0.5,
           "matched_title": "The impact of policyholder behavior on pricing, hedging, and hedge efficiency of withdrawal benefit guarantees in variable annuities"
         },
         {
@@ -671,9 +689,11 @@
         {
           "id": "24119009e2d4",
           "title": "Cognition and Emotion: Perspectives of a Closing Gap",
-          "doi": "10.1007/s12559-010-9034-7",
-          "method": "crossref",
+          "doi": "",
+          "method": "rejected",
           "score": 1.0,
+          "shared": 5,
+          "cov_query": 1.0,
           "matched_title": "Cognition and Emotion: Perspectives of a Closing Gap"
         },
         {
@@ -730,6 +750,8 @@
           "doi": "",
           "method": "rejected",
           "score": 0.667,
+          "shared": 2,
+          "cov_query": 0.667,
           "matched_title": "Insomnia: the great melatonin delusion"
         },
         {
@@ -794,6 +816,8 @@
           "doi": "",
           "method": "rejected",
           "score": 0.4,
+          "shared": 4,
+          "cov_query": 0.235,
           "matched_title": "Clinically meaningful FEV1 response with reslizumab achieved early and sustained over 52 weeks"
         },
         {
@@ -802,6 +826,8 @@
           "doi": "",
           "method": "rejected",
           "score": 0.714,
+          "shared": 5,
+          "cov_query": 0.625,
           "matched_title": "Circadian Rhythm Disruptions and Their Impact on Acute Myocardial Infarction"
         },
         {
@@ -810,14 +836,18 @@
           "doi": "",
           "method": "rejected",
           "score": 0.667,
+          "shared": 4,
+          "cov_query": 0.667,
           "matched_title": "Handheld Secured Electronic Doorstep Banking System that allows Cash Withdrawal and Deposit Facility for Remote and Rural Areas"
         },
         {
           "id": "23a24ab72ec7",
           "title": "Null-null components of the generalized Einstein tensor for Lovelock models",
-          "doi": "10.1007/s10714-008-0658-9",
-          "method": "crossref",
+          "doi": "",
+          "method": "rejected",
           "score": 1.0,
+          "shared": 4,
+          "cov_query": 0.571,
           "matched_title": "Lovelock tensor as generalized Einstein tensor"
         },
         {
@@ -847,9 +877,11 @@
         {
           "id": "2350eef7bdc2",
           "title": "Fractional Calculus in Pharmacokinetics",
-          "doi": "10.1007/s10928-017-9547-8",
-          "method": "crossref",
+          "doi": "",
+          "method": "rejected",
           "score": 1.0,
+          "shared": 3,
+          "cov_query": 1.0,
           "matched_title": "Fractional calculus in pharmacokinetics"
         },
         {
@@ -868,11 +900,11 @@
         "sources": 96,
         "with_doi_before": 22,
         "from_url": 10,
-        "from_crossref": 56,
-        "rejected_low_score": 8,
+        "from_crossref": 49,
+        "rejected_low_score": 15,
         "no_candidate": 0,
-        "still_without_doi": 8,
-        "with_doi_after": 88
+        "still_without_doi": 15,
+        "with_doi_after": 81
       },
       "results": [
         {
@@ -996,9 +1028,11 @@
         {
           "id": "4400cc4fae1a",
           "title": "Clinical aspects of melatonin intervention in Alzheimer's disease progression.",
-          "doi": "10.2310/neuro.1334",
-          "method": "crossref",
+          "doi": "",
+          "method": "rejected",
           "score": 1.0,
+          "shared": 4,
+          "cov_query": 0.571,
           "matched_title": "Clinical Aspects of Alzheimer Disease"
         },
         {
@@ -1055,14 +1089,18 @@
           "doi": "",
           "method": "rejected",
           "score": 0.333,
+          "shared": 1,
+          "cov_query": 0.125,
           "matched_title": "Social Neuroscience: AI for education"
         },
         {
           "id": "e8bee5aeb430",
           "title": "Explicit ambient metrics and holonomy",
-          "doi": "10.4310/jdg/1580526015",
-          "method": "crossref",
+          "doi": "",
+          "method": "rejected",
           "score": 1.0,
+          "shared": 4,
+          "cov_query": 1.0,
           "matched_title": "Explicit ambient metrics and holonomy"
         },
         {
@@ -1103,6 +1141,8 @@
           "doi": "",
           "method": "rejected",
           "score": 0.667,
+          "shared": 6,
+          "cov_query": 0.6,
           "matched_title": "RGB-D SLAM in Indoor Planar Environments With Multiple Large Dynamic Objects"
         },
         {
@@ -1124,9 +1164,11 @@
         {
           "id": "5904e009a7fb",
           "title": "The Impact of Sleep-Related Disorders on the Sleep Quality in Patients With Multiple Sclerosis in a Saudi Cohort.",
-          "doi": "10.1016/j.msard.2022.103604",
-          "method": "crossref",
+          "doi": "",
+          "method": "rejected",
           "score": 1.0,
+          "shared": 5,
+          "cov_query": 0.5,
           "matched_title": "Sleep Disorders in Multiple Sclerosis Patients"
         },
         {
@@ -1175,6 +1217,8 @@
           "doi": "",
           "method": "rejected",
           "score": 0.75,
+          "shared": 3,
+          "cov_query": 0.75,
           "matched_title": "Review for \"UK Medical Cannabis Registry: Assessment of clinical outcomes in patients with insomnia\""
         },
         {
@@ -1183,6 +1227,8 @@
           "doi": "",
           "method": "rejected",
           "score": 0.5,
+          "shared": 4,
+          "cov_query": 0.5,
           "matched_title": "Effects of Zolpidem on Sleep Quality and Quality of Life in Stroke Patients with Comorbid Depression"
         },
         {
@@ -1191,6 +1237,8 @@
           "doi": "",
           "method": "rejected",
           "score": 0.6,
+          "shared": 3,
+          "cov_query": 0.6,
           "matched_title": "Review for \"Omalizumab in pediatric chronic spontaneous urticaria: A systematic review and meta-analysis of efficacy and safety\""
         },
         {
@@ -1228,9 +1276,11 @@
         {
           "id": "050bd8fd35de",
           "title": "The Effect of Tart Cherry on Sleep Quality and Sleep Disorders: A Systematic Review.",
-          "doi": "10.1002/fsn3.70923",
-          "method": "crossref",
+          "doi": "",
+          "method": "rejected",
           "score": 1.0,
+          "shared": 5,
+          "cov_query": 1.0,
           "matched_title": "The Effect of Tart Cherry on Sleep Quality and Sleep Disorders: A Systematic Review"
         },
         {
@@ -1292,9 +1342,11 @@
         {
           "id": "2fccaca400d9",
           "title": "Large Interferometer For Exoplanets (LIFE): IV. Ideal kernel-nulling array architectures for a space-based mid-infrared nulling interferometer",
-          "doi": "10.1051/0004-6361/202243107",
-          "method": "crossref",
+          "doi": "",
+          "method": "rejected",
           "score": 1.0,
+          "shared": 4,
+          "cov_query": 0.308,
           "matched_title": "Large Interferometer For Exoplanets (LIFE)"
         },
         {
@@ -1356,9 +1408,11 @@
         {
           "id": "50f3be6b9f5a",
           "title": "A Systematic Review of Computational Thinking in Early Ages",
-          "doi": "10.5220/0009576801570168",
-          "method": "crossref",
+          "doi": "",
+          "method": "rejected",
           "score": 1.0,
+          "shared": 4,
+          "cov_query": 1.0,
           "matched_title": "Developing Computational Thinking in Early Ages: A Review of the code.org Platform"
         },
         {
@@ -1367,6 +1421,8 @@
           "doi": "",
           "method": "rejected",
           "score": 0.667,
+          "shared": 2,
+          "cov_query": 0.182,
           "matched_title": "International Protection Regimes"
         },
         {
@@ -1375,6 +1431,8 @@
           "doi": "",
           "method": "rejected",
           "score": 0.625,
+          "shared": 5,
+          "cov_query": 0.333,
           "matched_title": "Mixed Models for Repeated Measures using Categorical time Effects (MMRM)"
         },
         {
@@ -1428,9 +1486,11 @@
         {
           "id": "9dd6b9bfb00f",
           "title": "Fractional Calculus in Pharmacokinetics",
-          "doi": "10.1007/s10928-017-9547-8",
-          "method": "crossref",
+          "doi": "",
+          "method": "rejected",
           "score": 1.0,
+          "shared": 3,
+          "cov_query": 1.0,
           "matched_title": "Fractional calculus in pharmacokinetics"
         },
         {
@@ -1447,6 +1507,8 @@
           "doi": "",
           "method": "rejected",
           "score": 0.5,
+          "shared": 3,
+          "cov_query": 0.5,
           "matched_title": "The impact of policyholder behavior on pricing, hedging, and hedge efficiency of withdrawal benefit guarantees in variable annuities"
         },
         {
