@@ -78,3 +78,7 @@ data/bench/xml_all/*.xml
 data/bench/sol/xml/*.xml
 data/bench/sol/*.db
 data/bench/sol/seed_xml/
+
+# SQLite-Begleitdateien in allen Unterordnern (Datenbanken bleiben lokal)
+data/**/*.db-shm
+data/**/*.db-wal
