@@ -1,0 +1,3319 @@
+{
+  "generated": "2026-11-07T11:24:09.842954+00:00",
+  "sources": [
+    "run1.db",
+    "run2.db"
+  ],
+  "summary": {
+    "dois": 174,
+    "with_pmcid": 60,
+    "with_xml": 43,
+    "with_tables": 40,
+    "with_ci_rows": 6,
+    "with_se_rows": 7,
+    "runs": {
+      "run1.db": {
+        "dois": 125,
+        "with_pmcid": 43,
+        "with_xml": 30,
+        "with_ci_rows": 4
+      },
+      "run2.db": {
+        "dois": 88,
+        "with_pmcid": 31,
+        "with_xml": 23,
+        "with_ci_rows": 2
+      }
+    }
+  },
+  "records": [
+    {
+      "doi": "10.1001/jamanetworkopen.2026.26983",
+      "title": "Melatonin Use and Polysomnographic Sleep Architecture in Children.",
+      "runs": {
+        "run1.db": {
+          "kind": "",
+          "chars": 0
+        }
+      },
+      "pmcid": "PMC13448793",
+      "xml_ok": true,
+      "xml_chars": 102425,
+      "tables": 3,
+      "stat_rows": 15,
+      "se_rows": 0,
+      "ci_rows": 15,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1002/fsn3.70923",
+      "title": "The Effect of Tart Cherry on Sleep Quality and Sleep Disorders: A Systematic Review.",
+      "runs": {
+        "run2.db": {
+          "kind": "html",
+          "chars": 76278
+        }
+      },
+      "pmcid": "PMC12438961",
+      "xml_ok": true,
+      "xml_chars": 168675,
+      "tables": 2,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1002/fsn3.71823",
+      "title": "Effectiveness of Melatonin-Containing Foods on Promoting Sleep: A Scoping Review.",
+      "runs": {
+        "run2.db": {
+          "kind": "html",
+          "chars": 93937
+        }
+      },
+      "pmcid": "PMC13121932",
+      "xml_ok": true,
+      "xml_chars": 202379,
+      "tables": 6,
+      "stat_rows": 6,
+      "se_rows": 4,
+      "ci_rows": 0,
+      "sd_n_rows": 3
+    },
+    {
+      "doi": "10.1007/978-0-387-78665-0_6110",
+      "title": "Minimal clinically important difference in Alzheimer's disease: Rapid review",
+      "runs": {
+        "run1.db": {
+          "kind": "",
+          "chars": 0
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1007/978-3-032-37044-0_15",
+      "title": "Fast SAM 3D Body: Accelerating SAM 3D Body for Real-Time Full-Body Human Mesh Recovery",
+      "runs": {
+        "run1.db": {
+          "kind": "pdf",
+          "chars": 55521
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1007/978-981-97-8502-5_1",
+      "title": "ST-RetNet: A Long-term Spatial-Temporal Traffic Flow Prediction Method",
+      "runs": {
+        "run2.db": {
+          "kind": "pdf",
+          "chars": 33521
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1007/s00068-024-02708-3",
+      "title": "Minimal clinically important difference (MCID), patient-acceptable symptom state (PASS), and substantial clinical benefit (SCB) following surgical knee ligament reconstruction: a systematic review",
+      "runs": {
+        "run1.db": {
+          "kind": "",
+          "chars": 0
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1007/s00394-011-0263-7",
+      "title": "Effect of tart cherry juice (Prunus cerasus) on melatonin levels and enhanced sleep quality.",
+      "runs": {
+        "run1.db": {
+          "kind": "abstract",
+          "chars": 2695
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1007/s10714-008-0658-9",
+      "title": "Null-null components of the generalized Einstein tensor for Lovelock models",
+      "runs": {
+        "run1.db": {
+          "kind": "pdf",
+          "chars": 31862
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1007/s10803-023-06172-7",
+      "title": "Comparing the Effectiveness of Physical Exercise Intervention and Melatonin Supplement in Improving Sleep Quality in Children with ASD",
+      "runs": {
+        "run1.db": {
+          "kind": "abstract",
+          "chars": 2181
+        },
+        "run2.db": {
+          "kind": "abstract",
+          "chars": 2181
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1007/s10928-017-9547-8",
+      "title": "Fractional Calculus in Pharmacokinetics",
+      "runs": {
+        "run1.db": {
+          "kind": "pdf",
+          "chars": 91102
+        },
+        "run2.db": {
+          "kind": "pdf",
+          "chars": 91102
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1007/s11033-026-11717-x",
+      "title": "Common molecular signatures: the role of BDNF, melatonin, and orexin in the ASD-schizophrenia continuum.",
+      "runs": {
+        "run1.db": {
+          "kind": "",
+          "chars": 0
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1007/s11033-026-12222-x",
+      "title": "Melatonin for age-related vascular diseases: mechanistic rationale, translational barriers, and clinical prospects.",
+      "runs": {
+        "run2.db": {
+          "kind": "",
+          "chars": 0
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1007/s11325-025-03408-x",
+      "title": "The Pittsburgh sleep quality index-2 (PSQI-2): the validity of a two-item sleep quality screener in Brazilian adults",
+      "runs": {
+        "run2.db": {
+          "kind": "pdf",
+          "chars": 39579
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1007/s11325-025-03432-x",
+      "title": "Factors influencing the effect of melatonin on sleep quality in children with autism spectrum disorder: a systematic review and meta-analysis",
+      "runs": {
+        "run1.db": {
+          "kind": "",
+          "chars": 0
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1007/s12559-010-9034-7",
+      "title": "Cognition and Emotion: Perspectives of a Closing Gap",
+      "runs": {
+        "run1.db": {
+          "kind": "pdf",
+          "chars": 55144
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1007/s40266-012-0018-z",
+      "title": "Melatonin Prolonged Release",
+      "runs": {
+        "run1.db": {
+          "kind": "",
+          "chars": 0
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1007/s44470-026-00076-w",
+      "title": "Management of shift work disorder: an American Academy of Sleep Medicine systematic review, meta-analysis, and GRADE assessment.",
+      "runs": {
+        "run1.db": {
+          "kind": "",
+          "chars": 0
+        }
+      },
+      "pmcid": "PMC13695647",
+      "xml_ok": true,
+      "xml_chars": 540587,
+      "tables": 2,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1007/s44470-026-00180-x",
+      "title": "The role of the transdiagnostic sleep and circadian intervention in adolescent bedtime and sleep quality: a pilot study.",
+      "runs": {
+        "run1.db": {
+          "kind": "abstract",
+          "chars": 1974
+        },
+        "run2.db": {
+          "kind": "abstract",
+          "chars": 1974
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1016/j.cca.2011.05.014",
+      "title": "Evaluation of salivary melatonin measurements for Dim Light Melatonin Onset calculations in patients with possible sleep-wake rhythm disorders.",
+      "runs": {
+        "run1.db": {
+          "kind": "",
+          "chars": 0
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1016/j.eatbeh.2025.102015",
+      "title": "Preliminary Evaluation of Dim Light Melatonin Onset as an Indicator of Nighttime Eating in Adolescents",
+      "runs": {
+        "run1.db": {
+          "kind": "",
+          "chars": 0
+        },
+        "run2.db": {
+          "kind": "",
+          "chars": 0
+        }
+      },
+      "pmcid": "PMC13015261",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1016/j.jaac.2020.12.035",
+      "title": "Review: Identification and Management of Circadian Rhythm Sleep Disorders as a Transdiagnostic Feature in Child and Adolescent Psychiatry",
+      "runs": {
+        "run1.db": {
+          "kind": "",
+          "chars": 0
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1016/j.jab.2018.01.005",
+      "title": "Oral melatonin administration improves the objective and subjective sleep quality, increases 6-sulfatoxymelatonin levels and total antioxidant capacity in patients with fibromyalgia",
+      "runs": {
+        "run1.db": {
+          "kind": "",
+          "chars": 0
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1016/j.jpain.2024.104559",
+      "title": "Measurement error, minimal detectable change, and minimal clinically important difference of the Short Form-36 Health Survey, Hospital Anxiety and Depression Scale, and Pain Numeric Rating Scale in patients with chronic pain.",
+      "runs": {
+        "run1.db": {
+          "kind": "",
+          "chars": 0
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1016/j.jpsychires.2023.07.008",
+      "title": "Effects of exogenous melatonin on sleep and circadian rhythm parameters in bipolar disorder with comorbid delayed sleep-wake phase disorder: An actigraphic study.",
+      "runs": {
+        "run1.db": {
+          "kind": "",
+          "chars": 0
+        },
+        "run2.db": {
+          "kind": "",
+          "chars": 0
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1016/j.jsmc.2008.12.002",
+      "title": "Observation of the Natural Evolution of Insomnia in the American General Population Cohort",
+      "runs": {
+        "run1.db": {
+          "kind": "",
+          "chars": 0
+        }
+      },
+      "pmcid": "PMC2699022",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1016/j.msard.2022.103604",
+      "title": "The Impact of Sleep-Related Disorders on the Sleep Quality in Patients With Multiple Sclerosis in a Saudi Cohort.",
+      "runs": {
+        "run2.db": {
+          "kind": "",
+          "chars": 0
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1016/j.neubiorev.2021.09.035",
+      "title": "A network meta-analysis of the long- and short-term efficacy of sleep medicines in adults and older adults.",
+      "runs": {
+        "run2.db": {
+          "kind": "",
+          "chars": 0
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1016/j.pediatrneurol.2011.02.001",
+      "title": "Prolonged-release melatonin for children with neurodevelopmental disorders.",
+      "runs": {
+        "run2.db": {
+          "kind": "",
+          "chars": 0
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1016/j.pnpbp.2022.110695",
+      "title": "Melatonin for sleep disorders in people with autism: Systematic review and meta-analysis.",
+      "runs": {
+        "run1.db": {
+          "kind": "abstract",
+          "chars": 1970
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1016/j.sleep.2008.03.020",
+      "title": "Clinical efficacy of dim light melatonin onset testing in diagnosing delayed sleep phase syndrome",
+      "runs": {
+        "run1.db": {
+          "kind": "",
+          "chars": 0
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1016/j.sleep.2013.10.016",
+      "title": "Disturbances in melatonin secretion and circadian sleep-wake regulation in Parkinson disease.",
+      "runs": {
+        "run1.db": {
+          "kind": "",
+          "chars": 0
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1016/j.sleep.2018.09.017",
+      "title": "Cord-blood vitamin D level and night sleep duration in preschoolers in the EDEN mother-child birth cohort",
+      "runs": {
+        "run2.db": {
+          "kind": "pdf",
+          "chars": 29655
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1016/j.sleep.2021.03.040",
+      "title": "The effect of melatonin on sleep quality and insomnia in patients with cancer: a systematic review study",
+      "runs": {
+        "run1.db": {
+          "kind": "",
+          "chars": 0
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1016/j.sleep.2022.05.299",
+      "title": "Alterations of Subcortical Brain Structures in Paradoxical and Psychophysiological Insomnia Disorder",
+      "runs": {
+        "run1.db": {
+          "kind": "",
+          "chars": 0
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1016/j.sleep.2023.11.179",
+      "title": "Dim Light Melatonin Onset analysis in individuals diagnosed with Delayed Sleep-Wake Phase Disorder (DSWPD)",
+      "runs": {
+        "run1.db": {
+          "kind": "abstract",
+          "chars": 2348
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1016/j.sleep.2023.11.371",
+      "title": "Relationship between subjective sleep quality, self-reported sleep-wake complaints, and objective measures of sleep quality in patients with sleep disorders - preliminary results",
+      "runs": {
+        "run1.db": {
+          "kind": "",
+          "chars": 0
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1016/j.sleep.2023.11.755",
+      "title": "Optimizing timing and dose of exogenous melatonin administration in neuropsychiatric pediatric populations: a meta-analysis on sleep outcomes.",
+      "runs": {
+        "run1.db": {
+          "kind": "",
+          "chars": 0
+        },
+        "run2.db": {
+          "kind": "",
+          "chars": 0
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1016/j.sleep.2023.11.790",
+      "title": "Impact of melatonin-rich milk on subjective sleep duration in adults. First results from an interrupted time series analysis",
+      "runs": {
+        "run1.db": {
+          "kind": "",
+          "chars": 0
+        },
+        "run2.db": {
+          "kind": "",
+          "chars": 0
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1016/j.sleep.2024.08.027",
+      "title": "Virtual reality improves sleep quality and associated symptoms in patients with chronic insomnia.",
+      "runs": {
+        "run2.db": {
+          "kind": "",
+          "chars": 0
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1016/j.sleep.2025.02.023",
+      "title": "Are sleep and awake bruxism associated with sleep quality and duration in adults? A systematic review and meta-analysis.",
+      "runs": {
+        "run2.db": {
+          "kind": "",
+          "chars": 0
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1016/j.sleep.2025.107359",
+      "title": "Melatonin Prolonged-Release May Improve Insomnia and Depression in Epilepsy Patients.",
+      "runs": {
+        "run2.db": {
+          "kind": "abstract",
+          "chars": 1882
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1016/j.smrv.2004.06.004",
+      "title": "Effects of exogenous melatonin on sleep: a meta-analysis",
+      "runs": {
+        "run1.db": {
+          "kind": "abstract",
+          "chars": 816
+        },
+        "run2.db": {
+          "kind": "",
+          "chars": 0
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1016/j.smrv.2016.06.005",
+      "title": "Evidence for the efficacy of melatonin in the treatment of primary adult sleep disorders",
+      "runs": {
+        "run1.db": {
+          "kind": "abstract",
+          "chars": 254
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1016/j.smrv.2022.101692",
+      "title": "Efficacy of melatonin for chronic insomnia: Systematic reviews and meta-analyses.",
+      "runs": {
+        "run1.db": {
+          "kind": "abstract",
+          "chars": 2466
+        },
+        "run2.db": {
+          "kind": "abstract",
+          "chars": 2466
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1016/j.smrv.2024.102016",
+      "title": "Novel applications of sleep pharmacology as delirium therapeutics.",
+      "runs": {
+        "run1.db": {
+          "kind": "",
+          "chars": 0
+        },
+        "run2.db": {
+          "kind": "",
+          "chars": 0
+        }
+      },
+      "pmcid": "PMC11750618",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1016/j.yfrne.2018.06.004",
+      "title": "Exogenous melatonin as a treatment for secondary sleep disorders: A systematic review and meta-analysis.",
+      "runs": {
+        "run1.db": {
+          "kind": "abstract",
+          "chars": 2868
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1016/s0084-3970(08)70628-5",
+      "title": "Effect of Melatonin on Sleep, Behavior, and Cognition in ADHD and Chronic Sleep-Onset Insomnia",
+      "runs": {
+        "run1.db": {
+          "kind": "abstract",
+          "chars": 623
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1017/s0022377815001075",
+      "title": "Wavelet transforms and their applications to MHD and plasma turbulence: a review",
+      "runs": {
+        "run2.db": {
+          "kind": "",
+          "chars": 0
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1017/s1351324923000542",
+      "title": "Lightweight Transformers for Clinical Natural Language Processing",
+      "runs": {
+        "run1.db": {
+          "kind": "pdf",
+          "chars": 101239
+        }
+      },
+      "pmcid": "PMC11586117",
+      "xml_ok": true,
+      "xml_chars": 198820,
+      "tables": 9,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1037/drm0000338",
+      "title": "Subjectively estimated effects of nightmares on sleep onset latency and sleep quality: A cross-sectional study.",
+      "runs": {
+        "run1.db": {
+          "kind": "",
+          "chars": 0
+        },
+        "run2.db": {
+          "kind": "",
+          "chars": 0
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1038/s41597-022-01545-6",
+      "title": "A Large Collection of Real-world Pediatric Sleep Studies",
+      "runs": {
+        "run2.db": {
+          "kind": "pdf",
+          "chars": 48999
+        }
+      },
+      "pmcid": "PMC9296671",
+      "xml_ok": true,
+      "xml_chars": 99764,
+      "tables": 8,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1038/s41598-017-04353-w",
+      "title": "Discrepancy between objective and subjective cognition in adults with major depressive disorder",
+      "runs": {
+        "run1.db": {
+          "kind": "",
+          "chars": 0
+        }
+      },
+      "pmcid": "PMC5478612",
+      "xml_ok": true,
+      "xml_chars": 66958,
+      "tables": 4,
+      "stat_rows": 1,
+      "se_rows": 1,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1039/d5fo00971e",
+      "title": "Daily walnut consumption increases 6-sulfatoxymelatonin urinary levels and can improve sleep quality: a randomized crossover trial.",
+      "runs": {
+        "run1.db": {
+          "kind": "",
+          "chars": 0
+        },
+        "run2.db": {
+          "kind": "html",
+          "chars": 2920
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1046/j.1365-2869.1996.00003.x",
+      "title": "Melatonin and insomnia",
+      "runs": {
+        "run1.db": {
+          "kind": "abstract",
+          "chars": 406
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1051/0004-6361/201118085",
+      "title": "REBOUND: An open-source multi-purpose N-body code for collisional dynamics",
+      "runs": {
+        "run1.db": {
+          "kind": "pdf",
+          "chars": 49419
+        },
+        "run2.db": {
+          "kind": "",
+          "chars": 0
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1051/0004-6361/202243107",
+      "title": "Large Interferometer For Exoplanets (LIFE): IV. Ideal kernel-nulling array architectures for a space-based mid-infrared nulling interferometer",
+      "runs": {
+        "run2.db": {
+          "kind": "pdf",
+          "chars": 63434
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1055/s-0043-1761437",
+      "title": "Efficacy of Melatonin for Insomnia in Children with Autism Spectrum Disorder: A Meta-analysis",
+      "runs": {
+        "run1.db": {
+          "kind": "",
+          "chars": 0
+        }
+      },
+      "pmcid": "PMC10166641",
+      "xml_ok": true,
+      "xml_chars": 59077,
+      "tables": 1,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1080/07420528.2024.2353225",
+      "title": "The effects of melatonin and magnesium in a novel supplement delivery system on sleep scores, body composition and metabolism in otherwise healthy individuals with sleep disturbances.",
+      "runs": {
+        "run1.db": {
+          "kind": "",
+          "chars": 0
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1080/07420528.2025.2500404",
+      "title": "A modified at-home methodology for measuring dim light melatonin onset timing in healthy adults",
+      "runs": {
+        "run1.db": {
+          "kind": "",
+          "chars": 0
+        },
+        "run2.db": {
+          "kind": "",
+          "chars": 0
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1080/07420528.2025.2546006",
+      "title": "Association between Dim Light Melatonin Onset Predicted from Gene Expression Profiles with Sleep Time and Chronotype Preference: A Pilot Study",
+      "runs": {
+        "run1.db": {
+          "kind": "",
+          "chars": 0
+        },
+        "run2.db": {
+          "kind": "",
+          "chars": 0
+        }
+      },
+      "pmcid": "PMC12991043",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1080/07420528.2026.2743662",
+      "title": "Circadian misalignment and low-grade inflammation: Failure of temporal gating by the molecular clock",
+      "runs": {
+        "run1.db": {
+          "kind": "",
+          "chars": 0
+        },
+        "run2.db": {
+          "kind": "",
+          "chars": 0
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1080/07853890.2025.2576643",
+      "title": "Circadian clock genes and insomnia: molecular mechanisms and therapeutic implications.",
+      "runs": {
+        "run1.db": {
+          "kind": "",
+          "chars": 0
+        },
+        "run2.db": {
+          "kind": "",
+          "chars": 0
+        }
+      },
+      "pmcid": "PMC12548078",
+      "xml_ok": true,
+      "xml_chars": 213560,
+      "tables": 2,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1080/10401230591034287",
+      "title": "Natural Medications for Psychiatric Disorders: Considering the Alternatives",
+      "runs": {
+        "run1.db": {
+          "kind": "",
+          "chars": 0
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1093/nutrit/nuaf062",
+      "title": "Dietary Protocols to Promote and Improve Restful Sleep: A Narrative Review.",
+      "runs": {
+        "run2.db": {
+          "kind": "abstract",
+          "chars": 1824
+        }
+      },
+      "pmcid": "PMC13075487",
+      "xml_ok": true,
+      "xml_chars": 290316,
+      "tables": 1,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1093/sleep/17.7.638",
+      "title": "Melatonin possesses time-dependent hypnotic effects",
+      "runs": {
+        "run2.db": {
+          "kind": "abstract",
+          "chars": 829
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1093/sleep/19.5.423",
+      "title": "Effects of Low Oral Doses of Melatonin, Given 2–4 Hours Before Habitual Bedtime, On Sleep in Normal Young Humans",
+      "runs": {
+        "run1.db": {
+          "kind": "abstract",
+          "chars": 406
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1093/sleep/20.10.899",
+      "title": "Melatonin: A Sleep-Promoting Hormone",
+      "runs": {
+        "run1.db": {
+          "kind": "abstract",
+          "chars": 406
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1093/sleep/20.2.124",
+      "title": "Sleep-Promoting and Hypothermic Effects of Daytime Melatonin Administration in Humans",
+      "runs": {
+        "run1.db": {
+          "kind": "abstract",
+          "chars": 406
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1093/sleep/21.1.52",
+      "title": "The Role of Melatonin and Circadian Phase in Age-related Sleep-maintenance Insomnia: Assessment in a Clinical Trial of Melatonin Replacement",
+      "runs": {
+        "run1.db": {
+          "kind": "abstract",
+          "chars": 406
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1093/sleep/23.1.1a",
+      "title": "An Epidemiological Study of Insomnia Among the Japanese General Population",
+      "runs": {
+        "run1.db": {
+          "kind": "",
+          "chars": 0
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1093/sleep/23.5.1i",
+      "title": "Hypnotic Activity of Melatonin",
+      "runs": {
+        "run1.db": {
+          "kind": "abstract",
+          "chars": 406
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1093/sleep/24.2.183",
+      "title": "Exogenous melatonin in periodic limb movement disorder: an open clinical trial and a hypothesis.",
+      "runs": {
+        "run1.db": {
+          "kind": "abstract",
+          "chars": 2085
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1093/sleep/26.7.893",
+      "title": "A Multicenter, Placebo-controlled Trial of Melatonin for Sleep Disturbance in Alzheimer's Disease",
+      "runs": {
+        "run1.db": {
+          "kind": "html",
+          "chars": 71085
+        }
+      },
+      "pmcid": "PMC4418658",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1093/sleep/zsaa056.038",
+      "title": "0039 The Clinical Utility of Dim Light Melatonin Onset in Treatment of Delayed Sleep-Wake Phase Disorder: Preliminary Findings",
+      "runs": {
+        "run1.db": {
+          "kind": "abstract",
+          "chars": 2462
+        },
+        "run2.db": {
+          "kind": "abstract",
+          "chars": 2462
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1093/sleep/zsaa056.468",
+      "title": "0471 24-Month Post Marketing Safety Surveillance Data of a Novel Continuous Release and Absorption Melatonin (CRA-Melatonin) Delivery System, Confirms Favorable Safety Profile",
+      "runs": {
+        "run2.db": {
+          "kind": "abstract",
+          "chars": 2223
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1093/sleep/zsab072.347",
+      "title": "348 Absence of Withdrawal Symptoms and Rebound Insomnia Upon Discontinuation of Daridorexant in Patients with Insomnia",
+      "runs": {
+        "run1.db": {
+          "kind": "",
+          "chars": 0
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1093/sleep/zsad077.0022",
+      "title": "0022 Characterization and Evaluation of Digital Dim Light Melatonin Onset in a Population-Based Sample",
+      "runs": {
+        "run1.db": {
+          "kind": "abstract",
+          "chars": 2614
+        },
+        "run2.db": {
+          "kind": "abstract",
+          "chars": 2512
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1093/sleep/zsaf090.0105",
+      "title": "0105 Sex Differences in the Association of 24h Melatonin Area Under the Curve with Cognitive Function in Older Adults",
+      "runs": {
+        "run1.db": {
+          "kind": "abstract",
+          "chars": 2607
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1093/sleep/zsag003",
+      "title": "Fetal Sleep: A Cross-Species Review of Physiology, Measurement, and Classification",
+      "runs": {
+        "run1.db": {
+          "kind": "pdf",
+          "chars": 114846
+        },
+        "run2.db": {
+          "kind": "pdf",
+          "chars": 114846
+        }
+      },
+      "pmcid": "PMC13089461",
+      "xml_ok": true,
+      "xml_chars": 271180,
+      "tables": 7,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1093/sleep/zsag074",
+      "title": "“How did you sleep last night?”: predicting young adults’ subjective sleep quality through the use of multi-night ambulatory sleep electroencephalographic",
+      "runs": {
+        "run1.db": {
+          "kind": "",
+          "chars": 0
+        },
+        "run2.db": {
+          "kind": "abstract",
+          "chars": 2041
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1093/sleepadvances/zpaf047",
+      "title": "Home-based dim light melatonin onset assessment among adults with obesity: feasibility and procedural considerations",
+      "runs": {
+        "run1.db": {
+          "kind": "html",
+          "chars": 65797
+        },
+        "run2.db": {
+          "kind": "html",
+          "chars": 65797
+        }
+      },
+      "pmcid": "PMC12413864",
+      "xml_ok": true,
+      "xml_chars": 137617,
+      "tables": 3,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1097/00131746-200607000-00005",
+      "title": "Searching for new options for treating insomnia: are melatonin and ramelteon beneficial?",
+      "runs": {
+        "run1.db": {
+          "kind": "abstract",
+          "chars": 2011
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1097/aln.0000000000003285",
+      "title": "Minimal Clinically Important Difference, Maximum Impact",
+      "runs": {
+        "run2.db": {
+          "kind": "abstract",
+          "chars": 307
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1097/eja.0000000000001561",
+      "title": "Oral melatonin as part of multimodal anxiolysis decreases emergence delirium in children whereas midazolam does not",
+      "runs": {
+        "run1.db": {
+          "kind": "",
+          "chars": 0
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1097/j.pain.0000000000003492",
+      "title": "Performance of baseline quartile-stratified minimal clinically important difference estimates was superior to individual minimal clinically important difference estimates when compared with a gold standard comparator of important change",
+      "runs": {
+        "run2.db": {
+          "kind": "abstract",
+          "chars": 1975
+        }
+      },
+      "pmcid": "PMC12074890",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1097/mcp.0000000000000522",
+      "title": "The use and misuse of exogenous melatonin in the treatment of sleep disorders",
+      "runs": {
+        "run2.db": {
+          "kind": "",
+          "chars": 0
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1109/bci65088.2025.10931591",
+      "title": "EEG Spectral Analysis in Gray Zone Between Healthy and Insomnia",
+      "runs": {
+        "run1.db": {
+          "kind": "pdf",
+          "chars": 20866
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1111/j.1365-2869.2005.00451.x",
+      "title": "Prediction of melatonin efficacy by pretreatment dim light melatonin onset in children with idiopathic chronic sleep onset insomnia",
+      "runs": {
+        "run1.db": {
+          "kind": "abstract",
+          "chars": 1860
+        },
+        "run2.db": {
+          "kind": "abstract",
+          "chars": 1849
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1111/j.1365-2869.2007.00613.x",
+      "title": "Prolonged-release melatonin improves sleep quality and morning alertness in insomnia patients aged 55 years and older and has no withdrawal effects.",
+      "runs": {
+        "run1.db": {
+          "kind": "abstract",
+          "chars": 2240
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1111/j.1365-2869.2012.01021.x",
+      "title": "Controlled‐release melatonin, singly and combined with cognitive behavioural therapy, for persistent insomnia in children with autism spectrum disorders: a randomized placebo‐controlled trial",
+      "runs": {
+        "run1.db": {
+          "kind": "",
+          "chars": 0
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1111/j.1440-1819.1998.tb01063.x",
+      "title": "Melatonin treatment for circadian rhythm sleep disorders",
+      "runs": {
+        "run1.db": {
+          "kind": "abstract",
+          "chars": 406
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1111/j.1525-1497.2005.0243.x",
+      "title": "The efficacy and safety of exogenous melatonin for primary sleep disorders a meta-analysis",
+      "runs": {
+        "run1.db": {
+          "kind": "abstract",
+          "chars": 2092
+        },
+        "run2.db": {
+          "kind": "abstract",
+          "chars": 2092
+        }
+      },
+      "pmcid": "PMC1490287",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1111/jhn.70193/v1/review2",
+      "title": "The Content of Dietary Melatonin in 119 Food Items and Its Relationship With Chronic Diseases: Results of the CUME+ Study",
+      "runs": {
+        "run1.db": {
+          "kind": "abstract",
+          "chars": 2173
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1111/jpi.12750",
+      "title": "Exogenous melatonin decreases circadian misalignment and body weight among early types.",
+      "runs": {
+        "run1.db": {
+          "kind": "abstract",
+          "chars": 2885
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1111/jsr.13939",
+      "title": "Efficacy of melatonin and ramelteon for the acute and long‐term management of insomnia disorder in adults: A systematic review and meta‐analysis",
+      "runs": {
+        "run1.db": {
+          "kind": "",
+          "chars": 0
+        },
+        "run2.db": {
+          "kind": "abstract",
+          "chars": 2075
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1111/jsr.70097",
+      "title": "The Effectiveness of Melatonin for Sleep Disturbances in Parkinson' Disease: Systematic Review and Meta-Analysis.",
+      "runs": {
+        "run1.db": {
+          "kind": "abstract",
+          "chars": 2607
+        },
+        "run2.db": {
+          "kind": "abstract",
+          "chars": 1966
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1111/jsr.70504",
+      "title": "Subjective Age Discrepancy Associates With Sleep Quality in a Large Longitudinal Sample of Middle‐Aged and Older Adults",
+      "runs": {
+        "run2.db": {
+          "kind": "",
+          "chars": 0
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1123/japa.2018-0107",
+      "title": "Effects of Melatonin Ingestion Before Nocturnal Sleep on Postural Balance and Subjective Sleep Quality in Older Adults",
+      "runs": {
+        "run1.db": {
+          "kind": "abstract",
+          "chars": 1815
+        },
+        "run2.db": {
+          "kind": "abstract",
+          "chars": 1815
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1136/bmj.38731.532766.f6",
+      "title": "Efficacy and safety of exogenous melatonin for secondary sleep disorders and sleep disorders accompanying sleep restriction: meta-analysis",
+      "runs": {
+        "run2.db": {
+          "kind": "html",
+          "chars": 42481
+        }
+      },
+      "pmcid": "PMC1370968",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1145/3447516",
+      "title": "Sensor-Based Estimation of Dim Light Melatonin Onset (DLMO) Using Features of Two Time Scales",
+      "runs": {
+        "run1.db": {
+          "kind": "pdf",
+          "chars": 53141
+        }
+      },
+      "pmcid": "PMC13229570",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1159/000137794",
+      "title": "Rebound Insomnia and Rebound Anxiety: A Review",
+      "runs": {
+        "run1.db": {
+          "kind": "abstract",
+          "chars": 927
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1164/rccm.200404-488oc",
+      "title": "Melatonin improves sleep in asthma: a randomized, double-blind, placebo-controlled study",
+      "runs": {
+        "run2.db": {
+          "kind": "abstract",
+          "chars": 1277
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1176/ajp.154.10.1417",
+      "title": "Prevalence, burden, and treatment of insomnia in primary care",
+      "runs": {
+        "run1.db": {
+          "kind": "",
+          "chars": 0
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1177/088307380101600204",
+      "title": "Melatonin for Chronic Sleep Onset Insomnia in Children: A Randomized Placebo-Controlled Trial",
+      "runs": {
+        "run1.db": {
+          "kind": "",
+          "chars": 0
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1186/s12887-026-06611-1",
+      "title": "Efficacy of clonidine and melatonin for treating insomnia in anxious children: a randomized comparison.",
+      "runs": {
+        "run1.db": {
+          "kind": "",
+          "chars": 0
+        }
+      },
+      "pmcid": "PMC13069753",
+      "xml_ok": true,
+      "xml_chars": 80232,
+      "tables": 3,
+      "stat_rows": 5,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 5
+    },
+    {
+      "doi": "10.1186/s12991-022-00390-6",
+      "title": "Biological correlates of altered circadian rhythms, autonomic functions and sleep problems in autism spectrum disorder.",
+      "runs": {
+        "run1.db": {
+          "kind": "pdf",
+          "chars": 145368
+        }
+      },
+      "pmcid": "PMC9082467",
+      "xml_ok": true,
+      "xml_chars": 281675,
+      "tables": 6,
+      "stat_rows": 1,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 1
+    },
+    {
+      "doi": "10.1201/9781420001211-10",
+      "title": "New perspectives on the role of melatonin in human sleep, circadian rhythms and their regulation.",
+      "runs": {
+        "run1.db": {
+          "kind": "",
+          "chars": 0
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1210/jc.2010-1031",
+      "title": "Clinical Implications of the Melatonin Phase Response Curve",
+      "runs": {
+        "run1.db": {
+          "kind": "",
+          "chars": 0
+        }
+      },
+      "pmcid": "PMC2928905",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1364/solith.2025.sm2e.3",
+      "title": "Radiative Cooling and Thermoregulation of Vertical Facades with Micropatterned Directional Emitters",
+      "runs": {
+        "run2.db": {
+          "kind": "pdf",
+          "chars": 39889
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1371/journal.pcbi.1002650",
+      "title": "Diversity and noise effects in a model of homeostatic regulation of the sleep-wake cycle",
+      "runs": {
+        "run2.db": {
+          "kind": "pdf",
+          "chars": 59372
+        }
+      },
+      "pmcid": "PMC3426568",
+      "xml_ok": true,
+      "xml_chars": 229643,
+      "tables": 1,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.14704/nq.2016.14.1.864",
+      "title": "Quantum Anti-Zeno Treatment of Zeno-type Sleep Disorders",
+      "runs": {
+        "run1.db": {
+          "kind": "pdf",
+          "chars": 23039
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.14814/phy2.70805",
+      "title": "Sleep quality and sleepiness in adults with multiple myeloma. Is melatonin a potential treatment?",
+      "runs": {
+        "run2.db": {
+          "kind": "abstract",
+          "chars": 1618
+        }
+      },
+      "pmcid": "PMC13097372",
+      "xml_ok": true,
+      "xml_chars": 79136,
+      "tables": 3,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1515/jpem.1999.12.1.57",
+      "title": "Effects of a Low Dose of Melatonin on Sleep in Children with Angelman Syndrome",
+      "runs": {
+        "run1.db": {
+          "kind": "",
+          "chars": 0
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.1542/hpeds.2026-009244",
+      "title": "Sleep Management and Recovery After TBI in Kids (SMART-Kids): Pilot Trial Using Melatonin.",
+      "runs": {
+        "run2.db": {
+          "kind": "abstract",
+          "chars": 1910
+        }
+      },
+      "pmcid": "PMC13648292",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.17241/smr.2025.03111",
+      "title": "Relationship Between Dexamethasone Therapy and Sleep Quality, Insomnia, and Melatonin Levels in Patients With Brain Tumors",
+      "runs": {
+        "run1.db": {
+          "kind": "",
+          "chars": 0
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.20944/preprints202506.1994.v1",
+      "title": "Salivary Melatonin Levels, Sleep Quality, and Quality of Life in Patients with Chronic Urticaria in Comparison to Healthy Individuals",
+      "runs": {
+        "run2.db": {
+          "kind": "html",
+          "chars": 50258
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.20944/preprints202609.0063.v1",
+      "title": "Salivary Melatonin Levels in Comparison with Disease Features and Antihistamine Use: Prospective Follow-Up of Atopic Dermatitis Patients.",
+      "runs": {
+        "run1.db": {
+          "kind": "abstract",
+          "chars": 1695
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.2106/jbjs.23.00027",
+      "title": "Diagnosis-Specific Thresholds of the Minimal Clinically Important Difference and Patient Acceptable Symptom State for KOOS After Total Knee Arthroplasty",
+      "runs": {
+        "run1.db": {
+          "kind": "",
+          "chars": 0
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.2106/jbjs.24.00916",
+      "title": "The Minimal Clinically Important Difference (MCID) for Total Joint Arthroplasty Outcome Measures Varies Substantially by Calculation Method",
+      "runs": {
+        "run1.db": {
+          "kind": "",
+          "chars": 0
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.21203/rs.3.rs-5352161/v1",
+      "title": "Effects of short-term melatonin supplementation on sleep quality in college students with high frequency of screen-based sedentary behaviour: a two-stage study",
+      "runs": {
+        "run2.db": {
+          "kind": "",
+          "chars": 0
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.21203/rs.3.rs-7420412/v1",
+      "title": "Transcranial alternating current stimulation for chronic insomnia: a meta-analytic evaluation of sleep restoration and safety in adults.",
+      "runs": {
+        "run2.db": {
+          "kind": "",
+          "chars": 0
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.21203/rs.3.rs-9661735/v1",
+      "title": "Melatonin achieves sustained pain relief by modulating macrophage repolarization from M1 to M2 in the trigeminal ganglion of TMJOA rats",
+      "runs": {
+        "run2.db": {
+          "kind": "",
+          "chars": 0
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.2139/ssrn.4950638",
+      "title": "Long-Term Efficacy and Safety of Leuprorelin Treatment in Children with Central Precocious Puberty: A Systematic Review and Meta-Analysis",
+      "runs": {
+        "run2.db": {
+          "kind": "html",
+          "chars": 42779
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.2147/nss.s340944",
+      "title": "Melatonin Treatment for Pediatric Patients with Insomnia: Is There a Place for It?",
+      "runs": {
+        "run1.db": {
+          "kind": "",
+          "chars": 0
+        }
+      },
+      "pmcid": "PMC9621019",
+      "xml_ok": true,
+      "xml_chars": 219826,
+      "tables": 1,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.2147/nss.s602062",
+      "title": "Night-to-Night Sleep Variability Modulates Subjective Sleep Perception in Chronic Insomnia: A Multilevel Analysis.",
+      "runs": {
+        "run2.db": {
+          "kind": "",
+          "chars": 0
+        }
+      },
+      "pmcid": "PMC13289649",
+      "xml_ok": true,
+      "xml_chars": 123466,
+      "tables": 7,
+      "stat_rows": 15,
+      "se_rows": 15,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.2147/nss.s638398",
+      "title": "Electroacupuncture for Residual Insomnia in Remitted Depressive Disorders: Evidence Boundaries and Chronotherapeutic Hypothesis.",
+      "runs": {
+        "run1.db": {
+          "kind": "",
+          "chars": 0
+        }
+      },
+      "pmcid": "PMC13702085",
+      "xml_ok": true,
+      "xml_chars": 172905,
+      "tables": 5,
+      "stat_rows": 3,
+      "se_rows": 3,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.2147/nss.s73856",
+      "title": "Pulsing blue light through closed eyelids: effects on acute melatonin suppression and phase shifting of dim light melatonin onset",
+      "runs": {
+        "run1.db": {
+          "kind": "html",
+          "chars": 41362
+        },
+        "run2.db": {
+          "kind": "",
+          "chars": 0
+        }
+      },
+      "pmcid": "PMC4259558",
+      "xml_ok": true,
+      "xml_chars": 75511,
+      "tables": 1,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.21522/tijph.2013.12.04.art047",
+      "title": "Effect of Saffron Extract on Sleep Quality and Melatonin Concentrations  in Adults with Temporomandibular Disorders-an Observational Study",
+      "runs": {
+        "run1.db": {
+          "kind": "abstract",
+          "chars": 1866
+        },
+        "run2.db": {
+          "kind": "abstract",
+          "chars": 1762
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.2174/157015910792246209",
+      "title": "Clinical Aspects of Melatonin Intervention in Alzheimers Disease Progression",
+      "runs": {
+        "run1.db": {
+          "kind": "",
+          "chars": 0
+        }
+      },
+      "pmcid": "PMC3001215",
+      "xml_ok": true,
+      "xml_chars": 136850,
+      "tables": 2,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.2310/neuro.1334",
+      "title": "Clinical aspects of melatonin intervention in Alzheimer's disease progression.",
+      "runs": {
+        "run1.db": {
+          "kind": "",
+          "chars": 0
+        },
+        "run2.db": {
+          "kind": "html",
+          "chars": 7119
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.26226/morressier.5971be86d462b80290b531f3",
+      "title": "The effect of melatonin and zinc on primary insomnia in elderly patients",
+      "runs": {
+        "run2.db": {
+          "kind": "",
+          "chars": 0
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.2903/j.efsa.2011.2241",
+      "title": "Scientific Opinion on the substantiation of a health claim related to melatonin and reduction of sleep onset latency (ID 1698, 1780, 4080) pursuant to Article 13(1) of Regulation (EC) No 1924/2006",
+      "runs": {
+        "run1.db": {
+          "kind": "html",
+          "chars": 8965
+        },
+        "run2.db": {
+          "kind": "html",
+          "chars": 8965
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.31234/osf.io/bhzrj",
+      "title": "Effects of (non)deceptive placebos on reported sleep quality and food cue reactivity",
+      "runs": {
+        "run2.db": {
+          "kind": "abstract",
+          "chars": 1243
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.3171/2021.4.focus21134",
+      "title": "Final infarct prediction in acute ischemic stroke",
+      "runs": {
+        "run1.db": {
+          "kind": "pdf",
+          "chars": 76311
+        }
+      },
+      "pmcid": "PMC8717742",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.32794/mr112500167",
+      "title": "Physiological processes underpinning the ubiquitous benefits and interactions of melatonin, butyrate and green tea in neurodegenerative conditions",
+      "runs": {
+        "run2.db": {
+          "kind": "",
+          "chars": 0
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.32794/mr11250091",
+      "title": "An urgent proposal for the immediate use of melatonin as an adjuvant to anti- SARS-CoV-2 vaccination",
+      "runs": {
+        "run1.db": {
+          "kind": "html",
+          "chars": 3056
+        },
+        "run2.db": {
+          "kind": "html",
+          "chars": 3056
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.3389/fnsyn.2026.1949833",
+      "title": "Sleep disturbances as an early indicator of psychotic disorders in adolescents and young adults.",
+      "runs": {
+        "run1.db": {
+          "kind": "",
+          "chars": 0
+        },
+        "run2.db": {
+          "kind": "",
+          "chars": 0
+        }
+      },
+      "pmcid": "PMC13586941",
+      "xml_ok": true,
+      "xml_chars": 230722,
+      "tables": 1,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.3389/fnut.2026.1890075",
+      "title": "Dietary melatonin, chronotype, and night eating syndrome in relation to sleep quality among adults.",
+      "runs": {
+        "run2.db": {
+          "kind": "pdf",
+          "chars": 64839
+        }
+      },
+      "pmcid": "PMC13520769",
+      "xml_ok": true,
+      "xml_chars": 152518,
+      "tables": 4,
+      "stat_rows": 27,
+      "se_rows": 27,
+      "ci_rows": 27,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.3390/biom12020198",
+      "title": "Exogenous Gibberellin Treatment Enhances Melatonin Synthesis for Melatonin-Enriched Rice Production",
+      "runs": {
+        "run2.db": {
+          "kind": "",
+          "chars": 0
+        }
+      },
+      "pmcid": "PMC8961596",
+      "xml_ok": true,
+      "xml_chars": 103516,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.3390/children12111471",
+      "title": "Clinical, Sleep, and Chronobiological Characteristics of Children with Smith-Magenis Syndrome Under Treatment for Sleep Disorders.",
+      "runs": {
+        "run2.db": {
+          "kind": "abstract",
+          "chars": 2222
+        }
+      },
+      "pmcid": "PMC12650990",
+      "xml_ok": true,
+      "xml_chars": 211726,
+      "tables": 6,
+      "stat_rows": 3,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 3
+    },
+    {
+      "doi": "10.3390/cimb47080664",
+      "title": "Circadian Rhythm Disruptions and Cardiovascular Disease Risk: The Special Role of Melatonin.",
+      "runs": {
+        "run1.db": {
+          "kind": "html",
+          "chars": 110133
+        },
+        "run2.db": {
+          "kind": "html",
+          "chars": 110133
+        }
+      },
+      "pmcid": "PMC12384635",
+      "xml_ok": true,
+      "xml_chars": 261085,
+      "tables": 3,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.3390/clockssleep2010001",
+      "title": "A Cross-Sectional Study of the Associations between Chronotype, Social Jetlag and Subjective Sleep Quality in Healthy Adults",
+      "runs": {
+        "run1.db": {
+          "kind": "html",
+          "chars": 22085
+        },
+        "run2.db": {
+          "kind": "html",
+          "chars": 22085
+        }
+      },
+      "pmcid": "PMC7445814",
+      "xml_ok": true,
+      "xml_chars": 50147,
+      "tables": 2,
+      "stat_rows": 1,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 1
+    },
+    {
+      "doi": "10.3390/foods15183230",
+      "title": "&lt;i&gt;Bifidobacterium longum&lt;/i&gt; B18 Modulates Pharmacologically Induced Sleep Parameters in Rats in Association with Altered Tryptophan-Melatonin Metabolism.",
+      "runs": {
+        "run1.db": {
+          "kind": "",
+          "chars": 0
+        }
+      },
+      "pmcid": "PMC13606917",
+      "xml_ok": true,
+      "xml_chars": 165801,
+      "tables": 2,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.3390/healthcare11050675",
+      "title": "Effects of Melatonin Supplementation on Sleep Quality in Breast Cancer Patients: A Systematic Review and Meta-Analysis",
+      "runs": {
+        "run2.db": {
+          "kind": "abstract",
+          "chars": 1618
+        }
+      },
+      "pmcid": "PMC10001052",
+      "xml_ok": true,
+      "xml_chars": 94688,
+      "tables": 1,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.3390/healthcare13020180",
+      "title": "The Impact of Relaxation Massage Prior to Bedtime on Sleep Quality and Quantity in People with Symptoms of Chronic Insomnia: A Home-Based Sleep Study",
+      "runs": {
+        "run1.db": {
+          "kind": "",
+          "chars": 0
+        }
+      },
+      "pmcid": "PMC11765054",
+      "xml_ok": true,
+      "xml_chars": 139573,
+      "tables": 4,
+      "stat_rows": 1,
+      "se_rows": 0,
+      "ci_rows": 1,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.3390/healthcare6010023",
+      "title": "Long-Term Melatonin Therapy for Adolescents and Young Adults with Chronic Sleep Onset Insomnia and Late Melatonin Onset: Evaluation of Sleep Quality, Chronotype, and Lifestyle Factors Compared to Age-Related Randomly Selected Population Cohorts",
+      "runs": {
+        "run1.db": {
+          "kind": "html",
+          "chars": 54366
+        },
+        "run2.db": {
+          "kind": "html",
+          "chars": 54366
+        }
+      },
+      "pmcid": "PMC5872230",
+      "xml_ok": true,
+      "xml_chars": 121781,
+      "tables": 1,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.3390/ijms24010860",
+      "title": "Multiplatform-Integrated Identification of Melatonin Targets for a Triad of Psychosocial-Sleep/Circadian-Cardiometabolic Disorders.",
+      "runs": {
+        "run2.db": {
+          "kind": "",
+          "chars": 0
+        }
+      },
+      "pmcid": "PMC9821171",
+      "xml_ok": true,
+      "xml_chars": 197210,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.3390/ijms27031430",
+      "title": "Benzodiazepine Dependence: Clinical and Molecular Aspects, Preventive Strategies and Therapeutic Approaches.",
+      "runs": {
+        "run1.db": {
+          "kind": "",
+          "chars": 0
+        }
+      },
+      "pmcid": "PMC12898709",
+      "xml_ok": true,
+      "xml_chars": 352997,
+      "tables": 9,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.3390/ijms27146320",
+      "title": "Plasma Melatonin Levels, Seasonal Variation, and Sleep Quality: A Stratified Analysis of Adults Aged 25-65 Years Using the Pittsburgh Sleep Quality Index and Actigraphy.",
+      "runs": {
+        "run1.db": {
+          "kind": "html",
+          "chars": 63862
+        }
+      },
+      "pmcid": "PMC13409838",
+      "xml_ok": true,
+      "xml_chars": 135011,
+      "tables": 4,
+      "stat_rows": 3,
+      "se_rows": 0,
+      "ci_rows": 1,
+      "sd_n_rows": 2
+    },
+    {
+      "doi": "10.3390/jcm11175138",
+      "title": "Use of Melatonin and/on Ramelteon for the Treatment of Insomnia in Older Adults: A Systematic Review and Meta-Analysis",
+      "runs": {
+        "run1.db": {
+          "kind": "html",
+          "chars": 47446
+        }
+      },
+      "pmcid": "PMC9456584",
+      "xml_ok": true,
+      "xml_chars": 173772,
+      "tables": 3,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.3390/jcm13175216",
+      "title": "Effects of Melatonin on Exercise-Induced Oxidative Stress in Adults with Obesity Undergoing a Multidisciplinary Body Weight Reduction Program",
+      "runs": {
+        "run1.db": {
+          "kind": "",
+          "chars": 0
+        }
+      },
+      "pmcid": "PMC11396206",
+      "xml_ok": true,
+      "xml_chars": 154907,
+      "tables": 5,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.3390/medicina62040662",
+      "title": "The Association of Periodontitis with Circadian Rhythm Disorders and Sleep-A Scoping Review.",
+      "runs": {
+        "run2.db": {
+          "kind": "",
+          "chars": 0
+        }
+      },
+      "pmcid": "PMC13117668",
+      "xml_ok": true,
+      "xml_chars": 200675,
+      "tables": 3,
+      "stat_rows": 6,
+      "se_rows": 0,
+      "ci_rows": 6,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.3390/molecules30183814",
+      "title": "The Efficacy of Melatonergic Receptor Agonists Used in Clinical Practice in Insomnia Treatment: Melatonin, Tasimelteon, Ramelteon, Agomelatine, and Selected Herbs.",
+      "runs": {
+        "run1.db": {
+          "kind": "html",
+          "chars": 170602
+        }
+      },
+      "pmcid": "PMC12472680",
+      "xml_ok": true,
+      "xml_chars": 402386,
+      "tables": 6,
+      "stat_rows": 1,
+      "se_rows": 1,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.3390/neurolint15010031",
+      "title": "Chronic Administration of Melatonin: Physiological and Clinical Considerations",
+      "runs": {
+        "run1.db": {
+          "kind": "abstract",
+          "chars": 1929
+        }
+      },
+      "pmcid": "PMC10053496",
+      "xml_ok": true,
+      "xml_chars": 144851,
+      "tables": 1,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.35440/hutfd.1631258",
+      "title": "The Relationship Between Chronic Fatigue, Sleep quality, and Melatonin Levels in Sjogren's Syndrome",
+      "runs": {
+        "run2.db": {
+          "kind": "",
+          "chars": 0
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.35630/2025/15/iss.6.610",
+      "title": "The role of melatonin in the regulation of circadian rhythm and sleep quality: narrative review",
+      "runs": {
+        "run2.db": {
+          "kind": "",
+          "chars": 0
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.37766/inplasy2025.4.0091",
+      "title": "Effect of extended-release melatonin on insomnia in older adults, a systematic review",
+      "runs": {
+        "run1.db": {
+          "kind": "pdf",
+          "chars": 16290
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.37766/inplasy2026.5.0055",
+      "title": "Effect of Melatonin on Sleep Quality in an Older Adult Population With Insomnia: A Systematic Review.",
+      "runs": {
+        "run1.db": {
+          "kind": "",
+          "chars": 0
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.4061/2011/741974",
+      "title": "Melatonin and its agonist ramelteon in Alzheimer's disease: possible therapeutic value.",
+      "runs": {
+        "run1.db": {
+          "kind": "html",
+          "chars": 89484
+        }
+      },
+      "pmcid": "PMC3004402",
+      "xml_ok": true,
+      "xml_chars": 235026,
+      "tables": 2,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.4103/jfmpc.jfmpc_150_25",
+      "title": "Melatonin and sleep: Exploring its role in regulating the circadian rhythm and sleep-wake cycle.",
+      "runs": {
+        "run1.db": {
+          "kind": "html",
+          "chars": 33335
+        },
+        "run2.db": {
+          "kind": "html",
+          "chars": 33335
+        }
+      },
+      "pmcid": "PMC13241146",
+      "xml_ok": true,
+      "xml_chars": 62257,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.4103/jrpp.jrpp_115_25",
+      "title": "Efficacy of an Oral Melatonin Suspension in Idiopathic Nocturnal Irritability among Infants Older than 6 Months: A Randomized, Single-blind, Quasi-experimental Trial.",
+      "runs": {
+        "run1.db": {
+          "kind": "html",
+          "chars": 32936
+        },
+        "run2.db": {
+          "kind": "html",
+          "chars": 32936
+        }
+      },
+      "pmcid": "PMC13570694",
+      "xml_ok": true,
+      "xml_chars": 82976,
+      "tables": 2,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.4103/mgmj.mgmj_7_22",
+      "title": "How effective is daytime oral exogenous melatonin supplementation in improving sleep quality and duration?",
+      "runs": {
+        "run1.db": {
+          "kind": "",
+          "chars": 0
+        },
+        "run2.db": {
+          "kind": "",
+          "chars": 0
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.4310/jdg/1580526015",
+      "title": "Explicit ambient metrics and holonomy",
+      "runs": {
+        "run2.db": {
+          "kind": "pdf",
+          "chars": 81440
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.4414/smw.2009.12342",
+      "title": "Melatonin in treatment of chronic sleep disorders in adults with autism: a retrospective study",
+      "runs": {
+        "run1.db": {
+          "kind": "html",
+          "chars": 5897
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.5152/eurasianjmed.2015.0267",
+      "title": "A Review of Melatonin, Its Receptors and Drugs",
+      "runs": {
+        "run1.db": {
+          "kind": "",
+          "chars": 0
+        }
+      },
+      "pmcid": "PMC4970552",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.5220/0009576801570168",
+      "title": "A Systematic Review of Computational Thinking in Early Ages",
+      "runs": {
+        "run2.db": {
+          "kind": "pdf",
+          "chars": 57414
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.5664/jcsm.11076",
+      "title": "Low-dose exogenous melatonin plus evening dim light and time in bed scheduling advances circadian phase irrespective of measured or estimated dim light melatonin onset time: preliminary findings.",
+      "runs": {
+        "run1.db": {
+          "kind": "",
+          "chars": 0
+        }
+      },
+      "pmcid": "PMC11217625",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.5664/jcsm.11648",
+      "title": "Subjective daytime sleepiness, not sleep quality or hypoxia, predicts sleep-dependent memory consolidation in a cohort of older adults",
+      "runs": {
+        "run2.db": {
+          "kind": "",
+          "chars": 0
+        }
+      },
+      "pmcid": "PMC12225258",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.5664/jcsm.11650",
+      "title": "The relationship between sleep and circadian-sleep phase angles based on dim light melatonin onset predicted from light and activity data",
+      "runs": {
+        "run1.db": {
+          "kind": "",
+          "chars": 0
+        }
+      },
+      "pmcid": "PMC12320674",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.5847/wjem.j.1920-8642.2018.04.008",
+      "title": "Comparison of exogenous melatonin versus placebo on sleep efficiency in emergency medicine residents working night shifts: A randomized trial.",
+      "runs": {
+        "run1.db": {
+          "kind": "html",
+          "chars": 24283
+        }
+      },
+      "pmcid": "PMC6117540",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.5888/pcd20.230198",
+      "title": "Substance Use, Sleep Duration, and Health Among Adults in Ohio",
+      "runs": {
+        "run1.db": {
+          "kind": "abstract",
+          "chars": 2122
+        }
+      },
+      "pmcid": "PMC10756651",
+      "xml_ok": true,
+      "xml_chars": 84859,
+      "tables": 3,
+      "stat_rows": 16,
+      "se_rows": 8,
+      "ci_rows": 8,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.69854/jcq.2024.0016",
+      "title": "Minimal clinically important difference (MCID) of effect sizes other than mean difference",
+      "runs": {
+        "run1.db": {
+          "kind": "",
+          "chars": 0
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    },
+    {
+      "doi": "10.7759/cureus.119054",
+      "title": "Long-Term Cardiovascular Safety of Melatonin: Why Dose, Duration, and Patient Phenotype Matter",
+      "runs": {
+        "run2.db": {
+          "kind": "pdf",
+          "chars": 18024
+        }
+      },
+      "pmcid": "",
+      "xml_ok": false,
+      "xml_chars": 0,
+      "tables": 0,
+      "stat_rows": 0,
+      "se_rows": 0,
+      "ci_rows": 0,
+      "sd_n_rows": 0
+    }
+  ]
+}
