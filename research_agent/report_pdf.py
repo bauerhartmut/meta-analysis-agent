@@ -87,6 +87,10 @@ def markdown_to_pdf(md_path: str | Path) -> str | None:
         "--disable-gpu",
         "--no-first-run",
         "--run-all-compositor-stages-before-draw",
+        # Ohne diesen Schalter druckt Edge Dateipfad und Seitenzahl als
+        # Kopf-/Fusszeile mit - ein lokaler Pfad hat in einem Bericht nichts
+        # zu suchen.
+        "--no-pdf-header-footer",
         "--print-to-pdf=" + str(pdf_path.resolve()),
         Path(tmp_html).resolve().as_uri(),
     ]
