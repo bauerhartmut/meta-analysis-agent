@@ -75,3 +75,5 @@ research_agent/memory/store.py
 # Dritt-XML (Europe PMC) nicht ins Repo
 data/bench/xml6/*.xml
 data/bench/xml_all/*.xml
+data/bench/sol/xml/*.xml
+data/bench/sol/*.db

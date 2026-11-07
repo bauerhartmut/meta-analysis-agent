@@ -1,0 +1,507 @@
+{
+ "query": "melatonin sleep onset latency randomized trial",
+ "status": 200,
+ "returned": 100,
+ "records": [
+  {
+   "doi": "10.7717/peerj.5172/supp-15",
+   "title": "Figure S15: Forest plot of comparison: 5 Sleep onset latency: exercise versus control, outcome: 5.1 Sleep onset latency",
+   "type": "component"
+  },
+  {
+   "doi": "10.2903/j.efsa.2011.2241",
+   "title": "Scientific Opinion on the substantiation of a health claim related to melatonin and reduction of sleep onset latency (ID 1698, 1780, 4080) pursuant to Article 13(1) of Regulation (EC) No 1924/2006",
+   "type": "journal-article"
+  },
+  {
+   "doi": "10.1046/j.1365-2869.1996.t01-1-00006.x",
+   "title": "Day‐time melatonin administration: Effects on core temperature and sleep onset latency",
+   "type": "journal-article"
+  },
+  {
+   "doi": "10.1093/sleep/zsw038",
+   "title": "Effects of Melatonin and Bright Light Treatment in Childhood Chronic Sleep Onset Insomnia With Late Melatonin Onset: A Randomized Controlled Study",
+   "type": "journal-article"
+  },
+  {
+   "doi": "10.32388/6k7lfa",
+   "title": "Sleep Onset Latency",
+   "type": "reference-entry"
+  },
+  {
+   "doi": "10.1093/sleep/19.8.632",
+   "title": "The Multiple Sleep Latency Test: Comparison of Sleep Onset Criteria",
+   "type": "journal-article"
+  },
+  {
+   "doi": "10.2310/7010.2001.6942",
+   "title": "Melatonin for Chronic Sleep Onset Insomnia in Children: A Randomized Placebo-Controlled Trial",
+   "type": "journal-article"
+  },
+  {
+   "doi": "10.1007/978-3-540-38918-7_6737",
+   "title": "Sleep (Onset) Latency",
+   "type": "book-chapter"
+  },
+  {
+   "doi": "10.1016/j.sleep.2017.11.548",
+   "title": "Sleep onset latency on overnight PSG is complementary to epworth sleepiness score for predicting shorter mean MSLT sleep latency and OSA severity",
+   "type": "journal-article"
+  },
+  {
+   "doi": "10.4172/2325-9639.1000152",
+   "title": "Effects of Melatonin on Sleep after Laparoscopic Cholecystectomy: A Randomized, Placebo-Controlled Clinical Trial",
+   "type": "journal-article"
+  },
+  {
+   "doi": "10.1037/e473822008-001",
+   "title": "L-tryptophan administered to chronic sleep-onset insomniacs: Late-appearing reduction of sleep latency",
+   "type": "dataset"
+  },
+  {
+   "doi": "10.1177/088307380101600204",
+   "title": "Melatonin for Chronic Sleep Onset Insomnia in Children: A Randomized Placebo-Controlled Trial",
+   "type": "journal-article"
+  },
+  {
+   "doi": "10.1016/j.sleep.2017.11.913",
+   "title": "Effects of melatonin and bright light treatment in childhood chronic sleep onset insomnia with late melatonin onset: a randomised controlled study",
+   "type": "journal-article"
+  },
+  {
+   "doi": "10.1046/j.1365-2869.2000.00194.x",
+   "title": "The effect of arousals during sleep onset on estimates of sleep onset latency",
+   "type": "journal-article"
+  },
+  {
+   "doi": "10.1109/tnsre.2024.3396169/mm1",
+   "title": "Association Between Sleep Quality and Deep Learning-Based Sleep Onset Latency Distribution Using an Electroencephalogram_supp1-3396169.docx",
+   "type": "component"
+  },
+  {
+   "doi": "10.1111/j.1365-2869.2005.00459_1.x",
+   "title": "Sleep onset insomnia during childhood or poor fit between biology and culture:",
+   "type": "journal-article"
+  },
+  {
+   "doi": "10.1101/2020.08.02.20166918",
+   "title": "Neural correlates of sleep recovery following melatonin treatment for pediatric concussion: a randomized control trial",
+   "type": "posted-content"
+  },
+  {
+   "doi": "10.1186/isrctn20033346",
+   "title": "MELatonin for children with idiopathic chronic sleep onset insomnia, with or without attention deficit hyperkinesia disorder - a DOSe finding trial: a randomised placebo-controlled double-blind parallel group trial",
+   "type": "dataset"
+  },
+  {
+   "doi": "10.1016/j.sleep.2024.10.020",
+   "title": "Melatonin on sleep in Parkinson’s disease: A randomized double blind placebo controlled trial",
+   "type": "journal-article"
+  },
+  {
+   "doi": "10.1093/sleepadvances/zpag115",
+   "title": "Pharmacokinetics of Transdermal Melatonin Products: A Randomized, Crossover Clinical Trial",
+   "type": "journal-article"
+  },
+  {
+   "doi": "10.1093/sleep/zsy061.352",
+   "title": "0353 To Compare Sleep Onset Latency (SOL) And Wake After Sleep Onset (WASO) Between AASM Paper Sleep Diary And VAMC Excel Sleep Diary",
+   "type": "journal-article"
+  },
+  {
+   "doi": "10.1016/j.sleep.2013.11.149",
+   "title": "A randomized controlled trial of the effects of bright light and melatonin for delayed sleep phase disorder",
+   "type": "journal-article"
+  },
+  {
+   "doi": "10.1093/sleep/21.1.52",
+   "title": "The Role of Melatonin and Circadian Phase in Age-related Sleep-maintenance Insomnia: Assessment in a Clinical Trial of Melatonin Replacement",
+   "type": "journal-article"
+  },
+  {
+   "doi": "10.1093/sleep/zsaf090.0816",
+   "title": "0816 Impact of Age at Narcolepsy Onset on Sleep-Onset REM Periods in the Multiple Sleep Latency Test",
+   "type": "journal-article"
+  },
+  {
+   "doi": "10.1037/10166-019",
+   "title": "Modification of the multiple sleep latency test.",
+   "type": "book-chapter"
+  },
+  {
+   "doi": "10.1111/j.1479-8425.2006.00194.x",
+   "title": "Relationship between dim light melatonin onset and the timing of sleep in sleep onset insomniacs",
+   "type": "journal-article"
+  },
+  {
+   "doi": "10.1007/978-3-032-05988-8_3043",
+   "title": "Sleep Onset Latency",
+   "type": "book-chapter"
+  },
+  {
+   "doi": "10.1007/978-3-540-29807-6_3043",
+   "title": "Sleep Onset Latency",
+   "type": "book-chapter"
+  },
+  {
+   "doi": "10.1016/j.sleep.2017.11.347",
+   "title": "Short and long term prolonged release melatonin treatment for sleep disorders in children with autism spectrum disorders: results of a phase III randomized clinical trial",
+   "type": "journal-article"
+  },
+  {
+   "doi": "10.1111/j.1365-2869.2005.00451.x",
+   "title": "Prediction of melatonin efficacy by pretreatment dim light melatonin onset in children with idiopathic chronic sleep onset insomnia",
+   "type": "journal-article"
+  },
+  {
+   "doi": "10.1016/s1389-9457(00)00093-9",
+   "title": "Article reviewed: Sleep onset REM periods during multiple sleep latency tests in patients evaluated for sleep apnea",
+   "type": "journal-article"
+  },
+  {
+   "doi": "10.1016/j.sleep.2019.02.017",
+   "title": "Efficacy and safety of melatonin for sleep onset insomnia in children and adolescents: a meta-analysis of randomized controlled trials",
+   "type": "journal-article"
+  },
+  {
+   "doi": "10.1093/sleep/27.6.1089",
+   "title": "Different Criteria of Sleep Latency and the Effect of Melatonin on Sleep Consolidation",
+   "type": "journal-article"
+  },
+  {
+   "doi": "10.1007/s41105-016-0063-9",
+   "title": "Melatonin-rich milk fortified with alpha s1 casein tryptic hydrolysate improves primary insomnia: a randomized placebo controlled trial",
+   "type": "journal-article"
+  },
+  {
+   "doi": "10.1093/sleep/zsaf090.0879",
+   "title": "0879 Dim Light Melatonin Onset in a Delayed Sleep-Wake Phase Disorder Cohort: Ongoing Clinical Trial Update",
+   "type": "journal-article"
+  },
+  {
+   "doi": "10.1111/j.1479-8425.2004.00146.x",
+   "title": "Effects of add-on melatonin on sleep in epileptic children on carbamazepine monotherapy: A randomized placebo controlled trial",
+   "type": "journal-article"
+  },
+  {
+   "doi": "10.7554/elife.45658.016",
+   "title": "Figure 6. Latency of ingress to aversively conditioned odorant stimuli.",
+   "type": "component"
+  },
+  {
+   "doi": "10.1097/01.chi.0000085756.71002.86",
+   "title": "Melatonin Improves Health Status and Sleep in Children With Idiopathic Chronic Sleep-Onset Insomnia: A Randomized Placebo-Controlled Trial",
+   "type": "journal-article"
+  },
+  {
+   "doi": "10.17241/smr.2021.01130",
+   "title": "Melatonin Effects in Women With Comorbidities of Overweight, Depression, and Sleep Disturbance: A Randomized Placebo Controlled Clinical Trial",
+   "type": "journal-article"
+  },
+  {
+   "doi": "10.1007/bf00181230",
+   "title": "L-Tryptophan administered to chronic sleep-onset insomniacs: Late-appearing reduction of sleep latency",
+   "type": "journal-article"
+  },
+  {
+   "doi": "10.1371/journal.pone.0321635",
+   "title": "Melatonin and sleep parameters in infertile women with endometriosis: first results from the triple-blind randomized controlled trial of administration of melatonin in chronic pelvic pain and sleep disturbance",
+   "type": "journal-article"
+  },
+  {
+   "doi": "10.1111/jsr.12905",
+   "title": "Home versus laboratory assessments of melatonin production and melatonin onset in young adults complaining of a delayed sleep schedule",
+   "type": "journal-article"
+  },
+  {
+   "doi": "10.17241/smr.2013.4.1.28",
+   "title": "Prolonged Sleep-Onset Latency during Chronic Sleep Restriction in Mice",
+   "type": "journal-article"
+  },
+  {
+   "doi": "10.1111/jsr.09_12912",
+   "title": "A pilot study investigating wind farm noise effects on objective and subjective sleep onset latency",
+   "type": "journal-article"
+  },
+  {
+   "doi": "10.1093/sleep/zsaa056.734",
+   "title": "0738 Advance Taper of Antidepressants Prior to Multiple Sleep Latency Testing Increases the Number of Sleep-Onset Rapid Eye Movement Periods and Reduces Mean Sleep Latency",
+   "type": "journal-article"
+  },
+  {
+   "doi": "10.2165/00128413-200414390-00016",
+   "title": "The melatonin analogue LY 156735* may improve sleep latency in patients with insomnia,",
+   "type": "journal-article"
+  },
+  {
+   "doi": "10.1002/jnr.24820/v2/review2",
+   "title": "Review for \"Effect of add‐on melatonin on seizure outcome, neuronal damage, oxidative stress, and quality of life in generalized epilepsy with generalized onset motor seizures in adults: A randomized controlled trial\"",
+   "type": "peer-review"
+  },
+  {
+   "doi": "10.3390/clockssleep8020031",
+   "title": "Efficacy and Safety of Sustained-Release Melatonin Capsules (2 mg) in Healthy Adults with Poor Sleep Quality: A Randomized, Double-Blind, Placebo-Controlled Trial",
+   "type": "journal-article"
+  },
+  {
+   "doi": "10.5664/jcsm.9320",
+   "title": "Treatment of chronic primary sleep onset insomnia with Kundalini yoga: a randomized controlled trial with active sleep hygiene comparison",
+   "type": "journal-article"
+  },
+  {
+   "doi": "10.1002/jnr.24820/v2/decision1",
+   "title": "Decision letter for \"Effect of add‐on melatonin on seizure outcome, neuronal damage, oxidative stress, and quality of life in generalized epilepsy with generalized onset motor seizures in adults: A randomized controlled trial\"",
+   "type": "peer-review"
+  },
+  {
+   "doi": "10.1002/jnr.24820/v3/review1",
+   "title": "Review for \"Effect of add‐on melatonin on seizure outcome, neuronal damage, oxidative stress, and quality of life in generalized epilepsy with generalized onset motor seizures in adults: A randomized controlled trial\"",
+   "type": "peer-review"
+  },
+  {
+   "doi": "10.3390/healthcare6010023",
+   "title": "Long-Term Melatonin Therapy for Adolescents and Young Adults with Chronic Sleep Onset Insomnia and Late Melatonin Onset: Evaluation of Sleep Quality, Chronotype, and Lifestyle Factors Compared to Age-Related Randomly Selected Population Cohorts",
+   "type": "journal-article"
+  },
+  {
+   "doi": "10.1002/jnr.24820/v3/decision1",
+   "title": "Decision letter for \"Effect of add‐on melatonin on seizure outcome, neuronal damage, oxidative stress, and quality of life in generalized epilepsy with generalized onset motor seizures in adults: A randomized controlled trial\"",
+   "type": "peer-review"
+  },
+  {
+   "doi": "10.1002/jnr.24820/v2/review1",
+   "title": "Review for \"Effect of add‐on melatonin on seizure outcome, neuronal damage, oxidative stress, and quality of life in generalized epilepsy with generalized onset motor seizures in adults: A randomized controlled trial\"",
+   "type": "peer-review"
+  },
+  {
+   "doi": "10.1002/jnr.24820/v1/review2",
+   "title": "Review for \"Effect of add‐on melatonin on seizure outcome, neuronal damage, oxidative stress, and quality of life in generalized epilepsy with generalized onset motor seizures in adults: A randomized controlled trial\"",
+   "type": "peer-review"
+  },
+  {
+   "doi": "10.1002/jnr.24820/v1/decision1",
+   "title": "Decision letter for \"Effect of add‐on melatonin on seizure outcome, neuronal damage, oxidative stress, and quality of life in generalized epilepsy with generalized onset motor seizures in adults: A randomized controlled trial\"",
+   "type": "peer-review"
+  },
+  {
+   "doi": "10.1002/jnr.24820/v1/review1",
+   "title": "Review for \"Effect of add‐on melatonin on seizure outcome, neuronal damage, oxidative stress, and quality of life in generalized epilepsy with generalized onset motor seizures in adults: A randomized controlled trial\"",
+   "type": "peer-review"
+  },
+  {
+   "doi": "10.1111/j.1365-2214.2006.00616.x",
+   "title": "Randomized controlled trial of melatonin for children with autistic spectrum disorders and sleep problems",
+   "type": "journal-article"
+  },
+  {
+   "doi": "10.1037/10166-008",
+   "title": "Impact of the level of physiological arousal on estimates of sleep latency.",
+   "type": "book-chapter"
+  },
+  {
+   "doi": "10.1016/j.sleep.2011.03.019",
+   "title": "Termination of short term melatonin treatment in children with delayed Dim Light Melatonin Onset: Effects on sleep, health, behavior problems, and parenting stress",
+   "type": "journal-article"
+  },
+  {
+   "doi": "10.18502/ijps.v16i3.6256",
+   "title": "Effects of Melatonin on Salivary Levels of Cortisol and Sleep Quality of Hemodialysis Patients: A Randomized Clinical Trial",
+   "type": "journal-article"
+  },
+  {
+   "doi": "10.1093/brain/awl079",
+   "title": "Correlates of sleep-onset REM periods during the Multiple Sleep Latency Test in community adults",
+   "type": "journal-article"
+  },
+  {
+   "doi": "10.1101/2024.01.10.24301120",
+   "title": "A randomized controlled trial of alpha phase-locked auditory stimulation to treat symptoms of sleep onset insomnia",
+   "type": "posted-content"
+  },
+  {
+   "doi": "10.1016/j.brs.2016.11.037",
+   "title": "A Randomized Controlled Pilot Trial Suggesting That Cathodal Bi-Frontal Transcranial Direct Current Stimulation (tDCS) May Shorten Sleep Onset Latency, and Increase Sleep Efficiency When Applied Before An Afternoon Nap",
+   "type": "journal-article"
+  },
+  {
+   "doi": "10.1093/sleep/zsae040",
+   "title": "Objective sleep disturbance in nightmares: is prolonged sleep onset latency a proxy for fear-of-sleep-related arousal?",
+   "type": "journal-article"
+  },
+  {
+   "doi": "10.1055/s-0046-1822756",
+   "title": "Onset and stability of melatonin treatment effect in childhood sleep onset insomnia",
+   "type": "journal-article"
+  },
+  {
+   "doi": "10.3410/f.718346160.793496340",
+   "title": "Faculty Opinions recommendation of A randomized, placebo-controlled trial of melatonin on breast cancer survivors: impact on sleep, mood, and hot flashes.",
+   "type": "dataset"
+  },
+  {
+   "doi": "10.55697/tnd.2026.197",
+   "title": "Comparison of sedative drugs (chloral hydrate, hydroxyzine, and melatonin) and natural sleep used in sleep transition before electroencephalogram exposure in children: A randomized controlled trial",
+   "type": "journal-article"
+  },
+  {
+   "doi": "10.37796/2211-8039.1123",
+   "title": "The effect of melatonin on quality of sleep in patients with sleep disturbance admitted to post coronary care units: a randomized controlled trial",
+   "type": "journal-article"
+  },
+  {
+   "doi": "10.1111/j.1365-2869.2010.00848.x",
+   "title": "A two-part, double-blind, placebo-controlled trial of exogenous melatonin in REM sleep behaviour disorder",
+   "type": "journal-article"
+  },
+  {
+   "doi": "10.5664/jcsm.9234",
+   "title": "Poorer sleep quality predicts melatonin response in patients with traumatic brain injury: findings from a randomized controlled trial",
+   "type": "journal-article"
+  },
+  {
+   "doi": "10.1007/s40278-019-63299-7",
+   "title": "Bupropion",
+   "type": "journal-article"
+  },
+  {
+   "doi": "10.1002/brb3.2860/v2/review2",
+   "title": "Review for \"Effect of add‐on melatonin on seizure outcomes and quality of sleep in epilepsy with idiopathic generalized tonic‐clonic seizures alone in adult patients: Cross‐sectional, randomized, double‐blind, placebo‐controlled clinical trial\"",
+   "type": "peer-review"
+  },
+  {
+   "doi": "10.1007/s41105-023-00493-x",
+   "title": "Estimating dim light melatonin onset time in children using delta changes in melatonin",
+   "type": "journal-article"
+  },
+  {
+   "doi": "10.3390/clockssleep5030026",
+   "title": "The Timing of the Melatonin Onset and Phase Angle to Sleep Onset in Older Adults after Uncontrolled vs. Controlled Lighting Conditions",
+   "type": "journal-article"
+  },
+  {
+   "doi": "10.1016/j.sleep.2025.107308",
+   "title": "Efficacy and Safety of Fazamorexant in Adults with Insomnia: A Phase 3 Randomized Controlled Trial of a Rapid-Onset, Short-Acting DORA",
+   "type": "journal-article"
+  },
+  {
+   "doi": "10.1093/sleep/25.2.238",
+   "title": "Nightcap: A Reliable System for Determining Sleep Onset Latency",
+   "type": "journal-article"
+  },
+  {
+   "doi": "10.7717/peerj.17053/fig-3",
+   "title": "Figure 3: The effect of various interventions\n                      <i>vs</i>\n                      usual care on sleep onset latency as assessed by accelerometry in cancer survivors.",
+   "type": "component"
+  },
+  {
+   "doi": "10.1016/j.cnp.2025.09.002",
+   "title": "Comparison between sleep-deprived, and melatonin-induced sleep electroencephalography in children of different ages: a randomized controlled trial",
+   "type": "journal-article"
+  },
+  {
+   "doi": "10.1111/j.1365-2869.2009.00808.x",
+   "title": "Different sleep onset criteria at the multiple sleep latency test (MSLT): an additional marker to differentiate central nervous system (CNS) hypersomnias",
+   "type": "journal-article"
+  },
+  {
+   "doi": "10.1111/j.1365-2869.2005.00470.x",
+   "title": "The dim light melatonin onset following fixed and free sleep schedules",
+   "type": "journal-article"
+  },
+  {
+   "doi": "10.5664/jcsm.8738",
+   "title": "Advance taper of antidepressants prior to multiple sleep latency testing increases the number of sleep-onset rapid eye movement periods and reduces mean sleep latency",
+   "type": "journal-article"
+  },
+  {
+   "doi": "10.1101/2023.03.04.531123",
+   "title": "Subjective sleep onset latency is influenced by sleep structure and body heat loss in human subjects",
+   "type": "posted-content"
+  },
+  {
+   "doi": "10.2139/ssrn.4821688",
+   "title": "Impact of Environmental Carbon Dioxide Exposures on Sleep Latency Among Healthy Volunteers: A Randomized Order, Paired Crossover Study, Evidence from the Multiple Sleep Latency Test",
+   "type": "posted-content"
+  },
+  {
+   "doi": "10.5665/sleep.2370",
+   "title": "Novel Sublingual Low-Dose Zolpidem Tablet Reduces Latency to Sleep Onset following Spontaneous Middle-of-the-Night Awakening in Insomnia in a Randomized, Double-Blind, Placebo-Controlled, Outpatient Study",
+   "type": "journal-article"
+  },
+  {
+   "doi": "10.37349/en.2024.00066",
+   "title": "What might melatonin supplementation provide for humans beyond improved onset to sleep?",
+   "type": "journal-article"
+  },
+  {
+   "doi": "10.1037/drm0000338",
+   "title": "Subjectively estimated effects of nightmares on sleep onset latency and sleep quality: A cross-sectional study.",
+   "type": "journal-article"
+  },
+  {
+   "doi": "10.1016/j.sleep.2025.107106",
+   "title": "An iPhone App to Guide the Collection of the Dim Light Melatonin Onset at Home",
+   "type": "journal-article"
+  },
+  {
+   "doi": "10.1016/j.psychres.2015.11.030",
+   "title": "The association between prolonged sleep onset latency and heart rate dynamics among young sleep-onset insomniacs and good sleepers",
+   "type": "journal-article"
+  },
+  {
+   "doi": "10.1002/brb3.2860/v3/review1",
+   "title": "Review for \"Effect of add‐on melatonin on seizure outcomes and quality of sleep in epilepsy with idiopathic generalized tonic‐clonic seizures alone in adult patients: Cross‐sectional, randomized, double‐blind, placebo‐controlled clinical trial\"",
+   "type": "peer-review"
+  },
+  {
+   "doi": "10.1002/mds.25780",
+   "title": "Onset latency of segmental dystonia after deep brain stimulation cessation: A randomized, double‐blind crossover trial",
+   "type": "journal-article"
+  },
+  {
+   "doi": "10.1002/brb3.2860/v1/review1",
+   "title": "Review for \"Effect of add‐on melatonin on seizure outcomes and quality of sleep in epilepsy with idiopathic generalized tonic‐clonic seizures alone in adult patients: Cross‐sectional, randomized, double‐blind, placebo‐controlled clinical trial\"",
+   "type": "peer-review"
+  },
+  {
+   "doi": "10.1111/jsr.14_12618",
+   "title": "Preliminary investigation of the variability in melatonin onset in self‐reported intermediate chronotypes",
+   "type": "journal-article"
+  },
+  {
+   "doi": "10.1002/brb3.2860/v2/review1",
+   "title": "Review for \"Effect of add‐on melatonin on seizure outcomes and quality of sleep in epilepsy with idiopathic generalized tonic‐clonic seizures alone in adult patients: Cross‐sectional, randomized, double‐blind, placebo‐controlled clinical trial\"",
+   "type": "peer-review"
+  },
+  {
+   "doi": "10.1093/sleep/24.2.183",
+   "title": "Exogenous Melatonin in Periodic Limb Movement Disorder: An Open Clinical Trial and a Hypothesis",
+   "type": "journal-article"
+  },
+  {
+   "doi": "10.1093/sleep/zsae067.0431",
+   "title": "0431 Transcranial Electrical Stimulation with a Wearable Device Dramatically Reduces Sleep Onset Latency in Insomnia",
+   "type": "journal-article"
+  },
+  {
+   "doi": "10.1111/j.1479-8425.2012.00543.x",
+   "title": "Disconjugated binocular eye movements at onset of multiple sleep latency test in childhood narcolepsy",
+   "type": "journal-article"
+  },
+  {
+   "doi": "10.1080/02640414.2019.1661938",
+   "title": "Acute sleep hygiene strategy improves objective sleep latency following a late-evening soccer-specific training session: A randomized controlled trial",
+   "type": "journal-article"
+  },
+  {
+   "doi": "10.1101/2023.07.02.23292135",
+   "title": "A randomized, double-blind, placebo-controlled decentralized trial to assess sleep, health outcomes, and overall well-being in healthy adults reporting disturbed sleep, taking a melatonin-free supplement",
+   "type": "posted-content"
+  },
+  {
+   "doi": "10.5665/sleep.2122",
+   "title": "Repeated Melatonin Supplementation Improves Sleep in Hypertensive Patients Treated with Beta-Blockers: A Randomized Controlled Trial",
+   "type": "journal-article"
+  }
+ ]
+}
