@@ -119,10 +119,23 @@ def _classify(cells: list[str], header: list[str] | None = None) -> JatsRow:
     return row
 
 
-def parse_jats(path: str | Path) -> list[JatsTable]:
-    """List[JatsTable] aus einer JATS/PMC-XML-Datei (Read-only)."""
-    path = Path(path)
-    root = ET.parse(path).getroot()
+def _rows_from(element: ET.Element) -> tuple[list[str], list[JatsRow]]:
+    """Header (erste th-Zeile) und Datenzeilen eines table-Elements."""
+    header: list[str] = []
+    rows: list[JatsRow] = []
+    for i, tr in enumerate(el for el in element.iter() if _tag(el) == "tr"):
+        cells = [_text(td) for td in tr if _tag(td) in ("td", "th")]
+        tags = [_tag(td) for td in tr if _tag(td) in ("td", "th")]
+        if not cells:
+            continue
+        if i == 0 and "th" in tags:
+            header = cells
+            continue
+        rows.append(_classify(cells, header))
+    return header, rows
+
+
+def _tables_from_root(root: ET.Element) -> list[JatsTable]:
     tables: list[JatsTable] = []
     for tw in [el for el in root.iter() if _tag(el) == "table-wrap"]:
         table = JatsTable()
@@ -137,18 +150,61 @@ def parse_jats(path: str | Path) -> list[JatsTable]:
                 table_el = child
         if table_el is None:
             continue  # Plan 3.1: Tabelle ohne korrektes Objekt überspringen
-        trs = [el for el in table_el.iter() if _tag(el) == "tr"]
-        for i, tr in enumerate(trs):
-            cells = [_text(td) for td in tr if _tag(td) in ("td", "th")]
-            tags = [_tag(td) for td in tr if _tag(td) in ("td", "th")]
-            if not cells:
-                continue
-            if i == 0 and "th" in tags:
-                table.header = cells
-                continue
-            table.rows.append(_classify(cells, table.header))
+        table.header, table.rows = _rows_from(table_el)
         tables.append(table)
     return tables
+
+
+def parse_jats(path: str | Path) -> list[JatsTable]:
+    """List[JatsTable] aus einer JATS/PMC-XML-Datei (Read-only)."""
+    return _tables_from_root(ET.parse(Path(path)).getroot())
+
+
+def parse_jats_text(xml: str) -> list[JatsTable]:
+    """Wie ``parse_jats``, aber aus dem XML-String (z. B. Europe-PMC-Antwort)."""
+    return _tables_from_root(ET.fromstring(xml or ""))
+
+
+def _pipe_row(cells: list[str]) -> str:
+    """Zeile in derselben Form, in der der XML-Text die Tabelle rendert."""
+    return "|" + "|".join((c.strip() or " ") for c in cells)
+
+
+def blocks_from_jats(xml: str) -> list[dict]:
+    """Tabellen als Artefakt-Bloecke in der Form von ``save_extracted_tables``.
+
+    ``body`` enthaelt nur die Pipe-Zeilen (labelfrei), damit er ein woert-
+    licher Teilstring des aus derselben XML gerenderten Dokumenttexts bleibt.
+    ``effect_cells`` traegt die stat-reichen Zeilen mit ihren Zellwerten und
+    Flags - keine erfundenen Effektgroessen.
+    """
+    blocks: list[dict] = []
+    for table in parse_jats_text(xml):
+        rows = [_pipe_row(r.cells) for r in table.rows]
+        if not rows:
+            continue
+        blocks.append({
+            "table_label": table.label,
+            "caption": table.caption,
+            "body": "\n".join(rows),
+            "start": -1,
+            "end": -1,
+            "n_lines": len(rows),
+            "confidence": 0.9,
+            "parser": "jats-table/1",
+            "effect_cells": [
+                {
+                    "line": _pipe_row(r.cells),
+                    "cells": list(r.cells),
+                    "has_se": r.has_se,
+                    "has_ci": r.has_ci,
+                    "has_sd": r.has_sd,
+                    "has_n": r.has_n,
+                }
+                for r in table.stat_rich_rows
+            ],
+        })
+    return blocks
 
 
 def stat_rich_candidates(path: str | Path) -> list[dict]:

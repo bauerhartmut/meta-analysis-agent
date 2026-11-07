@@ -62,23 +62,76 @@ def _strip_tags(seg: str) -> str:
     return re.sub(r"\s+", " ", html.unescape(text)).strip()
 
 
+def _local_name(tag: str) -> str:
+    return (tag or "").rsplit("}", 1)[-1]
+
+
+def _collapse(text: str) -> str:
+    return " ".join((text or "").split())
+
+
+def _escape_markup(text: str) -> str:
+    """Zellen textlich entschaerfen, damit der Tag-Strip sie nicht frisst.
+
+    ``html.unescape`` laeuft erst nach ``re.sub(r"<[^>]+>", ...)``. Ein
+    ungeschuetztes ``<`` in einer Zelle (z. B. ``<.001``) liess den Strip
+    bis zum naechsten ``>`` loeschen - die halbe Tabellenzeile verschwand.
+    """
+    return (text.replace("&", "&amp;")
+                .replace("<", "&lt;")
+                .replace(">", "&gt;"))
+
+
 def _render_table_wrap(match) -> str:
     """One <table-wrap> -> caption line plus pipe-separated rows.
 
-    Nothing is normalised: cells are verbatim unescaped text of the XML, so
-    numbers keep their original characters and the table locator can quote
-    them for verified extraction later. The caption paragraph is preserved
-    verbatim as its own line; missing captions fall back to a plain marker.
+    Nothing is normalised beyond whitespace: cells are the unescaped text of
+    the XML, so numbers keep their original characters and the table locator
+    can quote them for verified extraction later.
+
+    Parsed with the XML parser, not with tag regexes: empty JATS cells written
+    as ``<td/>`` used to drop out of the row, shifting every later value one
+    column left - the arm/number mix-up the extraction must never make.
     """
     seg = match.group(0)
-    cap = re.search(r"<caption[\s\S]*?</caption>", seg, re.I | re.S)
-    caption = _strip_tags(cap.group(0)) if cap else "table"
+    caption = ""
     rows = []
-    for row in re.findall(r"<tr[\s\S]*?</tr>", seg, re.I):
-        cells = [_strip_tags(c) for c in re.findall(
-            r"<t[hd]\b[^>]*>[\s\S]*?</t[hd]>", row, re.I)]
-        if cells and any(c for c in cells):
-            rows.append("|" + "|".join((c if c else " ") for c in cells))
+    try:
+        import xml.etree.ElementTree as ET
+
+        # Der Ausschnitt traegt keine xmlns-Erklaerungen; ungebundene
+        # Praefixe (xlink:href, mml:math) wuerden den Parser sonst abbrechen
+        # lassen und der Regex-Fallback verschiebt wieder die Spalten.
+        cleaned = re.sub(r"<(/?)[A-Za-z_][\w.-]*:", r"<\1", seg)
+        cleaned = re.sub(
+            r"\s[A-Za-z_][\w.-]*:([A-Za-z][\w.-]*)=([\"'])", r" \1=\2", cleaned)
+        wrap = ET.fromstring(cleaned)
+        for el in wrap.iter():
+            if _local_name(el.tag) == "caption" and not caption:
+                caption = _collapse(" ".join(el.itertext()))
+        table = next((el for el in wrap.iter()
+                      if _local_name(el.tag) == "table"), None)
+        if table is None:
+            table = wrap
+        for tr in (el for el in table.iter() if _local_name(el.tag) == "tr"):
+            cells = [_collapse(" ".join(td.itertext())) for td in tr
+                     if _local_name(td.tag) in ("td", "th")]
+            if cells and any(c for c in cells):
+                rows.append("|" + "|".join(
+                    _escape_markup(c) if c else " " for c in cells))
+    except Exception:
+        # Nicht wohlgeformte XML-Fragmente: konservativer Regex-Fallback.
+        cap = re.search(r"<caption[\s\S]*?</caption>", seg, re.I | re.S)
+        caption = _strip_tags(cap.group(0)) if cap else ""
+        seg = re.sub(r"<t([hd])\b([^>]*?)/>", r"<t\1\2></t\1>", seg,
+                     flags=re.I)
+        for row in re.findall(r"<tr[\s\S]*?</tr>", seg, re.I):
+            cells = [_strip_tags(c) for c in re.findall(
+                r"<t[hd]\b[^>]*>[\s\S]*?</t[hd]>", row, re.I)]
+            if cells and any(c for c in cells):
+                rows.append("|" + "|".join(
+                    _escape_markup(c) if c else " " for c in cells))
+    caption = _escape_markup(caption or "table")
     if not rows:
         return " [table omitted - no rows] "
     return "\n" + caption.strip() + "\n" + "\n".join(rows) + "\n"
