@@ -39,14 +39,6 @@ DOCUMENTS = [
 ]
 
 
-def _outcome_label(cells, caption: str) -> str:
-    for cell in cells:
-        text = str(cell or "").strip()
-        if text and not any(ch.isdigit() for ch in text):
-            return text[:90]
-    return (caption or "")[:90]
-
-
 def main(argv=None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--xml-dir", default="data/bench/xml6")
@@ -87,9 +79,7 @@ def main(argv=None) -> int:
                 table_rows += 1
                 quote = _pipe_row(table_row.cells)
                 candidate = convert_row(
-                    table.header, table_row.cells,
-                    outcome=_outcome_label(table_row.cells, label),
-                    quote=quote,
+                    table.header, table_row.cells, quote=quote, caption=label,
                 )
                 if candidate.get("ok"):
                     attempts += 1

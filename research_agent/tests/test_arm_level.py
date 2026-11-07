@@ -205,3 +205,48 @@ class TestStoreGate(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class TestDesignGate(unittest.TestCase):
+    """Baseline-Zeilen und Querschnittsgruppen sind keine Behandlungseffekte."""
+
+    HEADER = ["Outcome", "Day", "Intervention (n = 30) Mean ± SD",
+              "Control (n = 30) Mean ± SD", "Welch's t", "p Value"]
+    ROW = ["Total sleep time (min)", "0", "322.07 ± 15.28", "334.57 ± 20.12",
+           "-2.710", ".009"]
+
+    def test_baseline_day_zero_is_refused(self):
+        result = convert_row(self.HEADER, self.ROW, quote="row")
+        self.assertFalse(result["ok"])
+        self.assertIn("Baseline", result["reason"])
+
+    def test_follow_up_day_is_kept_with_its_time_point(self):
+        row = list(self.ROW)
+        row[1] = "30"
+        result = convert_row(self.HEADER, row, quote="row")
+        self.assertTrue(result["ok"], result.get("reason"))
+        self.assertEqual(result["time_point"], "day 30")
+
+    def test_baseline_in_row_label_is_refused(self):
+        header = ["Outcome", "Intervention (n = 30) Mean ± SD",
+                  "Control (n = 30) Mean ± SD"]
+        cells = ["Baseline", "322.07 ± 15.28", "334.57 ± 20.12"]
+        result = convert_row(header, cells, quote="row")
+        self.assertFalse(result["ok"])
+        self.assertIn("Baseline", result["reason"])
+
+    def test_cross_sectional_groups_are_refused(self):
+        header = ["", "Active children (n = 174) M ± SD",
+                  "Inactive children (n = 79) M ± SD", "F", "p", "η2"]
+        cells = ["Total sleep time (mins)", "404.17 ± 33.91", "397.32 ± 44.20",
+                 "0.805", "0.370", "0.003"]
+        result = convert_row(header, cells, quote="row")
+        self.assertFalse(result["ok"])
+        self.assertIn("Interventionsarm", result["reason"])
+
+    def test_generic_arm_labels_are_not_rejected(self):
+        # "Mean (SD)" benennt keine Gruppe - es gibt nichts zu klassifizieren.
+        header = ["Group", "n", "Mean (SD)", "n", "Mean (SD)"]
+        cells = ["x", "20", "10.0 (2.0)", "20", "12.0 (2.0)"]
+        result = convert_row(header, cells, outcome="Latency", quote="row")
+        self.assertTrue(result["ok"], result.get("reason"))

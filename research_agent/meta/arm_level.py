@@ -291,7 +291,44 @@ _REASONS = {
     "arm_count": "nicht genau zwei Spalten mit Mittelwert und Streuung",
     "median": "Median/IQR statt Mittelwert mit SD/SE/CI (kein SMD)",
     "ratio": "direkter Effekt mit OR/RR/HR - nicht Aufgabe des Arm-Rechners",
+    "baseline": ("Baseline-Zeile (Tag 0 / vor Intervention) - "
+                 "kein Behandlungseffekt"),
+    "cross_sectional": ("kein Interventionsarm - Querschnitts- oder "
+                        "Gruppenvergleich"),
 }
+
+# Zeitpunkt der Zeile: eine Spalte "Day", "Week", "Visit" oder "Time
+# point" nennt ihn ausdruecklich, sonst traegt ihn die Zeilenbeschriftung
+# ("Day 30", "post-BLT1").
+_TIME_COLUMN = re.compile(
+    r"^(?:day|week|month|visit|time\s*point|timepoint|time|session)\b",
+    re.IGNORECASE)
+_TIMEPOINT_LABEL = re.compile(
+    r"^(?:day|week|month|visit|post(?:[\s-]|$)|follow[\s-]?up|t\d+)\b",
+    re.IGNORECASE)
+# Tag 0, "baseline" und "pre-BLT" sind der Zustand vor der Intervention.
+# Die Muster verlangen den ganzen Zellwert: "0" und "Day 0" ja, "0.5 mg" nein.
+_BASELINE_VALUE = re.compile(
+    r"^\s*(?:(?:day|week|month|visit|time)\s*[-_ ]?)?0(?:\.0+)?\s*$"
+    r"|^\s*(?:(?:day|week|month|visit)\s*)?baseline\s*$"
+    r"|^\s*pre(?:[\s-][\w-]*)?\s*$"
+    r"|^\s*t0\s*$",
+    re.IGNORECASE)
+# Woerter, die eine Spalte nur als Statistik beschreiben ("Mean (SD)",
+# "Arm 1"). Solche Etiketten benennen keine Gruppe; ohne Gruppennamen gibt
+# es nichts zu klassifizieren, also wird auch nichts abgelehnt.
+_GENERIC_LABEL = re.compile(
+    r"\b(?:mean|median|sd|se|sem|ci|value|values|score|scores|m|n|arm|group|column)\b"
+    r"|\d|[\.\,\(\)\[\]\u00b1%:;=\-\u2013/+<>]",
+    re.IGNORECASE)
+# Ein Arm muss eine Intervention benennen. "Active children" gegen
+# "Inactive children" oder "Patients" gegen "Healthy Controls" sind
+# Querschnittsgruppen, keine randomisierten Arme.
+_INTERVENTION_ARM = re.compile(
+    r"intervention|treatment|placebo|sham|verum|vehicle|supplement|dos(?:e|ing)"
+    r"|\bmg\b|\u00b5g|\biu\b|therapy|training|exercise|diet\b|nutrition|cbt\b"
+    r"|usual\s+care|comparator|drug|capsule|tablet|infusion|melatonin|caffeine",
+    re.IGNORECASE)
 
 
 def _role_columns(header: Sequence[str]) -> Dict[str, List[int]]:
@@ -408,6 +445,12 @@ def arms_from_row(header: Sequence[str], cells: Sequence[str],
     return arms, ""
 
 
+def _named_group(label: str) -> bool:
+    """True, wenn das Arm-Etikett eine Gruppe benennt (nicht nur Statistik)."""
+    rest = _GENERIC_LABEL.sub(" ", str(label or ""))
+    return bool(rest.strip(" -_/"))
+
+
 def _n_for_column(header: Sequence[str], cells: Sequence[str], index: int,
                   roles: Dict[str, List[int]],
                   arm_position: int = 0) -> Optional[int]:
@@ -434,20 +477,70 @@ def _n_for_column(header: Sequence[str], cells: Sequence[str], index: int,
 
 
 def convert_row(header: Sequence[str], cells: Sequence[str], outcome: str = "",
-                quote: str = "", n_per_arm: Optional[Sequence[int]] = None) -> Dict:
+                quote: str = "", n_per_arm: Optional[Sequence[int]] = None,
+                caption: str = "") -> Dict:
     """Eine Tabellenzeile umrechnen; Ergebnis ist speicherfertig oder leer.
 
     Der ``quote`` muss die Zeile woertlich enthalten - der Aufrufer prueft
     das gegen den gespeicherten Text, bevor er speichert.
+
+    Abgelehnt wird zusaetzlich, was kein Behandlungseffekt ist: eine
+    Baseline-Zeile (Tag 0, ``pre-...``) und ein Vergleich ohne
+    Interventionsarm (aktive vs. inaktive Kinder, Patienten vs. Kontrollen).
+    Der Zeitpunkt der Zeile (``Day 30``, ``Week 4``) wird als ``time_point``
+    mitgefuehrt, statt in der Tabellen-Caption zu verschwinden.
     """
+    header_cells = list(header or [])
+    row_cells = list(cells or [])
+
+    time_point = ""
+    for index, head in enumerate(header_cells):
+        if not _TIME_COLUMN.match(str(head or "").strip()):
+            continue
+        if index >= len(row_cells):
+            continue
+        value = str(row_cells[index] or "").strip()
+        if not value:
+            continue
+        if _BASELINE_VALUE.match(value):
+            return {"ok": False, "reason": _REASONS["baseline"]}
+        time_point = f"{str(head).strip().lower()} {value}"
+
+    first = str(row_cells[0] or "").strip() if row_cells else ""
+    if _BASELINE_VALUE.match(first):
+        return {"ok": False, "reason": _REASONS["baseline"]}
+    if not time_point and _TIMEPOINT_LABEL.match(first):
+        time_point = first.lower()
+
+    # Outcome aus der Zeile selbst, nicht aus der Caption: eine Zelle
+    # "Day 0" ist ein Zeitpunkt, kein Endpunkt.
+    derived = ""
+    for cell in row_cells:
+        text = str(cell or "").strip()
+        if not text or not re.search(r"[A-Za-z]", text):
+            continue
+        if _BASELINE_VALUE.match(text) or _TIMEPOINT_LABEL.match(text):
+            continue
+        derived = text[:90]
+        break
+
     arms, reason = arms_from_row(header, cells, n_per_arm)
     if not arms:
         return {"ok": False, "reason": reason}
+    named = [arm for arm in arms if _named_group(str(arm.label or ""))]
+    if named and not any(_INTERVENTION_ARM.search(str(arm.label or ""))
+                         for arm in named):
+        return {"ok": False, "reason": _REASONS["cross_sectional"]}
     effect = smd_from_arms(arms[0], arms[1])
     if effect is None:
         return {"ok": False, "reason": _REASONS["bad_sd"]}
     payload = effect.to_dict()
-    payload.update({"ok": True, "outcome": outcome, "quote": quote})
+    payload.update({
+        "ok": True,
+        "outcome": outcome or derived or (caption or "")[:90],
+        "quote": quote,
+        "time_point": time_point,
+    })
     return payload
 
 
@@ -517,7 +610,7 @@ def store_arm_level_effects(db, source_id: str, source_text_id: str,
             "disputed": 0,
             "rejection_reason": "",
             "adjusted": -1,
-            "time_point": "",
+            "time_point": str(candidate.get("time_point") or ""),
             "moderators": _json.dumps({"arms": candidate.get("arms") or []},
                                       ensure_ascii=False),
             "created_at": now,
