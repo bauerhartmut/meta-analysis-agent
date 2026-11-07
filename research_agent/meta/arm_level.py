@@ -339,6 +339,13 @@ def _role_columns(header: Sequence[str]) -> Dict[str, List[int]]:
     for index, role in _col_semantics(list(header or [])).items():
         if role in roles:
             roles[role].append(index)
+    # "Melatonin n" ist eine Fallzahlspalte, auch ohne "n = 25" im Kopf; die
+    # Rollenlogik des Tabellenlesers erkennt nur die Schreibweise mit Wert.
+    for index, head in enumerate(list(header or [])):
+        if any(index in roles[key] for key in roles):
+            continue
+        if re.search(r"\bn\b\s*\)?\s*$", str(head or ""), re.IGNORECASE):
+            roles["n"].append(index)
     for key in roles:
         roles[key].sort()
     return roles
@@ -349,6 +356,44 @@ def _role_for(roles: Dict[str, List[int]], index: int) -> str:
         if index in roles.get(key, []):
             return key
     return ""
+
+
+# Eine Zelle, die nur eine Zahl traegt. Fuer die Paarbildung aus getrennten
+# Spalten ist das die Bedingung: "38.2 (4.1)" ist ein Arm in einer Zelle,
+# "38.2" ist ein Mittelwert, der seine Streuung in der Nachbarspalte hat.
+_BARE_NUMBER = re.compile(r"^\s*[-+\u2212\u2013]?\d+(?:[.,]\d+)?\s*$")
+
+
+def _paired_arms(header: Sequence[str], cells: Sequence[str],
+                 roles: Dict[str, List[int]]) -> List[Tuple[int, float, float, str]]:
+    """Arme aus getrennten Mittelwert- und Streuungsspalten.
+
+    Kopf ``Melatonin Mean | Melatonin SD | Placebo Mean | Placebo SD``: die
+    Mittelwertspalte traegt nur die Zahl, die Streuung steht daneben. Gepaart
+    wird nur, wenn beide Zellen reine Zahlen sind und der Kopf die rechte
+    Spalte als SD oder SE benennt. Ein Bereich in der Streuungsspalte ist ein
+    CI und braucht eine Fallzahl; er wird hier nicht gepaart, sondern bleibt
+    dem Zwei-Zellen-Fall vorbehalten.
+    """
+    pairs: List[Tuple[int, float, float, str]] = []
+    spreads = [index for index in sorted((roles.get("sd") or []) + (roles.get("se") or []))]
+    for index in spreads:
+        if index < 1 or index >= len(cells):
+            continue
+        spread_cell = str(cells[index] or "")
+        mean_cell = str(cells[index - 1] or "")
+        if not _BARE_NUMBER.match(spread_cell) or not _BARE_NUMBER.match(mean_cell):
+            continue
+        spread, mean = parse_number(spread_cell), parse_number(mean_cell)
+        if spread is None or mean is None or spread <= 0:
+            continue
+        head = str(header[index - 1]) if header and index - 1 < len(header) else ""
+        if (_RATIO_RE.search(head) or _DIRECT_EFFECT_RE.search(head)
+                or _MEDIAN_RE.search(head)):
+            continue
+        kind = "sd" if index in (roles.get("sd") or []) else "se"
+        pairs.append((index - 1, mean, spread, kind))
+    return pairs
 
 
 def arms_from_row(header: Sequence[str], cells: Sequence[str],
@@ -402,6 +447,14 @@ def arms_from_row(header: Sequence[str], cells: Sequence[str],
     # Genau zwei Arme. Eine Zeile mit vier oder acht Wertspalten (Gruppen,
     # Zeitpunkte, Geschlechter) ist kein Zwei-Arm-Vergleich; zwei beliebige
     # davon zu greifen wuerde eine Differenz erfinden, die niemand berichtet.
+    if len(chosen) < 2:
+        # Getrennte Spalten: Mittelwert hier, Streuung daneben. Nur ergaenzen,
+        # nie ersetzen - eine Zelle, die schon Mittelwert und Streuung traegt,
+        # bleibt die belegte Quelle.
+        for pair in _paired_arms(header, cells, roles):
+            if all(pair[0] != column for column, _m, _s, _k in chosen):
+                chosen.append(pair)
+
     if not chosen and skipped_median:
         return [], _REASONS["median"]
     if not chosen and skipped_ratio:

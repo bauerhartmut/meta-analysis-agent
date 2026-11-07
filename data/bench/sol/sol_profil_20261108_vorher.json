@@ -1,0 +1,282 @@
+{
+  "generated": "2026-11-07T20:53:28",
+  "sol_rows_total": 1367,
+  "sol_rows_hits": 14,
+  "sol_rows_rest": 1353,
+  "sol_rows_read_hits": 13,
+  "sol_rows_read_rest": 5,
+  "sol_row_gates_total": {
+    "keine Effektspalte im Kopf": 1115,
+    "keine Kopfzeile": 65,
+    "Kopfzeile (7 Spalten) passt nicht zur Zeile (3 Zellen) - colspan nicht aufloesbar": 21,
+    "Kopfzeile (7 Spalten) passt nicht zur Zeile (6 Zellen) - colspan nicht aufloesbar": 17,
+    "Kopfzeile (6 Spalten) passt nicht zur Zeile (3 Zellen) - colspan nicht aufloesbar": 12,
+    "Kopfzeile (6 Spalten) passt nicht zur Zeile (1 Zellen) - colspan nicht aufloesbar": 11,
+    "Kopfzeile (13 Spalten) passt nicht zur Zeile (3 Zellen) - colspan nicht aufloesbar": 8,
+    "gepoolte Schaetzung (Metaanalyse), keine Studienzeile": 8,
+    "Kopfzeile (6 Spalten) passt nicht zur Zeile (5 Zellen) - colspan nicht aufloesbar": 7,
+    "Kopfzeile (4 Spalten) passt nicht zur Zeile (1 Zellen) - colspan nicht aufloesbar": 7,
+    "Kopfzeile (4 Spalten) passt nicht zur Zeile (3 Zellen) - colspan nicht aufloesbar": 5,
+    "Effektspalte ohne lesbares Intervall": 5,
+    "Kopfzeile (8 Spalten) passt nicht zur Zeile (6 Zellen) - colspan nicht aufloesbar": 5,
+    "Kopfzeile (10 Spalten) passt nicht zur Zeile (2 Zellen) - colspan nicht aufloesbar": 4,
+    "Kopfzeile (8 Spalten) passt nicht zur Zeile (7 Zellen) - colspan nicht aufloesbar": 4,
+    "Kopfzeile (9 Spalten) passt nicht zur Zeile (1 Zellen) - colspan nicht aufloesbar": 3,
+    "Kopfzeile (2 Spalten) passt nicht zur Zeile (1 Zellen) - colspan nicht aufloesbar": 3,
+    "Kopfzeile (9 Spalten) passt nicht zur Zeile (8 Zellen) - colspan nicht aufloesbar": 3,
+    "Kopfzeile (10 Spalten) passt nicht zur Zeile (7 Zellen) - colspan nicht aufloesbar": 3,
+    "Kopfzeile (5 Spalten) passt nicht zur Zeile (2 Zellen) - colspan nicht aufloesbar": 3,
+    "Kopfzeile (8 Spalten) passt nicht zur Zeile (1 Zellen) - colspan nicht aufloesbar": 2,
+    "Kopfzeile (11 Spalten) passt nicht zur Zeile (10 Zellen) - colspan nicht aufloesbar": 2,
+    "Kopfzeile (15 Spalten) passt nicht zur Zeile (1 Zellen) - colspan nicht aufloesbar": 2,
+    "Kopfzeile (15 Spalten) passt nicht zur Zeile (2 Zellen) - colspan nicht aufloesbar": 2,
+    "Kopfzeile (10 Spalten) passt nicht zur Zeile (8 Zellen) - colspan nicht aufloesbar": 2,
+    "Kopfzeile (6 Spalten) passt nicht zur Zeile (2 Zellen) - colspan nicht aufloesbar": 2,
+    "Kopfzeile (5 Spalten) passt nicht zur Zeile (3 Zellen) - colspan nicht aufloesbar": 2,
+    "Kopfzeile (7 Spalten) passt nicht zur Zeile (1 Zellen) - colspan nicht aufloesbar": 2,
+    "Kopfzeile (3 Spalten) passt nicht zur Zeile (2 Zellen) - colspan nicht aufloesbar": 2,
+    "Kopfzeile (3 Spalten) passt nicht zur Zeile (1 Zellen) - colspan nicht aufloesbar": 2,
+    "Kopfzeile (13 Spalten) passt nicht zur Zeile (1 Zellen) - colspan nicht aufloesbar": 2,
+    "Kopfzeile (6 Spalten) passt nicht zur Zeile (4 Zellen) - colspan nicht aufloesbar": 2,
+    "Kopfzeile (8 Spalten) passt nicht zur Zeile (2 Zellen) - colspan nicht aufloesbar": 2,
+    "Kopfzeile (18 Spalten) passt nicht zur Zeile (16 Zellen) - colspan nicht aufloesbar": 1,
+    "Kopfzeile (15 Spalten) passt nicht zur Zeile (5 Zellen) - colspan nicht aufloesbar": 1,
+    "Kopfzeile (14 Spalten) passt nicht zur Zeile (1 Zellen) - colspan nicht aufloesbar": 1,
+    "Kopfzeile (12 Spalten) passt nicht zur Zeile (7 Zellen) - colspan nicht aufloesbar": 1,
+    "Kopfzeile (12 Spalten) passt nicht zur Zeile (10 Zellen) - colspan nicht aufloesbar": 1,
+    "Kopfzeile (17 Spalten) passt nicht zur Zeile (14 Zellen) - colspan nicht aufloesbar": 1,
+    "Kopfzeile (10 Spalten) passt nicht zur Zeile (6 Zellen) - colspan nicht aufloesbar": 1,
+    "Kopfzeile (11 Spalten) passt nicht zur Zeile (1 Zellen) - colspan nicht aufloesbar": 1,
+    "Kopfzeile (11 Spalten) passt nicht zur Zeile (9 Zellen) - colspan nicht aufloesbar": 1,
+    "Kopfzeile (7 Spalten) passt nicht zur Zeile (2 Zellen) - colspan nicht aufloesbar": 1,
+    "Kopfzeile (8 Spalten) passt nicht zur Zeile (4 Zellen) - colspan nicht aufloesbar": 1,
+    "Kopfzeile (9 Spalten) passt nicht zur Zeile (2 Zellen) - colspan nicht aufloesbar": 1,
+    "Kopfzeile (5 Spalten) passt nicht zur Zeile (4 Zellen) - colspan nicht aufloesbar": 1,
+    "Kopfzeile (4 Spalten) passt nicht zur Zeile (2 Zellen) - colspan nicht aufloesbar": 1
+  },
+  "sol_row_gates_hits": {
+    "Kopfzeile (6 Spalten) passt nicht zur Zeile (5 Zellen) - colspan nicht aufloesbar": 1
+  },
+  "candidates": 946,
+  "hits": 7,
+  "hit_dois": [
+    "10.1001/jamanetworkopen.2026.26983",
+    "10.1093/sleep/zsaa194",
+    "10.1093/sleep/zsae250",
+    "10.1111/jsr.70311",
+    "10.2147/nss.s460882",
+    "10.2188/jea.je20140201",
+    "10.3389/fnins.2026.1816963"
+  ],
+  "comparison": [
+    {
+      "feature": "lesbar",
+      "hits_median": 1.0,
+      "rest_median": 0.0,
+      "hits_mean": 1.86,
+      "rest_mean": 0.01,
+      "rule": {
+        "threshold": 1,
+        "recall": 1.0,
+        "base": 0.002129925452609159,
+        "lift": 469.49999999999994
+      }
+    },
+    {
+      "feature": "kandidaten",
+      "hits_median": 12.0,
+      "rest_median": 0.0,
+      "hits_mean": 12.29,
+      "rest_mean": 1.08,
+      "rule": {
+        "threshold": 1,
+        "recall": 1.0,
+        "base": 0.04579339723109691,
+        "lift": 21.837209302325583
+      }
+    },
+    {
+      "feature": "effect_header",
+      "hits_median": 1.0,
+      "rest_median": 0.0,
+      "hits_mean": 0.57,
+      "rest_mean": 0.11,
+      "rule": {
+        "threshold": 1,
+        "recall": 0.5714285714285714,
+        "base": 0.11182108626198083,
+        "lift": 5.110204081632653
+      }
+    },
+    {
+      "feature": "sol_rows",
+      "hits_median": 1.0,
+      "rest_median": 0.0,
+      "hits_mean": 2.0,
+      "rest_mean": 1.44,
+      "rule": {
+        "threshold": 1,
+        "recall": 1.0,
+        "base": 0.44515441959531415,
+        "lift": 2.2464114832535884
+      }
+    },
+    {
+      "feature": "sol_tabellenzeilen",
+      "hits_median": 1.0,
+      "rest_median": 0.0,
+      "hits_mean": 2.0,
+      "rest_mean": 1.44,
+      "rule": {
+        "threshold": 1,
+        "recall": 1.0,
+        "base": 0.44515441959531415,
+        "lift": 2.2464114832535884
+      }
+    },
+    {
+      "feature": "tables",
+      "hits_median": 3.0,
+      "rest_median": 2.0,
+      "hits_mean": 3.0,
+      "rest_mean": 2.68,
+      "rule": {
+        "threshold": 1,
+        "recall": 1.0,
+        "base": 0.8615548455804047,
+        "lift": 1.1606922126081582
+      }
+    },
+    {
+      "feature": "rows",
+      "hits_median": 42.0,
+      "rest_median": 30.0,
+      "hits_mean": 45.71,
+      "rest_mean": 41.51,
+      "rule": {
+        "threshold": 1,
+        "recall": 1.0,
+        "base": 0.8615548455804047,
+        "lift": 1.1606922126081582
+      }
+    },
+    {
+      "feature": "tabellen",
+      "hits_median": 3.0,
+      "rest_median": 2.0,
+      "hits_mean": 3.0,
+      "rest_mean": 2.68,
+      "rule": {
+        "threshold": 1,
+        "recall": 1.0,
+        "base": 0.8615548455804047,
+        "lift": 1.1606922126081582
+      }
+    },
+    {
+      "feature": "randomized",
+      "hits_median": 4.0,
+      "rest_median": 4.0,
+      "hits_mean": 6.71,
+      "rest_mean": 6.26,
+      "rule": {
+        "threshold": 1,
+        "recall": 1.0,
+        "base": 0.9957401490947817,
+        "lift": 1.00427807486631
+      }
+    },
+    {
+      "feature": "sol_mentions",
+      "hits_median": 10.0,
+      "rest_median": 5.0,
+      "hits_mean": 12.71,
+      "rest_mean": 7.69,
+      "rule": {
+        "threshold": 1,
+        "recall": 1.0,
+        "base": 1.0,
+        "lift": 1.0
+      }
+    },
+    {
+      "feature": "sleep_mentions",
+      "hits_median": 176.0,
+      "rest_median": 149.0,
+      "hits_mean": 172.86,
+      "rest_mean": 173.82,
+      "rule": {
+        "threshold": 1,
+        "recall": 1.0,
+        "base": 1.0,
+        "lift": 1.0
+      }
+    },
+    {
+      "feature": "chars",
+      "hits_median": 41916.0,
+      "rest_median": 45588.0,
+      "hits_mean": 48720.0,
+      "rest_mean": 55662.65,
+      "rule": {
+        "threshold": 1,
+        "recall": 1.0,
+        "base": 1.0,
+        "lift": 1.0
+      }
+    },
+    {
+      "feature": "sd_cells",
+      "hits_median": 1.0,
+      "rest_median": 0.0,
+      "hits_mean": 1.57,
+      "rest_mean": 6.33,
+      "rule": {
+        "threshold": 1,
+        "recall": 0.5714285714285714,
+        "base": 0.41533546325878595,
+        "lift": 1.3758241758241758
+      }
+    },
+    {
+      "feature": "sol_in_caption",
+      "hits_median": 0.0,
+      "rest_median": 0.0,
+      "hits_mean": 0.0,
+      "rest_mean": 0.01,
+      "rule": {}
+    },
+    {
+      "feature": "sol_rows_with_ci",
+      "hits_median": 0.0,
+      "rest_median": 0.0,
+      "hits_mean": 0.0,
+      "rest_mean": 0.01,
+      "rule": {}
+    },
+    {
+      "feature": "ci_in_rows",
+      "hits_median": 0.0,
+      "rest_median": 0.0,
+      "hits_mean": 0.29,
+      "rest_mean": 0.34,
+      "rule": {}
+    },
+    {
+      "feature": "placebo",
+      "hits_median": 0.0,
+      "rest_median": 1.0,
+      "hits_mean": 0.57,
+      "rest_mean": 7.97,
+      "rule": {}
+    },
+    {
+      "feature": "crossover",
+      "hits_median": 0.0,
+      "rest_median": 0.0,
+      "hits_mean": 2.86,
+      "rest_mean": 1.25,
+      "rule": {}
+    }
+  ]
+}
