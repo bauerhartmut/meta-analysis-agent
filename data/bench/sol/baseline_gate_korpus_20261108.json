@@ -1,0 +1,163 @@
+{
+ "generated": "2026-11-07T21:25:22",
+ "xml_dir": "data/bench/sol/xml",
+ "documents": 1027,
+ "tables": {
+  "tabellen": 2704,
+  "baseline_tabellen": 499,
+  "se_tabellen": 103,
+  "zeilen": 41423,
+  "zeilen_in_baseline": 10998,
+  "zeilen_in_se": 1733
+ },
+ "dbs": {
+  "effektspalten": {
+   "zeilen": 1000,
+   "zugeordnet": 1000,
+   "baseline_caption": 210,
+   "se_im_kopf": 30,
+   "se_rolle_erkannt": 48,
+   "baseline_oder_se": 240
+  },
+  "arm_tabelle": {
+   "zeilen": 97,
+   "zugeordnet": 97,
+   "baseline_caption": 33,
+   "se_im_kopf": 15,
+   "se_rolle_erkannt": 15,
+   "baseline_oder_se": 33
+  }
+ },
+ "totals": {
+  "zeilen": 1097,
+  "zugeordnet": 1097,
+  "baseline_caption": 243,
+  "se_im_kopf": 45,
+  "se_rolle_erkannt": 63,
+  "baseline_oder_se": 273
+ },
+ "sol_rows": 13,
+ "sol_flagged": 5,
+ "examples": [
+  {
+   "db": "effektspalten",
+   "source": "doi:10.1007/s40520-025-03020-9",
+   "outcome": "30–90 min",
+   "effect_type": "beta",
+   "effect": 1.21,
+   "baseline_caption": true,
+   "se_im_kopf": false,
+   "se_rolle_erkannt": false,
+   "caption": "Table 2 Multivariate linear regression results of sleep characteristics and physical functioning",
+   "header": "| Case/% | Handgrip (β-Coefficients (95%CI)) Model 1 | Handgrip (β-Coefficients (95%CI)) Model 2 | Handgrip (β-Coefficients (95%CI)) Model 3 | Handgrip (β-Coeff"
+  },
+  {
+   "db": "effektspalten",
+   "source": "doi:10.1007/s40520-025-03020-9",
+   "outcome": "30–90 min",
+   "effect_type": "beta",
+   "effect": 1.06,
+   "baseline_caption": true,
+   "se_im_kopf": false,
+   "se_rolle_erkannt": false,
+   "caption": "Table 2 Multivariate linear regression results of sleep characteristics and physical functioning",
+   "header": "| Case/% | Handgrip (β-Coefficients (95%CI)) Model 1 | Handgrip (β-Coefficients (95%CI)) Model 2 | Handgrip (β-Coefficients (95%CI)) Model 3 | Handgrip (β-Coeff"
+  },
+  {
+   "db": "effektspalten",
+   "source": "doi:10.1007/s40520-025-03020-9",
+   "outcome": "30–90 min",
+   "effect_type": "beta",
+   "effect": 0.83,
+   "baseline_caption": true,
+   "se_im_kopf": false,
+   "se_rolle_erkannt": false,
+   "caption": "Table 2 Multivariate linear regression results of sleep characteristics and physical functioning",
+   "header": "| Case/% | Handgrip (β-Coefficients (95%CI)) Model 1 | Handgrip (β-Coefficients (95%CI)) Model 2 | Handgrip (β-Coefficients (95%CI)) Model 3 | Handgrip (β-Coeff"
+  },
+  {
+   "db": "effektspalten",
+   "source": "doi:10.1007/s40520-025-03020-9",
+   "outcome": "30–90 min",
+   "effect_type": "beta",
+   "effect": -0.01,
+   "baseline_caption": true,
+   "se_im_kopf": false,
+   "se_rolle_erkannt": false,
+   "caption": "Table 2 Multivariate linear regression results of sleep characteristics and physical functioning",
+   "header": "| Case/% | Handgrip (β-Coefficients (95%CI)) Model 1 | Handgrip (β-Coefficients (95%CI)) Model 2 | Handgrip (β-Coefficients (95%CI)) Model 3 | Handgrip (β-Coeff"
+  },
+  {
+   "db": "effektspalten",
+   "source": "doi:10.1007/s40520-025-03020-9",
+   "outcome": "30–90 min",
+   "effect_type": "beta",
+   "effect": -0.01,
+   "baseline_caption": true,
+   "se_im_kopf": false,
+   "se_rolle_erkannt": false,
+   "caption": "Table 2 Multivariate linear regression results of sleep characteristics and physical functioning",
+   "header": "| Case/% | Handgrip (β-Coefficients (95%CI)) Model 1 | Handgrip (β-Coefficients (95%CI)) Model 2 | Handgrip (β-Coefficients (95%CI)) Model 3 | Handgrip (β-Coeff"
+  },
+  {
+   "db": "effektspalten",
+   "source": "doi:10.1007/s40520-025-03020-9",
+   "outcome": "30–90 min",
+   "effect_type": "beta",
+   "effect": -0.12,
+   "baseline_caption": true,
+   "se_im_kopf": false,
+   "se_rolle_erkannt": false,
+   "caption": "Table 2 Multivariate linear regression results of sleep characteristics and physical functioning",
+   "header": "| Case/% | Handgrip (β-Coefficients (95%CI)) Model 1 | Handgrip (β-Coefficients (95%CI)) Model 2 | Handgrip (β-Coefficients (95%CI)) Model 3 | Handgrip (β-Coeff"
+  },
+  {
+   "db": "effektspalten",
+   "source": "doi:10.1007/s40520-025-03020-9",
+   "outcome": "30–90 min",
+   "effect_type": "beta",
+   "effect": 0.0,
+   "baseline_caption": true,
+   "se_im_kopf": false,
+   "se_rolle_erkannt": false,
+   "caption": "Table 2 Multivariate linear regression results of sleep characteristics and physical functioning",
+   "header": "| Case/% | Handgrip (β-Coefficients (95%CI)) Model 1 | Handgrip (β-Coefficients (95%CI)) Model 2 | Handgrip (β-Coefficients (95%CI)) Model 3 | Handgrip (β-Coeff"
+  },
+  {
+   "db": "effektspalten",
+   "source": "doi:10.1007/s40520-025-03020-9",
+   "outcome": "30–90 min",
+   "effect_type": "beta",
+   "effect": 0.18,
+   "baseline_caption": true,
+   "se_im_kopf": false,
+   "se_rolle_erkannt": false,
+   "caption": "Table 2 Multivariate linear regression results of sleep characteristics and physical functioning",
+   "header": "| Case/% | Handgrip (β-Coefficients (95%CI)) Model 1 | Handgrip (β-Coefficients (95%CI)) Model 2 | Handgrip (β-Coefficients (95%CI)) Model 3 | Handgrip (β-Coeff"
+  },
+  {
+   "db": "effektspalten",
+   "source": "doi:10.1007/s40520-025-03020-9",
+   "outcome": "30–90 min",
+   "effect_type": "beta",
+   "effect": 0.22,
+   "baseline_caption": true,
+   "se_im_kopf": false,
+   "se_rolle_erkannt": false,
+   "caption": "Table 2 Multivariate linear regression results of sleep characteristics and physical functioning",
+   "header": "| Case/% | Handgrip (β-Coefficients (95%CI)) Model 1 | Handgrip (β-Coefficients (95%CI)) Model 2 | Handgrip (β-Coefficients (95%CI)) Model 3 | Handgrip (β-Coeff"
+  },
+  {
+   "db": "effektspalten",
+   "source": "doi:10.1007/s40520-025-03020-9",
+   "outcome": "30–90 min",
+   "effect_type": "beta",
+   "effect": 0.23,
+   "baseline_caption": true,
+   "se_im_kopf": false,
+   "se_rolle_erkannt": false,
+   "caption": "Table 2 Multivariate linear regression results of sleep characteristics and physical functioning",
+   "header": "| Case/% | Handgrip (β-Coefficients (95%CI)) Model 1 | Handgrip (β-Coefficients (95%CI)) Model 2 | Handgrip (β-Coefficients (95%CI)) Model 3 | Handgrip (β-Coeff"
+  }
+ ]
+}

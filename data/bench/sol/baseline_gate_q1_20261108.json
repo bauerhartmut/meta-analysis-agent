@@ -1,0 +1,163 @@
+{
+ "generated": "2026-11-07T21:24:59",
+ "xml_dir": "data/bench/sol/xml_q1",
+ "documents": 22,
+ "tables": {
+  "tabellen": 66,
+  "baseline_tabellen": 17,
+  "se_tabellen": 4,
+  "zeilen": 923,
+  "zeilen_in_baseline": 248,
+  "zeilen_in_se": 48
+ },
+ "dbs": {
+  "effektspalten": {
+   "zeilen": 28,
+   "zugeordnet": 28,
+   "baseline_caption": 0,
+   "se_im_kopf": 0,
+   "se_rolle_erkannt": 0,
+   "baseline_oder_se": 0
+  },
+  "arm_tabelle": {
+   "zeilen": 14,
+   "zugeordnet": 14,
+   "baseline_caption": 14,
+   "se_im_kopf": 11,
+   "se_rolle_erkannt": 11,
+   "baseline_oder_se": 14
+  }
+ },
+ "totals": {
+  "zeilen": 42,
+  "zugeordnet": 42,
+  "baseline_caption": 14,
+  "se_im_kopf": 11,
+  "se_rolle_erkannt": 11,
+  "baseline_oder_se": 14
+ },
+ "sol_rows": 0,
+ "sol_flagged": 0,
+ "examples": [
+  {
+   "db": "arm_tabelle",
+   "source": "doi:10.1007/s12325-023-02708-6",
+   "outcome": "Actual sleep time (min) by WA",
+   "effect_type": "g",
+   "effect": 4.731301,
+   "baseline_caption": true,
+   "se_im_kopf": true,
+   "se_rolle_erkannt": true,
+   "caption": "Table 1 Baseline demographics summary of study participants",
+   "header": "Particulars | Placebo ( n = 35), mean ± SE | VE ( n = 37), mean ± SE"
+  },
+  {
+   "db": "arm_tabelle",
+   "source": "doi:10.1371/journal.pone.0321635",
+   "outcome": "Age (Mean ± SD)",
+   "effect_type": "g",
+   "effect": 0.150129,
+   "baseline_caption": true,
+   "se_im_kopf": false,
+   "se_rolle_erkannt": false,
+   "caption": "Table 1 Demographic Characteristics of Participants.",
+   "header": "Variable | Melatonin n=40 | Placebo n=40"
+  },
+  {
+   "db": "arm_tabelle",
+   "source": "doi:10.1007/s12325-023-02708-6",
+   "outcome": "Age (years)",
+   "effect_type": "g",
+   "effect": -1.777794,
+   "baseline_caption": true,
+   "se_im_kopf": true,
+   "se_rolle_erkannt": true,
+   "caption": "Table 1 Baseline demographics summary of study participants",
+   "header": "Particulars | Placebo ( n = 35), mean ± SE | VE ( n = 37), mean ± SE"
+  },
+  {
+   "db": "arm_tabelle",
+   "source": "doi:10.1371/journal.pone.0321635",
+   "outcome": "BMI (Mean ± SD)",
+   "effect_type": "g",
+   "effect": -0.077308,
+   "baseline_caption": true,
+   "se_im_kopf": false,
+   "se_rolle_erkannt": false,
+   "caption": "Table 1 Demographic Characteristics of Participants.",
+   "header": "Variable | Melatonin n=40 | Placebo n=40"
+  },
+  {
+   "db": "arm_tabelle",
+   "source": "doi:10.1007/s12325-023-02708-6",
+   "outcome": "BMI (kg/m 2 )",
+   "effect_type": "g",
+   "effect": -0.998528,
+   "baseline_caption": true,
+   "se_im_kopf": true,
+   "se_rolle_erkannt": true,
+   "caption": "Table 1 Baseline demographics summary of study participants",
+   "header": "Particulars | Placebo ( n = 35), mean ± SE | VE ( n = 37), mean ± SE"
+  },
+  {
+   "db": "arm_tabelle",
+   "source": "doi:10.1007/s12325-023-02708-6",
+   "outcome": "Beck anxiety inventory (BAI)",
+   "effect_type": "g",
+   "effect": 1.161635,
+   "baseline_caption": true,
+   "se_im_kopf": true,
+   "se_rolle_erkannt": true,
+   "caption": "Table 1 Baseline demographics summary of study participants",
+   "header": "Particulars | Placebo ( n = 35), mean ± SE | VE ( n = 37), mean ± SE"
+  },
+  {
+   "db": "arm_tabelle",
+   "source": "doi:10.1371/journal.pone.0321635",
+   "outcome": "Duration of infertility",
+   "effect_type": "g",
+   "effect": 0.154571,
+   "baseline_caption": true,
+   "se_im_kopf": false,
+   "se_rolle_erkannt": false,
+   "caption": "Table 1 Demographic Characteristics of Participants.",
+   "header": "Variable | Melatonin n=40 | Placebo n=40"
+  },
+  {
+   "db": "arm_tabelle",
+   "source": "doi:10.1007/s12325-023-02708-6",
+   "outcome": "Epworth sleepiness scale (ESS)",
+   "effect_type": "g",
+   "effect": 0.311142,
+   "baseline_caption": true,
+   "se_im_kopf": true,
+   "se_rolle_erkannt": true,
+   "caption": "Table 1 Baseline demographics summary of study participants",
+   "header": "Particulars | Placebo ( n = 35), mean ± SE | VE ( n = 37), mean ± SE"
+  },
+  {
+   "db": "arm_tabelle",
+   "source": "doi:10.1007/s12325-023-02708-6",
+   "outcome": "Female, n (%)",
+   "effect_type": "g",
+   "effect": -0.008662,
+   "baseline_caption": true,
+   "se_im_kopf": true,
+   "se_rolle_erkannt": true,
+   "caption": "Table 1 Baseline demographics summary of study participants",
+   "header": "Particulars | Placebo ( n = 35), mean ± SE | VE ( n = 37), mean ± SE"
+  },
+  {
+   "db": "arm_tabelle",
+   "source": "doi:10.1007/s12325-023-02708-6",
+   "outcome": "Male, n (%)",
+   "effect_type": "g",
+   "effect": 0.003828,
+   "baseline_caption": true,
+   "se_im_kopf": true,
+   "se_rolle_erkannt": true,
+   "caption": "Table 1 Baseline demographics summary of study participants",
+   "header": "Particulars | Placebo ( n = 35), mean ± SE | VE ( n = 37), mean ± SE"
+  }
+ ]
+}
