@@ -1,24 +1,39 @@
 {
- "generated": "2026-11-07T12:50:40.434466+00:00",
+ "generated": "2026-11-07T15:46:05.570243+00:00",
  "stats": {
   "epmc_hits": 1068,
-  "epmc_returned": 100,
-  "epmc_with_pmcid": 100,
-  "epmc_without_doi": 3,
+  "epmc_returned": 1067,
+  "epmc_with_pmcid": 1059,
+  "epmc_without_doi": 30,
   "crossref_returned": 100,
-  "crossref_overlap_epmc": 1,
+  "crossref_overlap_epmc": 3,
   "crossref_meta_analyses": 1
  },
  "crossref_overlap": [
+  "10.1016/j.cnp.2025.09.002",
+  "10.18502/ijps.v16i3.6256",
   "10.3390/clockssleep8020031"
  ],
  "crossref_meta_analysis_titles": [
   "Efficacy and safety of melatonin for sleep onset insomnia in children and adolescents: a meta-analysis of randomized controlled trials"
  ],
  "download": {
-  "loaded": 100,
-  "present": 0,
-  "failed": 0,
-  "failures": []
+  "loaded": 298,
+  "present": 758,
+  "failed": 3,
+  "failures": [
+   {
+    "pmc": "PMC7163627",
+    "status": 500
+   },
+   {
+    "pmc": "PMC8959415",
+    "status": 500
+   },
+   {
+    "pmc": "PMC9554922",
+    "status": 500
+   }
+  ]
  }
 }

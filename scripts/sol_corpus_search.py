@@ -60,33 +60,53 @@ def _get(url: str, timeout: int = 45, attempts: int = 3) -> tuple[int, bytes]:
     return 0, b""
 
 
-def search_europepmc(page_size: int = 100) -> dict:
-    params = urllib.parse.urlencode({
-        "query": QUERY_EPMC, "format": "json", "pageSize": page_size,
-        "resultType": "core", "sort": "P_PDATE_D desc",
-    })
-    status, body = _get(f"{EPMC_SEARCH}?{params}")
-    if status != 200 or not body:
-        return {"query": QUERY_EPMC, "status": status, "hitCount": 0, "records": []}
-    payload = json.loads(body.decode("utf-8", "ignore"))
-    result = payload.get("resultList", {}).get("result", []) or []
-    records = []
-    for item in result:
-        records.append({
-            "pmcid": str(item.get("pmcid") or "").strip(),
-            "doi": str(item.get("doi") or "").strip(),
-            "title": str(item.get("title") or "").strip(),
-            "year": str(item.get("pubYear") or ""),
-            "journal": str(item.get("journalTitle") or ""),
-            "pubType": item.get("pubTypeList", {}).get("pubType", [])
-            if isinstance(item.get("pubTypeList"), dict) else [],
-            "isOpenAccess": str(item.get("isOpenAccess") or ""),
+def search_europepmc(page_size: int = 100, pages: int = 1) -> dict:
+    """Treffer ueber ``cursorMark`` blaettern - dieselbe Query, mehr Seiten."""
+    records: list[dict] = []
+    seen: set[str] = set()
+    hit_count = 0
+    status = 0
+    pages_read = 0
+    cursor = "*"
+    for _ in range(max(1, pages)):
+        params = urllib.parse.urlencode({
+            "query": QUERY_EPMC, "format": "json", "pageSize": page_size,
+            "resultType": "core", "sort": "P_PDATE_D desc", "cursorMark": cursor,
         })
+        status, body = _get(f"{EPMC_SEARCH}?{params}")
+        if status != 200 or not body:
+            break
+        try:
+            payload = json.loads(body.decode("utf-8", "ignore"))
+        except ValueError:
+            break
+        hit_count = hit_count or int(payload.get("hitCount") or 0)
+        result = payload.get("resultList", {}).get("result", []) or []
+        pages_read += 1
+        for item in result:
+            key = str(item.get("pmcid") or item.get("id") or item.get("doi") or "")
+            if not key or key in seen:
+                continue
+            seen.add(key)
+            records.append({
+                "pmcid": str(item.get("pmcid") or "").strip(),
+                "doi": str(item.get("doi") or "").strip(),
+                "title": str(item.get("title") or "").strip(),
+                "year": str(item.get("pubYear") or ""),
+                "journal": str(item.get("journalTitle") or ""),
+                "isOpenAccess": str(item.get("isOpenAccess") or ""),
+            })
+        next_cursor = str(payload.get("nextCursorMark") or "")
+        if not result or not next_cursor or next_cursor == cursor:
+            break
+        cursor = next_cursor
+        time.sleep(0.3)
     return {
         "query": QUERY_EPMC,
         "status": status,
-        "hitCount": int(payload.get("hitCount") or 0),
+        "hitCount": hit_count,
         "returned": len(records),
+        "pages": pages_read,
         "records": records,
     }
 
@@ -175,13 +195,17 @@ def main(argv=None) -> int:
     ap.add_argument("--base", default="data/bench/sol")
     ap.add_argument("--download", action="store_true",
                     help="XML der Treffer laden (Netz)")
+    ap.add_argument("--pages", type=int, default=1,
+                    help="Seiten zu je 100 Treffern (1 = wie bisher)")
+    ap.add_argument("--manifest-out", default="",
+                    help="Manifest-Ziel; leer = <base>/manifest.json")
     ap.add_argument("--sleep", type=float, default=0.2)
     args = ap.parse_args(argv)
 
     base = Path(args.base)
     base.mkdir(parents=True, exist_ok=True)
 
-    epmc = search_europepmc()
+    epmc = search_europepmc(pages=args.pages)
     (base / "search_europepmc.json").write_text(
         json.dumps(epmc, ensure_ascii=False, indent=1), encoding="utf-8")
     print(f"Europe PMC: hitCount {epmc.get('hitCount')} | zurueck "
@@ -193,7 +217,9 @@ def main(argv=None) -> int:
     print(f"Crossref: zurueck {crossref.get('returned')}", flush=True)
 
     built = build_manifest(epmc, crossref)
-    (base / "manifest.json").write_text(
+    manifest_path = Path(args.manifest_out) if args.manifest_out else base / "manifest.json"
+    manifest_path.parent.mkdir(parents=True, exist_ok=True)
+    manifest_path.write_text(
         json.dumps(built["manifest"], ensure_ascii=False, indent=1), encoding="utf-8")
     print(json.dumps(built["stats"], ensure_ascii=False))
 

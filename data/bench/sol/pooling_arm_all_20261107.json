@@ -1,0 +1,235 @@
+{
+  "rows_total": 8,
+  "adjusted_rows": 0,
+  "crude_rows": 0,
+  "deduped_rows": 8,
+  "dropped_duplicates": 0,
+  "variant_all": {
+    "usable": 8,
+    "groups": [
+      {
+        "group": "low [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1186/s12889-026-26824-4"
+        ]
+      },
+      {
+        "group": "mean abas gac [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1136/bmj.e6664"
+        ]
+      },
+      {
+        "group": "mean age [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1136/bmj.e6664"
+        ]
+      },
+      {
+        "group": "mizuno et al 2014 52 [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1002/mdc3.12899"
+        ]
+      },
+      {
+        "group": "poewe et al 2007 51 [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1002/mdc3.12899"
+        ]
+      },
+      {
+        "group": "table 3 comparison of temporal changes in epworth sleepiness scale scores between th ess [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1093/gerona/glag105"
+        ]
+      },
+      {
+        "group": "table 4 comparison of pittsburgh sleep quality index total scores between the inter psqi [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1093/gerona/glag105"
+        ]
+      },
+      {
+        "group": "table 5 comparison of blessed orientation memory concentration test scores between [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1093/gerona/glag105"
+        ]
+      }
+    ],
+    "k_distribution": {
+      "1": 8
+    },
+    "groups_k_ge_2": 0,
+    "excluded": []
+  },
+  "variant_deduped": {
+    "usable": 8,
+    "groups": [
+      {
+        "group": "low [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1186/s12889-026-26824-4"
+        ]
+      },
+      {
+        "group": "mean abas gac [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1136/bmj.e6664"
+        ]
+      },
+      {
+        "group": "mean age [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1136/bmj.e6664"
+        ]
+      },
+      {
+        "group": "mizuno et al 2014 52 [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1002/mdc3.12899"
+        ]
+      },
+      {
+        "group": "poewe et al 2007 51 [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1002/mdc3.12899"
+        ]
+      },
+      {
+        "group": "table 3 comparison of temporal changes in epworth sleepiness scale scores between th ess [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1093/gerona/glag105"
+        ]
+      },
+      {
+        "group": "table 4 comparison of pittsburgh sleep quality index total scores between the inter psqi [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1093/gerona/glag105"
+        ]
+      },
+      {
+        "group": "table 5 comparison of blessed orientation memory concentration test scores between [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1093/gerona/glag105"
+        ]
+      }
+    ],
+    "k_distribution": {
+      "1": 8
+    },
+    "groups_k_ge_2": 0,
+    "excluded": []
+  }
+}

@@ -60,9 +60,13 @@ def main(argv=None) -> int:
         db_path.unlink()
     db = Database(str(db_path))
 
-    documents, totals = [], Counter()
+    documents, totals, missing = [], Counter(), []
     for doi, pmc in sources:
-        xml = (xml_dir / f"{pmc}.xml").read_text(encoding="utf-8", errors="replace")
+        xml_path = xml_dir / f"{pmc}.xml"
+        if not xml_path.exists():
+            missing.append(pmc)
+            continue
+        xml = xml_path.read_text(encoding="utf-8", errors="replace")
         text = _xml_to_text(xml)
         source_id = f"doi:{doi}"
         row = db.save_source_text(
@@ -119,10 +123,12 @@ def main(argv=None) -> int:
             ],
         })
 
+    totals["missing_xml"] = len(missing)
     report = {
         "generated": __import__("datetime").datetime.now().isoformat(timespec="seconds"),
         "documents": documents,
         "totals": dict(totals),
+        "missing_xml": missing,
     }
     out = Path(args.json)
     out.parent.mkdir(parents=True, exist_ok=True)

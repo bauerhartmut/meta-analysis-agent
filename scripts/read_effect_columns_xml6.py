@@ -64,9 +64,14 @@ def main(argv=None) -> int:
         db_path.unlink()
     db = Database(str(db_path))
 
-    doc_reports, totals = [], Counter()
+    doc_reports, totals, missing = [], Counter(), []
     for doi, pmc in documents:
         xml_path = xml_dir / f"{pmc}.xml"
+        if not xml_path.exists():
+            # Ein fehlgeschlagener Download darf den ganzen Korpus nicht
+            # abbrechen; das Dokument wird gezaehlt und uebersprungen.
+            missing.append(pmc)
+            continue
         xml = xml_path.read_text(encoding="utf-8", errors="replace")
         text = _xml_to_text(xml)
         source_id = f"doi:{doi}"
@@ -140,10 +145,12 @@ def main(argv=None) -> int:
             ],
         })
 
+    totals["missing_xml"] = len(missing)
     report = {
         "generated": dt.datetime.now().isoformat(timespec="seconds"),
         "documents": doc_reports,
         "totals": dict(totals),
+        "missing_xml": missing,
     }
     out = Path(args.json)
     out.parent.mkdir(parents=True, exist_ok=True)
