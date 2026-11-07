@@ -1,0 +1,531 @@
+"""Deterministischer Umrechner: Arm-Deskriptiva -> Hedges g mit SE.
+
+Der Effekt-Extraktor liest nur, was als Effekt dasteht. Viele Tabellen
+liefern stattdessen Mittelwert, Streuung und n je Arm; daraus laesst sich
+die standardisierte Mittelwertdifferenz exakt berechnen - ohne Modell,
+ohne Schaetzung. Dieses Modul tut genau das, und es speichert nur Zeilen,
+deren beide Arme vollstaendig belegt sind und deren Zitat woertlich im
+gespeicherten Dokument steht.
+
+Formeln (Hedges & Olkin 1985):
+    s_pooled^2 = ((n1-1) s1^2 + (n2-1) s2^2) / (n1 + n2 - 2)
+    d          = (m1 - m2) / s_pooled
+    J          = 1 - 3 / (4 (n1 + n2) - 9)
+    g          = J * d
+    SE(g)      = sqrt((n1 + n2) / (n1 n2) + g^2 / (2 (n1 + n2)))
+
+Streuungsangaben werden nur uebernommen, wenn sie eindeutig sind:
+  * "391.8 ± 12.4"                -> SD
+  * "7.21 (SE 1.13)"              -> SE, SD = SE * sqrt(n)
+  * "16.7 (11.6 to 22.0)"         -> 95 %-CI des Mittelwerts,
+                                     SE = (hi - lo) / (2 z), SD = SE * sqrt(n)
+  * "16.7 (11.6)"                 -> unklar (SD? CI? IQR?) und wird verworfen
+"""
+
+from __future__ import annotations
+
+import logging
+import math
+import re
+from dataclasses import dataclass
+from typing import Dict, Iterable, List, Optional, Sequence, Tuple
+
+logger = logging.getLogger(__name__)
+
+ARM_LEVEL_VERSION = "arm-level/1"
+
+_MIN_ARM_N = 2
+
+
+@dataclass
+class ArmStats:
+    """Ein Arm mit Mittelwert, Streuung und Fallzahl."""
+
+    label: str
+    n: int
+    mean: float
+    sd: float
+    sd_source: str = "sd"     # "sd" | "se" | "ci"
+
+
+@dataclass
+class ArmEffect:
+    """Ergebnis der Umrechnung, bevor es gespeichert wird."""
+
+    effect: float
+    se: float
+    n_total: int
+    arm1: ArmStats
+    arm2: ArmStats
+    d: float
+    correction: float
+    direction: str
+
+    def to_dict(self) -> Dict:
+        return {
+            "effect": round(self.effect, 6),
+            "se": round(self.se, 6),
+            "n": self.n_total,
+            "d": round(self.d, 6),
+            "correction": round(self.correction, 6),
+            "direction": self.direction,
+            "arms": [
+                {"label": a.label, "n": a.n, "mean": a.mean,
+                 "sd": round(a.sd, 6), "sd_source": a.sd_source}
+                for a in (self.arm1, self.arm2)
+            ],
+        }
+
+
+# --------------------------------------------------------------------------
+# Zahlen und Streuungen lesen
+# --------------------------------------------------------------------------
+
+_NUM_RE = re.compile(r"[-+\u2212\u2013]?\d[\d.,]*")
+
+
+def parse_number(value) -> Optional[float]:
+    """Eine Zahl aus einer Zelle, oder None.
+
+    Grenzen wie "<.001" sind p-Werte, keine Messwerte, und werden verworfen.
+    Trennzeichen folgen einer festen Konvention, nicht dem Zufall der Zelle:
+    stehen Punkt und Komma, entscheidet das LETZTE Zeichen ("1,234.5" ->
+    1234.5), mehrere Kommas sind Tausendertrenner ("1,234,567"), ein
+    einzelnes Komma ist in diesem Projekt das Dezimalkomma ("0,42" -> 0.42).
+    Nichts wird gerundet oder geschaetzt.
+    """
+    if value is None:
+        return None
+    if isinstance(value, bool):
+        return None
+    if isinstance(value, (int, float)):
+        return float(value) if math.isfinite(float(value)) else None
+    text = str(value).strip()
+    if not text or "<" in text or ">" in text:
+        return None
+    text = (text.replace("\u2212", "-").replace("\u2013", "-")
+                .replace("\u00a0", " ").replace("\u2009", " "))
+    match = _NUM_RE.search(text)
+    if not match:
+        return None
+    token = match.group(0).lstrip("+").rstrip(".,")
+    if not token:
+        return None
+    if "," in token and "." in token:
+        if token.rfind(",") > token.rfind("."):
+            token = token.replace(".", "").replace(",", ".")
+        else:
+            token = token.replace(",", "")
+    elif token.count(",") > 1:
+        token = token.replace(",", "")
+    elif "," in token:
+        token = token.replace(",", ".")
+    try:
+        number = float(token)
+    except ValueError:
+        return None
+    return number if math.isfinite(number) else None
+
+
+def sd_from_se(se: float, n: int) -> Optional[float]:
+    """SD = SE * sqrt(n)."""
+    if se is None or n is None:
+        return None
+    if se <= 0 or int(n) < _MIN_ARM_N:
+        return None
+    return float(se) * math.sqrt(int(n))
+
+
+def sd_from_ci(low: float, high: float, n: int,
+               level: float = 0.95) -> Optional[float]:
+    """SD aus einem Konfidenzintervall des Mittelwerts (ueber den SE)."""
+    from .extraction import derive_se  # dieselbe z-Tabelle wie im Extraktor
+
+    se = derive_se(low, high, level)
+    return sd_from_se(se, n) if se else None
+
+
+_RANGE_RE = re.compile(
+    r"(-?\d+(?:[.,]\d+)?)\s*(?:to|bis|-|\u2013|,)\s*(-?\d+(?:[.,]\d+)?)",
+    re.IGNORECASE,
+)
+
+
+def parse_mean_spread(cell: str, role: str = "") -> Optional[Tuple[float, float, str]]:
+    """(Mittelwert, Streuung, Art) aus einer Zelle - oder None.
+
+    ``role`` kommt aus dem Spaltenkopf ("sd", "se", "ci") und entscheidet
+    nur dann, wenn die Zelle selbst nichts sagt. Alles andere wird
+    verworfen: eine Zahl in Klammern ohne Etikett kann SD, SE, CI oder
+    Interquartilsabstand sein, und Raten waere hier ein erfundener Wert.
+    """
+    text = str(cell or "").strip()
+    if not text:
+        return None
+    mean = parse_number(text)
+    if mean is None:
+        return None
+    lowered = text.lower()
+    has_sd = bool(re.search(r"\bsd\b|standard\s+deviation", lowered)) or "\u00b1" in text
+    has_se = bool(re.search(r"\bse\b|standard\s+error", lowered))
+    has_ci = bool(re.search(r"95\s*%|confidence\s+interval|\bci\b", lowered))
+
+    # "mean ± spread"
+    if "\u00b1" in text:
+        spread = parse_number(text.split("\u00b1", 1)[1])
+        return (mean, spread, "sd") if spread and spread > 0 else None
+
+    inner = re.search(r"\(([^()]*)\)", text)
+    if not inner:
+        return None
+    body = inner.group(1)
+    kind = ""
+    if has_sd:
+        kind = "sd"
+    elif has_se:
+        kind = "se"
+    elif has_ci:
+        kind = "ci"
+    elif _RANGE_RE.search(body):
+        kind = "ci"          # Wertebereich in Klammern ohne Etikett
+    elif role in ("sd", "se", "ci"):
+        kind = role
+    if not kind:
+        return None
+
+    if kind == "ci":
+        span = _RANGE_RE.search(body)
+        if not span:
+            return None
+        low, high = parse_number(span.group(1)), parse_number(span.group(2))
+        if low is None or high is None or high <= low:
+            return None
+        # Die Streuung selbst braucht die Fallzahl; sie wird im Aufrufer
+        # ueber _split_ci geholt. Hier nur die Art markieren.
+        return mean, high - low, "ci"
+    spread = parse_number(body)
+    if spread is None or spread <= 0:
+        return None
+    return mean, spread, kind
+
+
+def _split_ci(cell: str) -> Optional[Tuple[float, float, float]]:
+    """(Mittelwert, low, high) fuer den CI-Fall; getrennt, weil der Aufrufer
+    die Fallzahl fuer die Umrechnung braucht."""
+    text = str(cell or "").strip()
+    mean = parse_number(text)
+    span = _RANGE_RE.search(text)
+    if mean is None or not span:
+        return None
+    low, high = parse_number(span.group(1)), parse_number(span.group(2))
+    if low is None or high is None or high <= low:
+        return None
+    return mean, low, high
+
+
+# --------------------------------------------------------------------------
+# Rechnen
+# --------------------------------------------------------------------------
+
+def cohens_d(m1: float, sd1: float, n1: int, m2: float, sd2: float,
+             n2: int) -> Optional[float]:
+    if int(n1) < _MIN_ARM_N or int(n2) < _MIN_ARM_N:
+        return None
+    if sd1 is None or sd2 is None or sd1 <= 0 or sd2 <= 0:
+        return None
+    pooled = (((n1 - 1) * sd1 ** 2 + (n2 - 1) * sd2 ** 2)
+              / (n1 + n2 - 2))
+    if pooled <= 0:
+        return None
+    return (m1 - m2) / math.sqrt(pooled)
+
+
+def hedges_correction(n1: int, n2: int) -> float:
+    """J = 1 - 3 / (4 (n1 + n2) - 9)."""
+    total = int(n1) + int(n2)
+    return 1.0 - 3.0 / (4.0 * total - 9.0)
+
+
+def se_of_g(g: float, n1: int, n2: int) -> float:
+    """SE(g) = sqrt((n1+n2)/(n1 n2) + g^2 / (2 (n1+n2)))."""
+    return math.sqrt(((n1 + n2) / (n1 * n2))
+                     + (g * g) / (2.0 * (n1 + n2)))
+
+
+def smd_from_arms(arm1: ArmStats, arm2: ArmStats) -> Optional[ArmEffect]:
+    """Hedges g mit Standardfehler aus zwei vollstaendigen Armen."""
+    if arm1 is None or arm2 is None:
+        return None
+    d = cohens_d(arm1.mean, arm1.sd, arm1.n, arm2.mean, arm2.sd, arm2.n)
+    if d is None:
+        return None
+    correction = hedges_correction(arm1.n, arm2.n)
+    g = correction * d
+    se = se_of_g(g, arm1.n, arm2.n)
+    if not math.isfinite(se) or se <= 0:
+        return None
+    direction = (f"hoeherer Wert in '{arm1.label}' als in '{arm2.label}' "
+                 f"bedeutet einen hoeheren Outcome-Wert")
+    return ArmEffect(effect=g, se=se, n_total=arm1.n + arm2.n,
+                     arm1=arm1, arm2=arm2, d=d, correction=correction,
+                     direction=direction)
+
+
+# --------------------------------------------------------------------------
+# Tabellenzeile -> zwei Arme
+# --------------------------------------------------------------------------
+
+_MEDIAN_RE = re.compile(r"median|\biqr\b|interquartile", re.IGNORECASE)
+_DIRECT_EFFECT_RE = re.compile(r"hedges|\beffect\s+size\b|\bg\s*\(95", re.IGNORECASE)
+_RATIO_RE = re.compile(
+    r"\b(?:OR|RR|HR|IRR)\b|odds\s+ratio|risk\s+ratio|hazard\s+ratio",
+    re.IGNORECASE)
+
+_REASONS = {
+    "few_columns": "zu wenige Spalten",
+    "no_arm": "kein Mittelwert mit eindeutiger Streuung in zwei Spalten",
+    "no_n": "Fallzahl je Arm fehlt",
+    "bad_spread": "Streuung nicht eindeutig (SD/SE/CI)",
+    "bad_n": "Fallzahl zu klein",
+    "bad_sd": "Streuung nicht positiv",
+    "arm_count": "nicht genau zwei Spalten mit Mittelwert und Streuung",
+    "median": "Median/IQR statt Mittelwert mit SD/SE/CI (kein SMD)",
+    "ratio": "direkter Effekt mit OR/RR/HR - nicht Aufgabe des Arm-Rechners",
+}
+
+
+def _role_columns(header: Sequence[str]) -> Dict[str, List[int]]:
+    """Spaltenrollen aus dem Kopf (n, sd, se, ci) - nur diese vier."""
+    from ..research.jats_tables import _col_semantics
+
+    roles: Dict[str, List[int]] = {"n": [], "sd": [], "se": [], "ci": []}
+    for index, role in _col_semantics(list(header or [])).items():
+        if role in roles:
+            roles[role].append(index)
+    for key in roles:
+        roles[key].sort()
+    return roles
+
+
+def _role_for(roles: Dict[str, List[int]], index: int) -> str:
+    for key in ("sd", "se", "ci"):
+        if index in roles.get(key, []):
+            return key
+    return ""
+
+
+def arms_from_row(header: Sequence[str], cells: Sequence[str],
+                  n_per_arm: Optional[Sequence[int]] = None
+                  ) -> Tuple[List[ArmStats], str]:
+    """Zwei Arme aus einer Tabellenzeile, oder ([], Grund).
+
+    Erwartet je Arm eine Spalte mit "Mittelwert (Streuung)" und eine
+    Fallzahl - entweder als eigene n-Spalte je Arm, als "n = 25" im
+    Spaltenkopf oder als ``n_per_arm`` von aussen. Eine einzelne
+    Gesamt-Fallzahl reicht nicht: g braucht n je Arm.
+    """
+    if not cells or len(cells) < 2:
+        return [], _REASONS["few_columns"]
+    roles = _role_columns(header or [])
+    n_cols = set(roles.get("n") or [])
+
+    # Eine Armspalte ist die, deren ZELLE Mittelwert plus eindeutige
+    # Streuung traegt ("10.0 (2.0)", "16.7 (11.6 to 22.0)"). Reine
+    # Zahlenspalten (n, p-Wert) fallen dabei von selbst heraus; eine
+    # Spalte "Mean (SD)" ist ein Arm, kein Streuungsfeld.
+    chosen: List[Tuple[int, float, float, str]] = []
+    skipped_median = False
+    skipped_ratio = False
+    for index, cell in enumerate(cells):
+        if index in n_cols:
+            continue
+        header_cell = str(header[index]) if header and index < len(header) else ""
+        if _MEDIAN_RE.search(header_cell):
+            # Median mit IQR ist keine Mittelwertdifferenz: die SMD-Formel
+            # gilt fuer Mittelwerte, ein Median braucht einen anderen
+            # Schaetzer. Nicht umdeuten, sondern auslassen.
+            skipped_median = True
+            continue
+        if _DIRECT_EFFECT_RE.search(header_cell):
+            # "Hedges g (95% CI)" ist schon ein Effekt - den liest der
+            # Effekt-Extraktor, der Arm-Rechner darf ihn nicht als Arm
+            # missverstehen.
+            continue
+        if _RATIO_RE.search(header_cell):
+            # "OR (95% CI)" ist ein direkt berichtetes Verhaeltnis; es in
+            # zwei Arme zu zerlegen waere eine Rueckrechnung ohne Daten.
+            skipped_ratio = True
+            continue
+        parsed = parse_mean_spread(cell, role=_role_for(roles, index))
+        if not parsed:
+            continue
+        mean, spread, kind = parsed
+        chosen.append((index, mean, spread, kind))
+
+    # Genau zwei Arme. Eine Zeile mit vier oder acht Wertspalten (Gruppen,
+    # Zeitpunkte, Geschlechter) ist kein Zwei-Arm-Vergleich; zwei beliebige
+    # davon zu greifen wuerde eine Differenz erfinden, die niemand berichtet.
+    if not chosen and skipped_median:
+        return [], _REASONS["median"]
+    if not chosen and skipped_ratio:
+        return [], _REASONS["ratio"]
+    if len(chosen) < 2:
+        return [], _REASONS["no_arm"]
+    if len(chosen) > 2:
+        return [], _REASONS["arm_count"]
+    chosen = chosen[:2]
+
+    labels = []
+    for index, _m, _s, _k in chosen:
+        text = (str(header[index]).strip()
+                if header and index < len(header) else "")
+        labels.append(text or f"Spalte {index + 1}")
+
+    arms: List[ArmStats] = []
+    for position, (index, mean, spread, kind) in enumerate(chosen):
+        if n_per_arm and position < len(n_per_arm):
+            n = int(n_per_arm[position])
+        else:
+            n = _n_for_column(header or [], cells, index, roles, position)
+        if not n or n < _MIN_ARM_N:
+            return [], _REASONS["no_n"]
+        if kind == "ci":
+            ci = _split_ci(cells[index])
+            if not ci:
+                return [], _REASONS["bad_spread"]
+            _m, low, high = ci
+            sd = sd_from_ci(low, high, n)
+            source = "ci"
+        elif kind == "se":
+            sd = sd_from_se(spread, n)
+            source = "se"
+        else:
+            sd, source = spread, "sd"
+        if not sd or sd <= 0:
+            return [], _REASONS["bad_sd"]
+        arms.append(ArmStats(label=labels[position], n=n, mean=mean, sd=sd,
+                             sd_source=source))
+    return arms, ""
+
+
+def _n_for_column(header: Sequence[str], cells: Sequence[str], index: int,
+                  roles: Dict[str, List[int]],
+                  arm_position: int = 0) -> Optional[int]:
+    """Fallzahl fuer eine Armspalte finden - nie raten.
+
+    Reihenfolge: eigene n-Spalten in Arm-Reihenfolge (zwei Arme, zwei
+    n-Spalten), "n = 25" im Spaltenkopf, "n=25" in der Zelle. Eine einzelne
+    n-Spalte ist die Gesamt-Fallzahl und wird hier nicht verwendet.
+    """
+    n_cols = roles.get("n") or []
+    if len(n_cols) >= 2 and arm_position < len(n_cols):
+        value = parse_number(cells[n_cols[arm_position]])
+        if value and value >= _MIN_ARM_N:
+            return int(value)
+    header_cell = str(header[index] if index < len(header) else "")
+    match = re.search(r"\(?\s*n\s*=\s*(\d+)", header_cell, re.IGNORECASE)
+    if match:
+        return int(match.group(1))
+    cell = str(cells[index] if index < len(cells) else "")
+    match = re.search(r"\bn\s*=\s*(\d+)", cell, re.IGNORECASE)
+    if match:
+        return int(match.group(1))
+    return None
+
+
+def convert_row(header: Sequence[str], cells: Sequence[str], outcome: str = "",
+                quote: str = "", n_per_arm: Optional[Sequence[int]] = None) -> Dict:
+    """Eine Tabellenzeile umrechnen; Ergebnis ist speicherfertig oder leer.
+
+    Der ``quote`` muss die Zeile woertlich enthalten - der Aufrufer prueft
+    das gegen den gespeicherten Text, bevor er speichert.
+    """
+    arms, reason = arms_from_row(header, cells, n_per_arm)
+    if not arms:
+        return {"ok": False, "reason": reason}
+    effect = smd_from_arms(arms[0], arms[1])
+    if effect is None:
+        return {"ok": False, "reason": _REASONS["bad_sd"]}
+    payload = effect.to_dict()
+    payload.update({"ok": True, "outcome": outcome, "quote": quote})
+    return payload
+
+
+# --------------------------------------------------------------------------
+# Speichern - nur vollstaendig belegte Zeilen
+# --------------------------------------------------------------------------
+
+def store_arm_level_effects(db, source_id: str, source_text_id: str,
+                            document_text: str,
+                            candidates: Iterable[Dict]) -> Tuple[List[Dict], List[Dict]]:
+    """Vollstaendige, belegte Zeilen speichern; den Rest zurueckmelden.
+
+    Gespeichert wird nur, wenn
+      * die Umrechnung gelungen ist (beide Arme mit n und Streuung),
+      * das Zitat woertlich im gespeicherten Dokument steht (locate_quote)
+        und
+      * die Werte die Plausibilitaetspruefung des Effekt-Stores bestehen.
+
+    Nichts wird ergaenzt, interpoliert oder mit einer Gesamt-Fallzahl
+    aufgefuellt.
+    """
+    import datetime as _dt
+    import json as _json
+    import uuid as _uuid
+
+    from ..research.fulltext import locate_quote
+    from .extraction import check_plausibility
+
+    stored: List[Dict] = []
+    rejected: List[Dict] = []
+    now = _dt.datetime.now(_dt.timezone.utc).isoformat()
+
+    for candidate in candidates:
+        if not candidate.get("ok"):
+            rejected.append({"quote": candidate.get("quote", ""),
+                             "reason": candidate.get("reason", "unbekannt")})
+            continue
+        quote = str(candidate.get("quote") or "")
+        span = locate_quote(document_text, quote) if (quote and document_text) else None
+        if not span:
+            rejected.append({"quote": quote, "reason": "Zitat nicht im Dokument"})
+            continue
+        row = {
+            "id": _uuid.uuid4().hex,
+            "source_id": source_id,
+            "outcome": str(candidate.get("outcome") or ""),
+            "outcome_key": str(candidate.get("outcome") or ""),
+            "comparison": " vs. ".join(
+                a["label"] for a in candidate.get("arms") or []) or "Arm 1 vs. Arm 2",
+            "effect_type": "g",
+            "effect": float(candidate["effect"]),
+            "se": float(candidate["se"]),
+            "ci_low": None,
+            "ci_high": None,
+            "ci_level": 0.95,
+            "n": int(candidate["n"]),
+            "design": "",
+            "population": "",
+            "direction": str(candidate.get("direction") or ""),
+            "unit": "Hedges g",
+            "quote": quote,
+            "quote_start": span.start,
+            "quote_end": span.end,
+            "source_text_id": source_text_id,
+            "extractor": ARM_LEVEL_VERSION,
+            "extraction_pass": 1,
+            "disputed": 0,
+            "rejection_reason": "",
+            "adjusted": -1,
+            "time_point": "",
+            "moderators": _json.dumps({"arms": candidate.get("arms") or []},
+                                      ensure_ascii=False),
+            "created_at": now,
+        }
+        problem = check_plausibility(row)
+        if problem:
+            rejected.append({"quote": quote, "reason": problem})
+            continue
+        db.save_study_effect(row)
+        stored.append(row)
+    return stored, rejected

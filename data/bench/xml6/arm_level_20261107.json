@@ -1,0 +1,89 @@
+{
+  "generated": "2026-11-07T13:21:01",
+  "documents": [
+    {
+      "doi": "10.1001/jamanetworkopen.2026.26983",
+      "pmc": "PMC13448793",
+      "table_rows": 45,
+      "convertible": 0,
+      "stored": 0,
+      "rejected": 0,
+      "reasons": {
+        "kein Mittelwert mit eindeutiger Streuung in zwei Spalten": 33,
+        "Median/IQR statt Mittelwert mit SD/SE/CI (kein SMD)": 12
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.3389/fnut.2026.1890075",
+      "pmc": "PMC13520769",
+      "table_rows": 102,
+      "convertible": 0,
+      "stored": 0,
+      "rejected": 0,
+      "reasons": {
+        "kein Mittelwert mit eindeutiger Streuung in zwei Spalten": 87,
+        "direkter Effekt mit OR/RR/HR - nicht Aufgabe des Arm-Rechners": 15
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.3390/healthcare13020180",
+      "pmc": "PMC11765054",
+      "table_rows": 31,
+      "convertible": 0,
+      "stored": 0,
+      "rejected": 0,
+      "reasons": {
+        "nicht genau zwei Spalten mit Mittelwert und Streuung": 19,
+        "kein Mittelwert mit eindeutiger Streuung in zwei Spalten": 12
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.3390/ijms27146320",
+      "pmc": "PMC13409838",
+      "table_rows": 75,
+      "convertible": 0,
+      "stored": 0,
+      "rejected": 0,
+      "reasons": {
+        "kein Mittelwert mit eindeutiger Streuung in zwei Spalten": 74,
+        "nicht genau zwei Spalten mit Mittelwert und Streuung": 1
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.3390/medicina62040662",
+      "pmc": "PMC13117668",
+      "table_rows": 35,
+      "convertible": 0,
+      "stored": 0,
+      "rejected": 0,
+      "reasons": {
+        "kein Mittelwert mit eindeutiger Streuung in zwei Spalten": 35
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.5888/pcd20.230198",
+      "pmc": "PMC10756651",
+      "table_rows": 66,
+      "convertible": 0,
+      "stored": 0,
+      "rejected": 0,
+      "reasons": {
+        "kein Mittelwert mit eindeutiger Streuung in zwei Spalten": 48,
+        "zu wenige Spalten": 10,
+        "direkter Effekt mit OR/RR/HR - nicht Aufgabe des Arm-Rechners": 8
+      },
+      "effects": []
+    }
+  ],
+  "totals": {
+    "table_rows": 354,
+    "convertible": 0,
+    "stored": 0,
+    "rejected": 0
+  }
+}
