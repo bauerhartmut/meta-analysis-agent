@@ -76,3 +76,7 @@ kein Zwei-Arm-Deskriptivum; die Ablehnung ist dort korrekt, nicht reparierbar.
 ```
 
 Vorher-Stand: `data/bench/sol/sol_profil_20261108_vorher.json`.
+
+Gesamtsuite: 1184 passed, 2 skipped in 585 s - die Paarbildung bricht keinen
+bestehenden Test (103 gezielte Tests in arm_level, Paaren, jats, effect_columns
+und Funnel).
