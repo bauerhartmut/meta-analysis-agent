@@ -94,8 +94,8 @@ Alle geprueften Faelle sind Modell-, Praediktor- oder Metaanalyse-Tabellen.
 - **11 von 11 verbleibenden SOL-Zeilen sind Behandlungseffekte** aus
   Primaerstudien; keine ist mehr eine Baseline-, Praediktor- oder
   Metaanalyse-Zeile.
-- Die Zahl der unabhaengigen Quellen bleibt 7 (die zwei entfernten Zeilen waren
-  zwei Quellen, die keine Behandlungseffekte lieferten). k = 1 bleibt: Es gibt
+- Die Zahl der unabhaengigen Quellen sinkt von 7 auf **5**: die zwei
+  entfernten Zeilen waren die einzigen ihrer Studien. k = 1 bleibt: Es gibt
   weiterhin keine Gruppe mit zwei unabhaengigen Studien auf derselben Skala.
 - Offen bleibt allein die **Skalenfrage**: `10.2188/jea.je20140201` berichtet
   "log min", die uebrigen "min". Ein gemeinsamer Mittelwert ueber beide waere
