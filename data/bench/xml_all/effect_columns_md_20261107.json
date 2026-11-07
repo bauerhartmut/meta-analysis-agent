@@ -1,0 +1,1090 @@
+{
+  "generated": "2026-11-07T13:45:05",
+  "documents": [
+    {
+      "doi": "10.1001/jamanetworkopen.2026.26983",
+      "pmc": "PMC13448793",
+      "table_rows": 45,
+      "aligned_rows": 38,
+      "candidates": 15,
+      "stored": 15,
+      "rejected": 0,
+      "kinds": {
+        "g": 15
+      },
+      "reasons": {
+        "keine Effektspalte im Kopf": 23,
+        "Kopfzeile (6 Spalten) passt nicht zur Zeile (5 Zellen) - colspan nicht aufloesbar": 5,
+        "Kopfzeile (4 Spalten) passt nicht zur Zeile (2 Zellen) - colspan nicht aufloesbar": 1,
+        "Kopfzeile (8 Spalten) passt nicht zur Zeile (5 Zellen) - colspan nicht aufloesbar": 1
+      },
+      "effects": [
+        {
+          "outcome": "% Stage REM (primary)",
+          "effect_type": "g",
+          "effect": -0.22,
+          "se": 0.053572,
+          "ci": [
+            -0.32,
+            -0.11
+          ],
+          "ci_level": 0.95,
+          "adjusted": 0,
+          "column": "Hedges g (95% CI)",
+          "quote": "|% Stage REM (primary)|342|16.7 (11.6 to 22.0)|19.0 (14.6 to 23.2)|−0.22 (−0.32 to −0.11)|<.001|.003|.003"
+        },
+        {
+          "outcome": "Total sleep time, min",
+          "effect_type": "g",
+          "effect": -0.04,
+          "se": 0.053572,
+          "ci": [
+            -0.14,
+            0.07
+          ],
+          "ci_level": 0.95,
+          "adjusted": 0,
+          "column": "Hedges g (95% CI)",
+          "quote": "|Total sleep time, min|342|391.8 (346.8 to 432.5)|395.8 (345.5 to 434.8)|−0.04 (−0.14 to 0.07)|.46|.67|>.99"
+        },
+        {
+          "outcome": "Sleep efficiency, %",
+          "effect_type": "g",
+          "effect": 0.01,
+          "se": 0.056123,
+          "ci": [
+            -0.1,
+            0.12
+          ],
+          "ci_level": 0.95,
+          "adjusted": 0,
+          "column": "Hedges g (95% CI)",
+          "quote": "|Sleep efficiency, %|342|86.6 (76.0 to 93.1)|86.6 (75.4 to 92.4)|0.01 (−0.10 to 0.12)|.62|.72|>.99"
+        },
+        {
+          "outcome": "Sleep onset latency, min",
+          "effect_type": "g",
+          "effect": 0.07,
+          "se": 0.053572,
+          "ci": [
+            -0.04,
+            0.17
+          ],
+          "ci_level": 0.95,
+          "adjusted": 0,
+          "column": "Hedges g (95% CI)",
+          "quote": "|Sleep onset latency, min|342|12.3 (2.8 to 31.0)|12.4 (4.7 to 27.8)|0.07 (−0.04 to 0.17)|.60|.72|>.99"
+        },
+        {
+          "outcome": "REM latency, min",
+          "effect_type": "g",
+          "effect": 0.1,
+          "se": 0.056123,
+          "ci": [
+            -0.01,
+            0.21
+          ],
+          "ci_level": 0.95,
+          "adjusted": 0,
+          "column": "Hedges g (95% CI)",
+          "quote": "|REM latency, min|316|132.2 (79.4 to 191.8)|115.8 (74.4 to 172.9)|0.10 (−0.01 to 0.21)|.07|.14|.99"
+        },
+        {
+          "outcome": "WASO, min",
+          "effect_type": "g",
+          "effect": -0.08,
+          "se": 0.053572,
+          "ci": [
+            -0.18,
+            0.03
+          ],
+          "ci_level": 0.95,
+          "adjusted": 0,
+          "column": "Hedges g (95% CI)",
+          "quote": "|WASO, min|342|30.8 (13.5 to 68.9)|37.2 (16.6 to 74.2)|−0.08 (−0.18 to 0.03)|.04|.13|.63"
+        },
+        {
+          "outcome": "% Stage N1",
+          "effect_type": "g",
+          "effect": -0.05,
+          "se": 0.053572,
+          "ci": [
+            -0.15,
+            0.06
+          ],
+          "ci_level": 0.95,
+          "adjusted": 0,
+          "column": "Hedges g (95% CI)",
+          "quote": "|% Stage N1|342|3.3 (1.6 to 5.5)|3.3 (1.5 to 6.0)|−0.05 (−0.15 to 0.06)|.26|.49|>.99"
+        },
+        {
+          "outcome": "% Stage N2",
+          "effect_type": "g",
+          "effect": 0.14,
+          "se": 0.053572,
+          "ci": [
+            0.03,
+            0.24
+          ],
+          "ci_level": 0.95,
+          "adjusted": 0,
+          "column": "Hedges g (95% CI)",
+          "quote": "|% Stage N2|342|48.9 (42.2 to 57.4)|48.1 (41.2 to 55.0)|0.14 (0.03 to 0.24)|.02|.06|.23"
+        },
+        {
+          "outcome": "% Stage N3",
+          "effect_type": "g",
+          "effect": 0.0,
+          "se": 0.053572,
+          "ci": [
+            -0.11,
+            0.1
+          ],
+          "ci_level": 0.95,
+          "adjusted": 0,
+          "column": "Hedges g (95% CI)",
+          "quote": "|% Stage N3|342|27.8 (21.5 to 35.8)|27.6 (20.7 to 34.3)|0.00 (−0.11 to 0.10)|.90|.93|>.99"
+        },
+        {
+          "outcome": "AHI, events/h",
+          "effect_type": "g",
+          "effect": -0.03,
+          "se": 0.053572,
+          "ci": [
+            -0.13,
+            0.08
+          ],
+          "ci_level": 0.95,
+          "adjusted": 0,
+          "column": "Hedges g (95% CI)",
+          "quote": "|AHI, events/h|342|0.6 (0.1 to 1.8)|0.8 (0.2 to 2.5)|−0.03 (−0.13 to 0.08)|.01|.06|.20"
+        },
+        {
+          "outcome": "Obstructive AHI, events/h",
+          "effect_type": "g",
+          "effect": -0.03,
+          "se": 0.056123,
+          "ci": [
+            -0.14,
+            0.08
+          ],
+          "ci_level": 0.95,
+          "adjusted": 0,
+          "column": "Hedges g (95% CI)",
+          "quote": "|Obstructive AHI, events/h|342|0.4 (0.0 to 1.4)|0.7 (0.1 to 2.2)|−0.03 (−0.14 to 0.08)|.01|.06|.15"
+        },
+        {
+          "outcome": "Central apnea index, events/h",
+          "effect_type": "g",
+          "effect": 0.0,
+          "se": 0.053572,
+          "ci": [
+            -0.11,
+            0.1
+          ],
+          "ci_level": 0.95,
+          "adjusted": 0,
+          "column": "Hedges g (95% CI)",
+          "quote": "|Central apnea index, events/h|342|0.0 (0.0 to 0.2)|0.0 (0.0 to 0.2)|0.00 (−0.11 to 0.10)|.93|.93|>.99"
+        },
+        {
+          "outcome": "Arousal index, events/h",
+          "effect_type": "g",
+          "effect": -0.09,
+          "se": 0.053572,
+          "ci": [
+            -0.2,
+            0.01
+          ],
+          "ci_level": 0.95,
+          "adjusted": 0,
+          "column": "Hedges g (95% CI)",
+          "quote": "|Arousal index, events/h|342|4.5 (3.1 to 6.7)|5.0 (3.2 to 7.3)|−0.09 (−0.20 to 0.01)|.06|.14|.90"
+        },
+        {
+          "outcome": "PLMS index, events/h",
+          "effect_type": "g",
+          "effect": -0.05,
+          "se": 0.053572,
+          "ci": [
+            -0.15,
+            0.06
+          ],
+          "ci_level": 0.95,
+          "adjusted": 0,
+          "column": "Hedges g (95% CI)",
+          "quote": "|PLMS index, events/h|342|0.0 (0.0 to 0.1)|0.0 (0.0 to 0.8)|−0.05 (−0.15 to 0.06)|.49|.67|>.99"
+        },
+        {
+          "outcome": "O 2 desaturation index, events/h",
+          "effect_type": "g",
+          "effect": -0.03,
+          "se": 0.053572,
+          "ci": [
+            -0.13,
+            0.08
+          ],
+          "ci_level": 0.95,
+          "adjusted": 0,
+          "column": "Hedges g (95% CI)",
+          "quote": "|O 2 desaturation index, events/h|342|3.3 (0.9 to 9.6)|4.2 (1.4 to 9.9)|−0.03 (−0.13 to 0.08)|.38|.63|>.99"
+        }
+      ]
+    },
+    {
+      "doi": "10.1002/fsn3.71823",
+      "pmc": "PMC13121932",
+      "table_rows": 43,
+      "aligned_rows": 43,
+      "candidates": 0,
+      "stored": 0,
+      "rejected": 0,
+      "kinds": {},
+      "reasons": {
+        "keine Effektspalte im Kopf": 43
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.1002/trc2.70059",
+      "pmc": "PMC11891559",
+      "table_rows": 7,
+      "aligned_rows": 7,
+      "candidates": 0,
+      "stored": 0,
+      "rejected": 0,
+      "kinds": {},
+      "reasons": {
+        "keine Effektspalte im Kopf": 7
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.1007/s44470-026-00076-w",
+      "pmc": "PMC13695647",
+      "table_rows": 110,
+      "aligned_rows": 83,
+      "candidates": 0,
+      "stored": 0,
+      "rejected": 0,
+      "kinds": {},
+      "reasons": {
+        "keine Effektspalte im Kopf": 83,
+        "keine Kopfzeile": 15,
+        "Kopfzeile (2 Spalten) passt nicht zur Zeile (1 Zellen) - colspan nicht aufloesbar": 12
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.1017/s1351324923000542",
+      "pmc": "PMC11586117",
+      "table_rows": 57,
+      "aligned_rows": 57,
+      "candidates": 0,
+      "stored": 0,
+      "rejected": 0,
+      "kinds": {},
+      "reasons": {
+        "keine Effektspalte im Kopf": 57
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.1038/s41597-022-01545-6",
+      "pmc": "PMC9296671",
+      "table_rows": 116,
+      "aligned_rows": 98,
+      "candidates": 0,
+      "stored": 0,
+      "rejected": 0,
+      "kinds": {},
+      "reasons": {
+        "keine Effektspalte im Kopf": 98,
+        "Kopfzeile (7 Spalten) passt nicht zur Zeile (6 Zellen) - colspan nicht aufloesbar": 12,
+        "keine Kopfzeile": 5,
+        "Kopfzeile (7 Spalten) passt nicht zur Zeile (5 Zellen) - colspan nicht aufloesbar": 1
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.1038/s41598-017-04353-w",
+      "pmc": "PMC5478612",
+      "table_rows": 45,
+      "aligned_rows": 36,
+      "candidates": 0,
+      "stored": 0,
+      "rejected": 0,
+      "kinds": {},
+      "reasons": {
+        "keine Effektspalte im Kopf": 36,
+        "Kopfzeile (7 Spalten) passt nicht zur Zeile (1 Zellen) - colspan nicht aufloesbar": 4,
+        "Kopfzeile (2 Spalten) passt nicht zur Zeile (1 Zellen) - colspan nicht aufloesbar": 2,
+        "Kopfzeile (10 Spalten) passt nicht zur Zeile (4 Zellen) - colspan nicht aufloesbar": 2,
+        "Kopfzeile (10 Spalten) passt nicht zur Zeile (9 Zellen) - colspan nicht aufloesbar": 1
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.1055/s-0043-1761437",
+      "pmc": "PMC10166641",
+      "table_rows": 4,
+      "aligned_rows": 4,
+      "candidates": 0,
+      "stored": 0,
+      "rejected": 0,
+      "kinds": {},
+      "reasons": {
+        "keine Effektspalte im Kopf": 4
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.1080/07853890.2025.2576643",
+      "pmc": "PMC12548078",
+      "table_rows": 15,
+      "aligned_rows": 8,
+      "candidates": 0,
+      "stored": 0,
+      "rejected": 0,
+      "kinds": {},
+      "reasons": {
+        "keine Effektspalte im Kopf": 8,
+        "Kopfzeile (5 Spalten) passt nicht zur Zeile (4 Zellen) - colspan nicht aufloesbar": 7
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.1093/nutrit/nuaf062",
+      "pmc": "PMC13075487",
+      "table_rows": 13,
+      "aligned_rows": 13,
+      "candidates": 0,
+      "stored": 0,
+      "rejected": 0,
+      "kinds": {},
+      "reasons": {
+        "keine Effektspalte im Kopf": 13
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.1093/sleep/zsag003",
+      "pmc": "PMC13089461",
+      "table_rows": 30,
+      "aligned_rows": 30,
+      "candidates": 0,
+      "stored": 0,
+      "rejected": 0,
+      "kinds": {},
+      "reasons": {
+        "keine Effektspalte im Kopf": 30
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.1093/sleepadvances/zpaf047",
+      "pmc": "PMC12413864",
+      "table_rows": 73,
+      "aligned_rows": 73,
+      "candidates": 0,
+      "stored": 0,
+      "rejected": 0,
+      "kinds": {},
+      "reasons": {
+        "keine Effektspalte im Kopf": 73
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.1186/s12887-026-06611-1",
+      "pmc": "PMC13069753",
+      "table_rows": 21,
+      "aligned_rows": 21,
+      "candidates": 0,
+      "stored": 0,
+      "rejected": 0,
+      "kinds": {},
+      "reasons": {
+        "keine Effektspalte im Kopf": 21
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.1186/s12991-022-00390-6",
+      "pmc": "PMC9082467",
+      "table_rows": 49,
+      "aligned_rows": 49,
+      "candidates": 0,
+      "stored": 0,
+      "rejected": 0,
+      "kinds": {},
+      "reasons": {
+        "keine Effektspalte im Kopf": 49
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.1371/journal.pcbi.1002650",
+      "pmc": "PMC3426568",
+      "table_rows": 10,
+      "aligned_rows": 0,
+      "candidates": 0,
+      "stored": 0,
+      "rejected": 0,
+      "kinds": {},
+      "reasons": {
+        "keine Kopfzeile": 10
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.14814/phy2.70805",
+      "pmc": "PMC13097372",
+      "table_rows": 26,
+      "aligned_rows": 16,
+      "candidates": 0,
+      "stored": 0,
+      "rejected": 0,
+      "kinds": {},
+      "reasons": {
+        "keine Effektspalte im Kopf": 16,
+        "Kopfzeile (5 Spalten) passt nicht zur Zeile (4 Zellen) - colspan nicht aufloesbar": 5,
+        "Kopfzeile (5 Spalten) passt nicht zur Zeile (1 Zellen) - colspan nicht aufloesbar": 3,
+        "Kopfzeile (5 Spalten) passt nicht zur Zeile (3 Zellen) - colspan nicht aufloesbar": 1,
+        "Kopfzeile (5 Spalten) passt nicht zur Zeile (2 Zellen) - colspan nicht aufloesbar": 1
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.2147/nss.s340944",
+      "pmc": "PMC9621019",
+      "table_rows": 10,
+      "aligned_rows": 10,
+      "candidates": 0,
+      "stored": 0,
+      "rejected": 0,
+      "kinds": {},
+      "reasons": {
+        "keine Effektspalte im Kopf": 10
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.2147/nss.s602062",
+      "pmc": "PMC13289649",
+      "table_rows": 52,
+      "aligned_rows": 52,
+      "candidates": 0,
+      "stored": 0,
+      "rejected": 0,
+      "kinds": {},
+      "reasons": {
+        "keine Effektspalte im Kopf": 52
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.2147/nss.s638398",
+      "pmc": "PMC13702085",
+      "table_rows": 30,
+      "aligned_rows": 30,
+      "candidates": 0,
+      "stored": 0,
+      "rejected": 0,
+      "kinds": {},
+      "reasons": {
+        "keine Effektspalte im Kopf": 30
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.2147/nss.s73856",
+      "pmc": "PMC4259558",
+      "table_rows": 12,
+      "aligned_rows": 3,
+      "candidates": 0,
+      "stored": 0,
+      "rejected": 0,
+      "kinds": {},
+      "reasons": {
+        "Kopfzeile (4 Spalten) passt nicht zur Zeile (3 Zellen) - colspan nicht aufloesbar": 9,
+        "keine Effektspalte im Kopf": 3
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.2174/157015910792246209",
+      "pmc": "PMC3001215",
+      "table_rows": 20,
+      "aligned_rows": 20,
+      "candidates": 0,
+      "stored": 0,
+      "rejected": 0,
+      "kinds": {},
+      "reasons": {
+        "keine Effektspalte im Kopf": 20
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.3389/fnsyn.2026.1949833",
+      "pmc": "PMC13586941",
+      "table_rows": 16,
+      "aligned_rows": 7,
+      "candidates": 0,
+      "stored": 0,
+      "rejected": 0,
+      "kinds": {},
+      "reasons": {
+        "Kopfzeile (5 Spalten) passt nicht zur Zeile (2 Zellen) - colspan nicht aufloesbar": 9,
+        "keine Effektspalte im Kopf": 7
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.3389/fnut.2026.1890075",
+      "pmc": "PMC13520769",
+      "table_rows": 102,
+      "aligned_rows": 63,
+      "candidates": 0,
+      "stored": 0,
+      "rejected": 0,
+      "kinds": {},
+      "reasons": {
+        "keine Effektspalte im Kopf": 63,
+        "Kopfzeile (7 Spalten) passt nicht zur Zeile (4 Zellen) - colspan nicht aufloesbar": 26,
+        "Kopfzeile (8 Spalten) passt nicht zur Zeile (7 Zellen) - colspan nicht aufloesbar": 13
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.3390/biom12020198",
+      "pmc": "PMC8961596",
+      "table_rows": 0,
+      "aligned_rows": 0,
+      "candidates": 0,
+      "stored": 0,
+      "rejected": 0,
+      "kinds": {},
+      "reasons": {},
+      "effects": []
+    },
+    {
+      "doi": "10.3390/children12111471",
+      "pmc": "PMC12650990",
+      "table_rows": 103,
+      "aligned_rows": 101,
+      "candidates": 0,
+      "stored": 0,
+      "rejected": 0,
+      "kinds": {},
+      "reasons": {
+        "keine Effektspalte im Kopf": 101,
+        "Kopfzeile (10 Spalten) passt nicht zur Zeile (3 Zellen) - colspan nicht aufloesbar": 2
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.3390/cimb47080664",
+      "pmc": "PMC12384635",
+      "table_rows": 61,
+      "aligned_rows": 18,
+      "candidates": 0,
+      "stored": 0,
+      "rejected": 0,
+      "kinds": {},
+      "reasons": {
+        "keine Kopfzeile": 43,
+        "keine Effektspalte im Kopf": 18
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.3390/clockssleep2010001",
+      "pmc": "PMC7445814",
+      "table_rows": 13,
+      "aligned_rows": 0,
+      "candidates": 0,
+      "stored": 0,
+      "rejected": 0,
+      "kinds": {},
+      "reasons": {
+        "keine Kopfzeile": 13
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.3390/foods15183230",
+      "pmc": "PMC13606917",
+      "table_rows": 9,
+      "aligned_rows": 9,
+      "candidates": 0,
+      "stored": 0,
+      "rejected": 0,
+      "kinds": {},
+      "reasons": {
+        "keine Effektspalte im Kopf": 9
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.3390/healthcare11050675",
+      "pmc": "PMC10001052",
+      "table_rows": 10,
+      "aligned_rows": 10,
+      "candidates": 0,
+      "stored": 0,
+      "rejected": 0,
+      "kinds": {},
+      "reasons": {
+        "keine Effektspalte im Kopf": 10
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.3390/healthcare13020180",
+      "pmc": "PMC11765054",
+      "table_rows": 31,
+      "aligned_rows": 31,
+      "candidates": 0,
+      "stored": 0,
+      "rejected": 0,
+      "kinds": {},
+      "reasons": {
+        "keine Effektspalte im Kopf": 31
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.3390/healthcare6010023",
+      "pmc": "PMC5872230",
+      "table_rows": 23,
+      "aligned_rows": 8,
+      "candidates": 0,
+      "stored": 0,
+      "rejected": 0,
+      "kinds": {},
+      "reasons": {
+        "Kopfzeile (5 Spalten) passt nicht zur Zeile (4 Zellen) - colspan nicht aufloesbar": 15,
+        "keine Effektspalte im Kopf": 8
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.3390/ijms24010860",
+      "pmc": "PMC9821171",
+      "table_rows": 0,
+      "aligned_rows": 0,
+      "candidates": 0,
+      "stored": 0,
+      "rejected": 0,
+      "kinds": {},
+      "reasons": {},
+      "effects": []
+    },
+    {
+      "doi": "10.3390/ijms27031430",
+      "pmc": "PMC12898709",
+      "table_rows": 51,
+      "aligned_rows": 47,
+      "candidates": 0,
+      "stored": 0,
+      "rejected": 0,
+      "kinds": {},
+      "reasons": {
+        "keine Effektspalte im Kopf": 47,
+        "Kopfzeile (9 Spalten) passt nicht zur Zeile (1 Zellen) - colspan nicht aufloesbar": 4
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.3390/ijms27146320",
+      "pmc": "PMC13409838",
+      "table_rows": 75,
+      "aligned_rows": 54,
+      "candidates": 0,
+      "stored": 0,
+      "rejected": 0,
+      "kinds": {},
+      "reasons": {
+        "keine Effektspalte im Kopf": 54,
+        "keine Kopfzeile": 20,
+        "Kopfzeile (14 Spalten) passt nicht zur Zeile (6 Zellen) - colspan nicht aufloesbar": 1
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.3390/jcm11175138",
+      "pmc": "PMC9456584",
+      "table_rows": 57,
+      "aligned_rows": 54,
+      "candidates": 0,
+      "stored": 0,
+      "rejected": 0,
+      "kinds": {},
+      "reasons": {
+        "keine Effektspalte im Kopf": 54,
+        "Kopfzeile (8 Spalten) passt nicht zur Zeile (1 Zellen) - colspan nicht aufloesbar": 2,
+        "Kopfzeile (8 Spalten) passt nicht zur Zeile (7 Zellen) - colspan nicht aufloesbar": 1
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.3390/jcm13175216",
+      "pmc": "PMC11396206",
+      "table_rows": 82,
+      "aligned_rows": 60,
+      "candidates": 0,
+      "stored": 0,
+      "rejected": 0,
+      "kinds": {},
+      "reasons": {
+        "keine Effektspalte im Kopf": 60,
+        "Kopfzeile (4 Spalten) passt nicht zur Zeile (1 Zellen) - colspan nicht aufloesbar": 21,
+        "Kopfzeile (5 Spalten) passt nicht zur Zeile (4 Zellen) - colspan nicht aufloesbar": 1
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.3390/medicina62040662",
+      "pmc": "PMC13117668",
+      "table_rows": 35,
+      "aligned_rows": 35,
+      "candidates": 0,
+      "stored": 0,
+      "rejected": 0,
+      "kinds": {},
+      "reasons": {
+        "keine Effektspalte im Kopf": 35
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.3390/molecules30183814",
+      "pmc": "PMC12472680",
+      "table_rows": 75,
+      "aligned_rows": 26,
+      "candidates": 0,
+      "stored": 0,
+      "rejected": 0,
+      "kinds": {},
+      "reasons": {
+        "keine Kopfzeile": 49,
+        "keine Effektspalte im Kopf": 26
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.3390/neurolint15010031",
+      "pmc": "PMC10053496",
+      "table_rows": 55,
+      "aligned_rows": 55,
+      "candidates": 0,
+      "stored": 0,
+      "rejected": 0,
+      "kinds": {},
+      "reasons": {
+        "keine Effektspalte im Kopf": 55
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.4061/2011/741974",
+      "pmc": "PMC3004402",
+      "table_rows": 37,
+      "aligned_rows": 20,
+      "candidates": 0,
+      "stored": 0,
+      "rejected": 0,
+      "kinds": {},
+      "reasons": {
+        "keine Effektspalte im Kopf": 20,
+        "Kopfzeile (7 Spalten) passt nicht zur Zeile (1 Zellen) - colspan nicht aufloesbar": 17
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.4103/jfmpc.jfmpc_150_25",
+      "pmc": "PMC13241146",
+      "table_rows": 0,
+      "aligned_rows": 0,
+      "candidates": 0,
+      "stored": 0,
+      "rejected": 0,
+      "kinds": {},
+      "reasons": {},
+      "effects": []
+    },
+    {
+      "doi": "10.4103/jrpp.jrpp_115_25",
+      "pmc": "PMC13570694",
+      "table_rows": 36,
+      "aligned_rows": 9,
+      "candidates": 0,
+      "stored": 0,
+      "rejected": 0,
+      "kinds": {},
+      "reasons": {
+        "Kopfzeile (11 Spalten) passt nicht zur Zeile (8 Zellen) - colspan nicht aufloesbar": 11,
+        "keine Effektspalte im Kopf": 9,
+        "Kopfzeile (11 Spalten) passt nicht zur Zeile (7 Zellen) - colspan nicht aufloesbar": 9,
+        "Kopfzeile (17 Spalten) passt nicht zur Zeile (14 Zellen) - colspan nicht aufloesbar": 5,
+        "Kopfzeile (17 Spalten) passt nicht zur Zeile (1 Zellen) - colspan nicht aufloesbar": 1,
+        "Kopfzeile (17 Spalten) passt nicht zur Zeile (15 Zellen) - colspan nicht aufloesbar": 1
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.5888/pcd20.230198",
+      "pmc": "PMC10756651",
+      "table_rows": 66,
+      "aligned_rows": 24,
+      "candidates": 16,
+      "stored": 16,
+      "rejected": 0,
+      "kinds": {
+        "or": 16
+      },
+      "reasons": {
+        "Kopfzeile (3 Spalten) passt nicht zur Zeile (2 Zellen) - colspan nicht aufloesbar": 26,
+        "keine Effektspalte im Kopf": 16,
+        "Kopfzeile (3 Spalten) passt nicht zur Zeile (1 Zellen) - colspan nicht aufloesbar": 8,
+        "Kopfzeile (6 Spalten) passt nicht zur Zeile (5 Zellen) - colspan nicht aufloesbar": 6,
+        "Kopfzeile (5 Spalten) passt nicht zur Zeile (1 Zellen) - colspan nicht aufloesbar": 2
+      },
+      "effects": [
+        {
+          "outcome": "Short sleep duration (<6 hours per night)",
+          "effect_type": "or",
+          "effect": 2.78,
+          "se": 0.637767,
+          "ci": [
+            1.8,
+            4.3
+          ],
+          "ci_level": 0.95,
+          "adjusted": 0,
+          "column": "OR (95% CI)",
+          "quote": "|Short sleep duration (<6 hours per night)|2.78 (1.80–4.30)|<.001|2.37 (1.50–3.76)|<.001"
+        },
+        {
+          "outcome": "Short sleep duration (<6 hours per night)",
+          "effect_type": "or",
+          "effect": 2.37,
+          "se": 0.576541,
+          "ci": [
+            1.5,
+            3.76
+          ],
+          "ci_level": 0.95,
+          "adjusted": 1,
+          "column": "Adjusted OR (95% CI) a",
+          "quote": "|Short sleep duration (<6 hours per night)|2.78 (1.80–4.30)|<.001|2.37 (1.50–3.76)|<.001"
+        },
+        {
+          "outcome": "Poor mental health (>14 poor mental health days in past 30 days)",
+          "effect_type": "or",
+          "effect": 1.38,
+          "se": 0.306128,
+          "ci": [
+            0.91,
+            2.11
+          ],
+          "ci_level": 0.95,
+          "adjusted": 0,
+          "column": "OR (95% CI)",
+          "quote": "|Poor mental health (>14 poor mental health days in past 30 days)|1.38 (0.91–2.11)|.13|1.37 (0.88–2.12)|.17"
+        },
+        {
+          "outcome": "Poor mental health (>14 poor mental health days in past 30 days)",
+          "effect_type": "or",
+          "effect": 1.37,
+          "se": 0.316332,
+          "ci": [
+            0.88,
+            2.12
+          ],
+          "ci_level": 0.95,
+          "adjusted": 1,
+          "column": "Adjusted OR (95% CI) a",
+          "quote": "|Poor mental health (>14 poor mental health days in past 30 days)|1.38 (0.91–2.11)|.13|1.37 (0.88–2.12)|.17"
+        },
+        {
+          "outcome": "Poor physical health (>14 poor physical health days in past 30 days)",
+          "effect_type": "or",
+          "effect": 1.3,
+          "se": 0.38266,
+          "ci": [
+            0.75,
+            2.25
+          ],
+          "ci_level": 0.95,
+          "adjusted": 0,
+          "column": "OR (95% CI)",
+          "quote": "|Poor physical health (>14 poor physical health days in past 30 days)|1.30 (0.75–2.25)|.35|1.06 (0.57–1.98)|.86"
+        },
+        {
+          "outcome": "Poor physical health (>14 poor physical health days in past 30 days)",
+          "effect_type": "or",
+          "effect": 1.06,
+          "se": 0.3597,
+          "ci": [
+            0.57,
+            1.98
+          ],
+          "ci_level": 0.95,
+          "adjusted": 1,
+          "column": "Adjusted OR (95% CI) a",
+          "quote": "|Poor physical health (>14 poor physical health days in past 30 days)|1.30 (0.75–2.25)|.35|1.06 (0.57–1.98)|.86"
+        },
+        {
+          "outcome": "Poor general health (fair/poor health)",
+          "effect_type": "or",
+          "effect": 1.75,
+          "se": 0.387762,
+          "ci": [
+            1.14,
+            2.66
+          ],
+          "ci_level": 0.95,
+          "adjusted": 0,
+          "column": "OR (95% CI)",
+          "quote": "|Poor general health (fair/poor health)|1.75 (1.14–2.66)|.01|1.60 (0.99–2.58)|.05"
+        },
+        {
+          "outcome": "Poor general health (fair/poor health)",
+          "effect_type": "or",
+          "effect": 1.6,
+          "se": 0.40562,
+          "ci": [
+            0.99,
+            2.58
+          ],
+          "ci_level": 0.95,
+          "adjusted": 1,
+          "column": "Adjusted OR (95% CI) a",
+          "quote": "|Poor general health (fair/poor health)|1.75 (1.14–2.66)|.01|1.60 (0.99–2.58)|.05"
+        },
+        {
+          "outcome": "Short sleep duration (<6 hours per night)",
+          "effect_type": "or",
+          "effect": 1.7,
+          "se": 0.130104,
+          "ci": [
+            1.46,
+            1.97
+          ],
+          "ci_level": 0.95,
+          "adjusted": 0,
+          "column": "OR (95% CI)",
+          "quote": "|Short sleep duration (<6 hours per night)|1.70 (1.46–1.97)|<.001|1.46 (1.24–1.73)|<.001"
+        },
+        {
+          "outcome": "Short sleep duration (<6 hours per night)",
+          "effect_type": "or",
+          "effect": 1.46,
+          "se": 0.125002,
+          "ci": [
+            1.24,
+            1.73
+          ],
+          "ci_level": 0.95,
+          "adjusted": 1,
+          "column": "Adjusted OR (95% CI) a",
+          "quote": "|Short sleep duration (<6 hours per night)|1.70 (1.46–1.97)|<.001|1.46 (1.24–1.73)|<.001"
+        },
+        {
+          "outcome": "Poor mental health (>14 poor mental health days in past 30 days)",
+          "effect_type": "or",
+          "effect": 1.55,
+          "se": 0.107145,
+          "ci": [
+            1.36,
+            1.78
+          ],
+          "ci_level": 0.95,
+          "adjusted": 0,
+          "column": "OR (95% CI)",
+          "quote": "|Poor mental health (>14 poor mental health days in past 30 days)|1.55 (1.36–1.78)|<.001|1.34 (1.16–1.55)|<.001"
+        },
+        {
+          "outcome": "Poor mental health (>14 poor mental health days in past 30 days)",
+          "effect_type": "or",
+          "effect": 1.34,
+          "se": 0.099492,
+          "ci": [
+            1.16,
+            1.55
+          ],
+          "ci_level": 0.95,
+          "adjusted": 1,
+          "column": "Adjusted OR (95% CI) a",
+          "quote": "|Poor mental health (>14 poor mental health days in past 30 days)|1.55 (1.36–1.78)|<.001|1.34 (1.16–1.55)|<.001"
+        },
+        {
+          "outcome": "Poor physical health (>14 poor physical health days in past 30 days)",
+          "effect_type": "or",
+          "effect": 1.68,
+          "se": 0.140309,
+          "ci": [
+            1.43,
+            1.98
+          ],
+          "ci_level": 0.95,
+          "adjusted": 0,
+          "column": "OR (95% CI)",
+          "quote": "|Poor physical health (>14 poor physical health days in past 30 days)|1.68 (1.43–1.98)|<.001|2.14 (1.78–2.57)|<.001"
+        },
+        {
+          "outcome": "Poor physical health (>14 poor physical health days in past 30 days)",
+          "effect_type": "or",
+          "effect": 2.14,
+          "se": 0.201534,
+          "ci": [
+            1.78,
+            2.57
+          ],
+          "ci_level": 0.95,
+          "adjusted": 1,
+          "column": "Adjusted OR (95% CI) a",
+          "quote": "|Poor physical health (>14 poor physical health days in past 30 days)|1.68 (1.43–1.98)|<.001|2.14 (1.78–2.57)|<.001"
+        },
+        {
+          "outcome": "Poor general health (fair/poor health)",
+          "effect_type": "or",
+          "effect": 1.53,
+          "se": 0.107145,
+          "ci": [
+            1.33,
+            1.75
+          ],
+          "ci_level": 0.95,
+          "adjusted": 0,
+          "column": "OR (95% CI)",
+          "quote": "|Poor general health (fair/poor health)|1.53 (1.33–1.75)|<.001|1.92 (1.64–2.24)|<.001"
+        },
+        {
+          "outcome": "Poor general health (fair/poor health)",
+          "effect_type": "or",
+          "effect": 1.92,
+          "se": 0.153064,
+          "ci": [
+            1.64,
+            2.24
+          ],
+          "ci_level": 0.95,
+          "adjusted": 1,
+          "column": "Adjusted OR (95% CI) a",
+          "quote": "|Poor general health (fair/poor health)|1.53 (1.33–1.75)|<.001|1.92 (1.64–2.24)|<.001"
+        }
+      ]
+    }
+  ],
+  "totals": {
+    "table_rows": 1725,
+    "aligned_rows": 1322,
+    "candidates": 31,
+    "stored": 31,
+    "rejected": 0
+  }
+}

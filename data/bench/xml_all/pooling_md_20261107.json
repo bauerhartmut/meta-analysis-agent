@@ -1,0 +1,635 @@
+{
+  "rows_total": 31,
+  "adjusted_rows": 8,
+  "crude_rows": 23,
+  "deduped_rows": 23,
+  "dropped_duplicates": 8,
+  "variant_all": {
+    "usable": 31,
+    "groups": [
+      {
+        "group": "% Stage N1 [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1001/jamanetworkopen.2026.26983"
+        ]
+      },
+      {
+        "group": "% Stage N2 [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1001/jamanetworkopen.2026.26983"
+        ]
+      },
+      {
+        "group": "% Stage N3 [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1001/jamanetworkopen.2026.26983"
+        ]
+      },
+      {
+        "group": "% Stage REM (primary) [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1001/jamanetworkopen.2026.26983"
+        ]
+      },
+      {
+        "group": "AHI, events/h [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1001/jamanetworkopen.2026.26983"
+        ]
+      },
+      {
+        "group": "Arousal index, events/h [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1001/jamanetworkopen.2026.26983"
+        ]
+      },
+      {
+        "group": "Central apnea index, events/h [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1001/jamanetworkopen.2026.26983"
+        ]
+      },
+      {
+        "group": "O 2 desaturation index, events/h [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1001/jamanetworkopen.2026.26983"
+        ]
+      },
+      {
+        "group": "Obstructive AHI, events/h [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1001/jamanetworkopen.2026.26983"
+        ]
+      },
+      {
+        "group": "PLMS index, events/h [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1001/jamanetworkopen.2026.26983"
+        ]
+      },
+      {
+        "group": "Poor general health (fair/poor health) [log_ratio] | Adjustierung: adjusted",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.5888/pcd20.230198"
+        ]
+      },
+      {
+        "group": "Poor general health (fair/poor health) [log_ratio] | Adjustierung: unadjusted",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.5888/pcd20.230198"
+        ]
+      },
+      {
+        "group": "Poor mental health (>14 poor mental health days in past 30 days) [log_ratio] | Adjustierung: adjusted",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.5888/pcd20.230198"
+        ]
+      },
+      {
+        "group": "Poor mental health (>14 poor mental health days in past 30 days) [log_ratio] | Adjustierung: unadjusted",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.5888/pcd20.230198"
+        ]
+      },
+      {
+        "group": "Poor physical health (>14 poor physical health days in past 30 days) [log_ratio] | Adjustierung: adjusted",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.5888/pcd20.230198"
+        ]
+      },
+      {
+        "group": "Poor physical health (>14 poor physical health days in past 30 days) [log_ratio] | Adjustierung: unadjusted",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.5888/pcd20.230198"
+        ]
+      },
+      {
+        "group": "REM latency, min [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1001/jamanetworkopen.2026.26983"
+        ]
+      },
+      {
+        "group": "Short sleep duration (<6 hours per night) [log_ratio] | Adjustierung: adjusted",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.5888/pcd20.230198"
+        ]
+      },
+      {
+        "group": "Short sleep duration (<6 hours per night) [log_ratio] | Adjustierung: unadjusted",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.5888/pcd20.230198"
+        ]
+      },
+      {
+        "group": "Sleep efficiency, % [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1001/jamanetworkopen.2026.26983"
+        ]
+      },
+      {
+        "group": "Sleep onset latency, min [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1001/jamanetworkopen.2026.26983"
+        ]
+      },
+      {
+        "group": "Total sleep time, min [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1001/jamanetworkopen.2026.26983"
+        ]
+      },
+      {
+        "group": "WASO, min [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1001/jamanetworkopen.2026.26983"
+        ]
+      }
+    ],
+    "k_distribution": {
+      "1": 23
+    },
+    "groups_k_ge_2": 0,
+    "excluded": [
+      {
+        "label": "doi:10.5888/pcd20.230198",
+        "outcome": "Poor general health (fair/poor health)",
+        "reason": "dieselbe Quelle mehrfach zum selben Outcome (abhängige Zeilen: Arme, Kontraste oder zweite Lesung)"
+      },
+      {
+        "label": "doi:10.5888/pcd20.230198",
+        "outcome": "Poor general health (fair/poor health)",
+        "reason": "dieselbe Quelle mehrfach zum selben Outcome (abhängige Zeilen: Arme, Kontraste oder zweite Lesung)"
+      },
+      {
+        "label": "doi:10.5888/pcd20.230198",
+        "outcome": "Poor mental health (>14 poor mental health days in past 30 days)",
+        "reason": "dieselbe Quelle mehrfach zum selben Outcome (abhängige Zeilen: Arme, Kontraste oder zweite Lesung)"
+      },
+      {
+        "label": "doi:10.5888/pcd20.230198",
+        "outcome": "Poor mental health (>14 poor mental health days in past 30 days)",
+        "reason": "dieselbe Quelle mehrfach zum selben Outcome (abhängige Zeilen: Arme, Kontraste oder zweite Lesung)"
+      },
+      {
+        "label": "doi:10.5888/pcd20.230198",
+        "outcome": "Poor physical health (>14 poor physical health days in past 30 days)",
+        "reason": "dieselbe Quelle mehrfach zum selben Outcome (abhängige Zeilen: Arme, Kontraste oder zweite Lesung)"
+      },
+      {
+        "label": "doi:10.5888/pcd20.230198",
+        "outcome": "Poor physical health (>14 poor physical health days in past 30 days)",
+        "reason": "dieselbe Quelle mehrfach zum selben Outcome (abhängige Zeilen: Arme, Kontraste oder zweite Lesung)"
+      },
+      {
+        "label": "doi:10.5888/pcd20.230198",
+        "outcome": "Short sleep duration (<6 hours per night)",
+        "reason": "dieselbe Quelle mehrfach zum selben Outcome (abhängige Zeilen: Arme, Kontraste oder zweite Lesung)"
+      },
+      {
+        "label": "doi:10.5888/pcd20.230198",
+        "outcome": "Short sleep duration (<6 hours per night)",
+        "reason": "dieselbe Quelle mehrfach zum selben Outcome (abhängige Zeilen: Arme, Kontraste oder zweite Lesung)"
+      }
+    ]
+  },
+  "variant_deduped": {
+    "usable": 23,
+    "groups": [
+      {
+        "group": "% Stage N1 [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1001/jamanetworkopen.2026.26983"
+        ]
+      },
+      {
+        "group": "% Stage N2 [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1001/jamanetworkopen.2026.26983"
+        ]
+      },
+      {
+        "group": "% Stage N3 [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1001/jamanetworkopen.2026.26983"
+        ]
+      },
+      {
+        "group": "% Stage REM (primary) [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1001/jamanetworkopen.2026.26983"
+        ]
+      },
+      {
+        "group": "AHI, events/h [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1001/jamanetworkopen.2026.26983"
+        ]
+      },
+      {
+        "group": "Arousal index, events/h [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1001/jamanetworkopen.2026.26983"
+        ]
+      },
+      {
+        "group": "Central apnea index, events/h [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1001/jamanetworkopen.2026.26983"
+        ]
+      },
+      {
+        "group": "O 2 desaturation index, events/h [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1001/jamanetworkopen.2026.26983"
+        ]
+      },
+      {
+        "group": "Obstructive AHI, events/h [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1001/jamanetworkopen.2026.26983"
+        ]
+      },
+      {
+        "group": "PLMS index, events/h [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1001/jamanetworkopen.2026.26983"
+        ]
+      },
+      {
+        "group": "Poor general health (fair/poor health) [log_ratio]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.5888/pcd20.230198"
+        ]
+      },
+      {
+        "group": "Poor mental health (>14 poor mental health days in past 30 days) [log_ratio]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.5888/pcd20.230198"
+        ]
+      },
+      {
+        "group": "Poor physical health (>14 poor physical health days in past 30 days) [log_ratio]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.5888/pcd20.230198"
+        ]
+      },
+      {
+        "group": "REM latency, min [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1001/jamanetworkopen.2026.26983"
+        ]
+      },
+      {
+        "group": "Short sleep duration (<6 hours per night) [log_ratio]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.5888/pcd20.230198"
+        ]
+      },
+      {
+        "group": "Sleep efficiency, % [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1001/jamanetworkopen.2026.26983"
+        ]
+      },
+      {
+        "group": "Sleep onset latency, min [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1001/jamanetworkopen.2026.26983"
+        ]
+      },
+      {
+        "group": "Total sleep time, min [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1001/jamanetworkopen.2026.26983"
+        ]
+      },
+      {
+        "group": "WASO, min [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1001/jamanetworkopen.2026.26983"
+        ]
+      }
+    ],
+    "k_distribution": {
+      "1": 19
+    },
+    "groups_k_ge_2": 0,
+    "excluded": [
+      {
+        "label": "doi:10.5888/pcd20.230198",
+        "outcome": "Poor general health (fair/poor health)",
+        "reason": "dieselbe Quelle mehrfach zum selben Outcome (abhängige Zeilen: Arme, Kontraste oder zweite Lesung)"
+      },
+      {
+        "label": "doi:10.5888/pcd20.230198",
+        "outcome": "Poor mental health (>14 poor mental health days in past 30 days)",
+        "reason": "dieselbe Quelle mehrfach zum selben Outcome (abhängige Zeilen: Arme, Kontraste oder zweite Lesung)"
+      },
+      {
+        "label": "doi:10.5888/pcd20.230198",
+        "outcome": "Poor physical health (>14 poor physical health days in past 30 days)",
+        "reason": "dieselbe Quelle mehrfach zum selben Outcome (abhängige Zeilen: Arme, Kontraste oder zweite Lesung)"
+      },
+      {
+        "label": "doi:10.5888/pcd20.230198",
+        "outcome": "Short sleep duration (<6 hours per night)",
+        "reason": "dieselbe Quelle mehrfach zum selben Outcome (abhängige Zeilen: Arme, Kontraste oder zweite Lesung)"
+      }
+    ]
+  }
+}

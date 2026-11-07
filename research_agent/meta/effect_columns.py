@@ -57,6 +57,13 @@ _G = re.compile(r"hedges\W{0,3}s?\s*g\b|cohen\W{0,3}s\s*d\b"
                 r"|effect\s+size|\bg\s*\(\s*9\d\s*%", re.IGNORECASE)
 _SMD = re.compile(r"\bsmd\b|standard(?:ized|ised)\s+mean\s+(?:difference|contrast)",
                   re.IGNORECASE)
+# Rohskalige Differenz, wie Schlaf- und Schmerzstudien sie berichten:
+# "Mean difference (95% CI)", "Difference in means", "MD (95% CI)".
+# "Baseline difference" ist keine Behandlungswirkung und bleibt aussen vor.
+_MD = re.compile(
+    r"mean\s+difference|difference\s+in\s+means?"
+    r"|(?<!baseline\s)difference\b|\bMD\b",
+    re.IGNORECASE)
 _BETA = re.compile(r"\u03b2|\bbeta\b|regression\s+coefficient", re.IGNORECASE)
 _CI = re.compile(r"\bCI\b|confidence\s+interval", re.IGNORECASE)
 _LEVEL = re.compile(r"(9[059])\s*%\s*(?:CI|confidence)|CI\s*[:=]?\s*(9[059])\s*%",
@@ -84,10 +91,15 @@ def header_effect_kind(header_cell: str) -> Tuple[str, float, bool]:
             kind = candidate
             break
     if not kind:
-        if _G.search(text):
-            kind = "g"
-        elif _SMD.search(text):
+        # Reihenfolge: SMD vor mean_diff ("standardized mean difference"
+        # enthaelt beide Woerter), mean_diff vor g ("effect size (mean
+        # difference)" ist eine Differenz, kein standardisierter Effekt).
+        if _SMD.search(text):
             kind = "smd"
+        elif _MD.search(text):
+            kind = "mean_diff"
+        elif _G.search(text):
+            kind = "g"
         elif _BETA.search(text):
             kind = "beta"
     if not kind:
@@ -236,6 +248,7 @@ def effects_from_row(header: Sequence[str], cells: Sequence[str],
 _UNIT = {
     "g": "Hedges g", "smd": "SMD", "or": "Odds Ratio", "rr": "Risk Ratio",
     "hr": "Hazard Ratio", "irr": "Incidence Rate Ratio", "beta": "beta",
+    "mean_diff": "Mitteldifferenz (Rohskala)",
 }
 _DIRECTION = {
     "g": "hoeheres g bedeutet einen groesseren Gruppenunterschied",
@@ -245,6 +258,8 @@ _DIRECTION = {
     "hr": "hoeheres HR bedeutet ein hoeheres Hazard",
     "irr": "hoeheres IRR bedeutet eine hoehere Inzidenzrate",
     "beta": "hoeheres beta bedeutet einen staerkeren Zusammenhang",
+    "mean_diff": ("Vorzeichen folgt der Gruppenreihenfolge der Tabelle; "
+                  "der Betrag ist der Unterschied zwischen den Gruppen"),
 }
 
 

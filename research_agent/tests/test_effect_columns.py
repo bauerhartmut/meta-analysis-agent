@@ -37,6 +37,32 @@ class TestHeader(unittest.TestCase):
         # ohne Intervall kein Standardfehler -> nicht poolbar
         self.assertEqual(header_effect_kind("Hedges g")[0], "")
 
+    def test_mean_difference_with_ci(self):
+        self.assertEqual(header_effect_kind("Mean difference (95% CI)")[:2],
+                         ("mean_diff", 0.95))
+        self.assertEqual(header_effect_kind("Difference in means (95% CI)")[0],
+                         "mean_diff")
+        self.assertEqual(header_effect_kind("MD (95% CI)")[0], "mean_diff")
+        self.assertEqual(header_effect_kind("Difference (95% CI)")[0],
+                         "mean_diff")
+
+    def test_adjusted_mean_difference_is_flagged(self):
+        kind, _, adjusted = header_effect_kind("Adjusted mean difference (95% CI)")
+        self.assertEqual((kind, adjusted), ("mean_diff", True))
+
+    def test_standardized_mean_difference_stays_smd(self):
+        # "standardized mean difference" enthaelt "mean difference", ist aber
+        # eine standardisierte Skala und darf nicht roh gepoolt werden.
+        self.assertEqual(header_effect_kind("Standardized mean difference (95% CI)")[0],
+                         "smd")
+
+    def test_baseline_difference_is_not_a_treatment_effect(self):
+        self.assertEqual(header_effect_kind("Baseline difference (95% CI)")[0], "")
+
+    def test_mean_without_difference_is_not_an_effect(self):
+        self.assertEqual(header_effect_kind("Mean (SD)")[0], "")
+        self.assertEqual(header_effect_kind("Mean difference")[0], "")
+
     def test_p_value_and_median_are_not_effects(self):
         self.assertEqual(header_effect_kind("P value")[0], "")
         self.assertEqual(header_effect_kind("Median (IQR)")[0], "")
@@ -104,6 +130,28 @@ class TestRows(unittest.TestCase):
             ["Outcome", "OR (95% CI)"], ["x", "2.78"], quote="row")
         self.assertEqual(found, [])
         self.assertIn("Intervall", reason)
+
+
+class TestMeanDiffStore(unittest.TestCase):
+    TEXT = ("Results\n|Sleep onset latency|-12.4 (-18.9\u2013-5.9)|<.001|\n")
+    HEADER = ["Outcome", "Mean difference (95% CI)", "P value"]
+    CELLS = ["Sleep onset latency", "-12.4 (-18.9\u2013-5.9)", "<.001"]
+
+    def test_negative_mean_difference_is_stored_on_raw_scale(self):
+        db = Database(":memory:")
+        text_id = db.save_source_text("s1", self.TEXT, kind="xml")["id"]
+        quote = "|Sleep onset latency|-12.4 (-18.9\u2013-5.9)|<.001|"
+        found, reason = effects_from_row(self.HEADER, self.CELLS, quote=quote)
+        self.assertEqual(reason, "", reason)
+        self.assertEqual(found[0]["effect_type"], "mean_diff")
+        stored, rejected = store_direct_effects(db, "s1", text_id, self.TEXT, found)
+        self.assertEqual(rejected, [])
+        row = stored[0]
+        self.assertAlmostEqual(row["effect"], -12.4)
+        self.assertAlmostEqual(row["se"], (18.9 - 5.9) / 3.919928, places=6)
+        self.assertEqual(row["unit"], "Mitteldifferenz (Rohskala)")
+        self.assertTrue(row["direction"])
+        self.assertEqual(row["n"], None)
 
 
 class TestStore(unittest.TestCase):
