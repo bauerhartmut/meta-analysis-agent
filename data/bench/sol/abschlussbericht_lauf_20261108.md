@@ -6,11 +6,14 @@ Einschlaflatenz (SOL) unter Melatonin?
 Kurze Antwort: **Nein.** 13 der 1.099 gespeicherten Effektzeilen betreffen das
 Zielmass (1,2 %), sie stammen aus 7 Quellen, sind auf zwei Skalen verteilt und
 enthalten genau eine standardisierte Zeile. Ein gepoolter Wert wird nicht
-behauptet.
+behauptet. Der anschliessende Abstract-Lauf (Abschnitt 6) aendert daran nichts:
+0 lesbare SOL-Zeilen in 23 Dokumenten.
 
 Alle Zahlen unten stammen aus den Messdateien dieses Laufs (Funnel, Konverter,
 Zielmass-Schnitt, Textmessung) und sind mit den genannten Skripten
-nachrechenbar. Es gab in diesem Lauf keinen Netzzugriff und keinen Modellaufruf.
+nachrechenbar. Der Korpuslauf selbst hatte keinen Netzzugriff und keinen
+Modellaufruf; der Nachtrag in Abschnitt 6 ist ein separater, freigegebener
+Netzlauf mit 50 Anfragen und ebenfalls ohne Modellaufruf.
 
 ## 1. Korpus und Ausbeute
 
@@ -101,17 +104,52 @@ Korpus, nicht ueber die Leser.
 2. **Weitere Leser-Fixes an diesem Korpus bringen nichts.** Drei Versuche mit
    messbarer Wirkung auf die Gesamtausbeute (+576 Zeilen) hatten bei SOL
    null Wirkung. Ein vierter haette keine Grundlage.
-3. **Ein neuer Netzlauf braucht eine andere Suchhypothese**, nicht mehr
-   Dokumente: gesucht werden Studien, die SOL als Zwei-Arm-Deskriptivum
-   berichten (Mittelwert/SD je Arm, oder fertige Effektspalte), nicht Studien,
-   die SOL erwaehnen. Vor jedem Lauf: Telemetrie des letzten Laufs, Freigabe,
-   maximal 2-3 Laeufe.
+3. **Die andere Suchhypothese ist geprueft und gescheitert** (Abschnitt 6):
+   Abstract-Treffer liefern ebenfalls keine lesbaren SOL-Zeilen. Ein weiterer
+   Lauf auf diesem Weg ist nicht gerechtfertigt; die Grenze von 2-3 Laeufen ist
+   mit zwei Laeufen nicht ausgeschoepft, aber ein dritter haette keine
+   Begruendung.
 4. **Die Ausbeute-Arbeit ist trotzdem nicht verloren.** Der Funnel, die
    Kopfzeilen-Aufloesung, die Label-Ableitung und die Arm-Paarung sind
    allgemein wirksam (1.099 statt 523 gespeicherte Zeilen, 422 statt 152
    poolbare Zeilen) - nur nicht fuer diese eine Frage.
 
-## 6. Grenzen dieses Berichts
+## 6. Nachtrag: der Abstract-Lauf (Lauf 1)
+
+Hypothese, Abfragen, Aufwand und Abbruchkriterien standen vorab in
+`suchhypothese_sol_20261108.md`; der Lauf wurde freigegeben und mit
+`scripts/sol_abstract_probe.py` ausgefuehrt. Vollstaendiger Befund:
+`q1_befund_20261108.md`. 50 Anfragen an Europe PMC, drei Minuten, 0 Tokens.
+
+| Schritt | Ergebnis |
+|---|---|
+| Syntax-Probe | `ABSTRACT` belegt: 35.707 Treffer gegen 90.220 freie Suche |
+| Q1 (Abstract nennt SOL + Design) | 235 Treffer, 100 geholt, 53 ohne PMCID, 25 neu |
+| Q2 (zusaetzlich Ergebnisform) | 40 Treffer, 8 neu |
+| Q3 (Titel nennt SOL) | 1 Treffer, ohne PMCID |
+| Stichprobe | 33 Dokumente (statt 40), davon 23 ladbar |
+| Beschaffung | 10 Fehler, alle HTTP 500, auch beim Nachladen |
+| Gelesene Zeilen | 42 (28 Effektspalten, 14 Arm-Deskriptiva) |
+| **lesbare SOL-Zeilen** | **0** |
+
+Der einzige Kandidat mit Latency-Label (`Sleep latency (min) by WA`,
+g = -2,16) steht in Tabelle 1 "Baseline demographics summary of study
+participants" mit der Kopfzeile `Placebo (n = 35), mean +- SE` / `VE (n = 37),
+mean +- SE`. Das ist ein Baseline-Vergleich vor der Intervention mit
+Standardfehlern statt Standardabweichungen - kein Behandlungseffekt. Die Zeile
+wird verworfen.
+
+Damit sind die vorab festgelegten Kriterien erfuellt: A1 (0 statt mindestens 2
+lesbare Zeilen), A2 (53 % der Q1-Treffer ohne PMCID, Verengung nicht mehr
+moeglich) und A3 (0 statt mindestens 3 neue Quellen). **Kein zweiter Lauf.**
+Die Vorhersage der Hypothese (mindestens 4 von 40) ist widerlegt; der Bericht
+bleibt bei 13 SOL-Zeilen aus 7 Quellen, k = 1.
+
+Der Abstract-Lauf zeigt, woran es liegt: Auch Abstract-Treffer berichten SOL
+ueberwiegend als Baseline-Wert, als Grafik oder als Satz ohne Zwei-Arm-
+Deskriptivum. Der Engpass ist die Berichtsform, nicht die Suchstrategie.
+
+## 7. Grenzen dieses Berichts
 
 - Die Zielmass-Klassifikation ist eine Namenspruefung; Population und
   Intervention werden nicht geprueft. Eine SOL-Zeile kann eine andere
@@ -119,12 +157,18 @@ Korpus, nicht ueber die Leser.
 - Die Grundverteilung der Ablehnungsgruende stammt aus einer Stichprobe von
   260 der 946 Kandidaten; die Lesbarkeitszahlen (18, 0) sind ueber alle 946
   gerechnet.
-- Die Mess-DBs (`direct_label2.db`, `arm_label2.db`) sind lokal und nicht
-  versioniert; die Zahlen sind ueber die Konverterbefehle reproduzierbar, die
-  in `konverter_kopf_20261108.md` stehen.
-- 3 XML fehlen weiterhin (HTTP 500 bei der Beschaffung).
+- Die Mess-DBs (`direct_label2.db`, `arm_label2.db`, `direct_q1.db`,
+  `arm_q1.db`) sind lokal und nicht versioniert; die Zahlen sind ueber die
+  Konverterbefehle reproduzierbar, die in `konverter_kopf_20261108.md` und
+  `q1_befund_20261108.md` stehen.
+- 3 XML des Korpus und 10 XML der Q1-Stichprobe fehlen (HTTP 500 bei der
+  Beschaffung). Die 10 ungeprueften Dokumente koennten die Null des
+  Abstract-Laufs veraendern; ohne XML ist das nicht entscheidbar.
+- 23 gelesene Dokumente sind eine kleine Stichprobe. 0 von 23 widerlegt die
+  Hypothese nach dem eigenen Kriterium, beweist aber nicht, dass in den
+  uebrigen 212 Q1-Treffern keine lesbaren SOL-Zeilen liegen.
 
-## 7. Nachweise
+## 8. Nachweise
 
 | Datei | Inhalt |
 |---|---|
@@ -136,3 +180,8 @@ Korpus, nicht ueber die Leser.
 | `sol_profil_befund_20261108.md` | 1.367 SOL-Zeilen, 18 lesbar |
 | `arm_paare_befund_20261108.md` | Spaltenpaarung, 18 -> 18 |
 | `sol_text_20261108.json/.md` | 5.820 SOL-Saetze, 316 mit SD, 0 lesbar |
+| `suchhypothese_sol_20261108.md` | Hypothese, Abfragen, Aufwand, Abbruchkriterien (vorab) |
+| `q1_probe_20261108.json/.md` | Syntax-Probe, drei Abfragen, Stichprobe, Beschaffung |
+| `zielmass_q1_20261108.json/.md` | 42 Zeilen der Stichprobe, 0 SOL |
+| `q1_befund_20261108.md` | Befund des Abstract-Laufs samt Baseline-Fund |
+| `telemetrie_befund_20261108.md` | Rate-Limits und Abbruch von Run 2 (Grundlage der Provider-Wahl) |
