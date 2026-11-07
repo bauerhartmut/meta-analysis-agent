@@ -1,0 +1,36 @@
+{
+  "generated": "2026-11-07T18:20:55",
+  "rho_assumed": 0.5,
+  "rho_grid": [
+    0.0,
+    0.3,
+    0.5,
+    0.7,
+    0.9
+  ],
+  "documents": [
+    {
+      "doi": "10.3390/healthcare6010023",
+      "pmc": "PMC5872230",
+      "sentences": 276,
+      "candidates": 0,
+      "stored": 0,
+      "rejected": 0,
+      "reasons": {
+        "kein Veraenderungswert im Satz": 219,
+        "Tabellen-/Zitationsrest statt Ergebnissatz": 51,
+        "nicht genau zwei Arme mit Veraenderung im Satz": 4,
+        "Stichproben- oder Designbeschreibung statt Ergebnis": 2
+      },
+      "effects": []
+    }
+  ],
+  "totals": {
+    "sentences": 276,
+    "candidates": 0,
+    "stored": 0,
+    "rejected": 0,
+    "missing_xml": 0
+  },
+  "missing_xml": []
+}

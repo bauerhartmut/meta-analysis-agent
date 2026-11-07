@@ -1,0 +1,29 @@
+{
+  "generated": "2026-11-07T18:20:55",
+  "documents": [
+    {
+      "doi": "10.3390/healthcare6010023",
+      "pmc": "PMC5872230",
+      "sentences": 276,
+      "candidates": 0,
+      "stored": 0,
+      "rejected": 0,
+      "reasons": {
+        "kein Mittelwert mit Streuung im Satz": 217,
+        "Tabellen-/Zitationsrest statt Ergebnissatz": 49,
+        "Baseline-/Veraenderungsmuster statt Gruppenvergleich": 7,
+        "Stichproben- oder Designbeschreibung statt Ergebnis": 2,
+        "nicht genau zwei Mittelwerte mit Streuung im Satz": 1
+      },
+      "effects": []
+    }
+  ],
+  "totals": {
+    "sentences": 276,
+    "candidates": 0,
+    "stored": 0,
+    "rejected": 0,
+    "missing_xml": 0
+  },
+  "missing_xml": []
+}

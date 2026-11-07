@@ -1,0 +1,75 @@
+[
+ {
+  "title": "Melatonin treatment effects on adolescent students' sleep timing and sleepiness in a placebo-controlled crossover study.",
+  "year": 2012,
+  "doi": "10.3109/07420528.2012.719962",
+  "pmid": "23005039",
+  "pmcid": null,
+  "in_corpus": false,
+  "corpus_pmc": null
+ },
+ {
+  "title": "Melatonin for chronic sleep onset insomnia in children: a randomized placebo-controlled trial.",
+  "year": 2001,
+  "doi": "10.1177/088307380101600204",
+  "pmid": "11292231",
+  "pmcid": null,
+  "in_corpus": false,
+  "corpus_pmc": null
+ },
+ {
+  "title": "Melatonin improves health status and sleep in children with idiopathic chronic sleep-onset insomnia: a randomized placebo-controlled trial.",
+  "year": 2003,
+  "doi": "10.1097/01.chi.0000085756.71002.86",
+  "pmid": "14566165",
+  "pmcid": null,
+  "in_corpus": false,
+  "corpus_pmc": null
+ },
+ {
+  "title": "Effects of Melatonin and Bright Light Treatment in Childhood Chronic Sleep Onset Insomnia With Late Melatonin Onset: A Randomized Controlled Study.",
+  "year": 2017,
+  "doi": "10.1093/sleep/zsw038",
+  "pmid": "28364493",
+  "pmcid": null,
+  "in_corpus": false,
+  "corpus_pmc": null
+ },
+ {
+  "title": "Melatonin in wake-sleep disorders in children, adolescents and young adults with mental retardation with or without epilepsy: a double-blind, cross-over, placebo-controlled trial.",
+  "year": 2004,
+  "doi": "10.1016/s0387-7604(03)00197-9",
+  "pmid": "15275698",
+  "pmcid": null,
+  "in_corpus": false,
+  "corpus_pmc": null
+ },
+ {
+  "title": "Sleep dysfunction in Rett syndrome: a trial of exogenous melatonin treatment.",
+  "year": 1998,
+  "doi": "10.1111/j.1469-8749.1998.tb15445.x",
+  "pmid": "9566656",
+  "pmcid": null,
+  "in_corpus": false,
+  "corpus_pmc": null
+ },
+ {
+  "title": "Clinical trials of controlled-release melatonin in children with sleep-wake cycle disorders.",
+  "year": 2000,
+  "doi": "10.1034/j.1600-079x.2000.290105.x",
+  "pmid": "10949538",
+  "pmcid": null,
+  "in_corpus": false,
+  "corpus_pmc": null
+ },
+ {
+  "title": "Long-Term Melatonin Therapy for Adolescents and Young Adults with Chronic Sleep Onset Insomnia and Late Melatonin Onset: Evaluation of Sleep Quality, Chronotype, and Lifestyle Factors Compared to Age-Related Randomly Selected Population Cohorts.",
+  "year": 2018,
+  "doi": "10.3390/healthcare6010023",
+  "pmid": null,
+  "pmcid": "PMC5872230",
+  "in_corpus": false,
+  "corpus_pmc": null,
+  "xml": "data/bench/sol/seed_xml/PMC5872230.xml"
+ }
+]

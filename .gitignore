@@ -77,3 +77,4 @@ data/bench/xml6/*.xml
 data/bench/xml_all/*.xml
 data/bench/sol/xml/*.xml
 data/bench/sol/*.db
+data/bench/sol/seed_xml/

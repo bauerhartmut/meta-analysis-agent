@@ -1,0 +1,25 @@
+{
+  "generated": "2026-11-07T18:20:54",
+  "documents": [
+    {
+      "doi": "10.3390/healthcare6010023",
+      "pmc": "PMC5872230",
+      "table_rows": 23,
+      "convertible": 0,
+      "stored": 0,
+      "rejected": 0,
+      "reasons": {
+        "kein Mittelwert mit eindeutiger Streuung in zwei Spalten": 23
+      },
+      "effects": []
+    }
+  ],
+  "totals": {
+    "table_rows": 23,
+    "convertible": 0,
+    "stored": 0,
+    "rejected": 0,
+    "missing_xml": 0
+  },
+  "missing_xml": []
+}
