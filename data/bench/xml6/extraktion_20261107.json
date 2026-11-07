@@ -1,0 +1,302 @@
+{
+  "generated": "2026-11-07T13:13:51",
+  "topic": "does melatonin improve sleep onset latency",
+  "dry_run": false,
+  "documents": [
+    {
+      "doi": "10.1001/jamanetworkopen.2026.26983",
+      "pmc": "PMC13448793",
+      "chars": 41790,
+      "jats_blocks": 3,
+      "jats_stat_rows": 15,
+      "text_blocks": 3,
+      "rows": 3,
+      "poolable": 1,
+      "with_se": 3,
+      "with_ci": 3,
+      "disputed": 2,
+      "rejected": 0,
+      "unverified_quote": 0,
+      "effects": [
+        {
+          "outcome": "Sleep onset latency",
+          "effect_type": "g",
+          "effect": 0.07,
+          "se": 0.053572412977088674,
+          "ci_low": -0.04,
+          "ci_high": 0.17,
+          "disputed": 1,
+          "rejection_reason": "",
+          "poolable": false,
+          "reason": "disputed",
+          "quote": "Sleep onset latency, min|342|12.3 (2.8 to 31.0)|12.4 (4.7 to 27.8)|0.07 (−0.04 to 0.17)|.60|.72|>.99"
+        },
+        {
+          "outcome": "Sleep onset latency",
+          "effect_type": "g",
+          "effect": 0.07,
+          "se": 0.053572412977088674,
+          "ci_low": -0.04,
+          "ci_high": 0.17,
+          "disputed": 0,
+          "rejection_reason": "",
+          "poolable": true,
+          "reason": "poolable",
+          "quote": "Sleep onset latency, min|342|12.3 (2.8 to 31.0)|12.4 (4.7 to 27.8)|0.07 (−0.04 to 0.17)|.60|.72|>.99"
+        },
+        {
+          "outcome": "sleep onset latency",
+          "effect_type": "g",
+          "effect": 0.07,
+          "se": 0.053572412977088674,
+          "ci_low": -0.04,
+          "ci_high": 0.17,
+          "disputed": 1,
+          "rejection_reason": "",
+          "poolable": false,
+          "reason": "disputed",
+          "quote": "Sleep onset latency, min|342|12.3 (2.8 to 31.0)|12.4 (4.7 to 27.8)|0.07 (−0.04 to 0.17)|.60|.72|>.99"
+        }
+      ]
+    },
+    {
+      "doi": "10.3389/fnut.2026.1890075",
+      "pmc": "PMC13520769",
+      "chars": 54590,
+      "jats_blocks": 4,
+      "jats_stat_rows": 27,
+      "text_blocks": 4,
+      "rows": 2,
+      "poolable": 0,
+      "with_se": 0,
+      "with_ci": 0,
+      "disputed": 0,
+      "rejected": 2,
+      "unverified_quote": 0,
+      "effects": [
+        {
+          "outcome": "sleep quality",
+          "effect_type": "beta",
+          "effect": null,
+          "se": null,
+          "ci_low": null,
+          "ci_high": null,
+          "disputed": 0,
+          "rejection_reason": "kein Effektwert gelesen",
+          "poolable": false,
+          "reason": "rejected",
+          "quote": "Total dietary melatonin intake and evening dietary melatonin intake were not statistically significant."
+        },
+        {
+          "outcome": "sleep quality (PSQI total score)",
+          "effect_type": "beta",
+          "effect": null,
+          "se": null,
+          "ci_low": null,
+          "ci_high": null,
+          "disputed": 0,
+          "rejection_reason": "kein Effektwert gelesen",
+          "poolable": false,
+          "reason": "rejected",
+          "quote": "Total dietary melatonin intake and evening dietary melatonin intake were not statistically significant."
+        }
+      ]
+    },
+    {
+      "doi": "10.3390/healthcare13020180",
+      "pmc": "PMC11765054",
+      "chars": 35008,
+      "jats_blocks": 4,
+      "jats_stat_rows": 1,
+      "text_blocks": 1,
+      "rows": 2,
+      "poolable": 0,
+      "with_se": 0,
+      "with_ci": 0,
+      "disputed": 0,
+      "rejected": 2,
+      "unverified_quote": 0,
+      "effects": [
+        {
+          "outcome": "Sleep latency",
+          "effect_type": "mean_diff",
+          "effect": null,
+          "se": null,
+          "ci_low": null,
+          "ci_high": null,
+          "disputed": 0,
+          "rejection_reason": "kein Effektwert gelesen",
+          "poolable": false,
+          "reason": "rejected",
+          "quote": "Sleep latency [min.]|1.62 ± 2.33 (0.6 to 2.64)|0.65 ± 0.72 (0.334 to 0.966)|2.15 ± 3.35 (0.68 to 3.62)|0.188 (0.123)"
+        },
+        {
+          "outcome": "sleep latency",
+          "effect_type": "mean_diff",
+          "effect": null,
+          "se": null,
+          "ci_low": null,
+          "ci_high": null,
+          "disputed": 0,
+          "rejection_reason": "kein Effektwert gelesen",
+          "poolable": false,
+          "reason": "rejected",
+          "quote": "Sleep latency [min.]|1.62 ± 2.33 (0.6 to 2.64)|0.65 ± 0.72 (0.334 to 0.966)|2.15 ± 3.35 (0.68 to 3.62)|0.188 (0.123)"
+        }
+      ]
+    },
+    {
+      "doi": "10.3390/ijms27146320",
+      "pmc": "PMC13409838",
+      "chars": 49047,
+      "jats_blocks": 4,
+      "jats_stat_rows": 3,
+      "text_blocks": 3,
+      "rows": 2,
+      "poolable": 0,
+      "with_se": 0,
+      "with_ci": 0,
+      "disputed": 0,
+      "rejected": 2,
+      "unverified_quote": 0,
+      "effects": [
+        {
+          "outcome": "Sleep onset latency",
+          "effect_type": "other",
+          "effect": null,
+          "se": null,
+          "ci_low": null,
+          "ci_high": null,
+          "disputed": 0,
+          "rejection_reason": "kein Effektwert gelesen",
+          "poolable": false,
+          "reason": "rejected",
+          "quote": "Consequently, the estimated bedtime and sleep onset time coincide in automatically detected sleep periods, resulting in a sleep latency value of zero [ 46 ]. Therefore, sleep latency was not included among the actigraphy"
+        },
+        {
+          "outcome": "Sleep onset latency",
+          "effect_type": "other",
+          "effect": null,
+          "se": null,
+          "ci_low": null,
+          "ci_high": null,
+          "disputed": 0,
+          "rejection_reason": "kein Effektwert gelesen",
+          "poolable": false,
+          "reason": "rejected",
+          "quote": "Consequently, the estimated bedtime and sleep onset time coincide in automatically detected sleep periods, resulting in a sleep latency value of zero [ 46 ]. Therefore, sleep latency was not included among the actigraphy"
+        }
+      ]
+    },
+    {
+      "doi": "10.3390/medicina62040662",
+      "pmc": "PMC13117668",
+      "chars": 64192,
+      "jats_blocks": 3,
+      "jats_stat_rows": 6,
+      "text_blocks": 2,
+      "rows": 2,
+      "poolable": 0,
+      "with_se": 0,
+      "with_ci": 0,
+      "disputed": 0,
+      "rejected": 2,
+      "unverified_quote": 0,
+      "effects": [
+        {
+          "outcome": "sleep onset latency",
+          "effect_type": "other",
+          "effect": null,
+          "se": null,
+          "ci_low": null,
+          "ci_high": null,
+          "disputed": 0,
+          "rejection_reason": "kein Effektwert gelesen",
+          "poolable": false,
+          "reason": "rejected",
+          "quote": "No effect sizes regarding melatonin and sleep onset latency were reported in the provided text. The text exclusively discusses the association between sleep duration/quality and periodontitis."
+        },
+        {
+          "outcome": "sleep onset latency",
+          "effect_type": "other",
+          "effect": null,
+          "se": null,
+          "ci_low": null,
+          "ci_high": null,
+          "disputed": 0,
+          "rejection_reason": "kein Effektwert gelesen",
+          "poolable": false,
+          "reason": "rejected",
+          "quote": ""
+        }
+      ]
+    },
+    {
+      "doi": "10.5888/pcd20.230198",
+      "pmc": "PMC10756651",
+      "chars": 28197,
+      "jats_blocks": 3,
+      "jats_stat_rows": 16,
+      "text_blocks": 3,
+      "rows": 3,
+      "poolable": 0,
+      "with_se": 2,
+      "with_ci": 0,
+      "disputed": 2,
+      "rejected": 1,
+      "unverified_quote": 0,
+      "effects": [
+        {
+          "outcome": "sleep duration",
+          "effect_type": "beta",
+          "effect": 0.08,
+          "se": 0.003,
+          "ci_low": null,
+          "ci_high": null,
+          "disputed": 1,
+          "rejection_reason": "",
+          "poolable": false,
+          "reason": "disputed",
+          "quote": "In the linear regression models, higher rates of marijuana use were associated with longer sleep duration (unadjusted, β = 0.93, P = .001, R 2 = .009; adjusted, β = 0.08, P = .003, R 2 = 0.016) ( Table 3 ), worse mental "
+        },
+        {
+          "outcome": "sleep duration",
+          "effect_type": "beta",
+          "effect": 0.008,
+          "se": 0.003,
+          "ci_low": null,
+          "ci_high": null,
+          "disputed": 1,
+          "rejection_reason": "",
+          "poolable": false,
+          "reason": "disputed",
+          "quote": "In the linear regression models, higher rates of marijuana use were associated with longer sleep duration (unadjusted, β = 0.93, P = .001, R 2 = .009; adjusted, β = 0.08, P = .003, R 2 = 0.016) ( Table 3 ), worse mental "
+        },
+        {
+          "outcome": "sleep onset latency",
+          "effect_type": "other",
+          "effect": null,
+          "se": null,
+          "ci_low": null,
+          "ci_high": null,
+          "disputed": 0,
+          "rejection_reason": "kein Effektwert gelesen",
+          "poolable": false,
+          "reason": "rejected",
+          "quote": "No data reported in the provided text regarding melatonin or sleep onset latency. The text exclusively discusses associations between substance use (marijuana, nonprescribed pain medication) and sleep duration."
+        }
+      ]
+    }
+  ],
+  "totals": {
+    "jats_blocks": 21,
+    "jats_stat_rows": 68,
+    "rows": 14,
+    "poolable": 1,
+    "with_se": 5,
+    "with_ci": 3,
+    "disputed": 4,
+    "rejected": 9,
+    "unverified_quote": 0
+  }
+}

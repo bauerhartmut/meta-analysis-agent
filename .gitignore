@@ -71,3 +71,6 @@ research_agent/agents/roles.py
 research_agent/agents/devils_advocate.py
 research_agent/llm/engine.py
 research_agent/memory/store.py
+
+# Dritt-XML (Europe PMC) nicht ins Repo
+data/bench/xml6/*.xml
