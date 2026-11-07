@@ -613,8 +613,10 @@ def store_arm_level_effects(db, source_id: str, source_text_id: str,
             "rejection_reason": "",
             "adjusted": -1,
             "time_point": str(candidate.get("time_point") or ""),
-            "moderators": _json.dumps({"arms": candidate.get("arms") or []},
-                                      ensure_ascii=False),
+            "moderators": _json.dumps(
+                {**(candidate.get("moderators") or {}),
+                 "arms": candidate.get("arms") or []},
+                ensure_ascii=False),
             "created_at": now,
         }
         problem = check_plausibility(row)

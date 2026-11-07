@@ -1,0 +1,53 @@
+{
+  "rows_total": 1,
+  "adjusted_rows": 0,
+  "crude_rows": 0,
+  "deduped_rows": 1,
+  "dropped_duplicates": 0,
+  "variant_all": {
+    "usable": 1,
+    "groups": [
+      {
+        "group": "dlmo [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1371/journal.pmed.1002587"
+        ]
+      }
+    ],
+    "k_distribution": {
+      "1": 1
+    },
+    "groups_k_ge_2": 0,
+    "excluded": []
+  },
+  "variant_deduped": {
+    "usable": 1,
+    "groups": [
+      {
+        "group": "dlmo [hedges_g]",
+        "k": 1,
+        "pooled": null,
+        "ci_low": null,
+        "ci_high": null,
+        "i2": null,
+        "tau2": null,
+        "note": "nur eine Studie mit nutzbarer Präzision - kein Pooling",
+        "rows": [
+          "doi:10.1371/journal.pmed.1002587"
+        ]
+      }
+    ],
+    "k_distribution": {
+      "1": 1
+    },
+    "groups_k_ge_2": 0,
+    "excluded": []
+  }
+}
