@@ -24,7 +24,7 @@ die ueber den vorhandenen Zugang nicht erreichbar sind, damit k von 3 auf etwa
 
 ## Was bestellt wird
 
-Zwelve Zeitschriftenartikel, jeder mit DOI und PMID, in zwei Gruppen
+Zwoelf Zeitschriftenartikel, jeder mit DOI und PMID, in zwei Gruppen
 (`bestellanfrage_20261108.md`, Abschnitt "Warum genau diese zwoelf"):
 
 | Gruppe | Anzahl | Auswahlgrund |
