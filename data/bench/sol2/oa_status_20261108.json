@@ -1,0 +1,826 @@
+[
+  {
+    "pmid": "41122831",
+    "doi": "10.1111/jpc.70224",
+    "prioritaet": "A",
+    "titel": "A Pilot Randomised Controlled Trial of Sublingual Melatonin for Sleep Onset Insomnia in Children With Foetal Alcohol Spectrum Disorder (FASD).",
+    "europepmc_source": "MED",
+    "europepmc_id": "41122831",
+    "has_pmc": false,
+    "status": "kein OA-PDF"
+  },
+  {
+    "pmid": "33157425",
+    "doi": "10.1016/j.sleep.2020.10.018",
+    "prioritaet": "A",
+    "titel": "Efficacy of melatonin for sleep disturbance in middle-aged primary insomnia: a double-blind, randomised clinical trial.",
+    "europepmc_source": "MED",
+    "europepmc_id": "33157425",
+    "has_pmc": false,
+    "status": "kein OA-PDF"
+  },
+  {
+    "pmid": "28364493",
+    "doi": "10.1093/sleep/zsw038",
+    "prioritaet": "A",
+    "titel": "Effects of Melatonin and Bright Light Treatment in Childhood Chronic Sleep Onset Insomnia With Late Melatonin Onset: A Randomized Controlled Study.",
+    "europepmc_source": "MED",
+    "europepmc_id": "28364493",
+    "has_pmc": false,
+    "status": "kein OA-PDF"
+  },
+  {
+    "pmid": "14566165",
+    "doi": "10.1097/01.chi.0000085756.71002.86",
+    "prioritaet": "A",
+    "titel": "Melatonin improves health status and sleep in children with idiopathic chronic sleep-onset insomnia: a randomized placebo-controlled trial.",
+    "europepmc_source": "MED",
+    "europepmc_id": "14566165",
+    "has_pmc": false,
+    "status": "kein OA-PDF"
+  },
+  {
+    "pmid": "11292231",
+    "doi": "10.1177/088307380101600204",
+    "prioritaet": "A",
+    "titel": "Melatonin for chronic sleep onset insomnia in children: a randomized placebo-controlled trial.",
+    "europepmc_source": "MED",
+    "europepmc_id": "11292231",
+    "has_pmc": false,
+    "status": "kein OA-PDF"
+  },
+  {
+    "pmid": "42533530",
+    "doi": "10.1080/07357907.2025.2563202",
+    "prioritaet": "B",
+    "titel": "The Effect of Melatonin on Sleep Quality, Anxiety, and Depression in Patients with Primary Breast Cancer Undergoing Adjuvant Chemotherapy Type: A Randomized, Double-Blind, Placebo-Controlled Trial.",
+    "europepmc_source": "MED",
+    "europepmc_id": "42533530",
+    "has_pmc": false,
+    "status": "kein OA-PDF"
+  },
+  {
+    "pmid": "41369870",
+    "doi": "10.1007/s12098-025-05873-4",
+    "prioritaet": "B",
+    "titel": "Oral Melatonin Supplementation for Sleep Disturbances in Children with Cerebral Palsy: A Randomized Double-Blind Controlled Trial.",
+    "europepmc_source": "MED",
+    "europepmc_id": "41369870",
+    "has_pmc": false,
+    "status": "kein OA-PDF"
+  },
+  {
+    "pmid": "40791136",
+    "doi": "10.1039/d5fo00971e",
+    "prioritaet": "B",
+    "titel": "Daily walnut consumption increases 6-sulfatoxymelatonin urinary levels and can improve sleep quality: a randomized crossover trial.",
+    "europepmc_source": "MED",
+    "europepmc_id": "40791136",
+    "has_pmc": false,
+    "status": "kein OA-PDF"
+  },
+  {
+    "pmid": "39437460",
+    "doi": "10.1016/j.sleep.2024.10.020",
+    "prioritaet": "B",
+    "titel": "Melatonin on sleep in Parkinson's disease: A randomized double blind placebo controlled trial.",
+    "europepmc_source": "MED",
+    "europepmc_id": "39437460",
+    "has_pmc": false,
+    "status": "kein OA-PDF"
+  },
+  {
+    "pmid": "34181143",
+    "doi": "10.1007/s10803-021-05139-w",
+    "prioritaet": "B",
+    "titel": "Melatonin Treatment and Adequate Sleep Hygiene Interventions in Children with Autism Spectrum Disorder: A Randomized Controlled Trial.",
+    "europepmc_source": "MED",
+    "europepmc_id": "34181143",
+    "has_pmc": false,
+    "status": "kein OA-PDF"
+  },
+  {
+    "pmid": "34293628",
+    "doi": "10.1016/j.ejpn.2021.06.006",
+    "prioritaet": "B",
+    "titel": "Efficacy and tolerability of Melatonin vs Triclofos to achieve sleep for pediatric electroencephalography: A single blinded randomized controlled trial.",
+    "europepmc_source": "MED",
+    "europepmc_id": "34293628",
+    "has_pmc": false,
+    "status": "kein OA-PDF"
+  },
+  {
+    "pmid": "30160043",
+    "doi": "10.1111/pai.12978",
+    "prioritaet": "B",
+    "titel": "The effects of melatonin administration on disease severity and sleep quality in children with atopic dermatitis: A randomized, double-blinded, placebo-controlled trial.",
+    "europepmc_source": "MED",
+    "europepmc_id": "30160043",
+    "has_pmc": false,
+    "status": "kein OA-PDF"
+  },
+  {
+    "pmid": "29619605",
+    "doi": "10.1007/s00737-018-0838-x",
+    "prioritaet": "B",
+    "titel": "Both melatonin and meloxicam improved sleep and pain in females with primary dysmenorrhea-results from a double-blind cross-over intervention pilot study.",
+    "europepmc_source": "MED",
+    "europepmc_id": "29619605",
+    "has_pmc": false,
+    "status": "kein OA-PDF"
+  },
+  {
+    "pmid": "26569624",
+    "doi": "10.1001/jamapediatrics.2015.3092",
+    "prioritaet": "B",
+    "titel": "Melatonin Supplementation for Children With Atopic Dermatitis and Sleep Disturbance: A Randomized Clinical Trial.",
+    "europepmc_source": "MED",
+    "europepmc_id": "26569624",
+    "has_pmc": false,
+    "status": "kein OA-PDF"
+  },
+  {
+    "pmid": "23098680",
+    "doi": "10.3310/hta16400",
+    "prioritaet": "B",
+    "titel": "The use of MElatonin in children with neurodevelopmental disorders and impaired sleep: a randomised, double-blind, placebo-controlled, parallel study (MENDS).",
+    "europepmc_source": "MED",
+    "europepmc_id": "23098680",
+    "has_pmc": false,
+    "status": "kein OA-PDF"
+  },
+  {
+    "pmid": "20535539",
+    "doi": "10.1007/s10803-010-1036-5",
+    "prioritaet": "B",
+    "titel": "Melatonin versus placebo in children with autism spectrum conditions and severe sleep problems not amenable to behaviour management strategies: a randomised controlled crossover trial.",
+    "europepmc_source": "MED",
+    "europepmc_id": "20535539",
+    "has_pmc": false,
+    "status": "kein OA-PDF"
+  },
+  {
+    "pmid": "20025642",
+    "doi": "10.1111/j.1600-079X.2009.00726.x",
+    "prioritaet": "B",
+    "titel": "Melatonin improves sleep and reduces nitrite in the exhaled breath condensate in cystic fibrosis--a randomized, double-blind placebo-controlled study.",
+    "europepmc_source": "MED",
+    "europepmc_id": "20025642",
+    "has_pmc": false,
+    "status": "kein OA-PDF"
+  },
+  {
+    "pmid": "19299778",
+    "doi": "10.1213/ane.0b013e31819a6cf0",
+    "prioritaet": "B",
+    "titel": "The effect of melatonin on sleep quality after laparoscopic cholecystectomy: a randomized, placebo-controlled trial.",
+    "europepmc_source": "MED",
+    "europepmc_id": "19299778",
+    "has_pmc": false,
+    "status": "kein OA-PDF"
+  },
+  {
+    "pmid": "18078449",
+    "doi": "10.1111/j.1600-079X.2007.00528.x",
+    "prioritaet": "B",
+    "titel": "A randomized, placebo-controlled trial of controlled release melatonin treatment of delayed sleep phase syndrome and impaired sleep maintenance in children with neurodevelopmental disabilities.",
+    "europepmc_source": "MED",
+    "europepmc_id": "18078449",
+    "has_pmc": false,
+    "status": "kein OA-PDF"
+  },
+  {
+    "pmid": "17404779",
+    "doi": "10.1007/s00415-006-0390-x",
+    "prioritaet": "B",
+    "titel": "Effect of exogenous melatonin on sleep and motor dysfunction in Parkinson's disease. A randomized, double blind, placebo-controlled study.",
+    "europepmc_source": "MED",
+    "europepmc_id": "17404779",
+    "has_pmc": false,
+    "status": "kein OA-PDF"
+  },
+  {
+    "pmid": "16919138",
+    "doi": "10.1111/j.1365-2214.2006.00616.x",
+    "prioritaet": "B",
+    "titel": "Randomized controlled trial of melatonin for children with autistic spectrum disorders and sleep problems.",
+    "europepmc_source": "MED",
+    "europepmc_id": "16919138",
+    "has_pmc": false,
+    "status": "kein OA-PDF"
+  },
+  {
+    "pmid": "15275698",
+    "doi": "10.1016/S0387-7604(03)00197-9",
+    "prioritaet": "B",
+    "titel": "Melatonin in wake-sleep disorders in children, adolescents and young adults with mental retardation with or without epilepsy: a double-blind, cross-over, placebo-controlled trial.",
+    "europepmc_source": "MED",
+    "europepmc_id": "15275698",
+    "has_pmc": false,
+    "status": "kein OA-PDF"
+  },
+  {
+    "pmid": "11211063",
+    "doi": "10.1097/00006842-200101000-00005",
+    "prioritaet": "B",
+    "titel": "A randomized, double-blind, placebo-controlled crossover study of the effect of exogenous melatonin on delayed sleep phase syndrome.",
+    "europepmc_source": "MED",
+    "europepmc_id": "11211063",
+    "has_pmc": false,
+    "status": "kein OA-PDF"
+  },
+  {
+    "pmid": "9737496",
+    "doi": "10.1016/s0196-0644(98)70010-1",
+    "prioritaet": "B",
+    "titel": "Randomized clinical trial of melatonin after night-shift work: efficacy and neuropsychologic effects.",
+    "europepmc_source": "MED",
+    "europepmc_id": "9737496",
+    "has_pmc": false,
+    "status": "kein OA-PDF"
+  },
+  {
+    "pmid": "9566656",
+    "doi": "10.1111/j.1469-8749.1998.tb15445.x",
+    "prioritaet": "B",
+    "titel": "Sleep dysfunction in Rett syndrome: a trial of exogenous melatonin treatment.",
+    "europepmc_source": "MED",
+    "europepmc_id": "9566656",
+    "has_pmc": false,
+    "status": "kein OA-PDF"
+  },
+  {
+    "pmid": "37950776",
+    "doi": "10.1007/s10803-023-06172-7",
+    "prioritaet": "C",
+    "titel": "Comparing the Effectiveness of Physical Exercise Intervention and Melatonin Supplement in Improving Sleep Quality in Children with ASD.",
+    "europepmc_source": "MED",
+    "europepmc_id": "37950776",
+    "has_pmc": false,
+    "status": "kein OA-PDF"
+  },
+  {
+    "pmid": "37909654",
+    "doi": "10.1111/jpi.12922",
+    "prioritaet": "C",
+    "titel": "Safety and efficacy of melatonin supplementation as an add-on treatment for infantile epileptic spasms syndrome: A randomized, placebo-controlled, double-blind trial.",
+    "europepmc_source": "MED",
+    "europepmc_id": "37909654",
+    "has_pmc": false,
+    "status": "kein OA-PDF"
+  },
+  {
+    "pmid": "33970752",
+    "doi": "10.1080/00207454.2021.1928115",
+    "prioritaet": "C",
+    "titel": "EEG coherence and power spectra during REM sleep related to melatonin intake in mild-to-moderate Alzheimer's disease: a pilot study.",
+    "europepmc_source": "MED",
+    "europepmc_id": "33970752",
+    "has_pmc": false,
+    "status": "kein OA-PDF"
+  },
+  {
+    "pmid": "32682347",
+    "doi": "10.1111/jpi.12684",
+    "prioritaet": "C",
+    "titel": "A PERIOD3 variable number tandem repeat polymorphism modulates melatonin treatment response in delayed sleep-wake phase disorder.",
+    "europepmc_source": "MED",
+    "europepmc_id": "32682347",
+    "has_pmc": false,
+    "status": "kein OA-PDF"
+  },
+  {
+    "pmid": "29846091",
+    "doi": "10.1080/07420528.2018.1474891",
+    "prioritaet": "C",
+    "titel": "Melatonin ingestion after exhaustive late-evening exercise improves sleep quality and quantity, and short-term performances in teenage athletes.",
+    "europepmc_source": "MED",
+    "europepmc_id": "29846091",
+    "has_pmc": false,
+    "status": "kein OA-PDF"
+  },
+  {
+    "pmid": "29096777",
+    "doi": "10.1016/j.jaac.2017.09.414",
+    "prioritaet": "C",
+    "titel": "Efficacy and Safety of Pediatric Prolonged-Release Melatonin for Insomnia in Children With Autism Spectrum Disorder.",
+    "europepmc_source": "MED",
+    "europepmc_id": "29096777",
+    "has_pmc": false,
+    "pdf_url": "http://www.jaacap.org/article/S0890856717316726/pdf",
+    "status": "download fehler: HTTP Error 403: Forbidden"
+  },
+  {
+    "pmid": "22616853",
+    "doi": "10.1111/j.1365-2869.2012.01021.x",
+    "prioritaet": "C",
+    "titel": "Controlled-release melatonin, singly and combined with cognitive behavioural therapy, for persistent insomnia in children with autism spectrum disorders: a randomized placebo-controlled trial.",
+    "europepmc_source": "MED",
+    "europepmc_id": "22616853",
+    "has_pmc": false,
+    "status": "kein OA-PDF"
+  },
+  {
+    "pmid": "21091391",
+    "doi": "10.1185/03007995.2010.537317",
+    "prioritaet": "C",
+    "titel": "Prolonged release melatonin in the treatment of primary insomnia: evaluation of the age cut-off for short- and long-term response.",
+    "europepmc_source": "MED",
+    "europepmc_id": "21091391",
+    "has_pmc": false,
+    "status": "kein OA-PDF"
+  },
+  {
+    "pmid": "19888921",
+    "doi": "10.1111/j.1365-2788.2009.01223.x",
+    "prioritaet": "C",
+    "titel": "Melatonin decreases daytime challenging behaviour in persons with intellectual disability and chronic insomnia.",
+    "europepmc_source": "MED",
+    "europepmc_id": "19888921",
+    "has_pmc": false,
+    "status": "kein OA-PDF"
+  },
+  {
+    "pmid": "19584739",
+    "doi": "10.1097/YIC.0b013e32832e9b08",
+    "prioritaet": "C",
+    "titel": "The effect of prolonged-release melatonin on sleep measures and psychomotor performance in elderly patients with insomnia.",
+    "europepmc_source": "MED",
+    "europepmc_id": "19584739",
+    "has_pmc": false,
+    "status": "kein OA-PDF"
+  },
+  {
+    "pmid": "19054552",
+    "doi": "10.1016/S0140-6736(08)61812-7",
+    "prioritaet": "C",
+    "titel": "Melatonin agonist tasimelteon (VEC-162) for transient insomnia after sleep-time shift: two randomised controlled multicentre trials.",
+    "europepmc_source": "MED",
+    "europepmc_id": "19054552",
+    "has_pmc": false,
+    "status": "kein OA-PDF"
+  },
+  {
+    "pmid": "19030713",
+    "doi": "10.1590/s0100-879x2008001000016",
+    "prioritaet": "C",
+    "titel": "Effect of melatonin administration on subjective sleep quality in chronic obstructive pulmonary disease.",
+    "europepmc_source": "MED",
+    "europepmc_id": "19030713",
+    "has_pmc": false,
+    "status": "kein OA-PDF"
+  },
+  {
+    "pmid": "18544724",
+    "doi": "10.1001/jama.299.22.2642",
+    "prioritaet": "C",
+    "titel": "Effect of bright light and melatonin on cognitive and noncognitive function in elderly residents of group care facilities: a randomized controlled trial.",
+    "europepmc_source": "MED",
+    "europepmc_id": "18544724",
+    "has_pmc": false,
+    "status": "kein OA-PDF"
+  },
+  {
+    "pmid": "18539989",
+    "doi": "10.1177/0883073808314153",
+    "prioritaet": "C",
+    "titel": "Melatonin for chronic insomnia in Angelman syndrome: a randomized placebo-controlled trial.",
+    "europepmc_source": "MED",
+    "europepmc_id": "18539989",
+    "has_pmc": false,
+    "status": "kein OA-PDF"
+  },
+  {
+    "pmid": "18261024",
+    "doi": "10.1111/j.1365-2788.2007.01016.x",
+    "prioritaet": "C",
+    "titel": "Melatonin treatment in individuals with intellectual disability and chronic insomnia: a randomized placebo-controlled study.",
+    "europepmc_source": "MED",
+    "europepmc_id": "18261024",
+    "has_pmc": false,
+    "status": "kein OA-PDF"
+  },
+  {
+    "pmid": "17875243",
+    "doi": "10.1185/030079907X233098",
+    "prioritaet": "C",
+    "titel": "Efficacy of prolonged release melatonin in insomnia patients aged 55-80 years: quality of sleep and next-day alertness outcomes.",
+    "europepmc_source": "MED",
+    "europepmc_id": "17875243",
+    "has_pmc": false,
+    "status": "kein OA-PDF"
+  },
+  {
+    "pmid": "17335321",
+    "doi": "10.4088/jcp.v68n0208",
+    "prioritaet": "C",
+    "titel": "Melatonin in schizophrenic outpatients with insomnia: a double-blind, placebo-controlled study.",
+    "europepmc_source": "MED",
+    "europepmc_id": "17335321",
+    "has_pmc": false,
+    "status": "kein OA-PDF"
+  },
+  {
+    "pmid": "16774150",
+    "doi": "10.1093/sleep/29.5.609",
+    "prioritaet": "C",
+    "titel": "Sleep-facilitating effect of exogenous melatonin in healthy young men and women is circadian-phase dependent.",
+    "europepmc_source": "MED",
+    "europepmc_id": "16774150",
+    "has_pmc": false,
+    "status": "kein OA-PDF"
+  },
+  {
+    "pmid": "15910516",
+    "doi": "10.1111/j.1365-2869.2005.00451.x",
+    "prioritaet": "C",
+    "titel": "Prediction of melatonin efficacy by pretreatment dim light melatonin onset in children with idiopathic chronic sleep onset insomnia.",
+    "europepmc_source": "MED",
+    "europepmc_id": "15910516",
+    "has_pmc": false,
+    "status": "kein OA-PDF"
+  },
+  {
+    "pmid": "15791928",
+    "doi": "10.1177/08830738050200011302",
+    "prioritaet": "C",
+    "titel": "Effect of melatonin dosage on sleep disorder in tuberous sclerosis complex.",
+    "europepmc_source": "MED",
+    "europepmc_id": "15791928",
+    "has_pmc": false,
+    "status": "kein OA-PDF"
+  },
+  {
+    "pmid": "15766306",
+    "doi": "10.4088/jcp.v66n0316",
+    "prioritaet": "C",
+    "titel": "The efficacy and safety of the melatonin agonist beta-methyl-6-chloromelatonin in primary insomnia: a randomized, placebo-controlled, crossover clinical trial.",
+    "europepmc_source": "MED",
+    "europepmc_id": "15766306",
+    "has_pmc": false,
+    "status": "kein OA-PDF"
+  },
+  {
+    "pmid": "15249281",
+    "doi": "10.1176/appi.ajgp.12.4.432",
+    "prioritaet": "C",
+    "titel": "Cognitive effects of exogenous melatonin administration in elderly persons: a pilot study.",
+    "europepmc_source": "MED",
+    "europepmc_id": "15249281",
+    "has_pmc": false,
+    "status": "kein OA-PDF"
+  },
+  {
+    "pmid": "15223743",
+    "doi": "10.1080/02699050410001671892",
+    "prioritaet": "C",
+    "titel": "The value of melatonin for sleep disorders occurring post-head injury: a pilot RCT.",
+    "europepmc_source": "MED",
+    "europepmc_id": "15223743",
+    "has_pmc": false,
+    "status": "kein OA-PDF"
+  },
+  {
+    "pmid": "15198277",
+    "doi": "",
+    "prioritaet": "C",
+    "titel": "Sleep-inducing pharmaceuticals: a comparison of melatonin, zaleplon, zopiclone, and temazepam.",
+    "status": "keine DOI"
+  },
+  {
+    "pmid": "12003160",
+    "doi": "10.1093/sleep/25.3.301",
+    "prioritaet": "C",
+    "titel": "Melatonin and zopiclone: the relationship between sleep propensity and body temperature.",
+    "europepmc_source": "MED",
+    "europepmc_id": "12003160",
+    "has_pmc": false,
+    "status": "kein OA-PDF"
+  },
+  {
+    "pmid": "11510929",
+    "doi": "10.1177/088307380101600808",
+    "prioritaet": "C",
+    "titel": "Melatonin for treatment of sleep disorders in children with developmental disabilities.",
+    "europepmc_source": "MED",
+    "europepmc_id": "11510929",
+    "has_pmc": false,
+    "status": "kein OA-PDF"
+  },
+  {
+    "pmid": "11275541",
+    "doi": "10.1016/s1388-2457(00)00554-x",
+    "prioritaet": "C",
+    "titel": "Melatonin as a sleep inductor for electroencephalogram recordings in children.",
+    "europepmc_source": "MED",
+    "europepmc_id": "11275541",
+    "has_pmc": false,
+    "status": "kein OA-PDF"
+  },
+  {
+    "pmid": "11106143",
+    "doi": "10.1097/00004714-200012000-00017",
+    "prioritaet": "C",
+    "titel": "First-night effect of melatonin treatment in patients with chronic schizophrenia.",
+    "europepmc_source": "MED",
+    "europepmc_id": "11106143",
+    "has_pmc": false,
+    "status": "kein OA-PDF"
+  },
+  {
+    "pmid": "10958143",
+    "doi": "10.1111/j.1553-2712.2000.tb02082.x",
+    "prioritaet": "C",
+    "titel": "Effect of exogenous melatonin on mood and sleep efficiency in emergency medicine residents working night shifts.",
+    "europepmc_source": "MED",
+    "europepmc_id": "10958143",
+    "has_pmc": false,
+    "status": "kein OA-PDF"
+  },
+  {
+    "pmid": "10847313",
+    "doi": "10.4088/jcp.v61n0509",
+    "prioritaet": "C",
+    "titel": "Melatonin improves sleep quality of patients with chronic schizophrenia.",
+    "europepmc_source": "MED",
+    "europepmc_id": "10847313",
+    "has_pmc": false,
+    "status": "kein OA-PDF"
+  },
+  {
+    "pmid": "10611189",
+    "doi": "10.1093/humrep/15.1.60",
+    "prioritaet": "C",
+    "titel": "Long-term melatonin administration does not alter pituitary-gonadal hormone secretion in normal men.",
+    "europepmc_source": "MED",
+    "europepmc_id": "10611189",
+    "has_pmc": false,
+    "status": "kein OA-PDF"
+  },
+  {
+    "pmid": "10616229",
+    "doi": "10.1016/s0022-3999(98)00076-2",
+    "prioritaet": "C",
+    "titel": "Predictors of subjective sleepiness induced by melatonin administration.",
+    "europepmc_source": "MED",
+    "europepmc_id": "10616229",
+    "has_pmc": false,
+    "status": "kein OA-PDF"
+  },
+  {
+    "pmid": "9844753",
+    "doi": "10.3109/07420529808993201",
+    "prioritaet": "C",
+    "titel": "Comparative study to determine the optimal melatonin dosage form for the alleviation of jet lag.",
+    "europepmc_source": "MED",
+    "europepmc_id": "9844753",
+    "has_pmc": false,
+    "status": "kein OA-PDF"
+  },
+  {
+    "pmid": "9672452",
+    "doi": "10.1016/s0735-6757(98)90129-2",
+    "prioritaet": "C",
+    "titel": "Can melatonin improve adaptation to night shift?",
+    "europepmc_source": "MED",
+    "europepmc_id": "9672452",
+    "has_pmc": false,
+    "status": "kein OA-PDF"
+  },
+  {
+    "pmid": "15374128",
+    "doi": "10.1016/s0167-4943(96)00754-6",
+    "prioritaet": "C",
+    "titel": "Improvement of sleep quality by controlled-release melatonin in benzodiazepine-treated elderly insomniacs.",
+    "europepmc_source": "MED",
+    "europepmc_id": "15374128",
+    "has_pmc": false,
+    "status": "kein OA-PDF"
+  },
+  {
+    "pmid": "8895944",
+    "doi": "10.1055/s-2007-979569",
+    "prioritaet": "C",
+    "titel": "Nocturnal melatonin secretion and sleep after doxepin administration in chronic primary insomnia.",
+    "europepmc_source": "MED",
+    "europepmc_id": "8895944",
+    "has_pmc": false,
+    "status": "kein OA-PDF"
+  },
+  {
+    "pmid": "8856838",
+    "doi": "10.1007/BF02246354",
+    "prioritaet": "C",
+    "titel": "Low dose melatonin improves sleep in healthy middle-aged subjects.",
+    "europepmc_source": "MED",
+    "europepmc_id": "8856838",
+    "has_pmc": false,
+    "status": "kein OA-PDF"
+  },
+  {
+    "pmid": "8791041",
+    "doi": "10.1016/0924-977x(96)00005-3",
+    "prioritaet": "C",
+    "titel": "Nocturnal plasma melatonin levels after flunitrazepam administration in healthy subjects.",
+    "europepmc_source": "MED",
+    "europepmc_id": "8791041",
+    "has_pmc": false,
+    "status": "kein OA-PDF"
+  },
+  {
+    "pmid": "7658780",
+    "doi": "10.1016/s0140-6736(95)91382-3",
+    "prioritaet": "C",
+    "titel": "Improvement of sleep quality in elderly people by controlled-release melatonin.",
+    "europepmc_source": "MED",
+    "europepmc_id": "7658780",
+    "has_pmc": false,
+    "status": "kein OA-PDF"
+  },
+  {
+    "pmid": "39879677",
+    "doi": "10.1016/j.sleep.2025.01.029",
+    "prioritaet": "D",
+    "titel": "The effects of resistance are superior to aerobic exercise in improving delayed sleep-wake phase disorder in male college students.",
+    "europepmc_source": "MED",
+    "europepmc_id": "39879677",
+    "has_pmc": false,
+    "status": "kein OA-PDF"
+  },
+  {
+    "pmid": "38153134",
+    "doi": "10.1177/07487304231213916",
+    "prioritaet": "D",
+    "titel": "Managing Circadian Disruption due to Hospitalization: A Pilot Randomized Controlled Trial of the CircadianCare Inpatient Management System.",
+    "europepmc_source": "MED",
+    "europepmc_id": "38153134",
+    "has_pmc": false,
+    "status": "kein OA-PDF"
+  },
+  {
+    "pmid": "37221456",
+    "doi": "10.1111/jsr.13947",
+    "prioritaet": "D",
+    "titel": "Effects of (non)deceptive placebos on reported sleep quality and food cue reactivity.",
+    "europepmc_source": "MED",
+    "europepmc_id": "37221456",
+    "has_pmc": false,
+    "pdf_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/jsr.13947",
+    "status": "download fehler: HTTP Error 403: Forbidden"
+  },
+  {
+    "pmid": "36435397",
+    "doi": "10.1016/j.jad.2022.11.062",
+    "prioritaet": "D",
+    "titel": "Efficacy of repetitive transcranial magnetic stimulation and agomelatine on sleep quality and biomarkers of adult patients with mild to moderate depressive disorder.",
+    "europepmc_source": "MED",
+    "europepmc_id": "36435397",
+    "has_pmc": false,
+    "status": "kein OA-PDF"
+  },
+  {
+    "pmid": "35835645",
+    "doi": "10.1016/j.explore.2022.07.001",
+    "prioritaet": "D",
+    "titel": "Effects of auricular acupressure on sleep and pain in elderly people who have osteoarthritis and live in nursing homes: A randomized, single-blind, placebo-controlled trial.",
+    "europepmc_source": "MED",
+    "europepmc_id": "35835645",
+    "has_pmc": false,
+    "status": "kein OA-PDF"
+  },
+  {
+    "pmid": "35120753",
+    "doi": "10.1016/j.encep.2021.08.005",
+    "prioritaet": "D",
+    "titel": "[Therapeutic approaches for sleep and rhythms disorders in children with ASD].",
+    "europepmc_source": "MED",
+    "europepmc_id": "35120753",
+    "has_pmc": false,
+    "pdf_url": "https://doi.org/10.1016/j.encep.2021.08.005",
+    "status": "pdf nicht lesbar: Stream has ended unexpectedly"
+  },
+  {
+    "pmid": "34903129",
+    "doi": "10.1080/07420528.2021.2014517",
+    "prioritaet": "D",
+    "titel": "Effects of nocturnal light exposure on circadian rhythm and energy metabolism in healthy adults: A randomized crossover trial.",
+    "europepmc_source": "MED",
+    "europepmc_id": "34903129",
+    "has_pmc": false,
+    "status": "kein OA-PDF"
+  },
+  {
+    "pmid": "31512550",
+    "doi": "10.1177/0260106019875911",
+    "prioritaet": "D",
+    "titel": "The effects of a sleep/recovery supplement: 'Night Time Recharge' on sleep parameters in young adults.",
+    "europepmc_source": "MED",
+    "europepmc_id": "31512550",
+    "has_pmc": false,
+    "status": "kein OA-PDF"
+  },
+  {
+    "pmid": "30427265",
+    "doi": "10.1080/17461391.2018.1544278",
+    "prioritaet": "D",
+    "titel": "Restricting short-wavelength light in the evening to improve sleep in recreational athletes - A pilot study.",
+    "europepmc_source": "MED",
+    "europepmc_id": "30427265",
+    "has_pmc": false,
+    "status": "kein OA-PDF"
+  },
+  {
+    "pmid": "30295409",
+    "doi": "10.1111/bcpt.13144",
+    "prioritaet": "D",
+    "titel": "Withdrawal from long-term use of zopiclone, zolpidem and temazepam may improve perceived sleep and quality of life in older adults with primary insomnia.",
+    "europepmc_source": "MED",
+    "europepmc_id": "30295409",
+    "has_pmc": false,
+    "status": "kein OA-PDF"
+  },
+  {
+    "pmid": "28691893",
+    "doi": "10.1080/13607863.2017.1348482",
+    "prioritaet": "D",
+    "titel": "Sleep and mood changes in advanced age after blue-blocking (yellow) intra ocular lens (IOLs) implantation during cataract surgical treatment: a randomized controlled trial.",
+    "europepmc_source": "MED",
+    "europepmc_id": "28691893",
+    "has_pmc": false,
+    "status": "kein OA-PDF"
+  },
+  {
+    "pmid": "25135598",
+    "doi": "10.1007/s11064-014-1414-z",
+    "prioritaet": "D",
+    "titel": "Sleep and circadian rhythms in hospitalized patients with decompensated cirrhosis: effect of light therapy.",
+    "europepmc_source": "MED",
+    "europepmc_id": "25135598",
+    "has_pmc": false,
+    "status": "kein OA-PDF"
+  },
+  {
+    "pmid": "24988965",
+    "doi": "",
+    "prioritaet": "D",
+    "titel": "[Treatment of sleep disorders in patients with mild cranial-brain injury in the early rehabilitation period].",
+    "status": "keine DOI"
+  },
+  {
+    "pmid": "23887468",
+    "doi": "",
+    "prioritaet": "D",
+    "titel": "[An open-label non-comparative study of the efficacy and safety of melaxen in treatment of sleep disorders in alcohol dependent patients during the period of abstinence].",
+    "status": "keine DOI"
+  },
+  {
+    "pmid": "23377833",
+    "doi": "10.1249/MSS.0b013e318287f321",
+    "prioritaet": "D",
+    "titel": "Effect of evening postexercise cold water immersion on subsequent sleep.",
+    "europepmc_source": "MED",
+    "europepmc_id": "23377833",
+    "has_pmc": false,
+    "status": "kein OA-PDF"
+  },
+  {
+    "pmid": "21925941",
+    "doi": "10.1016/j.sleep.2011.06.008",
+    "prioritaet": "D",
+    "titel": "Use of a post-sleep questionnaire-interactive voice response system (PSQ-IVRS) to evaluate the subjective sleep effects of ramelteon in adults with chronic insomnia.",
+    "europepmc_source": "MED",
+    "europepmc_id": "21925941",
+    "has_pmc": false,
+    "status": "kein OA-PDF"
+  },
+  {
+    "pmid": "17996657",
+    "doi": "10.1016/j.amjopharm.2007.09.004",
+    "prioritaet": "D",
+    "titel": "Self-reported efficacy and tolerability of ramelteon 8 mg in older adults experiencing severe sleep-onset difficulty.",
+    "europepmc_source": "MED",
+    "europepmc_id": "17996657",
+    "has_pmc": false,
+    "status": "kein OA-PDF"
+  },
+  {
+    "pmid": "17519067",
+    "doi": "10.1185/030079907x178874",
+    "prioritaet": "D",
+    "titel": "A 2-night, 3-period, crossover study of ramelteon's efficacy and safety in older adults with chronic insomnia.",
+    "europepmc_source": "MED",
+    "europepmc_id": "17519067",
+    "has_pmc": false,
+    "status": "kein OA-PDF"
+  },
+  {
+    "pmid": "12431858",
+    "doi": "10.1016/S0893-133X(02)00358-5",
+    "prioritaet": "D",
+    "titel": "Mid-morning tryptophan depletion delays REM sleep onset in healthy subjects.",
+    "europepmc_source": "MED",
+    "europepmc_id": "12431858",
+    "has_pmc": false,
+    "status": "kein OA-PDF"
+  }
+]
