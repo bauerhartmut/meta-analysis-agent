@@ -61,7 +61,7 @@ Eintreffen der Lieferung zuerst gegenprüfen:
 
 | Gruppe | PMIDs | Verdacht |
 |---|---|---|
-| Wade | 17875243, 19584739, 21091391 | gleiche Autorengruppe, überlappende Altersgruppen (55–80, elderly, age cut-off) |
+| Wade | 17875243, 19584739 | gleiche Autorengruppe, überlappende Altersgruppen (55–80, elderly); 21091391 gehört nicht mehr hierher, siehe oben als Sekundärpublikation von S2 |
 | Smits | 11292231, 14566165 | gleiche Autorengruppe, Kinder mit chronischer SOL-Insomnie, 2001/2003 |
 
 Wenn zwei davon dieselbe Randomisierung berichten (gleiches n, gleiche
