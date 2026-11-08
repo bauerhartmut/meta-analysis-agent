@@ -1,13 +1,16 @@
-studie_id,pmid,doi,kurzname,studiengruppe,design,n_perioden,washout,periodeneffekt,carryover_bewertung,erste_periode_auswertbar,population,altersgruppe,n_randomisiert,n_analysiert,n_verum,n_placebo,dropout,dosis_mg,dosis_mg_kg,dauer,einnahmezeit,praeparat,messmethode,outcome_name,zeitpunkt,verum_mean,verum_sd,placebo_mean,placebo_sd,streuungsart,einheit,effekt_min,se,herkunft_effekt,sd_diff,se_diff,ci_untere,ci_obere,r,r_geschaetzt,adjustiert,fundstelle,zitat,rob2_domaene_periode,status,anmerkung,extrahiert_von,datum
-,41122831,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,33157425,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,28364493,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,14566165,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,11292231,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,41369870,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,39437460,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,34181143,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,20535539,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,19299778,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,16919138,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,9566656,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+studie_id,pmid,doi,kurzname,studiengruppe,design,n_perioden,washout,periodeneffekt,carryover_bewertung,erste_periode_auswertbar,population,altersgruppe,n_randomisiert,n_verum_randomisiert,n_placebo_randomisiert,n_analysiert,n_verum,n_placebo,dropout,dosis_mg,dosis_mg_kg,dauer,einnahmezeit,praeparat,messmethode,outcome_name,zeitpunkt,verum_mean,verum_sd,placebo_mean,placebo_sd,streuungsart,einheit,sol_primaer,effekt_min,se,herkunft_effekt,sd_diff,se_diff,ci_untere,ci_obere,r,r_geschaetzt,adjustiert,adjustierte_kovariaten,fundstelle,zitat,rob2_domaene_periode,register_id,status,anmerkung,extrahiert_von,datum
+S1_gringras2012,23129488,10.1136/bmj.e6664,Gringras 2012,Kinder Entwicklungsstoerung,parallel,entfaellt,entfaellt,entfaellt,entfaellt,entfaellt,"Kinder 3-15,8 J mit neurodev. Stoerung und schwerem Schlafproblem","3-15,8",146,70,76,113,54,59,33 (je Arm nicht berichtet),"0,5 titriert auf 2, 6, 12",nicht berichtet,12 wk,nicht berichtet,sofortige Freisetzung,Tagebuch (Eltern),sleep onset latency,Woche 12,"54,8","51,9","92,4","63,0","SD (Change 64,4 / 49,6)",min,sekundaer nach Amendment,"-37,5","9,08","berichtet adjustiert, SE aus CI",entfaellt,entfaellt,"-55,3","-19,7",entfaellt,entfaellt,ja,Baseline-SOL,"Tabelle 3, Zeile Sleep onset latency (min)",Sleep onset latency (min) | 54 | 102.0 (72.6) | 54.8 (51.9) | -47.2 (64.4) | 59 | 102.1 (57.7) | 92.4 (63.0) | -9.7 (49.6) | -37.5 (-55.3 to -19.7),entfaellt,ISRCTN05534585; EU-CTR 2006-004025-28,poolbar,"SOL laut EU-CTR primaer, per Amendment sekundaer; RoB D5 hoch; adjustiert = unadjustiert (-37,5)",Codebuff,2026-11-08
+S2_wade2010,20712869,10.1186/1741-7015-8-51,Wade 2010,Erwachsene,parallel,entfaellt,entfaellt,entfaellt,entfaellt,entfaellt,"Erwachsene mit primaerer Insomnie (DSM-IV), Subgruppe 65-80",65-80,791,nicht berichtet,nicht berichtet,281,137,144,69 von 791 (FAS 722),2,nicht berichtet,3 wk (Zeitpunkt der Werte),nicht berichtet,verzoegerte Freisetzung (PRM),Tagebuch,sleep onset latency,3 Wochen,"57,6","51,8","70,9","54,0","SD (Change 47,3 / 47,8)",min,sekundaer (Register: primaer),"-15,6","4,92","berichtet adjustiert, SE aus CI",entfaellt,entfaellt,"-25,3","-6,0",entfaellt,entfaellt,ja,Baseline-SOL,"Tabelle 3, Subgruppe 65-80, Change from baseline","-19.1 (47.3) | -1.7 (47.8) | -15.6 (-25.3, -6.0) | 0.002",entfaellt,NCT00397189,poolbar,Subgruppe ohne Multiplizitaetskorrektur; groessere Population gewaehlt,Codebuff,2026-11-08
+S3_vanGeijlswijk2010,20668840,10.1007/s00213-010-1962-0,van Geijlswijk 2010,Kinder,parallel,entfaellt,entfaellt,entfaellt,entfaellt,entfaellt,Kinder 6-12 mit chronischer Einschlafinsomnie (SOL > 30 min),6-12,72,nicht berichtet,nicht berichtet,33 (2 von 4 Armen),16,17,"nicht berichtet (4 Arme, 72 randomisiert)",nicht berichtet,"0,05",1 wk,nicht berichtet,nicht berichtet,Schlaf-Log (Eltern),SOL shift,1 Woche,nicht berichtet,nicht berichtet,nicht berichtet,nicht berichtet,SE (berichtet),min,primaer,"-31,0","10,0","berichtet, Differenz mit SE",entfaellt,entfaellt,-54,-9,entfaellt,entfaellt,nein,entfaellt,"Tabelle 2, Zeile SOL shift",SOL shift | 0:42 | 0:09 | 0:22 | 1:02 | 31.5 | <0.001,entfaellt,ISRCTN20033346,poolbar,"Keine Arm-Mittelwerte; CI als Reduktion 9-54 hier negativ; SE 10 vs CI 11,0 diskrepant",Codebuff,2026-11-08
+,41122831,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,33157425,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,28364493,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,14566165,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,11292231,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,41369870,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,39437460,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,34181143,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,20535539,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,19299778,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,16919138,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,9566656,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,

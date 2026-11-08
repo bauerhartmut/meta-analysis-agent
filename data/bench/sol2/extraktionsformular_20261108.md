@@ -42,8 +42,9 @@ Zeilen mit PMID, sonst leer).
 | `population` | Diagnose oder Setting, wörtlich aus dem Volltext | ja |
 | `altersgruppe` | Spanne in Jahren | ja |
 | `n_randomisiert` | Gesamtzahl randomisiert | ja |
+| `n_verum_randomisiert` / `n_placebo_randomisiert` | Armgrößen bei Randomisierung | ja |
 | `n_analysiert` | Zahl in der Auswertung | ja |
-| `n_verum` / `n_placebo` | Armgrößen | ja |
+| `n_verum` / `n_placebo` | Armgrößen in der Auswertung | ja |
 | `dropout` | Zahl und Grund, falls berichtet | nein |
 
 ### D - Intervention
@@ -67,6 +68,7 @@ Zeilen mit PMID, sonst leer).
 | `placebo_mean` / `placebo_sd` | Mittelwert und Streuung Placebo | ja |
 | `streuungsart` | `SD` / `SE` / `95%-CI` / `IQR` | ja |
 | `einheit` | `min`; alles andere wird umgerechnet und die Rechnung notiert | ja |
+| `sol_primaer` | `primär` / `sekundär` / `sekundär nach Amendment` | ja |
 
 ### F - Effekt und Streuung
 
@@ -81,6 +83,7 @@ Zeilen mit PMID, sonst leer).
 | `r` | Korrelation, nur nach C2/C7 | wenn geschätzt |
 | `r_geschaetzt` | `ja` / `nein` | ja |
 | `adjustiert` | `ja` (Studienangabe) / `nein` (eigene Rechnung) | ja |
+| `adjustierte_kovariaten` | welche Kovariaten das Modell enthält, z. B. `Baseline-SOL` | wenn adjustiert |
 
 ### G - Prüfung und Herkunft
 
@@ -89,6 +92,7 @@ Zeilen mit PMID, sonst leer).
 | `fundstelle` | Seite, Tabelle, Spalte oder Absatz | ja |
 | `zitat` | wörtlicher Satz mit den Zahlen | ja |
 | `rob2_domaene_periode` | Urteil der Crossover-Domäne | bei Crossover |
+| `register_id` | z. B. `NCT00397189`, `ISRCTN20033346`, `ohne` | ja |
 | `status` | `poolbar` / `Zahlen fehlen` / `Endpunkt nicht berichtet` / `ausgeschlossen` | ja |
 | `anmerkung` | alles, was sonst nirgends passt | nein |
 | `extrahiert_von` / `datum` | Kürzel und Datum | ja |
@@ -137,6 +141,12 @@ Datensatz anders aus als ein berichteter.
 **R10 - Unlesbares wird gemeldet, nicht geraten.** Scan ohne Textebene,
 fehlende Tabelle, abgeschnittene Spalte: `status = nicht auswertbar` und
 Hinweis, welche Seite fehlt.
+
+**R11 - `entfällt` ist nicht `nicht berichtet`.** Designbedingt leere Felder
+(bei Parallelstudien alle Crossover-Felder) werden mit `entfällt` gefüllt,
+nicht leer gelassen. Leer bedeutet: berichtet die Studie nicht, obwohl das
+Feld einschlägig wäre. Ohne diese Unterscheidung sieht eine Parallelstudie
+im Datensatz aus wie eine Crossover-Studie mit acht fehlenden Angaben.
 
 ## Beispielzeile (echte Werte aus dem Abstract, Streuungsart ungeprüft)
 
