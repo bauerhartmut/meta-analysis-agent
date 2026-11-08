@@ -1,0 +1,36 @@
+{
+  "generated": "2026-11-08T14:26:09",
+  "bericht": "data/bench/sol2/volltext",
+  "quelle_erwartung": "data/bench/sol2/schwelle_k5_20261108.md",
+  "annahme_p": 0.2,
+  "ziel": 2,
+  "gesamt_ziel": 5,
+  "artikel": 5,
+  "kennzahlen": {
+    "pdfs": 0,
+    "gelesen": 0,
+    "poolbar": 0,
+    "scan": 0,
+    "ausbeute": null,
+    "erwartet_poolbar": 0.0,
+    "p_null_poolbar": 1.0,
+    "k_basis": 1,
+    "k_neu": 1,
+    "k_rechnet": 1,
+    "konsistent": true,
+    "fehlend": 5,
+    "abdeckung": 0.0
+  },
+  "befunde": [
+    {
+      "schwere": "leer",
+      "text": "Keine PDF gelesen (Verzeichnis: data/bench/sol2/volltext) - nichts zu pruefen, k bleibt bei 1."
+    },
+    {
+      "schwere": "hinweis",
+      "text": "nicht geliefert: 11292231, 14566165, 28364493, 33157425, 41122831"
+    }
+  ],
+  "fehler": 0,
+  "abweichungen": 0
+}
