@@ -225,3 +225,22 @@ Zwei Zusatzbefunde:
 
 Der Befund stuetzt sich auf einen Lauf ohne Zweitleser; er ist ein
 Einzelurteil, keine Haeufigkeitsaussage. Details: `e3_llm_20261108.md`.
+
+### Nachtrag 2: der isolierte Satz (E3b)
+
+Derselbe Satz allein - 254 Zeichen statt 841.300, Prompt 2.205 statt 25.582
+Zeichen, 1.205 Tokens, 7,5 s. Ergebnis: **1 von 2**. Zurueck kam Aktigraphie
+-45,34 [-68,75; -21,93] korrekt (se 11,9441, Outcome "Sleep Onset Latency
+(SOL)", Comparison "Melatonin vs Placebo (Actigraphy)"), und die Quote war der
+ganze Satz - also inklusive des Tagebuch-Intervalls -37,49, das nicht als
+Zeile ausgegeben wurde.
+
+Damit ist die Kontextlaenge als Ursache ausgeschlossen: Der Fehler tritt bei
+einem Zwoelftel des Prompts unveraendert auf. Was bleibt, ist die Schreibweise
+- zwei Messmethoden in einem Satz, verbunden mit "and actigraphy". Das Modell
+versteht den Satz, zerlegt ihn aber nicht in zwei Zeilen. Zusammen mit E3a
+(eine Zeile: TST) sieht es nach einer Regel "eine Zeile pro Effekt-Aussage"
+aus. Fuer die Metaanalyse ist das der teuerste Fehlertyp: Die ankommende Zeile
+ist korrekt, das Fehlen der zweiten faellt nur beim Abgleich mit dem Sollwert
+auf. Ein Absatz-Chunking wuerde nicht helfen - der Satz war bereits allein.
+Details: `e3b_satz_20261108.md`.

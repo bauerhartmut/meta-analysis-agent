@@ -1,0 +1,59 @@
+{
+  "test": "E3b-llm-isolierter-satz",
+  "stand": "2026-11-08T21:52:51",
+  "datei": "data/bench/sol2/volltext/23098680.txt",
+  "satz_zeichen": 254,
+  "satz": "A reduction in SOL, adjusted for baseline, was seen for melatonin compared with placebo when measured by sleep diaries (-37.49 minutes, 95% CI -55.27 to -19.71 minutes; p<0.0001) and actigraphy (-45.34 minutes, 95% CI -68.75 to -21.93 minutes; p=0.0003).",
+  "prompt_zeichen": 2205,
+  "prompt_zeichen_e3a": 25582,
+  "modell": "gwdg/qwen3.5-397b-a17b",
+  "double_pass": false,
+  "topic": "melatonin",
+  "backend_erreichbar": true,
+  "dauer_s": 7.5,
+  "tokens": {
+    "prompt": 615,
+    "completion": 590,
+    "gesamt": 1205
+  },
+  "soll": {
+    "tagebuch": -37.49,
+    "aktigraphie": -45.34
+  },
+  "toleranz": 0.01,
+  "sollzahl_im_prompt": {
+    "tagebuch": true,
+    "aktigraphie": true
+  },
+  "zeilen": 1,
+  "abgelehnt": 0,
+  "fehler": "",
+  "engine_errors": 0,
+  "letzter_fehler": "",
+  "treffer": {
+    "tagebuch": null,
+    "aktigraphie": {
+      "effect": -45.34,
+      "se": 11.94409702660615,
+      "ci_low": -68.75,
+      "ci_high": -21.93,
+      "effect_type": "mean_diff",
+      "outcome": "Sleep Onset Latency (SOL)",
+      "quote": "A reduction in SOL, adjusted for baseline, was seen for melatonin compared with placebo when measured by sleep diaries (-37.49 minutes, 95% CI -55.27 to -19.71 minutes; p<0.0001) and actigraphy (-45.34 minutes, 95% CI -68.75 to -21.93 minutes; p=0.0003)."
+    }
+  },
+  "alle_zeilen": [
+    {
+      "outcome": "Sleep Onset Latency (SOL)",
+      "comparison": "Melatonin vs Placebo (Actigraphy)",
+      "effect_type": "mean_diff",
+      "effect": -45.34,
+      "se": 11.94409702660615,
+      "ci_low": -68.75,
+      "ci_high": -21.93,
+      "n": null,
+      "quote": "A reduction in SOL, adjusted for baseline, was seen for melatonin compared with placebo when measured by sleep diaries (-37.49 minutes, 95% CI -55.27 to -19.71 minutes; p<0.0001) and actigraphy (-45.34 minutes, 95% CI -68.75 to -21.93 minutes; p=0.0003).",
+      "rejection_reason": ""
+    }
+  ]
+}
