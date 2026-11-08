@@ -28,12 +28,17 @@ für diese Studie.
 
 | PMID | Titel | Verdacht | Prüfmerkmal |
 |---|---|---|---|
-| 21091391 | Prolonged release melatonin in the treatment of primary insomnia: evaluation of the age cut-off | Sekundäranalyse von **S2** (gleiche Population, Altersgrenze) | NCT00397189? n = 480/281? Autorengruppe Wade? |
 | 16919138 | Randomized controlled trial of melatonin for children with autistic spectrum disorders and sleep | gleiche Population wie **S1** (ASD als Teilmenge der Entwicklungsstörungen) | ISRCTN05534585? n = 146? Rekrutierungszeitraum 2005–2009? |
 
-Beide sind **nicht** in den Referenzlisten der drei Studien enthalten (anders
-als die Fälle in Kategorie C) - ein Ausschluss ist damit nicht belegt. Die
-Entscheidung braucht den Volltext: Register-ID, Stichproben-n, Zentren und
+**Aufgelöst am 2026-11-08: 21091391 ist eine Sekundärpublikation von S2.**
+Beleg: Der Registereintrag NCT00397189 führt in seinem Reference-Abschnitt
+genau diese Arbeit (Wade et al., Curr Med Res Opin 2011;27(1):87-98) neben
+dem BMC-Med-Artikel 20712869 als zugehörige Publikation. Bei Lieferung nicht
+extrahieren; k bleibt 1 für S2. Siehe `register_pruefung_20261108.md`.
+
+16919138 ist **nicht** in den Referenzlisten der drei Studien enthalten
+(anders als die Fälle in Kategorie C) - ein Ausschluss ist damit nicht belegt.
+Die Entscheidung braucht den Volltext: Register-ID, Stichproben-n, Zentren und
 Autorengruppe vergleichen.
 
 ## Kategorie C - geprüft, keine Doppelpublikation
