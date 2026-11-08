@@ -1,0 +1,187 @@
+{
+  "name": "mediterran",
+  "topic": "Mediterrane Ernaehrung und kardiovaskulaeres Risiko bei Erwachsenen",
+  "db_source": "data/research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+  "db_copy": "data/bench/regreports/research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+  "db_sha256_before": "7c3682cbaf5b66444c2433c10048643b7d71a412d23bb36c0f38572bea5b2720",
+  "db_sha256_after": "51dad83416fb4af7e5c0975e622b17e8f80066b3426c87d67d7f427e0cdf597d",
+  "db_identity_kept": false,
+  "db_sha256_source_now": "7c3682cbaf5b66444c2433c10048643b7d71a412d23bb36c0f38572bea5b2720",
+  "source_untouched": true,
+  "commit": "de4cd5cf345db41cd2a12606aa445068865b178d",
+  "report_md": "data/reports/20261105-2104-Mediterrane-Ernaehrung-und-kardiovaskula.md",
+  "report_pdf": "data/reports/20261105-2104-Mediterrane-Ernaehrung-und-kardiovaskula.pdf",
+  "created": "2026-11-05T21:04:11.242349+00:00",
+  "report_meta": {
+    "gepoolter_effekt": "Gepoolter Effekt (Random Effects, Hartung-Knapp-Sidak): **0.298** [-8.066; 8.662] aus k = 2 Studien.",
+    "effektzeilen_gesamt": "91",
+    "section_chars": 8578
+  },
+  "dl_recheck": [
+    {
+      "outcome": "Body Mass Index (BMI)",
+      "effect_type": "beta",
+      "unit": "Standardized beta coefficient",
+      "k": 2,
+      "q": 0.0,
+      "df": 1,
+      "tau2": 0.0,
+      "dl_estimate": 0.12,
+      "dl_se": 0.0415,
+      "dl_ci": [
+        0.0387,
+        0.2013
+      ]
+    },
+    {
+      "outcome": "Intrinsic Capacity",
+      "effect_type": "beta",
+      "unit": "IC score units per Mediterranean diet score unit",
+      "k": 2,
+      "q": 0.0,
+      "df": 1,
+      "tau2": 0.0,
+      "dl_estimate": 0.018,
+      "dl_se": 0.0009,
+      "dl_ci": [
+        0.0162,
+        0.0198
+      ]
+    },
+    {
+      "outcome": "Incident cardiovascular disease",
+      "effect_type": "hr",
+      "unit": "HR",
+      "k": 2,
+      "q": 0.0,
+      "df": 1,
+      "tau2": 0.0,
+      "dl_estimate": 1.81,
+      "dl_se": 0.3752,
+      "dl_ci": [
+        1.0746,
+        2.5454
+      ]
+    },
+    {
+      "outcome": "Major adverse cardiovascular events",
+      "effect_type": "hr",
+      "unit": "hazard ratio",
+      "k": 2,
+      "q": 0.0,
+      "df": 1,
+      "tau2": 0.0,
+      "dl_estimate": 1.795,
+      "dl_se": 0.2325,
+      "dl_ci": [
+        1.3393,
+        2.2507
+      ]
+    },
+    {
+      "outcome": "Mediterranean Diet Adherence Screener score",
+      "effect_type": "mean_diff",
+      "unit": "score",
+      "k": 2,
+      "q": 0.0,
+      "df": 1,
+      "tau2": 0.0,
+      "dl_estimate": 7.6,
+      "dl_se": 1.3435,
+      "dl_ci": [
+        4.9667,
+        10.2333
+      ]
+    },
+    {
+      "outcome": "Hypertension",
+      "effect_type": "or",
+      "unit": "Odds Ratio",
+      "k": 2,
+      "q": 0.0,
+      "df": 1,
+      "tau2": 0.0,
+      "dl_estimate": 0.57,
+      "dl_se": 0.101,
+      "dl_ci": [
+        0.372,
+        0.768
+      ]
+    },
+    {
+      "outcome": "Major adverse cardiovascular events",
+      "effect_type": "or",
+      "unit": "Odds Ratio",
+      "k": 2,
+      "q": 0.0,
+      "df": 1,
+      "tau2": 0.0,
+      "dl_estimate": 2.63,
+      "dl_se": 0.3644,
+      "dl_ci": [
+        1.9158,
+        3.3442
+      ]
+    },
+    {
+      "outcome": "Major adverse cardiovascular events",
+      "effect_type": "or",
+      "unit": "odds ratio",
+      "k": 2,
+      "q": 0.24,
+      "df": 1,
+      "tau2": 0.0,
+      "dl_estimate": 1.9462,
+      "dl_se": 0.4141,
+      "dl_ci": [
+        1.1345,
+        2.7578
+      ]
+    },
+    {
+      "outcome": "Preeclampsia",
+      "effect_type": "or",
+      "unit": "Adjusted Odds Ratio",
+      "k": 3,
+      "q": 0.2254,
+      "df": 2,
+      "tau2": 0.0,
+      "dl_estimate": 0.7561,
+      "dl_se": 0.0554,
+      "dl_ci": [
+        0.6476,
+        0.8647
+      ]
+    },
+    {
+      "outcome": "Test-retest reliability of MEDAS score",
+      "effect_type": "r",
+      "unit": "Intraclass correlation coefficient (ICC)",
+      "k": 2,
+      "q": 0.0,
+      "df": 1,
+      "tau2": 0.0,
+      "dl_estimate": 0.876,
+      "dl_se": 0.0141,
+      "dl_ci": [
+        0.8484,
+        0.9036
+      ]
+    },
+    {
+      "outcome": "Incident cardiovascular disease",
+      "effect_type": "rr",
+      "unit": "Relative Risk",
+      "k": 2,
+      "q": 0.0819,
+      "df": 1,
+      "tau2": 0.0,
+      "dl_estimate": 0.7047,
+      "dl_se": 0.0475,
+      "dl_ci": [
+        0.6116,
+        0.7978
+      ]
+    }
+  ]
+}

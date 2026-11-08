@@ -1,0 +1,187 @@
+{
+  "name": "exercise",
+  "topic": "Exercise and depressive symptoms in adults",
+  "db_source": "data/research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+  "db_copy": "data/bench/regreports/research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+  "db_sha256_before": "023b6856381447ef172485fe84c88a2cc5d3d9857d8280d852c9312a8b4667c8",
+  "db_sha256_after": "c6df3a09dc5bc50ddac09656f2c1bdb554b863dd01210ce2b917eae1d58c48bb",
+  "db_identity_kept": false,
+  "db_sha256_source_now": "023b6856381447ef172485fe84c88a2cc5d3d9857d8280d852c9312a8b4667c8",
+  "source_untouched": true,
+  "commit": "de4cd5cf345db41cd2a12606aa445068865b178d",
+  "report_md": "data/reports/20261105-2104-Exercise-and-depressive-symptoms-in-adul.md",
+  "report_pdf": "data/reports/20261105-2104-Exercise-and-depressive-symptoms-in-adul.pdf",
+  "created": "2026-11-05T21:04:09.512464+00:00",
+  "report_meta": {
+    "gepoolter_effekt": "Gepoolter Effekt (Random Effects, Hartung-Knapp-Sidak): **-0.586** [-1.319; 0.147] aus k = 3 Studien.",
+    "effektzeilen_gesamt": "129",
+    "section_chars": 13515
+  },
+  "dl_recheck": [
+    {
+      "outcome": "depressive symptoms",
+      "effect_type": "g",
+      "unit": "Hedges' g",
+      "k": 4,
+      "q": 16.7785,
+      "df": 3,
+      "tau2": 0.044693,
+      "dl_estimate": -0.4804,
+      "dl_se": 0.1184,
+      "dl_ci": [
+        -0.7125,
+        -0.2483
+      ]
+    },
+    {
+      "outcome": "depressive symptoms",
+      "effect_type": "g",
+      "unit": "standardized mean difference",
+      "k": 2,
+      "q": 0.0,
+      "df": 1,
+      "tau2": 0.0,
+      "dl_estimate": -0.37,
+      "dl_se": 0.0704,
+      "dl_ci": [
+        -0.5079,
+        -0.2321
+      ]
+    },
+    {
+      "outcome": "colorectal cancer risk",
+      "effect_type": "hr",
+      "unit": "hazard ratio",
+      "k": 2,
+      "q": 0.0,
+      "df": 1,
+      "tau2": 0.0,
+      "dl_estimate": 0.95,
+      "dl_se": 0.0325,
+      "dl_ci": [
+        0.8864,
+        1.0136
+      ]
+    },
+    {
+      "outcome": "depressive symptoms",
+      "effect_type": "or",
+      "unit": "odds ratio",
+      "k": 10,
+      "q": 31.7491,
+      "df": 9,
+      "tau2": 0.067428,
+      "dl_estimate": 0.6953,
+      "dl_se": 0.118,
+      "dl_ci": [
+        0.4641,
+        0.9265
+      ]
+    },
+    {
+      "outcome": "major depressive disorder",
+      "effect_type": "or",
+      "unit": "odds ratio per 1-SD increase in mean acceleration",
+      "k": 2,
+      "q": 0.0,
+      "df": 1,
+      "tau2": 0.0,
+      "dl_estimate": 0.74,
+      "dl_se": 0.0595,
+      "dl_ci": [
+        0.6233,
+        0.8567
+      ]
+    },
+    {
+      "outcome": "obesity",
+      "effect_type": "or",
+      "unit": "odds ratio",
+      "k": 2,
+      "q": 0.0,
+      "df": 1,
+      "tau2": 0.0,
+      "dl_estimate": 1.33,
+      "dl_se": 0.1389,
+      "dl_ci": [
+        1.0578,
+        1.6022
+      ]
+    },
+    {
+      "outcome": "depressive symptoms",
+      "effect_type": "rr",
+      "unit": "Relative Risk",
+      "k": 2,
+      "q": 0.0,
+      "df": 1,
+      "tau2": 0.0,
+      "dl_estimate": 1.1,
+      "dl_se": 0.0253,
+      "dl_ci": [
+        1.0505,
+        1.1495
+      ]
+    },
+    {
+      "outcome": "depressive symptoms",
+      "effect_type": "smd",
+      "unit": "SMD",
+      "k": 5,
+      "q": 28.9834,
+      "df": 4,
+      "tau2": 0.277496,
+      "dl_estimate": -1.0833,
+      "dl_se": 0.2649,
+      "dl_ci": [
+        -1.6024,
+        -0.5641
+      ]
+    },
+    {
+      "outcome": "depressive symptoms",
+      "effect_type": "smd",
+      "unit": "standardised mean difference",
+      "k": 3,
+      "q": 13.1346,
+      "df": 2,
+      "tau2": 0.082315,
+      "dl_estimate": -0.5894,
+      "dl_se": 0.1799,
+      "dl_ci": [
+        -0.942,
+        -0.2368
+      ]
+    },
+    {
+      "outcome": "depressive symptoms",
+      "effect_type": "smd",
+      "unit": "standardized mean difference",
+      "k": 5,
+      "q": 18.4433,
+      "df": 4,
+      "tau2": 0.073398,
+      "dl_estimate": -0.5232,
+      "dl_se": 0.1391,
+      "dl_ci": [
+        -0.7957,
+        -0.2506
+      ]
+    },
+    {
+      "outcome": "mental health",
+      "effect_type": "smd",
+      "unit": "standardized mean difference",
+      "k": 2,
+      "q": 0.0,
+      "df": 1,
+      "tau2": 0.0,
+      "dl_estimate": 0.34,
+      "dl_se": 0.0505,
+      "dl_ci": [
+        0.241,
+        0.439
+      ]
+    }
+  ]
+}

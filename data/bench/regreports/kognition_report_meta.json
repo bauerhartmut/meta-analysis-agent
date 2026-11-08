@@ -1,0 +1,97 @@
+{
+  "name": "kognition",
+  "topic": "Kognition und Gesundheit: Ist der Zusammenhang kausal oder genetisch konfundiert - und wie viel Power braucht ein Mendelian-Randomization-Design für einen Effekt von 0,05 SD, wenn Pleiotropie die genetische Korrelation auf 0,3 hebt?",
+  "db_source": "data/research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+  "db_copy": "data/bench/regreports/research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+  "db_sha256_before": "abb1619410c30e0404a18c5e4a98850314f5e8cf2899c96837011a9528ac7db4",
+  "db_sha256_after": "86b8b69d38533350e23041fc576772599901e28532793b7b16b43362cdaf5d60",
+  "db_identity_kept": false,
+  "db_sha256_source_now": "abb1619410c30e0404a18c5e4a98850314f5e8cf2899c96837011a9528ac7db4",
+  "source_untouched": true,
+  "commit": "de4cd5cf345db41cd2a12606aa445068865b178d",
+  "report_md": "data/reports/20261105-2104-Kognition-und-Gesundheit--Ist-der-Zusamm.md",
+  "report_pdf": "data/reports/20261105-2104-Kognition-und-Gesundheit--Ist-der-Zusamm.pdf",
+  "created": "2026-11-05T21:04:13.405315+00:00",
+  "report_meta": {
+    "gepoolter_effekt": null,
+    "effektzeilen_gesamt": "127",
+    "section_chars": 5478
+  },
+  "dl_recheck": [
+    {
+      "outcome": "Frailty Index",
+      "effect_type": "beta",
+      "unit": "Standardized Frailty Index",
+      "k": 2,
+      "q": 0.0749,
+      "df": 1,
+      "tau2": 0.0,
+      "dl_estimate": 0.1424,
+      "dl_se": 0.0156,
+      "dl_ci": [
+        0.1118,
+        0.1729
+      ]
+    },
+    {
+      "outcome": "Height",
+      "effect_type": "heritability",
+      "unit": "Proportion of variance",
+      "k": 2,
+      "q": 0.0,
+      "df": 1,
+      "tau2": 0.0,
+      "dl_estimate": 0.699,
+      "dl_se": 0.053,
+      "dl_ci": [
+        0.5951,
+        0.8029
+      ]
+    },
+    {
+      "outcome": "Health status",
+      "effect_type": "or",
+      "unit": "Odds Ratio",
+      "k": 2,
+      "q": 17.1879,
+      "df": 1,
+      "tau2": 0.053481,
+      "dl_estimate": 1.0084,
+      "dl_se": 0.1685,
+      "dl_ci": [
+        0.6782,
+        1.3386
+      ]
+    },
+    {
+      "outcome": "Health status",
+      "effect_type": "or",
+      "unit": "Odds Ratio per unit increase in genetically predicted depression",
+      "k": 2,
+      "q": 0.0,
+      "df": 1,
+      "tau2": 0.0,
+      "dl_estimate": 1.0736,
+      "dl_se": 0.0243,
+      "dl_ci": [
+        1.026,
+        1.1212
+      ]
+    },
+    {
+      "outcome": "Health status",
+      "effect_type": "or",
+      "unit": "per 1-unit higher log CRP levels",
+      "k": 4,
+      "q": 0.0394,
+      "df": 3,
+      "tau2": 0.0,
+      "dl_estimate": 0.9579,
+      "dl_se": 0.0101,
+      "dl_ci": [
+        0.9382,
+        0.9777
+      ]
+    }
+  ]
+}
