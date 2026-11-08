@@ -1,0 +1,961 @@
+{
+  "test": "E4c-duplikate",
+  "stand": "2026-11-08T23:11:57",
+  "modellaufrufe": 0,
+  "tokens": 0,
+  "definition": "gleiche Quelle, gleiche Quote, gleicher Effekt, gleiches KI, gleicher Outcome",
+  "gruppen": {
+    "sonstige": {
+      "dateien": 1,
+      "zeilen": 13,
+      "duplikat_gruppen": 2,
+      "ueberzaehlig": 2,
+      "mehrere_extraktoren": 0
+    },
+    "pipeline": {
+      "dateien": 55,
+      "zeilen": 7254,
+      "duplikat_gruppen": 120,
+      "ueberzaehlig": 122,
+      "mehrere_extraktoren": 0
+    },
+    "themen": {
+      "dateien": 9,
+      "zeilen": 201,
+      "duplikat_gruppen": 61,
+      "ueberzaehlig": 64,
+      "mehrere_extraktoren": 0
+    }
+  },
+  "pooling_themen": {
+    "dbs": 9,
+    "gruppen": 38,
+    "k_summe": 57,
+    "kollabiert": 39,
+    "nicht_poolbar": 319,
+    "demo": {
+      "outcome": "incident cardiovascular disease",
+      "scale": "log_ratio",
+      "k_mit_dublette": 6,
+      "k_ohne_dublette": 5,
+      "pooled_mit": 0.295155,
+      "pooled_ohne": 0.240297,
+      "ci_mit": [
+        -0.304763,
+        0.895073
+      ],
+      "ci_ohne": [
+        -0.524047,
+        1.004642
+      ],
+      "breite_mit": 1.199836,
+      "breite_ohne": 1.528689,
+      "verschiebung": 0.054858,
+      "gewichsanteil_der_dublette": 0.6922,
+      "datei": "data/research-mediterrane-ernaehrung-und-kardiovaskula-475855.db"
+    }
+  },
+  "dateien": [
+    {
+      "datei": "data/backups/research-kognition-vor-dedupe-20261028-165502.db",
+      "gruppe": "sonstige",
+      "zaehlung": {
+        "zeilen": 13,
+        "gruppen": 11,
+        "duplikat_gruppen": 2,
+        "ueberzaehlig": 2,
+        "mehrere_extraktoren": 0,
+        "max_groesse": 2
+      }
+    },
+    {
+      "datei": "data/bench/backfill/run1.db",
+      "gruppe": "pipeline",
+      "zaehlung": {
+        "zeilen": 7,
+        "gruppen": 3,
+        "duplikat_gruppen": 3,
+        "ueberzaehlig": 4,
+        "mehrere_extraktoren": 0,
+        "max_groesse": 3
+      }
+    },
+    {
+      "datei": "data/bench/backfill/run2.db",
+      "gruppe": "pipeline",
+      "zaehlung": {
+        "zeilen": 6,
+        "gruppen": 3,
+        "duplikat_gruppen": 3,
+        "ueberzaehlig": 3,
+        "mehrere_extraktoren": 0,
+        "max_groesse": 2
+      }
+    },
+    {
+      "datei": "data/bench/fixt/fixtures_smoke.db",
+      "gruppe": "pipeline",
+      "zaehlung": {
+        "zeilen": 2,
+        "gruppen": 2,
+        "duplikat_gruppen": 0,
+        "ueberzaehlig": 0,
+        "mehrere_extraktoren": 0,
+        "max_groesse": 0
+      }
+    },
+    {
+      "datei": "data/bench/regreports/research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+      "gruppe": "pipeline",
+      "zaehlung": {
+        "zeilen": 79,
+        "gruppen": 50,
+        "duplikat_gruppen": 29,
+        "ueberzaehlig": 29,
+        "mehrere_extraktoren": 0,
+        "max_groesse": 2
+      }
+    },
+    {
+      "datei": "data/bench/regreports/research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+      "gruppe": "pipeline",
+      "zaehlung": {
+        "zeilen": 49,
+        "gruppen": 36,
+        "duplikat_gruppen": 13,
+        "ueberzaehlig": 13,
+        "mehrere_extraktoren": 0,
+        "max_groesse": 2
+      }
+    },
+    {
+      "datei": "data/bench/regreports/research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+      "gruppe": "pipeline",
+      "zaehlung": {
+        "zeilen": 48,
+        "gruppen": 39,
+        "duplikat_gruppen": 9,
+        "ueberzaehlig": 9,
+        "mehrere_extraktoren": 0,
+        "max_groesse": 2
+      }
+    },
+    {
+      "datei": "data/bench/sol/arm_all.db",
+      "gruppe": "pipeline",
+      "zaehlung": {
+        "zeilen": 8,
+        "gruppen": 8,
+        "duplikat_gruppen": 0,
+        "ueberzaehlig": 0,
+        "mehrere_extraktoren": 0,
+        "max_groesse": 0
+      }
+    },
+    {
+      "datei": "data/bench/sol/arm_gate.db",
+      "gruppe": "pipeline",
+      "zaehlung": {
+        "zeilen": 159,
+        "gruppen": 157,
+        "duplikat_gruppen": 2,
+        "ueberzaehlig": 2,
+        "mehrere_extraktoren": 0,
+        "max_groesse": 2
+      }
+    },
+    {
+      "datei": "data/bench/sol/arm_kopf.db",
+      "gruppe": "pipeline",
+      "zaehlung": {
+        "zeilen": 97,
+        "gruppen": 95,
+        "duplikat_gruppen": 2,
+        "ueberzaehlig": 2,
+        "mehrere_extraktoren": 0,
+        "max_groesse": 2
+      }
+    },
+    {
+      "datei": "data/bench/sol/arm_label.db",
+      "gruppe": "pipeline",
+      "zaehlung": {
+        "zeilen": 97,
+        "gruppen": 95,
+        "duplikat_gruppen": 2,
+        "ueberzaehlig": 2,
+        "mehrere_extraktoren": 0,
+        "max_groesse": 2
+      }
+    },
+    {
+      "datei": "data/bench/sol/arm_label2.db",
+      "gruppe": "pipeline",
+      "zaehlung": {
+        "zeilen": 97,
+        "gruppen": 95,
+        "duplikat_gruppen": 2,
+        "ueberzaehlig": 2,
+        "mehrere_extraktoren": 0,
+        "max_groesse": 2
+      }
+    },
+    {
+      "datei": "data/bench/sol/arm_label2_se.db",
+      "gruppe": "pipeline",
+      "zaehlung": {
+        "zeilen": 161,
+        "gruppen": 159,
+        "duplikat_gruppen": 2,
+        "ueberzaehlig": 2,
+        "mehrere_extraktoren": 0,
+        "max_groesse": 2
+      }
+    },
+    {
+      "datei": "data/bench/sol/arm_level.db",
+      "gruppe": "pipeline",
+      "zaehlung": {
+        "zeilen": 23,
+        "gruppen": 23,
+        "duplikat_gruppen": 0,
+        "ueberzaehlig": 0,
+        "mehrere_extraktoren": 0,
+        "max_groesse": 0
+      }
+    },
+    {
+      "datei": "data/bench/sol/arm_level_gate.db",
+      "gruppe": "pipeline",
+      "zaehlung": {
+        "zeilen": 3,
+        "gruppen": 3,
+        "duplikat_gruppen": 0,
+        "ueberzaehlig": 0,
+        "mehrere_extraktoren": 0,
+        "max_groesse": 0
+      }
+    },
+    {
+      "datei": "data/bench/sol/arm_q1.db",
+      "gruppe": "pipeline",
+      "zaehlung": {
+        "zeilen": 14,
+        "gruppen": 14,
+        "duplikat_gruppen": 0,
+        "ueberzaehlig": 0,
+        "mehrere_extraktoren": 0,
+        "max_groesse": 0
+      }
+    },
+    {
+      "datei": "data/bench/sol/arm_q1_se.db",
+      "gruppe": "pipeline",
+      "zaehlung": {
+        "zeilen": 14,
+        "gruppen": 14,
+        "duplikat_gruppen": 0,
+        "ueberzaehlig": 0,
+        "mehrere_extraktoren": 0,
+        "max_groesse": 0
+      }
+    },
+    {
+      "datei": "data/bench/sol/change_arms.db",
+      "gruppe": "pipeline",
+      "zaehlung": {
+        "zeilen": 1,
+        "gruppen": 1,
+        "duplikat_gruppen": 0,
+        "ueberzaehlig": 0,
+        "mehrere_extraktoren": 0,
+        "max_groesse": 0
+      }
+    },
+    {
+      "datei": "data/bench/sol/direct.db",
+      "gruppe": "pipeline",
+      "zaehlung": {
+        "zeilen": 15,
+        "gruppen": 15,
+        "duplikat_gruppen": 0,
+        "ueberzaehlig": 0,
+        "mehrere_extraktoren": 0,
+        "max_groesse": 0
+      }
+    },
+    {
+      "datei": "data/bench/sol/direct_all.db",
+      "gruppe": "pipeline",
+      "zaehlung": {
+        "zeilen": 513,
+        "gruppen": 507,
+        "duplikat_gruppen": 6,
+        "ueberzaehlig": 6,
+        "mehrere_extraktoren": 0,
+        "max_groesse": 2
+      }
+    },
+    {
+      "datei": "data/bench/sol/direct_design.db",
+      "gruppe": "pipeline",
+      "zaehlung": {
+        "zeilen": 838,
+        "gruppen": 831,
+        "duplikat_gruppen": 7,
+        "ueberzaehlig": 7,
+        "mehrere_extraktoren": 0,
+        "max_groesse": 2
+      }
+    },
+    {
+      "datei": "data/bench/sol/direct_gate.db",
+      "gruppe": "pipeline",
+      "zaehlung": {
+        "zeilen": 987,
+        "gruppen": 979,
+        "duplikat_gruppen": 8,
+        "ueberzaehlig": 8,
+        "mehrere_extraktoren": 0,
+        "max_groesse": 2
+      }
+    },
+    {
+      "datei": "data/bench/sol/direct_kopf.db",
+      "gruppe": "pipeline",
+      "zaehlung": {
+        "zeilen": 1000,
+        "gruppen": 992,
+        "duplikat_gruppen": 8,
+        "ueberzaehlig": 8,
+        "mehrere_extraktoren": 0,
+        "max_groesse": 2
+      }
+    },
+    {
+      "datei": "data/bench/sol/direct_label.db",
+      "gruppe": "pipeline",
+      "zaehlung": {
+        "zeilen": 1000,
+        "gruppen": 992,
+        "duplikat_gruppen": 8,
+        "ueberzaehlig": 8,
+        "mehrere_extraktoren": 0,
+        "max_groesse": 2
+      }
+    },
+    {
+      "datei": "data/bench/sol/direct_label2.db",
+      "gruppe": "pipeline",
+      "zaehlung": {
+        "zeilen": 1000,
+        "gruppen": 992,
+        "duplikat_gruppen": 8,
+        "ueberzaehlig": 8,
+        "mehrere_extraktoren": 0,
+        "max_groesse": 2
+      }
+    },
+    {
+      "datei": "data/bench/sol/direct_paired.db",
+      "gruppe": "pipeline",
+      "zaehlung": {
+        "zeilen": 838,
+        "gruppen": 831,
+        "duplikat_gruppen": 7,
+        "ueberzaehlig": 7,
+        "mehrere_extraktoren": 0,
+        "max_groesse": 2
+      }
+    },
+    {
+      "datei": "data/bench/sol/direct_q1.db",
+      "gruppe": "pipeline",
+      "zaehlung": {
+        "zeilen": 28,
+        "gruppen": 28,
+        "duplikat_gruppen": 0,
+        "ueberzaehlig": 0,
+        "mehrere_extraktoren": 0,
+        "max_groesse": 0
+      }
+    },
+    {
+      "datei": "data/bench/sol/korpus3_arm.db",
+      "gruppe": "pipeline",
+      "zaehlung": {
+        "zeilen": 0,
+        "gruppen": 0,
+        "duplikat_gruppen": 0,
+        "ueberzaehlig": 0,
+        "mehrere_extraktoren": 0,
+        "max_groesse": 0
+      }
+    },
+    {
+      "datei": "data/bench/sol/korpus3_direct.db",
+      "gruppe": "pipeline",
+      "zaehlung": {
+        "zeilen": 0,
+        "gruppen": 0,
+        "duplikat_gruppen": 0,
+        "ueberzaehlig": 0,
+        "mehrere_extraktoren": 0,
+        "max_groesse": 0
+      }
+    },
+    {
+      "datei": "data/bench/sol/seed_arm.db",
+      "gruppe": "pipeline",
+      "zaehlung": {
+        "zeilen": 0,
+        "gruppen": 0,
+        "duplikat_gruppen": 0,
+        "ueberzaehlig": 0,
+        "mehrere_extraktoren": 0,
+        "max_groesse": 0
+      }
+    },
+    {
+      "datei": "data/bench/sol/seed_change.db",
+      "gruppe": "pipeline",
+      "zaehlung": {
+        "zeilen": 0,
+        "gruppen": 0,
+        "duplikat_gruppen": 0,
+        "ueberzaehlig": 0,
+        "mehrere_extraktoren": 0,
+        "max_groesse": 0
+      }
+    },
+    {
+      "datei": "data/bench/sol/seed_text.db",
+      "gruppe": "pipeline",
+      "zaehlung": {
+        "zeilen": 0,
+        "gruppen": 0,
+        "duplikat_gruppen": 0,
+        "ueberzaehlig": 0,
+        "mehrere_extraktoren": 0,
+        "max_groesse": 0
+      }
+    },
+    {
+      "datei": "data/bench/sol/text_arms.db",
+      "gruppe": "pipeline",
+      "zaehlung": {
+        "zeilen": 1,
+        "gruppen": 1,
+        "duplikat_gruppen": 0,
+        "ueberzaehlig": 0,
+        "mehrere_extraktoren": 0,
+        "max_groesse": 0
+      }
+    },
+    {
+      "datei": "data/bench/sol/xml_fetch_ncbi_arm.db",
+      "gruppe": "pipeline",
+      "zaehlung": {
+        "zeilen": 0,
+        "gruppen": 0,
+        "duplikat_gruppen": 0,
+        "ueberzaehlig": 0,
+        "mehrere_extraktoren": 0,
+        "max_groesse": 0
+      }
+    },
+    {
+      "datei": "data/bench/sol/xml_fetch_ncbi_direct.db",
+      "gruppe": "pipeline",
+      "zaehlung": {
+        "zeilen": 0,
+        "gruppen": 0,
+        "duplikat_gruppen": 0,
+        "ueberzaehlig": 0,
+        "mehrere_extraktoren": 0,
+        "max_groesse": 0
+      }
+    },
+    {
+      "datei": "data/bench/sol2/arm_level.db",
+      "gruppe": "pipeline",
+      "zaehlung": {
+        "zeilen": 13,
+        "gruppen": 13,
+        "duplikat_gruppen": 0,
+        "ueberzaehlig": 0,
+        "mehrere_extraktoren": 0,
+        "max_groesse": 0
+      }
+    },
+    {
+      "datei": "data/bench/sol2/direct.db",
+      "gruppe": "pipeline",
+      "zaehlung": {
+        "zeilen": 16,
+        "gruppen": 16,
+        "duplikat_gruppen": 0,
+        "ueberzaehlig": 0,
+        "mehrere_extraktoren": 0,
+        "max_groesse": 0
+      }
+    },
+    {
+      "datei": "data/bench/sol2/direct_unit.db",
+      "gruppe": "pipeline",
+      "zaehlung": {
+        "zeilen": 0,
+        "gruppen": 0,
+        "duplikat_gruppen": 0,
+        "ueberzaehlig": 0,
+        "mehrere_extraktoren": 0,
+        "max_groesse": 0
+      }
+    },
+    {
+      "datei": "data/bench/sol2/extended.db",
+      "gruppe": "pipeline",
+      "zaehlung": {
+        "zeilen": 2,
+        "gruppen": 2,
+        "duplikat_gruppen": 0,
+        "ueberzaehlig": 0,
+        "mehrere_extraktoren": 0,
+        "max_groesse": 0
+      }
+    },
+    {
+      "datei": "data/bench/sol2/gegencheck/nachher.db",
+      "gruppe": "pipeline",
+      "zaehlung": {
+        "zeilen": 0,
+        "gruppen": 0,
+        "duplikat_gruppen": 0,
+        "ueberzaehlig": 0,
+        "mehrere_extraktoren": 0,
+        "max_groesse": 0
+      }
+    },
+    {
+      "datei": "data/bench/sol2/gegencheck/vorher.db",
+      "gruppe": "pipeline",
+      "zaehlung": {
+        "zeilen": 0,
+        "gruppen": 0,
+        "duplikat_gruppen": 0,
+        "ueberzaehlig": 0,
+        "mehrere_extraktoren": 0,
+        "max_groesse": 0
+      }
+    },
+    {
+      "datei": "data/bench/sol2/pdf.db",
+      "gruppe": "pipeline",
+      "zaehlung": {
+        "zeilen": 0,
+        "gruppen": 0,
+        "duplikat_gruppen": 0,
+        "ueberzaehlig": 0,
+        "mehrere_extraktoren": 0,
+        "max_groesse": 0
+      }
+    },
+    {
+      "datei": "data/bench/sol2/pdf_probe.db",
+      "gruppe": "pipeline",
+      "zaehlung": {
+        "zeilen": 0,
+        "gruppen": 0,
+        "duplikat_gruppen": 0,
+        "ueberzaehlig": 0,
+        "mehrere_extraktoren": 0,
+        "max_groesse": 0
+      }
+    },
+    {
+      "datei": "data/bench/sol2/probelauf/probelauf.db",
+      "gruppe": "pipeline",
+      "zaehlung": {
+        "zeilen": 3,
+        "gruppen": 3,
+        "duplikat_gruppen": 0,
+        "ueberzaehlig": 0,
+        "mehrere_extraktoren": 0,
+        "max_groesse": 0
+      }
+    },
+    {
+      "datei": "data/bench/sol2/probelauf_bindestrich/bindestrich.db",
+      "gruppe": "pipeline",
+      "zaehlung": {
+        "zeilen": 1,
+        "gruppen": 1,
+        "duplikat_gruppen": 0,
+        "ueberzaehlig": 0,
+        "mehrere_extraktoren": 0,
+        "max_groesse": 0
+      }
+    },
+    {
+      "datei": "data/bench/sol2/scanprobe_kette.db",
+      "gruppe": "pipeline",
+      "zaehlung": {
+        "zeilen": 0,
+        "gruppen": 0,
+        "duplikat_gruppen": 0,
+        "ueberzaehlig": 0,
+        "mehrere_extraktoren": 0,
+        "max_groesse": 0
+      }
+    },
+    {
+      "datei": "data/bench/sol2/testfall_pipeline/diag_leerzeichen/d.db",
+      "gruppe": "pipeline",
+      "zaehlung": {
+        "zeilen": 2,
+        "gruppen": 2,
+        "duplikat_gruppen": 0,
+        "ueberzaehlig": 0,
+        "mehrere_extraktoren": 0,
+        "max_groesse": 0
+      }
+    },
+    {
+      "datei": "data/bench/sol2/testfall_pipeline/leer/pdf.db",
+      "gruppe": "pipeline",
+      "zaehlung": {
+        "zeilen": 0,
+        "gruppen": 0,
+        "duplikat_gruppen": 0,
+        "ueberzaehlig": 0,
+        "mehrere_extraktoren": 0,
+        "max_groesse": 0
+      }
+    },
+    {
+      "datei": "data/bench/sol2/testfall_pipeline/pdf.db",
+      "gruppe": "pipeline",
+      "zaehlung": {
+        "zeilen": 3,
+        "gruppen": 3,
+        "duplikat_gruppen": 0,
+        "ueberzaehlig": 0,
+        "mehrere_extraktoren": 0,
+        "max_groesse": 0
+      }
+    },
+    {
+      "datei": "data/bench/sol2/text_arms.db",
+      "gruppe": "pipeline",
+      "zaehlung": {
+        "zeilen": 0,
+        "gruppen": 0,
+        "duplikat_gruppen": 0,
+        "ueberzaehlig": 0,
+        "mehrere_extraktoren": 0,
+        "max_groesse": 0
+      }
+    },
+    {
+      "datei": "data/bench/xml6/arm_level.db",
+      "gruppe": "pipeline",
+      "zaehlung": {
+        "zeilen": 0,
+        "gruppen": 0,
+        "duplikat_gruppen": 0,
+        "ueberzaehlig": 0,
+        "mehrere_extraktoren": 0,
+        "max_groesse": 0
+      }
+    },
+    {
+      "datei": "data/bench/xml6/direct.db",
+      "gruppe": "pipeline",
+      "zaehlung": {
+        "zeilen": 31,
+        "gruppen": 31,
+        "duplikat_gruppen": 0,
+        "ueberzaehlig": 0,
+        "mehrere_extraktoren": 0,
+        "max_groesse": 0
+      }
+    },
+    {
+      "datei": "data/bench/xml6/extract.db",
+      "gruppe": "pipeline",
+      "zaehlung": {
+        "zeilen": 5,
+        "gruppen": 3,
+        "duplikat_gruppen": 1,
+        "ueberzaehlig": 2,
+        "mehrere_extraktoren": 0,
+        "max_groesse": 3
+      }
+    },
+    {
+      "datei": "data/bench/xml_all/direct.db",
+      "gruppe": "pipeline",
+      "zaehlung": {
+        "zeilen": 31,
+        "gruppen": 31,
+        "duplikat_gruppen": 0,
+        "ueberzaehlig": 0,
+        "mehrere_extraktoren": 0,
+        "max_groesse": 0
+      }
+    },
+    {
+      "datei": "data/bench/xml_all/direct_fix.db",
+      "gruppe": "pipeline",
+      "zaehlung": {
+        "zeilen": 31,
+        "gruppen": 31,
+        "duplikat_gruppen": 0,
+        "ueberzaehlig": 0,
+        "mehrere_extraktoren": 0,
+        "max_groesse": 0
+      }
+    },
+    {
+      "datei": "data/bench/xml_all/direct_md.db",
+      "gruppe": "pipeline",
+      "zaehlung": {
+        "zeilen": 31,
+        "gruppen": 31,
+        "duplikat_gruppen": 0,
+        "ueberzaehlig": 0,
+        "mehrere_extraktoren": 0,
+        "max_groesse": 0
+      }
+    },
+    {
+      "datei": "data/harness_local.db",
+      "gruppe": "themen",
+      "zaehlung": {
+        "zeilen": 9,
+        "gruppen": 4,
+        "duplikat_gruppen": 3,
+        "ueberzaehlig": 5,
+        "mehrere_extraktoren": 0,
+        "max_groesse": 3
+      },
+      "pooling": {
+        "gruppen": 1,
+        "k_summe": 1,
+        "kollabiert": 1,
+        "nicht_poolbar": 19,
+        "demo": null
+      }
+    },
+    {
+      "datei": "data/research-does-acute-caffeine-versus-placebo-affec-972eac.db",
+      "gruppe": "themen",
+      "zaehlung": {
+        "zeilen": 2,
+        "gruppen": 1,
+        "duplikat_gruppen": 1,
+        "ueberzaehlig": 1,
+        "mehrere_extraktoren": 0,
+        "max_groesse": 2
+      },
+      "pooling": {
+        "gruppen": 0,
+        "k_summe": 0,
+        "kollabiert": 0,
+        "nicht_poolbar": 8,
+        "demo": null
+      }
+    },
+    {
+      "datei": "data/research-does-caffeine-intake-affect-short-term-m-783a51.db",
+      "gruppe": "themen",
+      "zaehlung": {
+        "zeilen": 1,
+        "gruppen": 1,
+        "duplikat_gruppen": 0,
+        "ueberzaehlig": 0,
+        "mehrere_extraktoren": 0,
+        "max_groesse": 0
+      },
+      "pooling": {
+        "gruppen": 0,
+        "k_summe": 0,
+        "kollabiert": 0,
+        "nicht_poolbar": 12,
+        "demo": null
+      }
+    },
+    {
+      "datei": "data/research-does-melatonin-improve-sleep-onset-laten-382747.db",
+      "gruppe": "themen",
+      "zaehlung": {
+        "zeilen": 7,
+        "gruppen": 3,
+        "duplikat_gruppen": 3,
+        "ueberzaehlig": 4,
+        "mehrere_extraktoren": 0,
+        "max_groesse": 3
+      },
+      "pooling": {
+        "gruppen": 1,
+        "k_summe": 1,
+        "kollabiert": 0,
+        "nicht_poolbar": 18,
+        "demo": null
+      }
+    },
+    {
+      "datei": "data/research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+      "gruppe": "themen",
+      "zaehlung": {
+        "zeilen": 79,
+        "gruppen": 50,
+        "duplikat_gruppen": 29,
+        "ueberzaehlig": 29,
+        "mehrere_extraktoren": 0,
+        "max_groesse": 2
+      },
+      "pooling": {
+        "gruppen": 13,
+        "k_summe": 22,
+        "kollabiert": 12,
+        "nicht_poolbar": 95,
+        "demo": {
+          "outcome": "depressive symptoms",
+          "scale": "hedges_g",
+          "k_mit_dublette": 4,
+          "k_ohne_dublette": 3,
+          "pooled_mit": -0.618487,
+          "pooled_ohne": -0.585817,
+          "ci_mit": [
+            -1.020827,
+            -0.216147
+          ],
+          "ci_ohne": [
+            -1.319034,
+            0.147401
+          ],
+          "breite_mit": 0.804681,
+          "breite_ohne": 1.466436,
+          "verschiebung": -0.032671,
+          "gewichsanteil_der_dublette": 0.554
+        }
+      }
+    },
+    {
+      "datei": "data/research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+      "gruppe": "themen",
+      "zaehlung": {
+        "zeilen": 49,
+        "gruppen": 36,
+        "duplikat_gruppen": 13,
+        "ueberzaehlig": 13,
+        "mehrere_extraktoren": 0,
+        "max_groesse": 2
+      },
+      "pooling": {
+        "gruppen": 7,
+        "k_summe": 11,
+        "kollabiert": 9,
+        "nicht_poolbar": 107,
+        "demo": {
+          "outcome": "health status",
+          "scale": "log_ratio",
+          "k_mit_dublette": 10,
+          "k_ohne_dublette": 5,
+          "pooled_mit": -0.114453,
+          "pooled_ohne": -0.130207,
+          "ci_mit": [
+            -0.387833,
+            0.158926
+          ],
+          "ci_ohne": [
+            -0.659527,
+            0.399113
+          ],
+          "breite_mit": 0.546759,
+          "breite_ohne": 1.05864,
+          "verschiebung": 0.015754,
+          "gewichsanteil_der_dublette": 0.2937
+        }
+      }
+    },
+    {
+      "datei": "data/research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+      "gruppe": "themen",
+      "zaehlung": {
+        "zeilen": 48,
+        "gruppen": 39,
+        "duplikat_gruppen": 9,
+        "ueberzaehlig": 9,
+        "mehrere_extraktoren": 0,
+        "max_groesse": 2
+      },
+      "pooling": {
+        "gruppen": 14,
+        "k_summe": 20,
+        "kollabiert": 16,
+        "nicht_poolbar": 55,
+        "demo": {
+          "outcome": "incident cardiovascular disease",
+          "scale": "log_ratio",
+          "k_mit_dublette": 6,
+          "k_ohne_dublette": 5,
+          "pooled_mit": 0.295155,
+          "pooled_ohne": 0.240297,
+          "ci_mit": [
+            -0.304763,
+            0.895073
+          ],
+          "ci_ohne": [
+            -0.524047,
+            1.004642
+          ],
+          "breite_mit": 1.199836,
+          "breite_ohne": 1.528689,
+          "verschiebung": 0.054858,
+          "gewichsanteil_der_dublette": 0.6922
+        }
+      }
+    },
+    {
+      "datei": "data/research.db",
+      "gruppe": "themen",
+      "zaehlung": {
+        "zeilen": 0,
+        "gruppen": 0,
+        "duplikat_gruppen": 0,
+        "ueberzaehlig": 0,
+        "mehrere_extraktoren": 0,
+        "max_groesse": 0
+      },
+      "pooling": {
+        "gruppen": 0,
+        "k_summe": 0,
+        "kollabiert": 0,
+        "nicht_poolbar": 0,
+        "demo": null
+      }
+    },
+    {
+      "datei": "data/research2-does-melatonin-improve-sleep-onset-laten-382747.db",
+      "gruppe": "themen",
+      "zaehlung": {
+        "zeilen": 6,
+        "gruppen": 3,
+        "duplikat_gruppen": 3,
+        "ueberzaehlig": 3,
+        "mehrere_extraktoren": 0,
+        "max_groesse": 2
+      },
+      "pooling": {
+        "gruppen": 2,
+        "k_summe": 2,
+        "kollabiert": 1,
+        "nicht_poolbar": 5,
+        "demo": null
+      }
+    }
+  ],
+  "fehler": []
+}

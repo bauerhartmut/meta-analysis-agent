@@ -308,3 +308,25 @@ MENDS-Typ - dasselbe Outcome ueber zwei Messmethoden - trat nicht erneut auf.
 247 Quotes nennen kein CI; dort ist die Pruefung blind. Zusatz: zwei
 identische Zeilen (1,33) in einer exercise-Quote. Details:
 `e4_bestand_20261108.md`.
+
+### Nachtrag 6: doppelte Zeilen (E4c)
+
+Read-only auf Kopien, 65 DBs. Definition: gleiche Quelle, gleiche Quote,
+gleicher Effekt, gleiches KI, gleicher Outcome. In den 9 Themen-DBs stehen
+201 Zeilen mit Effekt, davon 64 ueberzaehlige in 61 Duplikat-Gruppen (32 %);
+keine Gruppe hat mehrere Extraktoren, es sind echte Kopien.
+
+Das Pooling faengt sie: `build_analysis` ruft `_collapse_same_study` vor
+`pool()` und verwirft 39 Zeilen. Die Zaehlung von 64 ist eine Obergrenze ueber
+alle Zeilen, auch nicht poolbare; die Differenz ist kein Rest an Dubletten.
+
+Was ohne den Kollaps passieren wuerde, an echten Zeilen gemessen (`pool()`
+direkt): Gruppe incident CVD [log_ratio] der mediterranen DB, k 6 statt 5,
+gepoolt 0,295 statt 0,240, KI-Breite 1,20 statt 1,53. Die Dublette trug 69 %
+des Gewichts. Der Kollaps ist also kein Schoenheitsfehler, sondern der Grund,
+warum die Zahl stimmt - und das war vorher nur behauptet, nicht gemessen.
+
+Grenze: Der Kollaps greift je Outcome-Gruppe und zaehlt auch legitime
+abhaengige Zeilen (Arme, Kontraste) - bei kognition halbiert er k von 10 auf
+5. Das ist Absicht (Unabhaengigkeit), macht die 39 aber zur Obergrenze.
+Details: `e4_duplikate_20261108.md`.
