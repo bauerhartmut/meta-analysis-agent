@@ -1,15 +1,15 @@
 {
-  "generated": "2026-11-08T12:56:33",
+  "generated": "2026-11-08T12:57:18",
   "documents_total": 31,
   "screened_in": 20,
-  "k": 0,
-  "rows": 0,
+  "k": 1,
+  "rows": 2,
   "reasons": {
     "kein Mittelwert mit eindeutiger Streuung in zwei Spalten": 56,
     "zu wenige Spalten": 12,
     "nicht genau zwei Spalten mit Mittelwert und Streuung": 9,
-    "Crossover: Armwerte lesbar, n je Arm nicht unabhaengig": 3,
     "Median/IQR statt Mittelwert mit SD/SE/CI (kein SMD)": 2,
+    "Crossover: Armwerte lesbar, n je Arm nicht unabhaengig": 1,
     "gemischte Zeitpunkte (Baseline und Follow-up) - kein Behandlungseffekt": 1
   },
   "documents": [
@@ -167,13 +167,59 @@
       "year": "2012",
       "title": "Melatonin for sleep problems in children with neurodevelopmental disorders: randomised double masked placebo controlled ",
       "sol_rows": 7,
-      "candidates": 0,
-      "stored": 0,
+      "candidates": 2,
+      "stored": 2,
       "reasons": {
-        "kein Mittelwert mit eindeutiger Streuung in zwei Spalten": 5,
-        "Crossover: Armwerte lesbar, n je Arm nicht unabhaengig": 2
+        "kein Mittelwert mit eindeutiger Streuung in zwei Spalten": 5
       },
-      "effects": []
+      "effects": [
+        {
+          "outcome": "Table 3 Primary and secondary sleep outcomes in study of effect of melatonin on sleep prob",
+          "g": -0.644266,
+          "se": 0.193143,
+          "n": 113,
+          "arms": [
+            {
+              "label": "Melatonin",
+              "n": 54,
+              "mean": 54.8,
+              "sd": 51.9,
+              "sd_source": "sd"
+            },
+            {
+              "label": "Placebo",
+              "n": 59,
+              "mean": 92.4,
+              "sd": 63.0,
+              "sd_source": "sd"
+            }
+          ],
+          "quote": "|Sleep onset latency (min)|54|102.0 (72.6)|54.8 (51.9)|−47.2 (64.4)| |59|102.1 (57.7)|92.4 (63.0)|−9.7 (49.6)|−37.5 (−55.3 to −19.7)†"
+        },
+        {
+          "outcome": "Table 3 Primary and secondary sleep outcomes in study of effect of melatonin on sleep prob",
+          "g": -0.684909,
+          "se": 0.29403,
+          "n": 49,
+          "arms": [
+            {
+              "label": "Melatonin",
+              "n": 24,
+              "mean": 68.4,
+              "sd": 41.0,
+              "sd_source": "sd"
+            },
+            {
+              "label": "Placebo",
+              "n": 25,
+              "mean": 104.1,
+              "sd": 59.5,
+              "sd_source": "sd"
+            }
+          ],
+          "quote": "|Sleep onset latency (min)|24|126.8 (71.5)|68.4 (41.0)|−58.3 (53.7)| |25|107.8 (54.9)|104.1 (59.5)|−3.71 (47.4)|−45.3 (−68.8 to −21.9)†"
+        }
+      ]
     },
     {
       "pmc": "PMC3443766",

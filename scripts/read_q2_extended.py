@@ -170,7 +170,9 @@ def main() -> int:
         # Crossover: beide Arme sind dieselben Personen. Arm-Mittelwerte sind
         # lesbar, aber n je Arm ist nicht unabhaengig und SE(g) gilt fuer
         # parallele Gruppen. Nicht poolen, sondern als eigene Klasse melden.
-        is_crossover = bool(re.search(r"cross[\s-]?over", text, re.I))
+        head = text[:6000]
+        is_crossover = (bool(re.search(r"cross[\s-]?over", head, re.I))
+                        and not re.search(r"parallel", head, re.I))
         source_id = f"doi:{pair['doi']}"
         row = db.save_source_text(source_id, text, kind="xml",
                                   origin_url=f"https://www.ncbi.nlm.nih.gov/pmc/{pmc}/")
