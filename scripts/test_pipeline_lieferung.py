@@ -234,8 +234,8 @@ def main() -> int:
                           "--md", str(diag / "d.md"), "--min-chars", "500"])
     d_json = json.loads((diag / "d.json").read_text(encoding="utf-8"))
     d_doc = (d_json.get("documents") or [{}])[0]
-    pruefe("bekannte Luecke: Tabelle ohne Pipes wird nicht gelesen",
-           int(d_doc.get("blocks") or 0) == 0 and int(d_doc.get("sol_rows") or 0) == 0,
+    pruefe("Tabelle ohne Pipes wird gelesen",
+           int(d_doc.get("blocks") or 0) >= 1 and int(d_doc.get("sol_rows") or 0) >= 1,
            f"blocks={d_doc.get('blocks')} sol_rows={d_doc.get('sol_rows')}")
 
     # ---- Bericht ---------------------------------------------------------
@@ -268,13 +268,11 @@ def main() -> int:
         "  und einem Befund der Schwere `fehler`.",
         "- Ein leeres Verzeichnis fuehrt zu Exit 2, nicht zu Exit 0.",
         "",
-        "## Gefundene Grenzen der Pipeline",
+        "## Befunde",
         "",
-        "1. **Tabellen ohne Trennzeichen werden nicht erkannt.** Eine SOL-Zeile",
-        "   in einer Tabelle, die nur durch Spaltenabstand getrennt ist, ergibt",
-        "   keinen Block (`blocks = 0`) und damit keine Zeile; der Zustand lautet",
-        "   dann `endpunkt_nicht_berichtet`. Mit Pipes als Trenner gelesen ergibt",
-        "   dieselbe Zeile `sol_nicht_poolbar`.",
+        "1. Tabellen ohne Trennzeichen werden erkannt: dieselbe Zeile, die ohne",
+        "   Erweiterung `blocks = 0` ergab und als `endpunkt_nicht_berichtet`",
+        "   galt, liefert jetzt einen Block und `sol_nicht_poolbar`.",
         "2. **`leser_luecke` ist nicht erreichbar.** `triage_dokument` verlangt",
         "   `sol_rows > 0` bei `arm_stored + direct_stored == 0`. `sol_rows` wird",
         "   in `read_pdf_corpus.py` aber ausschliesslich aus den gespeicherten",

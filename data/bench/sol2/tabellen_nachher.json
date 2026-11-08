@@ -1,0 +1,197 @@
+{
+ "data/origpdf/09169ac90aa57bab.pdf": {
+  "chars": 49069,
+  "blocks": 9,
+  "cells": 0
+ },
+ "data/origpdf/09d48d210903cc8b.pdf": {
+  "chars": 31781,
+  "blocks": 2,
+  "cells": 3
+ },
+ "data/origpdf/21746b00d3a298a6.pdf": {
+  "chars": 53038,
+  "blocks": 6,
+  "cells": 0
+ },
+ "data/origpdf/261f32c16fe9c98d.pdf": {
+  "chars": 22804,
+  "blocks": 2,
+  "cells": 0
+ },
+ "data/origpdf/271a4e4dc58ed284.pdf": {
+  "chars": 90917,
+  "blocks": 5,
+  "cells": 0
+ },
+ "data/origpdf/298a1beb0306a1a0.pdf": {
+  "chars": 41349,
+  "blocks": 9,
+  "cells": 0
+ },
+ "data/origpdf/32916ce7f5a1942b.pdf": {
+  "chars": 80934,
+  "blocks": 0,
+  "cells": 0
+ },
+ "data/origpdf/370ef00297a91cd2.pdf": {
+  "chars": 58876,
+  "blocks": 2,
+  "cells": 0
+ },
+ "data/origpdf/37f6e2f522f641a2.pdf": {
+  "chars": 54648,
+  "blocks": 2,
+  "cells": 0
+ },
+ "data/origpdf/3e8f887a7c6a50e7.pdf": {
+  "chars": 39450,
+  "blocks": 1,
+  "cells": 0
+ },
+ "data/origpdf/49e4f8e4531143bd.pdf": {
+  "chars": 91253,
+  "blocks": 5,
+  "cells": 2
+ },
+ "data/origpdf/4c8ee9815bb6b85a.pdf": {
+  "chars": 101103,
+  "blocks": 5,
+  "cells": 0
+ },
+ "data/origpdf/4d37b7dc423006d3.pdf": {
+  "chars": 81365,
+  "blocks": 13,
+  "cells": 6
+ },
+ "data/origpdf/521cad55374b60a4.pdf": {
+  "chars": 20729,
+  "blocks": 1,
+  "cells": 0
+ },
+ "data/origpdf/534cdb60dd326ae3.pdf": {
+  "chars": 49823,
+  "blocks": 3,
+  "cells": 0
+ },
+ "data/origpdf/615213f0b69f2201.pdf": {
+  "chars": 49799,
+  "blocks": 4,
+  "cells": 0
+ },
+ "data/origpdf/8391f1a64746ed1d.pdf": {
+  "chars": 31022,
+  "blocks": 4,
+  "cells": 0
+ },
+ "data/origpdf/83dd745ccdb0deb4.pdf": {
+  "chars": 95449,
+  "blocks": 3,
+  "cells": 0
+ },
+ "data/origpdf/976671d1166f6f02.pdf": {
+  "chars": 61907,
+  "blocks": 14,
+  "cells": 0
+ },
+ "data/origpdf/981332fe49f401ef.pdf": {
+  "chars": 76248,
+  "blocks": 0,
+  "cells": 0
+ },
+ "data/origpdf/9c7d06542be78104.pdf": {
+  "chars": 23341,
+  "blocks": 3,
+  "cells": 0
+ },
+ "data/origpdf/a1d4698bf18b48b1.pdf": {
+  "chars": 114306,
+  "blocks": 7,
+  "cells": 2
+ },
+ "data/origpdf/a60b348e26629925.pdf": {
+  "chars": 33321,
+  "blocks": 3,
+  "cells": 0
+ },
+ "data/origpdf/ac67ed9f0c9ed03a.pdf": {
+  "chars": 39027,
+  "blocks": 2,
+  "cells": 0
+ },
+ "data/origpdf/cc84a20ae3418b38.pdf": {
+  "chars": 57261,
+  "blocks": 3,
+  "cells": 0
+ },
+ "data/origpdf/ccc4dbb0fe5ec417.pdf": {
+  "chars": 31338,
+  "blocks": 6,
+  "cells": 0
+ },
+ "data/origpdf/d021b1b0b3b81003.pdf": {
+  "chars": 58539,
+  "blocks": 10,
+  "cells": 0
+ },
+ "data/origpdf/d7a7cc4d188ba4b3.pdf": {
+  "chars": 62991,
+  "blocks": 7,
+  "cells": 0
+ },
+ "data/origpdf/d80f6a80c14a3357.pdf": {
+  "chars": 55188,
+  "blocks": 9,
+  "cells": 0
+ },
+ "data/origpdf/e015b577c3b3a779.pdf": {
+  "chars": 61979,
+  "blocks": 6,
+  "cells": 0
+ },
+ "data/origpdf/e46a7557ef9db5da.pdf": {
+  "chars": 48905,
+  "blocks": 8,
+  "cells": 0
+ },
+ "data/origpdf/eb2743c4715a0acc.pdf": {
+  "chars": 82963,
+  "blocks": 7,
+  "cells": 0
+ },
+ "data/origpdf/f5693894d7ef2dbc.pdf": {
+  "chars": 29233,
+  "blocks": 2,
+  "cells": 0
+ },
+ "data/origpdf/f6b22caef4606667.pdf": {
+  "chars": 20334,
+  "blocks": 0,
+  "cells": 0
+ },
+ "data/origpdf/fb996847c2cd2dc7.pdf": {
+  "chars": 17035,
+  "blocks": 0,
+  "cells": 0
+ },
+ "data/origpdf/fc0bfe168d0b81d7.pdf": {
+  "chars": 41913,
+  "blocks": 0,
+  "cells": 0
+ },
+ "data/bench/sol2/volltext/19030713.pdf": {
+  "chars": 29327,
+  "blocks": 1,
+  "cells": 0
+ },
+ "data/bench/sol2/volltext/23098680.pdf": {
+  "chars": 0,
+  "blocks": 0,
+  "cells": 0
+ },
+ "data/bench/sol2/volltext/35120753.pdf": {
+  "chars": 0,
+  "blocks": 0,
+  "cells": 0
+ }
+}

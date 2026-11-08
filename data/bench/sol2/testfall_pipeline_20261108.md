@@ -23,7 +23,7 @@ Ergebnis: **17 von 17 Erwartungen erfuellt.**
 | falsches k fuehrt zu Exit 1 | ok | rc=1 |
 | falsches k wird als Fehler benannt | ok | ['fehler', 'ok', 'hinweis', 'hinweis', 'ok', 'hinweis', 'hinweis', 'ok'] |
 | leeres Verzeichnis fuehrt zu Exit 2 | ok | rc=2 |
-| bekannte Luecke: Tabelle ohne Pipes wird nicht gelesen | ok | blocks=0 sol_rows=0 |
+| Tabelle ohne Pipes wird gelesen | ok | blocks=1 sol_rows=1 |
 
 ## Was der Test abdeckt
 
@@ -38,13 +38,11 @@ Ergebnis: **17 von 17 Erwartungen erfuellt.**
   und einem Befund der Schwere `fehler`.
 - Ein leeres Verzeichnis fuehrt zu Exit 2, nicht zu Exit 0.
 
-## Gefundene Grenzen der Pipeline
+## Befunde
 
-1. **Tabellen ohne Trennzeichen werden nicht erkannt.** Eine SOL-Zeile
-   in einer Tabelle, die nur durch Spaltenabstand getrennt ist, ergibt
-   keinen Block (`blocks = 0`) und damit keine Zeile; der Zustand lautet
-   dann `endpunkt_nicht_berichtet`. Mit Pipes als Trenner gelesen ergibt
-   dieselbe Zeile `sol_nicht_poolbar`.
+1. Tabellen ohne Trennzeichen werden erkannt: dieselbe Zeile, die ohne
+   Erweiterung `blocks = 0` ergab und als `endpunkt_nicht_berichtet`
+   galt, liefert jetzt einen Block und `sol_nicht_poolbar`.
 2. **`leser_luecke` ist nicht erreichbar.** `triage_dokument` verlangt
    `sol_rows > 0` bei `arm_stored + direct_stored == 0`. `sol_rows` wird
    in `read_pdf_corpus.py` aber ausschliesslich aus den gespeicherten
