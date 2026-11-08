@@ -1,0 +1,365 @@
+{
+  "frage": "Melatonin vs Placebo, SOL in Minuten, negativ = Reduktion",
+  "modell": "Random Effects, tau2 DerSimonian-Laird, HKSJ (t, df=k-1)",
+  "engine": "research_agent.meta.pooling.pool",
+  "se_regel": "(obere - untere CI-Grenze) / 3.919928",
+  "analysen": [
+    {
+      "analyse": "Hauptanalyse",
+      "k": 3,
+      "studien": [
+        "PMC3489506",
+        "PMC2933606",
+        "PMC2952772"
+      ],
+      "pooled": -26.287198821361862,
+      "ci_low": -55.5718717281304,
+      "ci_high": 2.9974740854066724,
+      "se_hksj": 6.806190214853024,
+      "tau2": 104.49618426459917,
+      "q": 5.409472762858641,
+      "i2": 63.02782012820233,
+      "pi_low": -187.0259141079694,
+      "pi_high": 134.45151646524567,
+      "fixed": -22.219574326957044,
+      "fixed_ci_low": -30.005205023509504,
+      "fixed_ci_high": -14.433943630404587,
+      "small_k_note": "Kleine Studienanzahl (k=3): Heterogenitaets- und Intervallangaben sind mit Vorsicht zu interpretieren.",
+      "inputs": [
+        {
+          "label": "PMC3489506",
+          "est": -37.5,
+          "se": 9.0818,
+          "herkunft": "Tagebuch, adjustiert, Studienangabe"
+        },
+        {
+          "label": "PMC2933606",
+          "est": -15.6,
+          "se": 4.9236,
+          "herkunft": "65-80 Jahre, adjustiert, Studienangabe"
+        },
+        {
+          "label": "PMC2952772",
+          "est": -31.0,
+          "se": 10.0,
+          "herkunft": "0.05 mg/kg, SE berichtet"
+        }
+      ]
+    },
+    {
+      "analyse": "S1 PMC3489506 Aktigraphie",
+      "k": 3,
+      "studien": [
+        "PMC3489506",
+        "PMC2933606",
+        "PMC2952772"
+      ],
+      "pooled": -28.126723844809593,
+      "ci_low": -65.09947290055081,
+      "ci_high": 8.846025210931618,
+      "se_hksj": 8.593012585134257,
+      "tau2": 162.11659076331458,
+      "q": 6.289969328187641,
+      "i2": 68.2033425658012,
+      "pi_low": -225.94935906499163,
+      "pi_high": 169.69591137537245,
+      "fixed": -21.806933571111504,
+      "fixed_ci_low": -29.928787058624565,
+      "fixed_ci_high": -13.685080083598443,
+      "small_k_note": "Kleine Studienanzahl (k=3): Heterogenitaets- und Intervallangaben sind mit Vorsicht zu interpretieren.",
+      "inputs": [
+        {
+          "label": "PMC3489506",
+          "est": -45.3,
+          "se": 11.9645,
+          "herkunft": "Aktigraphie, adjustiert"
+        },
+        {
+          "label": "PMC2933606",
+          "est": -15.6,
+          "se": 4.9236,
+          "herkunft": "65-80 Jahre, adjustiert, Studienangabe"
+        },
+        {
+          "label": "PMC2952772",
+          "est": -31.0,
+          "se": 10.0,
+          "herkunft": "0.05 mg/kg, SE berichtet"
+        }
+      ]
+    },
+    {
+      "analyse": "S2 PMC2933606 Low excretors",
+      "k": 3,
+      "studien": [
+        "PMC3489506",
+        "PMC2933606",
+        "PMC2952772"
+      ],
+      "pooled": -22.339108394705583,
+      "ci_low": -72.05422390925273,
+      "ci_high": 27.37600711984156,
+      "se_hksj": 11.554526622941768,
+      "tau2": 395.2338779707404,
+      "q": 12.8243341915482,
+      "i2": 84.40464845872397,
+      "pi_low": -320.88079806757275,
+      "pi_high": 276.2025812781616,
+      "fixed": -17.802626174866333,
+      "fixed_ci_low": -27.18087713051817,
+      "fixed_ci_high": -8.424375219214497,
+      "small_k_note": "Kleine Studienanzahl (k=3): Heterogenitaets- und Intervallangaben sind mit Vorsicht zu interpretieren.",
+      "inputs": [
+        {
+          "label": "PMC3489506",
+          "est": -37.5,
+          "se": 9.0818,
+          "herkunft": "Tagebuch, adjustiert, Studienangabe"
+        },
+        {
+          "label": "PMC2933606",
+          "est": -0.6,
+          "se": 6.8113,
+          "herkunft": "Low excretors, adjustiert"
+        },
+        {
+          "label": "PMC2952772",
+          "est": -31.0,
+          "se": 10.0,
+          "herkunft": "0.05 mg/kg, SE berichtet"
+        }
+      ]
+    },
+    {
+      "analyse": "S3 PMC2952772 0.15 mg/kg",
+      "k": 3,
+      "studien": [
+        "PMC3489506",
+        "PMC2933606",
+        "PMC2952772"
+      ],
+      "pooled": -30.442116832183686,
+      "ci_low": -66.61339420758372,
+      "ci_high": 5.729160543216359,
+      "se_hksj": 8.406738737187023,
+      "tau2": 201.1936957544691,
+      "q": 9.096765712936651,
+      "i2": 78.0141639005194,
+      "pi_low": -246.1164388714771,
+      "pi_high": 185.2322052071097,
+      "fixed": -24.59928570146863,
+      "fixed_ci_low": -32.244715098182354,
+      "fixed_ci_high": -16.953856304754908,
+      "small_k_note": "Kleine Studienanzahl (k=3): Heterogenitaets- und Intervallangaben sind mit Vorsicht zu interpretieren.",
+      "inputs": [
+        {
+          "label": "PMC3489506",
+          "est": -37.5,
+          "se": 9.0818,
+          "herkunft": "Tagebuch, adjustiert, Studienangabe"
+        },
+        {
+          "label": "PMC2933606",
+          "est": -15.6,
+          "se": 4.9236,
+          "herkunft": "65-80 Jahre, adjustiert, Studienangabe"
+        },
+        {
+          "label": "PMC2952772",
+          "est": -42.0,
+          "se": 9.0,
+          "herkunft": "0.15 mg/kg, SE berichtet"
+        }
+      ]
+    },
+    {
+      "analyse": "S4 alle Alternativen (S1+S2+S3)",
+      "k": 3,
+      "studien": [
+        "PMC3489506",
+        "PMC2933606",
+        "PMC2952772"
+      ],
+      "pooled": -28.424565434408958,
+      "ci_low": -91.04121329136376,
+      "ci_high": 34.19208242254584,
+      "se_hksj": 14.553033161329953,
+      "tau2": 672.1905371990322,
+      "q": 18.536669919934877,
+      "i2": 89.21057553142735,
+      "pi_low": -414.9992546433778,
+      "pi_high": 358.15012377455986,
+      "fixed": -20.73840565549343,
+      "fixed_ci_low": -30.43167958288059,
+      "fixed_ci_high": -11.04513172810627,
+      "small_k_note": "Kleine Studienanzahl (k=3): Heterogenitaets- und Intervallangaben sind mit Vorsicht zu interpretieren.",
+      "inputs": [
+        {
+          "label": "PMC3489506",
+          "est": -45.3,
+          "se": 11.9645,
+          "herkunft": "Aktigraphie, adjustiert"
+        },
+        {
+          "label": "PMC2933606",
+          "est": -0.6,
+          "se": 6.8113,
+          "herkunft": "Low excretors, adjustiert"
+        },
+        {
+          "label": "PMC2952772",
+          "est": -42.0,
+          "se": 9.0,
+          "herkunft": "0.15 mg/kg, SE berichtet"
+        }
+      ]
+    },
+    {
+      "analyse": "S5 ohne PMC3489506 (Leave-one-out)",
+      "k": 2,
+      "studien": [
+        "PMC2933606",
+        "PMC2952772"
+      ],
+      "pooled": -20.840306535906137,
+      "ci_low": -113.55199645077539,
+      "ci_high": 71.87138337896312,
+      "se_hksj": 7.2965682387471675,
+      "tau2": 56.45927934704549,
+      "q": 1.9088638823503448,
+      "i2": 47.61281779983596,
+      "pi_low": null,
+      "pi_high": null,
+      "fixed": -18.604779984738023,
+      "fixed_ci_low": -27.26247035390542,
+      "fixed_ci_high": -9.947089615570624,
+      "small_k_note": "Sehr kleine Studienanzahl (k=2): Hartung-Knapp-Intervalle sind bei k<3 oft sehr breit oder instabil, und ein Prediction-Interval ist erst ab k>=3 sinnvoll. Interpretiere das Ergebnis als Sichtung, nicht als Schätzung.",
+      "inputs": [
+        {
+          "label": "PMC2933606",
+          "est": -15.6,
+          "se": 4.9236,
+          "herkunft": "65-80 Jahre, adjustiert, Studienangabe"
+        },
+        {
+          "label": "PMC2952772",
+          "est": -31.0,
+          "se": 10.0,
+          "herkunft": "0.05 mg/kg, SE berichtet"
+        }
+      ]
+    },
+    {
+      "analyse": "S5 ohne PMC2933606 (Leave-one-out)",
+      "k": 2,
+      "studien": [
+        "PMC3489506",
+        "PMC2952772"
+      ],
+      "pooled": -34.562052125621044,
+      "ci_low": -75.6664250580687,
+      "ci_high": 6.542320806826609,
+      "se_hksj": 3.234984307673746,
+      "tau2": 0.0,
+      "q": 0.23153338816536817,
+      "i2": 0.0,
+      "pi_low": null,
+      "pi_high": null,
+      "fixed": -34.562052125621044,
+      "fixed_ci_low": -47.73920050057694,
+      "fixed_ci_high": -21.38490375066515,
+      "small_k_note": "Sehr kleine Studienanzahl (k=2): Hartung-Knapp-Intervalle sind bei k<3 oft sehr breit oder instabil, und ein Prediction-Interval ist erst ab k>=3 sinnvoll. Interpretiere das Ergebnis als Sichtung, nicht als Schätzung.",
+      "inputs": [
+        {
+          "label": "PMC3489506",
+          "est": -37.5,
+          "se": 9.0818,
+          "herkunft": "Tagebuch, adjustiert, Studienangabe"
+        },
+        {
+          "label": "PMC2952772",
+          "est": -31.0,
+          "se": 10.0,
+          "herkunft": "0.05 mg/kg, SE berichtet"
+        }
+      ]
+    },
+    {
+      "analyse": "S5 ohne PMC2952772 (Leave-one-out)",
+      "k": 2,
+      "studien": [
+        "PMC3489506",
+        "PMC2933606"
+      ],
+      "pooled": -25.220373512437842,
+      "ci_low": -163.32378102323304,
+      "ci_high": 112.88303399835735,
+      "se_hksj": 10.868973889175239,
+      "tau2": 186.4447386164797,
+      "q": 4.494074687461353,
+      "i2": 77.74847839556294,
+      "pi_low": null,
+      "pi_high": null,
+      "fixed": -20.574559258468764,
+      "fixed_ci_low": -29.05821869558585,
+      "fixed_ci_high": -12.090899821351675,
+      "small_k_note": "Sehr kleine Studienanzahl (k=2): Hartung-Knapp-Intervalle sind bei k<3 oft sehr breit oder instabil, und ein Prediction-Interval ist erst ab k>=3 sinnvoll. Interpretiere das Ergebnis als Sichtung, nicht als Schätzung.",
+      "inputs": [
+        {
+          "label": "PMC3489506",
+          "est": -37.5,
+          "se": 9.0818,
+          "herkunft": "Tagebuch, adjustiert, Studienangabe"
+        },
+        {
+          "label": "PMC2933606",
+          "est": -15.6,
+          "se": 4.9236,
+          "herkunft": "65-80 Jahre, adjustiert, Studienangabe"
+        }
+      ]
+    },
+    {
+      "analyse": "S3b PMC2952772 0.1 mg/kg",
+      "k": 3,
+      "studien": [
+        "PMC3489506",
+        "PMC2933606",
+        "PMC2952772"
+      ],
+      "pooled": -28.016988587601148,
+      "ci_low": -59.798875843279205,
+      "ci_high": 3.7648986680769134,
+      "se_hksj": 7.386579687532099,
+      "tau2": 137.8603073440748,
+      "q": 6.498068195282222,
+      "i2": 69.221621874451,
+      "pi_low": -209.90769331297366,
+      "pi_high": 153.8737161377714,
+      "fixed": -23.008517024571322,
+      "fixed_ci_low": -30.794147721123778,
+      "fixed_ci_high": -15.222886328018864,
+      "small_k_note": "Kleine Studienanzahl (k=3): Heterogenitaets- und Intervallangaben sind mit Vorsicht zu interpretieren.",
+      "inputs": [
+        {
+          "label": "PMC3489506",
+          "est": -37.5,
+          "se": 9.0818,
+          "herkunft": "Tagebuch, adjustiert, Studienangabe"
+        },
+        {
+          "label": "PMC2933606",
+          "est": -15.6,
+          "se": 4.9236,
+          "herkunft": "65-80 Jahre, adjustiert, Studienangabe"
+        },
+        {
+          "label": "PMC2952772",
+          "est": -36.0,
+          "se": 10.0,
+          "herkunft": "0.1 mg/kg, SE berichtet"
+        }
+      ]
+    }
+  ]
+}
