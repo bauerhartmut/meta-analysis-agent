@@ -1,0 +1,110 @@
+{
+  "generated": "2026-11-08T18:51:22",
+  "directory": "data/bench/sol2/volltext",
+  "pdfs": 3,
+  "vorher": {
+    "19030713.pdf": {
+      "chars": 29327,
+      "blocks": 1,
+      "arm_stored": 0,
+      "direct_stored": 0,
+      "rows": 0,
+      "sol_rows": 0,
+      "sol_poolable": 0,
+      "zustand": "endpunkt_nicht_berichtet",
+      "error": false,
+      "sol": []
+    },
+    "23098680.pdf": {
+      "chars": 0,
+      "blocks": null,
+      "arm_stored": null,
+      "direct_stored": null,
+      "rows": null,
+      "sol_rows": null,
+      "sol_poolable": null,
+      "zustand": "scan",
+      "error": true,
+      "sol": []
+    },
+    "35120753.pdf": {
+      "chars": 0,
+      "blocks": null,
+      "arm_stored": null,
+      "direct_stored": null,
+      "rows": null,
+      "sol_rows": null,
+      "sol_poolable": null,
+      "zustand": "scan",
+      "error": true,
+      "sol": []
+    }
+  },
+  "nachher": {
+    "19030713.pdf": {
+      "chars": 29327,
+      "blocks": 1,
+      "arm_stored": 0,
+      "direct_stored": 0,
+      "rows": 0,
+      "sol_rows": 0,
+      "sol_poolable": 0,
+      "zustand": "endpunkt_nicht_berichtet",
+      "error": false,
+      "sol": []
+    },
+    "23098680.pdf": {
+      "chars": 0,
+      "blocks": null,
+      "arm_stored": null,
+      "direct_stored": null,
+      "rows": null,
+      "sol_rows": null,
+      "sol_poolable": null,
+      "zustand": "scan",
+      "error": true,
+      "sol": []
+    },
+    "35120753.pdf": {
+      "chars": 0,
+      "blocks": null,
+      "arm_stored": null,
+      "direct_stored": null,
+      "rows": null,
+      "sol_rows": null,
+      "sol_poolable": null,
+      "zustand": "scan",
+      "error": true,
+      "sol": []
+    }
+  },
+  "datei_befund": {
+    "19030713.pdf": {
+      "bytes": 464249,
+      "header": "%PDF-1.3\r%âãÏÓ",
+      "ist_pdf": true,
+      "txt_bytes": 30111
+    },
+    "23098680.pdf": {
+      "bytes": 6001866,
+      "header": "%PDF-1.6\r%âãÏÓ",
+      "ist_pdf": true,
+      "txt_bytes": 853183
+    },
+    "35120753.pdf": {
+      "bytes": 2737,
+      "header": "<!DOCTY",
+      "ist_pdf": false,
+      "txt_bytes": 0
+    }
+  },
+  "kette_lesbar": [
+    "19030713.pdf"
+  ],
+  "blind": [
+    "23098680.pdf",
+    "35120753.pdf"
+  ],
+  "mit_sol_zeile": [],
+  "abweichungen": []
+}
