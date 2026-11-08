@@ -103,8 +103,10 @@ an der ein Fix etwas bewirkt: Die Daten sind da, sie werden nur nicht gelesen.
   Text: 19 Zeilen in 5 Dokumenten.
 - Titelfilter `melatonin` plus Ausschluss von Agonisten und Co-Interventionen:
   14 statt 31 Dokumente.
-- Erwartung nach Screening: **k = 3 bis 5** (Schaetzung). Die Schwelle D1
-  (k >= 5) ist damit erreichbar, aber nicht gesichert.
+- Erwartung nach Screening: k = 3 bis 5 (Schaetzung). Gemessen wurden daraus
+  **k = 1** (`ergebnis_zweiter_durchgang_20261108.md`) - die Schaetzung war zu
+  optimistisch. Das Schritt-Ziel k >= 2 ist mit k = 1 noch nicht erreicht;
+  das Gesamtziel k >= 5 braucht A + B (`schwelle_k5_20261108.md`).
 - Kosten: **kein Netzlauf** - die 31 XML liegen unter `data/bench/sol2/xml`.
 
 ## 7. Grenzen

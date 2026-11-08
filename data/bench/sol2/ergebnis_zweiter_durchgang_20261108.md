@@ -49,7 +49,8 @@ Melatonin um 37,6 bzw. 35,7 Minuten; g = -0,644 und -0,685.
 
 ## Bewertung
 
-D1 bleibt **nicht erfuellt**: k = 1, gefordert waren 5. Der Durchgang
+D1 bleibt **nicht erfuellt**: k = 1, das Schritt-Ziel verlangt k >= 2
+(Gesamtziel k >= 5 erst mit A + B; Staffelung in `schwelle_k5_20261108.md`). Der Durchgang
 belegt aber, dass die Ursache im Leser lag und nicht in den Dokumenten:
 dieselben 31 Volltexte liefern 0 bzw. 1 Studie, je nachdem ob Klammer-SD
 und Zeitpunktspalten gelesen werden. D2 bleibt nicht pruefbar (k < 2).

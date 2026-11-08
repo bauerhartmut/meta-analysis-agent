@@ -57,5 +57,7 @@ Leserfehler, den man mit mehr Regeln beheben koennte, ohne Werte zu
 erfinden.
 
 Damit steht der Befund: aus den 31 offenen Volltexten des Q2-Abzugs ist
-eine poolbare Melatonin-SOL-Metaanalyse nicht zu bauen - k = 1, nicht 5.
-Die 83 Dokumente ohne PMC-Volltext sind der naechste echte Hebel.
+eine poolbare Melatonin-SOL-Metaanalyse nicht zu bauen - k = 1. Damit ist das
+Schritt-Ziel k >= 2 verfehlt; das Gesamtziel k >= 5 war nie fuer diesen Korpus
+gedacht, sondern fuer A + B (`schwelle_k5_20261108.md`). Die 83 Dokumente ohne
+PMC-Volltext sind der naechste echte Hebel.
