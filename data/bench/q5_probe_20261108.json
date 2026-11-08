@@ -1,0 +1,120 @@
+{
+  "ignored": {
+    "research_agent/orchestrator.py": true,
+    "research_agent/meta/extraction.py": true,
+    "research_agent/meta/pooling.py": true
+  },
+  "tests": {
+    "test_backlog_work.py": {
+      "mods": [
+        "orchestrator"
+      ],
+      "guarded": false
+    },
+    "test_citation_snowball.py": {
+      "mods": [
+        "orchestrator"
+      ],
+      "guarded": false
+    },
+    "test_components.py": {
+      "mods": [
+        "orchestrator"
+      ],
+      "guarded": false
+    },
+    "test_fulltext.py": {
+      "mods": [
+        "orchestrator"
+      ],
+      "guarded": false
+    },
+    "test_meta_cohort.py": {
+      "mods": [
+        "meta.pooling"
+      ],
+      "guarded": false
+    },
+    "test_meta_extraction.py": {
+      "mods": [
+        "meta.extraction"
+      ],
+      "guarded": false
+    },
+    "test_meta_pooling.py": {
+      "mods": [
+        "meta.extraction",
+        "meta.pooling"
+      ],
+      "guarded": false
+    },
+    "test_meta_quality_gates.py": {
+      "mods": [
+        "meta.pooling"
+      ],
+      "guarded": false
+    },
+    "test_meta_targets.py": {
+      "mods": [
+        "meta.extraction",
+        "meta.pooling"
+      ],
+      "guarded": false
+    },
+    "test_pooling_reference.py": {
+      "mods": [
+        "meta.pooling"
+      ],
+      "guarded": false
+    },
+    "test_program.py": {
+      "mods": [
+        "orchestrator"
+      ],
+      "guarded": false
+    },
+    "test_research_engine.py": {
+      "mods": [
+        "orchestrator"
+      ],
+      "guarded": false
+    },
+    "test_reviewer_roles.py": {
+      "mods": [
+        "meta.extraction"
+      ],
+      "guarded": false
+    },
+    "test_simulations.py": {
+      "mods": [
+        "orchestrator"
+      ],
+      "guarded": false
+    },
+    "test_sprint30_vision.py": {
+      "mods": [
+        "orchestrator",
+        "meta.pooling"
+      ],
+      "guarded": false
+    },
+    "test_topic_database.py": {
+      "mods": [
+        "orchestrator"
+      ],
+      "guarded": false
+    },
+    "test_topic_gate_arxiv.py": {
+      "mods": [
+        "orchestrator"
+      ],
+      "guarded": false
+    },
+    "test_usage_accounting.py": {
+      "mods": [
+        "orchestrator"
+      ],
+      "guarded": false
+    }
+  }
+}
