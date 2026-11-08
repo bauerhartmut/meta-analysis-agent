@@ -47,5 +47,5 @@ koennen.
 Fuer Rueckfragen antworten Sie bitte einfach auf diese E-Mail.
 
 Vielen Dank und freundliche Gruesse
-[Name]
-[Einrichtung, z. B. TU Darmstadt, Fachbereich ...]
+[Name]  <- AUSFUELLEN
+[Einrichtung, Fachbereich]  <- AUSFUELLEN

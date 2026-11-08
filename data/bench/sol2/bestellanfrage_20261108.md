@@ -55,18 +55,21 @@ koennen.
 Fuer Rueckfragen antworten Sie bitte einfach auf diese E-Mail.
 
 Vielen Dank und freundliche Gruesse
-[Name]
-[Einrichtung, z. B. TU Darmstadt, Fachbereich ...]
+[Name]  <- AUSFUELLEN
+[Einrichtung, Fachbereich]  <- AUSFUELLEN
 ```
 
 ## Vor dem Senden
 
-Nur zwei Felder sind offen, beide stehen in der Signatur:
+Offen sind zwei Pflichtfelder in der Signatur und zwei Angaben, die die
+Bibliothek vor der Lieferung erfragen kann:
 
-| Feld | Warum es offen bleibt |
-|---|---|
-| `[Name]` | Name des Absenders - nicht aus dem Projekt ableitbar |
-| `[Einrichtung, ...]` | Einrichtung und Fachbereich tragen die Kostenuebernahme |
+| # | Stelle | Datei | Status | Aktion vor dem Absenden |
+|---|---|---|---|---|
+| 1 | `[Name]` in der Signatur | `.md` + `.txt` | **AUSFUELLEN** | Name des Absenders |
+| 2 | `[Einrichtung, Fachbereich]` | `.md` + `.txt` | **AUSFUELLEN** | Einrichtung und Fachbereich, traegt die Kostenuebernahme |
+| 3 | Kostenstelle | Anschreiben | zugesagt, nicht genannt | bereithalten: viele Bibliotheken liefern erst nach Nennung |
+| 4 | Lieferadresse / E-Mail | Anschreiben | nur implizit (Antwortadresse) | bei Formularbestellung eintragen |
 
 Alles andere ist bewusst ohne Angabe formuliert, damit nichts erfunden wird:
 
@@ -96,6 +99,23 @@ vorliegt und ein Duplikat der eingeschlossenen Studie ist.
 
 Die sieben B-Dokumente der Klasse B bleiben als Nachbestellung vorgemerkt,
 falls die zwoelf Titel nicht ausreichen.
+
+## Pruefung der Vollstaendigkeit (2026-11-08)
+
+Mit einem Skript gegen `triage_b_20261108.md` und `zitationen_a.json`
+geprueft, ohne Netzzugriff:
+
+| Pruefung | Ergebnis |
+|---|---|
+| Titel in Codeblock, `.txt` und Fernleih-Fassung | je 12 |
+| eindeutige DOIs / PMIDs | 12 / 12, keine Dublette |
+| Codeblock gegen `.txt` | zeichengleich (nach Zeilenende-Normalisierung) |
+| Gruppe 1 gegen `zitationen_a.json` | alle 5 PMIDs vorhanden |
+| Gruppe 2 gegen die Triage | deckungsgleich mit den 7 A-PMDs |
+| Betreff gegen Text | "12" und "zwoelf" stimmen ueberein |
+
+Die Liste ist damit versandfertig; offen sind nur die vier Stellen in der
+Tabelle oben.
 
 ## Wenn die Bibliothek nachfragt
 

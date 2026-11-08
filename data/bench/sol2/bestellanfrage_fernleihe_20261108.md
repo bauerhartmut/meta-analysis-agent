@@ -142,12 +142,17 @@ ausreichen.
   eigenes Feld; im Freitext waere sie nur eine Zahl ohne Bedeutung.
 - Keine Begruendung, kein Projektkontext. Beides steht in
   `bestellanfrage_20261108.md` und ist in einem Formularfeld nicht gefragt.
-- Kein Absender. Formulare erheben Name und Einrichtung selbst.
+- Kein Absender. Formulare erheben Name und Einrichtung selbst - diese
+  Angaben sowie Bibliotheksnummer und E-Mail sind beim Absenden
+  bereitzuhalten; sie lassen sich nicht aus dem Projekt ableiten.
+- Keine Lieferadresse. Sie ergibt sich aus dem Formularkonto.
 
 ## Pruefung
 
-Titel, Autor, Quelle, DOI und PMID der Gruppe 1 sind zeichengleich aus
-`bestellanfrage_20261108.txt` uebernommen. Gruppe 2 stammt aus
+Titel, Quelle, DOI und PMID der Gruppe 1 sind zeichengleich aus
+`bestellanfrage_20261108.txt` uebernommen. Die Autorennamen tragen hier die
+Diakritika (Goegenur, Kuecuekakin, Hjortsoe in der E-Mail-Fassung dagegen
+ASCII-transliteriert); fuer die Bestellung ist die DOI massgeblich. Gruppe 2 stammt aus
 `abstracts_b_20261108.xml` (PubMed efetch); Autorennamen und Quellen sind
 dort entnommen, HTML-Entities aufgeloest. Die kopierfertige Fassung ohne
 Markdown liegt in `bestellanfrage_fernleihe_20261108.txt`.
