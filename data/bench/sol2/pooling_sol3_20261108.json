@@ -404,6 +404,48 @@
       ]
     },
     {
+      "analyse": "S10 PMC2952772 SE 11.0 aus CI",
+      "k": 3,
+      "studien": [
+        "PMC3489506",
+        "PMC2933606",
+        "PMC2952772"
+      ],
+      "pooled": -26.197117291033095,
+      "ci_low": -55.75257560697813,
+      "ci_high": 3.3583410249119403,
+      "se_hksj": 6.869124740641635,
+      "tau2": 107.13254810673617,
+      "q": 5.271902676977974,
+      "i2": 62.06303259857473,
+      "pi_low": -189.4305953935915,
+      "pi_high": 137.0363608115253,
+      "fixed": -21.972354160857495,
+      "fixed_ci_low": -29.866829467445605,
+      "fixed_ci_high": -14.077878854269388,
+      "small_k_note": "Kleine Studienanzahl (k=3): Heterogenitaets- und Intervallangaben sind mit Vorsicht zu interpretieren.",
+      "inputs": [
+        {
+          "label": "PMC3489506",
+          "est": -37.5,
+          "se": 9.0818,
+          "herkunft": "Tagebuch, adjustiert, Studienangabe"
+        },
+        {
+          "label": "PMC2933606",
+          "est": -15.6,
+          "se": 4.9236,
+          "herkunft": "65-80 Jahre, adjustiert, Studienangabe"
+        },
+        {
+          "label": "PMC2952772",
+          "est": -31.0,
+          "se": 11.0,
+          "herkunft": "0.05 mg/kg, SE aus CI (11.0)"
+        }
+      ]
+    },
+    {
       "analyse": "S9 S1 Aktigraphie unadjustiert (HTA)",
       "k": 3,
       "studien": [

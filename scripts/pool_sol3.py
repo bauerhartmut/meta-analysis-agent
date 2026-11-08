@@ -108,6 +108,9 @@ def main() -> int:
 
     analyses.append(summarise([ALT["PMC3489506_unadj"]] + MAIN[1:],
                               "S8 S1 Tagebuch unadjustiert (HTA)"))
+    analyses.append(summarise(MAIN[:2] + [("PMC2952772", -31.0, 11.0,
+                                           "0.05 mg/kg, SE aus CI (11.0)")],
+                              "S10 PMC2952772 SE 11.0 aus CI"))
     analyses.append(summarise([ALT["PMC3489506_act_unadj"]] + MAIN[1:],
                               "S9 S1 Aktigraphie unadjustiert (HTA)"))
 
@@ -176,7 +179,9 @@ def main() -> int:
         "",
     ]
     md_path = data_dir / "pooling_sol3_20261108.md"
-    md_path.write_text(chr(10).join(lines) + chr(10), encoding="utf-8")
+    # Die Markdown-Fassung ist handgepflegt (Lesart, Nachrechnung, Grenzen).
+    # Das Skript schreibt nur das JSON, damit ein Lauf die Kommentare nicht
+    # ueberschreibt.
 
     for item in analyses:
         print(f"{item['analyse']:<38} k={item['k']} "
