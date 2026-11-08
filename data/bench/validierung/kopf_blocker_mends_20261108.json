@@ -1,0 +1,304 @@
+{
+  "test_id": "kopf-blocker-kopf_blocker_mends_20261108",
+  "stand": "2026-11-08T19:40:28+00:00",
+  "modell": "keiner",
+  "netz": "keines",
+  "laeufe": [
+    {
+      "datei": "data/bench/sol2/volltext/23098680.txt",
+      "zeichen": 831660,
+      "bloecke": 48,
+      "abgelehnt": 724,
+      "anzahl_kandidaten": 23,
+      "mit_label": 0,
+      "mit_caption": 0,
+      "kategorien": {
+        "nur_kopf": 3,
+        "kopf_und_spalten": 20
+      },
+      "kandidaten": [
+        {
+          "block": 3,
+          "kopf": [
+            "Baseline characteristic",
+            "Melatonin (n=70)",
+            "Placebo (n=76)",
+            "Total (n=146)"
+          ],
+          "zeile": [
+            "Age (months), mean (SD), range",
+            "106 (34.8), 44 to 181",
+            "100.7 (37.4), 37 to 186",
+            "103.2 (36.2), 37 to 186"
+          ],
+          "spalten_zeile": 4,
+          "spalten_kopf": 4,
+          "lesbar": [
+            {
+              "index": 1,
+              "zelle": "106 (34.8), 44 to 181",
+              "werte": [
+                106.0,
+                44.0,
+                181.0
+              ]
+            },
+            {
+              "index": 2,
+              "zelle": "100.7 (37.4), 37 to 186",
+              "werte": [
+                100.7,
+                37.0,
+                186.0
+              ]
+            },
+            {
+              "index": 3,
+              "zelle": "103.2 (36.2), 37 to 186",
+              "werte": [
+                103.2,
+                37.0,
+                186.0
+              ]
+            }
+          ],
+          "kopf_effektspalten": [],
+          "kategorie": "nur_kopf",
+          "label_effektwort": "",
+          "caption_effektwort": "",
+          "grund": "keine Effektspalte im Kopf"
+        },
+        {
+          "block": 3,
+          "kopf": [
+            "Baseline characteristic",
+            "Melatonin (n=70)",
+            "Placebo (n=76)",
+            "Total (n=146)"
+          ],
+          "zeile": [
+            "DD, ASD and epilepsy",
+            "50.8 (9.9), 40 to 73",
+            "51.9 (11.29), 10 to 74",
+            "51.4 (10.6), 10 to 74"
+          ],
+          "spalten_zeile": 4,
+          "spalten_kopf": 4,
+          "lesbar": [
+            {
+              "index": 1,
+              "zelle": "50.8 (9.9), 40 to 73",
+              "werte": [
+                50.8,
+                40.0,
+                73.0
+              ]
+            },
+            {
+              "index": 2,
+              "zelle": "51.9 (11.29), 10 to 74",
+              "werte": [
+                51.9,
+                10.0,
+                74.0
+              ]
+            },
+            {
+              "index": 3,
+              "zelle": "51.4 (10.6), 10 to 74",
+              "werte": [
+                51.4,
+                10.0,
+                74.0
+              ]
+            }
+          ],
+          "kopf_effektspalten": [],
+          "kategorie": "nur_kopf",
+          "label_effektwort": "",
+          "caption_effektwort": "",
+          "grund": "keine Effektspalte im Kopf"
+        },
+        {
+          "block": 6,
+          "kopf": [
+            "and outcomes",
+            "(SD)",
+            "571.26 (71.98)",
+            "(SD)",
+            "(SD)",
+            "558.03 (68.94)",
+            "(SD)",
+            "over baseline"
+          ],
+          "zeile": [
+            "Sleep diary",
+            "530.81 (64.84)",
+            "40.45 (71.75)",
+            "545.49 (66.01)",
+            "12.54 (52.54)",
+            "27.91 (4.35 to 51.48)",
+            "22.43 (0.52 to 44.34)"
+          ],
+          "spalten_zeile": 7,
+          "spalten_kopf": 8,
+          "lesbar": [
+            {
+              "index": 5,
+              "zelle": "27.91 (4.35 to 51.48)",
+              "werte": [
+                27.91,
+                4.35,
+                51.48
+              ]
+            },
+            {
+              "index": 6,
+              "zelle": "22.43 (0.52 to 44.34)",
+              "werte": [
+                22.43,
+                0.52,
+                44.34
+              ]
+            }
+          ],
+          "kopf_effektspalten": [],
+          "kategorie": "kopf_und_spalten",
+          "label_effektwort": "",
+          "caption_effektwort": "",
+          "grund": "Kopfzeile (8 Spalten) passt nicht zur Zeile (7 Zellen) - col"
+        },
+        {
+          "block": 6,
+          "kopf": [
+            "and outcomes",
+            "(SD)",
+            "571.26 (71.98)",
+            "(SD)",
+            "(SD)",
+            "558.03 (68.94)",
+            "(SD)",
+            "over baseline"
+          ],
+          "zeile": [
+            "(nM=51, nP=59)",
+            "8.30 (51.97)",
+            "-37.44 (-58.77 to -16.11)",
+            "-37.49 (-55.27 to -19.71)"
+          ],
+          "spalten_zeile": 4,
+          "spalten_kopf": 8,
+          "lesbar": [
+            {
+              "index": 2,
+              "zelle": "-37.44 (-58.77 to -16.11)",
+              "werte": [
+                -37.44,
+                -58.77,
+                -16.11
+              ]
+            },
+            {
+              "index": 3,
+              "zelle": "-37.49 (-55.27 to -19.71)",
+              "werte": [
+                -37.49,
+                -55.27,
+                -19.71
+              ]
+            }
+          ],
+          "kopf_effektspalten": [],
+          "kategorie": "kopf_und_spalten",
+          "label_effektwort": "",
+          "caption_effektwort": "",
+          "grund": "Kopfzeile (8 Spalten) passt nicht zur Zeile (4 Zellen) - col"
+        },
+        {
+          "block": 6,
+          "kopf": [
+            "and outcomes",
+            "(SD)",
+            "571.26 (71.98)",
+            "(SD)",
+            "(SD)",
+            "558.03 (68.94)",
+            "(SD)",
+            "over baseline"
+          ],
+          "zeile": [
+            "Actigraphy",
+            "434.21 (72.30)",
+            "449.88 (73.82)",
+            "15.67 (63.60)",
+            "412.27 (83.18)",
+            "420.57 (82.90)",
+            "7.37 (-22.97 to 37.71)",
+            "13.33 (-15.48 to 42.15)",
+            "Health Technology Assessment 2012; Vol. 16: No. 40"
+          ],
+          "spalten_zeile": 9,
+          "spalten_kopf": 8,
+          "lesbar": [
+            {
+              "index": 6,
+              "zelle": "7.37 (-22.97 to 37.71)",
+              "werte": [
+                7.37,
+                -22.97,
+                37.71
+              ]
+            },
+            {
+              "index": 7,
+              "zelle": "13.33 (-15.48 to 42.15)",
+              "werte": [
+                13.33,
+                -15.48,
+                42.15
+              ]
+            }
+          ],
+          "kopf_effektspalten": [],
+          "kategorie": "kopf_und_spalten",
+          "label_effektwort": "",
+          "caption_effektwort": "",
+          "grund": "Kopfzeile (8 Spalten) passt nicht zur Zeile (9 Zellen) - col"
+        }
+      ],
+      "gruende": {
+        "keine Effektspalte im Kopf": 378,
+        "Kopfzeile (2 Spalten) passt nicht zur Zeile (1 Zellen) - col": 53,
+        "Kopfzeile (8 Spalten) passt nicht zur Zeile (3 Zellen) - col": 25,
+        "Kopfzeile (4 Spalten) passt nicht zur Zeile (1 Zellen) - col": 20,
+        "Kopfzeile (1 Spalten) passt nicht zur Zeile (2 Zellen) - col": 19,
+        "Kopfzeile (8 Spalten) passt nicht zur Zeile (7 Zellen) - col": 18,
+        "Kopfzeile (8 Spalten) passt nicht zur Zeile (4 Zellen) - col": 13,
+        "Kopfzeile (2 Spalten) passt nicht zur Zeile (9 Zellen) - col": 13,
+        "Kopfzeile (8 Spalten) passt nicht zur Zeile (1 Zellen) - col": 11,
+        "Kopfzeile (8 Spalten) passt nicht zur Zeile (6 Zellen) - col": 10,
+        "Kopfzeile (8 Spalten) passt nicht zur Zeile (5 Zellen) - col": 10,
+        "Kopfzeile (5 Spalten) passt nicht zur Zeile (2 Zellen) - col": 10,
+        "Kopfzeile (4 Spalten) passt nicht zur Zeile (3 Zellen) - col": 9,
+        "Kopfzeile (2 Spalten) passt nicht zur Zeile (8 Zellen) - col": 9,
+        "Kopfzeile (9 Spalten) passt nicht zur Zeile (1 Zellen) - col": 8
+      }
+    }
+  ],
+  "aggregat": {
+    "dateien": 1,
+    "bloecke": 48,
+    "abgelehnt": 724,
+    "mit_lesbarem_effekt": 23,
+    "anteil": 3.1767955801104977,
+    "kategorien": {
+      "nur_kopf": 3,
+      "kopf_und_spalten": 20
+    },
+    "betroffene_bloecke": 2,
+    "mit_label_effektwort": 0,
+    "mit_caption_effektwort": 0
+  },
+  "deutung": "23 von 724 abgelehnten Zeilen tragen einen lesbaren Effekt samt Intervall (3.18 %). Davon haetten 3 bei stimmiger Spaltenzuordnung nur am Kopf gescheitert; die uebrigen scheitern zusaetzlich an der Spaltenzuordnung oder an der Position der Effektspalte. Ein Kopfzeilen-Fix allein rettet also hoechstens 3 Zeile(n).",
+  "laufzeit_s": 0.44594620000134455
+}
