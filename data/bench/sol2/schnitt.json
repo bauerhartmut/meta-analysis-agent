@@ -1,0 +1,41 @@
+{
+  "generated": "2026-11-08T12:48:22",
+  "question": "Zielmass Einschlaflatenz (sleep onset latency)",
+  "dbs": {
+    "effektspalten": {
+      "error": "DB fehlt",
+      "rows": 0
+    },
+    "arm_tabelle": {
+      "rows": 13,
+      "classes": {
+        "schlaf": 5,
+        "anderes": 8
+      },
+      "poolable": {
+        "schlaf": 5,
+        "anderes": 8
+      },
+      "poolable_rows": 13
+    },
+    "fliesstext": {
+      "rows": 0,
+      "classes": {},
+      "poolable": {},
+      "poolable_rows": 0
+    },
+    "veraenderung": {
+      "error": "DB fehlt",
+      "rows": 0
+    }
+  },
+  "totals": {
+    "rows": 13,
+    "classes": {
+      "schlaf": 5,
+      "anderes": 8
+    },
+    "sol_share": 0.0
+  },
+  "sol_rows": []
+}

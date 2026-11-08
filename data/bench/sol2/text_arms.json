@@ -1,0 +1,494 @@
+{
+  "generated": "2026-11-08T12:48:05",
+  "documents": [
+    {
+      "doi": "10.1002/epi4.70169",
+      "pmc": "PMC12903794",
+      "sentences": 165,
+      "candidates": 0,
+      "stored": 0,
+      "rejected": 0,
+      "reasons": {
+        "kein Mittelwert mit Streuung im Satz": 149,
+        "Median/IQR statt Mittelwert mit SD": 6,
+        "Stichproben- oder Designbeschreibung statt Ergebnis": 5,
+        "Tabellen-/Zitationsrest statt Ergebnissatz": 4,
+        "Baseline-/Veraenderungsmuster statt Gruppenvergleich": 1
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.1371/journal.pone.0332366",
+      "pmc": "PMC12449008",
+      "sentences": 531,
+      "candidates": 0,
+      "stored": 0,
+      "rejected": 0,
+      "reasons": {
+        "kein Mittelwert mit Streuung im Satz": 433,
+        "Baseline-/Veraenderungsmuster statt Gruppenvergleich": 48,
+        "Tabellen-/Zitationsrest statt Ergebnissatz": 38,
+        "Streuung als SEM/SE im Satz (nicht SD)": 6,
+        "Median/IQR statt Mittelwert mit SD": 4,
+        "Stichproben- oder Designbeschreibung statt Ergebnis": 2
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.1038/s41598-025-02659-8",
+      "pmc": "PMC12106789",
+      "sentences": 228,
+      "candidates": 0,
+      "stored": 0,
+      "rejected": 0,
+      "reasons": {
+        "kein Mittelwert mit Streuung im Satz": 190,
+        "Baseline-/Veraenderungsmuster statt Gruppenvergleich": 26,
+        "Stichproben- oder Designbeschreibung statt Ergebnis": 4,
+        "Tabellen-/Zitationsrest statt Ergebnissatz": 3,
+        "nicht genau zwei Mittelwerte mit Streuung im Satz": 2,
+        "Fallzahl je Arm fehlt": 2,
+        "Streuung als SEM/SE im Satz (nicht SD)": 1
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.1371/journal.pone.0321635",
+      "pmc": "PMC12002473",
+      "sentences": 229,
+      "candidates": 0,
+      "stored": 0,
+      "rejected": 0,
+      "reasons": {
+        "kein Mittelwert mit Streuung im Satz": 176,
+        "Tabellen-/Zitationsrest statt Ergebnissatz": 24,
+        "Baseline-/Veraenderungsmuster statt Gruppenvergleich": 18,
+        "Stichproben- oder Designbeschreibung statt Ergebnis": 11
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.1097/ALN.0000000000005314",
+      "pmc": "PMC11801451",
+      "sentences": 314,
+      "candidates": 0,
+      "stored": 0,
+      "rejected": 0,
+      "reasons": {
+        "kein Mittelwert mit Streuung im Satz": 291,
+        "Baseline-/Veraenderungsmuster statt Gruppenvergleich": 7,
+        "Stichproben- oder Designbeschreibung statt Ergebnis": 5,
+        "nicht genau zwei Mittelwerte mit Streuung im Satz": 4,
+        "Median/IQR statt Mittelwert mit SD": 3,
+        "Tabellen-/Zitationsrest statt Ergebnissatz": 2,
+        "Fallzahl je Arm fehlt": 2
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.3390/nu16101523",
+      "pmc": "PMC11123999",
+      "sentences": 214,
+      "candidates": 0,
+      "stored": 0,
+      "rejected": 0,
+      "reasons": {
+        "kein Mittelwert mit Streuung im Satz": 146,
+        "Baseline-/Veraenderungsmuster statt Gruppenvergleich": 34,
+        "Tabellen-/Zitationsrest statt Ergebnissatz": 24,
+        "Stichproben- oder Designbeschreibung statt Ergebnis": 7,
+        "nicht genau zwei Mittelwerte mit Streuung im Satz": 2,
+        "Fallzahl je Arm fehlt": 1
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.1002/prp2.1205",
+      "pmc": "PMC11103136",
+      "sentences": 225,
+      "candidates": 0,
+      "stored": 0,
+      "rejected": 0,
+      "reasons": {
+        "kein Mittelwert mit Streuung im Satz": 191,
+        "Baseline-/Veraenderungsmuster statt Gruppenvergleich": 19,
+        "Tabellen-/Zitationsrest statt Ergebnissatz": 6,
+        "Stichproben- oder Designbeschreibung statt Ergebnis": 5,
+        "Streuung als SEM/SE im Satz (nicht SD)": 2,
+        "Median/IQR statt Mittelwert mit SD": 2
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.1007/s12325-023-02708-6",
+      "pmc": "PMC10796483",
+      "sentences": 229,
+      "candidates": 0,
+      "stored": 0,
+      "rejected": 0,
+      "reasons": {
+        "kein Mittelwert mit Streuung im Satz": 166,
+        "Baseline-/Veraenderungsmuster statt Gruppenvergleich": 31,
+        "Tabellen-/Zitationsrest statt Ergebnissatz": 16,
+        "Stichproben- oder Designbeschreibung statt Ergebnis": 12,
+        "Median/IQR statt Mittelwert mit SD": 2,
+        "Streuung als SEM/SE im Satz (nicht SD)": 2
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.1186/s12876-023-02760-0",
+      "pmc": "PMC10131443",
+      "sentences": 137,
+      "candidates": 0,
+      "stored": 0,
+      "rejected": 0,
+      "reasons": {
+        "kein Mittelwert mit Streuung im Satz": 107,
+        "Tabellen-/Zitationsrest statt Ergebnissatz": 20,
+        "Baseline-/Veraenderungsmuster statt Gruppenvergleich": 6,
+        "Stichproben- oder Designbeschreibung statt Ergebnis": 3,
+        "Median/IQR statt Mittelwert mit SD": 1
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.3390/ijerph20010552",
+      "pmc": "PMC9819026",
+      "sentences": 121,
+      "candidates": 0,
+      "stored": 0,
+      "rejected": 0,
+      "reasons": {
+        "kein Mittelwert mit Streuung im Satz": 100,
+        "Tabellen-/Zitationsrest statt Ergebnissatz": 11,
+        "Stichproben- oder Designbeschreibung statt Ergebnis": 3,
+        "Fallzahl je Arm fehlt": 2,
+        "Baseline-/Veraenderungsmuster statt Gruppenvergleich": 2,
+        "nicht genau zwei Mittelwerte mit Streuung im Satz": 2,
+        "Median/IQR statt Mittelwert mit SD": 1
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.1007/s40268-022-00394-3",
+      "pmc": "PMC9433621",
+      "sentences": 181,
+      "candidates": 0,
+      "stored": 0,
+      "rejected": 0,
+      "reasons": {
+        "kein Mittelwert mit Streuung im Satz": 137,
+        "Baseline-/Veraenderungsmuster statt Gruppenvergleich": 21,
+        "Tabellen-/Zitationsrest statt Ergebnissatz": 18,
+        "Median/IQR statt Mittelwert mit SD": 3,
+        "Stichproben- oder Designbeschreibung statt Ergebnis": 2
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.1093/jn/nxaa302",
+      "pmc": "PMC7726118",
+      "sentences": 17,
+      "candidates": 0,
+      "stored": 0,
+      "rejected": 0,
+      "reasons": {
+        "kein Mittelwert mit Streuung im Satz": 10,
+        "Baseline-/Veraenderungsmuster statt Gruppenvergleich": 3,
+        "Streuung als SEM/SE im Satz (nicht SD)": 1,
+        "Stichproben- oder Designbeschreibung statt Ergebnis": 1,
+        "nicht genau zwei Mittelwerte mit Streuung im Satz": 1,
+        "Fallzahl je Arm fehlt": 1
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.4103/ijp.IJP_250_18",
+      "pmc": "PMC6302692",
+      "sentences": 116,
+      "candidates": 0,
+      "stored": 0,
+      "rejected": 0,
+      "reasons": {
+        "kein Mittelwert mit Streuung im Satz": 97,
+        "Tabellen-/Zitationsrest statt Ergebnissatz": 13,
+        "Stichproben- oder Designbeschreibung statt Ergebnis": 2,
+        "Fallzahl je Arm fehlt": 2,
+        "Median/IQR statt Mittelwert mit SD": 2
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.1089/cap.2018.0020",
+      "pmc": "PMC6306655",
+      "sentences": 222,
+      "candidates": 0,
+      "stored": 0,
+      "rejected": 0,
+      "reasons": {
+        "kein Mittelwert mit Streuung im Satz": 147,
+        "Baseline-/Veraenderungsmuster statt Gruppenvergleich": 38,
+        "Tabellen-/Zitationsrest statt Ergebnissatz": 31,
+        "Stichproben- oder Designbeschreibung statt Ergebnis": 4,
+        "Streuung als SEM/SE im Satz (nicht SD)": 2
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.1186/s12916-017-0995-1",
+      "pmc": "PMC5774131",
+      "sentences": 244,
+      "candidates": 0,
+      "stored": 0,
+      "rejected": 0,
+      "reasons": {
+        "kein Mittelwert mit Streuung im Satz": 184,
+        "Tabellen-/Zitationsrest statt Ergebnissatz": 30,
+        "Stichproben- oder Designbeschreibung statt Ergebnis": 14,
+        "Baseline-/Veraenderungsmuster statt Gruppenvergleich": 13,
+        "Median/IQR statt Mittelwert mit SD": 3
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.1186/s13054-015-0842-8",
+      "pmc": "PMC4365553",
+      "sentences": 251,
+      "candidates": 0,
+      "stored": 0,
+      "rejected": 0,
+      "reasons": {
+        "kein Mittelwert mit Streuung im Satz": 179,
+        "Tabellen-/Zitationsrest statt Ergebnissatz": 31,
+        "Baseline-/Veraenderungsmuster statt Gruppenvergleich": 30,
+        "Stichproben- oder Designbeschreibung statt Ergebnis": 8,
+        "nicht genau zwei Mittelwerte mit Streuung im Satz": 3
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.1016/j.sleep.2015.01.005",
+      "pmc": "PMC4425994",
+      "sentences": 233,
+      "candidates": 0,
+      "stored": 0,
+      "rejected": 0,
+      "reasons": {
+        "kein Mittelwert mit Streuung im Satz": 198,
+        "Baseline-/Veraenderungsmuster statt Gruppenvergleich": 26,
+        "Stichproben- oder Designbeschreibung statt Ergebnis": 5,
+        "Streuung als SEM/SE im Satz (nicht SD)": 3,
+        "Median/IQR statt Mittelwert mit SD": 1
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.1179/2045772313Y.0000000099",
+      "pmc": "PMC4066551",
+      "sentences": 17,
+      "candidates": 0,
+      "stored": 0,
+      "rejected": 0,
+      "reasons": {
+        "kein Mittelwert mit Streuung im Satz": 13,
+        "Baseline-/Veraenderungsmuster statt Gruppenvergleich": 4
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.1007/s12603-013-0029-4",
+      "pmc": "PMC12878997",
+      "sentences": 158,
+      "candidates": 0,
+      "stored": 0,
+      "rejected": 0,
+      "reasons": {
+        "kein Mittelwert mit Streuung im Satz": 140,
+        "Baseline-/Veraenderungsmuster statt Gruppenvergleich": 5,
+        "Streuung als SEM/SE im Satz (nicht SD)": 5,
+        "nicht genau zwei Mittelwerte mit Streuung im Satz": 3,
+        "Stichproben- oder Designbeschreibung statt Ergebnis": 2,
+        "Tabellen-/Zitationsrest statt Ergebnissatz": 2,
+        "Fallzahl je Arm fehlt": 1
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.1136/bmj.e6664",
+      "pmc": "PMC3489506",
+      "sentences": 204,
+      "candidates": 0,
+      "stored": 0,
+      "rejected": 0,
+      "reasons": {
+        "kein Mittelwert mit Streuung im Satz": 169,
+        "Baseline-/Veraenderungsmuster statt Gruppenvergleich": 26,
+        "Stichproben- oder Designbeschreibung statt Ergebnis": 5,
+        "Tabellen-/Zitationsrest statt Ergebnissatz": 4
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.5665/sleep.2122",
+      "pmc": "PMC3443766",
+      "sentences": 28,
+      "candidates": 0,
+      "stored": 0,
+      "rejected": 0,
+      "reasons": {
+        "kein Mittelwert mit Streuung im Satz": 25,
+        "Baseline-/Veraenderungsmuster statt Gruppenvergleich": 3
+      },
+      "effects": []
+    },
+    {
+      "doi": "pmid:21206546",
+      "pmc": "PMC3014244",
+      "sentences": 24,
+      "candidates": 0,
+      "stored": 0,
+      "rejected": 0,
+      "reasons": {
+        "kein Mittelwert mit Streuung im Satz": 20,
+        "Baseline-/Veraenderungsmuster statt Gruppenvergleich": 3,
+        "Stichproben- oder Designbeschreibung statt Ergebnis": 1
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.1186/1741-7015-8-51",
+      "pmc": "PMC2933606",
+      "sentences": 288,
+      "candidates": 0,
+      "stored": 0,
+      "rejected": 0,
+      "reasons": {
+        "kein Mittelwert mit Streuung im Satz": 226,
+        "Baseline-/Veraenderungsmuster statt Gruppenvergleich": 41,
+        "Tabellen-/Zitationsrest statt Ergebnissatz": 17,
+        "Stichproben- oder Designbeschreibung statt Ergebnis": 4
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.1007/s00213-010-1962-0",
+      "pmc": "PMC2952772",
+      "sentences": 238,
+      "candidates": 0,
+      "stored": 0,
+      "rejected": 0,
+      "reasons": {
+        "kein Mittelwert mit Streuung im Satz": 186,
+        "Tabellen-/Zitationsrest statt Ergebnissatz": 31,
+        "Baseline-/Veraenderungsmuster statt Gruppenvergleich": 16,
+        "Stichproben- oder Designbeschreibung statt Ergebnis": 4,
+        "Median/IQR statt Mittelwert mit SD": 1
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.1089/jmf.2009.0096",
+      "pmc": "PMC3133468",
+      "sentences": 12,
+      "candidates": 0,
+      "stored": 0,
+      "rejected": 0,
+      "reasons": {
+        "kein Mittelwert mit Streuung im Satz": 11,
+        "Baseline-/Veraenderungsmuster statt Gruppenvergleich": 1
+      },
+      "effects": []
+    },
+    {
+      "doi": "pmid:19968048",
+      "pmc": "PMC2670334",
+      "sentences": 26,
+      "candidates": 0,
+      "stored": 0,
+      "rejected": 0,
+      "reasons": {
+        "kein Mittelwert mit Streuung im Satz": 25,
+        "Baseline-/Veraenderungsmuster statt Gruppenvergleich": 1
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.1093/sleep/32.3.351",
+      "pmc": "PMC2647789",
+      "sentences": 21,
+      "candidates": 0,
+      "stored": 0,
+      "rejected": 0,
+      "reasons": {
+        "kein Mittelwert mit Streuung im Satz": 20,
+        "Baseline-/Veraenderungsmuster statt Gruppenvergleich": 1
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.1111/j.1365-2125.2008.03320.x",
+      "pmc": "PMC2668086",
+      "sentences": 17,
+      "candidates": 0,
+      "stored": 0,
+      "rejected": 0,
+      "reasons": {
+        "kein Mittelwert mit Streuung im Satz": 13,
+        "Median/IQR statt Mittelwert mit SD": 2,
+        "Baseline-/Veraenderungsmuster statt Gruppenvergleich": 2
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.1136/gut.2004.062034",
+      "pmc": "PMC1774717",
+      "sentences": 12,
+      "candidates": 0,
+      "stored": 0,
+      "rejected": 0,
+      "reasons": {
+        "kein Mittelwert mit Streuung im Satz": 11,
+        "Stichproben- oder Designbeschreibung statt Ergebnis": 1
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.1046/j.1365-2869.2001.00256.x",
+      "pmc": "PMC3679650",
+      "sentences": 21,
+      "candidates": 0,
+      "stored": 0,
+      "rejected": 0,
+      "reasons": {
+        "kein Mittelwert mit Streuung im Satz": 17,
+        "Baseline-/Veraenderungsmuster statt Gruppenvergleich": 2,
+        "nicht genau zwei Mittelwerte mit Streuung im Satz": 1,
+        "Tabellen-/Zitationsrest statt Ergebnissatz": 1
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.1111/j.1469-7793.1999.905ad.x",
+      "pmc": "PMC2269113",
+      "sentences": 10,
+      "candidates": 0,
+      "stored": 0,
+      "rejected": 0,
+      "reasons": {
+        "kein Mittelwert mit Streuung im Satz": 6,
+        "Baseline-/Veraenderungsmuster statt Gruppenvergleich": 3,
+        "Fallzahl je Arm fehlt": 1
+      },
+      "effects": []
+    }
+  ],
+  "totals": {
+    "sentences": 4733,
+    "candidates": 0,
+    "stored": 0,
+    "rejected": 0,
+    "missing_xml": 0
+  },
+  "missing_xml": []
+}
