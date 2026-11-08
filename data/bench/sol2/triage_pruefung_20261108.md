@@ -26,11 +26,11 @@ Stand: 2026-11-08T14:09:20. Bestanden: ja.
 
 | Kriterium | erwartet | gemessen | bestanden |
 |---|---|---|---|
-| PMID aus Dateiname, Prio A, als angefordert erkannt | 4 von 4 | siehe unten | ja |
-| Zustaende wie erwartet (3 poolbar, 1 Scan) | 3 poolbar / 1 scan | siehe unten | ja |
-| k = Basis + poolbare Dateien | 1 + 3 = 4 | siehe unten | ja |
-| nicht geliefert: nur 11292231 | 11292231 | siehe unten | ja |
-| keine fremde Datei | [] | siehe unten | ja |
+| PMID aus Dateiname, Prio A, als angefordert erkannt | 4 von 4 | 4 Dateien, PMID = Dateiname, alle Prio A | ja |
+| Zustaende wie erwartet | 3 poolbar, 1 Scan | 3 poolbar, 1 scan | ja |
+| k = Basis + poolbare Dateien | 1 + 3 = 4 | Basis 1, Zuwachs 3, k 4, erreicht ja | ja |
+| nicht geliefert | nur 11292231 | 11292231 | ja |
+| keine fremde Datei | leer | leer | ja |
 
 ## Was der Bericht je Datei sagt
 
