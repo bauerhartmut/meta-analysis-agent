@@ -48,8 +48,20 @@ HKJ-Intervall taeuscht Unabhaengigkeit vor.
 5. `research_agent/meta/pooling.py` ist lokal gepatcht und absichtlich nicht
    im Index (`git ls-files` leer).
 
+## Abschluss E4h (2026-11-08)
+
+| Punkt | Ergebnis |
+|---|---|
+| P1 Report | Ursache von `[-, -]`: `forest_table` druckt die gepoolte Zeile immer, `_meta_num(None)` gibt `-` zurueck. `report.py` hat jetzt einen eigenen `single_cluster`-Zweig mit Text und unterscheidet Datenmangel von nicht schaetzbarer Unsicherheit. Kein KI erfunden. Geprueft an einer DB-Kopie: 279 Zeilen, Hinweis genau einmal. |
+| P2 RVE | Modellannahmen stehen in `e4f_rve_20261108.md`: HKJ ist Random Effects mit tau^2 in den Gewichten, RVE ist Fixed Effect ohne. Der Breitenvergleich ist damit kein Beweis fuer Scheinpraezision; MACE bleibt Einzelfall. |
+| P3 Dashboard | Render-Test mit injizierter API-Antwort: `preeclampsia` zeigt "kein KI (nur ein unabhaengiger Cluster)", MACE `[0.430; 1.050]`, nirgends `[0,000; 0,000]`. Screenshot `dashboard_gate_20261108.png`, Protokoll `dashboard_render_protokoll_20261108.md`. |
+| P4 Repo | Sicherungen von `pooling.py`, `report.py`, `pool_gates.py` in `local_patches/` (gitignored). Fremde uncommittete Dateien unangetastet. Volle Suite: **1317 passed, 2 skipped**, EXIT 0, 6:52. |
+
+Grenze: Der Live-Endpunkt `/api/metaanalysis` wurde nicht end-to-end geprueft -
+er braucht den Orchestrator, also einen Lauf mit Freigabe.
+
 ## Empfehlung
 
-Den fehlenden Hinweis im Report klaeren - entweder als lokale Anpassung mit
-Dokumentation im Bericht, oder die Repo-Regel fuer `report.py` so aendern,
-dass die Aenderung dauerhaft nachvollziehbar ist.
+Die Repo-Regel fuer `report.py` entscheiden: Der Patch existiert nur lokal.
+Solange die Regel gilt, ist der Hinweis bei jedem neuen Klon wieder weg.
+Das ist keine technische, sondern eine Projektentscheidung.
