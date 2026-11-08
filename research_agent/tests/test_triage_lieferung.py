@@ -71,6 +71,16 @@ def test_naechster_schritt_nennt_bei_ziel_kein_pooling_verbot():
     assert "Keine gepoolte Zahl" in _MOD.naechster_schritt(k_offen, ["scan"])
 
 
+def test_tabellenzeile_schreibt_kein_none():
+    scan = _MOD.tabellenzeile({"file": "scan.pdf", "pmid": None,
+                               "prioritaet": "", "zustand": "scan",
+                               "chars": 0, "error": "kein Textlayer",
+                               "sol_rows": None, "sol_poolable": None})
+    assert "None" not in scan
+    assert scan.startswith("| scan.pdf | - | - | scan |")
+    assert scan.rstrip().endswith("| - | - | - |")
+
+
 def test_zugangsliste_wird_gelesen(tmp_path):
     path = tmp_path / "liste.csv"
     path.write_text(

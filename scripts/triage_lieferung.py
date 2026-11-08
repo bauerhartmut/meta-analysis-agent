@@ -117,6 +117,19 @@ def k_stand(basis_k: int, poolbar: int, ziel: int) -> dict:
     }
 
 
+def tabellenzeile(doc: dict) -> str:
+    """Eine Zeile der Dateitabelle; fehlende Werte als '-', nie 'None'."""
+
+    def zelle(value) -> str:
+        return "-" if value is None or value == "" else str(value)
+
+    chars = "-" if doc.get("error") else doc.get("chars")
+    return (f"| {zelle(doc.get('file'))} | {zelle(doc.get('pmid'))} | "
+            f"{zelle(doc.get('prioritaet'))} | {zelle(doc.get('zustand'))} | "
+            f"{zelle(chars)} | {zelle(doc.get('sol_rows'))} | "
+            f"{zelle(doc.get('sol_poolable'))} |")
+
+
 def naechster_schritt(k: dict, zustaende: list[str]) -> str:
     """Ein Satz, der aus dem gemessenen k folgt - keine Prognose."""
     if k["erreicht"]:
@@ -245,10 +258,7 @@ def main(argv=None) -> int:
         "|---|---|---|---|---:|---:|---:|",
     ]
     for d in dokumente:
-        chars = "-" if "error" in d and d["error"] else d["chars"]
-        lines.append(
-            f"| {d['file']} | {d['pmid'] or '-'} | {d['prioritaet'] or '-'} | "
-            f"{d['zustand']} | {chars} | {d['sol_rows']} | {d['sol_poolable']} |")
+        lines.append(tabellenzeile(d))
     lines += ["", "### Aktion je Datei", ""]
     for d in dokumente:
         lines.append(f"- `{d['file']}`: {d['aktion']}")
