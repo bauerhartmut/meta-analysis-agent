@@ -1,0 +1,94 @@
+{
+ "quelle": "data/bench/sol2/extended.json",
+ "generated": "2026-11-08T12:57:18",
+ "documents_total": 31,
+ "screened_in": 20,
+ "k": 1,
+ "rows": 2,
+ "docs_with_sol": 9,
+ "sol_rows_total": 83,
+ "docs_with_candidates": 1,
+ "docs_stored": 1,
+ "reasons": {
+  "kein Mittelwert mit eindeutiger Streuung in zwei Spalten": 56,
+  "Median/IQR statt Mittelwert mit SD/SE/CI (kein SMD)": 2,
+  "Crossover: Armwerte lesbar, n je Arm nicht unabhaengig": 1,
+  "nicht genau zwei Spalten mit Mittelwert und Streuung": 9,
+  "gemischte Zeitpunkte (Baseline und Follow-up) - kein Behandlungseffekt": 1,
+  "zu wenige Spalten": 12
+ },
+ "per_doc": [
+  {
+   "pmc": "PMC2952772",
+   "year": "2010",
+   "title": "Dose finding of melatonin for chronic idiopathic childhood sleep onset insomnia: an RCT.",
+   "sol_rows": 24,
+   "candidates": 0,
+   "stored": 0
+  },
+  {
+   "pmc": "PMC2933606",
+   "year": "2010",
+   "title": "Nightly treatment of primary insomnia with prolonged release melatonin for 6 months: a randomized placebo controlled tri",
+   "sol_rows": 21,
+   "candidates": 0,
+   "stored": 0
+  },
+  {
+   "pmc": "PMC12903794",
+   "year": "2026",
+   "title": "A prospective randomized crossover trial investigating melatonin versus sleep deprivation for sleep induction in nap ele",
+   "sol_rows": 20,
+   "candidates": 0,
+   "stored": 0
+  },
+  {
+   "pmc": "PMC3489506",
+   "year": "2012",
+   "title": "Melatonin for sleep problems in children with neurodevelopmental disorders: randomised double masked placebo controlled ",
+   "sol_rows": 7,
+   "candidates": 2,
+   "stored": 2
+  },
+  {
+   "pmc": "PMC4425994",
+   "year": "2015",
+   "title": "Melatonin improves sleep in children with epilepsy: a randomized, double-blind, crossover study.",
+   "sol_rows": 4,
+   "candidates": 0,
+   "stored": 0
+  },
+  {
+   "pmc": "PMC4365553",
+   "year": "2015",
+   "title": "Effect of oral melatonin and wearing earplugs and eye masks on nocturnal sleep in healthy subjects in a simulated intens",
+   "sol_rows": 3,
+   "candidates": 0,
+   "stored": 0
+  },
+  {
+   "pmc": "PMC5774131",
+   "year": "2018",
+   "title": "Efficacy of melatonin for sleep disturbance following traumatic brain injury: a randomised controlled trial.",
+   "sol_rows": 2,
+   "candidates": 0,
+   "stored": 0
+  },
+  {
+   "pmc": "PMC11103136",
+   "year": "2024",
+   "title": "Exogenous melatonin's effect on salivary cortisol and amylase: A randomized controlled trial.",
+   "sol_rows": 1,
+   "candidates": 0,
+   "stored": 0
+  },
+  {
+   "pmc": "PMC10131443",
+   "year": "2023",
+   "title": "The effect of melatonin on irritable bowel syndrome patients with and without sleep disorders: a randomized double-blind",
+   "sol_rows": 1,
+   "candidates": 0,
+   "stored": 0
+  }
+ ]
+}
