@@ -1,6 +1,6 @@
 # E4 - deterministische Lueckenpruefung an den E3-Artefakten
 
-Stand: 2026-11-08 23:01 · Modellaufrufe: 0 · Tokens: 0
+Stand: 2026-11-08 23:08 · Modellaufrufe: 0 · Tokens: 0
 
 Geprueft wird der MENDS-Satz, aus dem die E3-Zeilen stammen. Die Zeilen
 kommen unveraendert aus den drei JSON-Artefakten; nichts wurde

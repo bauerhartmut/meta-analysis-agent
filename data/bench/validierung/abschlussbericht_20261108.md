@@ -296,3 +296,15 @@ Kosten: 0 Modellaufrufe, 0 Tokens. Grenze: Die Pruefung belegt die Luecke,
 sie schliesst sie nicht; die fehlende Zeile muss weiterhin gelesen werden.
 In die Kette ist sie noch nicht verdrahtet - die Anschlussstelle ist die
 Quellen-Review, nicht `pool()`. Details: `e4_quote_luecken_20261108.md`.
+
+### Nachtrag 5: die Haeufigkeit im Bestand (E4b)
+
+Read-only auf Kopien, 65 DBs mit `study_effects`, 0 Lesefehler. Tabellenzeilen
+werden nicht beurteilt: Ohne Kopfzeile ist keine Klammer sicher ein
+Effektintervall - dieselbe Grenze wie E1. Von 281 Quotes der Themen-Laeufe
+sind 34 pruefbar: 28 ok, 6 Luecken. Gelesen sind 5 echte Luecken (jeweils ein
+anderer Outcome im selben Satz) und 1 Grenzfall (Model 1/Model 2). Der
+MENDS-Typ - dasselbe Outcome ueber zwei Messmethoden - trat nicht erneut auf.
+247 Quotes nennen kein CI; dort ist die Pruefung blind. Zusatz: zwei
+identische Zeilen (1,33) in einer exercise-Quote. Details:
+`e4_bestand_20261108.md`.

@@ -69,6 +69,19 @@ class TestFindIntervals(unittest.TestCase):
                                       "ci_high": 44.34}])
         self.assertEqual(report.status, "ok")
 
+    def test_round_bracket_value_range_is_not_an_interval(self):
+        # Real corpus quote: two definitions, not a confidence interval.
+        self.assertEqual(find_intervals(
+            "PRS of lithium response (OR = 1.10\u20131.12 under various "
+            "definitions)."), [])
+
+    def test_round_bracket_interval_after_a_point_estimate_is_found(self):
+        intervals = find_intervals(
+            "odds ratios were 1.64 (1.13 to 2.36) and 2.01 (1.21 to 3.34).")
+        self.assertEqual(len(intervals), 2)
+        self.assertAlmostEqual(intervals[0].low, 1.13)
+        self.assertAlmostEqual(intervals[1].high, 3.34)
+
     def test_p_value_and_spread_brackets_are_not_intervals(self):
         self.assertEqual(find_intervals("The effect was significant (p<0.0001)."), [])
         self.assertEqual(find_intervals("SOL was 10.0 (2.0) minutes."), [])
@@ -124,6 +137,16 @@ class TestAudit(unittest.TestCase):
         self.assertEqual(report.status, "luecke")
         self.assertEqual(report.rejected, 1)
 
+    def test_table_row_is_not_judged(self):
+        # Arm means with their own CI next to the effect: no verdict possible.
+        quote = ("|% Stage REM (primary)|342|16.7 (11.6 to 22.0)|19.0 (14.6 to "
+                 "23.2)|\u22120.22 (\u22120.32 to \u22120.11)|<.001|")
+        row = {"effect": -0.22, "ci_low": -0.32, "ci_high": -0.11,
+               "quote": quote}
+        report = audit_quote(quote, [row])
+        self.assertEqual(report.status, "tabelle")
+        self.assertFalse(report.is_gap)
+
     def test_quote_without_interval_is_not_counted_as_gap(self):
         report = audit_quote("Melatonin reduced SOL in both arms.", [])
         self.assertEqual(report.status, "nicht_pruefbar")
@@ -155,6 +178,12 @@ class TestAuditRows(unittest.TestCase):
     def test_rows_without_quote_are_reported_as_uncheckable(self):
         counts = summarize(audit_rows([{"effect": 1.0, "quote": ""}]))
         self.assertEqual(counts["nicht_pruefbar"], 1)
+        self.assertEqual(counts["luecken"], 0)
+
+    def test_summary_counts_table_rows_separately(self):
+        row = {"effect": -0.22, "quote": "|a|b|-0.22 (-0.32 to -0.11)|"}
+        counts = summarize(audit_rows([row]))
+        self.assertEqual(counts["tabelle"], 1)
         self.assertEqual(counts["luecken"], 0)
 
 

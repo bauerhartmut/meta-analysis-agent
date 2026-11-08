@@ -1,0 +1,1283 @@
+{
+  "test": "E4b-bestand",
+  "stand": "2026-11-08T23:08:00",
+  "modellaufrufe": 0,
+  "tokens": 0,
+  "arbeitsweise": "Dateikopie je DB, gelesen wird nur die Kopie, Original nur read-only geoeffnet (Schema-Check)",
+  "gruppen": {
+    "sonstige": {
+      "dateien": 1,
+      "zeilen": 34,
+      "mit_quote": 18,
+      "quotes": 26,
+      "ok": 0,
+      "luecken": 0,
+      "ohne_zeile": 0,
+      "nicht_pruefbar": 26,
+      "tabelle": 0,
+      "fehlende_intervalle": 0
+    },
+    "pipeline": {
+      "dateien": 55,
+      "zeilen": 7448,
+      "mit_quote": 7354,
+      "quotes": 4218,
+      "ok": 29,
+      "luecken": 6,
+      "ohne_zeile": 0,
+      "nicht_pruefbar": 237,
+      "tabelle": 3946,
+      "fehlende_intervalle": 12
+    },
+    "themen": {
+      "dateien": 9,
+      "zeilen": 415,
+      "mit_quote": 320,
+      "quotes": 281,
+      "ok": 28,
+      "luecken": 6,
+      "ohne_zeile": 0,
+      "nicht_pruefbar": 247,
+      "tabelle": 0,
+      "fehlende_intervalle": 12
+    }
+  },
+  "dateien": [
+    {
+      "datei": "data/backups/research-kognition-vor-dedupe-20261028-165502.db",
+      "gruppe": "sonstige",
+      "spalten": 30,
+      "zeilen_gesamt": 34,
+      "mit_quote": 18,
+      "quellen": 19,
+      "zaehlung": {
+        "quotes": 26,
+        "ok": 0,
+        "luecken": 0,
+        "ohne_zeile": 0,
+        "nicht_pruefbar": 26,
+        "tabelle": 0,
+        "zeilen": 13,
+        "intervalle": 0,
+        "fehlende_intervalle": 0
+      }
+    },
+    {
+      "datei": "data/bench/backfill/run1.db",
+      "gruppe": "pipeline",
+      "spalten": 38,
+      "zeilen_gesamt": 19,
+      "mit_quote": 18,
+      "quellen": 10,
+      "zaehlung": {
+        "quotes": 11,
+        "ok": 0,
+        "luecken": 0,
+        "ohne_zeile": 0,
+        "nicht_pruefbar": 11,
+        "tabelle": 0,
+        "zeilen": 7,
+        "intervalle": 0,
+        "fehlende_intervalle": 0
+      }
+    },
+    {
+      "datei": "data/bench/backfill/run2.db",
+      "gruppe": "pipeline",
+      "spalten": 38,
+      "zeilen_gesamt": 8,
+      "mit_quote": 8,
+      "quellen": 4,
+      "zaehlung": {
+        "quotes": 4,
+        "ok": 1,
+        "luecken": 0,
+        "ohne_zeile": 0,
+        "nicht_pruefbar": 3,
+        "tabelle": 0,
+        "zeilen": 6,
+        "intervalle": 1,
+        "fehlende_intervalle": 0
+      }
+    },
+    {
+      "datei": "data/bench/fixt/fixtures_smoke.db",
+      "gruppe": "pipeline",
+      "spalten": 30,
+      "zeilen_gesamt": 2,
+      "mit_quote": 0,
+      "quellen": 2,
+      "zaehlung": {
+        "quotes": 2,
+        "ok": 0,
+        "luecken": 0,
+        "ohne_zeile": 0,
+        "nicht_pruefbar": 2,
+        "tabelle": 0,
+        "zeilen": 2,
+        "intervalle": 0,
+        "fehlende_intervalle": 0
+      }
+    },
+    {
+      "datei": "data/bench/regreports/research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+      "gruppe": "pipeline",
+      "spalten": 38,
+      "zeilen_gesamt": 129,
+      "mit_quote": 115,
+      "quellen": 67,
+      "zaehlung": {
+        "quotes": 85,
+        "ok": 13,
+        "luecken": 2,
+        "ohne_zeile": 0,
+        "nicht_pruefbar": 70,
+        "tabelle": 0,
+        "zeilen": 79,
+        "intervalle": 20,
+        "fehlende_intervalle": 5
+      }
+    },
+    {
+      "datei": "data/bench/regreports/research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+      "gruppe": "pipeline",
+      "spalten": 38,
+      "zeilen_gesamt": 127,
+      "mit_quote": 77,
+      "quellen": 68,
+      "zaehlung": {
+        "quotes": 87,
+        "ok": 2,
+        "luecken": 0,
+        "ohne_zeile": 0,
+        "nicht_pruefbar": 85,
+        "tabelle": 0,
+        "zeilen": 49,
+        "intervalle": 3,
+        "fehlende_intervalle": 0
+      }
+    },
+    {
+      "datei": "data/bench/regreports/research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+      "gruppe": "pipeline",
+      "spalten": 38,
+      "zeilen_gesamt": 91,
+      "mit_quote": 65,
+      "quellen": 44,
+      "zaehlung": {
+        "quotes": 69,
+        "ok": 12,
+        "luecken": 4,
+        "ohne_zeile": 0,
+        "nicht_pruefbar": 53,
+        "tabelle": 0,
+        "zeilen": 48,
+        "intervalle": 22,
+        "fehlende_intervalle": 7
+      }
+    },
+    {
+      "datei": "data/bench/sol/arm_all.db",
+      "gruppe": "pipeline",
+      "spalten": 38,
+      "zeilen_gesamt": 8,
+      "mit_quote": 8,
+      "quellen": 4,
+      "zaehlung": {
+        "quotes": 8,
+        "ok": 0,
+        "luecken": 0,
+        "ohne_zeile": 0,
+        "nicht_pruefbar": 0,
+        "tabelle": 8,
+        "zeilen": 0,
+        "intervalle": 0,
+        "fehlende_intervalle": 0
+      }
+    },
+    {
+      "datei": "data/bench/sol/arm_gate.db",
+      "gruppe": "pipeline",
+      "spalten": 38,
+      "zeilen_gesamt": 159,
+      "mit_quote": 159,
+      "quellen": 16,
+      "zaehlung": {
+        "quotes": 157,
+        "ok": 0,
+        "luecken": 0,
+        "ohne_zeile": 0,
+        "nicht_pruefbar": 0,
+        "tabelle": 157,
+        "zeilen": 0,
+        "intervalle": 0,
+        "fehlende_intervalle": 0
+      }
+    },
+    {
+      "datei": "data/bench/sol/arm_kopf.db",
+      "gruppe": "pipeline",
+      "spalten": 38,
+      "zeilen_gesamt": 97,
+      "mit_quote": 97,
+      "quellen": 12,
+      "zaehlung": {
+        "quotes": 95,
+        "ok": 0,
+        "luecken": 0,
+        "ohne_zeile": 0,
+        "nicht_pruefbar": 0,
+        "tabelle": 95,
+        "zeilen": 0,
+        "intervalle": 0,
+        "fehlende_intervalle": 0
+      }
+    },
+    {
+      "datei": "data/bench/sol/arm_label.db",
+      "gruppe": "pipeline",
+      "spalten": 38,
+      "zeilen_gesamt": 97,
+      "mit_quote": 97,
+      "quellen": 12,
+      "zaehlung": {
+        "quotes": 95,
+        "ok": 0,
+        "luecken": 0,
+        "ohne_zeile": 0,
+        "nicht_pruefbar": 0,
+        "tabelle": 95,
+        "zeilen": 0,
+        "intervalle": 0,
+        "fehlende_intervalle": 0
+      }
+    },
+    {
+      "datei": "data/bench/sol/arm_label2.db",
+      "gruppe": "pipeline",
+      "spalten": 38,
+      "zeilen_gesamt": 97,
+      "mit_quote": 97,
+      "quellen": 12,
+      "zaehlung": {
+        "quotes": 95,
+        "ok": 0,
+        "luecken": 0,
+        "ohne_zeile": 0,
+        "nicht_pruefbar": 0,
+        "tabelle": 95,
+        "zeilen": 0,
+        "intervalle": 0,
+        "fehlende_intervalle": 0
+      }
+    },
+    {
+      "datei": "data/bench/sol/arm_label2_se.db",
+      "gruppe": "pipeline",
+      "spalten": 38,
+      "zeilen_gesamt": 161,
+      "mit_quote": 161,
+      "quellen": 17,
+      "zaehlung": {
+        "quotes": 159,
+        "ok": 0,
+        "luecken": 0,
+        "ohne_zeile": 0,
+        "nicht_pruefbar": 0,
+        "tabelle": 159,
+        "zeilen": 0,
+        "intervalle": 0,
+        "fehlende_intervalle": 0
+      }
+    },
+    {
+      "datei": "data/bench/sol/arm_level.db",
+      "gruppe": "pipeline",
+      "spalten": 38,
+      "zeilen_gesamt": 23,
+      "mit_quote": 23,
+      "quellen": 3,
+      "zaehlung": {
+        "quotes": 23,
+        "ok": 0,
+        "luecken": 0,
+        "ohne_zeile": 0,
+        "nicht_pruefbar": 0,
+        "tabelle": 23,
+        "zeilen": 0,
+        "intervalle": 0,
+        "fehlende_intervalle": 0
+      }
+    },
+    {
+      "datei": "data/bench/sol/arm_level_gate.db",
+      "gruppe": "pipeline",
+      "spalten": 38,
+      "zeilen_gesamt": 3,
+      "mit_quote": 3,
+      "quellen": 1,
+      "zaehlung": {
+        "quotes": 3,
+        "ok": 0,
+        "luecken": 0,
+        "ohne_zeile": 0,
+        "nicht_pruefbar": 0,
+        "tabelle": 3,
+        "zeilen": 0,
+        "intervalle": 0,
+        "fehlende_intervalle": 0
+      }
+    },
+    {
+      "datei": "data/bench/sol/arm_q1.db",
+      "gruppe": "pipeline",
+      "spalten": 38,
+      "zeilen_gesamt": 14,
+      "mit_quote": 14,
+      "quellen": 2,
+      "zaehlung": {
+        "quotes": 14,
+        "ok": 0,
+        "luecken": 0,
+        "ohne_zeile": 0,
+        "nicht_pruefbar": 0,
+        "tabelle": 14,
+        "zeilen": 0,
+        "intervalle": 0,
+        "fehlende_intervalle": 0
+      }
+    },
+    {
+      "datei": "data/bench/sol/arm_q1_se.db",
+      "gruppe": "pipeline",
+      "spalten": 38,
+      "zeilen_gesamt": 14,
+      "mit_quote": 14,
+      "quellen": 2,
+      "zaehlung": {
+        "quotes": 14,
+        "ok": 0,
+        "luecken": 0,
+        "ohne_zeile": 0,
+        "nicht_pruefbar": 0,
+        "tabelle": 14,
+        "zeilen": 0,
+        "intervalle": 0,
+        "fehlende_intervalle": 0
+      }
+    },
+    {
+      "datei": "data/bench/sol/change_arms.db",
+      "gruppe": "pipeline",
+      "spalten": 38,
+      "zeilen_gesamt": 1,
+      "mit_quote": 1,
+      "quellen": 1,
+      "zaehlung": {
+        "quotes": 1,
+        "ok": 0,
+        "luecken": 0,
+        "ohne_zeile": 0,
+        "nicht_pruefbar": 1,
+        "tabelle": 0,
+        "zeilen": 1,
+        "intervalle": 0,
+        "fehlende_intervalle": 0
+      }
+    },
+    {
+      "datei": "data/bench/sol/direct.db",
+      "gruppe": "pipeline",
+      "spalten": 38,
+      "zeilen_gesamt": 15,
+      "mit_quote": 15,
+      "quellen": 1,
+      "zaehlung": {
+        "quotes": 15,
+        "ok": 0,
+        "luecken": 0,
+        "ohne_zeile": 0,
+        "nicht_pruefbar": 0,
+        "tabelle": 15,
+        "zeilen": 0,
+        "intervalle": 0,
+        "fehlende_intervalle": 0
+      }
+    },
+    {
+      "datei": "data/bench/sol/direct_all.db",
+      "gruppe": "pipeline",
+      "spalten": 38,
+      "zeilen_gesamt": 513,
+      "mit_quote": 513,
+      "quellen": 18,
+      "zaehlung": {
+        "quotes": 244,
+        "ok": 0,
+        "luecken": 0,
+        "ohne_zeile": 0,
+        "nicht_pruefbar": 0,
+        "tabelle": 244,
+        "zeilen": 0,
+        "intervalle": 0,
+        "fehlende_intervalle": 0
+      }
+    },
+    {
+      "datei": "data/bench/sol/direct_design.db",
+      "gruppe": "pipeline",
+      "spalten": 38,
+      "zeilen_gesamt": 838,
+      "mit_quote": 838,
+      "quellen": 33,
+      "zaehlung": {
+        "quotes": 408,
+        "ok": 0,
+        "luecken": 0,
+        "ohne_zeile": 0,
+        "nicht_pruefbar": 0,
+        "tabelle": 408,
+        "zeilen": 0,
+        "intervalle": 0,
+        "fehlende_intervalle": 0
+      }
+    },
+    {
+      "datei": "data/bench/sol/direct_gate.db",
+      "gruppe": "pipeline",
+      "spalten": 38,
+      "zeilen_gesamt": 987,
+      "mit_quote": 987,
+      "quellen": 40,
+      "zaehlung": {
+        "quotes": 509,
+        "ok": 0,
+        "luecken": 0,
+        "ohne_zeile": 0,
+        "nicht_pruefbar": 0,
+        "tabelle": 509,
+        "zeilen": 0,
+        "intervalle": 0,
+        "fehlende_intervalle": 0
+      }
+    },
+    {
+      "datei": "data/bench/sol/direct_kopf.db",
+      "gruppe": "pipeline",
+      "spalten": 38,
+      "zeilen_gesamt": 1000,
+      "mit_quote": 1000,
+      "quellen": 41,
+      "zaehlung": {
+        "quotes": 521,
+        "ok": 0,
+        "luecken": 0,
+        "ohne_zeile": 0,
+        "nicht_pruefbar": 0,
+        "tabelle": 521,
+        "zeilen": 0,
+        "intervalle": 0,
+        "fehlende_intervalle": 0
+      }
+    },
+    {
+      "datei": "data/bench/sol/direct_label.db",
+      "gruppe": "pipeline",
+      "spalten": 38,
+      "zeilen_gesamt": 1000,
+      "mit_quote": 1000,
+      "quellen": 41,
+      "zaehlung": {
+        "quotes": 521,
+        "ok": 0,
+        "luecken": 0,
+        "ohne_zeile": 0,
+        "nicht_pruefbar": 0,
+        "tabelle": 521,
+        "zeilen": 0,
+        "intervalle": 0,
+        "fehlende_intervalle": 0
+      }
+    },
+    {
+      "datei": "data/bench/sol/direct_label2.db",
+      "gruppe": "pipeline",
+      "spalten": 38,
+      "zeilen_gesamt": 1000,
+      "mit_quote": 1000,
+      "quellen": 41,
+      "zaehlung": {
+        "quotes": 521,
+        "ok": 0,
+        "luecken": 0,
+        "ohne_zeile": 0,
+        "nicht_pruefbar": 0,
+        "tabelle": 521,
+        "zeilen": 0,
+        "intervalle": 0,
+        "fehlende_intervalle": 0
+      }
+    },
+    {
+      "datei": "data/bench/sol/direct_paired.db",
+      "gruppe": "pipeline",
+      "spalten": 38,
+      "zeilen_gesamt": 838,
+      "mit_quote": 838,
+      "quellen": 33,
+      "zaehlung": {
+        "quotes": 408,
+        "ok": 0,
+        "luecken": 0,
+        "ohne_zeile": 0,
+        "nicht_pruefbar": 0,
+        "tabelle": 408,
+        "zeilen": 0,
+        "intervalle": 0,
+        "fehlende_intervalle": 0
+      }
+    },
+    {
+      "datei": "data/bench/sol/direct_q1.db",
+      "gruppe": "pipeline",
+      "spalten": 38,
+      "zeilen_gesamt": 28,
+      "mit_quote": 28,
+      "quellen": 1,
+      "zaehlung": {
+        "quotes": 10,
+        "ok": 0,
+        "luecken": 0,
+        "ohne_zeile": 0,
+        "nicht_pruefbar": 0,
+        "tabelle": 10,
+        "zeilen": 0,
+        "intervalle": 0,
+        "fehlende_intervalle": 0
+      }
+    },
+    {
+      "datei": "data/bench/sol/korpus3_arm.db",
+      "gruppe": "pipeline",
+      "spalten": 38,
+      "zeilen_gesamt": 0,
+      "mit_quote": 0,
+      "quellen": 0,
+      "zaehlung": {
+        "quotes": 0,
+        "ok": 0,
+        "luecken": 0,
+        "ohne_zeile": 0,
+        "nicht_pruefbar": 0,
+        "tabelle": 0,
+        "zeilen": 0,
+        "intervalle": 0,
+        "fehlende_intervalle": 0
+      }
+    },
+    {
+      "datei": "data/bench/sol/korpus3_direct.db",
+      "gruppe": "pipeline",
+      "spalten": 38,
+      "zeilen_gesamt": 0,
+      "mit_quote": 0,
+      "quellen": 0,
+      "zaehlung": {
+        "quotes": 0,
+        "ok": 0,
+        "luecken": 0,
+        "ohne_zeile": 0,
+        "nicht_pruefbar": 0,
+        "tabelle": 0,
+        "zeilen": 0,
+        "intervalle": 0,
+        "fehlende_intervalle": 0
+      }
+    },
+    {
+      "datei": "data/bench/sol/seed_arm.db",
+      "gruppe": "pipeline",
+      "spalten": 38,
+      "zeilen_gesamt": 0,
+      "mit_quote": 0,
+      "quellen": 0,
+      "zaehlung": {
+        "quotes": 0,
+        "ok": 0,
+        "luecken": 0,
+        "ohne_zeile": 0,
+        "nicht_pruefbar": 0,
+        "tabelle": 0,
+        "zeilen": 0,
+        "intervalle": 0,
+        "fehlende_intervalle": 0
+      }
+    },
+    {
+      "datei": "data/bench/sol/seed_change.db",
+      "gruppe": "pipeline",
+      "spalten": 38,
+      "zeilen_gesamt": 0,
+      "mit_quote": 0,
+      "quellen": 0,
+      "zaehlung": {
+        "quotes": 0,
+        "ok": 0,
+        "luecken": 0,
+        "ohne_zeile": 0,
+        "nicht_pruefbar": 0,
+        "tabelle": 0,
+        "zeilen": 0,
+        "intervalle": 0,
+        "fehlende_intervalle": 0
+      }
+    },
+    {
+      "datei": "data/bench/sol/seed_text.db",
+      "gruppe": "pipeline",
+      "spalten": 38,
+      "zeilen_gesamt": 0,
+      "mit_quote": 0,
+      "quellen": 0,
+      "zaehlung": {
+        "quotes": 0,
+        "ok": 0,
+        "luecken": 0,
+        "ohne_zeile": 0,
+        "nicht_pruefbar": 0,
+        "tabelle": 0,
+        "zeilen": 0,
+        "intervalle": 0,
+        "fehlende_intervalle": 0
+      }
+    },
+    {
+      "datei": "data/bench/sol/text_arms.db",
+      "gruppe": "pipeline",
+      "spalten": 38,
+      "zeilen_gesamt": 1,
+      "mit_quote": 1,
+      "quellen": 1,
+      "zaehlung": {
+        "quotes": 1,
+        "ok": 0,
+        "luecken": 0,
+        "ohne_zeile": 0,
+        "nicht_pruefbar": 1,
+        "tabelle": 0,
+        "zeilen": 1,
+        "intervalle": 0,
+        "fehlende_intervalle": 0
+      }
+    },
+    {
+      "datei": "data/bench/sol/xml_fetch_ncbi_arm.db",
+      "gruppe": "pipeline",
+      "spalten": 38,
+      "zeilen_gesamt": 0,
+      "mit_quote": 0,
+      "quellen": 0,
+      "zaehlung": {
+        "quotes": 0,
+        "ok": 0,
+        "luecken": 0,
+        "ohne_zeile": 0,
+        "nicht_pruefbar": 0,
+        "tabelle": 0,
+        "zeilen": 0,
+        "intervalle": 0,
+        "fehlende_intervalle": 0
+      }
+    },
+    {
+      "datei": "data/bench/sol/xml_fetch_ncbi_direct.db",
+      "gruppe": "pipeline",
+      "spalten": 38,
+      "zeilen_gesamt": 0,
+      "mit_quote": 0,
+      "quellen": 0,
+      "zaehlung": {
+        "quotes": 0,
+        "ok": 0,
+        "luecken": 0,
+        "ohne_zeile": 0,
+        "nicht_pruefbar": 0,
+        "tabelle": 0,
+        "zeilen": 0,
+        "intervalle": 0,
+        "fehlende_intervalle": 0
+      }
+    },
+    {
+      "datei": "data/bench/sol2/arm_level.db",
+      "gruppe": "pipeline",
+      "spalten": 38,
+      "zeilen_gesamt": 13,
+      "mit_quote": 13,
+      "quellen": 2,
+      "zaehlung": {
+        "quotes": 13,
+        "ok": 0,
+        "luecken": 0,
+        "ohne_zeile": 0,
+        "nicht_pruefbar": 0,
+        "tabelle": 13,
+        "zeilen": 0,
+        "intervalle": 0,
+        "fehlende_intervalle": 0
+      }
+    },
+    {
+      "datei": "data/bench/sol2/direct.db",
+      "gruppe": "pipeline",
+      "spalten": 38,
+      "zeilen_gesamt": 16,
+      "mit_quote": 16,
+      "quellen": 2,
+      "zaehlung": {
+        "quotes": 16,
+        "ok": 0,
+        "luecken": 0,
+        "ohne_zeile": 0,
+        "nicht_pruefbar": 0,
+        "tabelle": 16,
+        "zeilen": 0,
+        "intervalle": 0,
+        "fehlende_intervalle": 0
+      }
+    },
+    {
+      "datei": "data/bench/sol2/direct_unit.db",
+      "gruppe": "pipeline",
+      "spalten": 38,
+      "zeilen_gesamt": 0,
+      "mit_quote": 0,
+      "quellen": 0,
+      "zaehlung": {
+        "quotes": 0,
+        "ok": 0,
+        "luecken": 0,
+        "ohne_zeile": 0,
+        "nicht_pruefbar": 0,
+        "tabelle": 0,
+        "zeilen": 0,
+        "intervalle": 0,
+        "fehlende_intervalle": 0
+      }
+    },
+    {
+      "datei": "data/bench/sol2/extended.db",
+      "gruppe": "pipeline",
+      "spalten": 38,
+      "zeilen_gesamt": 2,
+      "mit_quote": 2,
+      "quellen": 1,
+      "zaehlung": {
+        "quotes": 2,
+        "ok": 0,
+        "luecken": 0,
+        "ohne_zeile": 0,
+        "nicht_pruefbar": 0,
+        "tabelle": 2,
+        "zeilen": 0,
+        "intervalle": 0,
+        "fehlende_intervalle": 0
+      }
+    },
+    {
+      "datei": "data/bench/sol2/gegencheck/nachher.db",
+      "gruppe": "pipeline",
+      "spalten": 38,
+      "zeilen_gesamt": 0,
+      "mit_quote": 0,
+      "quellen": 0,
+      "zaehlung": {
+        "quotes": 0,
+        "ok": 0,
+        "luecken": 0,
+        "ohne_zeile": 0,
+        "nicht_pruefbar": 0,
+        "tabelle": 0,
+        "zeilen": 0,
+        "intervalle": 0,
+        "fehlende_intervalle": 0
+      }
+    },
+    {
+      "datei": "data/bench/sol2/gegencheck/vorher.db",
+      "gruppe": "pipeline",
+      "spalten": 38,
+      "zeilen_gesamt": 0,
+      "mit_quote": 0,
+      "quellen": 0,
+      "zaehlung": {
+        "quotes": 0,
+        "ok": 0,
+        "luecken": 0,
+        "ohne_zeile": 0,
+        "nicht_pruefbar": 0,
+        "tabelle": 0,
+        "zeilen": 0,
+        "intervalle": 0,
+        "fehlende_intervalle": 0
+      }
+    },
+    {
+      "datei": "data/bench/sol2/pdf.db",
+      "gruppe": "pipeline",
+      "spalten": 38,
+      "zeilen_gesamt": 0,
+      "mit_quote": 0,
+      "quellen": 0,
+      "zaehlung": {
+        "quotes": 0,
+        "ok": 0,
+        "luecken": 0,
+        "ohne_zeile": 0,
+        "nicht_pruefbar": 0,
+        "tabelle": 0,
+        "zeilen": 0,
+        "intervalle": 0,
+        "fehlende_intervalle": 0
+      }
+    },
+    {
+      "datei": "data/bench/sol2/pdf_probe.db",
+      "gruppe": "pipeline",
+      "spalten": 38,
+      "zeilen_gesamt": 0,
+      "mit_quote": 0,
+      "quellen": 0,
+      "zaehlung": {
+        "quotes": 0,
+        "ok": 0,
+        "luecken": 0,
+        "ohne_zeile": 0,
+        "nicht_pruefbar": 0,
+        "tabelle": 0,
+        "zeilen": 0,
+        "intervalle": 0,
+        "fehlende_intervalle": 0
+      }
+    },
+    {
+      "datei": "data/bench/sol2/probelauf/probelauf.db",
+      "gruppe": "pipeline",
+      "spalten": 38,
+      "zeilen_gesamt": 3,
+      "mit_quote": 3,
+      "quellen": 3,
+      "zaehlung": {
+        "quotes": 3,
+        "ok": 0,
+        "luecken": 0,
+        "ohne_zeile": 0,
+        "nicht_pruefbar": 3,
+        "tabelle": 0,
+        "zeilen": 3,
+        "intervalle": 0,
+        "fehlende_intervalle": 0
+      }
+    },
+    {
+      "datei": "data/bench/sol2/probelauf_bindestrich/bindestrich.db",
+      "gruppe": "pipeline",
+      "spalten": 38,
+      "zeilen_gesamt": 1,
+      "mit_quote": 1,
+      "quellen": 1,
+      "zaehlung": {
+        "quotes": 1,
+        "ok": 0,
+        "luecken": 0,
+        "ohne_zeile": 0,
+        "nicht_pruefbar": 1,
+        "tabelle": 0,
+        "zeilen": 1,
+        "intervalle": 0,
+        "fehlende_intervalle": 0
+      }
+    },
+    {
+      "datei": "data/bench/sol2/scanprobe_kette.db",
+      "gruppe": "pipeline",
+      "spalten": 38,
+      "zeilen_gesamt": 0,
+      "mit_quote": 0,
+      "quellen": 0,
+      "zaehlung": {
+        "quotes": 0,
+        "ok": 0,
+        "luecken": 0,
+        "ohne_zeile": 0,
+        "nicht_pruefbar": 0,
+        "tabelle": 0,
+        "zeilen": 0,
+        "intervalle": 0,
+        "fehlende_intervalle": 0
+      }
+    },
+    {
+      "datei": "data/bench/sol2/testfall_pipeline/diag_leerzeichen/d.db",
+      "gruppe": "pipeline",
+      "spalten": 38,
+      "zeilen_gesamt": 2,
+      "mit_quote": 2,
+      "quellen": 1,
+      "zaehlung": {
+        "quotes": 1,
+        "ok": 1,
+        "luecken": 0,
+        "ohne_zeile": 0,
+        "nicht_pruefbar": 0,
+        "tabelle": 0,
+        "zeilen": 2,
+        "intervalle": 2,
+        "fehlende_intervalle": 0
+      }
+    },
+    {
+      "datei": "data/bench/sol2/testfall_pipeline/leer/pdf.db",
+      "gruppe": "pipeline",
+      "spalten": 38,
+      "zeilen_gesamt": 0,
+      "mit_quote": 0,
+      "quellen": 0,
+      "zaehlung": {
+        "quotes": 0,
+        "ok": 0,
+        "luecken": 0,
+        "ohne_zeile": 0,
+        "nicht_pruefbar": 0,
+        "tabelle": 0,
+        "zeilen": 0,
+        "intervalle": 0,
+        "fehlende_intervalle": 0
+      }
+    },
+    {
+      "datei": "data/bench/sol2/testfall_pipeline/pdf.db",
+      "gruppe": "pipeline",
+      "spalten": 38,
+      "zeilen_gesamt": 3,
+      "mit_quote": 3,
+      "quellen": 2,
+      "zaehlung": {
+        "quotes": 2,
+        "ok": 0,
+        "luecken": 0,
+        "ohne_zeile": 0,
+        "nicht_pruefbar": 1,
+        "tabelle": 1,
+        "zeilen": 1,
+        "intervalle": 0,
+        "fehlende_intervalle": 0
+      }
+    },
+    {
+      "datei": "data/bench/sol2/text_arms.db",
+      "gruppe": "pipeline",
+      "spalten": 38,
+      "zeilen_gesamt": 0,
+      "mit_quote": 0,
+      "quellen": 0,
+      "zaehlung": {
+        "quotes": 0,
+        "ok": 0,
+        "luecken": 0,
+        "ohne_zeile": 0,
+        "nicht_pruefbar": 0,
+        "tabelle": 0,
+        "zeilen": 0,
+        "intervalle": 0,
+        "fehlende_intervalle": 0
+      }
+    },
+    {
+      "datei": "data/bench/xml6/arm_level.db",
+      "gruppe": "pipeline",
+      "spalten": 38,
+      "zeilen_gesamt": 0,
+      "mit_quote": 0,
+      "quellen": 0,
+      "zaehlung": {
+        "quotes": 0,
+        "ok": 0,
+        "luecken": 0,
+        "ohne_zeile": 0,
+        "nicht_pruefbar": 0,
+        "tabelle": 0,
+        "zeilen": 0,
+        "intervalle": 0,
+        "fehlende_intervalle": 0
+      }
+    },
+    {
+      "datei": "data/bench/xml6/direct.db",
+      "gruppe": "pipeline",
+      "spalten": 38,
+      "zeilen_gesamt": 31,
+      "mit_quote": 31,
+      "quellen": 2,
+      "zaehlung": {
+        "quotes": 23,
+        "ok": 0,
+        "luecken": 0,
+        "ohne_zeile": 0,
+        "nicht_pruefbar": 0,
+        "tabelle": 23,
+        "zeilen": 0,
+        "intervalle": 0,
+        "fehlende_intervalle": 0
+      }
+    },
+    {
+      "datei": "data/bench/xml6/extract.db",
+      "gruppe": "pipeline",
+      "spalten": 38,
+      "zeilen_gesamt": 14,
+      "mit_quote": 13,
+      "quellen": 6,
+      "zaehlung": {
+        "quotes": 8,
+        "ok": 0,
+        "luecken": 0,
+        "ohne_zeile": 0,
+        "nicht_pruefbar": 6,
+        "tabelle": 2,
+        "zeilen": 2,
+        "intervalle": 0,
+        "fehlende_intervalle": 0
+      }
+    },
+    {
+      "datei": "data/bench/xml_all/direct.db",
+      "gruppe": "pipeline",
+      "spalten": 38,
+      "zeilen_gesamt": 31,
+      "mit_quote": 31,
+      "quellen": 2,
+      "zaehlung": {
+        "quotes": 23,
+        "ok": 0,
+        "luecken": 0,
+        "ohne_zeile": 0,
+        "nicht_pruefbar": 0,
+        "tabelle": 23,
+        "zeilen": 0,
+        "intervalle": 0,
+        "fehlende_intervalle": 0
+      }
+    },
+    {
+      "datei": "data/bench/xml_all/direct_fix.db",
+      "gruppe": "pipeline",
+      "spalten": 38,
+      "zeilen_gesamt": 31,
+      "mit_quote": 31,
+      "quellen": 2,
+      "zaehlung": {
+        "quotes": 23,
+        "ok": 0,
+        "luecken": 0,
+        "ohne_zeile": 0,
+        "nicht_pruefbar": 0,
+        "tabelle": 23,
+        "zeilen": 0,
+        "intervalle": 0,
+        "fehlende_intervalle": 0
+      }
+    },
+    {
+      "datei": "data/bench/xml_all/direct_md.db",
+      "gruppe": "pipeline",
+      "spalten": 38,
+      "zeilen_gesamt": 31,
+      "mit_quote": 31,
+      "quellen": 2,
+      "zaehlung": {
+        "quotes": 23,
+        "ok": 0,
+        "luecken": 0,
+        "ohne_zeile": 0,
+        "nicht_pruefbar": 0,
+        "tabelle": 23,
+        "zeilen": 0,
+        "intervalle": 0,
+        "fehlende_intervalle": 0
+      }
+    },
+    {
+      "datei": "data/harness_local.db",
+      "gruppe": "themen",
+      "spalten": 38,
+      "zeilen_gesamt": 21,
+      "mit_quote": 20,
+      "quellen": 9,
+      "zaehlung": {
+        "quotes": 12,
+        "ok": 0,
+        "luecken": 0,
+        "ohne_zeile": 0,
+        "nicht_pruefbar": 12,
+        "tabelle": 0,
+        "zeilen": 9,
+        "intervalle": 0,
+        "fehlende_intervalle": 0
+      }
+    },
+    {
+      "datei": "data/research-does-acute-caffeine-versus-placebo-affec-972eac.db",
+      "gruppe": "themen",
+      "spalten": 34,
+      "zeilen_gesamt": 8,
+      "mit_quote": 8,
+      "quellen": 4,
+      "zaehlung": {
+        "quotes": 4,
+        "ok": 0,
+        "luecken": 0,
+        "ohne_zeile": 0,
+        "nicht_pruefbar": 4,
+        "tabelle": 0,
+        "zeilen": 2,
+        "intervalle": 0,
+        "fehlende_intervalle": 0
+      }
+    },
+    {
+      "datei": "data/research-does-caffeine-intake-affect-short-term-m-783a51.db",
+      "gruppe": "themen",
+      "spalten": 34,
+      "zeilen_gesamt": 12,
+      "mit_quote": 9,
+      "quellen": 7,
+      "zaehlung": {
+        "quotes": 9,
+        "ok": 0,
+        "luecken": 0,
+        "ohne_zeile": 0,
+        "nicht_pruefbar": 9,
+        "tabelle": 0,
+        "zeilen": 1,
+        "intervalle": 0,
+        "fehlende_intervalle": 0
+      }
+    },
+    {
+      "datei": "data/research-does-melatonin-improve-sleep-onset-laten-382747.db",
+      "gruppe": "themen",
+      "spalten": 38,
+      "zeilen_gesamt": 19,
+      "mit_quote": 18,
+      "quellen": 10,
+      "zaehlung": {
+        "quotes": 11,
+        "ok": 0,
+        "luecken": 0,
+        "ohne_zeile": 0,
+        "nicht_pruefbar": 11,
+        "tabelle": 0,
+        "zeilen": 7,
+        "intervalle": 0,
+        "fehlende_intervalle": 0
+      }
+    },
+    {
+      "datei": "data/research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+      "gruppe": "themen",
+      "spalten": 30,
+      "zeilen_gesamt": 129,
+      "mit_quote": 115,
+      "quellen": 67,
+      "zaehlung": {
+        "quotes": 85,
+        "ok": 13,
+        "luecken": 2,
+        "ohne_zeile": 0,
+        "nicht_pruefbar": 70,
+        "tabelle": 0,
+        "zeilen": 79,
+        "intervalle": 20,
+        "fehlende_intervalle": 5
+      }
+    },
+    {
+      "datei": "data/research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+      "gruppe": "themen",
+      "spalten": 30,
+      "zeilen_gesamt": 127,
+      "mit_quote": 77,
+      "quellen": 68,
+      "zaehlung": {
+        "quotes": 87,
+        "ok": 2,
+        "luecken": 0,
+        "ohne_zeile": 0,
+        "nicht_pruefbar": 85,
+        "tabelle": 0,
+        "zeilen": 49,
+        "intervalle": 3,
+        "fehlende_intervalle": 0
+      }
+    },
+    {
+      "datei": "data/research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+      "gruppe": "themen",
+      "spalten": 30,
+      "zeilen_gesamt": 91,
+      "mit_quote": 65,
+      "quellen": 44,
+      "zaehlung": {
+        "quotes": 69,
+        "ok": 12,
+        "luecken": 4,
+        "ohne_zeile": 0,
+        "nicht_pruefbar": 53,
+        "tabelle": 0,
+        "zeilen": 48,
+        "intervalle": 22,
+        "fehlende_intervalle": 7
+      }
+    },
+    {
+      "datei": "data/research.db",
+      "gruppe": "themen",
+      "spalten": 30,
+      "zeilen_gesamt": 0,
+      "mit_quote": 0,
+      "quellen": 0,
+      "zaehlung": {
+        "quotes": 0,
+        "ok": 0,
+        "luecken": 0,
+        "ohne_zeile": 0,
+        "nicht_pruefbar": 0,
+        "tabelle": 0,
+        "zeilen": 0,
+        "intervalle": 0,
+        "fehlende_intervalle": 0
+      }
+    },
+    {
+      "datei": "data/research2-does-melatonin-improve-sleep-onset-laten-382747.db",
+      "gruppe": "themen",
+      "spalten": 38,
+      "zeilen_gesamt": 8,
+      "mit_quote": 8,
+      "quellen": 4,
+      "zaehlung": {
+        "quotes": 4,
+        "ok": 1,
+        "luecken": 0,
+        "ohne_zeile": 0,
+        "nicht_pruefbar": 3,
+        "tabelle": 0,
+        "zeilen": 6,
+        "intervalle": 1,
+        "fehlende_intervalle": 0
+      }
+    }
+  ],
+  "fehler": []
+}

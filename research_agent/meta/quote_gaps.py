@@ -184,6 +184,14 @@ def find_intervals(text: str) -> List[Interval]:
                                   end=end, low=low, high=high, point=point))
             continue
 
+        # Ein Bereich ohne CI-Label zaehlt in runden Klammern nur, wenn ein
+        # Punkt-Schaetzer direkt davor steht: "1.64 (1.13 to 2.36)" ist ein
+        # Intervall, "(OR = 1.10-1.12 under various definitions)" ein
+        # Wertebereich - der haeufigste Fehlalarm im Bestand.
+        if (text or "")[start] != "[":
+            before = (text or "")[:start].rstrip()
+            if not re.search(rf"{_NUM}$", before):
+                continue
         numbers = list(_NUMBER.finditer(content))
         if len(numbers) != 2 or _BLOCKED.search(content):
             continue
@@ -222,6 +230,14 @@ def audit_quote(quote: str, rows: Sequence[dict], tol: float = 0.02) -> GapRepor
     """Vergleicht die Intervalle einer Quote mit ihren Extraktionszeilen."""
 
     text = " ".join(str(quote or "").split())
+    if text.count("|") >= 2:
+        # Eine Tabellenzeile mischt Arm-Mittelwerte, Streuungen und den Effekt
+        # nebeneinander ("16.7 (11.6 to 22.0)|19.0 (14.6 to 23.2)|-0.22 ...").
+        # Ohne Kopfzeile ist keine dieser Klammern sicher ein Effektintervall -
+        # dieselbe Grenze, an der E1 scheitert. Also nicht urteilen.
+        return GapReport(quote=text, status="tabelle",
+                         message="Tabellenzeile - ohne Kopfzeile nicht trennbar, "
+                                 "nicht geprueft")
     intervals = tuple(find_intervals(text))
     rows = list(rows or [])
     rejected = sum(1 for r in rows if str(r.get("rejection_reason") or "").strip())
@@ -292,6 +308,7 @@ def summarize(reports: Sequence[GapReport]) -> Dict[str, int]:
         "luecken": sum(1 for r in reports if r.status == "luecke"),
         "ohne_zeile": sum(1 for r in reports if r.status == "keine_zeile"),
         "nicht_pruefbar": sum(1 for r in reports if r.status == "nicht_pruefbar"),
+        "tabelle": sum(1 for r in reports if r.status == "tabelle"),
         "zeilen": sum(r.rows for r in reports),
         "intervalle": sum(len(r.intervals) for r in reports),
         "fehlende_intervalle": sum(len(r.missing) for r in reports),

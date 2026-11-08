@@ -1,6 +1,6 @@
 {
   "test": "E4-quote-luecken",
-  "stand": "2026-11-08T23:01:15",
+  "stand": "2026-11-08T23:08:00",
   "modellaufrufe": 0,
   "tokens": 0,
   "datei": "data/bench/sol2/volltext/23098680.txt",
@@ -22,6 +22,7 @@
         "luecken": 0,
         "ohne_zeile": 0,
         "nicht_pruefbar": 0,
+        "tabelle": 0,
         "zeilen": 1,
         "intervalle": 1,
         "fehlende_intervalle": 0
@@ -52,6 +53,7 @@
         "luecken": 1,
         "ohne_zeile": 0,
         "nicht_pruefbar": 0,
+        "tabelle": 0,
         "zeilen": 1,
         "intervalle": 2,
         "fehlende_intervalle": 1
@@ -85,6 +87,7 @@
         "luecken": 1,
         "ohne_zeile": 0,
         "nicht_pruefbar": 0,
+        "tabelle": 0,
         "zeilen": 1,
         "intervalle": 2,
         "fehlende_intervalle": 1
