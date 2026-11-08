@@ -241,6 +241,42 @@ Dosierung verschiebt den Effekt um 2 bis 12 min.
   Risiko: Der Punktschaetzer ist nur fuer die beschaffbaren Studien
   gueltig.
 
+### Nachtrag: der Tabellenleser erreicht S1 nicht
+
+Das ist keine Rechenunsicherheit, sondern eine Eigenschaft der
+Datenaufnahme - hier festgehalten, damit sie nicht als stiller Fehler
+weiterlaeuft.
+
+- **Befund.** In `volltext/23098680.txt` (MENDS) werden 48
+  Tabellenbloecke erkannt. Kein einziger Kopf enthaelt Effektwort und KI
+  (47-mal beides nicht, 1-mal KI ohne Effektwort); die Koepfe sind
+  Fragmente von Baseline-, Labor- und Missing-Data-Tabellen. Die
+  SOL-Zeile in Block 6 lautet
+  `SOL (minutes) | -3.71 (47.37) | (p=0.007) | (p<0.0001)` - das ist der
+  Placebo-Change-Wert aus HTA-Tabelle 7, kein Effekt mit Intervall.
+- **Wo der Effekt steht.** Als Satz im Fliesstext: "the mean difference
+  ... was -37.49 minutes (95% CI -55.27 to -19.71 minutes)" fuer das
+  Schlaftagebuch und "-45.34 minutes (95% CI -68.75 to -21.93 minutes)"
+  fuer die Aktigraphie, beide adjustiert fuer die Baseline.
+- **Folge.** `effects_from_row` arbeitet ausschliesslich auf Zeilen
+  erkannter Bloecke; ein Satz ist kein Block. S1 wird von der Automatik
+  also nicht gelesen, obwohl die Zahl im Volltext steht. Die Extraktion
+  stuetzt sich deshalb auf HTA-Tabelle 7, wo dieselbe adjustierte
+  Differenz von -37,49 (SE 9,08) berichtet wird
+  (`mends_hta_zusatz_20261108.md`).
+- **Nicht betroffen.** Der gepoolte Wert -26,29 min beruht nicht auf
+  einer automatisch gelesenen Zeile, sondern auf der dokumentierten
+  Tabellenextraktion. Der Volltextsatz bestaetigt ihn nachtraeglich; die
+  Zahl ist belegt, nicht geschaetzt.
+- **Grenze fuer die Erweiterung.** Ein Fliesstext-Leser wuerde aus
+  demselben Satz zwei Effekte liefern (Tagebuch und Aktigraphie). Ohne
+  Duplikatpruefung entstuende daraus eine Doppelzaehlung von S1, die die
+  Schaetzung still verzerrt. Deshalb bleibt es bei der dokumentierten
+  Einzelextraktion je Design statt bei einer automatischen Satzsuche.
+
+Beleg: `gegencheck/mends_kopf_20261108.md` (Blockstatistik, SOL-Zeilen,
+beide Satzfunde). Read-only erhoben, kein Netz, kein Modell.
+
 ### Welche Schluesse sind bei k = 3 zulaessig?
 
 **Zulaessig:**

@@ -52,6 +52,22 @@ ausschliesslich Material: 83 Dokumente ohne Volltext.
    Extraktionsformular mit 54 Feldern und CSV-Vorlage, an S1-S3 getestet und
    per SHA-256 eingefroren; Triage der 20 B-Dokumente; Bestellliste.
 
+## Bekannte Luecke der Textaufnahme
+
+S1 (MENDS) ist im Volltext belegt, wird von der Tabellenautomatik aber
+nicht gelesen. Der Bericht nennt die Einschaflatenz-Schaetzung nur im
+Satz: -37,49 min (95%-KI -55,27 bis -19,71, Schlaftagebuch) und
+-45,34 min (-68,75 bis -21,93, Aktigraphie). Die Tabellenzeile traegt
+lediglich Change-Werte (-3,71 (47,37) mit p-Werten); von 48 erkannten
+Bloecken hat kein Kopf Effektwort und KI.
+
+Fuer die Analyse ist das folgenlos - S1 stammt aus HTA-Tabelle 7
+(`mends_hta_zusatz_20261108.md`), und der Volltextsaetze bestaetigt die
+Zahl. Fuer die Automatisierung ist es die Grenze: Ein Fliesstext-Leser
+muesste zwei Effekte im selben Satz trennen, sonst wird S1 doppelt
+gezaehlt. Eine solche Erweiterung ist bewusst nicht gebaut.
+Befund: `gegencheck/mends_kopf_20261108.md`.
+
 ## Was offen bleibt
 
 | Offen | Blockiert durch | Was es bringt |
