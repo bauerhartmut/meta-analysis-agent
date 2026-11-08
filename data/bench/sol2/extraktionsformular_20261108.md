@@ -182,5 +182,11 @@ die gepoolte Unsicherheit um den Faktor 3,3.
 2. Jede Zahl hat `fundstelle` und `zitat`.
 3. `streuungsart` ist bei jeder Zeile gesetzt.
 4. Bei Crossover sind `washout`, `periodeneffekt` und `r_geschaetzt` gefüllt.
-5. Die Summe der Armgrößen stimmt mit `n_analysiert` überein.
+5. Die Summe der **verwendeten** Arme stimmt mit `n_analysiert` überein. Bei
+   Mehrarmstudien zählt nur die ausgewählte Dosis (S3: 16 + 17 = 33, nicht
+   72); die nicht verwendeten Arme stehen in `anmerkung`.
 6. Vorzeichen und Einheit sind über alle Zeilen gleich.
+7. Der Freeze-Check läuft ohne Abweichung:
+   `.venv/bin/python.exe scripts/freeze_extraktion.py --check`. Eine
+   eingefrorene Zeile darf nur mit neuer, datierter Version geändert werden,
+   nicht stillschweigend.

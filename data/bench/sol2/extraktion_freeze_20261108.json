@@ -1,0 +1,11 @@
+{
+  "stand": "2026-11-08",
+  "csv": "data/bench/sol2/extraktion_vorlage_20261108.csv",
+  "zweck": "Freeze der drei Zeilen vor Eintreffen der zwoelf Volltexte",
+  "zeilen": {
+    "S1_gringras2012": "058ddd89aa75315d9d427f8ef283fb4e2bfc128dce2aa9a4fa5d94f03fdb4499",
+    "S2_wade2010": "beb0634ce0d745bed4591771efbd6585d83120da9ef449aaadf1cecf73e42225",
+    "S3_vanGeijlswijk2010": "2b0c8b52f6743a60bc63250e3f4e995ff0e09bfbca09aab188415891a86ba4ae"
+  },
+  "gesamt": "e6da725c050cb369bd48218791e08c871bf80bcaf9658fe67ae9d179a4fd499d"
+}
