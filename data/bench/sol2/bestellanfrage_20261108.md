@@ -14,6 +14,15 @@ fuenf Artikel, die ueber unseren Zugang nicht als Volltext erreichbar sind.
 Die bibliografischen Angaben stehen unten; alle Titel sind ueber die DOI
 eindeutig aufloesbar.
 
+Zur Einordnung: Ich bereite eine quantitative Zusammenfassung randomisierter
+Studien zu Melatonin und der Einschaflatenz vor. Aus einer systematischen Suche
+mit 114 Treffern sind 83 ueber unseren Zugang nicht als Volltext erreichbar;
+die fuenf oben genannten sind davon die vorrangig relevanten randomisierten
+Studien mit Einschaflatenz als Endpunkt. Ausgewertet werden ausschliesslich
+Mittelwerte und Streuungen je Behandlungsarm, keine personenbezogenen Daten -
+und ohne diese Volltexte stuetzte sich die Auswertung auf eine einzige Studie.
+Diese Luecke laesst sich nicht durch Statistik schliessen, nur durch Zugang.
+
 [1] Chandler-Mather N, Shelton D, Donovan C, Till H, Theroux BM, Dawe S. A Pilot Randomised Controlled Trial of Sublingual Melatonin for Sleep Onset Insomnia in Children With Foetal Alcohol Spectrum Disorder (FASD). J Paediatr Child Health. 2026;62(1):16-22. doi:10.1111/jpc.70224 (PMID: 41122831)
 [2] Xu H, Zhang C, Qian Y, Zou J, Li X, Liu Y et al. Efficacy of melatonin for sleep disturbance in middle-aged primary insomnia: a double-blind, randomised clinical trial. Sleep Med. 2021;76:113-119. doi:10.1016/j.sleep.2020.10.018 (PMID: 33157425)
 [3] van Maanen A, Meijer AM, Smits MG, van der Heijden KB, Oort FJ. Effects of Melatonin and Bright Light Treatment in Childhood Chronic Sleep Onset Insomnia With Late Melatonin Onset: A Randomized Controlled Study. Sleep. 2017;40(2). doi:10.1093/sleep/zsw038 (PMID: 28364493)
