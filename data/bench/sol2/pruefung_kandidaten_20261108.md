@@ -146,7 +146,7 @@ Probanden in simulierter Intensivstation, keine Insomnie-Population.
 mindestens ein Tag Abstand. SOL ist nicht der primäre Endpunkt (die Studie
 untersucht Speichelcortisol und Amylase). Gepaarte SD je Bedingung, keine
 Korrelation. Mit konservativer ungepaarter SE: 4,1 min; mit angenommener
-Korrelation r = 0,5: 3,6 min. Nur Sensitivität, weil Population gesund.
+Korrelation r = 0,5: 3,0 min (Var = 16,54 − 2·0,5·27,46·17,45/64 = 9,05). Nur Sensitivität, weil Population gesund.
 
 ## Konsequenz für die Hauptanalyse
 
