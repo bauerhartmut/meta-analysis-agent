@@ -1,0 +1,203 @@
+# Abschlussbericht: Kann der Harness aus guten Studien eine korrekte Metaanalyse erstellen?
+
+Stand: 2026-11-08. Read-only-Validierung: kein Netz, kein Modellaufruf, keine
+Aenderung an Pipeline oder Analysedaten. Alle Zahlen stammen aus den
+Einzelberichten in diesem Verzeichnis und den dort genannten JSON-Dateien.
+
+## Antwort in einem Satz
+
+**Rechnen ja, lesen nein.** Die Pooling-Engine reproduziert die Referenzwerte
+auf sieben Nachkommastellen und besteht alle sieben Verhaltensfaelle; die
+Extraktion findet an einer guten Primaerstudie (MENDS) **0 von 2** berichteten
+Effekten, obwohl beide als Wert mit Intervall in einer Tabellenzelle stehen -
+der Blocker ist die Kopfzeilen- und Spaltenzuordnung, nicht die Datenlage. Die
+Kette ist damit nur so gut wie die Struktur der Tabelle, aus der sie liest.
+
+## Pruefaufbau
+
+Drei Ebenen, jede einzeln gegen einen Sollwert aus belegten Zahlen. E2 zuerst,
+weil es ohne Netz und ohne Modell in unter einer Sekunde pruefbar ist; E1 danach
+auf dem deterministischen Lesepfad, weil der LLM-Extraktor Modellaufrufe
+braucht und dafuer keine Freigabe vorliegt.
+
+| Ebene | Gegenstand | Ergebnis | Bericht |
+|---|---|---|---|
+| E2 | `meta/pooling.py`, 3 Studienwerte, DL + HKSJ | **PASS** | `e2_pooling_20261108.md` |
+| E1 | `meta/extraction.py` auf MENDS-Text, 2 Effekte | **FAIL** (0/2) | `e1_extraktion_20261108.md` |
+| Blocker | warum E1 scheitert, auf MENDS und auf 120 Dateien | Kopf + Spalten | `kopf_blocker_mends_20261108.md`, `kopf_blocker_korpus_20261108.md` |
+| Stichprobe | sind die verschlossenen Zeilen die gesuchten Effekte? | **0 von 20** | `nur_kopf_stichprobe_20261108.md`, `nur_kopf_bewertung_20261108.md` |
+
+## Befund 1 (E2): die Rechnung ist in Ordnung
+
+Referenz: `data/bench/sol2/pooling_sol3_20261108.json`, Analyse "Hauptanalyse",
+k = 3, Methode `hksj`, Gewichtung `DL`, Toleranz 0,01.
+
+| Kennzahl | Soll | Ist | Abweichung |
+|---|---:|---:|---:|
+| Gepoolter Effekt (min) | -26,287199 | -26,287207 | 7,96e-06 |
+| Untere 95%-KI (min) | -55,571872 | -55,571878 | 5,90e-06 |
+| Obere 95%-KI (min) | 2,997474 | 2,997464 | 1,00e-05 |
+| tau^2 (min^2) | 104,496184 | 104,495670 | 5,14e-04 |
+| Cochran Q | 5,409473 | 5,409443 | 2,98e-05 |
+| I^2 (%) | 63,027820 | 63,027616 | 2,04e-04 |
+
+Alle sechs Abweichungen liegen um Groessenordnungen unter der Toleranz und sind
+Rundungsartefakte. Zusaetzlich bestehen sieben Verhaltensfaelle (U1-U7) gegen
+**von Hand nachgerechnete** Werte: identische SE, stark unterschiedliche SE,
+eine Studie mit SE 60, keine Heterogenitaet, k = 1, ungueltige Eingaben,
+fehlende Streuung. Laufzeit 0,92 s.
+
+Zwei Einschraenkungen gehoeren zum Befund:
+
+- Die sechs Kennzahlen pruefen **Reproduzierbarkeit** des hauseigenen
+  Referenzlaufs (`pool_sol3_20261108.json`), nicht Uebereinstimmung mit einer
+  fremden Implementierung. Der unabhaengige Teil von E2 sind die sieben
+  Handwert-Faelle; ein Abgleich gegen R `metafor` oder `statsmodels` steht aus.
+- **U7 deckt eine stille Schwaeche auf:** eine Zeile ohne SE faellt ohne
+  Fehlermeldung heraus, `k` sinkt von 3 auf 2, und die `excluded`-Liste bleibt
+  leer. Formal bestanden, praktisch eine Falle: der Aufrufer erfaehrt nicht,
+  dass eine Studie fehlt.
+- **Korrektur am Testentwurf:** U3 erwartete zuerst pooled = -10,0 und lief auf
+  FAIL mit Abweichung 3,33e-02. Falsch war der Sollwert, nicht die Engine:
+  die Studie mit SE 60 traegt 0,11 % Gewicht, korrekt ist -10,0333 bei
+  tau^2 = 0. Angepasst wurde der Sollwert, kein Harness-Ergebnis.
+
+## Befund 2 (E1): die Extraktion findet die MENDS-Effekte nicht
+
+Eingabe `data/bench/sol2/volltext/23098680.txt` (831.660 Zeichen, 48
+Tabellenbloecke). Soll: Tagebuch -37,49 min (95% CI -55,27 bis -19,71),
+Aktigraphie -45,34 (-68,75 bis -21,93). Gefunden: **nichts**.
+
+- `text_arm_candidates`: 0, `change_candidates`: 0, Tabellenpfad: 0 Effekte.
+- Haeufigster Ablehnungsgrund: `keine Effektspalte im Kopf` - **378** von 724
+  abgelehnten Zeilen; danach Spaltenzahl-Konflikte zwischen Kopf und Zeile.
+- Die Zellen sind lesbar: `-37.49 (-55.27 to -19.71)` liefert
+  `parse_effect_cell` sauber `(-37,49; -55,27; -19,71)`. Die zugehoerigen
+  Kopfzellen sind `(SD)` und `571.26 (71.98)` - daraus erkennt
+  `header_effect_kind` keine Effektspalte.
+
+Der Fehler ist damit lokalisiert: **die Zahl liegt maschinenlesbar vor, die
+Kopfzeile sagt dem Leser nicht, dass es ein Effekt ist.** Der Effekt steht
+zusaetzlich als Satz im Fliesstext (Textzeilen 125/413/1729/1769 bzw.
+126/415/1730/1776) - ein frueherer Bericht behauptete, er stehe *nur* dort; das
+war falsch und ist als Korrektur am Befundtext ausgewiesen, nicht als
+nachgebessertes Messergebnis.
+
+## Befund 3: der Blocker ist strukturell, nicht ein Einzelfall
+
+Gemessen wurde, wie viele abgelehnte Zeilen einen lesbaren Effekt samt Intervall
+tragen:
+
+| Korpus | Dateien | Bloecke | abgelehnt | lesbar | Anteil | `nur_kopf` | `kopf_und_spalten` |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| MENDS | 1 | 48 | 724 | 23 | 3,18 % | 3 | 20 |
+| Stichprobe `sol/fulltext` | 120 | 276 | 5.445 | 530 | 9,73 % | 187 | 343 |
+
+`position_daneben` kommt in beiden Korpren **0-mal** vor: es fehlt nie nur die
+Position der Effektspalte, es fehlt die Effektspalte selbst oder die
+Spaltenzuordnung ist verschoben. Ein reiner Kopfzeilen-Fix rettet auf MENDS
+hoechstens 3 Zeilen.
+
+## Befund 4: die verschlossenen Zeilen sind nicht die gesuchten Effekte
+
+Deterministische Stichprobe (Seed 20261108) von 20 der 187 `nur_kopf`-Zeilen,
+einzeln nach Label, Zelle, Kopfzelle und Caption beurteilt:
+
+| Urteil | Zeilen | Anteil |
+|---|---:|---:|
+| kein Effekt (Baseline, Median/IQR, Textzelle, Teststatistik) | 13 | 65 % |
+| Veraenderung innerhalb einer Gruppe | 3 | 15 % |
+| Effektschaetzer aus einer Uebersicht/Metaanalyse | 4 | 20 % |
+| **Between-Group-Effekt einer Primaerstudie** | **0** | **0 %** |
+
+Beispiele fuer die Fehllesung: `Fat-free mass (kg)` / `58.6 (50.5-68.8)` ist
+eine Baseline-Charakteristik, `2 mg/day, 1-2 hr before going to bed` ein
+Dosistext, der als `[2; 1; 2]` gelesen wird, `t = 0.93, p = 0.47; BCa [...]`
+eine Teststatistik. Fuenf der 20 Zeilen sind solche falsch positiven
+Zelllesungen. Die vier echten Effekte (`OR 2.29`, `g = -0.16`, `IRR 1.07`,
+`-1.80 [-2.86, -0.73]`) stammen aus Uebersichtsarbeiten - sie in den eigenen
+Pool zu nehmen waere eine Doppelzaehlung der Teilnehmer.
+
+Hochrechnung: erwartete gesuchte Effekte **0 von 187**; die exakte obere
+95 %-Grenze bei 0 von 20 ist `1 - 0.05^(1/20) = 13,9 %`, also hoechstens rund
+26 Zeilen als Obergrenze. Etwa 37 echte Effektschaetzer anderer Art und rund 28
+arm-interne Veraenderungen sind zu erwarten.
+
+## Was die drei Befunde zusammen bedeuten
+
+1. **Die Rechenstufe ist nicht der Engpass.** Wer die Engine pruefen will, ist
+   mit E2 fertig: sie tut, was dokumentiert ist, und sie tut es schnell.
+2. **Die Lesestufe ist der Engpass, und sie scheitert an der Form, nicht am
+   Inhalt.** Beim MENDS-Fall - einer guten Studie mit sauber berichtetem
+   Ergebnis - liegt die Zahl lesbar in der Tabelle, und der Leser kommt nicht
+   heran. Genau diese Kette sollte die Frage beantworten.
+3. **Der naheliegende Fix ist keine Loesung.** Wer die Kopfzeilenerkennung
+   lockert, oeffnet ueberwiegend Baseline-Zahlen, Altersangaben, Dosistexte und
+   Teststatistiken - und in 20 % der Faelle fremde Pooling-Schaetzer. Der
+   erste Teil ist Rauschen, der zweite ist ein Designfehler.
+4. **Damit ist die Frage beantwortet, nicht das Werkzeug repariert.** Der
+   Harness kann aus strukturell intakten Tabellen eine korrekte Metaanalyse
+   rechnen; aus realen Volltexttabellen mit `(SD)`-Kopfzeilen und
+   Spaltenverschiebungen liest er die Primaereffekte nicht zuverlaessig.
+
+## Belastbarkeit: was traegt, was nicht
+
+**Traegt:**
+
+- E2-PASS gegen sechs Referenzkennzahlen und sieben Handwertfaelle.
+- E1-FAIL ist kein Messfehler: die Zellen sind reproduzierbar lesbar, die
+  Kopfzellen reproduzierbar als "keine Effektspalte" klassifiziert.
+- 0 von 20 gesuchten Effekten in der Stichprobe; die Einzelurteile sind im
+  Bewertungsdokument nachpruefbar.
+- Der Blocker ist auf zwei unabhaengigen Korpren gemessen (1 Datei / 120
+  Dateien).
+
+**Traegt nicht:**
+
+- E2 ist kein externer Abgleich; metafor/statsmodels fehlen.
+- Nur der deterministische Lesepfad wurde geprueft. Der LLM-Extraktor
+  (`EffectExtractor`) lief nie - ob er die MENDS-Zeile findet, ist **offen**
+  und nicht Teil dieses Berichts.
+- E1 stuetzt sich auf eine Studie. Dass die Kette an MENDS scheitert, ist ein
+  belegter Einzelfall mit Korpus-Rueckhalt, keine Quote fuer den Gesamtbestand.
+- Die Stichprobe hat n = 20 (10,7 %), Einzelbewertung ohne Zweitleser. Die
+  Hochrechnung ist eine Extrapolation, als solche gekennzeichnet.
+- Geprueft wurde die Textebene (`23098680.txt`), nicht das PDF. Die
+  Produktionskette liest das PDF; Fehler der PDF-Extraktion sind hier nicht
+  abgedeckt.
+
+## Was ausdruecklich nicht folgt
+
+- **Kein Kopfzeilen-Fix.** Er verschiebt das Problem von "findet nichts" zu
+  "findet Baseline-Zahlen und fremde Pooling-Schaetzer" - der zweite Zustand
+  ist schlechter, weil er plausibel aussieht.
+- **Kein E3-Kettentest ohne Freigabe.** Er kostet Modellaufrufe und wuerde bei
+  diesem Stand vor allem die bereits belegte Lesegrenze reproduzieren.
+- **Keine Nachbesserung der Testentwuerfe, um PASS zu erzeugen.** Die einzige
+  Korrektur betraf einen falschen Sollwert (E2/U3) und ist offengelegt.
+
+## Reproduktion
+
+```bash
+export PYTHONIOENCODING=utf-8
+.venv/bin/python.exe scripts/validate_pooling_e2.py        # 0,92 s, PASS
+.venv/bin/python.exe scripts/validate_extraction_e1.py     # 0,98 s, FAIL 0/2
+.venv/bin/python.exe scripts/messe_kopf_blocker.py --file data/bench/sol2/volltext/23098680.txt
+.venv/bin/python.exe scripts/messe_kopf_blocker.py --dir data/bench/sol/fulltext --max-dateien 120
+.venv/bin/python.exe scripts/pruefe_nur_kopf.py            # Seed 20261108, 20 von 187
+```
+
+Alle Laeufe sind ohne Netz und ohne Modellaufruf reproduzierbar. Die
+Harness-Kernmodule (`meta/extraction.py`, `meta/pooling.py`) sind gitignored;
+die Validierung ist deshalb nur im Arbeitsbaum reproduzierbar, nicht aus einem
+frischen Clone.
+
+## Offene Punkte
+
+1. LLM-Extraktor gegen MENDS: findet `EffectExtractor` -37,49 und -45,34?
+   Das ist der einzige offene Pfad, der die Kette retten koennte; er braucht
+   Freigabe und ein Budget.
+2. Externer Pooling-Abgleich gegen `metafor` (R) oder `statsmodels`, damit E2
+   nicht nur Reproduzierbarkeit belegt.
+3. `pool()` sollte fehlende SE-Zeilen melden statt sie still zu verwerfen
+   (Befund U7) - Code-Aenderung, keine Validierung.
