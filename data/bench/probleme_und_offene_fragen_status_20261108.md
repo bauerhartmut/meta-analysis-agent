@@ -35,6 +35,7 @@ entschieden, 1 durch Budget blockiert.** Kein Punkt wartet mehr auf Arbeit.
 | PDF-Verfügbarkeit der 33 Dokumente (offline) | 0 PDF, 23 XML, 10 nur PMC, 33 abgeleitete PMC-URLs | `pdf_verfuegbarkeit_20261108.md` |
 | 10 fehlende Dokumente beschaffen und lesen | NCBI statt Europe PMC: 10/10 geladen, 62 Tabellenzeilen, **0 Effekte**, 0 SOL | `xml_nachladen_20261108.md` |
 | Lohnt Spaltenauflöser/Vision? | 342 Mismatch-Zeilen, **0 mit Effektspalte** | `colspan_befund_20261108.md` |
+| Lohnt ein weiteres SOL-Kriterium? | 14 echte SOL-Zeilen aus 8 Quellen statt 11 aus 5; die 3 zusätzlichen sind Mikrobiom-Transplantation, Tasimelteon bei Jetlag und eine rTMS-Metaanalyse → **k=1 bleibt** | `sol_kriterium_befund_20261108.md` |
 
 Der wichtigste Nebenbefund: Europe PMC lieferte für zehn PMCIDs in **30 von 30**
 Versuchen HTTP 500, NCBI efetch alle zehn. Derselbe Weg schloss auch die drei
@@ -49,10 +50,11 @@ Extraktion gegen deren Effekttabellen. Ohne Budget keine Aussage über
 Sensitivität oder Spezifität — jede Zahl dazu wäre erfunden.
 
 **P1 ist beantwortet, nicht repariert.** Drei Leser-Fixes mit messbarer
-Wirkung auf die Gesamtausbeute (+576 Zeilen) hatten bei SOL null Wirkung, und
-der vierte Kandidat (colspan) hat nachweislich kein Ziel. Ein fünfter hätte
-keine Grundlage. Wer mehr SOL-Zeilen will, braucht **anderen Korpus**, nicht
-besseren Leser.
+Wirkung auf die Gesamtausbeute (+576 Zeilen) hatten bei SOL null Wirkung, der
+vierte Kandidat (colspan) hat nachweislich kein Ziel, und ein weiteres
+Zielmass-Kriterium bringt drei Quellen, aber keine Melatonin-Studie. Auch der
+fünfte Weg hätte keine Grundlage. Wer mehr SOL-Zeilen will, braucht **anderen
+Korpus**, nicht besseren Leser und nicht ein anderes Label.
 
 ## 5. Empfehlung
 
