@@ -1309,7 +1309,10 @@ async function pollMeta(){
           +'<div style="font-size:12px;color:var(--t1);font-weight:600;margin-bottom:4px">'+esc(g.outcome??key)+'</div>'
           +'<div style="font-size:11px;color:var(--t2)">k=<b>'+(g.k??0)+'</b> '
           +(show
-            ?'· gepoolt <b>'+Number(g.pooled).toFixed(3)+'</b> ['+Number(g.ci_low).toFixed(3)+'; '+Number(g.ci_high).toFixed(3)+']'
+            ?'· gepoolt <b>'+Number(g.pooled).toFixed(3)+'</b>'
+              +(g.ci_low!=null&&g.ci_high!=null
+                ?' ['+Number(g.ci_low).toFixed(3)+'; '+Number(g.ci_high).toFixed(3)+']'
+                :' <span style="color:var(--t3)">· kein KI (nur ein unabhaengiger Cluster)</span>')
               +(g.weight_type?' <span style="color:var(--t3)">('+esc(g.weight_type)+')</span>':'')
               +(g.i2!=null?' · I\u00B2='+Number(g.i2).toFixed(1)+'%':'')
               +(g.tau!=null?' · \u03C4='+Number(g.tau).toFixed(3):'')

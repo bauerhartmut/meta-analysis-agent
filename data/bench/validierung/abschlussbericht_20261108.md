@@ -450,3 +450,7 @@ preeclampsia trug vorher [-0,491; -0,126]; dieses Intervall ist jetzt weg,
 der Punktschaetzer bleibt. Die 7 uebrigen Gruppen behalten ihr KI. Fehlt
 `rve`, greift das Gate nicht - keine Annahme ohne Messung. Details:
 `e4g_m_gate_20261108.md`.
+
+Nebenbefund: Das Dashboard rendert `Number(g.ci_low).toFixed(3)`; bei `None`
+waere das `[0,000; 0,000]` geworden. Es zeigt jetzt "kein KI (nur ein
+unabhaengiger Cluster)".
