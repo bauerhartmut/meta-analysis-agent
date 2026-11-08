@@ -1,0 +1,76 @@
+{
+  "mismatch_rows": 342,
+  "with_effect_header": 5,
+  "dirs": [
+    {
+      "dir": "D:/daswu/AIResearch/data/bench/sol/xml_fetch_ncbi",
+      "xml": 10,
+      "mismatch_rows": 26,
+      "with_effect_header": 0,
+      "files": {
+        "PMC4425994": 26
+      },
+      "samples": []
+    },
+    {
+      "dir": "D:/daswu/AIResearch/data/bench/sol/xml_q1",
+      "xml": 23,
+      "mismatch_rows": 316,
+      "with_effect_header": 5,
+      "files": {
+        "PMC10131443": 125,
+        "PMC11123999": 27,
+        "PMC13373100": 27,
+        "PMC10149792": 23,
+        "PMC12449008": 21,
+        "PMC11137944": 20,
+        "PMC5958333": 16,
+        "PMC13454318": 15,
+        "PMC12002473": 9,
+        "PMC11801451": 8
+      },
+      "samples": [
+        {
+          "pmc": "PMC13454318",
+          "caption": "Comparison of mean changes (delta change) in objective and subjective sleep parameters between the almond and control groups.",
+          "header": "Characteristics | Almond group ( n = 88) Mean (SD) (95%CI) | Control group ( n = 87) Mean (SD) (95%CI) | p",
+          "cells": "Objective sleep parameters (polysomnography)",
+          "header_cols": 4,
+          "cell_cols": 1
+        },
+        {
+          "pmc": "PMC13454318",
+          "caption": "Comparison of mean changes (delta change) in objective and subjective sleep parameters between the almond and control groups.",
+          "header": "Characteristics | Almond group ( n = 88) Mean (SD) (95%CI) | Control group ( n = 87) Mean (SD) (95%CI) | p",
+          "cells": "Subjective sleep parameters (PSQI and ESS)",
+          "header_cols": 4,
+          "cell_cols": 1
+        },
+        {
+          "pmc": "PMC13454318",
+          "caption": "Comparison of mean changes (delta change) in biochemical and anthropometric parameters between the almond and control groups.",
+          "header": "Characteristics | Almond group ( n = 88) Mean (SD) (95%CI) | Control group ( n = 87) Mean (SD) (95%CI) | P",
+          "cells": "Biochemical measurements",
+          "header_cols": 4,
+          "cell_cols": 1
+        },
+        {
+          "pmc": "PMC13454318",
+          "caption": "Comparison of mean changes (delta change) in biochemical and anthropometric parameters between the almond and control groups.",
+          "header": "Characteristics | Almond group ( n = 88) Mean (SD) (95%CI) | Control group ( n = 87) Mean (SD) (95%CI) | P",
+          "cells": "Anthropometric measurements",
+          "header_cols": 4,
+          "cell_cols": 1
+        },
+        {
+          "pmc": "PMC13454318",
+          "caption": "Mean delta changes in PSG measured sleep parameters in participants with ≥3-point reduction in PSQI score in almonds and control group.",
+          "header": "Characteristics | Almond group ( n = 55) Mean (SD) (95%CI) | Control group ( n = 47) Mean (SD) (95%CI) | p",
+          "cells": "Objective sleep parameters (polysomnography)",
+          "header_cols": 4,
+          "cell_cols": 1
+        }
+      ]
+    }
+  ]
+}
