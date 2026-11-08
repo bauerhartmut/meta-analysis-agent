@@ -126,10 +126,12 @@ bis 54 min nicht vereinbar; aus dem Intervall folgt 11,0 min [3]. Die
 Hauptanalyse verwendet den berichteten Wert; die Sensitivität mit 11,0
 ergibt -26,2 min (95%-CI -55,8 bis 3,4) und ändert keine Schlussfolgerung.
 
-**6. Keine formale Bewertung des Verzerrungsrisikos.** Dieser Abschnitt
-stützt sich auf die berichteten Effekte und deren Konfidenzintervalle; eine
-studienbezogene Bewertung nach RoB 2 ist nicht enthalten. Ebenso fehlt eine
-Bewertung der Vertrauenswürdigkeit der Evidenz nach GRADE.
+**6. Verzerrungsrisiko.** Die drei Studien wurden nach RoB 2 bewertet:
+Gringras mit hohem Risiko, überwiegend wegen der Herabstufung der
+Einschlaflatenz zum sekundären Endpunkt per Amendment; Wade und van
+Geijlswijk mit einigen Bedenken. Die Studie mit dem größten Effekt trägt
+also das höchste Risiko. Eine Bewertung der Vertrauenswürdigkeit der Evidenz
+nach GRADE fehlt.
 
 **7. Beschränkung auf einen Endpunkt.** Ausgewertet wurde ausschließlich die
 Einschlaflatenz. Aussagen zu Gesamtschlafzeit, Wachzeiten, Lebensqualität
