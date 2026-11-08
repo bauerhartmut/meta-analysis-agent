@@ -1,0 +1,119 @@
+{
+  "generated": "2026-11-08T11:28:45",
+  "documents": [
+    {
+      "doi": "pmc:PMC8181734",
+      "pmc": "PMC8181734",
+      "table_rows": 0,
+      "convertible": 0,
+      "stored": 0,
+      "rejected": 0,
+      "reasons": {},
+      "effects": []
+    },
+    {
+      "doi": "10.1002/14651858.cd009178.pub4",
+      "pmc": "PMC8094738",
+      "table_rows": 0,
+      "convertible": 0,
+      "stored": 0,
+      "rejected": 0,
+      "reasons": {},
+      "effects": []
+    },
+    {
+      "doi": "10.1002/14651858.cd012625.pub2",
+      "pmc": "PMC6535156",
+      "table_rows": 0,
+      "convertible": 0,
+      "stored": 0,
+      "rejected": 0,
+      "reasons": {},
+      "effects": []
+    },
+    {
+      "doi": "10.4292/wjgpt.v7.i1.156",
+      "pmc": "PMC4734949",
+      "table_rows": 0,
+      "convertible": 0,
+      "stored": 0,
+      "rejected": 0,
+      "reasons": {},
+      "effects": []
+    },
+    {
+      "doi": "10.1016/j.sleep.2015.01.005",
+      "pmc": "PMC4425994",
+      "table_rows": 62,
+      "convertible": 0,
+      "stored": 0,
+      "rejected": 0,
+      "reasons": {
+        "kein Mittelwert mit eindeutiger Streuung in zwei Spalten": 33,
+        "nicht genau zwei Spalten mit Mittelwert und Streuung": 19,
+        "zu wenige Spalten": 6,
+        "Fallzahl je Arm fehlt": 3,
+        "gemischte Zeitpunkte (Baseline und Follow-up) - kein Behandlungseffekt": 1
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.1002/14651858.cd009776.pub2",
+      "pmc": "PMC10025070",
+      "table_rows": 0,
+      "convertible": 0,
+      "stored": 0,
+      "rejected": 0,
+      "reasons": {},
+      "effects": []
+    },
+    {
+      "doi": "pmc:PMC3014244",
+      "pmc": "PMC3014244",
+      "table_rows": 0,
+      "convertible": 0,
+      "stored": 0,
+      "rejected": 0,
+      "reasons": {},
+      "effects": []
+    },
+    {
+      "doi": "10.1093/sleep/33.12.1605",
+      "pmc": "PMC2982730",
+      "table_rows": 0,
+      "convertible": 0,
+      "stored": 0,
+      "rejected": 0,
+      "reasons": {},
+      "effects": []
+    },
+    {
+      "doi": "10.1136/bmj.38731.532766.f6",
+      "pmc": "PMC1370968",
+      "table_rows": 0,
+      "convertible": 0,
+      "stored": 0,
+      "rejected": 0,
+      "reasons": {},
+      "effects": []
+    },
+    {
+      "doi": "10.1111/j.1525-1497.2005.0243.x",
+      "pmc": "PMC1490287",
+      "table_rows": 0,
+      "convertible": 0,
+      "stored": 0,
+      "rejected": 0,
+      "reasons": {},
+      "effects": []
+    }
+  ],
+  "totals": {
+    "table_rows": 62,
+    "convertible": 0,
+    "stored": 0,
+    "rejected": 0,
+    "missing_xml": 0
+  },
+  "missing_xml": []
+}

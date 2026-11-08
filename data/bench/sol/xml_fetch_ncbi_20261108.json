@@ -1,0 +1,120 @@
+{
+  "generated": "2026-11-08T11:28:05",
+  "provider": "ncbi",
+  "geplant": 10,
+  "geladen": 10,
+  "fehlgeschlagen": 0,
+  "pause_s": 1.0,
+  "ziele": [
+    {
+      "pmc": "PMC8181734",
+      "doi": "",
+      "title": "The Impact of 5-Hydroxytryptophan Supplementation on Sleep Quality of Older Adults in Singapore: A Randomized Controlled",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=8181734&rettype=xml",
+      "status": 200,
+      "bytes": 9402,
+      "ok": true,
+      "pfad": "data/bench/sol/xml_fetch_ncbi/PMC8181734.xml",
+      "fehler": ""
+    },
+    {
+      "pmc": "PMC8094738",
+      "doi": "10.1002/14651858.cd009178.pub4",
+      "title": "Pharmacotherapies for sleep disturbances in dementia.",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=8094738&rettype=xml",
+      "status": 200,
+      "bytes": 17521,
+      "ok": true,
+      "pfad": "data/bench/sol/xml_fetch_ncbi/PMC8094738.xml",
+      "fehler": ""
+    },
+    {
+      "pmc": "PMC6535156",
+      "doi": "10.1002/14651858.cd012625.pub2",
+      "title": "Interventions for improving sleep quality in people with chronic kidney disease.",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=6535156&rettype=xml",
+      "status": 200,
+      "bytes": 17146,
+      "ok": true,
+      "pfad": "data/bench/sol/xml_fetch_ncbi/PMC6535156.xml",
+      "fehler": ""
+    },
+    {
+      "pmc": "PMC4734949",
+      "doi": "10.4292/wjgpt.v7.i1.156",
+      "title": "Therapeutic effect of melatonin on pediatric functional dyspepsia: A pilot study.",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=4734949&rettype=xml",
+      "status": 200,
+      "bytes": 8625,
+      "ok": true,
+      "pfad": "data/bench/sol/xml_fetch_ncbi/PMC4734949.xml",
+      "fehler": ""
+    },
+    {
+      "pmc": "PMC4425994",
+      "doi": "10.1016/j.sleep.2015.01.005",
+      "title": "Melatonin improves sleep in children with epilepsy: a randomized, double-blind, crossover study.",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=4425994&rettype=xml",
+      "status": 200,
+      "bytes": 100555,
+      "ok": true,
+      "pfad": "data/bench/sol/xml_fetch_ncbi/PMC4425994.xml",
+      "fehler": ""
+    },
+    {
+      "pmc": "PMC10025070",
+      "doi": "10.1002/14651858.cd009776.pub2",
+      "title": "Pharmacological interventions for sleepiness and sleep disturbances caused by shift work.",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=10025070&rettype=xml",
+      "status": 200,
+      "bytes": 17388,
+      "ok": true,
+      "pfad": "data/bench/sol/xml_fetch_ncbi/PMC10025070.xml",
+      "fehler": ""
+    },
+    {
+      "pmc": "PMC3014244",
+      "doi": "",
+      "title": "Effectiveness of ramelteon for insomnia symptoms in older adults with obstructive sleep apnea: a randomized placebo-cont",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=3014244&rettype=xml",
+      "status": 200,
+      "bytes": 9920,
+      "ok": true,
+      "pfad": "data/bench/sol/xml_fetch_ncbi/PMC3014244.xml",
+      "fehler": ""
+    },
+    {
+      "pmc": "PMC2982730",
+      "doi": "10.1093/sleep/33.12.1605",
+      "title": "The use of exogenous melatonin in delayed sleep phase disorder: a meta-analysis.",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=2982730&rettype=xml",
+      "status": 200,
+      "bytes": 8646,
+      "ok": true,
+      "pfad": "data/bench/sol/xml_fetch_ncbi/PMC2982730.xml",
+      "fehler": ""
+    },
+    {
+      "pmc": "PMC1370968",
+      "doi": "10.1136/bmj.38731.532766.f6",
+      "title": "Efficacy and safety of exogenous melatonin for secondary sleep disorders and sleep disorders accompanying sleep restrict",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=1370968&rettype=xml",
+      "status": 200,
+      "bytes": 12178,
+      "ok": true,
+      "pfad": "data/bench/sol/xml_fetch_ncbi/PMC1370968.xml",
+      "fehler": ""
+    },
+    {
+      "pmc": "PMC1490287",
+      "doi": "10.1111/j.1525-1497.2005.0243.x",
+      "title": "The efficacy and safety of exogenous melatonin for primary sleep disorders. A meta-analysis.",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=1490287&rettype=xml",
+      "status": 200,
+      "bytes": 9116,
+      "ok": true,
+      "pfad": "data/bench/sol/xml_fetch_ncbi/PMC1490287.xml",
+      "fehler": ""
+    }
+  ]
+}
