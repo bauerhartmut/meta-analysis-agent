@@ -37,7 +37,7 @@ Behauptung, nicht eine Messung.
 **Offen — die Obergrenze.** Sie ist als Dokumentmenge nicht gemessen; sie
 braucht die vom Plan vorgesehene menschliche Sichtung der SOL-Kandidaten. Was
 gemessen ist: nach Design- und Baseline-Gates bleiben 11 SOL-Zeilen aus 5
-Quellen, und unabhängig davon ist k = 1 (`ergebnisstand_20261108.md`). Ohne die
+Quellen, und unabhaengig davon ist k = 0 (seit der Vorsichtung vom 08.11.) (`ergebnisstand_20261108.md`). Ohne die
 Obergrenze bleibt die Trennung „legitim verloren / Leserdefekt" offen.
 
 ## E — ehrlicher Bericht
@@ -103,8 +103,7 @@ wäre eine Behauptung.
 
 1. **Zugang B-b** — offen, menschlich (Bibliothek, VPN, Fernleihe,
    Autorenanfrage).
-2. **Fragenwahl** — entscheidbar geworden: k = 1 ist strukturell (11 Zeilen aus
-   5 Quellen nach den Gates), kein Leserfehler. Entweder Melatonin bleibt
+2. **Fragenwahl** — entscheidbar geworden: k = 0 ist strukturell (keine der 11 SOL-Zeilen aus 5 Quellen stammt nach den Gates aus einer Melatonin-RCT), kein Leserfehler. Entweder Melatonin bleibt
    bewusst die Negativ-Demonstration, oder die Pipeline zeigt sich an einer
    Frage mit offener RCT-Evidenz. Entscheidung beim Nutzer.
 3. **Annotation** — offen, menschlich: Obergrenze (A) und Screening-Labels (D).
