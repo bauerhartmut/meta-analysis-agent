@@ -1,6 +1,6 @@
 # PDF-Volltexte durch die Kette
 
-Stand: 2026-11-08T13:46:42. Verzeichnis: `data/bench/sol2/probelauf_bindestrich`. Deterministisch, kein Netz, kein Modell.
+Stand: 2026-11-08T13:53:13. Verzeichnis: `data/bench/sol2/probelauf_bindestrich`. Deterministisch, kein Netz, kein Modell.
 
 | Kennzahl | Wert |
 |---|---:|

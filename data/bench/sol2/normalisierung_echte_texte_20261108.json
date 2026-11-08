@@ -1,0 +1,868 @@
+{
+ "summary": {
+  "dir": "data/bench/sol2/fulltext",
+  "files": 34,
+  "hard_failures": 0,
+  "files_with_warnings": 1,
+  "chars_total": 997366,
+  "tabular_lines_lost": 0,
+  "blocks_lost": -1,
+  "rows_lost": -37,
+  "arm_before": 0,
+  "arm_after": 0
+ },
+ "files": [
+  {
+   "file": "01f3eb7b94f8259fc4aba2f5cf632e30.txt",
+   "chars": 2636,
+   "lines": [
+    9,
+    5
+   ],
+   "tabular_lines": [
+    0,
+    0
+   ],
+   "blocks": [
+    0,
+    0
+   ],
+   "block_rows": [
+    0,
+    0
+   ],
+   "arm_candidates": [
+    0,
+    0
+   ],
+   "problems": []
+  },
+  {
+   "file": "0942df6060f62a1a02ec5425ca93cbf0.txt",
+   "chars": 45675,
+   "lines": [
+    342,
+    238
+   ],
+   "tabular_lines": [
+    123,
+    123
+   ],
+   "blocks": [
+    9,
+    9
+   ],
+   "block_rows": [
+    136,
+    136
+   ],
+   "arm_candidates": [
+    0,
+    0
+   ],
+   "problems": []
+  },
+  {
+   "file": "0d8cc60b4da2814f62ea143e16c1125f.txt",
+   "chars": 32337,
+   "lines": [
+    144,
+    98
+   ],
+   "tabular_lines": [
+    21,
+    21
+   ],
+   "blocks": [
+    3,
+    3
+   ],
+   "block_rows": [
+    35,
+    35
+   ],
+   "arm_candidates": [
+    0,
+    0
+   ],
+   "problems": []
+  },
+  {
+   "file": "0dd98551e65546093ec24c47618473f3.txt",
+   "chars": 35915,
+   "lines": [
+    224,
+    147
+   ],
+   "tabular_lines": [
+    31,
+    31
+   ],
+   "blocks": [
+    1,
+    1
+   ],
+   "block_rows": [
+    29,
+    29
+   ],
+   "arm_candidates": [
+    0,
+    0
+   ],
+   "problems": []
+  },
+  {
+   "file": "19cd2520d212256fc718fda99cdcf7f5.txt",
+   "chars": 31456,
+   "lines": [
+    218,
+    133
+   ],
+   "tabular_lines": [
+    25,
+    25
+   ],
+   "blocks": [
+    3,
+    3
+   ],
+   "block_rows": [
+    36,
+    36
+   ],
+   "arm_candidates": [
+    0,
+    0
+   ],
+   "problems": []
+  },
+  {
+   "file": "1dd261a27538754ce94b2d94357b2b15.txt",
+   "chars": 53046,
+   "lines": [
+    645,
+    211
+   ],
+   "tabular_lines": [
+    1,
+    1
+   ],
+   "blocks": [
+    6,
+    6
+   ],
+   "block_rows": [
+    40,
+    48
+   ],
+   "arm_candidates": [
+    0,
+    0
+   ],
+   "problems": []
+  },
+  {
+   "file": "2673435862c6c31a4c2debde46b5091d.txt",
+   "chars": 38365,
+   "lines": [
+    331,
+    253
+   ],
+   "tabular_lines": [
+    153,
+    153
+   ],
+   "blocks": [
+    2,
+    2
+   ],
+   "block_rows": [
+    160,
+    160
+   ],
+   "arm_candidates": [
+    0,
+    0
+   ],
+   "problems": []
+  },
+  {
+   "file": "3294b49492d48950aad67330ea0d0a0f.txt",
+   "chars": 3277,
+   "lines": [
+    7,
+    4
+   ],
+   "tabular_lines": [
+    0,
+    0
+   ],
+   "blocks": [
+    0,
+    0
+   ],
+   "block_rows": [
+    0,
+    0
+   ],
+   "arm_candidates": [
+    0,
+    0
+   ],
+   "problems": []
+  },
+  {
+   "file": "3c9830841f269c95c27dc83af780732c.txt",
+   "chars": 41166,
+   "lines": [
+    296,
+    201
+   ],
+   "tabular_lines": [
+    85,
+    85
+   ],
+   "blocks": [
+    3,
+    3
+   ],
+   "block_rows": [
+    68,
+    68
+   ],
+   "arm_candidates": [
+    0,
+    0
+   ],
+   "problems": []
+  },
+  {
+   "file": "4b6cb654b927b88a985ddf9d0b7936e0.txt",
+   "chars": 49343,
+   "lines": [
+    979,
+    277
+   ],
+   "tabular_lines": [
+    9,
+    9
+   ],
+   "blocks": [
+    9,
+    9
+   ],
+   "block_rows": [
+    95,
+    106
+   ],
+   "arm_candidates": [
+    0,
+    0
+   ],
+   "problems": []
+  },
+  {
+   "file": "59ac3745d3222a7c1b14b4866d142d25.txt",
+   "chars": 41837,
+   "lines": [
+    263,
+    179
+   ],
+   "tabular_lines": [
+    39,
+    39
+   ],
+   "blocks": [
+    2,
+    2
+   ],
+   "block_rows": [
+    39,
+    39
+   ],
+   "arm_candidates": [
+    0,
+    0
+   ],
+   "problems": []
+  },
+  {
+   "file": "5d15f42974a663ecaab00d98a614a10f.txt",
+   "chars": 63184,
+   "lines": [
+    408,
+    323
+   ],
+   "tabular_lines": [
+    169,
+    169
+   ],
+   "blocks": [
+    6,
+    6
+   ],
+   "block_rows": [
+    206,
+    206
+   ],
+   "arm_candidates": [
+    0,
+    0
+   ],
+   "problems": []
+  },
+  {
+   "file": "603819293b425f902936c95ca50bd922.txt",
+   "chars": 4318,
+   "lines": [
+    26,
+    13
+   ],
+   "tabular_lines": [
+    1,
+    1
+   ],
+   "blocks": [
+    0,
+    0
+   ],
+   "block_rows": [
+    0,
+    0
+   ],
+   "arm_candidates": [
+    0,
+    0
+   ],
+   "problems": []
+  },
+  {
+   "file": "70d17558348efc3c9dc22dfc3c58e51c.txt",
+   "chars": 4129,
+   "lines": [
+    22,
+    11
+   ],
+   "tabular_lines": [
+    0,
+    0
+   ],
+   "blocks": [
+    0,
+    0
+   ],
+   "block_rows": [
+    0,
+    0
+   ],
+   "arm_candidates": [
+    0,
+    0
+   ],
+   "problems": []
+  },
+  {
+   "file": "77ba22fb60b8879e2babcb0114edbec7.txt",
+   "chars": 3400,
+   "lines": [
+    5,
+    4
+   ],
+   "tabular_lines": [
+    1,
+    1
+   ],
+   "blocks": [
+    0,
+    0
+   ],
+   "block_rows": [
+    0,
+    0
+   ],
+   "arm_candidates": [
+    0,
+    0
+   ],
+   "problems": []
+  },
+  {
+   "file": "7cdecb06b3f3b93a020e9fb533cf4e2d.txt",
+   "chars": 3782,
+   "lines": [
+    22,
+    11
+   ],
+   "tabular_lines": [
+    0,
+    0
+   ],
+   "blocks": [
+    0,
+    0
+   ],
+   "block_rows": [
+    0,
+    0
+   ],
+   "arm_candidates": [
+    0,
+    0
+   ],
+   "problems": []
+  },
+  {
+   "file": "8eceadd05b7f8a66893323d80a7c6096.txt",
+   "chars": 4626,
+   "lines": [
+    38,
+    20
+   ],
+   "tabular_lines": [
+    0,
+    0
+   ],
+   "blocks": [
+    0,
+    0
+   ],
+   "block_rows": [
+    0,
+    0
+   ],
+   "arm_candidates": [
+    0,
+    0
+   ],
+   "problems": []
+  },
+  {
+   "file": "9106bb7c8656e70c0f504ec5518b1fe3.txt",
+   "chars": 3584,
+   "lines": [
+    17,
+    9
+   ],
+   "tabular_lines": [
+    0,
+    0
+   ],
+   "blocks": [
+    0,
+    0
+   ],
+   "block_rows": [
+    0,
+    0
+   ],
+   "arm_candidates": [
+    0,
+    0
+   ],
+   "problems": []
+  },
+  {
+   "file": "94145c845eba5189f2cbc8824ed4fc7c.txt",
+   "chars": 31785,
+   "lines": [
+    448,
+    96
+   ],
+   "tabular_lines": [
+    1,
+    1
+   ],
+   "blocks": [
+    3,
+    2
+   ],
+   "block_rows": [
+    16,
+    27
+   ],
+   "arm_candidates": [
+    0,
+    0
+   ],
+   "problems": [
+    "Bloecke 3 -> 2"
+   ]
+  },
+  {
+   "file": "96b67642e5b498cce1f8da6d9aeb88a8.txt",
+   "chars": 41462,
+   "lines": [
+    266,
+    178
+   ],
+   "tabular_lines": [
+    67,
+    67
+   ],
+   "blocks": [
+    2,
+    2
+   ],
+   "block_rows": [
+    60,
+    60
+   ],
+   "arm_candidates": [
+    0,
+    0
+   ],
+   "problems": []
+  },
+  {
+   "file": "9c6e2d824bed64330c2635063b7d7b0d.txt",
+   "chars": 45500,
+   "lines": [
+    274,
+    180
+   ],
+   "tabular_lines": [
+    62,
+    62
+   ],
+   "blocks": [
+    6,
+    6
+   ],
+   "block_rows": [
+    66,
+    66
+   ],
+   "arm_candidates": [
+    0,
+    0
+   ],
+   "problems": []
+  },
+  {
+   "file": "9c9b9b531dd60de165676e10cd7eef6d.txt",
+   "chars": 54789,
+   "lines": [
+    275,
+    159
+   ],
+   "tabular_lines": [
+    27,
+    27
+   ],
+   "blocks": [
+    2,
+    2
+   ],
+   "block_rows": [
+    35,
+    35
+   ],
+   "arm_candidates": [
+    0,
+    0
+   ],
+   "problems": []
+  },
+  {
+   "file": "a284ce955c2449531ffbedc6c76cdfdc.txt",
+   "chars": 31011,
+   "lines": [
+    420,
+    204
+   ],
+   "tabular_lines": [
+    58,
+    58
+   ],
+   "blocks": [
+    2,
+    4
+   ],
+   "block_rows": [
+    55,
+    62
+   ],
+   "arm_candidates": [
+    0,
+    0
+   ],
+   "problems": []
+  },
+  {
+   "file": "ab567d7016ddc629e7b3be21fc6198fd.txt",
+   "chars": 3372,
+   "lines": [
+    15,
+    8
+   ],
+   "tabular_lines": [
+    0,
+    0
+   ],
+   "blocks": [
+    0,
+    0
+   ],
+   "block_rows": [
+    0,
+    0
+   ],
+   "arm_candidates": [
+    0,
+    0
+   ],
+   "problems": []
+  },
+  {
+   "file": "adf79f46b94be7e4106baa291a1750d0.txt",
+   "chars": 32319,
+   "lines": [
+    326,
+    187
+   ],
+   "tabular_lines": [
+    61,
+    61
+   ],
+   "blocks": [
+    4,
+    4
+   ],
+   "block_rows": [
+    58,
+    58
+   ],
+   "arm_candidates": [
+    0,
+    0
+   ],
+   "problems": []
+  },
+  {
+   "file": "b17ccf30f17bef71716bf8c0f6a2d82a.txt",
+   "chars": 40383,
+   "lines": [
+    259,
+    136
+   ],
+   "tabular_lines": [
+    30,
+    30
+   ],
+   "blocks": [
+    2,
+    2
+   ],
+   "block_rows": [
+    33,
+    33
+   ],
+   "arm_candidates": [
+    0,
+    0
+   ],
+   "problems": []
+  },
+  {
+   "file": "b2d5a094adb3ee9da42312f074481f05.txt",
+   "chars": 19884,
+   "lines": [
+    121,
+    61
+   ],
+   "tabular_lines": [
+    0,
+    0
+   ],
+   "blocks": [
+    0,
+    0
+   ],
+   "block_rows": [
+    0,
+    0
+   ],
+   "arm_candidates": [
+    0,
+    0
+   ],
+   "problems": []
+  },
+  {
+   "file": "b9b42675e11c88045e5e6fae099745c6.txt",
+   "chars": 20415,
+   "lines": [
+    111,
+    56
+   ],
+   "tabular_lines": [
+    0,
+    0
+   ],
+   "blocks": [
+    0,
+    0
+   ],
+   "block_rows": [
+    0,
+    0
+   ],
+   "arm_candidates": [
+    0,
+    0
+   ],
+   "problems": []
+  },
+  {
+   "file": "befd13e3bf0718e6542d0db65378e3dd.txt",
+   "chars": 36258,
+   "lines": [
+    297,
+    185
+   ],
+   "tabular_lines": [
+    67,
+    67
+   ],
+   "blocks": [
+    2,
+    2
+   ],
+   "block_rows": [
+    70,
+    70
+   ],
+   "arm_candidates": [
+    0,
+    0
+   ],
+   "problems": []
+  },
+  {
+   "file": "cd3f22b86fdd5791b3a61e8809f020f2.txt",
+   "chars": 3628,
+   "lines": [
+    38,
+    19
+   ],
+   "tabular_lines": [
+    0,
+    0
+   ],
+   "blocks": [
+    0,
+    0
+   ],
+   "block_rows": [
+    0,
+    0
+   ],
+   "arm_candidates": [
+    0,
+    0
+   ],
+   "problems": []
+  },
+  {
+   "file": "f2436fb14105ddf4f27e47d65ddcd576.txt",
+   "chars": 3451,
+   "lines": [
+    41,
+    22
+   ],
+   "tabular_lines": [
+    1,
+    1
+   ],
+   "blocks": [
+    0,
+    0
+   ],
+   "block_rows": [
+    0,
+    0
+   ],
+   "arm_candidates": [
+    0,
+    0
+   ],
+   "problems": []
+  },
+  {
+   "file": "f67e598bfbfd09033bc66f83e1c48d49.txt",
+   "chars": 43866,
+   "lines": [
+    263,
+    175
+   ],
+   "tabular_lines": [
+    86,
+    86
+   ],
+   "blocks": [
+    7,
+    7
+   ],
+   "block_rows": [
+    86,
+    86
+   ],
+   "arm_candidates": [
+    0,
+    0
+   ],
+   "problems": []
+  },
+  {
+   "file": "feb87c694d833d1f80f9a64e33abe5b1.txt",
+   "chars": 44321,
+   "lines": [
+    241,
+    181
+   ],
+   "tabular_lines": [
+    77,
+    77
+   ],
+   "blocks": [
+    3,
+    3
+   ],
+   "block_rows": [
+    86,
+    86
+   ],
+   "arm_candidates": [
+    0,
+    0
+   ],
+   "problems": []
+  },
+  {
+   "file": "fed47d83cc0dd66c32ebc2a888fdfb8e.txt",
+   "chars": 82846,
+   "lines": [
+    866,
+    480
+   ],
+   "tabular_lines": [
+    68,
+    68
+   ],
+   "blocks": [
+    3,
+    3
+   ],
+   "block_rows": [
+    70,
+    70
+   ],
+   "arm_candidates": [
+    0,
+    0
+   ],
+   "problems": []
+  }
+ ]
+}

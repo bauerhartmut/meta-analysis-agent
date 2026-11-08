@@ -135,3 +135,12 @@ Der naechste belastbare Schritt ist deshalb die Lieferung der fuenf Artikel. Ist
 k danach >= 2, ist die Frage mit einer ehrlich als duenn ausgewiesenen
 Schaetzung beantwortbar; bleibt k = 1, ist auch das ein Befund ueber den
 Berichtsstil der Literatur, nicht ueber den Agenten.
+
+## Nachtrag 2026-11-08: Normalisierung an echten Texten geprueft
+
+Die normalisierte PDF-Kette lief ueber die 34 vorhandenen Volltexte
+(`data/bench/sol2/fulltext`). Ergebnis: harte Fehler 0, verlorene
+Tabellenzeilen 0, arm-Kandidaten 0 -> 0, eine Warnung (eine Blockgrenze
+in einem Mathematik-Paper, dort wird mehr Text geschuetzt, nicht weniger).
+Beide Probelaeufe liefern unveraendert k = 3 bzw. k = 1.
+Details: `data/bench/sol2/normalisierung_echte_texte_20261108.md`.
