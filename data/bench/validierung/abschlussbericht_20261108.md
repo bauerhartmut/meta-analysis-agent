@@ -429,3 +429,24 @@ bei gleichem Modell aussagekraeftig.
 Konsequenz: Der neue Kollaps-Schluessel ist fuer Gruppen mit M >= 2
 vertretbar, wenn das RVE-Intervall daneben berichtet wird; fuer M = 1 darf
 kein gepooltes KI stehen, nur eine Sichtung. Details: `e4f_rve_20261108.md`.
+
+### Nachtrag 10: M-Gate (E4g)
+
+`research_agent/meta/pool_gates.py` (neu, committet) entfernt einem Pool mit
+`rve.M < 2` alle Intervalle - HKJ, fixed effect und Prediction Interval -,
+setzt `single_cluster = True` und laesst den Punktschaetzer als Sichtung
+stehen. Verdrahtet in `build_analysis` direkt nach `pool_rve`; die
+Pooling-Logik selbst bleibt unveraendert.
+
+Von 10 Gruppen mit k >= 2 greift das Gate bei 3:
+
+| Gruppe | k | M | gepoolt | KI-Breite vorher |
+|---|---:|---:|---:|---:|
+| preeclampsia [log_ratio] | 5 | 1 | -0,309 | 0,364 |
+| frailty index [raw:beta] | 2 | 1 | 0,142 | 0,108 |
+| depressive symptoms [fisher_z] | 2 | 1 | -0,180 | 0,735 |
+
+preeclampsia trug vorher [-0,491; -0,126]; dieses Intervall ist jetzt weg,
+der Punktschaetzer bleibt. Die 7 uebrigen Gruppen behalten ihr KI. Fehlt
+`rve`, greift das Gate nicht - keine Annahme ohne Messung. Details:
+`e4g_m_gate_20261108.md`.

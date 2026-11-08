@@ -1,0 +1,169 @@
+{
+  "test": "E4g-m-gate",
+  "stand": "2026-11-08T23:25:15",
+  "modellaufrufe": 0,
+  "tokens": 0,
+  "gruppen_k2": 10,
+  "gate_greift": 3,
+  "unveraendert": 7,
+  "betroffen": [
+    {
+      "datei": "data/research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+      "gruppe": "depressive symptoms [fisher_z]",
+      "k": 2,
+      "M": 1,
+      "pooled": -0.18006544697823212,
+      "ci": [
+        null,
+        null
+      ],
+      "single_cluster": true
+    },
+    {
+      "datei": "data/research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+      "gruppe": "frailty index [raw:beta]",
+      "k": 2,
+      "M": 1,
+      "pooled": 0.14238733252131547,
+      "ci": [
+        null,
+        null
+      ],
+      "single_cluster": true
+    },
+    {
+      "datei": "data/research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+      "gruppe": "preeclampsia [log_ratio]",
+      "k": 5,
+      "M": 1,
+      "pooled": -0.3086131441470696,
+      "ci": [
+        null,
+        null
+      ],
+      "single_cluster": true
+    }
+  ],
+  "gruppen": [
+    {
+      "datei": "data/research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+      "gruppe": "depressive symptoms [fisher_z]",
+      "k": 2,
+      "M": 1,
+      "pooled": -0.18006544697823212,
+      "ci": [
+        null,
+        null
+      ],
+      "single_cluster": true
+    },
+    {
+      "datei": "data/research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+      "gruppe": "frailty index [raw:beta]",
+      "k": 2,
+      "M": 1,
+      "pooled": 0.14238733252131547,
+      "ci": [
+        null,
+        null
+      ],
+      "single_cluster": true
+    },
+    {
+      "datei": "data/research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+      "gruppe": "preeclampsia [log_ratio]",
+      "k": 5,
+      "M": 1,
+      "pooled": -0.3086131441470696,
+      "ci": [
+        null,
+        null
+      ],
+      "single_cluster": true
+    },
+    {
+      "datei": "data/research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+      "gruppe": "depressive symptoms [hedges_g]",
+      "k": 3,
+      "M": 3,
+      "pooled": -0.5858165227193031,
+      "ci": [
+        -1.3190344469408934,
+        0.1474014015022873
+      ],
+      "single_cluster": false
+    },
+    {
+      "datei": "data/research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+      "gruppe": "depressive symptoms [log_ratio]",
+      "k": 6,
+      "M": 6,
+      "pooled": 0.03258083611964441,
+      "ci": [
+        -0.34165648037959157,
+        0.4068181526188804
+      ],
+      "single_cluster": false
+    },
+    {
+      "datei": "data/research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+      "gruppe": "depressive symptoms [raw:beta]",
+      "k": 4,
+      "M": 3,
+      "pooled": -0.03253429831168264,
+      "ci": [
+        -0.30063030484562286,
+        0.23556170822225758
+      ],
+      "single_cluster": false
+    },
+    {
+      "datei": "data/research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+      "gruppe": "health status [log_ratio]",
+      "k": 5,
+      "M": 5,
+      "pooled": -0.1302070415466751,
+      "ci": [
+        -0.659526940572942,
+        0.3991128574795919
+      ],
+      "single_cluster": false
+    },
+    {
+      "datei": "data/research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+      "gruppe": "cardiovascular mortality [log_ratio]",
+      "k": 2,
+      "M": 2,
+      "pooled": 1.0119458402184105,
+      "ci": [
+        0.7229076234592398,
+        1.3009840569775812
+      ],
+      "single_cluster": false
+    },
+    {
+      "datei": "data/research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+      "gruppe": "incident cardiovascular disease [log_ratio]",
+      "k": 5,
+      "M": 4,
+      "pooled": 0.24029736413754801,
+      "ci": [
+        -0.5240470573358166,
+        1.0046417856109127
+      ],
+      "single_cluster": false
+    },
+    {
+      "datei": "data/research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+      "gruppe": "major adverse cardiovascular events [log_ratio]",
+      "k": 4,
+      "M": 3,
+      "pooled": 0.7415965409494402,
+      "ci": [
+        0.4297589550519663,
+        1.053434126846914
+      ],
+      "single_cluster": false
+    }
+  ]
+}
