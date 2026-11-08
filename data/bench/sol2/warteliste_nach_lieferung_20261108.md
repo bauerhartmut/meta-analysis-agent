@@ -31,7 +31,8 @@ Zitat). Kennzahlen im Bericht: `pdfs`, `readable`, `rows`, `sol_rows`,
 
 | Befund im Bericht | Bedeutung | Was tun |
 |---|---|---|
-| `chars` < 2000 oder "zu wenig Text" | Scan ohne Textebene | nicht als leere Studie verbuchen. Nachbestellen (mit Bitte um Textebene) oder abtippen. Kein OCR-Setup bauen |
+| "kein Textlayer" oder `chars` < 50 | Scan ohne Textebene | nicht als leere Studie verbuchen. Nachbestellen (mit Bitte um Textebene) oder abtippen. Kein OCR-Setup bauen |
+| `kurzer Text` (unter 2000 Zeichen) | gelesen, nur wenig Text | normal auswerten; im Bericht steht der Hinweis |
 | `chars` ok, `sol_rows` = 0 | Endpunkt nicht berichtet | als "nicht berichtet" zaehlen. Das ist ein Befund ueber die Studie, kein Fehler der Kette |
 | `sol_rows` > 0, `arm_stored` = 0 | Leser-Luecke | Zitat im Text suchen (Strg+F nach "onset latency"); erst wenn ein Muster fehlt, eine Regel ergaenzen - mit Testfall |
 | `arm_stored` > 0 | Zeile gespeichert | weiter zu Schritt 3 |

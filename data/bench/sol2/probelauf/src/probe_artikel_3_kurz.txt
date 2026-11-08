@@ -1,0 +1,21 @@
+SIMULATION - KEINE ECHTEN STUDIENDATEN
+Erzeugt fuer den Probelauf der PDF-Kette am 2026-11-08.
+Die Zahlen sind frei erfunden und gehoeren zu keiner Publikation.
+
+A Short Synthetic Report on Melatonin and Sleep Onset
+Probe Author
+
+Abstract
+Deliberately short fixture: real text, but below the two-thousand-character
+threshold.
+
+Methods
+Fourteen children received melatonin and fifteen received placebo; sleep
+was recorded with diaries for one week.
+
+Results
+Sleep onset latency was 15.0 +- 6.0 min in the melatonin group (n = 14)
+and 21.5 +- 7.5 min in the placebo group (n = 15).
+
+Discussion
+Synthetic values. Not evidence.

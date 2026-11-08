@@ -65,6 +65,49 @@ def rows_from_block(body: str) -> tuple[list[str], list[list[str]]]:
     return rows[0], rows[1:]
 
 
+def flatten_prose(text: str) -> str:
+    """Zeilenumbrueche innerhalb eines Satzes gluecken.
+
+    PDF-Text bricht Saetze an der Satzbreite um; der Fliesstext-Leser arbeitet
+    zeilenweise und sieht den Satz sonst nicht. Tabellenzeilen bleiben stehen:
+    sie tragen mehrere Leerzeichen oder Balken, und Zeilen nach einem Satzende
+    oder Doppelpunkt werden nie verklebt.
+    """
+    out: list[str] = []
+    for line in (text or "").splitlines():
+        stripped = line.strip()
+        if not out:
+            out.append(line)
+            continue
+        prev = out[-1]
+        ends_sentence = prev.rstrip().endswith((".", ":", ";", "!", "?"))
+        looks_tabular = bool(re.search(r"\s{2,}|\|", line)) or bool(
+            re.search(r"\s{2,}|\|", prev))
+        if stripped and not ends_sentence and not looks_tabular:
+            out[-1] = prev.rstrip() + " " + stripped
+        else:
+            out.append(line)
+    return "\n".join(out)
+
+
+HARD_MIN_CHARS = 50
+
+
+def classify_text(chars: int, min_chars: int) -> tuple[str, str]:
+    """Textmenge einordnen: 'leer' (kein Textlayer), 'kurz', 'ok'.
+
+    Ein Scan ohne Textebene liefert einige wenige Zeichen (Formfeeds, kaputte
+    Kodierung); ein kurzer Artikel liefert echten Text, nur wenig davon. Beides
+    als "zu wenig Text" zu fuehren hiesse, einen Lesefehler zu behaupten, wo
+    nur ein kurzes Dokument vorliegt.
+    """
+    if chars < HARD_MIN_CHARS:
+        return "leer", "kein Textlayer (Scan oder kaputt)"
+    if chars < min_chars:
+        return "kurz", "kurzer Text (unter min-chars, trotzdem gelesen)"
+    return "ok", ""
+
+
 def main(argv=None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--dir", default="data/bench/sol2/volltext")
@@ -83,12 +126,15 @@ def main(argv=None) -> int:
 
     documents, problems = [], Counter()
     for pdf in pdfs:
-        text = _pdf_to_text(pdf) or ""
-        if len(text) < args.min_chars:
+        text = flatten_prose(_pdf_to_text(pdf) or "")
+        status, reason = classify_text(len(text), args.min_chars)
+        if status == "leer":
             documents.append({"file": pdf.name, "chars": len(text),
-                              "error": "zu wenig Text"})
-            problems["zu wenig Text (Scan oder kaputt)"] += 1
+                              "error": "kein Textlayer"})
+            problems[reason] += 1
             continue
+        if status == "kurz":
+            problems[reason] += 1
         source_id = f"pdf:{pdf.stem}"
         row = db.save_source_text(source_id, text, kind="pdf", origin_url=pdf.name)
         text_id = (row or {}).get("id", "")
@@ -121,6 +167,7 @@ def main(argv=None) -> int:
         sol_rows = [r for r in all_rows if is_sol(str(r.get("outcome") or ""))]
         documents.append({
             "file": pdf.name, "chars": len(text), "source": source_id,
+            "short": status == "kurz",
             "arm_candidates": len(arm_candidates), "arm_stored": len(stored_arm),
             "blocks": len(blocks), "direct_candidates": len(direct_candidates),
             "direct_stored": len(stored_direct),
@@ -165,7 +212,9 @@ def main(argv=None) -> int:
         if "error" in doc:
             lines.append(f"| {doc['file']} | {doc['chars']} | - | - | - | - | - |")
             continue
-        lines.append(f"| {doc['file']} | {doc['chars']} | {doc['arm_stored']} | "
+        mark = " (kurz)" if doc.get("short") else ""
+        lines.append(f"| {doc['file']} | {doc['chars']}{mark} | "
+                     f"{doc['arm_stored']} | "
                      f"{doc['blocks']} | {doc['direct_stored']} | {doc['rows']} | "
                      f"{doc['sol_rows']} |")
     lines += ["", "## Ablehnungsgruende", ""]
@@ -176,7 +225,9 @@ def main(argv=None) -> int:
         "- PDF-Text hat keine Tabellenstruktur; Zwei-Arm-Tabellen werden nur",
         "  gelesen, wenn ihre Zeilen als Textblock erkennbar sind.",
         "- Gescannte PDFs ohne Textebene liefern nichts; das steht als",
-        "  'zu wenig Text' im Bericht.",
+        "  'kein Textlayer' im Bericht.",
+        "- Texte unter --min-chars werden gelesen und als 'kurzer Text'",
+        "  gezaehlt, nicht als Scan abgetan.",
     ]
     Path(args.md).write_text("\n".join(lines) + "\n", encoding="utf-8")
 

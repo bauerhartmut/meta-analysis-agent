@@ -1,0 +1,86 @@
+{
+  "generated": "2026-11-08T13:40:05",
+  "directory": "data/bench/sol2/probelauf",
+  "pdfs": 4,
+  "readable": 3,
+  "rows": 3,
+  "sol_rows": 3,
+  "k_sol_poolable": 3,
+  "problems": {
+    "kurzer Text (unter min-chars, trotzdem gelesen)": 3,
+    "kein Textlayer (Scan oder kaputt)": 1
+  },
+  "documents": [
+    {
+      "file": "probe_artikel_1.pdf",
+      "chars": 1883,
+      "source": "pdf:probe_artikel_1",
+      "short": true,
+      "arm_candidates": 1,
+      "arm_stored": 1,
+      "blocks": 0,
+      "direct_candidates": 0,
+      "direct_stored": 0,
+      "rows": 1,
+      "sol_rows": 1,
+      "sol_poolable": 1,
+      "sol": [
+        {
+          "outcome": "Sleep onset latency",
+          "type": "g",
+          "effect": -1.227848,
+          "unit": "Hedges g"
+        }
+      ]
+    },
+    {
+      "file": "probe_artikel_2.pdf",
+      "chars": 1741,
+      "source": "pdf:probe_artikel_2",
+      "short": true,
+      "arm_candidates": 1,
+      "arm_stored": 1,
+      "blocks": 0,
+      "direct_candidates": 0,
+      "direct_stored": 0,
+      "rows": 1,
+      "sol_rows": 1,
+      "sol_poolable": 1,
+      "sol": [
+        {
+          "outcome": "Sleep onset latency",
+          "type": "g",
+          "effect": -0.819661,
+          "unit": "Hedges g"
+        }
+      ]
+    },
+    {
+      "file": "probe_artikel_3_kurz.pdf",
+      "chars": 618,
+      "source": "pdf:probe_artikel_3_kurz",
+      "short": true,
+      "arm_candidates": 1,
+      "arm_stored": 1,
+      "blocks": 0,
+      "direct_candidates": 0,
+      "direct_stored": 0,
+      "rows": 1,
+      "sol_rows": 1,
+      "sol_poolable": 1,
+      "sol": [
+        {
+          "outcome": "Results Sleep onset latency",
+          "type": "g",
+          "effect": -0.926481,
+          "unit": "Hedges g"
+        }
+      ]
+    },
+    {
+      "file": "probe_scan.pdf",
+      "chars": 0,
+      "error": "kein Textlayer"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+ "k": 3,
+ "method": "hksj",
+ "pooled": -0.9610167593134,
+ "ci_low": -1.4925067076621497,
+ "ci_high": -0.4295268109646504,
+ "fixed": -0.9610167593134,
+ "fixed_ci_low": -1.3234816526363535,
+ "fixed_ci_high": -0.5985518659904466,
+ "q": 0.8923346564264216,
+ "df": 2,
+ "p_q": 0.6400766602166083,
+ "i2": 0.0,
+ "h2": 0.4461673282132108,
+ "tau2": 0.0,
+ "tau2_reml": 5.758014368896677e-06,
+ "tau": 0.0,
+ "pi_low": -3.3107887717269024,
+ "pi_high": 1.3887552531001024,
+ "excluded": [],
+ "note": "",
+ "small_k_note": "Kleine Studienanzahl (k=3): Heterogenitaets- und Intervallangaben sind mit Vorsicht zu interpretieren.",
+ "se": 0.184931068021915,
+ "weight_type": "DL",
+ "se_hksj": 0.12352610859819126,
+ "hksj_low": -1.4925067076621497,
+ "hksj_high": -0.4295268109646504,
+ "rows": [
+  {
+   "label": "pdf:probe_artikel_1",
+   "est": -1.227848,
+   "se": 0.344739,
+   "n": 40,
+   "scale": "hedges_g"
+  },
+  {
+   "label": "pdf:probe_artikel_2",
+   "est": -0.819661,
+   "se": 0.264578,
+   "n": 62,
+   "scale": "hedges_g"
+  },
+  {
+   "label": "pdf:probe_artikel_3_kurz",
+   "est": -0.926481,
+   "se": 0.391017,
+   "n": 29,
+   "scale": "hedges_g"
+  }
+ ],
+ "rejected": []
+}

@@ -53,3 +53,42 @@ def test_fliesstextsatz_ergibt_speicherbaren_kandidaten():
     assert len(stored) == 1
     assert not rejected
     assert stored[0]["effect"] < 0  # Melatonin senkt die Einschaflatenz
+
+
+def test_classify_text_trennt_scan_von_kurzem_text():
+    """Ein Scan hat fast keinen Text; ein kurzer Artikel hat echten Text."""
+    assert _MOD.classify_text(0, 2000)[0] == "leer"
+    assert _MOD.classify_text(49, 2000)[0] == "leer"
+    assert _MOD.classify_text(50, 2000)[0] == "kurz"
+    assert _MOD.classify_text(1788, 2000)[0] == "kurz"
+    assert _MOD.classify_text(2000, 2000)[0] == "ok"
+
+
+NL = chr(10)
+
+
+def test_satz_ueber_zeilenumbruch_wird_geglueckt():
+    text = "Sleep onset latency was" + NL + "18.3 +- 7.2 min in the melatonin group."
+    assert _MOD.flatten_prose(text) == (
+        "Sleep onset latency was 18.3 +- 7.2 min in the melatonin group.")
+
+
+def test_tabellenzeilen_bleiben_getrennt():
+    text = ("Outcome        Melatonin   Placebo" + NL
+            + "SOL (min)      18.3        27.9")
+    assert _MOD.flatten_prose(text).count(NL) == 1
+
+
+def test_zeile_nach_satzende_bleibt_stehen():
+    text = "Results:" + NL + "18.3 min"
+    assert _MOD.flatten_prose(text) == text
+
+
+def test_geflachter_satz_ergibt_kandidat():
+    from research_agent.meta.arm_text import text_arm_candidates
+
+    text = _MOD.flatten_prose(
+        "Sleep onset latency was" + NL
+        + "18.3 +- 7.2 min in the melatonin group (n = 20) and 27.9 +- 8.1 min in"
+        + NL + "the placebo group (n = 20).")
+    assert len(text_arm_candidates(text)) == 1

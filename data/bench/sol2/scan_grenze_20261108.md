@@ -56,8 +56,8 @@ pdfs=1 lesbar=0 zeilen=0 sol=0 k=0
 ```
 
 Im Bericht `scanprobe.md` steht die Datei mit `Zeichen 0`, alle folgenden
-Spalten `-`, und unter „Ablehnungsgründe" der Grund `zu wenig Text (Scan oder
-kaputt)`.
+Spalten `-`, und unter „Ablehnungsgründe" der Grund `kein Textlayer (Scan oder
+kaputt)` (frueher: "zu wenig Text").
 
 **Das ist der wichtige Punkt:** der Verlust ist *nicht stumm*. Die Datei wird
 gezählt, mit 0 Zeichen geführt und begründet abgelehnt. Aber die Kennzahl k

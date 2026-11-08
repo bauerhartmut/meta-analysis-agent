@@ -1,0 +1,39 @@
+SIMULATION - KEINE ECHTEN STUDIENDATEN
+Erzeugt fuer den Probelauf der PDF-Kette am 2026-11-08.
+Die Zahlen sind frei erfunden und gehoeren zu keiner Publikation.
+
+A Synthetic Randomised Trial of Melatonin for Sleep Onset Latency
+Probe Author, Second Author, Third Author
+
+Abstract
+This simulated report describes a parallel-group trial of melatonin in
+children with chronic sleep onset problems. It exists only to exercise
+the extraction pipeline and reports no real findings.
+
+Methods
+Participants were randomised in a 1:1 ratio using a computer-generated
+list. Allocation was concealed in sealed opaque envelopes prepared by an
+independent statistician without contact to the participants. The trial
+was approved by the local ethics committee and conducted in accordance
+with the Declaration of Helsinki. Caregivers recorded sleep diaries for
+seven consecutive nights before and after the intervention, and the
+primary analysis used the mean of the last three nights to reduce
+night-to-night variability.
+Adverse events were recorded at every visit and classified by severity;
+no serious event was attributed to the intervention. Sample size was
+planned for a difference of ten minutes with a standard deviation of
+fifteen minutes, a two-sided alpha of 0.05 and a power of 0.80. Analyses
+used a mixed model with baseline values as a covariate; the values below
+are unadjusted group means. Compliance was checked by counting returned
+capsules, and a sensitivity analysis excluded participants below eighty
+percent of the expected count.
+
+Results
+Forty participants completed the trial. Sleep onset latency was
+18.3 +- 7.2 min in the melatonin group (n = 20) and 27.9 +- 8.1 min in
+the placebo group (n = 20).
+Total sleep time did not differ between groups.
+
+Discussion
+The difference is synthetic. No clinical conclusion should be drawn,
+and this document must never be cited as evidence.
