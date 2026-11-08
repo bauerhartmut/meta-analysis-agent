@@ -267,3 +267,32 @@ Konsequenz: Mehr Prompt loest es nicht. Der naechste Hebel ist eine
 deterministische Nachpruefung - enthaelt eine Quote zwei CI-Klammern, aber es
 kam nur eine Zeile zurueck, muss das als Luecke gemeldet werden statt still
 als k = 1 weiterzulaufen. Details: `e3c_regel_20261108.md`.
+
+### Nachtrag 4: die Lueckenpruefung (E4)
+
+Gebaut, ohne Modellaufruf und ohne Eingriff ins Pooling:
+`research_agent/meta/quote_gaps.py` zaehlt die CI-Klammern einer Quote und
+vergleicht sie mit den Zeilen, die aus ihr stammen. Die harte Aussage ist
+die Anzahl; welches Intervall fehlt, ist eine Zuordnung ueber die Zahlen.
+
+Beleg an den drei E3-Artefakten, Zeilen unveraendert aus den JSONs:
+
+| Lauf | Zeilen | Intervalle | Status |
+|---|---:|---:|---|
+| E3a (TST) | 1 | 1 | ok |
+| E3b (Aktigraphie) | 1 | 2 | Luecke: Tagebuch -37,49 fehlt |
+| E3c (Tagebuch) | 1 | 2 | Luecke: Aktigraphie -45,34 fehlt |
+
+Gegenproben: mit beiden gemessenen Zeilen `ok`, bei einem Satz ohne
+CI-Angabe `nicht_pruefbar` - der Check meldet nicht pauschal. 17 Tests.
+
+Der erste Lauf der Pruefung stufte E3a als `nicht_pruefbar` ein: Seine Quote
+schreibt das CI verschachtelt (`[95% confidence interval (CI) 0.52 to
+44.34]`), ein Regex auf klammerfreie Inhalte uebersah sie. Der Scanner
+zaehlt seitdem die Klammertiefe. Das war ein Fehler der Pruefung, nicht der
+Daten - deshalb steht er hier.
+
+Kosten: 0 Modellaufrufe, 0 Tokens. Grenze: Die Pruefung belegt die Luecke,
+sie schliesst sie nicht; die fehlende Zeile muss weiterhin gelesen werden.
+In die Kette ist sie noch nicht verdrahtet - die Anschlussstelle ist die
+Quellen-Review, nicht `pool()`. Details: `e4_quote_luecken_20261108.md`.

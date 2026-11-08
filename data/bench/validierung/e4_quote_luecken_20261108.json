@@ -1,0 +1,136 @@
+{
+  "test": "E4-quote-luecken",
+  "stand": "2026-11-08T23:01:15",
+  "modellaufrufe": 0,
+  "tokens": 0,
+  "datei": "data/bench/sol2/volltext/23098680.txt",
+  "satz": "A reduction in SOL, adjusted for baseline, was seen for melatonin compared with placebo when measured by sleep diaries (-37.49 minutes, 95% CI -55.27 to -19.71 minutes; p<0.0001) and actigraphy (-45.34 minutes, 95% CI -68.75 to -21.93 minutes; p=0.0003).",
+  "satz_zeichen": 254,
+  "intervalle_im_satz": [
+    "-37.49 [-55.27; -19.71]",
+    "-45.34 [-68.75; -21.93]"
+  ],
+  "laeufe": [
+    {
+      "test": "E3a-24k-kontext",
+      "datei": "e3_llm_20261108.json",
+      "satz_im_artefakt": "kein_satz_feld",
+      "zeilen": 1,
+      "zaehlung": {
+        "quotes": 1,
+        "ok": 1,
+        "luecken": 0,
+        "ohne_zeile": 0,
+        "nicht_pruefbar": 0,
+        "zeilen": 1,
+        "intervalle": 1,
+        "fehlende_intervalle": 0
+      },
+      "befunde": [
+        {
+          "quote": "The difference in TST time between the melatonin and placebo groups adjusted for baseline was 22.43 minutes [95% confidence interval (CI) 0.52 to 44.34 minutes; p=0.04] measured using sleep diaries.",
+          "status": "ok",
+          "message": "Quote nennt 1 Intervall(e), 1 Zeile(n) - vollstaendig",
+          "zeilen": 1,
+          "abgelehnt": 0,
+          "intervalle": [
+            "[0.52; 44.34]"
+          ],
+          "zugeordnet": 1,
+          "nicht_belegt": []
+        }
+      ]
+    },
+    {
+      "test": "E3b-isolierter-satz",
+      "datei": "e3b_satz_20261108.json",
+      "satz_im_artefakt": "gleich",
+      "zeilen": 1,
+      "zaehlung": {
+        "quotes": 1,
+        "ok": 0,
+        "luecken": 1,
+        "ohne_zeile": 0,
+        "nicht_pruefbar": 0,
+        "zeilen": 1,
+        "intervalle": 2,
+        "fehlende_intervalle": 1
+      },
+      "befunde": [
+        {
+          "quote": "A reduction in SOL, adjusted for baseline, was seen for melatonin compared with placebo when measured by sleep diaries (-37.49 minutes, 95% CI -55.27 to -19.71 minutes; p<0.0001) and actigraphy (-45.34 minutes, 95% CI -68.75 to -21.93 minutes; p=0.0003).",
+          "status": "luecke",
+          "message": "Quote nennt 2 Intervalle, 1 Zeile(n) extrahiert - nicht belegt: -37.49 [-55.27; -19.71]",
+          "zeilen": 1,
+          "abgelehnt": 0,
+          "intervalle": [
+            "-37.49 [-55.27; -19.71]",
+            "-45.34 [-68.75; -21.93]"
+          ],
+          "zugeordnet": 1,
+          "nicht_belegt": [
+            "-37.49 [-55.27; -19.71]"
+          ]
+        }
+      ]
+    },
+    {
+      "test": "E3c-prompt-regel",
+      "datei": "e3c_regel_20261108.json",
+      "satz_im_artefakt": "gleich",
+      "zeilen": 1,
+      "zaehlung": {
+        "quotes": 1,
+        "ok": 0,
+        "luecken": 1,
+        "ohne_zeile": 0,
+        "nicht_pruefbar": 0,
+        "zeilen": 1,
+        "intervalle": 2,
+        "fehlende_intervalle": 1
+      },
+      "befunde": [
+        {
+          "quote": "A reduction in SOL, adjusted for baseline, was seen for melatonin compared with placebo when measured by sleep diaries (-37.49 minutes, 95% CI -55.27 to -19.71 minutes; p<0.0001) and actigraphy (-45.34 minutes, 95% CI -68.75 to -21.93 minutes; p=0.0003).",
+          "status": "luecke",
+          "message": "Quote nennt 2 Intervalle, 1 Zeile(n) extrahiert - nicht belegt: -45.34 [-68.75; -21.93]",
+          "zeilen": 1,
+          "abgelehnt": 0,
+          "intervalle": [
+            "-37.49 [-55.27; -19.71]",
+            "-45.34 [-68.75; -21.93]"
+          ],
+          "zugeordnet": 1,
+          "nicht_belegt": [
+            "-45.34 [-68.75; -21.93]"
+          ]
+        }
+      ]
+    }
+  ],
+  "gegenproben": {
+    "beide_zeilen": {
+      "quote": "A reduction in SOL, adjusted for baseline, was seen for melatonin compared with placebo when measured by sleep diaries (-37.49 minutes, 95% CI -55.27 to -19.71 minutes; p<0.0001) and actigraphy (-45.34 minutes, 95% CI -68.75 to -21.93 minutes; p=0.0003).",
+      "status": "ok",
+      "message": "Quote nennt 2 Intervall(e), 2 Zeile(n) - vollstaendig",
+      "zeilen": 2,
+      "abgelehnt": 0,
+      "intervalle": [
+        "-37.49 [-55.27; -19.71]",
+        "-45.34 [-68.75; -21.93]"
+      ],
+      "zugeordnet": 2,
+      "nicht_belegt": []
+    },
+    "ohne_ci": {
+      "quote": "Melatonin reduced SOL more than placebo.",
+      "status": "nicht_pruefbar",
+      "message": "Quote nennt kein Konfidenzintervall - Luecke nicht pruefbar",
+      "zeilen": 2,
+      "abgelehnt": 0,
+      "intervalle": [],
+      "zugeordnet": 0,
+      "nicht_belegt": []
+    }
+  }
+}
