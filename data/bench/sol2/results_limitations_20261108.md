@@ -130,8 +130,8 @@ ergibt -26,2 min (95%-CI -55,8 bis 3,4) und ändert keine Schlussfolgerung.
 Gringras mit hohem Risiko, überwiegend wegen der Herabstufung der
 Einschlaflatenz zum sekundären Endpunkt per Amendment; Wade und van
 Geijlswijk mit einigen Bedenken. Die Studie mit dem größten Effekt trägt
-also das höchste Risiko. Eine Bewertung der Vertrauenswürdigkeit der Evidenz
-nach GRADE fehlt.
+also das höchste Risiko. Die GRADE-Einstufung ergibt sehr niedrige Vertrauenswürdigkeit
+(fünf schwerwiegende Domänen; `grade_sol3_20261108.md`).
 
 **7. Beschränkung auf einen Endpunkt.** Ausgewertet wurde ausschließlich die
 Einschlaflatenz. Aussagen zu Gesamtschlafzeit, Wachzeiten, Lebensqualität
