@@ -27,6 +27,22 @@ Artefakte: `pdf.md` (Menschen), `pdf.json` (Maschine), `pdf.db` (Zeilen mit
 Zitat). Kennzahlen im Bericht: `pdfs`, `readable`, `rows`, `sol_rows`,
 `k_sol_poolable`, `problems`, je Datei `chars`, `arm_candidates`, `arm_stored`.
 
+Der ganze Ablauf - lesen, je Datei triagieren, k-Stand fortschreiben - ist
+ein Befehl:
+
+```bash
+.venv/bin/python.exe scripts/triage_lieferung.py \
+  --dir data/bench/sol2/volltext \
+  --json data/bench/sol2/lieferung.json \
+  --md data/bench/sol2/lieferung.md
+```
+
+Er ruft `read_pdf_corpus.py` auf und ordnet jede Datei nach der Tabelle in
+Schritt 2 ein. Ausgaben: `lieferung.md` (Mensch), `lieferung.json`
+(Maschine, mit `k` und `fehlend`), dazu `pdf.md`/`pdf.json`/`pdf.db` aus der
+Lesekette. Exit-Code 2 heisst: im Ordner liegt keine PDF, der Stand wurde
+nicht fortgeschrieben.
+
 ## 2. Triage je Datei (in dieser Reihenfolge)
 
 | Befund im Bericht | Bedeutung | Was tun |
