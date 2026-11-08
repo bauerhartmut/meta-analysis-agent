@@ -1,0 +1,22 @@
+{
+  "dbs": {
+    "effektspalten": {
+      "rows": 1000,
+      "poolable": 323
+    },
+    "arm_tabelle": {
+      "rows": 97,
+      "poolable": 97
+    },
+    "fliesstext": {
+      "rows": 1,
+      "poolable": 1
+    },
+    "veraenderung": {
+      "rows": 1,
+      "poolable": 1
+    }
+  },
+  "rows": 1099,
+  "poolable": 422
+}
