@@ -1,0 +1,655 @@
+{
+  "stand": "2026-11-08T19:41:55+00:00",
+  "modell": "keiner",
+  "netz": "keines",
+  "seed": 20261108,
+  "dateien": 120,
+  "abgelehnt": 5445,
+  "gesamt_nur_kopf": 187,
+  "stichprobe": 20,
+  "signale": {
+    "baseline": 0,
+    "effekt": 0,
+    "beide": 0,
+    "keins": 20
+  },
+  "faelle": [
+    {
+      "datei": "data/bench/sol/fulltext/0006a008e1b297223286ae631de14842.txt",
+      "block": 1,
+      "caption": "(pipe table at char 22226)",
+      "kopf": [
+        "",
+        "All",
+        "Men",
+        "Women"
+      ],
+      "zeile": [
+        "Fat-free mass (kg)",
+        "58.6 (50.5–68.8)",
+        "67.8 (62.4–73.5)",
+        "50.2 (45.5–53.1)"
+      ],
+      "label": "Fat-free mass (kg)",
+      "zelle": "58.6 (50.5–68.8)",
+      "zelle_index": 1,
+      "werte": [
+        58.6,
+        50.5,
+        68.8
+      ],
+      "kopfzelle": "All",
+      "baseline_signal": false,
+      "effekt_signal": false
+    },
+    {
+      "datei": "data/bench/sol/fulltext/0006a008e1b297223286ae631de14842.txt",
+      "block": 1,
+      "caption": "(pipe table at char 22226)",
+      "kopf": [
+        "",
+        "All",
+        "Men",
+        "Women"
+      ],
+      "zeile": [
+        "Number of awakenings (n)",
+        "1.0 (0.0–3.0)",
+        "2.0 (0.0–4.0)",
+        "1.0 (0.0–3.0)"
+      ],
+      "label": "Number of awakenings (n)",
+      "zelle": "1.0 (0.0–3.0)",
+      "zelle_index": 1,
+      "werte": [
+        1.0,
+        0.0,
+        3.0
+      ],
+      "kopfzelle": "All",
+      "baseline_signal": false,
+      "effekt_signal": false
+    },
+    {
+      "datei": "data/bench/sol/fulltext/0006a008e1b297223286ae631de14842.txt",
+      "block": 1,
+      "caption": "(pipe table at char 22226)",
+      "kopf": [
+        "",
+        "All",
+        "Men",
+        "Women"
+      ],
+      "zeile": [
+        "Age (years)",
+        "49.0 (42.0–55.0)",
+        "48.5 (41.8–53.0)",
+        "50.5 (43.3–58.8)"
+      ],
+      "label": "Age (years)",
+      "zelle": "49.0 (42.0–55.0)",
+      "zelle_index": 1,
+      "werte": [
+        49.0,
+        42.0,
+        55.0
+      ],
+      "kopfzelle": "All",
+      "baseline_signal": false,
+      "effekt_signal": false
+    },
+    {
+      "datei": "data/bench/sol/fulltext/0006a008e1b297223286ae631de14842.txt",
+      "block": 1,
+      "caption": "(pipe table at char 22226)",
+      "kopf": [
+        "",
+        "All",
+        "Men",
+        "Women"
+      ],
+      "zeile": [
+        "Sleep efficiency (%)",
+        "87.5 (81.8–92.5)",
+        "85.4 (81.7–92.5)",
+        "88.3 (82.7–92.5)"
+      ],
+      "label": "Sleep efficiency (%)",
+      "zelle": "87.5 (81.8–92.5)",
+      "zelle_index": 1,
+      "werte": [
+        87.5,
+        81.8,
+        92.5
+      ],
+      "kopfzelle": "All",
+      "baseline_signal": false,
+      "effekt_signal": false
+    },
+    {
+      "datei": "data/bench/sol/fulltext/019117c094a74a98b6c716158908153b.txt",
+      "block": 1,
+      "caption": "(pipe table at char 23967)",
+      "kopf": [
+        "",
+        "Baseline Week 1 Mean ± SD",
+        "Washout Week 3 Mean ± SD",
+        "Intervention on Mean ± SD",
+        "Intervention off Mean ± SD",
+        "n",
+        "t -statistic, p -value; Bootstrap 95% CI",
+        "Effect size (Cohen’s d )"
+      ],
+      "zeile": [
+        "WASO",
+        "48.56 ± 21.24",
+        "40.83 ± 14.30",
+        "46.43 ± 15.26",
+        "38.80 ± 17.91",
+        "8",
+        "t = 0.93, p = 0.47; BCa [−2.90, 19.27]",
+        "d = 0.33"
+      ],
+      "label": "WASO",
+      "zelle": "t = 0.93, p = 0.47; BCa [−2.90, 19.27]",
+      "zelle_index": 6,
+      "werte": [
+        0.93,
+        -2.9,
+        19.27
+      ],
+      "kopfzelle": "t -statistic, p -value; Bootstrap 95% CI",
+      "baseline_signal": false,
+      "effekt_signal": false
+    },
+    {
+      "datei": "data/bench/sol/fulltext/02b1b366d919e2891a1e3622f66f93d2.txt",
+      "block": 1,
+      "caption": "(pipe table at char 15893)",
+      "kopf": [
+        "Characteristic",
+        "Acupuncture (n = 15)",
+        "Wait-list (n = 15)",
+        "Total (n = 30)",
+        "P value *"
+      ],
+      "zeile": [
+        "Week-3",
+        "−1.6 (−2.6 to −0.6)",
+        "0 (−1.0 to 1.0)",
+        "−1.6 (−3.0 to −0.3)",
+        ".020"
+      ],
+      "label": "Week-3",
+      "zelle": "−1.6 (−2.6 to −0.6)",
+      "zelle_index": 1,
+      "werte": [
+        -1.6,
+        -2.6,
+        -0.6
+      ],
+      "kopfzelle": "Acupuncture (n = 15)",
+      "baseline_signal": false,
+      "effekt_signal": false
+    },
+    {
+      "datei": "data/bench/sol/fulltext/02b1b366d919e2891a1e3622f66f93d2.txt",
+      "block": 2,
+      "caption": "(pipe table at char 22358)",
+      "kopf": [
+        "Outcomes",
+        "Acupuncture",
+        "Wait-list *",
+        "P value a",
+        "Total",
+        "P value b"
+      ],
+      "zeile": [
+        "Week-14",
+        "−2.4 (−3.5 to −1.4) #",
+        "−1.9 (−3.0 to −0.8) #",
+        ".453",
+        "−2.1 (−2.9 to −1.4)",
+        "<.001"
+      ],
+      "label": "Week-14",
+      "zelle": "−2.4 (−3.5 to −1.4) #",
+      "zelle_index": 1,
+      "werte": [
+        -2.4,
+        -3.5,
+        -1.4
+      ],
+      "kopfzelle": "Acupuncture",
+      "baseline_signal": false,
+      "effekt_signal": false
+    },
+    {
+      "datei": "data/bench/sol/fulltext/02b1b366d919e2891a1e3622f66f93d2.txt",
+      "block": 2,
+      "caption": "(pipe table at char 22358)",
+      "kopf": [
+        "Outcomes",
+        "Acupuncture",
+        "Wait-list *",
+        "P value a",
+        "Total",
+        "P value b"
+      ],
+      "zeile": [
+        "Week-10",
+        "−5.0 (−6.6 to −3.6) #",
+        "−2.4 (−3.9 to −0.9) #",
+        ".019",
+        "−3.7 (−4.7 to −2.7)",
+        "<.001"
+      ],
+      "label": "Week-10",
+      "zelle": "−5.0 (−6.6 to −3.6) #",
+      "zelle_index": 1,
+      "werte": [
+        -5.0,
+        -6.6,
+        -3.6
+      ],
+      "kopfzelle": "Acupuncture",
+      "baseline_signal": false,
+      "effekt_signal": false
+    },
+    {
+      "datei": "data/bench/sol/fulltext/0641f9655f7e7cc63e875948d25fd4a7.txt",
+      "block": 2,
+      "caption": "(pipe table at char 16481)",
+      "kopf": [
+        "Agonist",
+        "Location",
+        "Indication",
+        "Dosage",
+        "Common adverse events a"
+      ],
+      "zeile": [
+        "Prolonged‐release melatonin (Circadin; Neurim Pharmaceutical",
+        "Europe South Africa South Korea",
+        "Short‐term (daily for up to 13 wks) treatment of primary ins",
+        "2 mg/day, 1–2 hr before going to bed and after food",
+        "Headache, nasopharyngitis, back pain, arthralgia d"
+      ],
+      "label": "Prolonged‐release melatonin (Circadin; Neurim Pharmaceuticals, Tel Aviv, Israel) 39",
+      "zelle": "2 mg/day, 1–2 hr before going to bed and after food",
+      "zelle_index": 3,
+      "werte": [
+        2.0,
+        1.0,
+        2.0
+      ],
+      "kopfzelle": "Dosage",
+      "baseline_signal": false,
+      "effekt_signal": false
+    },
+    {
+      "datei": "data/bench/sol/fulltext/08f4381fa3e95989a010dedf4ebe0b6b.txt",
+      "block": 2,
+      "caption": "(pipe table at char 23002)",
+      "kopf": [
+        "Variable",
+        "No. of trials",
+        "No. of participants",
+        "Pooling estimates",
+        "I 2",
+        "P differences"
+      ],
+      "zeile": [
+        "Women only",
+        "6",
+        "669",
+        "−1.80 [−2.86, −0.73]",
+        "0.0009",
+        "74%"
+      ],
+      "label": "Women only",
+      "zelle": "−1.80 [−2.86, −0.73]",
+      "zelle_index": 3,
+      "werte": [
+        -1.8,
+        -2.86,
+        -0.73
+      ],
+      "kopfzelle": "Pooling estimates",
+      "baseline_signal": false,
+      "effekt_signal": false
+    },
+    {
+      "datei": "data/bench/sol/fulltext/094b5a8ccd92d18f4af5176c8d2ea7f7.txt",
+      "block": 2,
+      "caption": "(pipe table at char 51925)",
+      "kopf": [
+        "Study",
+        "Journal",
+        "Population",
+        "Design",
+        "Duration of treatment",
+        "Melatonin (formulation, dose)",
+        "Time of intake",
+        "Main outcome measures",
+        "Effects on sleep",
+        "Other outcomes",
+        "Comments"
+      ],
+      "zeile": [
+        "Paavonen et al ., 2003 [ 89 ]",
+        "J. Child. Adolesc. Psychopharmacol.",
+        "15 children with AS (DSM-IV) aged from 6–17 years with sever",
+        "Not Given",
+        "14 days",
+        "IR 3 mg",
+        "30 min BB",
+        "Sleep (72h-period actigraphy, sleep diaries), daytime behavi",
+        "Melatonin treatment was associated with significant decrease",
+        "Significant improvement of daytime behavior (CBCL)",
+        "No principal outcome specified. KSS is not validated in chil"
+      ],
+      "label": "Paavonen et al ., 2003 [ 89 ]",
+      "zelle": "15 children with AS (DSM-IV) aged from 6–17 years with sever",
+      "zelle_index": 2,
+      "werte": [
+        15.0,
+        6.0,
+        17.0
+      ],
+      "kopfzelle": "Population",
+      "baseline_signal": false,
+      "effekt_signal": false
+    },
+    {
+      "datei": "data/bench/sol/fulltext/09ef041bc5277ed4a022ba661398ef70.txt",
+      "block": 2,
+      "caption": "(pipe table at char 13829)",
+      "kopf": [
+        "Ref.",
+        "Country",
+        "Type of sleep disorders",
+        "Type of cancer",
+        "Outcomes"
+      ],
+      "zeile": [
+        "[ 26 ]",
+        "United States",
+        "Circadian rhythm disruption",
+        "HCC",
+        "IRR: 1.07; 95%CI: 1.01-1.14"
+      ],
+      "label": "[ 26 ]",
+      "zelle": "IRR: 1.07; 95%CI: 1.01-1.14",
+      "zelle_index": 4,
+      "werte": [
+        1.07,
+        1.01,
+        1.14
+      ],
+      "kopfzelle": "Outcomes",
+      "baseline_signal": false,
+      "effekt_signal": false
+    },
+    {
+      "datei": "data/bench/sol/fulltext/0de4f7e3db93ce2dd7f5f32ec9b36f7b.txt",
+      "block": 2,
+      "caption": "(pipe table at char 31497)",
+      "kopf": [
+        "Study",
+        "Journal",
+        "Population",
+        "Design",
+        "Duration of treatment",
+        "Melatonin (formulation, dose)",
+        "Time of intake",
+        "Main outcome measures",
+        "Effects on sleep",
+        "Other outcomes",
+        "Comments"
+      ],
+      "zeile": [
+        "Garstang and Wallis ( 102 )",
+        "Child Care Health Dev",
+        "11 children and adolescents with ASD aged from 5 to 15 years",
+        "Randomized double-blind crossover trial",
+        "2 periods of 4 weeks with a wash out period of 1 week",
+        "IR 5 mg",
+        "60 min BB",
+        "Sleep (diary)",
+        "Melatonin and placebo were associated with significantly dec",
+        "Several parents and class teachers commented that their chil",
+        "ASD criteria were not consensual. Only 7 children completed "
+      ],
+      "label": "Garstang and Wallis ( 102 )",
+      "zelle": "11 children and adolescents with ASD aged from 5 to 15 years",
+      "zelle_index": 2,
+      "werte": [
+        11.0,
+        5.0,
+        15.0
+      ],
+      "kopfzelle": "Population",
+      "baseline_signal": false,
+      "effekt_signal": false
+    },
+    {
+      "datei": "data/bench/sol/fulltext/10ba126fd391323480bf897847762feb.txt",
+      "block": 1,
+      "caption": "(pipe table at char 23319)",
+      "kopf": [
+        "Characteristics a",
+        "Electroacupuncture (n=49)",
+        "Sham (n=52)",
+        "Usual Care (n=49)",
+        "P value"
+      ],
+      "zeile": [
+        "Weight (kg) c",
+        "59.88 (56.98, 62.78)",
+        "59.65 (56.41, 62.90)",
+        "62.50 (58.95, 66.04)",
+        "0.3884"
+      ],
+      "label": "Weight (kg) c",
+      "zelle": "59.88 (56.98, 62.78)",
+      "zelle_index": 1,
+      "werte": [
+        59.88,
+        56.98,
+        62.78
+      ],
+      "kopfzelle": "Electroacupuncture (n=49)",
+      "baseline_signal": false,
+      "effekt_signal": false
+    },
+    {
+      "datei": "data/bench/sol/fulltext/114009829f1ee266e64cf29eb422831a.txt",
+      "block": 2,
+      "caption": "(pipe table at char 38847)",
+      "kopf": [
+        "Authors",
+        "Fatigue",
+        "Sleep",
+        "Depressed mood",
+        "Cognition",
+        "Patient population",
+        "Stage of cancer trajectory/assessment ti",
+        "Cortisol markers",
+        "Outcome measures",
+        "Study design",
+        "Found association between cortisol and C",
+        "Results"
+      ],
+      "zeile": [
+        "Zeitzer et al. ( 115 )",
+        "",
+        "X",
+        "",
+        "",
+        "Breast cancer (n=97) and healthy controls (n=24)",
+        "Advanced",
+        "28-h plasma cortisol at 20-60 minute intervals: Diurnal vari",
+        "Sleep: polysomnography",
+        "cross-sectional",
+        "yes",
+        "The circadian pattern of cortisol (timing, timing relative t"
+      ],
+      "label": "Zeitzer et al. ( 115 )",
+      "zelle": "28-h plasma cortisol at 20-60 minute intervals: Diurnal vari",
+      "zelle_index": 7,
+      "werte": [
+        28.0,
+        20.0,
+        60.0
+      ],
+      "kopfzelle": "Cortisol markers",
+      "baseline_signal": false,
+      "effekt_signal": false
+    },
+    {
+      "datei": "data/bench/sol/fulltext/134ced883600564bab4f6164883762de.txt",
+      "block": 2,
+      "caption": "(pipe table at char 53338)",
+      "kopf": [
+        "Biological Domain",
+        "Biomarker/Outcome",
+        "Key Finding",
+        "Representative Study"
+      ],
+      "zeile": [
+        "Type 2 diabetes",
+        "ADHD and T2D risk",
+        "OR 2.29 (95% CI 1.48–3.55)",
+        "Garcia-Argibay et al., 2023 [ 30 ]"
+      ],
+      "label": "Type 2 diabetes",
+      "zelle": "OR 2.29 (95% CI 1.48–3.55)",
+      "zelle_index": 2,
+      "werte": [
+        2.29,
+        1.48,
+        3.55
+      ],
+      "kopfzelle": "Key Finding",
+      "baseline_signal": false,
+      "effekt_signal": false
+    },
+    {
+      "datei": "data/bench/sol/fulltext/134ced883600564bab4f6164883762de.txt",
+      "block": 2,
+      "caption": "(pipe table at char 53338)",
+      "kopf": [
+        "Biological Domain",
+        "Biomarker/Outcome",
+        "Key Finding",
+        "Representative Study"
+      ],
+      "zeile": [
+        "Inflammation",
+        "TNF-alpha",
+        "g = −0.16 (95% CI −0.30 to −0.03)",
+        "Misiak et al., 2022 [ 19 ]"
+      ],
+      "label": "Inflammation",
+      "zelle": "g = −0.16 (95% CI −0.30 to −0.03)",
+      "zelle_index": 2,
+      "werte": [
+        -0.16,
+        -0.3,
+        -0.03
+      ],
+      "kopfzelle": "Key Finding",
+      "baseline_signal": false,
+      "effekt_signal": false
+    },
+    {
+      "datei": "data/bench/sol/fulltext/1bddfad854558113b1d43c1974160067.txt",
+      "block": 1,
+      "caption": "(pipe table at char 10133)",
+      "kopf": [
+        "Characteristic",
+        "Value"
+      ],
+      "zeile": [
+        "Pittsburgh sleep quality index (PSQI) total score, median (I",
+        "16.50 (14.75, 18.00)"
+      ],
+      "label": "Pittsburgh sleep quality index (PSQI) total score, median (IQR)",
+      "zelle": "16.50 (14.75, 18.00)",
+      "zelle_index": 1,
+      "werte": [
+        16.5,
+        14.75,
+        18.0
+      ],
+      "kopfzelle": "Value",
+      "baseline_signal": false,
+      "effekt_signal": false
+    },
+    {
+      "datei": "data/bench/sol/fulltext/1bf4688b968c4d000bd8a31ab224585f.txt",
+      "block": 2,
+      "caption": "(pipe table at char 16162)",
+      "kopf": [
+        "Source (country)",
+        "Study design",
+        "Intervention length",
+        "Diagnoses included",
+        "Analytic sample, No.",
+        "Age of participants, mean (SD) [range], ",
+        "Melatonin dosage",
+        "Melatonin intervention information",
+        "Concurrent medications",
+        "Study quality a"
+      ],
+      "zeile": [
+        "Malow et al, 35 2012 (US)",
+        "Quasi-experimental, no comparator",
+        "14 wk",
+        "ASD",
+        "24",
+        "5.9 (NA) [3-10]",
+        "1-9 mg (3-wk Escalation of 3 mg if no satisfactory response)",
+        "Timing: 30 min before bedtime Brand: Natrol (Natrol) Type: n",
+        "Psychotropics excluded, allergy and constipation medications",
+        "Fair"
+      ],
+      "label": "Malow et al, 35 2012 (US)",
+      "zelle": "5.9 (NA) [3-10]",
+      "zelle_index": 5,
+      "werte": [
+        5.9,
+        3.0,
+        10.0
+      ],
+      "kopfzelle": "Age of participants, mean (SD) [range], ",
+      "baseline_signal": false,
+      "effekt_signal": false
+    },
+    {
+      "datei": "data/bench/sol/fulltext/1c5c16c7488cc3cb6301319faf0fd28d.txt",
+      "block": 2,
+      "caption": "(pipe table at char 31853)",
+      "kopf": [
+        "Characteristic",
+        "Trials (n=49)"
+      ],
+      "zeile": [
+        "Median (IQR) duration of follow-up across studies, weeks",
+        "24 (14-50.5)"
+      ],
+      "label": "Median (IQR) duration of follow-up across studies, weeks",
+      "zelle": "24 (14-50.5)",
+      "zelle_index": 1,
+      "werte": [
+        24.0,
+        14.0,
+        50.5
+      ],
+      "kopfzelle": "Trials (n=49)",
+      "baseline_signal": false,
+      "effekt_signal": false
+    }
+  ],
+  "laufzeit_s": 3.000762299998314
+}
