@@ -1,0 +1,52 @@
+{
+  "generated": "2026-11-08T14:00:30",
+  "directory": "data/bench/sol2/volltext",
+  "pdfs": 0,
+  "readable": 0,
+  "basis_k": 1,
+  "basis_quelle": "PMC3489506",
+  "k": {
+    "basis_k": 1,
+    "zuwachs": 0,
+    "k_neu": 1,
+    "ziel": 2,
+    "erreicht": false,
+    "fehlt_bis_ziel": 1
+  },
+  "zustaende": {},
+  "documents": [],
+  "fehlend": [
+    {
+      "pmid": "11292231",
+      "prioritaet": "A",
+      "doi": "10.1177/088307380101600204",
+      "titel": "Melatonin for chronic sleep onset insomnia in children: a randomized placebo-controlled trial."
+    },
+    {
+      "pmid": "14566165",
+      "prioritaet": "A",
+      "doi": "10.1097/01.chi.0000085756.71002.86",
+      "titel": "Melatonin improves health status and sleep in children with idiopathic chronic sleep-onset insomnia: a randomized placebo-controlled trial."
+    },
+    {
+      "pmid": "28364493",
+      "prioritaet": "A",
+      "doi": "10.1093/sleep/zsw038",
+      "titel": "Effects of Melatonin and Bright Light Treatment in Childhood Chronic Sleep Onset Insomnia With Late Melatonin Onset: A Randomized Controlled Study."
+    },
+    {
+      "pmid": "33157425",
+      "prioritaet": "A",
+      "doi": "10.1016/j.sleep.2020.10.018",
+      "titel": "Efficacy of melatonin for sleep disturbance in middle-aged primary insomnia: a double-blind, randomised clinical trial."
+    },
+    {
+      "pmid": "41122831",
+      "prioritaet": "A",
+      "doi": "10.1111/jpc.70224",
+      "titel": "A Pilot Randomised Controlled Trial of Sublingual Melatonin for Sleep Onset Insomnia in Children With Foetal Alcohol Spectrum Disorder (FASD)."
+    }
+  ],
+  "fremd": [],
+  "naechster_schritt": "Keine PDF in data/bench/sol2/volltext - keine Lieferung eingetroffen, k unveraendert bei 1. Kein Netzlauf als Ersatz."
+}

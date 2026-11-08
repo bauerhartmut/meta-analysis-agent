@@ -18,8 +18,9 @@ Aufruf:
         --json data/bench/sol2/lieferung.json \
         --md data/bench/sol2/lieferung.md
 
-Exit-Code 2 heisst: im Ordner liegt keine PDF - dann ist der Stand nicht
-fortgeschrieben, und das soll ein Automatiklauf nicht als Erfolg melden.
+Exit-Code 2 heisst: im Ordner liegt keine PDF. Der Bericht wird trotzdem
+geschrieben, damit "nichts geliefert" eine pruefbare Spur hat und nicht als
+erledigt gilt.
 """
 
 from __future__ import annotations
@@ -57,6 +58,8 @@ AKTIONEN = {
 }
 
 PMC_REFERENZ = "PMC3489506"
+
+LEER_ZEILE = "| - | - | - | keine Datei im Ordner | - | - | - |"
 
 
 def stamm_pmid(name: str) -> str | None:
@@ -169,9 +172,7 @@ def main(argv=None) -> int:
     args = parser.parse_args(argv)
 
     pdfs = sorted(Path(args.dir).glob("*.pdf"))
-    if not pdfs:
-        print(f"keine PDF in {args.dir} - nichts zu triagieren, k unveraendert")
-        return 2
+    leer = not pdfs
 
     work = Path(args.work_dir)
     work.mkdir(parents=True, exist_ok=True)
@@ -234,7 +235,10 @@ def main(argv=None) -> int:
         "documents": dokumente,
         "fehlend": fehlend,
         "fremd": fremd,
-        "naechster_schritt": naechster_schritt(k, zustaende),
+        "naechster_schritt": (
+            naechster_schritt(k, zustaende) if dokumente
+            else f"Keine PDF in {args.dir} - keine Lieferung eingetroffen, "
+                 f"k unveraendert bei {k['k_neu']}. Kein Netzlauf als Ersatz."),
     }
     Path(args.json).write_text(json.dumps(result, ensure_ascii=False, indent=2),
                                encoding="utf-8")
@@ -259,6 +263,8 @@ def main(argv=None) -> int:
     ]
     for d in dokumente:
         lines.append(tabellenzeile(d))
+    if not dokumente:
+        lines.append(LEER_ZEILE)
     lines += ["", "### Aktion je Datei", ""]
     for d in dokumente:
         lines.append(f"- `{d['file']}`: {d['aktion']}")
@@ -278,9 +284,11 @@ def main(argv=None) -> int:
     print(f"pdfs={result['pdfs']} lesbar={result['readable']} "
           f"poolbar={k['zuwachs']} k={k['basis_k']}->{k['k_neu']} "
           f"ziel={k['ziel']} erreicht={'ja' if k['erreicht'] else 'nein'}")
+    if leer:
+        print(f"  keine PDF in {args.dir} - kein Zuwachs, Bericht geschrieben")
     for zustand, count in Counter(zustaende).most_common():
         print(f"  {count:3d}  {zustand}")
-    return 0
+    return 2 if leer else 0
 
 
 if __name__ == "__main__":

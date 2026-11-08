@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import importlib.util
+import json
 from pathlib import Path
 
 _SPEC = importlib.util.spec_from_file_location(
@@ -79,6 +80,27 @@ def test_tabellenzeile_schreibt_kein_none():
     assert "None" not in scan
     assert scan.startswith("| scan.pdf | - | - | scan |")
     assert scan.rstrip().endswith("| - | - | - |")
+
+
+def test_leere_lieferung_schreibt_bericht_und_meldet_2(tmp_path):
+    """Ohne PDF bleibt k unveraendert, aber der Befund wird festgehalten."""
+    pdf_dir = tmp_path / "volltext"
+    pdf_dir.mkdir()
+    out = tmp_path / "lieferung.json"
+    rc = _MOD.main([
+        "--dir", str(pdf_dir),
+        "--work-dir", str(tmp_path / "work"),
+        "--json", str(out),
+        "--md", str(tmp_path / "lieferung.md"),
+        "--erwartet", str(tmp_path / "keine.csv"),
+        "--basis-k", "1",
+    ])
+    assert rc == 2
+    bericht = json.loads(out.read_text(encoding="utf-8"))
+    assert bericht["documents"] == []
+    assert bericht["k"]["k_neu"] == 1
+    assert bericht["k"]["erreicht"] is False
+    assert "keine Lieferung eingetroffen" in bericht["naechster_schritt"]
 
 
 def test_zugangsliste_wird_gelesen(tmp_path):
