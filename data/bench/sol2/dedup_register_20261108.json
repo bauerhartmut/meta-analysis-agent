@@ -1,0 +1,85 @@
+{
+  "generated": "2026-11-08",
+  "zweck": "Doppelpublikationen vor der Auswertung der Fernleihe-Lieferung erkennen",
+  "studien": [
+    {
+      "kuerzel": "S1 MENDS",
+      "pmc": "PMC3489506",
+      "pmid": "23129488",
+      "doi": "10.1136/bmj.e6664",
+      "register": "ISRCTN05534585",
+      "population": "Kinder mit Entwicklungsstoerung",
+      "dauer": "12 Wochen"
+    },
+    {
+      "kuerzel": "S2 Sechsmonatsstudie",
+      "pmc": "PMC2933606",
+      "pmid": "20712869",
+      "doi": "10.1186/1741-7015-8-51",
+      "register": "NCT00397189",
+      "population": "Erwachsene, primaere Insomnie (65-80: N 137/144; Low excretors: N 86/86)",
+      "dauer": "6 Monate"
+    },
+    {
+      "kuerzel": "S3 Dosisfindung",
+      "pmc": "PMC2952772",
+      "pmid": "20668840",
+      "doi": "10.1007/s00213-010-1962-0",
+      "register": "ISRCTN20033346",
+      "population": "Kinder 6-12, chronische SOL-Insomnie, n = 72",
+      "dauer": "1 Woche"
+    }
+  ],
+  "sicher_doppel": [
+    {
+      "pmid": "23098680",
+      "journal": "Health Technology Assessment 16(40)",
+      "jahr": 2012,
+      "gegen": "S1 MENDS",
+      "beleg": "SOL Tagebuch -37.49 (-55.27 bis -19.71) und Aktigraphie -45.34 (-68.75 bis -21.93) zeichengenau identisch mit PMC3489506",
+      "behandlung": "nicht als eigene Studie fuehren; Werte nur als Ergaenzung fuer S1"
+    }
+  ],
+  "verdacht": [
+    {
+      "pmid": "21091391",
+      "titel": "Prolonged release melatonin in the treatment of primary insomnia: evaluation of the age cut-off",
+      "gegen": "S2 Sechsmonatsstudie",
+      "pruefmerkmal": "NCT00397189, n, Autorengruppe Wade, Rekrutierungszeitraum",
+      "prioritaet": "hoch"
+    },
+    {
+      "pmid": "16919138",
+      "titel": "Randomized controlled trial of melatonin for children with autistic spectrum disorders and sleep",
+      "gegen": "S1 MENDS",
+      "pruefmerkmal": "ISRCTN05534585, n = 146, Rekrutierungszeitraum 2005-2009",
+      "prioritaet": "niedrig"
+    }
+  ],
+  "geprueft_kein_bezug": [
+    {"pmid": "17875243", "grund": "wird von S2 zitiert"},
+    {"pmid": "19584739", "grund": "wird von S2 zitiert"},
+    {"pmid": "15910516", "grund": "wird von S3 zitiert"},
+    {"pmid": "11292231", "grund": "wird von S3 zitiert"},
+    {"pmid": "14566165", "grund": "wird von S3 zitiert"},
+    {"pmid": "18078449", "grund": "wird von S3 zitiert"},
+    {"pmid": "28364493", "grund": "andere Intervention (Licht plus Melatonin)"}
+  ],
+  "verdacht_innerhalb_83": [
+    {"gruppe": "Wade", "pmids": ["17875243", "19584739", "21091391"],
+     "verdacht": "gleiche Autorengruppe, ueberlappende Altersgruppen"},
+    {"gruppe": "Smits", "pmids": ["11292231", "14566165"],
+     "verdacht": "gleiche Autorengruppe, Kinder mit chronischer SOL-Insomnie, 2001/2003"}
+  ],
+  "regel": [
+    "Register-ID zuerst pruefen; gleiche ID bedeutet Doppel",
+    "dann n, Zentren, Rekrutierungszeitraum, Altersbereich",
+    "Titel allein reicht nicht; MENDS zeigt Jaccard 0.33 bei Identitaet",
+    "nie zwei Zeilen derselben Studie poolen"
+  ],
+  "quellen": {
+    "metadaten": "data/bench/sol2/xml/<PMC>.xml, article-id",
+    "referenzen": "ref/pub-id pmid in denselben XML",
+    "mends_beleg": "data/bench/sol2/volltext/23098680.txt"
+  }
+}
