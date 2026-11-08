@@ -66,8 +66,8 @@ Bibliothek vor der Lieferung erfragen kann:
 
 | # | Stelle | Datei | Status | Aktion vor dem Absenden |
 |---|---|---|---|---|
-| 1 | `[Name]` in der Signatur | `.md` + `.txt` | **AUSFUELLEN** | Name des Absenders |
-| 2 | `[Einrichtung, Fachbereich]` | `.md` + `.txt` | **AUSFUELLEN** | Einrichtung und Fachbereich, traegt die Kostenuebernahme |
+| 1 | `[Name]` in der Signatur | Vorlage `.txt` | offen | Name des Absenders, per `bestellung_fertig.py` einsetzen |
+| 2 | `[Einrichtung, Fachbereich]` | Vorlage `.txt` | offen | Einrichtung und Fachbereich, traegt die Kostenuebernahme |
 | 3 | Kostenstelle | Anschreiben | zugesagt, nicht genannt | bereithalten: viele Bibliotheken liefern erst nach Nennung |
 | 4 | Lieferadresse / E-Mail | Anschreiben | nur implizit (Antwortadresse) | bei Formularbestellung eintragen |
 
@@ -82,6 +82,25 @@ Alles andere ist bewusst ohne Angabe formuliert, damit nichts erfunden wird:
 Nach dem Ausfuellen: Text aus dem Codeblock in das Mailprogramm uebernehmen,
 die beiden Felder ersetzen, senden. Die fertige Fassung ohne Markdown liegt
 in `bestellanfrage_20261108.txt`; beide Dateien werden gleich gepflegt.
+
+### Signatur einsetzen (nicht von Hand tippen)
+
+Name und Einrichtung lassen sich nicht aus dem Projekt ableiten. Damit sie
+trotzdem nur an einer Stelle eingesetzt werden, macht das ein Skript und
+prueft dabei, dass sich ausser den zwei Signaturzeilen nichts aendert:
+
+```bash
+.venv/bin/python.exe scripts/bestellung_fertig.py \
+  --name "Vorname Nachname" \
+  --einrichtung "Einrichtung, Fachbereich"
+.venv/bin/python.exe scripts/bestellung_fertig.py --pruefen
+```
+
+Ergebnis ist `bestellanfrage_20261108_versandfertig.txt` - dieselbe Mail
+wie die Vorlage, zeichengleich bis auf die zwei Signaturzeilen. `--pruefen`
+meldet offene Platzhalter und jede Zeile, die sich unterscheidet; bei allem
+ausser genau zwei geaenderten Zeilen bricht es ab. Die Vorlage selbst bleibt
+unveraendert, damit ein zweiter Lauf reproduzierbar ist.
 
 ## Warum genau diese zwoelf
 
