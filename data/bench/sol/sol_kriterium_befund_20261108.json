@@ -1,0 +1,66 @@
+{
+  "kriterium": "latenc|sleep onset|sol",
+  "klassen": {
+    "sol": {
+      "zeilen": 14,
+      "poolbar": 13,
+      "quellen": 8,
+      "quellen_ausserhalb_der_bekannten_5": [
+        "doi:10.2147/nss.s460882",
+        "doi:10.3389/fneur.2020.00611",
+        "doi:10.3389/fnins.2026.1816963"
+      ],
+      "outcomes": {
+        "Sleep onset latency": 5,
+        "Sleep latency (min)": 3,
+        "Sleep onset latency, log min": 2,
+        "Sleep latency": 1,
+        "SOL": 1,
+        "Sleep onset latency, min": 1,
+        "Subjective Sleep Latency (min)": 1
+      },
+      "je_db": {
+        "effektspalten": 14
+      }
+    },
+    "anderer_endpunkt": {
+      "zeilen": 7,
+      "poolbar": 7,
+      "quellen": 4,
+      "quellen_ausserhalb_der_bekannten_5": [
+        "doi:10.1136/bmjsem-2023-001774"
+      ],
+      "outcomes": {
+        "Wake after sleep onset, min": 4,
+        "REM latency, min": 1,
+        "REM onset latency": 1,
+        "Wake after sleep onset": 1
+      },
+      "je_db": {
+        "effektspalten": 7
+      }
+    },
+    "baseline": {
+      "zeilen": 4,
+      "poolbar": 4,
+      "quellen": 1,
+      "quellen_ausserhalb_der_bekannten_5": [
+        "doi:10.3390/jcm11195845"
+      ],
+      "outcomes": {
+        "SOL baseline": 2,
+        "SOL follow up": 2
+      },
+      "je_db": {
+        "arm_tabelle": 4
+      }
+    }
+  },
+  "bekannte_quellen": [
+    "doi:10.1001/jamanetworkopen.2026.26983",
+    "doi:10.1093/sleep/zsaa194",
+    "doi:10.1093/sleep/zsae250",
+    "doi:10.1111/jsr.70311",
+    "doi:10.2188/jea.je20140201"
+  ]
+}

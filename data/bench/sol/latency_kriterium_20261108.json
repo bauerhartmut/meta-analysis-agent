@@ -1,0 +1,224 @@
+{
+  "kriterium": "outcome enthaelt latenc|sleep onset|sol",
+  "db": {
+    "effektspalten": {
+      "rows": 1000,
+      "latency_rows": 21,
+      "latency_poolable": 20,
+      "sources": 9,
+      "poolable_sources": 8,
+      "outcomes": {
+        "Sleep onset latency": 5,
+        "Wake after sleep onset, min": 4,
+        "Sleep latency (min)": 3,
+        "Sleep onset latency, log min": 2,
+        "Sleep latency": 1,
+        "SOL": 1,
+        "Sleep onset latency, min": 1,
+        "REM latency, min": 1,
+        "Subjective Sleep Latency (min)": 1,
+        "REM onset latency": 1,
+        "Wake after sleep onset": 1
+      },
+      "types": {
+        "mean_diff": 18,
+        "or": 1,
+        "g": 2
+      },
+      "examples": [
+        {
+          "outcome": "Wake after sleep onset, min",
+          "type": "mean_diff",
+          "effect": 1.0,
+          "se": 5.612348026171193,
+          "source": "doi:10.1136/bmjsem-2023-001774",
+          "reason": ""
+        },
+        {
+          "outcome": "Wake after sleep onset, min",
+          "type": "mean_diff",
+          "effect": -2.0,
+          "se": 4.081707655397231,
+          "source": "doi:10.1136/bmjsem-2023-001774",
+          "reason": ""
+        },
+        {
+          "outcome": "Sleep latency",
+          "type": "or",
+          "effect": 2.56,
+          "se": 1.2704315077423882,
+          "source": "doi:10.2147/nss.s460882",
+          "reason": ""
+        },
+        {
+          "outcome": "Sleep latency (min)",
+          "type": "mean_diff",
+          "effect": -4.2,
+          "se": 5.306219952016401,
+          "source": "doi:10.1093/sleep/zsae250",
+          "reason": ""
+        },
+        {
+          "outcome": "Sleep latency (min)",
+          "type": "mean_diff",
+          "effect": -2.3,
+          "se": 3.9796649640123007,
+          "source": "doi:10.1093/sleep/zsae250",
+          "reason": ""
+        },
+        {
+          "outcome": "Sleep latency (min)",
+          "type": "mean_diff",
+          "effect": 1.3,
+          "se": 3.826600926934905,
+          "source": "doi:10.1093/sleep/zsae250",
+          "reason": ""
+        },
+        {
+          "outcome": "SOL",
+          "type": "mean_diff",
+          "effect": 2.12,
+          "se": 7.5715677007618645,
+          "source": "doi:10.3389/fnins.2026.1816963",
+          "reason": ""
+        },
+        {
+          "outcome": "Sleep onset latency",
+          "type": "mean_diff",
+          "effect": 3.8,
+          "se": 3.724558235549974,
+          "source": "doi:10.1111/jsr.70311",
+          "reason": ""
+        },
+        {
+          "outcome": "Sleep onset latency",
+          "type": "mean_diff",
+          "effect": 3.4,
+          "se": 9.489970298798564,
+          "source": "doi:10.1111/jsr.70311",
+          "reason": ""
+        },
+        {
+          "outcome": "Sleep onset latency",
+          "type": "mean_diff",
+          "effect": 5.7,
+          "se": 4.591921112321885,
+          "source": "doi:10.1111/jsr.70311",
+          "reason": ""
+        },
+        {
+          "outcome": "Sleep onset latency",
+          "type": "mean_diff",
+          "effect": 4.6,
+          "se": 5.7909227360948226,
+          "source": "doi:10.1111/jsr.70311",
+          "reason": ""
+        },
+        {
+          "outcome": "Sleep onset latency, min",
+          "type": "g",
+          "effect": 0.07,
+          "se": 0.053572412977088674,
+          "source": "doi:10.1001/jamanetworkopen.2026.26983",
+          "reason": ""
+        },
+        {
+          "outcome": "REM latency, min",
+          "type": "g",
+          "effect": 0.1,
+          "se": 0.05612348026171193,
+          "source": "doi:10.1001/jamanetworkopen.2026.26983",
+          "reason": ""
+        },
+        {
+          "outcome": "Wake after sleep onset, min",
+          "type": "mean_diff",
+          "effect": -6.7,
+          "se": 2.5000459389308043,
+          "source": "doi:10.2188/jea.je20140201",
+          "reason": ""
+        },
+        {
+          "outcome": "Sleep onset latency, log min",
+          "type": "mean_diff",
+          "effect": -0.1,
+          "se": 0.07653201853869811,
+          "source": "doi:10.2188/jea.je20140201",
+          "reason": ""
+        }
+      ]
+    },
+    "arm_tabelle": {
+      "rows": 97,
+      "latency_rows": 4,
+      "latency_poolable": 4,
+      "sources": 1,
+      "poolable_sources": 1,
+      "outcomes": {
+        "SOL baseline": 2,
+        "SOL follow up": 2
+      },
+      "types": {
+        "g": 4
+      },
+      "examples": [
+        {
+          "outcome": "SOL baseline",
+          "type": "g",
+          "effect": 0.496932,
+          "se": 0.317958,
+          "source": "doi:10.3390/jcm11195845",
+          "reason": ""
+        },
+        {
+          "outcome": "SOL follow up",
+          "type": "g",
+          "effect": 0.693681,
+          "se": 0.32242,
+          "source": "doi:10.3390/jcm11195845",
+          "reason": ""
+        },
+        {
+          "outcome": "SOL baseline",
+          "type": "g",
+          "effect": 0.470681,
+          "se": 0.317471,
+          "source": "doi:10.3390/jcm11195845",
+          "reason": ""
+        },
+        {
+          "outcome": "SOL follow up",
+          "type": "g",
+          "effect": 0.112319,
+          "se": 0.313433,
+          "source": "doi:10.3390/jcm11195845",
+          "reason": ""
+        }
+      ]
+    },
+    "fliesstext": {
+      "rows": 1,
+      "latency_rows": 0,
+      "latency_poolable": 0,
+      "sources": 0,
+      "poolable_sources": 0,
+      "outcomes": {},
+      "types": {},
+      "examples": []
+    },
+    "veraenderung": {
+      "rows": 1,
+      "latency_rows": 0,
+      "latency_poolable": 0,
+      "sources": 0,
+      "poolable_sources": 0,
+      "outcomes": {},
+      "types": {},
+      "examples": []
+    }
+  },
+  "summe": {
+    "latency_rows": 25,
+    "latency_poolable": 24
+  }
+}
