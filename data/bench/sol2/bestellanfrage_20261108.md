@@ -21,8 +21,10 @@ eindeutig aufloesbar.
 [5] Smits MG, Nagtegaal EE, van der Heijden J, Coenen AM, Kerkhof GA. Melatonin for chronic sleep onset insomnia in children: a randomized placebo-controlled trial. J Child Neurol. 2001;16(2):86-92. doi:10.1177/088307380101600204 (PMID: 11292231)
 
 Falls einzelne Titel nur ueber Fernleihe oder Dokumentlieferung zugaenglich
-sind, bitte ich um diesen Weg. Die anfallenden Gebuehren uebernehmen wir bis
-zur Hoehe von [Betrag eintragen]; Kostenstelle: [Kostenstelle eintragen].
+sind, bitte ich um diesen Weg. Bitte stellen Sie die Volltexte, wenn moeglich,
+als durchsuchbares PDF mit Textebene bereit; ein reiner Scan ohne Textebene ist
+fuer die Auswertung nicht verwendbar. Die anfallenden Gebuehren uebernehmen wir
+bis zur Hoehe von [Betrag eintragen]; Kostenstelle: [Kostenstelle eintragen].
 
 Fuer Rueckfragen erreichen Sie mich unter [Telefon] oder [E-Mail].
 
@@ -43,11 +45,16 @@ nennt. Alle anderen 78 Dokumente ohne Volltext stehen in
 - Die DOIs loesen alle auf; PMIDs sind als Rueckfall angegeben.
 - Es handelt sich um Zeitschriftenartikel, keine Buchkapitel oder
   Konferenzbeitraege.
-- Benoetigt werden die Volltexte als PDF; eine Weitergabe an Dritte ist
-  nicht vorgesehen.
+- Benoetigt werden die Volltexte als PDF mit Textebene (born digital oder
+  OCR-durchsuchbar); eine Weitergabe an Dritte ist nicht vorgesehen.
+- Bei einem Scan ohne Textebene bitte ich um den Hinweis, damit ich keine
+  Zeilen als "nicht berichtet" fehlverbuchen muss.
 
 ## Nach Erhalt
 
-Die PDFs in `data/bench/sol2/volltext/` ablegen, dann dieselbe Kette
-(`scripts/read_q2_extended.py`) darauf ansetzen. Erfolgsschwelle bleibt
-k >= 5 poolbare Zeilen auf der Einschaflatenz.
+Die PDFs in `data/bench/sol2/volltext/` ablegen, dann die PDF-Kette
+(`scripts/read_pdf_corpus.py --dir data/bench/sol2/volltext`) darauf ansetzen.
+Zeigt der Bericht `Zeichen 0` oder `zu wenig Text`, ist die Datei ein Scan und
+gehoert nachbestellt oder abgetippt, nicht als leere Studie verbucht (siehe
+`scan_grenze_20261108.md`). Erfolgsschwelle bleibt k >= 5 poolbare Zeilen auf
+der Einschaflatenz.
