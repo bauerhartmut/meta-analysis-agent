@@ -452,5 +452,40 @@ der Punktschaetzer bleibt. Die 7 uebrigen Gruppen behalten ihr KI. Fehlt
 `e4g_m_gate_20261108.md`.
 
 Nebenbefund: Das Dashboard rendert `Number(g.ci_low).toFixed(3)`; bei `None`
-waere das `[0,000; 0,000]` geworden. Es zeigt jetzt "kein KI (nur ein
-unabhaengiger Cluster)".
+waere das `[0,000; 0,000]` geworden.Es zeigt jetzt "kein KI (nur ein unabhaengiger Cluster)".
+
+### Nachtrag 11: Report-Hinweis, RVE-Annahmen, Dashboard-Test (E4h)
+
+**Warum `[-, -]`.** `forest_table` druckt die gepoolte Zeile immer; das KI
+ist bei M = 1 `None`, und `_meta_num(None)` gibt `-` zurueck. Die Zeile sagte
+also nicht "Daten fehlen", sondern "Unsicherheit nicht schaetzbar" - und
+sagte das nicht.
+
+**Report.** `report.py` hat jetzt einen eigenen Zweig fuer `single_cluster`:
+"Kein Konfidenzintervall: 5 Zeilen, aber nur 1 unabhaengige Quelle. Der
+Punktschaetzer -0,309 ist eine Sichtung, keine Schaetzung. Es fehlen nicht die
+Daten - es fehlt die zweite unabhaengige Einheit, aus der sich Unsicherheit
+schaetzen liesse." Es wird kein Intervall erzeugt. Geprueft an einer Kopie der
+mediterranen DB: 279 Zeilen Ausgabe, Hinweis genau einmal, Abschnitt rendert
+(`report_meta_ausschnitt_20261108.txt`).
+
+**Entscheidung zu gitignored.** `report.py` bleibt gitignored, wie die Regel
+es verlangt. Der Patch ist lokal; die Sicherung liegt in
+`local_patches/report_20261108.py` (neu gitignored), die Entscheidung hier.
+Dauerhaft versionieren ginge nur ueber eine Aenderung der Repo-Regel - das
+ist nicht meine Entscheidung.
+
+**RVE.** In `e4f_rve_20261108.md` stehen jetzt die Modellannahmen: HKJ ist
+Random Effects mit tau^2 in den Gewichten, RVE ist Fixed Effect ohne tau^2.
+Ein Breitenvergleich ist deshalb kein Beweis fuer Scheinpraezision. MACE
+bleibt Einzelfall (0,624 gegen 1,137), ohne Trennung von Modell- und
+Cluster-Effekt.
+
+**Dashboard.** Gerendert mit injizierter API-Antwort, weil der Live-Endpunkt
+den Orchestrator braucht: preeclampsia zeigt "kein KI (nur ein unabhaengiger
+Cluster)", MACE "[0.430; 1.050]", kein "[0,000; 0,000]". Protokoll:
+`dashboard_render_protokoll_20261108.md`.
+
+**Repo.** `local_patches/` ist gitignored; dort liegen Sicherungen von
+`pooling.py`, `report.py` und `pool_gates.py`. Fremde uncommittete Dateien
+wurden nicht angefasst.

@@ -1,0 +1,278 @@
+## Metaanalyse
+
+### Zielmaß der Synthese
+
+_Kein Zielmaß abgeleitet: es wurde kein Outcome aus der Forschungsfrage festgelegt (META_TARGETS_ENABLED oder der Ableitungslauf). Die Gruppen unten entstehen deshalb aus den Labels des Modells - zwei Namen für ein Konstrukt ergeben dann zwei Gruppen mit je k = 1._
+
+### PRISMA-Durchfluss (Zählen nur, was die Datenbank belegt)
+
+| Stufe | Anzahl |
+|---|---|
+| Quellen im Bestand | 279 |
+| mit Relevanz-Urteil | 205 |
+| ausgeschlossen (mit Grund) | 0 |
+| eingeschlossen | 147 |
+| Quellen mit gelesener Effektzeile | 44 |
+| Effektzeilen gesamt | 91 |
+| davon diskrepant (Doppellektüre weicht ab) | 2 |
+| davon verworfen (Plausibilitätsgate) | 42 |
+| davon Review-Aggregate (kein Primärpool) | 9 |
+| **poolbar für Primärsynthese** (Design, Präzision, nicht diskrepant) | **36** |
+| davon mit Präzision (SE oder KI) | 32 |
+| davon aus Übersichtsarbeiten (nicht gepoolt) | 9 |
+| davon für den Pool tauglich (Primärstudie mit Präzision) | 36 |
+| davon strittig (Doppel-Extraktion) | 2 |
+| davon verworfen (Plausibilitätsgate) | 42 |
+
+### agreement between 12 medas and 24hr [fisher_z]
+
+| Studie | Effekt [95 %-KI] | Gewicht |
+|---|---|---|
+| Exploring the validity and internal consistency of the 12-po | 0.245 [0.157, 0.333] | - |
+| **kein gepoolter Wert** | - | - |
+
+- **Kein gepoolter Wert:** k = 1 liegt unter META_MIN_STUDIES = 2 (oder eine Zeile hat keine nutzbare Präzision). Die Zeilen stehen einzeln da; ein Mittelwert über sie wird hier nicht behauptet.
+- Subgruppen nach Design: keine zwischen-Gruppen-Aussage möglich (k-Gate: min. 3 Studien je Design; unter der Schwelle: cross-sectional (k = 1)).
+- Publikationsbias: nicht prüfbar (zu wenige Studien (k < 3)).
+- **Kleinst-k:** Sehr kleine Studienanzahl (k=1): Hartung-Knapp-Intervalle sind bei k<3 oft sehr breit oder instabil, und ein Prediction-Interval ist erst ab k>=3 sinnvoll. Interpretiere das Ergebnis als Sichtung, nicht als Schätzung.
+
+### body mass index [raw:beta]
+
+| Studie | Effekt [95 %-KI] | Gewicht |
+|---|---|---|
+| Mediterranean diet and obesity polygenic risk interaction on | 0.120 [0.005, 0.235] | - |
+| **kein gepoolter Wert** | - | - |
+
+- **Kein gepoolter Wert:** k = 1 liegt unter META_MIN_STUDIES = 2 (oder eine Zeile hat keine nutzbare Präzision). Die Zeilen stehen einzeln da; ein Mittelwert über sie wird hier nicht behauptet.
+- Subgruppen nach Design: keine zwischen-Gruppen-Aussage möglich (k-Gate: min. 3 Studien je Design; unter der Schwelle: Cross-sectional (k = 1)).
+- Publikationsbias: nicht prüfbar (zu wenige Studien (k < 3)).
+- **Protokollverstoß:** Population außerhalb des Protokolls (nicht Erwachsene): 'European children aged 2-16 years with high genetic suscepti' (Studie: Mediterranean diet and obesity polygenic risk interaction on)
+- **Kleinst-k:** Sehr kleine Studienanzahl (k=1): Hartung-Knapp-Intervalle sind bei k<3 oft sehr breit oder instabil, und ein Prediction-Interval ist erst ab k>=3 sinnvoll. Interpretiere das Ergebnis als Sichtung, nicht als Schätzung.
+
+### cardiovascular mortality [log_ratio]
+
+| Studie | Effekt [95 %-KI] | Gewicht |
+|---|---|---|
+| Effect of Mediterranean diet adherence on all-cause and caus | 0.854 [0.115, 1.593] | 2.0 % |
+| Improved prediction and risk stratification of major adverse | 1.015 [0.909, 1.122] | 98.0 % |
+| **Random Effects** | 1.012 [0.723, 1.301] | 100 % |
+| Fixed Effect (Vergleich) | 1.012 [0.906, 1.118] | - |
+
+- Gepoolter Effekt (Random Effects, Hartung-Knapp-Sidak): **1.012** [0.723; 1.301] aus k = 2 Studien.
+- Robustes Intervall bei abhängigen Effekten (RVE, M = 2 Cluster, t auf 1 df): 1.012 [0.930; 1.094] - jedes Zählen hängiger Zeilen als unabhängige Studien schmiedet hier schon das Original; der gepoolte Punkt bleibt der Random-Effects-Wert darüber.
+- Heterogenität: Q = 0.18, df = 1, p = 0.673, I² = 0.0 %, τ = 0.000, τ² = 0.000 (REML: 0.000).
+- Subgruppen nach Design: keine zwischen-Gruppen-Aussage möglich (k-Gate: min. 3 Studien je Design; unter der Schwelle: Cohort study (k = 2)).
+- Publikationsbias: nicht prüfbar (zu wenige Studien (k < 3)).
+- **Kleinst-k:** Sehr kleine Studienanzahl (k=2): Hartung-Knapp-Intervalle sind bei k<3 oft sehr breit oder instabil, und ein Prediction-Interval ist erst ab k>=3 sinnvoll. Interpretiere das Ergebnis als Sichtung, nicht als Schätzung.
+
+### correlation between diet scores [fisher_z]
+
+| Studie | Effekt [95 %-KI] | Gewicht |
+|---|---|---|
+| Validation of a Mediterranean Diet Scoring System for Interv | 0.867 [0.762, 0.971] | - |
+| **kein gepoolter Wert** | - | - |
+
+- **Kein gepoolter Wert:** k = 1 liegt unter META_MIN_STUDIES = 2 (oder eine Zeile hat keine nutzbare Präzision). Die Zeilen stehen einzeln da; ein Mittelwert über sie wird hier nicht behauptet.
+- Subgruppen nach Design: keine zwischen-Gruppen-Aussage möglich (k-Gate: min. 3 Studien je Design; unter der Schwelle: Validation study (k = 1)).
+- Publikationsbias: nicht prüfbar (zu wenige Studien (k < 3)).
+- **Kleinst-k:** Sehr kleine Studienanzahl (k=1): Hartung-Knapp-Intervalle sind bei k<3 oft sehr breit oder instabil, und ein Prediction-Interval ist erst ab k>=3 sinnvoll. Interpretiere das Ergebnis als Sichtung, nicht als Schätzung.
+
+### correlation between md indices [fisher_z]
+
+| Studie | Effekt [95 %-KI] | Gewicht |
+|---|---|---|
+| Comparison of five international indices of adherence to the | 0.848 [0.649, 1.047] | - |
+| **kein gepoolter Wert** | - | - |
+
+- **Kein gepoolter Wert:** k = 1 liegt unter META_MIN_STUDIES = 2 (oder eine Zeile hat keine nutzbare Präzision). Die Zeilen stehen einzeln da; ein Mittelwert über sie wird hier nicht behauptet.
+- Subgruppen nach Design: keine zwischen-Gruppen-Aussage möglich (k-Gate: min. 3 Studien je Design; unter der Schwelle: Cross-sectional (k = 1)).
+- Publikationsbias: nicht prüfbar (zu wenige Studien (k < 3)).
+- **Kleinst-k:** Sehr kleine Studienanzahl (k=1): Hartung-Knapp-Intervalle sind bei k<3 oft sehr breit oder instabil, und ein Prediction-Interval ist erst ab k>=3 sinnvoll. Interpretiere das Ergebnis als Sichtung, nicht als Schätzung.
+
+### hypertension [log_ratio]
+
+| Studie | Effekt [95 %-KI] | Gewicht |
+|---|---|---|
+| Dietary Fats and Cardio-Metabolic Outcomes in a Cohort of It | -0.562 [-1.040, -0.084] | - |
+| **kein gepoolter Wert** | - | - |
+
+- **Kein gepoolter Wert:** k = 1 liegt unter META_MIN_STUDIES = 2 (oder eine Zeile hat keine nutzbare Präzision). Die Zeilen stehen einzeln da; ein Mittelwert über sie wird hier nicht behauptet.
+- Subgruppen nach Design: keine zwischen-Gruppen-Aussage möglich (k-Gate: min. 3 Studien je Design; unter der Schwelle: Cross-sectional observational study (k = 1)).
+- Publikationsbias: nicht prüfbar (zu wenige Studien (k < 3)).
+- **Kleinst-k:** Sehr kleine Studienanzahl (k=1): Hartung-Knapp-Intervalle sind bei k<3 oft sehr breit oder instabil, und ein Prediction-Interval ist erst ab k>=3 sinnvoll. Interpretiere das Ergebnis als Sichtung, nicht als Schätzung.
+
+### hypertension preeclampsia [log_ratio]
+
+| Studie | Effekt [95 %-KI] | Gewicht |
+|---|---|---|
+| Mediterranean diet in preeclampsia prevention: mechanisms of | 1.335 [0.249, 2.421] | - |
+| **kein gepoolter Wert** | - | - |
+
+- **Kein gepoolter Wert:** k = 1 liegt unter META_MIN_STUDIES = 2 (oder eine Zeile hat keine nutzbare Präzision). Die Zeilen stehen einzeln da; ein Mittelwert über sie wird hier nicht behauptet.
+- Subgruppen nach Design: keine zwischen-Gruppen-Aussage möglich (k-Gate: min. 3 Studien je Design; unter der Schwelle: Observational cohort (k = 1)).
+- Publikationsbias: nicht prüfbar (zu wenige Studien (k < 3)).
+- **Kleinst-k:** Sehr kleine Studienanzahl (k=1): Hartung-Knapp-Intervalle sind bei k<3 oft sehr breit oder instabil, und ein Prediction-Interval ist erst ab k>=3 sinnvoll. Interpretiere das Ergebnis als Sichtung, nicht als Schätzung.
+
+### hypertensive disorders of pregnancy [log_ratio]
+
+| Studie | Effekt [95 %-KI] | Gewicht |
+|---|---|---|
+| Mediterranean diet in preeclampsia prevention: mechanisms of | -0.545 [-0.873, -0.216] | - |
+| **kein gepoolter Wert** | - | - |
+
+- **Kein gepoolter Wert:** k = 1 liegt unter META_MIN_STUDIES = 2 (oder eine Zeile hat keine nutzbare Präzision). Die Zeilen stehen einzeln da; ein Mittelwert über sie wird hier nicht behauptet.
+- Subgruppen nach Design: keine zwischen-Gruppen-Aussage möglich (k-Gate: min. 3 Studien je Design; unter der Schwelle: Prospective cohort (k = 1)).
+- Publikationsbias: nicht prüfbar (zu wenige Studien (k < 3)).
+- **Kleinst-k:** Sehr kleine Studienanzahl (k=1): Hartung-Knapp-Intervalle sind bei k<3 oft sehr breit oder instabil, und ein Prediction-Interval ist erst ab k>=3 sinnvoll. Interpretiere das Ergebnis als Sichtung, nicht als Schätzung.
+
+### incident cardiovascular disease [log_ratio]
+
+| Studie | Effekt [95 %-KI] | Gewicht |
+|---|---|---|
+| Sex-differences in Mediterranean diet: a key piece to explai | 0.593 [0.047, 1.139] | 18.5 % |
+| Interaction between rheumatoid arthritis and mediterranean d | 0.975 [0.524, 1.425] | 19.7 % |
+| Interaction between rheumatoid arthritis and mediterranean d | 0.513 [0.008, 1.017] | 19.0 % |
+| Health benefits of nut consumption. | -0.400 [-0.774, -0.027] | 20.5 % |
+| Mediterranean Diet and Physical Exercise for Cardiometabolic | -0.342 [-0.482, -0.203] | 22.3 % |
+| **Random Effects** | 0.240 [-0.524, 1.005] | 100 % |
+| Fixed Effect (Vergleich) | -0.164 [-0.283, -0.045] | - |
+| Prediction Interval | 0.240 [-1.836, 2.316] | - |
+
+- Gepoolter Effekt (Random Effects, Hartung-Knapp-Sidak): **0.240** [-0.524; 1.005] aus k = 5 Studien.
+- Prediction Interval (was eine künftige vergleichbare Studie zeigen würde): -1.836 bis 2.316. Bei dieser Streuung ist das die ehrlichere Zahl als das KI des Mittelwerts.
+- Robustes Intervall bei abhängigen Effekten (RVE, M = 4 Cluster, t auf 3 df): -0.130 [-0.849; 0.589] - jedes Zählen hängiger Zeilen als unabhängige Studien schmiedet hier schon das Original; der gepoolte Punkt bleibt der Random-Effects-Wert darüber.
+- Heterogenität: Q = 46.66, df = 4, p = 0.000, I² = 91.4 %, τ = 0.589, τ² = 0.347 (REML: 0.342).
+- Subgruppen nach Design: keine zwischen-Gruppen-Aussage möglich (k-Gate: min. 3 Studien je Design; unter der Schwelle: Cross-sectional (k = 1), Prospective cohort (k = 1), Prospective cohort study (k = 1), cross-sectional (k = 1), prospective cohort (k = 1)).
+- Leave-one-out: ohne jeweils eine Studie liegt der gepoolte Wert zwischen 0.039 und 0.415 (voller Satz: 0.240) - trägt eine einzelne Studie den Befund?
+- Publikationsbias (Egger-Regression): Achsenabschnitt = 4.585, t = 2.34, p = 0.102. Bei k < 10 ist das ein schwaches Signal.
+
+### major adverse cardiovascular events [log_ratio]
+
+| Studie | Effekt [95 %-KI] | Gewicht |
+|---|---|---|
+| Gut‐Derived Serum Lipopolysaccharide is Associated With Enha | 0.585 [0.233, 0.937] | 35.4 % |
+| Improving cardiovascular risk stratification: the role of ab | 0.788 [0.306, 1.271] | 18.8 % |
+| Improving cardiovascular risk stratification: the role of ab | 0.579 [0.030, 1.128] | 14.5 % |
+| Retrospective analysis of dietary risk factors and cardiovas | 0.967 [0.592, 1.342] | 31.2 % |
+| **Random Effects** | 0.742 [0.430, 1.053] | 100 % |
+| Fixed Effect (Vergleich) | 0.742 [0.532, 0.951] | - |
+| Prediction Interval | 0.742 [0.282, 1.201] | - |
+
+- Gepoolter Effekt (Random Effects, Hartung-Knapp-Sidak): **0.742** [0.430; 1.053] aus k = 4 Studien.
+- Prediction Interval (was eine künftige vergleichbare Studie zeigen würde): 0.282 bis 1.201. Bei dieser Streuung ist das die ehrlichere Zahl als das KI des Mittelwerts.
+- Robustes Intervall bei abhängigen Effekten (RVE, M = 3 Cluster, t auf 2 df): 0.751 [0.182; 1.319] - jedes Zählen hängiger Zeilen als unabhängige Studien schmiedet hier schon das Original; der gepoolte Punkt bleibt der Random-Effects-Wert darüber.
+- Heterogenität: Q = 2.52, df = 3, p = 0.471, I² = 0.0 %, τ = 0.000, τ² = 0.000 (REML: 0.002).
+- Subgruppen nach Design: keine zwischen-Gruppen-Aussage möglich (k-Gate: min. 3 Studien je Design; unter der Schwelle: Retrospective cross-sectional study (k = 1), prospective cohort (k = 2), prospective single-center study (k = 1)).
+- Leave-one-out: ohne jeweils eine Studie liegt der gepoolte Wert zwischen 0.639 und 0.828 (voller Satz: 0.742) - trägt eine einzelne Studie den Befund?
+- Publikationsbias (Egger-Regression): Achsenabschnitt = -0.688, t = -0.22, p = 0.848. Bei k < 10 ist das ein schwaches Signal.
+- **Kleinst-k:** Kleine Studienanzahl (k=4): Heterogenitaets- und Intervallangaben sind mit Vorsicht zu interpretieren.
+
+### mediterranean diet adherence screener [raw:mean_diff]
+
+| Studie | Effekt [95 %-KI] | Gewicht |
+|---|---|---|
+| Intervention design and adherence to Mediterranean diet in t | 7.600 [3.876, 11.324] | - |
+| **kein gepoolter Wert** | - | - |
+
+- **Kein gepoolter Wert:** k = 1 liegt unter META_MIN_STUDIES = 2 (oder eine Zeile hat keine nutzbare Präzision). Die Zeilen stehen einzeln da; ein Mittelwert über sie wird hier nicht behauptet.
+- Subgruppen nach Design: keine zwischen-Gruppen-Aussage möglich (k-Gate: min. 3 Studien je Design; unter der Schwelle: Randomized controlled trial (baseline data) (k = 1)).
+- Publikationsbias: nicht prüfbar (zu wenige Studien (k < 3)).
+- **Kleinst-k:** Sehr kleine Studienanzahl (k=1): Hartung-Knapp-Intervalle sind bei k<3 oft sehr breit oder instabil, und ein Prediction-Interval ist erst ab k>=3 sinnvoll. Interpretiere das Ergebnis als Sichtung, nicht als Schätzung.
+
+### preeclampsia [log_ratio]
+
+| Studie | Effekt [95 %-KI] | Gewicht |
+|---|---|---|
+| Mediterranean diet in preeclampsia prevention: mechanisms of | -0.248 [-0.451, -0.046] | 44.6 % |
+| Mediterranean diet in preeclampsia prevention: mechanisms of | -0.329 [-0.591, -0.066] | 26.6 % |
+| Mediterranean diet in preeclampsia prevention: mechanisms of | -0.274 [-0.579, 0.030] | 19.8 % |
+| Mediterranean diet in preeclampsia prevention: mechanisms of | -1.171 [-2.205, -0.137] | 1.7 % |
+| Mediterranean diet in preeclampsia prevention: mechanisms of | -0.494 [-0.996, 0.008] | 7.3 % |
+| **Random Effects** | -0.309 [-, -] | 100 % |
+| Fixed Effect (Vergleich) | -0.309 [-, -] | - |
+
+- **Kein Konfidenzintervall:** 5 Zeilen, aber nur 1 unabhaengige Quelle. Der Punktschaetzer **-0.309** ist eine Sichtung, keine Schaetzung. Es fehlen nicht die Daten - es fehlt die zweite unabhaengige Einheit, aus der sich Unsicherheit schaetzen liesse. Ein Intervall waere hier erfunden; deshalb steht keins.
+- Heterogenität: Q = 3.61, df = 4, p = 0.462, I² = 0.0 %, τ = 0.000, τ² = 0.000 (REML: 0.000).
+- Subgruppen nach Design: keine zwischen-Gruppen-Aussage möglich (k-Gate: min. 3 Studien je Design; unter der Schwelle: Prospective cohort (k = 1), Prospective multicenter cohort (k = 1), Prospective study (k = 1), Randomized controlled trial (k = 2)).
+- Leave-one-out: ohne jeweils eine Studie liegt der gepoolte Wert zwischen -0.357 und -0.294 (voller Satz: -0.309) - trägt eine einzelne Studie den Befund?
+- Publikationsbias (Egger-Regression): Achsenabschnitt = -1.935, t = -5.70, p = 0.011. Bei k < 10 ist das ein schwaches Signal.
+
+### test retest reliability [fisher_z]
+
+| Studie | Effekt [95 %-KI] | Gewicht |
+|---|---|---|
+| Validation and cultural adaptation of the pregnancy-adapted  | 0.987 [0.798, 1.175] | - |
+| **kein gepoolter Wert** | - | - |
+
+- **Kein gepoolter Wert:** k = 1 liegt unter META_MIN_STUDIES = 2 (oder eine Zeile hat keine nutzbare Präzision). Die Zeilen stehen einzeln da; ein Mittelwert über sie wird hier nicht behauptet.
+- Subgruppen nach Design: keine zwischen-Gruppen-Aussage möglich (k-Gate: min. 3 Studien je Design; unter der Schwelle: Validation study (k = 1)).
+- Publikationsbias: nicht prüfbar (zu wenige Studien (k < 3)).
+- **Kleinst-k:** Sehr kleine Studienanzahl (k=1): Hartung-Knapp-Intervalle sind bei k<3 oft sehr breit oder instabil, und ein Prediction-Interval ist erst ab k>=3 sinnvoll. Interpretiere das Ergebnis als Sichtung, nicht als Schätzung.
+
+### test retest reliability of medas [fisher_z]
+
+| Studie | Effekt [95 %-KI] | Gewicht |
+|---|---|---|
+| Cross-Cultural Adaptation of Mediterranean Diet Adherence Sc | 1.358 [1.202, 1.515] | - |
+| **kein gepoolter Wert** | - | - |
+
+- **Kein gepoolter Wert:** k = 1 liegt unter META_MIN_STUDIES = 2 (oder eine Zeile hat keine nutzbare Präzision). Die Zeilen stehen einzeln da; ein Mittelwert über sie wird hier nicht behauptet.
+- Subgruppen nach Design: keine zwischen-Gruppen-Aussage möglich (k-Gate: min. 3 Studien je Design; unter der Schwelle: Cross-sectional validation study (k = 1)).
+- Publikationsbias: nicht prüfbar (zu wenige Studien (k < 3)).
+- **Kleinst-k:** Sehr kleine Studienanzahl (k=1): Hartung-Knapp-Intervalle sind bei k<3 oft sehr breit oder instabil, und ein Prediction-Interval ist erst ab k>=3 sinnvoll. Interpretiere das Ergebnis als Sichtung, nicht als Schätzung.
+
+### Warum Zeilen nicht gepoolt wurden
+
+- Parent-Child Concordance in Mediterranean Diet Adherence and: Plausibilitätsgate: unbekannter Effekttyp '(leer)'
+- Parent-Child Concordance in Mediterranean Diet Adherence and: Plausibilitätsgate: unbekannter Effekttyp '(leer)'
+- Effect of Mediterranean diet adherence on all-cause and caus: Plausibilitätsgate: unbekannter Effekttyp '(leer)'
+- Review: The emerging role of Mediterranean diets in cardiova: Plausibilitätsgate: unbekannter Effekttyp '(leer)'
+- Mediterranean Diet and Cardiovascular Risk: Plausibilitätsgate: unbekannter Effekttyp '(leer)'
+- Mediterranean Diet and Cardiovascular Risk: Plausibilitätsgate: unbekannter Effekttyp '(leer)'
+- Mediterranean diet in preeclampsia prevention: mechanisms of: Plausibilitätsgate: unbekannter Effekttyp '(leer)'
+- A Cross-Sectional Study of Food Insecurity, Mediterranean Di: Plausibilitätsgate: unbekannter Effekttyp '(leer)'
+- Associations of Dietary Patterns and Micronutrients With Maj: Plausibilitätsgate: unbekannter Effekttyp '(leer)'
+- Associations of Dietary Patterns and Micronutrients With Maj: Plausibilitätsgate: unbekannter Effekttyp '(leer)'
+- Mediterranean Diet Pattern: Potential Impact on the Differen: Plausibilitätsgate: unbekannter Effekttyp '(leer)'
+- Mediterranean Diet Pattern: Potential Impact on the Differen: Plausibilitätsgate: unbekannter Effekttyp '(leer)'
+- Mediterranean diet and obesity polygenic risk interaction on: Plausibilitätsgate: unbekannter Effekttyp '(leer)'
+- Mediterranean diet and obesity polygenic risk interaction on: Plausibilitätsgate: unbekannter Effekttyp '(leer)'
+- Ancestry Specific Polygenic Risk Score, Dietary Patterns, Ph: Plausibilitätsgate: unbekannter Effekttyp '(leer)'
+- The Impact of the Alternate Mediterranean Diet (aMED) on the: Plausibilitätsgate: unbekannter Effekttyp '(leer)'
+- The Impact of the Alternate Mediterranean Diet (aMED) on the: Plausibilitätsgate: unbekannter Effekttyp '(leer)'
+- Mediterranean Diet in Older Adults: Cardiovascular Outcomes : Plausibilitätsgate: unbekannter Effekttyp '(leer)'
+- Mediterranean Diet in Older Adults: Cardiovascular Outcomes : Plausibilitätsgate: unbekannter Effekttyp '(leer)'
+- Monounsaturated Fatty Acids in Cardiovascular Disease: Intak: Plausibilitätsgate: unbekannter Effekttyp '(leer)'
+- ... und 45 weitere
+
+### Risk-of-Bias (maschinell, quote-belegt)
+
+| Maschinelle Bewertung | Studien |
+|---|---|
+| low | 0 |
+| some_concerns | 12 |
+| high | 1 |
+| strittig (Pässe weichen ab) | 12 |
+| AMSTAR 2: high | 1 |
+
+Die Bewertungen sind maschinell und damit kein geprüftes Instrument; jedes Rating ist mit einem wörtlichen Zitat aus dem Volltext belegt und über die Datenbank nachprüfbar.
+
+### Summary of Findings
+
+| Pool | k | Σn | Gepoolter Effekt [95 %-KI] | I² % | PI | GRADE |
+|---|---|---|---|---|---|---|
+| cardiovascular mortality [log_ratio] | 2 | 232082 | 1.012 [0.723; 1.301] | 0.0 | - | low → **very_low** |
+| incident cardiovascular disease [log_ratio] | 5 | 88628 | 0.240 [-0.524; 1.005] | 91.4 | -1.836 bis 2.316 | low → **very_low** |
+| major adverse cardiovascular events [log_ratio] | 4 | 2909 | 0.742 [0.430; 1.053] | 0.0 | 0.282 bis 1.201 | low → **very_low** |
+| preeclampsia [log_ratio] | 5 | 19777 | -0.309 [-; -] | 0.0 | - | low → **very_low** |
+
+_Σn: Summe der von den gepoolten Primärstudien induzierten Stichprobengrößen; '-' wenn eine Zeile kein n spekulierte. Die GRADE-Spalte gibt Startniveau und Endrating der maschinellen Bewertung wieder; die Abwertungsbegreifung steht unterm entsprechenden Pool._
+
+### Evidenzqualität (GRADE, maschinell)
+
+- cardiovascular mortality [log_ratio]: Startniveau low → **very_low** (1 Abwertung(en): Risk of Bias: mindestens eine Studie mit maschinell 'high' bewertetem Verzerrungsrisiko)
+- incident cardiovascular disease [log_ratio]: Startniveau low → **very_low** (3 Abwertung(en): Risk of Bias: mindestens eine Studie mit maschinell 'high' bewertetem Verzerrungsrisiko; Inkonsistenz: I² = 91% >= 75%; Imprecision: 95%-KI-Breite 1.53 überspannt die praktisch relevante Spanne)
+- major adverse cardiovascular events [log_ratio]: Startniveau low → **very_low** (1 Abwertung(en): Risk of Bias: mindestens eine Studie mit maschinell 'high' bewertetem Verzerrungsrisiko)
+- preeclampsia [log_ratio]: Startniveau low → **very_low** (1 Abwertung(en): Risk of Bias: mindestens eine Studie mit maschinell 'high' bewertetem Verzerrungsrisiko)
+
+_Keine systematische Übersichtsarbeit: kein Register-Eintrag, keine menschliche Doppelcodierung. Risk-of-Bias und GRADE sind maschinell bewertet (Freigabe des Nutzers vom 31.10.2026), nicht menschlich verifiziert; jedes Rating ist quote-belegt und nachprüfbar. Die Doppel-Extraktion senkt den Ablesefehler, sie beseitigt ihn nicht, und gepoolte Beobachtungsdaten bleiben Beobachtungsdaten. Unter k = 10 sind Funnel und Egger schwach; ein OA-lastiger Korpus ist selbst eine Bias-Quelle, die der Egger-Test nicht sieht._

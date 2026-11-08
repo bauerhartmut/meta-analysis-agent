@@ -87,3 +87,6 @@ data/bench/sol2/probelauf_bindestrich/*.pdf
 
 # generierte Test-PDFs der Lieferungs-Pipeline (regenerierbar)
 data/bench/sol2/testfall_pipeline/
+
+# Lokale Sicherungen geschuetzter Dateien
+local_patches/
