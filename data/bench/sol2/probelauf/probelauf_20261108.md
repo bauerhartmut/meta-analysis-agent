@@ -55,8 +55,10 @@ der kleinen Zahl. Die drei Zeilen tragen alle ein woertliches Zitat.
 - Ein echter Verlags-PDF-Text ist zweispaltig, enthaelt Fussnoten, Kopf- und
   Fusszeilen und Tabellen mit Spaltenlayout. Der Fliesstext-Leser wird dort
   mehr Rauschen sehen als hier.
-- Silbentrennung ueber Zeilen (``la-
-ten-cy``) behandelt `flatten_prose()`
+- Silbentrennung ueber Zeilen (la- / tency) loest `dehyphenate()` auf;
+  geprueft an `probelauf_bindestrich/` (k = 1, Zitat ohne Bindestrich).
+- Zweispaltige Zeilen trennt `split_columns()` an der breitesten Luecke,
+  wenn beide Seiten Text sind; am Fixture geprueft. Tabellenzeilen bleiben.
   nur fuer den einfachen Bindestrich-Fall.
 - Die Zeile "kurzer Text" ist hier kuenstlich erzeugt; ob echte Kurzberichte
   darunter fallen, zeigt sich erst am Material.

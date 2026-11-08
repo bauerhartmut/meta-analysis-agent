@@ -66,28 +66,10 @@ def rows_from_block(body: str) -> tuple[list[str], list[list[str]]]:
 
 
 def flatten_prose(text: str) -> str:
-    """Zeilenumbrueche innerhalb eines Satzes gluecken.
+    """Saetze gluecken, Silbentrennung aufloesen, Spalten trennen."""
+    from research_agent.meta.pdf_text import normalize
 
-    PDF-Text bricht Saetze an der Satzbreite um; der Fliesstext-Leser arbeitet
-    zeilenweise und sieht den Satz sonst nicht. Tabellenzeilen bleiben stehen:
-    sie tragen mehrere Leerzeichen oder Balken, und Zeilen nach einem Satzende
-    oder Doppelpunkt werden nie verklebt.
-    """
-    out: list[str] = []
-    for line in (text or "").splitlines():
-        stripped = line.strip()
-        if not out:
-            out.append(line)
-            continue
-        prev = out[-1]
-        ends_sentence = prev.rstrip().endswith((".", ":", ";", "!", "?"))
-        looks_tabular = bool(re.search(r"\s{2,}|\|", line)) or bool(
-            re.search(r"\s{2,}|\|", prev))
-        if stripped and not ends_sentence and not looks_tabular:
-            out[-1] = prev.rstrip() + " " + stripped
-        else:
-            out.append(line)
-    return "\n".join(out)
+    return normalize(text)
 
 
 HARD_MIN_CHARS = 50

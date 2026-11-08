@@ -1,0 +1,36 @@
+{
+  "generated": "2026-11-08T13:46:42",
+  "directory": "data/bench/sol2/probelauf_bindestrich",
+  "pdfs": 1,
+  "readable": 1,
+  "rows": 1,
+  "sol_rows": 1,
+  "k_sol_poolable": 1,
+  "problems": {
+    "kurzer Text (unter min-chars, trotzdem gelesen)": 1
+  },
+  "documents": [
+    {
+      "file": "probe_bindestrich.pdf",
+      "chars": 1195,
+      "source": "pdf:probe_bindestrich",
+      "short": true,
+      "arm_candidates": 1,
+      "arm_stored": 1,
+      "blocks": 0,
+      "direct_candidates": 0,
+      "direct_stored": 0,
+      "rows": 1,
+      "sol_rows": 1,
+      "sol_poolable": 1,
+      "sol": [
+        {
+          "outcome": "Sleep onset latency",
+          "type": "g",
+          "effect": -1.113062,
+          "unit": "Hedges g"
+        }
+      ]
+    }
+  ]
+}

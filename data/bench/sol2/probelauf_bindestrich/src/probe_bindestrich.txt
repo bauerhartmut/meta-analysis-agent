@@ -1,0 +1,29 @@
+SIMULATION - KEINE ECHTEN STUDIENDATEN
+Erzeugt fuer den Test der Silbentrennung am 2026-11-08.
+Die Zahlen sind frei erfunden und gehoeren zu keiner Publikation.
+
+A Synthetic Report with Hyphenation Across Lines
+Probe Author
+
+Abstract
+This fixture reproduces a real PDF quirk: a word is hyphenated at the line
+break, so the sentence only becomes readable after dehyphenation.
+
+Methods
+Participants were randomised in a 1:1 ratio using a computer-generated list.
+Allocation was concealed in sealed opaque envelopes prepared by an
+independent statistician without contact to the participants. The trial was
+approved by the local ethics committee and conducted in accordance with the
+Declaration of Helsinki. Caregivers recorded sleep diaries for seven
+consecutive nights before and after the intervention, and the primary
+analysis used the mean of the last three nights.
+
+Results
+Forty participants completed the trial. Sleep onset la-
+tency was 19.5 +- 7.0 min in the melatonin group (n = 25) and 28.0 +- 8.0 min
+in the placebo group (n = 25).
+Both columns were typeset side by side.        Secondary outcomes were similar
+in the two groups and are not reported here.
+
+Discussion
+Synthetic values. Not evidence.

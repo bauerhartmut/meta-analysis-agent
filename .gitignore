@@ -83,3 +83,4 @@ data/bench/sol/seed_xml/
 data/**/*.db-shm
 data/**/*.db-wal
 data/bench/sol2/scanprobe/*.pdf
+data/bench/sol2/probelauf_bindestrich/*.pdf
