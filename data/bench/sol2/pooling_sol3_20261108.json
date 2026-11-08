@@ -360,6 +360,90 @@
           "herkunft": "0.1 mg/kg, SE berichtet"
         }
       ]
+    },
+    {
+      "analyse": "S8 S1 Tagebuch unadjustiert (HTA)",
+      "k": 3,
+      "studien": [
+        "PMC3489506",
+        "PMC2933606",
+        "PMC2952772"
+      ],
+      "pooled": -25.434568141562533,
+      "ci_low": -54.36596736015512,
+      "ci_high": 3.496831077030052,
+      "se_hksj": 6.724084195527384,
+      "tau2": 87.59471697059898,
+      "q": 4.480596658256273,
+      "i2": 55.363087719251524,
+      "pi_low": -175.71183872897353,
+      "pi_high": 124.84270244584847,
+      "fixed": -21.268858984485963,
+      "fixed_ci_low": -29.290939805869986,
+      "fixed_ci_high": -13.24677816310194,
+      "small_k_note": "Kleine Studienanzahl (k=3): Heterogenitaets- und Intervallangaben sind mit Vorsicht zu interpretieren.",
+      "inputs": [
+        {
+          "label": "PMC3489506",
+          "est": -37.44,
+          "se": 10.8829,
+          "herkunft": "Tagebuch, unadjustiert (HTA Tab. 7)"
+        },
+        {
+          "label": "PMC2933606",
+          "est": -15.6,
+          "se": 4.9236,
+          "herkunft": "65-80 Jahre, adjustiert, Studienangabe"
+        },
+        {
+          "label": "PMC2952772",
+          "est": -31.0,
+          "se": 10.0,
+          "herkunft": "0.05 mg/kg, SE berichtet"
+        }
+      ]
+    },
+    {
+      "analyse": "S9 S1 Aktigraphie unadjustiert (HTA)",
+      "k": 3,
+      "studien": [
+        "PMC3489506",
+        "PMC2933606",
+        "PMC2952772"
+      ],
+      "pooled": -30.12249576282687,
+      "ci_low": -76.8301018331391,
+      "ci_high": 16.585110307485355,
+      "se_hksj": 10.855537038335596,
+      "tau2": 230.16632730132227,
+      "q": 7.32690984587253,
+      "i2": 72.70336278087738,
+      "pi_low": -264.0941569162424,
+      "pi_high": 203.84916539058867,
+      "fixed": -21.540868692835176,
+      "fixed_ci_low": -29.838052450926703,
+      "fixed_ci_high": -13.243684934743648,
+      "small_k_note": "Kleine Studienanzahl (k=3): Heterogenitaets- und Intervallangaben sind mit Vorsicht zu interpretieren.",
+      "inputs": [
+        {
+          "label": "PMC3489506",
+          "est": -54.61,
+          "se": 14.8243,
+          "herkunft": "Aktigraphie, unadjustiert (HTA Tab. 7)"
+        },
+        {
+          "label": "PMC2933606",
+          "est": -15.6,
+          "se": 4.9236,
+          "herkunft": "65-80 Jahre, adjustiert, Studienangabe"
+        },
+        {
+          "label": "PMC2952772",
+          "est": -31.0,
+          "se": 10.0,
+          "herkunft": "0.05 mg/kg, SE berichtet"
+        }
+      ]
     }
   ]
 }

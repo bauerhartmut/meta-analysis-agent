@@ -6,6 +6,7 @@ Melatonin senkt die SOL.
 
 Auswahlregel vor der Berechnung: `auswahlregel_pooling_20261108.md`.
 Einzelwerte und Zitate: `pruefung_kandidaten_20261108.md`.
+Zusatzdaten aus dem HTA-Bericht: `mends_hta_zusatz_20261108.md`.
 Rohausgabe: `pooling_sol3_20261108.json`, Skript: `scripts/pool_sol3.py`.
 Engine: `research_agent.meta.pooling.pool` (vorhanden, nicht neu gebaut).
 
@@ -75,6 +76,17 @@ Abweichung zur Engine: 0,000000. Die Engine-Referenztests
 | S5a | ohne PMC3489506 | 2 | −20,84 | −113,55 bis 71,87 | 56,46 | 47,6 |
 | S5b | ohne PMC2933606 | 2 | −34,56 | −75,67 bis 6,54 | 0,00 | 0,0 |
 | S5c | ohne PMC2952772 | 2 | −25,22 | −163,32 bis 112,88 | 186,45 | 77,7 |
+| S8 | S1 Tagebuch unadjustiert (HTA) | 3 | −25,43 | −54,37 bis 3,50 | 87,60 | 55,4 |
+| S9 | S1 Aktigraphie unadjustiert (HTA) | 3 | −30,12 | −76,83 bis 16,59 | 230,17 | 72,7 |
+
+S8 und S9 nutzen die im HTA-Bericht zusätzlich berichtete **unadjustierte**
+Differenz der Change-Werte (Tagebuch −37,44; Aktigraphie −54,61) mit
+SE 10,88 bzw. 14,82 statt der adjustierten Differenz (SE 9,08 bzw. 11,96).
+Die gepoolte Zahl ändert sich um 0,9 bzw. 3,8 min; die Unsicherheit wird
+etwas größer, weil die unadjustierte Schätzung die Baseline-Kovariate nicht
+nutzt. Die adjustierte Variante bleibt Hauptanalyse - nicht weil sie besser
+aussieht, sondern weil sie präziser ist und die Studienanalyse sie als
+primäre Schätzung ausweist.
 
 Keine Sensitivität dreht das Vorzeichen, keine macht das Intervall deutlich
 schmaler. S5b (ohne die Studie mit dem kleinsten Effekt) hat τ² = 0 - das ist

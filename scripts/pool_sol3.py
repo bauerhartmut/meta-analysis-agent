@@ -44,6 +44,10 @@ ALT = {
     "PMC2933606": ("PMC2933606", -0.6, se_from_ci(-14.0, 12.7), "Low excretors, adjustiert"),
     "PMC2952772_010": ("PMC2952772", -36.0, 10.0, "0.1 mg/kg, SE berichtet"),
     "PMC2952772_015": ("PMC2952772", -42.0, 9.0, "0.15 mg/kg, SE berichtet"),
+    "PMC3489506_unadj": ("PMC3489506", -37.44, se_from_ci(-58.77, -16.11),
+                         "Tagebuch, unadjustiert (HTA Tab. 7)"),
+    "PMC3489506_act_unadj": ("PMC3489506", -54.61, se_from_ci(-83.67, -25.56),
+                             "Aktigraphie, unadjustiert (HTA Tab. 7)"),
 }
 
 
@@ -101,6 +105,11 @@ def main() -> int:
     for key in ("PMC2952772_010",):
         analyses.append(summarise(MAIN[:2] + [ALT[key]],
                                   "S3b PMC2952772 0.1 mg/kg"))
+
+    analyses.append(summarise([ALT["PMC3489506_unadj"]] + MAIN[1:],
+                              "S8 S1 Tagebuch unadjustiert (HTA)"))
+    analyses.append(summarise([ALT["PMC3489506_act_unadj"]] + MAIN[1:],
+                              "S9 S1 Aktigraphie unadjustiert (HTA)"))
 
     payload = {
         "frage": "Melatonin vs Placebo, SOL in Minuten, negativ = Reduktion",
