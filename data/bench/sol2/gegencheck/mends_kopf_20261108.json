@@ -1,0 +1,1522 @@
+{
+  "generated": "2026-11-08T19:20:51",
+  "txt": "data/bench/sol2/volltext/23098680.txt",
+  "raw_chars": 841300,
+  "norm_chars": 831660,
+  "bloecke": 48,
+  "fundstellen": [
+    {
+      "zeile": 108,
+      "text": "measures included TST calculated using actigraphy data, sleep-onset latency (SOL) (time"
+    },
+    {
+      "zeile": 108,
+      "text": "measures included TST calculated using actigraphy data, sleep-onset latency (SOL) (time"
+    },
+    {
+      "zeile": 124,
+      "text": "measured using sleep diaries. A reduction in SOL, adjusted for baseline, was seen for"
+    },
+    {
+      "zeile": 133,
+      "text": "Melatonin is effective in reducing SOL in children with neurodevelopmental delay by a"
+    },
+    {
+      "zeile": 243,
+      "text": "SOL                    sleep-onset latency"
+    },
+    {
+      "zeile": 243,
+      "text": "SOL                    sleep-onset latency"
+    },
+    {
+      "zeile": 290,
+      "text": "included TST calculated using actigraphy data, sleep-onset latency (SOL) (time taken to fall"
+    },
+    {
+      "zeile": 290,
+      "text": "included TST calculated using actigraphy data, sleep-onset latency (SOL) (time taken to fall"
+    },
+    {
+      "zeile": 411,
+      "text": "The outcome of SOL measured the time taken for a child to go to sleep from `snuggle-down"
+    },
+    {
+      "zeile": 413,
+      "text": "between the treatment groups, adjusting for mean baseline SOL, was -37.49 minutes (95% CI"
+    },
+    {
+      "zeile": 433,
+      "text": "worthwhile difference specified at the outset of the trial. Melatonin is effective in reducing SOL in"
+    },
+    {
+      "zeile": 568,
+      "text": "time it takes children to fall asleep (time to sleep onset or sleep latency) and increasing the"
+    },
+    {
+      "zeile": 580,
+      "text": "disorders and idiopathic chronic sleep-onset insomnia20,21 as well as in some children with"
+    },
+    {
+      "zeile": 761,
+      "text": "target sleep onset time earlier than 20:30 for children at age 6 years and 15 minutes later"
+    },
+    {
+      "zeile": 879,
+      "text": "Sleep diaries were used to calculate TST, SOL (the time taken to fall asleep) and daily global sleep"
+    },
+    {
+      "zeile": 906,
+      "text": "10-minute period as the time of sleep onset."
+    },
+    {
+      "zeile": 1004,
+      "text": "Total night-time sleep was calculated as the sum of all epochs scored as sleep from sleep onset to"
+    },
+    {
+      "zeile": 1209,
+      "text": "SOL (the time taken to fall asleep) calculated using actigraphy."
+    },
+    {
+      "zeile": 1210,
+      "text": "SOL (the time taken to fall asleep) calculated using sleep diaries (the number of minutes"
+    },
+    {
+      "zeile": 1239,
+      "text": "TST calculated using the data recorded in sleep diaries and SOL calculated using actigraphy."
+    },
+    {
+      "zeile": 1243,
+      "text": "by the Trial Management Group to amend the protocol to move the end point SOL measured"
+    },
+    {
+      "zeile": 1268,
+      "text": "For the outcome SOL, the null hypothesis is that there is no difference in the time to sleep"
+    },
+    {
+      "zeile": 1270,
+      "text": "is a difference in the time to sleep onset. A sample size of 78 in each group (86 per group with"
+    },
+    {
+      "zeile": 1277,
+      "text": "night-time sleep and actigraphy for time to sleep onset. Both outcomes will be analysed using"
+    },
+    {
+      "zeile": 1282,
+      "text": "of the sample size calculations for the outcomes SOL (n=172) and TST (n=126). The original"
+    },
+    {
+      "zeile": 1287,
+      "text": "move SOL from a primary to a secondary outcome the sample size for the trial was recalculated"
+    },
+    {
+      "zeile": 1727,
+      "text": "The outcome of SOL measured the time taken for a child to go to sleep from `snuggle-down' time."
+    },
+    {
+      "zeile": 1729,
+      "text": "treatment groups, adjusting for the mean baseline SOL, was -37.49 minutes (95% CI -55.27 to"
+    },
+    {
+      "zeile": 1770,
+      "text": "SOL (minutes)                                                                                                            -3.71 (47.37)  (p=0.007)               "
+    },
+    {
+      "zeile": 1777,
+      "text": "SOL (minutes)                                                                                                                           (p=0.0004)              "
+    },
+    {
+      "zeile": 2010,
+      "text": "FIGURE 5 Manhattan plot for association with SOL at T0W."
+    },
+    {
+      "zeile": 2027,
+      "text": "in sleep-onset latency between T0W and T+12W"
+    },
+    {
+      "zeile": 2041,
+      "text": "two categories as defined earlier, and SOL (Figures 9a and b, p=0.04 and p=0.02, respectively,"
+    },
+    {
+      "zeile": 2042,
+      "text": "Wilcoxon test). Children with a later DLMO displayed a longer SOL. In line with this finding,"
+    },
+    {
+      "zeile": 2043,
+      "text": "there was correlation between salivary melatonin concentration at 20:00 and SOL (Figure 9c,"
+    },
+    {
+      "zeile": 2047,
+      "text": "and e, p=0.003 and p=0.001, respectively, Wilcoxon test). It has to be noted that SOL and sleep"
+    },
+    {
+      "zeile": 2072,
+      "text": "FIGURE 7 Manhattan plot for association between genetic variations and difference in SOL between T0W and T+12W."
+    },
+    {
+      "zeile": 2079,
+      "text": "SOL T0 (minutes)(a)"
+    },
+    {
+      "zeile": 2092,
+      "text": "SOL T0"
+    },
+    {
+      "zeile": 2104,
+      "text": "SOL T0 (minutes)  200"
+    },
+    {
+      "zeile": 2118,
+      "text": "FIGURE 9 Relationship between melatonin levels and sleep disorders. (a) DLMO quartiles against SOL displayed"
+    },
+    {
+      "zeile": 2119,
+      "text": "as box plots and histograms at baseline; (b) DLMO medians against SOL displayed as box plots and histograms at"
+    },
+    {
+      "zeile": 2120,
+      "text": "baseline; (c) salivary melatonin levels (ng/l) at 20:00 hours plotted against SOL at baseline with least squares regression"
+    },
+    {
+      "zeile": 2160,
+      "text": "SOL T0 (minutes)"
+    },
+    {
+      "zeile": 2161,
+      "text": "FIGURE 9 Relationship between melatonin levels and sleep disorders. (a) DLMO quartiles against SOL displayed as box plots and histograms at baseline; (b) DLMO m"
+    },
+    {
+      "zeile": 2161,
+      "text": "FIGURE 9 Relationship between melatonin levels and sleep disorders. (a) DLMO quartiles against SOL displayed as box plots and histograms at baseline; (b) DLMO m"
+    },
+    {
+      "zeile": 2161,
+      "text": "FIGURE 9 Relationship between melatonin levels and sleep disorders. (a) DLMO quartiles against SOL displayed as box plots and histograms at baseline; (b) DLMO m"
+    },
+    {
+      "zeile": 2232,
+      "text": "a Delayed sleep onset defined as SOL at T0 of >60 minutes."
+    },
+    {
+      "zeile": 2232,
+      "text": "a Delayed sleep onset defined as SOL at T0 of >60 minutes."
+    },
+    {
+      "zeile": 2597,
+      "text": "Sleep-onset latency measured using actigraphy was a primary outcome at the outset of the trial"
+    },
+    {
+      "zeile": 2598,
+      "text": "but became a secondary outcome because of the large proportion of missing data; however, SOL"
+    },
+    {
+      "zeile": 2602,
+      "text": "10 minutes larger when SOL was measured using actigraphy than when it was measured using"
+    },
+    {
+      "zeile": 2603,
+      "text": "sleep diaries. The CIs of SOL measured using actigraphy and measured using sleep diaries largely"
+    },
+    {
+      "zeile": 2659,
+      "text": "sleep onset or poor TST, or a combination of both) and this is being collected retrospectively to"
+    },
+    {
+      "zeile": 2692,
+      "text": "SOL), and that the actigraph would interpret restless sleep as being awake (a concern for children"
+    },
+    {
+      "zeile": 2695,
+      "text": "measuring SOL and TST using actigraphy and sleep diaries."
+    },
+    {
+      "zeile": 2699,
+      "text": "Consequently, SOL measured using actigraphy was moved to a secondary outcome."
+    },
+    {
+      "zeile": 2768,
+      "text": "and SOL was reduced on average by 38 minutes when measured using sleep diaries. The meta-"
+    },
+    {
+      "zeile": 2770,
+      "text": "increased TST by a mean of 50 minutes and reduced SOL by 34 minutes. Rossignol and Frye24"
+    },
+    {
+      "zeile": 2771,
+      "text": "found a mean increase in TST of 44 minutes and a reduction in SOL of 39 minutes. The size of"
+    },
+    {
+      "zeile": 2772,
+      "text": "the effect for SOL is similar and consistent between MENDS and these meta-analyses; however, it"
+    },
+    {
+      "zeile": 2792,
+      "text": "confident that a change in timing of sleep onset and offset will securely `wash out' to baseline"
+    },
+    {
+      "zeile": 2813,
+      "text": "It is interesting that we found a similar magnitude of change in SOL as did a robust study on"
+    },
+    {
+      "zeile": 2814,
+      "text": "`normally' developing children with sleep-onset insomnia.70 This study also failed to demonstrate"
+    },
+    {
+      "zeile": 2821,
+      "text": "response in typically (`normally') developing children aged from 6 to 12 years with sleep-onset"
+    },
+    {
+      "zeile": 2828,
+      "text": "significantly advanced DLMO by approximately 60 minutes and decreased SOL by 35 minutes."
+    },
+    {
+      "zeile": 2834,
+      "text": "to phase shift DLMO and sleep onset, rather than its soporific effects, although these were briefly"
+    },
+    {
+      "zeile": 2840,
+      "text": "for both SOL and TST are similar to those reported for a total of 183 patients in the meta-analysis"
+    },
+    {
+      "zeile": 2870,
+      "text": "that melatonin is effective in reducing SOL (the time taken to fall asleep) in children with"
+    },
+    {
+      "zeile": 2872,
+      "text": "analysis demonstrated that melatonin reduced SOL by a mean of 34 minutes.29"
+    },
+    {
+      "zeile": 2887,
+      "text": "Our findings show that the strongest effects of exogenous melatonin are on SOL. In exploratory"
+    },
+    {
+      "zeile": 2892,
+      "text": "have later DLMO times fall asleep later and respond better to exogenous melatonin. As SOL"
+    },
+    {
+      "zeile": 2893,
+      "text": "and sleep duration are related, so an improvement in SOL may also lengthen sleep duration,"
+    },
+    {
+      "zeile": 2973,
+      "text": "preparations should be considered. A dose-ranging study in children with sleep-onset"
+    },
+    {
+      "zeile": 2975,
+      "text": "in advancing DLMO or reducing SOL was found within a dosage range of 0.05-0.15mg/kg."
+    },
+    {
+      "zeile": 3206,
+      "text": "chronic sleep onset insomnia. J Sleep Res 2005;14:187-94."
+    },
+    {
+      "zeile": 3303,
+      "text": "improves health status and sleep in children with idiopathic chronic sleep-onset insomnia: a"
+    },
+    {
+      "zeile": 3317,
+      "text": "finding of melatonin for chronic idiopathic childhood sleep onset insomnia: an RCT."
+    },
+    {
+      "zeile": 3380,
+      "text": "example, for SOL calculated using sleep diaries, `snuggle-down' and sleep start times must be"
+    },
+    {
+      "zeile": 3381,
+      "text": "recorded; for SOL calculated using actigraphy only `snuggle-down' time is required."
+    },
+    {
+      "zeile": 3407,
+      "text": "SOL                   Snuggle down to sleep time; sleep start time           Snuggle down to sleep time, wake-up time"
+    },
+    {
+      "zeile": 3558,
+      "text": "Sleep-onset latency (the time taken to fall asleep) calculated using"
+    },
+    {
+      "zeile": 3572,
+      "text": "Sleep-onset latency (the time taken to fall asleep) calculated using"
+    },
+    {
+      "zeile": 3575,
+      "text": "The SOL will be calculated using the sleep diary that has been completed. The baseline"
+    },
+    {
+      "zeile": 3746,
+      "text": "i. SOL (as assessed by sleep diary at T0W)"
+    },
+    {
+      "zeile": 3753,
+      "text": "i. difference in SOL between T0W and T+12W (as assessed by sleep diaries at these two"
+    },
+    {
+      "zeile": 3760,
+      "text": "was of interest. The variables of interest here were SOL and TST, both as defined above, and"
+    },
+    {
+      "zeile": 3786,
+      "text": "were this time adjusted for severity of sleep disorder at baseline (i.e. SOL at T0W was taken as"
+    },
+    {
+      "zeile": 3787,
+      "text": "a covariate when outcome was difference in SOL, and sleep duration at T0W was taken as a"
+    },
+    {
+      "zeile": 3818,
+      "text": "SOL calculated using actigraphy has been moved from a primary to a secondary outcome. SOL calculated using sleep diaries"
+    },
+    {
+      "zeile": 3818,
+      "text": "SOL calculated using actigraphy has been moved from a primary to a secondary outcome. SOL calculated using sleep diaries"
+    },
+    {
+      "zeile": 3821,
+      "text": "SOL has been removed from the objective of the trial"
+    },
+    {
+      "zeile": 4083,
+      "text": "TABLE 25 Reasons for missing data completed for SOL using sleep diaries"
+    },
+    {
+      "zeile": 4087,
+      "text": "Child only had 1/7 nights completed SOL           T0W          0         T0W            1"
+    },
+    {
+      "zeile": 4088,
+      "text": "Child only had 2/7 nights completed SOL                        1                        0"
+    },
+    {
+      "zeile": 4089,
+      "text": "Child only had 3/7 nights completed SOL            0           1          0             2"
+    },
+    {
+      "zeile": 4090,
+      "text": "Child only had 4/7 nights completed SOL            1           6          3             1"
+    },
+    {
+      "zeile": 4102,
+      "text": "TABLE 26 Reasons for missing data completed for SOL using actigraphy"
+    },
+    {
+      "zeile": 4106,
+      "text": "Child only had 1/7 nights data completed for SOL  T0W          1         T0W            3"
+    },
+    {
+      "zeile": 4107,
+      "text": "Child only had 2/7 nights data completed for SOL               2                        2"
+    },
+    {
+      "zeile": 4108,
+      "text": "Child only had 3/7 nights data completed for SOL   1           2          4             3"
+    },
+    {
+      "zeile": 4109,
+      "text": "Child only had 4/7 nights data completed for SOL   3           5          4             6"
+    },
+    {
+      "zeile": 4796,
+      "text": "2. Sleep onset latency (the time taken to fall asleep) calculated using actigraphy data"
+    },
+    {
+      "zeile": 4797,
+      "text": "3. Sleep onset latency (the time taken to fall asleep) calculated using sleep diaries"
+    },
+    {
+      "zeile": 4926,
+      "text": "(time to sleep onset or sleep latency) as well as increasing the total duration of continuous"
+    },
+    {
+      "zeile": 4938,
+      "text": "chronic sleep onset insomnia(18;19) as well as in some children with epilepsy(20;21). The drug"
+    },
+    {
+      "zeile": 5123,
+      "text": "3. Sleep onset latency (the time taken to fall asleep) calculated using actigraphy"
+    },
+    {
+      "zeile": 5124,
+      "text": "4. Sleep onset latency (the time taken to fall asleep) calculated using sleep diaries"
+    },
+    {
+      "zeile": 6310,
+      "text": "information on for instance; total sleep and wake times, sleep onset latency, sleep"
+    },
+    {
+      "zeile": 6341,
+      "text": "� sleep onset latency"
+    },
+    {
+      "zeile": 6352,
+      "text": "sleep onset."
+    },
+    {
+      "zeile": 6362,
+      "text": "sleep onset to sleep offset."
+    },
+    {
+      "zeile": 6660,
+      "text": "1. Total night-time sleep (time from sleep onset to off-set, minus night"
+    },
+    {
+      "zeile": 6667,
+      "text": "from sleep onset to off-set minus any night awakenings."
+    },
+    {
+      "zeile": 6690,
+      "text": "3. Sleep onset latency (the time taken to fall asleep) calculated using actigraphy"
+    },
+    {
+      "zeile": 6691,
+      "text": "4. Sleep onset latency (the time taken to fall asleep) calculated using sleep"
+    },
+    {
+      "zeile": 6715,
+      "text": "*Sleep onset latency (time from bedtime until the start of sleep) calculated using actigraphy. Data for this outcome will be taken from the actigraph. Lights ou"
+    },
+    {
+      "zeile": 6715,
+      "text": "*Sleep onset latency (time from bedtime until the start of sleep) calculated using actigraphy. Data for this outcome will be taken from the actigraph. Lights ou"
+    },
+    {
+      "zeile": 6715,
+      "text": "*Sleep onset latency (time from bedtime until the start of sleep) calculated using actigraphy. Data for this outcome will be taken from the actigraph. Lights ou"
+    },
+    {
+      "zeile": 7665,
+      "text": "10, 18, 48-50          Sleep onset latency (SOL) calculated using actigraphy has"
+    },
+    {
+      "zeile": 7665,
+      "text": "10, 18, 48-50          Sleep onset latency (SOL) calculated using actigraphy has"
+    },
+    {
+      "zeile": 7667,
+      "text": "been moved from a primary to a secondary outcome. SOL"
+    },
+    {
+      "zeile": 7673,
+      "text": "14                     Sleep onset latency has been removed from the Objective of"
+    },
+    {
+      "zeile": 8294,
+      "text": "chronic sleep onset insomnia in children: a randomized placebo-controlled"
+    },
+    {
+      "zeile": 8299,
+      "text": "sleep-onset insomnia: a randomized placebo-controlled trial. J Am Acad Child"
+    }
+  ],
+  "fundstellen_gesamt": 125,
+  "fliesstext_effekte": [
+    {
+      "zeile": 413,
+      "abschnitt": "The outcome of SOL measured the time taken for a child to go to sleep from `snuggle-down time'. This was calculated using both the actigraphy data and the sleep diary. The mean difference between the treatment groups, adjusting for mean baseline SOL, was -37.49 minutes (95% CI -55.27 to -19.71 minutes; p<0.0001) in favour of the melatonin group using the sleep diary and -45.34 minutes (95% CI -68.75 to -21.93 minutes; p=0.0003) using actigraphy. Both measures showed that the time taken to fall asleep by children in the melatonin group was statistically � Queen's Printer and Controller of HMSO 2012. This work was produced by Appleton et al. under the terms of a commissioning contract issued b"
+    },
+    {
+      "zeile": 1729,
+      "abschnitt": "The outcome of SOL measured the time taken for a child to go to sleep from `snuggle-down' time. This was calculated using both actigraphy and sleep diary data. The mean difference between treatment groups, adjusting for the mean baseline SOL, was -37.49 minutes (95% CI -55.27 to -19.71 minutes) using the sleep diary and -45.34 minutes (95% CI -68.75 to -21.93 minutes) using actigraphy in favour of the melatonin group. Both measures showed that the time taken to fall asleep by children in the melatonin group was statistically and clinically significantly less than that in the placebo group. The adjusted difference in sleep efficiency between the two treatment groups was not statistically sign"
+    }
+  ],
+  "kopf_befund": {
+    "weder Effektwort noch CI": 47,
+    "CI ohne Effektwort": 1
+  },
+  "haeufigste_koepfe": [
+    [
+      "Reason for missing data | Placebo, n | T+12W | Melatonin, n | T+12W",
+      3
+    ],
+    [
+      "Laboratory result | Melatonin | Placebo | Total",
+      2
+    ],
+    [
+      "ISSN 1366-5278 (Print)",
+      1
+    ],
+    [
+      "Children's Hospital | 2007 | 15 | 30 July 2009",
+      1
+    ],
+    [
+      "Baseline characteristic | Melatonin (n=70) | Placebo (n=76) | Total (n=146)",
+      1
+    ],
+    [
+      "T5 | 51 | 59 | 110 | 9 | 17.6 13 | 25.5 10 | 19.6 19 | 37.3 1 | 1.7 5 | 8.5 10 | 16.9 43 | 72.9",
+      1
+    ],
+    [
+      "T0 | 70 | 76 | 146 | 70 | 100 | 0 | 0 | 0 | 76 | 100 | 0 | 0 | 0",
+      1
+    ],
+    [
+      "and outcomes | (SD) | 571.26 (71.98) | (SD) | (SD) | 558.03 (68.94) | (SD) | over baseline",
+      1
+    ],
+    [
+      "CSDI (0-12) (nM=60, | mean (95% CI), p-value",
+      1
+    ],
+    [
+      "which the parent was | 31.25 (34.25), 0 | to 100 | -100 to 83.33 | 33.74 (35.26), 0 | to 100 | -0.28 (1.37), | p=0.52 | ",
+      1
+    ],
+    [
+      "Sample status | Melatonin | Placebo",
+      1
+    ],
+    [
+      "0.05",
+      1
+    ]
+  ],
+  "sol_bloecke": [
+    {
+      "nr": 6,
+      "caption": "(pipe table at char 156219)",
+      "kopf": "and outcomes | (SD) | 571.26 (71.98) | (SD) | (SD) | 558.03 (68.94) | (SD) | over baseline",
+      "spalten": 8,
+      "zeilen": 16,
+      "zellen_mit_ci": 0,
+      "zellen_mit_effektwort": 0,
+      "zellen_mit_beidem": 0,
+      "effekte": 0,
+      "gruende": {
+        "Kopfzeile (8 Spalten) passt nicht zur Zeile (3 Zellen) - col": 4,
+        "Kopfzeile (8 Spalten) passt nicht zur Zeile (1 Zellen) - col": 3,
+        "Kopfzeile (8 Spalten) passt nicht zur Zeile (2 Zellen) - col": 2,
+        "Kopfzeile (8 Spalten) passt nicht zur Zeile (7 Zellen) - col": 2
+      },
+      "sol_im_block": true,
+      "sol_zeilen": [
+        "['SOL (minutes)', '-3.71 (47.37)', '(p=0.007)', '(p<0.0001)']",
+        "['SOL (minutes)', '(p=0.0004)', '(p=0.0003)']"
+      ]
+    },
+    {
+      "nr": 13,
+      "caption": "(pipe table at char 188436)",
+      "kopf": "700",
+      "spalten": 1,
+      "zeilen": 24,
+      "zellen_mit_ci": 0,
+      "zellen_mit_effektwort": 0,
+      "zellen_mit_beidem": 0,
+      "effekte": 0,
+      "gruende": {
+        "keine Effektspalte im Kopf": 19,
+        "Kopfzeile (1 Spalten) passt nicht zur Zeile (2 Zellen) - col": 3,
+        "Kopfzeile (1 Spalten) passt nicht zur Zeile (9 Zellen) - col": 1,
+        "Kopfzeile (1 Spalten) passt nicht zur Zeile (4 Zellen) - col": 1
+      },
+      "sol_im_block": true,
+      "sol_zeilen": [
+        "['SOL T0 (minutes)']",
+        "['FIGURE 9 Relationship between melatonin levels and sleep disorders. (a) DLMO quartiles against SOL displayed as box plots and histograms at baseline"
+      ]
+    },
+    {
+      "nr": 20,
+      "caption": "TABLE 25. Reasons for missing data completed for SOL using sleep diaries",
+      "kopf": "Reason for missing data | Placebo, n | T+12W | Melatonin, n | T+12W",
+      "spalten": 5,
+      "zeilen": 14,
+      "zellen_mit_ci": 0,
+      "zellen_mit_effektwort": 0,
+      "zellen_mit_beidem": 0,
+      "effekte": 0,
+      "gruende": {
+        "keine Effektspalte im Kopf": 9,
+        "Kopfzeile (5 Spalten) passt nicht zur Zeile (2 Zellen) - col": 2,
+        "Kopfzeile (5 Spalten) passt nicht zur Zeile (1 Zellen) - col": 2,
+        "Kopfzeile (5 Spalten) passt nicht zur Zeile (3 Zellen) - col": 1
+      },
+      "sol_im_block": true,
+      "sol_zeilen": [
+        "['Child only had 1/7 nights completed SOL', 'T0W', '0', 'T0W', '1']",
+        "['Child only had 2/7 nights completed SOL', '1', '0']",
+        "['Child only had 3/7 nights completed SOL', '0', '1', '0', '2']",
+        "['Child only had 4/7 nights completed SOL', '1', '6', '3', '1']"
+      ]
+    },
+    {
+      "nr": 21,
+      "caption": "TABLE 26. Reasons for missing data completed for SOL using actigraphy",
+      "kopf": "Reason for missing data | Placebo, n | T+12W | Melatonin, n | T+12W",
+      "spalten": 5,
+      "zeilen": 6,
+      "zellen_mit_ci": 0,
+      "zellen_mit_effektwort": 0,
+      "zellen_mit_beidem": 0,
+      "effekte": 0,
+      "gruende": {
+        "keine Effektspalte im Kopf": 5,
+        "Kopfzeile (5 Spalten) passt nicht zur Zeile (3 Zellen) - col": 1
+      },
+      "sol_im_block": true,
+      "sol_zeilen": [
+        "['Child only had 1/7 nights data completed for SOL', 'T0W', '1', 'T0W', '3']",
+        "['Child only had 2/7 nights data completed for SOL', '2', '2']",
+        "['Child only had 3/7 nights data completed for SOL', '1', '2', '4', '3']",
+        "['Child only had 4/7 nights data completed for SOL', '3', '5', '4', '6']"
+      ]
+    }
+  ],
+  "bloecke_detail": [
+    {
+      "nr": 1,
+      "caption": "(pipe table at char 8154)",
+      "kopf": "ISSN 1366-5278 (Print)",
+      "spalten": 1,
+      "zeilen": 2,
+      "zellen_mit_ci": 0,
+      "zellen_mit_effektwort": 0,
+      "zellen_mit_beidem": 0,
+      "effekte": 0,
+      "gruende": {
+        "keine Effektspalte im Kopf": 2
+      },
+      "sol_im_block": false,
+      "sol_zeilen": []
+    },
+    {
+      "nr": 2,
+      "caption": "(pipe table at char 125801)",
+      "kopf": "Children's Hospital | 2007 | 15 | 30 July 2009",
+      "spalten": 4,
+      "zeilen": 47,
+      "zellen_mit_ci": 0,
+      "zellen_mit_effektwort": 0,
+      "zellen_mit_beidem": 0,
+      "effekte": 0,
+      "gruende": {
+        "Kopfzeile (4 Spalten) passt nicht zur Zeile (1 Zellen) - col": 18,
+        "Kopfzeile (4 Spalten) passt nicht zur Zeile (5 Zellen) - col": 7,
+        "keine Effektspalte im Kopf": 5,
+        "Kopfzeile (4 Spalten) passt nicht zur Zeile (3 Zellen) - col": 5
+      },
+      "sol_im_block": false,
+      "sol_zeilen": []
+    },
+    {
+      "nr": 3,
+      "caption": "TABLE 4. Baseline characteristics of the study population",
+      "kopf": "Baseline characteristic | Melatonin (n=70) | Placebo (n=76) | Total (n=146)",
+      "spalten": 4,
+      "zeilen": 10,
+      "zellen_mit_ci": 0,
+      "zellen_mit_effektwort": 0,
+      "zellen_mit_beidem": 0,
+      "effekte": 0,
+      "gruende": {
+        "keine Effektspalte im Kopf": 7,
+        "Kopfzeile (4 Spalten) passt nicht zur Zeile (1 Zellen) - col": 2,
+        "Kopfzeile (4 Spalten) passt nicht zur Zeile (3 Zellen) - col": 1
+      },
+      "sol_im_block": false,
+      "sol_zeilen": []
+    },
+    {
+      "nr": 4,
+      "caption": "(pipe table at char 139078)",
+      "kopf": "T5 | 51 | 59 | 110 | 9 | 17.6 13 | 25.5 10 | 19.6 19 | 37.3 1 | 1.7 5 | 8.5 10 | 16.9 43 | 72.9",
+      "spalten": 13,
+      "zeilen": 11,
+      "zellen_mit_ci": 0,
+      "zellen_mit_effektwort": 0,
+      "zellen_mit_beidem": 0,
+      "effekte": 0,
+      "gruende": {
+        "Kopfzeile (13 Spalten) passt nicht zur Zeile (5 Zellen) - co": 4,
+        "Kopfzeile (13 Spalten) passt nicht zur Zeile (8 Zellen) - co": 4,
+        "keine Effektspalte im Kopf": 3
+      },
+      "sol_im_block": false,
+      "sol_zeilen": []
+    },
+    {
+      "nr": 5,
+      "caption": "(pipe table at char 142944)",
+      "kopf": "T0 | 70 | 76 | 146 | 70 | 100 | 0 | 0 | 0 | 76 | 100 | 0 | 0 | 0",
+      "spalten": 14,
+      "zeilen": 19,
+      "zellen_mit_ci": 0,
+      "zellen_mit_effektwort": 0,
+      "zellen_mit_beidem": 0,
+      "effekte": 0,
+      "gruende": {
+        "Kopfzeile (14 Spalten) passt nicht zur Zeile (4 Zellen) - co": 4,
+        "Kopfzeile (14 Spalten) passt nicht zur Zeile (8 Zellen) - co": 4,
+        "keine Effektspalte im Kopf": 3,
+        "Kopfzeile (14 Spalten) passt nicht zur Zeile (3 Zellen) - co": 2
+      },
+      "sol_im_block": false,
+      "sol_zeilen": []
+    },
+    {
+      "nr": 6,
+      "caption": "(pipe table at char 156219)",
+      "kopf": "and outcomes | (SD) | 571.26 (71.98) | (SD) | (SD) | 558.03 (68.94) | (SD) | over baseline",
+      "spalten": 8,
+      "zeilen": 16,
+      "zellen_mit_ci": 0,
+      "zellen_mit_effektwort": 0,
+      "zellen_mit_beidem": 0,
+      "effekte": 0,
+      "gruende": {
+        "Kopfzeile (8 Spalten) passt nicht zur Zeile (3 Zellen) - col": 4,
+        "Kopfzeile (8 Spalten) passt nicht zur Zeile (1 Zellen) - col": 3,
+        "Kopfzeile (8 Spalten) passt nicht zur Zeile (2 Zellen) - col": 2,
+        "Kopfzeile (8 Spalten) passt nicht zur Zeile (7 Zellen) - col": 2
+      },
+      "sol_im_block": true,
+      "sol_zeilen": [
+        "['SOL (minutes)', '-3.71 (47.37)', '(p=0.007)', '(p<0.0001)']",
+        "['SOL (minutes)', '(p=0.0004)', '(p=0.0003)']"
+      ]
+    },
+    {
+      "nr": 7,
+      "caption": "(pipe table at char 163378)",
+      "kopf": "CSDI (0-12) (nM=60, | mean (95% CI), p-value",
+      "spalten": 2,
+      "zeilen": 29,
+      "zellen_mit_ci": 1,
+      "zellen_mit_effektwort": 0,
+      "zellen_mit_beidem": 0,
+      "effekte": 0,
+      "gruende": {
+        "Kopfzeile (2 Spalten) passt nicht zur Zeile (9 Zellen) - col": 10,
+        "Kopfzeile (2 Spalten) passt nicht zur Zeile (8 Zellen) - col": 8,
+        "Kopfzeile (2 Spalten) passt nicht zur Zeile (1 Zellen) - col": 7,
+        "Kopfzeile (2 Spalten) passt nicht zur Zeile (7 Zellen) - col": 1
+      },
+      "sol_im_block": false,
+      "sol_zeilen": []
+    },
+    {
+      "nr": 8,
+      "caption": "(pipe table at char 174006)",
+      "kopf": "which the parent was | 31.25 (34.25), 0 | to 100 | -100 to 83.33 | 33.74 (35.26), 0 | to 100 | -0.28 (1.37), | p=0.52 | ",
+      "spalten": 9,
+      "zeilen": 16,
+      "zellen_mit_ci": 0,
+      "zellen_mit_effektwort": 0,
+      "zellen_mit_beidem": 0,
+      "effekte": 0,
+      "gruende": {
+        "Kopfzeile (9 Spalten) passt nicht zur Zeile (1 Zellen) - col": 8,
+        "Kopfzeile (9 Spalten) passt nicht zur Zeile (2 Zellen) - col": 3,
+        "Kopfzeile (9 Spalten) passt nicht zur Zeile (3 Zellen) - col": 2,
+        "Kopfzeile (9 Spalten) passt nicht zur Zeile (4 Zellen) - col": 1
+      },
+      "sol_im_block": false,
+      "sol_zeilen": []
+    },
+    {
+      "nr": 9,
+      "caption": "TABLE 10. Dim-light melatonin onset at T-1W",
+      "kopf": "Laboratory result | Melatonin | Placebo | Total",
+      "spalten": 4,
+      "zeilen": 6,
+      "zellen_mit_ci": 0,
+      "zellen_mit_effektwort": 0,
+      "zellen_mit_beidem": 0,
+      "effekte": 0,
+      "gruende": {
+        "keine Effektspalte im Kopf": 6
+      },
+      "sol_im_block": false,
+      "sol_zeilen": []
+    },
+    {
+      "nr": 10,
+      "caption": "TABLE 11. Dim-light melatonin onset at T+10W",
+      "kopf": "Laboratory result | Melatonin | Placebo | Total",
+      "spalten": 4,
+      "zeilen": 6,
+      "zellen_mit_ci": 0,
+      "zellen_mit_effektwort": 0,
+      "zellen_mit_beidem": 0,
+      "effekte": 0,
+      "gruende": {
+        "keine Effektspalte im Kopf": 6
+      },
+      "sol_im_block": false,
+      "sol_zeilen": []
+    },
+    {
+      "nr": 11,
+      "caption": "TABLE 12. Status of those samples classified as `none' for DLMO at T+10W",
+      "kopf": "Sample status | Melatonin | Placebo",
+      "spalten": 3,
+      "zeilen": 3,
+      "zellen_mit_ci": 0,
+      "zellen_mit_effektwort": 0,
+      "zellen_mit_beidem": 0,
+      "effekte": 0,
+      "gruende": {
+        "keine Effektspalte im Kopf": 3
+      },
+      "sol_im_block": false,
+      "sol_zeilen": []
+    },
+    {
+      "nr": 12,
+      "caption": "(pipe table at char 180148)",
+      "kopf": "0.05",
+      "spalten": 1,
+      "zeilen": 8,
+      "zellen_mit_ci": 0,
+      "zellen_mit_effektwort": 0,
+      "zellen_mit_beidem": 0,
+      "effekte": 0,
+      "gruende": {
+        "keine Effektspalte im Kopf": 5,
+        "Kopfzeile (1 Spalten) passt nicht zur Zeile (3 Zellen) - col": 1,
+        "Kopfzeile (1 Spalten) passt nicht zur Zeile (2 Zellen) - col": 1,
+        "Kopfzeile (1 Spalten) passt nicht zur Zeile (5 Zellen) - col": 1
+      },
+      "sol_im_block": false,
+      "sol_zeilen": []
+    },
+    {
+      "nr": 13,
+      "caption": "(pipe table at char 188436)",
+      "kopf": "700",
+      "spalten": 1,
+      "zeilen": 24,
+      "zellen_mit_ci": 0,
+      "zellen_mit_effektwort": 0,
+      "zellen_mit_beidem": 0,
+      "effekte": 0,
+      "gruende": {
+        "keine Effektspalte im Kopf": 19,
+        "Kopfzeile (1 Spalten) passt nicht zur Zeile (2 Zellen) - col": 3,
+        "Kopfzeile (1 Spalten) passt nicht zur Zeile (9 Zellen) - col": 1,
+        "Kopfzeile (1 Spalten) passt nicht zur Zeile (4 Zellen) - col": 1
+      },
+      "sol_im_block": true,
+      "sol_zeilen": [
+        "['SOL T0 (minutes)']",
+        "['FIGURE 9 Relationship between melatonin levels and sleep disorders. (a) DLMO quartiles against SOL displayed as box plots and histograms at baseline"
+      ]
+    },
+    {
+      "nr": 14,
+      "caption": "TABLE 15. Patients with ASMT CNV",
+      "kopf": "Patient ID | Sex | Diagnosis | Treatment allocation",
+      "spalten": 4,
+      "zeilen": 3,
+      "zellen_mit_ci": 0,
+      "zellen_mit_effektwort": 0,
+      "zellen_mit_beidem": 0,
+      "effekte": 0,
+      "gruende": {
+        "keine Effektspalte im Kopf": 3
+      },
+      "sol_im_block": false,
+      "sol_zeilen": []
+    },
+    {
+      "nr": 15,
+      "caption": "TABLE 17. Treatment-emergent signs and symptoms by number of participants and number of events",
+      "kopf": "Melatonin (n=70) | Placebo (n=76) | Total (n=146)",
+      "spalten": 3,
+      "zeilen": 31,
+      "zellen_mit_ci": 0,
+      "zellen_mit_effektwort": 0,
+      "zellen_mit_beidem": 0,
+      "effekte": 0,
+      "gruende": {
+        "Kopfzeile (3 Spalten) passt nicht zur Zeile (2 Zellen) - col": 8,
+        "Kopfzeile (3 Spalten) passt nicht zur Zeile (7 Zellen) - col": 7,
+        "Kopfzeile (3 Spalten) passt nicht zur Zeile (5 Zellen) - col": 6,
+        "keine Effektspalte im Kopf": 5
+      },
+      "sol_im_block": false,
+      "sol_zeilen": []
+    },
+    {
+      "nr": 16,
+      "caption": "(pipe table at char 207744)",
+      "kopf": "Somnolence | Mild | 7 | 7 | 14 | 5 (7.1) | 5 (6.6) | 10 (6.8)",
+      "spalten": 8,
+      "zeilen": 27,
+      "zellen_mit_ci": 0,
+      "zellen_mit_effektwort": 0,
+      "zellen_mit_beidem": 0,
+      "effekte": 0,
+      "gruende": {
+        "Kopfzeile (8 Spalten) passt nicht zur Zeile (3 Zellen) - col": 9,
+        "Kopfzeile (8 Spalten) passt nicht zur Zeile (7 Zellen) - col": 6,
+        "Kopfzeile (8 Spalten) passt nicht zur Zeile (4 Zellen) - col": 6,
+        "Kopfzeile (8 Spalten) passt nicht zur Zeile (5 Zellen) - col": 3
+      },
+      "sol_im_block": false,
+      "sol_zeilen": []
+    },
+    {
+      "nr": 17,
+      "caption": "(pipe table at char 211580)",
+      "kopf": "Coughing | Mild | 28 | 35 | 63 | 15 (21.4) | 22 (28.9) | 37 (25.3)",
+      "spalten": 8,
+      "zeilen": 51,
+      "zellen_mit_ci": 0,
+      "zellen_mit_effektwort": 0,
+      "zellen_mit_beidem": 0,
+      "effekte": 0,
+      "gruende": {
+        "Kopfzeile (8 Spalten) passt nicht zur Zeile (3 Zellen) - col": 12,
+        "Kopfzeile (8 Spalten) passt nicht zur Zeile (7 Zellen) - col": 10,
+        "Kopfzeile (8 Spalten) passt nicht zur Zeile (5 Zellen) - col": 7,
+        "Kopfzeile (8 Spalten) passt nicht zur Zeile (1 Zellen) - col": 7
+      },
+      "sol_im_block": false,
+      "sol_zeilen": []
+    },
+    {
+      "nr": 18,
+      "caption": "TABLE 23. Reasons for primary outcome missing data",
+      "kopf": "Reason for missing data | Melatonin, n | T+12W | Placebo, n | T+12W",
+      "spalten": 5,
+      "zeilen": 11,
+      "zellen_mit_ci": 0,
+      "zellen_mit_effektwort": 0,
+      "zellen_mit_beidem": 0,
+      "effekte": 0,
+      "gruende": {
+        "keine Effektspalte im Kopf": 8,
+        "Kopfzeile (5 Spalten) passt nicht zur Zeile (2 Zellen) - col": 2,
+        "Kopfzeile (5 Spalten) passt nicht zur Zeile (3 Zellen) - col": 1
+      },
+      "sol_im_block": false,
+      "sol_zeilen": []
+    },
+    {
+      "nr": 19,
+      "caption": "TABLE 24. Reasons for missing data for TST using actigraphy",
+      "kopf": "Reason for missing data | Placebo, n | T+12W | Melatonin, n | T+12W",
+      "spalten": 5,
+      "zeilen": 19,
+      "zellen_mit_ci": 0,
+      "zellen_mit_effektwort": 0,
+      "zellen_mit_beidem": 0,
+      "effekte": 0,
+      "gruende": {
+        "keine Effektspalte im Kopf": 14,
+        "Kopfzeile (5 Spalten) passt nicht zur Zeile (2 Zellen) - col": 2,
+        "Kopfzeile (5 Spalten) passt nicht zur Zeile (1 Zellen) - col": 2,
+        "Kopfzeile (5 Spalten) passt nicht zur Zeile (3 Zellen) - col": 1
+      },
+      "sol_im_block": false,
+      "sol_zeilen": []
+    },
+    {
+      "nr": 20,
+      "caption": "TABLE 25. Reasons for missing data completed for SOL using sleep diaries",
+      "kopf": "Reason for missing data | Placebo, n | T+12W | Melatonin, n | T+12W",
+      "spalten": 5,
+      "zeilen": 14,
+      "zellen_mit_ci": 0,
+      "zellen_mit_effektwort": 0,
+      "zellen_mit_beidem": 0,
+      "effekte": 0,
+      "gruende": {
+        "keine Effektspalte im Kopf": 9,
+        "Kopfzeile (5 Spalten) passt nicht zur Zeile (2 Zellen) - col": 2,
+        "Kopfzeile (5 Spalten) passt nicht zur Zeile (1 Zellen) - col": 2,
+        "Kopfzeile (5 Spalten) passt nicht zur Zeile (3 Zellen) - col": 1
+      },
+      "sol_im_block": true,
+      "sol_zeilen": [
+        "['Child only had 1/7 nights completed SOL', 'T0W', '0', 'T0W', '1']",
+        "['Child only had 2/7 nights completed SOL', '1', '0']",
+        "['Child only had 3/7 nights completed SOL', '0', '1', '0', '2']",
+        "['Child only had 4/7 nights completed SOL', '1', '6', '3', '1']"
+      ]
+    },
+    {
+      "nr": 21,
+      "caption": "TABLE 26. Reasons for missing data completed for SOL using actigraphy",
+      "kopf": "Reason for missing data | Placebo, n | T+12W | Melatonin, n | T+12W",
+      "spalten": 5,
+      "zeilen": 6,
+      "zellen_mit_ci": 0,
+      "zellen_mit_effektwort": 0,
+      "zellen_mit_beidem": 0,
+      "effekte": 0,
+      "gruende": {
+        "keine Effektspalte im Kopf": 5,
+        "Kopfzeile (5 Spalten) passt nicht zur Zeile (3 Zellen) - col": 1
+      },
+      "sol_im_block": true,
+      "sol_zeilen": [
+        "['Child only had 1/7 nights data completed for SOL', 'T0W', '1', 'T0W', '3']",
+        "['Child only had 2/7 nights data completed for SOL', '2', '2']",
+        "['Child only had 3/7 nights data completed for SOL', '1', '2', '4', '3']",
+        "['Child only had 4/7 nights data completed for SOL', '3', '5', '4', '6']"
+      ]
+    },
+    {
+      "nr": 22,
+      "caption": "(pipe table at char 357118)",
+      "kopf": "Watch refused or not tolerated | 8 | 10 | 5 | 12",
+      "spalten": 5,
+      "zeilen": 13,
+      "zellen_mit_ci": 0,
+      "zellen_mit_effektwort": 0,
+      "zellen_mit_beidem": 0,
+      "effekte": 0,
+      "gruende": {
+        "keine Effektspalte im Kopf": 8,
+        "Kopfzeile (5 Spalten) passt nicht zur Zeile (2 Zellen) - col": 2,
+        "Kopfzeile (5 Spalten) passt nicht zur Zeile (1 Zellen) - col": 2,
+        "Kopfzeile (5 Spalten) passt nicht zur Zeile (3 Zellen) - col": 1
+      },
+      "sol_im_block": false,
+      "sol_zeilen": []
+    },
+    {
+      "nr": 23,
+      "caption": "(pipe table at char 359164)",
+      "kopf": "Watch refused or not tolerated | 2 | 10 | 3 | 12",
+      "spalten": 5,
+      "zeilen": 12,
+      "zellen_mit_ci": 0,
+      "zellen_mit_effektwort": 0,
+      "zellen_mit_beidem": 0,
+      "effekte": 0,
+      "gruende": {
+        "keine Effektspalte im Kopf": 8,
+        "Kopfzeile (5 Spalten) passt nicht zur Zeile (2 Zellen) - col": 2,
+        "Kopfzeile (5 Spalten) passt nicht zur Zeile (1 Zellen) - col": 2
+      },
+      "sol_im_block": false,
+      "sol_zeilen": []
+    },
+    {
+      "nr": 24,
+      "caption": "(pipe table at char 363459)",
+      "kopf": "Sleep diary (minutes) | 562.50",
+      "spalten": 2,
+      "zeilen": 11,
+      "zellen_mit_ci": 0,
+      "zellen_mit_effektwort": 0,
+      "zellen_mit_beidem": 0,
+      "effekte": 0,
+      "gruende": {
+        "Kopfzeile (2 Spalten) passt nicht zur Zeile (9 Zellen) - col": 3,
+        "Kopfzeile (2 Spalten) passt nicht zur Zeile (5 Zellen) - col": 3,
+        "keine Effektspalte im Kopf": 2,
+        "Kopfzeile (2 Spalten) passt nicht zur Zeile (1 Zellen) - col": 1
+      },
+      "sol_im_block": false,
+      "sol_zeilen": []
+    },
+    {
+      "nr": 25,
+      "caption": "(pipe table at char 366190)",
+      "kopf": "Intercept | 216.26 | 46.65 | <0.0001",
+      "spalten": 4,
+      "zeilen": 2,
+      "zellen_mit_ci": 0,
+      "zellen_mit_effektwort": 0,
+      "zellen_mit_beidem": 0,
+      "effekte": 0,
+      "gruende": {
+        "keine Effektspalte im Kopf": 1,
+        "Kopfzeile (4 Spalten) passt nicht zur Zeile (3 Zellen) - col": 1
+      },
+      "sol_im_block": false,
+      "sol_zeilen": []
+    },
+    {
+      "nr": 26,
+      "caption": "(pipe table at char 366521)",
+      "kopf": "Intercept | 211.45 | 47.42 | <0.0001",
+      "spalten": 4,
+      "zeilen": 3,
+      "zellen_mit_ci": 0,
+      "zellen_mit_effektwort": 0,
+      "zellen_mit_beidem": 0,
+      "effekte": 0,
+      "gruende": {
+        "keine Effektspalte im Kopf": 2,
+        "Kopfzeile (4 Spalten) passt nicht zur Zeile (3 Zellen) - col": 1
+      },
+      "sol_im_block": false,
+      "sol_zeilen": []
+    },
+    {
+      "nr": 27,
+      "caption": "(pipe table at char 366957)",
+      "kopf": "Intercept | 209.85 | 48.42 | <0.0001",
+      "spalten": 4,
+      "zeilen": 4,
+      "zellen_mit_ci": 0,
+      "zellen_mit_effektwort": 0,
+      "zellen_mit_beidem": 0,
+      "effekte": 0,
+      "gruende": {
+        "keine Effektspalte im Kopf": 3,
+        "Kopfzeile (4 Spalten) passt nicht zur Zeile (3 Zellen) - col": 1
+      },
+      "sol_im_block": false,
+      "sol_zeilen": []
+    },
+    {
+      "nr": 28,
+      "caption": "(pipe table at char 376668)",
+      "kopf": "Eaton Road, Liverpool, L12 2AP",
+      "spalten": 1,
+      "zeilen": 5,
+      "zellen_mit_ci": 0,
+      "zellen_mit_effektwort": 0,
+      "zellen_mit_beidem": 0,
+      "effekte": 0,
+      "gruende": {
+        "Kopfzeile (1 Spalten) passt nicht zur Zeile (2 Zellen) - col": 2,
+        "keine Effektspalte im Kopf": 2,
+        "Kopfzeile (1 Spalten) passt nicht zur Zeile (3 Zellen) - col": 1
+      },
+      "sol_im_block": false,
+      "sol_zeilen": []
+    },
+    {
+      "nr": 29,
+      "caption": "(pipe table at char 380951)",
+      "kopf": "2 Background Information..................................................................................13",
+      "spalten": 1,
+      "zeilen": 52,
+      "zellen_mit_ci": 0,
+      "zellen_mit_effektwort": 0,
+      "zellen_mit_beidem": 0,
+      "effekte": 0,
+      "gruende": {
+        "keine Effektspalte im Kopf": 51,
+        "Kopfzeile (1 Spalten) passt nicht zur Zeile (3 Zellen) - col": 1
+      },
+      "sol_im_block": false,
+      "sol_zeilen": []
+    },
+    {
+      "nr": 30,
+      "caption": "(pipe table at char 387789)",
+      "kopf": "8.4.2 Seizure diaries ..................................................................................................",
+      "spalten": 1,
+      "zeilen": 48,
+      "zellen_mit_ci": 0,
+      "zellen_mit_effektwort": 0,
+      "zellen_mit_beidem": 0,
+      "effekte": 0,
+      "gruende": {
+        "keine Effektspalte im Kopf": 48
+      },
+      "sol_im_block": false,
+      "sol_zeilen": []
+    },
+    {
+      "nr": 31,
+      "caption": "(pipe table at char 394530)",
+      "kopf": "106 | Appendix 8",
+      "spalten": 2,
+      "zeilen": 33,
+      "zellen_mit_ci": 0,
+      "zellen_mit_effektwort": 0,
+      "zellen_mit_beidem": 0,
+      "effekte": 0,
+      "gruende": {
+        "Kopfzeile (2 Spalten) passt nicht zur Zeile (1 Zellen) - col": 33
+      },
+      "sol_im_block": false,
+      "sol_zeilen": []
+    },
+    {
+      "nr": 32,
+      "caption": "(pipe table at char 440849)",
+      "kopf": "Uttoxeter Road, Derby, DE22 3DT",
+      "spalten": 1,
+      "zeilen": 8,
+      "zellen_mit_ci": 0,
+      "zellen_mit_effektwort": 0,
+      "zellen_mit_beidem": 0,
+      "effekte": 0,
+      "gruende": {
+        "keine Effektspalte im Kopf": 5,
+        "Kopfzeile (1 Spalten) passt nicht zur Zeile (2 Zellen) - col": 3
+      },
+      "sol_im_block": false,
+      "sol_zeilen": []
+    },
+    {
+      "nr": 33,
+      "caption": "(pipe table at char 441772)",
+      "kopf": "235 Euston Road | Nottingham, NG5 1PB",
+      "spalten": 2,
+      "zeilen": 8,
+      "zellen_mit_ci": 0,
+      "zellen_mit_effektwort": 0,
+      "zellen_mit_beidem": 0,
+      "effekte": 0,
+      "gruende": {
+        "keine Effektspalte im Kopf": 4,
+        "Kopfzeile (2 Spalten) passt nicht zur Zeile (1 Zellen) - col": 4
+      },
+      "sol_im_block": false,
+      "sol_zeilen": []
+    },
+    {
+      "nr": 34,
+      "caption": "(pipe table at char 442677)",
+      "kopf": "Headley way, Oxford, OX3 9DU | Bristol, BS10 5NB",
+      "spalten": 2,
+      "zeilen": 8,
+      "zellen_mit_ci": 0,
+      "zellen_mit_effektwort": 0,
+      "zellen_mit_beidem": 0,
+      "effekte": 0,
+      "gruende": {
+        "Kopfzeile (2 Spalten) passt nicht zur Zeile (1 Zellen) - col": 5,
+        "keine Effektspalte im Kopf": 3
+      },
+      "sol_im_block": false,
+      "sol_zeilen": []
+    },
+    {
+      "nr": 35,
+      "caption": "(pipe table at char 443658)",
+      "kopf": "Tel:01246 512 155",
+      "spalten": 1,
+      "zeilen": 2,
+      "zellen_mit_ci": 0,
+      "zellen_mit_effektwort": 0,
+      "zellen_mit_beidem": 0,
+      "effekte": 0,
+      "gruende": {
+        "Kopfzeile (1 Spalten) passt nicht zur Zeile (2 Zellen) - col": 1,
+        "keine Effektspalte im Kopf": 1
+      },
+      "sol_im_block": false,
+      "sol_zeilen": []
+    },
+    {
+      "nr": 36,
+      "caption": "(pipe table at char 444237)",
+      "kopf": "London SW17 7DJ",
+      "spalten": 1,
+      "zeilen": 4,
+      "zellen_mit_ci": 0,
+      "zellen_mit_effektwort": 0,
+      "zellen_mit_beidem": 0,
+      "effekte": 0,
+      "gruende": {
+        "keine Effektspalte im Kopf": 3,
+        "Kopfzeile (1 Spalten) passt nicht zur Zeile (3 Zellen) - col": 1
+      },
+      "sol_im_block": false,
+      "sol_zeilen": []
+    },
+    {
+      "nr": 37,
+      "caption": "(pipe table at char 446100)",
+      "kopf": "Sheffield, S10 2TH.",
+      "spalten": 1,
+      "zeilen": 13,
+      "zellen_mit_ci": 0,
+      "zellen_mit_effektwort": 0,
+      "zellen_mit_beidem": 0,
+      "effekte": 0,
+      "gruende": {
+        "Kopfzeile (1 Spalten) passt nicht zur Zeile (2 Zellen) - col": 8,
+        "keine Effektspalte im Kopf": 5
+      },
+      "sol_im_block": false,
+      "sol_zeilen": []
+    },
+    {
+      "nr": 38,
+      "caption": "(pipe table at char 447277)",
+      "kopf": "Heath, Cardiff, CF14 4XW",
+      "spalten": 1,
+      "zeilen": 3,
+      "zellen_mit_ci": 0,
+      "zellen_mit_effektwort": 0,
+      "zellen_mit_beidem": 0,
+      "effekte": 0,
+      "gruende": {
+        "keine Effektspalte im Kopf": 3
+      },
+      "sol_im_block": false,
+      "sol_zeilen": []
+    },
+    {
+      "nr": 39,
+      "caption": "(pipe table at char 449786)",
+      "kopf": "200mg",
+      "spalten": 1,
+      "zeilen": 13,
+      "zellen_mit_ci": 0,
+      "zellen_mit_effektwort": 0,
+      "zellen_mit_beidem": 0,
+      "effekte": 0,
+      "gruende": {
+        "keine Effektspalte im Kopf": 5,
+        "Kopfzeile (1 Spalten) passt nicht zur Zeile (4 Zellen) - col": 2,
+        "Kopfzeile (1 Spalten) passt nicht zur Zeile (5 Zellen) - col": 2,
+        "Kopfzeile (1 Spalten) passt nicht zur Zeile (6 Zellen) - col": 2
+      },
+      "sol_im_block": false,
+      "sol_zeilen": []
+    },
+    {
+      "nr": 40,
+      "caption": "(pipe table at char 577871)",
+      "kopf": "Wilts SN15 2BB",
+      "spalten": 1,
+      "zeilen": 4,
+      "zellen_mit_ci": 0,
+      "zellen_mit_effektwort": 0,
+      "zellen_mit_beidem": 0,
+      "effekte": 0,
+      "gruende": {
+        "keine Effektspalte im Kopf": 4
+      },
+      "sol_im_block": false,
+      "sol_zeilen": []
+    },
+    {
+      "nr": 41,
+      "caption": "(pipe table at char 656461)",
+      "kopf": "Oxford Road, Manchester, M13 9WL",
+      "spalten": 1,
+      "zeilen": 45,
+      "zellen_mit_ci": 0,
+      "zellen_mit_effektwort": 0,
+      "zellen_mit_beidem": 0,
+      "effekte": 0,
+      "gruende": {
+        "keine Effektspalte im Kopf": 45
+      },
+      "sol_im_block": false,
+      "sol_zeilen": []
+    },
+    {
+      "nr": 42,
+      "caption": "(pipe table at char 662011)",
+      "kopf": "Sheffield S10 5DD",
+      "spalten": 1,
+      "zeilen": 16,
+      "zellen_mit_ci": 0,
+      "zellen_mit_effektwort": 0,
+      "zellen_mit_beidem": 0,
+      "effekte": 0,
+      "gruende": {
+        "keine Effektspalte im Kopf": 14,
+        "Kopfzeile (1 Spalten) passt nicht zur Zeile (3 Zellen) - col": 1,
+        "Kopfzeile (1 Spalten) passt nicht zur Zeile (2 Zellen) - col": 1
+      },
+      "sol_im_block": false,
+      "sol_zeilen": []
+    },
+    {
+      "nr": 43,
+      "caption": "(pipe table at char 664984)",
+      "kopf": "Westbury-On-Trym, Bristol,BS10 5NB",
+      "spalten": 1,
+      "zeilen": 9,
+      "zellen_mit_ci": 0,
+      "zellen_mit_effektwort": 0,
+      "zellen_mit_beidem": 0,
+      "effekte": 0,
+      "gruende": {
+        "keine Effektspalte im Kopf": 9
+      },
+      "sol_im_block": false,
+      "sol_zeilen": []
+    },
+    {
+      "nr": 44,
+      "caption": "(pipe table at char 668519)",
+      "kopf": "London, SW15 5PN",
+      "spalten": 1,
+      "zeilen": 26,
+      "zellen_mit_ci": 0,
+      "zellen_mit_effektwort": 0,
+      "zellen_mit_beidem": 0,
+      "effekte": 0,
+      "gruende": {
+        "keine Effektspalte im Kopf": 25,
+        "Kopfzeile (1 Spalten) passt nicht zur Zeile (3 Zellen) - col": 1
+      },
+      "sol_im_block": false,
+      "sol_zeilen": []
+    },
+    {
+      "nr": 45,
+      "caption": "(pipe table at char 773296)",
+      "kopf": "Tel: (0 )1483 689712",
+      "spalten": 1,
+      "zeilen": 8,
+      "zellen_mit_ci": 0,
+      "zellen_mit_effektwort": 0,
+      "zellen_mit_beidem": 0,
+      "effekte": 0,
+      "gruende": {
+        "keine Effektspalte im Kopf": 8
+      },
+      "sol_im_block": false,
+      "sol_zeilen": []
+    },
+    {
+      "nr": 46,
+      "caption": "(pipe table at char 774342)",
+      "kopf": "6-sulphatoxymelatonin | 100",
+      "spalten": 2,
+      "zeilen": 11,
+      "zellen_mit_ci": 0,
+      "zellen_mit_effektwort": 0,
+      "zellen_mit_beidem": 0,
+      "effekte": 0,
+      "gruende": {
+        "keine Effektspalte im Kopf": 8,
+        "Kopfzeile (2 Spalten) passt nicht zur Zeile (1 Zellen) - col": 3
+      },
+      "sol_im_block": false,
+      "sol_zeilen": []
+    },
+    {
+      "nr": 47,
+      "caption": "(pipe table at char 780013)",
+      "kopf": "100�l (1mg/ml) to 100ml in DGDW = 1�g/ml",
+      "spalten": 1,
+      "zeilen": 2,
+      "zellen_mit_ci": 0,
+      "zellen_mit_effektwort": 0,
+      "zellen_mit_beidem": 0,
+      "effekte": 0,
+      "gruende": {
+        "keine Effektspalte im Kopf": 2
+      },
+      "sol_im_block": false,
+      "sol_zeilen": []
+    },
+    {
+      "nr": 48,
+      "caption": "(pipe table at char 781605)",
+      "kopf": "Sample / standard | 500�l",
+      "spalten": 2,
+      "zeilen": 2,
+      "zellen_mit_ci": 0,
+      "zellen_mit_effektwort": 0,
+      "zellen_mit_beidem": 0,
+      "effekte": 0,
+      "gruende": {
+        "keine Effektspalte im Kopf": 2
+      },
+      "sol_im_block": false,
+      "sol_zeilen": []
+    }
+  ]
+}
