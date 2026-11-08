@@ -1,0 +1,124 @@
+{
+  "test_id": "E1-extraktion-20261108",
+  "stand": "2026-11-08T19:25:06+00:00",
+  "quelle": "data/bench/sol2/volltext/23098680.txt",
+  "zeichen": 831660,
+  "blocks": 48,
+  "modell": "keiner",
+  "netz": "keines",
+  "toleranz": 0.01,
+  "pruefungen": [
+    {
+      "id": "MENDS-Tagebuch",
+      "soll_est": -37.49,
+      "soll_se": 9.0818,
+      "soll_ci": [
+        -55.27,
+        -19.71
+      ],
+      "treffer": [],
+      "status": "FAIL",
+      "lage": {
+        "marke": "37.49",
+        "zeilen": [
+          125,
+          413,
+          1729,
+          1769
+        ],
+        "zeilen_gesamt": 4,
+        "bloecke_mit_marke": 1,
+        "im_fliesstext": false
+      },
+      "zelle": {
+        "block": 6,
+        "zelle": "-37.49 (-55.27 to -19.71)",
+        "zelle_lesbar": true,
+        "geparst": [
+          -37.49,
+          -55.27,
+          -19.71
+        ],
+        "kopfzelle": "(SD)",
+        "kopf_ist_effektspalte": false,
+        "kopf_effektwort": ""
+      }
+    },
+    {
+      "id": "MENDS-Aktigraphie",
+      "soll_est": -45.34,
+      "soll_se": 11.9645,
+      "soll_ci": [
+        -68.75,
+        -21.93
+      ],
+      "treffer": [],
+      "status": "FAIL",
+      "lage": {
+        "marke": "45.34",
+        "zeilen": [
+          126,
+          415,
+          1730,
+          1776
+        ],
+        "zeilen_gesamt": 4,
+        "bloecke_mit_marke": 1,
+        "im_fliesstext": false
+      },
+      "zelle": {
+        "block": 6,
+        "zelle": "-45.34 (-68.75 to -21.93)",
+        "zelle_lesbar": true,
+        "geparst": [
+          -45.34,
+          -68.75,
+          -21.93
+        ],
+        "kopfzelle": "571.26 (71.98)",
+        "kopf_ist_effektspalte": false,
+        "kopf_effektwort": ""
+      }
+    }
+  ],
+  "gelesen": {
+    "blocks": 48,
+    "arm": 0,
+    "change": 0,
+    "direkt": 0,
+    "anzahl_arm": 0,
+    "anzahl_change": 0,
+    "anzahl_direkt": 0,
+    "gruende": {
+      "keine Effektspalte im Kopf": 378,
+      "Kopfzeile (2 Spalten) passt nicht zur Zeile (1 Zellen) - col": 53,
+      "Kopfzeile (8 Spalten) passt nicht zur Zeile (3 Zellen) - col": 25,
+      "Kopfzeile (4 Spalten) passt nicht zur Zeile (1 Zellen) - col": 20,
+      "Kopfzeile (1 Spalten) passt nicht zur Zeile (2 Zellen) - col": 19,
+      "Kopfzeile (8 Spalten) passt nicht zur Zeile (7 Zellen) - col": 18,
+      "Kopfzeile (8 Spalten) passt nicht zur Zeile (4 Zellen) - col": 13,
+      "Kopfzeile (2 Spalten) passt nicht zur Zeile (9 Zellen) - col": 13,
+      "Kopfzeile (8 Spalten) passt nicht zur Zeile (1 Zellen) - col": 11,
+      "Kopfzeile (8 Spalten) passt nicht zur Zeile (6 Zellen) - col": 10,
+      "Kopfzeile (8 Spalten) passt nicht zur Zeile (5 Zellen) - col": 10,
+      "Kopfzeile (5 Spalten) passt nicht zur Zeile (2 Zellen) - col": 10,
+      "Kopfzeile (4 Spalten) passt nicht zur Zeile (3 Zellen) - col": 9,
+      "Kopfzeile (2 Spalten) passt nicht zur Zeile (8 Zellen) - col": 9,
+      "Kopfzeile (9 Spalten) passt nicht zur Zeile (1 Zellen) - col": 8,
+      "Kopfzeile (3 Spalten) passt nicht zur Zeile (2 Zellen) - col": 8,
+      "Kopfzeile (5 Spalten) passt nicht zur Zeile (1 Zellen) - col": 8,
+      "Kopfzeile (4 Spalten) passt nicht zur Zeile (5 Zellen) - col": 7,
+      "Kopfzeile (1 Spalten) passt nicht zur Zeile (3 Zellen) - col": 7,
+      "Kopfzeile (3 Spalten) passt nicht zur Zeile (7 Zellen) - col": 7
+    }
+  },
+  "befund": "0 von 2 Effekten wurden von keinem Leser gefunden. 2 von 2 stehen jedoch als Wert mit Intervall in einer Tabellenzelle und sind mit `parse_effect_cell` lesbar; der Tabellenleser erreicht sie nicht, weil die zugehoerige Kopfzelle keine Effektspalte ist (`header_effect_kind` False). Der Blocker sitzt damit in der Kopfzeilenerkennung, nicht im Fehlen der Daten - der Effekt steht zusaetzlich als Satz im Fliesstext, aber er steht auch in der Tabelle.",
+  "korrekturen": [
+    {
+      "fall": "Befundtext im Erstlauf",
+      "text": "Der erste Bericht behauptete, der Wert stehe nur im Fliesstext und ein Satz sei kein Tabellenblock. Die Messung widerlegt das: -37.49 und -45.34 stehen in Block 6 als Wert mit Intervall in einer Zelle (`-37.49 (-55.27 to -19.71)`). Korrigiert ist die Ursachenangabe, nicht das Messergebnis (0 Treffer)."
+    }
+  ],
+  "gesamt": "FAIL",
+  "laufzeit_s": 0.9808592999979737
+}
