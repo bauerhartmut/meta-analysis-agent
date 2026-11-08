@@ -25,11 +25,12 @@ laesst sich nicht durch Statistik schliessen, nur durch Zugang.
 Falls einzelne Titel nur ueber Fernleihe oder Dokumentlieferung zugaenglich
 sind, bitte ich um diesen Weg. Bitte stellen Sie die Volltexte, wenn moeglich,
 als durchsuchbares PDF mit Textebene bereit; ein reiner Scan ohne Textebene ist
-fuer die Auswertung nicht verwendbar. Die anfallenden Gebuehren uebernehmen wir
-bis zur Hoehe von [Betrag in EUR eintragen]; Kostenstelle: [Kostenstelle eintragen].
+fuer die Auswertung nicht verwendbar. Die anfallenden Gebuehren uebernehmen
+wir; eine Kostenstelle nenne ich Ihnen gern, sobald Sie die Kosten beziffern
+koennen.
 
-Fuer Rueckfragen erreichen Sie mich unter [Telefon] oder [E-Mail].
+Fuer Rueckfragen antworten Sie bitte einfach auf diese E-Mail.
 
 Vielen Dank und freundliche Gruesse
 [Name]
-[Einrichtung / Arbeitsgruppe]
+[Einrichtung, z. B. TU Darmstadt, Fachbereich ...]

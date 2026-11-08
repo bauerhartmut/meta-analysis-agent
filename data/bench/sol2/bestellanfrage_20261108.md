@@ -1,8 +1,8 @@
 # Bestellanfrage an die Bibliothek
 
-Stand: 2026-11-08. Fertig zum Kopieren; Platzhalter in
-eckigen Klammern ausfuellen. Quelle der Angaben: PubMed-Metadaten
-(`data/bench/sol2/zitationen_a.json`), keine Volltexte abgerufen.
+Stand: 2026-11-08. Versandfertig bis auf zwei Angaben: **Name** und
+**Einrichtung** (siehe Checkliste unten). Quelle der bibliografischen Daten:
+PubMed-Metadaten (`data/bench/sol2/zitation_a.json`), keine Volltexte abgerufen.
 
 ```text
 Betreff: Literaturbestellung - 5 Artikel zu Melatonin und Einschaflatenz (DOI/PMID angegeben)
@@ -32,15 +32,38 @@ laesst sich nicht durch Statistik schliessen, nur durch Zugang.
 Falls einzelne Titel nur ueber Fernleihe oder Dokumentlieferung zugaenglich
 sind, bitte ich um diesen Weg. Bitte stellen Sie die Volltexte, wenn moeglich,
 als durchsuchbares PDF mit Textebene bereit; ein reiner Scan ohne Textebene ist
-fuer die Auswertung nicht verwendbar. Die anfallenden Gebuehren uebernehmen wir
-bis zur Hoehe von [Betrag in EUR eintragen]; Kostenstelle: [Kostenstelle eintragen].
+fuer die Auswertung nicht verwendbar. Die anfallenden Gebuehren uebernehmen
+wir; eine Kostenstelle nenne ich Ihnen gern, sobald Sie die Kosten beziffern
+koennen.
 
-Fuer Rueckfragen erreichen Sie mich unter [Telefon] oder [E-Mail].
+Fuer Rueckfragen antworten Sie bitte einfach auf diese E-Mail.
 
 Vielen Dank und freundliche Gruesse
 [Name]
-[Einrichtung / Arbeitsgruppe]
+[Einrichtung, z. B. TU Darmstadt, Fachbereich ...]
 ```
+
+## Vor dem Senden
+
+Nur zwei Felder sind offen, beide stehen in der Signatur:
+
+| Feld | Warum es offen bleibt |
+|---|---|
+| `[Name]` | Name des Absenders - nicht aus dem Projekt ableitbar |
+| `[Einrichtung, ...]` | Einrichtung und Fachbereich tragen die Kostenuebernahme |
+
+Alles andere ist bewusst ohne Angabe formuliert, damit nichts erfunden wird:
+
+- **Betrag:** entfallen. Statt einer Obergrenze steht die Zusage, die Kosten zu
+  uebernehmen und die Kostenstelle nach Nennung des Betrags nachzureichen. Wer
+  eine Obergrenze braucht, kann sie hier eintragen; sie ist nicht noetig.
+- **Kostenstelle:** entfallen, gleiche Begruendung (siehe oben).
+- **Telefon und E-Mail:** entfallen. "Antworten Sie auf diese E-Mail" nutzt die
+  Adresse, aus der die Mail versendet wird - nichts zu tippen, nichts falsch.
+
+Nach dem Ausfuellen: Text aus dem Codeblock in das Mailprogramm uebernehmen,
+die beiden Felder ersetzen, senden. Die fertige Fassung ohne Markdown liegt
+daneben in `bestellanfrage_20261108.txt`; beide Dateien werden gleich gepflegt.
 
 ## Warum genau diese fuenf
 
@@ -58,14 +81,25 @@ nennt. Alle anderen 78 Dokumente ohne Volltext stehen in
   OCR-durchsuchbar); eine Weitergabe an Dritte ist nicht vorgesehen.
 - Bei einem Scan ohne Textebene bitte ich um den Hinweis, damit ich keine
   Zeilen als "nicht berichtet" fehlverbuchen muss.
+- Falls eine Kostenstelle vorab gebraucht wird: kurz nachfragen lassen, sie
+  wird innerhalb eines Werktags nachgereicht.
 
 ## Nach Erhalt
 
-Die PDFs in `data/bench/sol2/volltext/` ablegen, dann die PDF-Kette
-(`scripts/read_pdf_corpus.py --dir data/bench/sol2/volltext`) darauf ansetzen.
-Zeigt der Bericht `Zeichen 0` oder `zu wenig Text`, ist die Datei ein Scan und
-gehoert nachbestellt oder abgetippt, nicht als leere Studie verbucht (siehe
-`scan_grenze_20261108.md`). Fuer diese fuenf Artikel gilt das Schritt-Ziel
-k >= 2 poolbare Zeilen auf der Einschaflatenz; das Gesamtziel k >= 5 ist an die
-A+B-Liste gebunden, weil fuenf Artikel im Schnitt eine poolbare Studie
-liefern (`schwelle_k5_20261108.md`).
+Die PDFs in `data/bench/sol2/volltext/` ablegen, dann den Triage-Ablauf
+starten:
+
+```bash
+.venv/bin/python.exe scripts/triage_lieferung.py \
+  --dir data/bench/sol2/volltext \
+  --json data/bench/sol2/lieferung.json \
+  --md data/bench/sol2/lieferung.md
+```
+
+Der Bericht nennt je Datei den Zustand (poolbar, Scan, Endpunkt nicht
+berichtet) und schreibt k gegen das Schritt-Ziel fort. Zeigt er "kein
+Textlayer", gehoert die Datei nachbestellt oder abgetippt, nicht als leere
+Studie verbucht (siehe `scan_grenze_20261108.md`). Fuer diese fuenf Artikel gilt
+das Schritt-Ziel k >= 2 poolbare Zeilen auf der Einschaflatenz; das Gesamtziel
+k >= 5 ist an die A+B-Liste gebunden, weil fuenf Artikel im Schnitt eine poolbare
+Studie liefern (`schwelle_k5_20261108.md`).
