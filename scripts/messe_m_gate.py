@@ -22,6 +22,7 @@ sys.path.insert(0, str(ROOT / "scripts"))
 from messe_quote_luecken_bestand import kopiere, aufraeumen   # noqa: E402
 from messe_effekt_duplikate import gruppe                     # noqa: E402
 from research_agent.meta.pooling import build_analysis        # noqa: E402
+import research_agent.meta.pool_gates as gates                # noqa: E402
 
 VALIDIERUNG = ROOT / "data" / "bench" / "validierung"
 OUT_JSON = VALIDIERUNG / "e4g_m_gate_20261108.json"
@@ -41,6 +42,22 @@ def lies(path: Path, index: int) -> list:
         aufraeumen(dest)
 
 
+def analyse_ohne_gate(rows: list) -> dict:
+    """Zustand vor dem Gate: die Gate-Funktion fuer diesen Lauf deaktiviert.
+
+    `build_analysis` importiert `single_cluster_gate` bei jedem Aufruf aus dem
+    Modul, deshalb wirkt der Patch. Nur fuer die Messung - die Produktion
+    bleibt unveraendert.
+    """
+
+    original = gates.single_cluster_gate
+    gates.single_cluster_gate = lambda analysis: analysis
+    try:
+        return build_analysis(rows)
+    finally:
+        gates.single_cluster_gate = original
+
+
 def main() -> int:
     gepoolt, betroffen, offen = 0, [], []
     for index, path in enumerate(sorted(
@@ -56,7 +73,9 @@ def main() -> int:
             continue
         if "study_effects" not in tables:
             continue
-        analysis = build_analysis(lies(path, index))
+        rows = lies(path, index)
+        vorher = analyse_ohne_gate(rows)
+        analysis = build_analysis(rows)
         for name, group in analysis["groups"].items():
             if int(group.get("k") or 0) < 2:
                 continue
@@ -68,6 +87,9 @@ def main() -> int:
                 "M": (group.get("rve") or {}).get("M"),
                 "pooled": group.get("pooled"),
                 "ci": [group.get("ci_low"), group.get("ci_high")],
+                # Zweiter Lauf ohne Gate: so sah das Intervall vorher aus.
+                "ci_vorher": [vorher["groups"][name].get("ci_low"),
+                              vorher["groups"][name].get("ci_high")],
                 "single_cluster": bool(group.get("single_cluster")),
             }
             (betroffen if eintrag["single_cluster"] else offen).append(eintrag)
@@ -115,12 +137,12 @@ def main() -> int:
     ]
     for e in betroffen:
         md.append(f"| {e['gruppe']} | {e['k']} | {e['M']} | {e['pooled']} | "
-                  f"{e['ci']} |")
+                  f"{e['ci_vorher']} |")
     md += [
         "",
-        "Die `KI vorher`-Werte stehen hier, weil sie vor dem Gate berechnet",
-        "wurden; im Ergebnis traegt die Gruppe jetzt `ci_low = ci_high = None`",
-        "und `single_cluster = True`.",
+        "`KI vorher` stammt aus einem zweiten Lauf mit deaktiviertem Gate.",
+        "Im Ergebnis traegt die Gruppe jetzt `ci_low = ci_high = None` und",
+        "`single_cluster = True`.",
         "",
         "## Unveraendert",
         "",
