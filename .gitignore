@@ -82,3 +82,4 @@ data/bench/sol/seed_xml/
 # SQLite-Begleitdateien in allen Unterordnern (Datenbanken bleiben lokal)
 data/**/*.db-shm
 data/**/*.db-wal
+data/bench/sol2/scanprobe/*.pdf

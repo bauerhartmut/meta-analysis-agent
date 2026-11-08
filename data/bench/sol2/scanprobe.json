@@ -1,0 +1,19 @@
+{
+  "generated": "2026-11-08T13:16:31",
+  "directory": "data/bench/sol2/scanprobe",
+  "pdfs": 1,
+  "readable": 0,
+  "rows": 0,
+  "sol_rows": 0,
+  "k_sol_poolable": 0,
+  "problems": {
+    "zu wenig Text (Scan oder kaputt)": 1
+  },
+  "documents": [
+    {
+      "file": "scan_seite1.pdf",
+      "chars": 0,
+      "error": "zu wenig Text"
+    }
+  ]
+}
