@@ -7,7 +7,7 @@ dieses Repos und sind mit den dort genannten Skripten nachrechenbar.
 
 Der Melatonin-Korpus traegt **keine gepoolte Aussage zur Einschaflatenz**.
 Von 1099 gespeicherten Effektzeilen betreffen 13 das Zielmass
-(1.2 %), sie stammen aus 7 Quellen; nach den Design- und
+(1,2 %), sie stammen aus 7 Quellen; nach den Design- und
 Baseline-Gates bleiben **11 Zeilen aus 5 Quellen**. Fuer orales Melatonin
 bleibt **k = 1**. Ein gepoolter Wert wird nicht berichtet.
 
@@ -23,7 +23,7 @@ Europe PMC).
 | Manifest-Eintraege | 1059 |
 | gespeicherte Effektzeilen | 1099 |
 | davon poolbar (technisch) | 422 |
-| SOL-Zeilen / Anteil | 13 / 1.2 % |
+| SOL-Zeilen / Anteil | 13 / 1,2 % |
 | SOL-Quellen | 7 |
 | SOL-Zeilen nach Gates / Quellen | 11 / 5 |
 | unabhaengige Melatonin-Studien mit SOL in Minuten | **1** |
@@ -38,7 +38,7 @@ Wirkung - bei deutlichem Gewinn an Gesamtzeilen:
 | Mehrzeilige Kopfzeilen, colspan/rowspan | Kandidaten 539 -> 1.115 (+576), gespeichert 523 -> 1099 | 13 -> 13 (**0**) |
 | Outcome-Label aus Zwischenueberschrift/Caption | Zeilen ohne Label 232 -> 2 | 13 -> 13 (**0**) |
 | Arm-Rechner paart getrennte Mean-/SD-Spalten | poolbare Zeilen 152 -> 422 | lesbar 18 -> 18 (**0**) |
-| Fliesselext-Leser (5.820 SOL-Saetze, 316 mit SD) | 1 zusaetzliche Zeile | 0 lesbar (**0**) |
+| Fliesstext-Leser (5.820 SOL-Saetze, 316 mit SD) | 1 zusaetzliche Zeile | 0 lesbar (**0**) |
 
 Dazu zwei weitere, ebenfalls gemessene Hebel:
 
@@ -73,7 +73,7 @@ aufgeloest.
 | Datei | Inhalt |
 |---|---|
 | `zeilen_summe_20261108.json` | 1099 gespeicherte, 422 poolbare Zeilen (aus den vier Mess-DBs gezaehlt) |
-| `zielmass_schnitt_label2_20261108.json` | 13 SOL-Zeilen, Anteil 1.2 % |
+| `zielmass_schnitt_label2_20261108.json` | 13 SOL-Zeilen, Anteil 1,2 % |
 | `schaetzer_pruefung_20261108.md` | 11 SOL-Zeilen aus 5 Quellen, k = 1, Leserfehler-Korrektur |
 | `effect_columns_paired_20261108.md` | 37 korrigierte Werte (u. a. zsaa194: -1,7 statt -5,1) |
 | `colspan_befund_20261108.md` | 342 Mismatch-Zeilen, 0 mit Effektspalte |
