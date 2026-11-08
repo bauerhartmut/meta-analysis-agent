@@ -1,0 +1,61 @@
+{
+  "generated": "2026-11-08T13:10:41",
+  "directory": "data/origpdf",
+  "pdfs": 3,
+  "readable": 3,
+  "rows": 0,
+  "sol_rows": 0,
+  "k_sol_poolable": 0,
+  "problems": {
+    "keine Effektspalte im Kopf": 128,
+    "Kopfzeile (1 Spalten) passt nicht zur Zeile (11 Zellen) - co": 1,
+    "Kopfzeile (1 Spalten) passt nicht zur Zeile (3 Zellen) - col": 1,
+    "Kopfzeile (1 Spalten) passt nicht zur Zeile (10 Zellen) - co": 1,
+    "Kopfzeile (1 Spalten) passt nicht zur Zeile (6 Zellen) - col": 1,
+    "Kopfzeile (1 Spalten) passt nicht zur Zeile (4 Zellen) - col": 1
+  },
+  "documents": [
+    {
+      "file": "09169ac90aa57bab.pdf",
+      "chars": 49343,
+      "source": "pdf:09169ac90aa57bab",
+      "arm_candidates": 0,
+      "arm_stored": 0,
+      "blocks": 9,
+      "direct_candidates": 0,
+      "direct_stored": 0,
+      "rows": 0,
+      "sol_rows": 0,
+      "sol_poolable": 0,
+      "sol": []
+    },
+    {
+      "file": "09d48d210903cc8b.pdf",
+      "chars": 31785,
+      "source": "pdf:09d48d210903cc8b",
+      "arm_candidates": 0,
+      "arm_stored": 0,
+      "blocks": 3,
+      "direct_candidates": 0,
+      "direct_stored": 0,
+      "rows": 0,
+      "sol_rows": 0,
+      "sol_poolable": 0,
+      "sol": []
+    },
+    {
+      "file": "21746b00d3a298a6.pdf",
+      "chars": 53046,
+      "source": "pdf:21746b00d3a298a6",
+      "arm_candidates": 0,
+      "arm_stored": 0,
+      "blocks": 6,
+      "direct_candidates": 0,
+      "direct_stored": 0,
+      "rows": 0,
+      "sol_rows": 0,
+      "sol_poolable": 0,
+      "sol": []
+    }
+  ]
+}
