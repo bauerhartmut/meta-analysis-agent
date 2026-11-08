@@ -1,5 +1,13 @@
 {
-  "generated": "2026-11-08T12:32:50",
+  "befund": {
+    "melatonin": 5,
+    "poolbar": 9,
+    "beides": 1,
+    "pmcs": [
+      "PMC13448793"
+    ]
+  },
+  "generated": "2026-11-08T12:34:24",
   "documents": [
     {
       "stratum": "D",

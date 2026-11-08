@@ -1,6 +1,6 @@
 # Zensus-Vorurteil: 57 Dokumente der SOL-Sichtung
 
-Stand: 2026-11-08T12:32:50. Erzeugt von `scripts/prejudge_sol_census.py`. XML vorhanden: 57 von 57.
+Stand: 2026-11-08T12:34:24. Erzeugt von `scripts/prejudge_sol_census.py`. XML vorhanden: 57 von 57.
 
 **Das ist ein Vorurteil, kein Urteil.** Die Spalte *Vorschlag* entsteht aus Mustern in Titel, Abstract und Methodenteil (ohne Referenzliste) plus den gespeicherten Zeilen. Melatonin zaehlt nur als Intervention, wenn eine Interventionsformulierung steht ("melatonin group", "3 mg melatonin", "received melatonin"), nicht als Outcome oder Zitat. Die Spalte *Urteil* bleibt leer und wird von Hand gefuellt.
 
@@ -14,6 +14,12 @@ Stand: 2026-11-08T12:32:50. Erzeugt von `scripts/prejudge_sol_census.py`. XML vo
 | kein SOL im Text | 15 |
 | kein RCT | 23 |
 | ungeprueft | 4 |
+
+## Befund der Vorsichtung
+
+Von 57 Zensus-Dokumenten nennen 5 Melatonin in einer Interventionsformulierung, 9 haben eine poolbare SOL-Zeile, beides zusammen trifft auf 1 zu (PMC13448793).
+
+Der Zensus stuetzt damit **nicht** die fruehere Aussage k = 1: der einzige Melatonin-Treffer mit poolbarer SOL-Zeile ist eine Beobachtungsstudie ohne Randomisierung, und seine SOL-Zeile ist ein modellbasierter Koeffizient (0,07; KI -0,04 bis 0,17), kein Arm-Mittelwert in Minuten. Die uebrigen poolbaren SOL-Zeilen stammen aus rTMS, Mikrobiom-Transplantation, Ernaehrungsberatung, Krankenhauslicht und einem Katarakt-Vergleich.
 
 ## Arbeitsliste
 

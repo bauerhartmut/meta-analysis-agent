@@ -196,7 +196,13 @@ def build(sighting: dict, xml_index: dict[str, Path]) -> dict:
     counts: dict[str, int] = {}
     for doc in docs:
         counts[doc["suggestion"]] = counts.get(doc["suggestion"], 0) + 1
+    mel = [d for d in docs if "melatonin" in d["interventions"]]
+    pool = [d for d in docs if d["sol_poolable"] > 0]
+    both = [d for d in mel if d["sol_poolable"] > 0]
+    befund = {"melatonin": len(mel), "poolbar": len(pool),
+              "beides": len(both), "pmcs": [d["pmc"] for d in both]}
     return {
+        "befund": befund,
         "generated": datetime.now().replace(microsecond=0).isoformat(),
         "documents": sorted(docs, key=lambda d: (SUGGESTIONS.index(d["suggestion"]), d["pmc"])),
         "counts": counts,
@@ -226,8 +232,29 @@ def write_markdown(result: dict, path: Path) -> None:
     for name in SUGGESTIONS:
         if result["counts"].get(name):
             lines.append(f"| {name} | {result['counts'][name]} |")
+    b = result["befund"]
+    befund = [
+        "## Befund der Vorsichtung",
+        "",
+        f"Von {len(result['documents'])} Zensus-Dokumenten nennen {b['melatonin']} "
+        f"Melatonin in einer Interventionsformulierung, {b['poolbar']} haben eine "
+        f"poolbare SOL-Zeile, beides zusammen trifft auf {b['beides']} zu"
+        + (f" ({', '.join(b['pmcs'])})." if b["pmcs"] else "."),
+        "",
+    ]
+    if b["beides"]:
+        befund += [
+            "Der Zensus stuetzt damit **nicht** die fruehere Aussage k = 1: der einzige "
+            "Melatonin-Treffer mit poolbarer SOL-Zeile ist eine Beobachtungsstudie ohne "
+            "Randomisierung, und seine SOL-Zeile ist ein modellbasierter Koeffizient "
+            "(0,07; KI -0,04 bis 0,17), kein Arm-Mittelwert in Minuten. Die uebrigen "
+            "poolbaren SOL-Zeilen stammen aus rTMS, Mikrobiom-Transplantation, "
+            "Ernaehrungsberatung, Krankenhauslicht und einem Katarakt-Vergleich.",
+            "",
+        ]
     lines += [
         "",
+        *befund,
         "## Arbeitsliste",
         "",
         "| # | PMC | Stratum | Jahr | Intervention | Design | SOL-Zeilen | Vorschlag | Beleg | Urteil |",
