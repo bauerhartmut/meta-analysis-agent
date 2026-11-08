@@ -1,0 +1,87 @@
+{
+  "generated": "2026-11-08T19:13:33",
+  "directory": "data/bench/sol2/volltext",
+  "dateien": 2,
+  "groessen": {
+    "19030713.txt": 30111,
+    "23098680.txt": 853183
+  },
+  "vorher": {
+    "19030713.pdf": {
+      "chars": 29322,
+      "blocks": 2,
+      "arm_stored": 0,
+      "direct_stored": 0,
+      "rows": 0,
+      "sol_rows": 0,
+      "sol_poolable": 0,
+      "error": false,
+      "zustand": "endpunkt_nicht_berichtet",
+      "sol": []
+    },
+    "23098680.pdf": {
+      "chars": 831512,
+      "blocks": 45,
+      "arm_stored": 0,
+      "direct_stored": 0,
+      "rows": 0,
+      "sol_rows": 0,
+      "sol_poolable": 0,
+      "error": false,
+      "zustand": "endpunkt_nicht_berichtet",
+      "sol": []
+    }
+  },
+  "nachher": {
+    "19030713.pdf": {
+      "chars": 29322,
+      "blocks": 2,
+      "arm_stored": 0,
+      "direct_stored": 0,
+      "rows": 0,
+      "sol_rows": 0,
+      "sol_poolable": 0,
+      "error": false,
+      "zustand": "endpunkt_nicht_berichtet",
+      "sol": []
+    },
+    "23098680.pdf": {
+      "chars": 831586,
+      "blocks": 48,
+      "arm_stored": 0,
+      "direct_stored": 0,
+      "rows": 0,
+      "sol_rows": 0,
+      "sol_poolable": 0,
+      "error": false,
+      "zustand": "endpunkt_nicht_berichtet",
+      "sol": []
+    }
+  },
+  "pdf_referenz": {
+    "19030713.pdf": {
+      "blocks": 1,
+      "sol_rows": 0,
+      "error": false
+    },
+    "23098680.pdf": {
+      "blocks": null,
+      "sol_rows": null,
+      "error": true
+    }
+  },
+  "abweichungen": [
+    {
+      "file": "23098680.pdf",
+      "feld": "chars",
+      "vorher": 831512,
+      "nachher": 831586
+    },
+    {
+      "file": "23098680.pdf",
+      "feld": "blocks",
+      "vorher": 45,
+      "nachher": 48
+    }
+  ]
+}
