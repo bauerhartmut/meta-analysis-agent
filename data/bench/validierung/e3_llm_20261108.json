@@ -1,0 +1,50 @@
+{
+  "test": "E3a-llm-ein-pass",
+  "stand": "2026-11-08T21:29:14",
+  "datei": "data/bench/sol2/volltext/23098680.txt",
+  "datei_zeichen": 841300,
+  "prompt_zeichen": 25582,
+  "prompt_budget": 24000,
+  "modell": "gwdg/qwen3.5-397b-a17b",
+  "double_pass": false,
+  "topic": "melatonin",
+  "backend_erreichbar": true,
+  "dauer_s": 5.3,
+  "tokens": {
+    "prompt": 5160,
+    "completion": 284,
+    "gesamt": 5444
+  },
+  "soll": {
+    "tagebuch": -37.49,
+    "aktigraphie": -45.34
+  },
+  "toleranz": 0.01,
+  "sollzahl_im_prompt": {
+    "tagebuch": true,
+    "aktigraphie": true
+  },
+  "zeilen": 1,
+  "abgelehnt": 0,
+  "fehler": "",
+  "engine_errors": 0,
+  "letzter_fehler": "",
+  "treffer": {
+    "tagebuch": null,
+    "aktigraphie": null
+  },
+  "alle_zeilen": [
+    {
+      "outcome": "total night-time sleep time (TST)",
+      "comparison": "melatonin vs placebo",
+      "effect_type": "mean_diff",
+      "effect": 22.43,
+      "se": 11.178776841219168,
+      "ci_low": 0.52,
+      "ci_high": 44.34,
+      "n": 110,
+      "quote": "The difference in TST time between the melatonin and placebo groups adjusted for baseline was 22.43 minutes [95% confidence interval (CI) 0.52 to 44.34 minutes; p=0.04] measured using sleep diaries.",
+      "rejection_reason": ""
+    }
+  ]
+}

@@ -194,10 +194,34 @@ frischen Clone.
 
 ## Offene Punkte
 
-1. LLM-Extraktor gegen MENDS: findet `EffectExtractor` -37,49 und -45,34?
-   Das ist der einzige offene Pfad, der die Kette retten koennte; er braucht
-   Freigabe und ein Budget.
+1. LLM-Extraktor gegen MENDS: **beantwortet** (Nachtrag unten). Er findet
+   keinen der beiden Effekte, obwohl der Satz im Prompt steht - er liest 1 von
+   3 Effekten des Absatzes. Die Frage, ob die Kette ueber den Modellpfad
+   rettbar ist, ist damit offen, nicht bejaht.
 2. Externer Pooling-Abgleich gegen `metafor` (R) oder `statsmodels`, damit E2
    nicht nur Reproduzierbarkeit belegt.
 3. `pool()` sollte fehlende SE-Zeilen melden statt sie still zu verwerfen
    (Befund U7) - Code-Aenderung, keine Validierung.
+
+## Nachtrag: der LLM-Extraktor (E3a)
+
+Ein Lauf, ein Pass, ein Dokument - freigegeben und durchgefuehrt. Kosten
+5.444 Tokens, 5,3 s, keine Engine-Fehler. Ergebnis: **0 von 2** Sollwerten.
+Das Modell las den Ergebnisabsatz und zitierte den TST-Effekt
+(22,43 [0,52; 44,34]) korrekt, gab aber die beiden SOL-Effekte im naechsten Satz nicht als Zeilen
+zurueck, obwohl der Prompt sie woertlich enthaelt und mehr Vollstaendigkeit
+verlangt.
+
+Zwei Zusatzbefunde:
+
+- **Der Selektor ist selbst ein Filter.** `select_text` kuerzt 841.300 auf
+  25.582 Zeichen nach Topic-Woertern. Mit `melatonin` stehen beide Sollzahlen
+  im Prompt, mit `melatonin and sleep outcomes` und `sleep` keine. Die
+  Vorauswahl entscheidet damit, ob ein berichteter Effekt den Leser ueberhaupt
+  erreicht.
+- **Die beiden Pfade scheitern verschieden, am selben Punkt.** E1 sieht die
+  Zelle nicht (Kopfzeile), E3a sieht den Satz und gibt ihn nicht als Zeile
+  zurueck. Fuer k = 3 ist beides gleich toedlich.
+
+Der Befund stuetzt sich auf einen Lauf ohne Zweitleser; er ist ein
+Einzelurteil, keine Haeufigkeitsaussage. Details: `e3_llm_20261108.md`.
