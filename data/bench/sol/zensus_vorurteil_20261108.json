@@ -1,0 +1,1082 @@
+{
+  "generated": "2026-11-08T12:32:50",
+  "documents": [
+    {
+      "stratum": "D",
+      "pmc": "PMC2952772",
+      "doi": "10.1007/s00213-010-1962-0",
+      "year": "2010",
+      "title": "Dose finding of melatonin for chronic idiopathic childhood sleep onset insomnia: an RCT.",
+      "xml": true,
+      "stored_rows": 0,
+      "sol_rows": 0,
+      "sol_poolable": 0,
+      "interventions": [
+        "melatonin",
+        "licht"
+      ],
+      "designs": [
+        "randomisierte Studie",
+        "Placebo-kontrolliert",
+        "doppelblind"
+      ],
+      "suggestion": "Melatonin: SOL erwaehnt, keine poolbare Zeile",
+      "evidence": "Introduction Prevalence of chronic sleep onset insomnia in the nondisabled school-aged population is approximately 10% (Blader et al. 1997 ). A chronically"
+    },
+    {
+      "stratum": "C",
+      "pmc": "PMC6005466",
+      "doi": "10.1371/journal.pmed.1002587",
+      "year": "2018",
+      "title": "Efficacy of melatonin with behavioural sleep-wake scheduling for delayed sleep-wake phase disorder: A double-blind, randomised clinical trial.",
+      "xml": true,
+      "stored_rows": 2,
+      "sol_rows": 0,
+      "sol_poolable": 0,
+      "interventions": [
+        "melatonin",
+        "licht"
+      ],
+      "designs": [
+        "randomisierte Studie",
+        "Placebo-kontrolliert",
+        "doppelblind"
+      ],
+      "suggestion": "Melatonin: SOL erwaehnt, keine poolbare Zeile",
+      "evidence": "omeostatic sleep drive not related to circadian timing and thus still show differences in sleep onset timing relative to those with healthy sleep [ 9 ]. Previous trials examining treatments "
+    },
+    {
+      "stratum": "A",
+      "pmc": "PMC7381312",
+      "doi": "10.3389/fneur.2020.00611",
+      "year": "2020",
+      "title": "Efficacy of Tasimelteon (HETLIOZ®) in the Treatment of Jet Lag Disorder Evaluated in an 8-h Phase Advance Model; a Multicenter, Randomized, Double-Blind, Placebo-Controlled Trial.",
+      "xml": true,
+      "stored_rows": 14,
+      "sol_rows": 1,
+      "sol_poolable": 1,
+      "interventions": [
+        "melatonin-agonist"
+      ],
+      "designs": [
+        "randomisierte Studie",
+        "Placebo-kontrolliert",
+        "doppelblind"
+      ],
+      "suggestion": "Melatonin-Agonist (kein Melatonin)",
+      "evidence": ""
+    },
+    {
+      "stratum": "A",
+      "pmc": "PMC11256039",
+      "doi": "10.1136/bmjsem-2023-001774",
+      "year": "2024",
+      "title": "Evening regular activity breaks extend subsequent free-living sleep time in healthy adults: a randomised crossover trial.",
+      "xml": true,
+      "stored_rows": 18,
+      "sol_rows": 2,
+      "sol_poolable": 2,
+      "interventions": [
+        "bewegung"
+      ],
+      "designs": [
+        "randomisierte Studie",
+        "Crossover"
+      ],
+      "suggestion": "andere Intervention (kein Melatonin)",
+      "evidence": "nt effect on mean sleep efficiency (mean: 0.2%, 95% CI: −2.0 to 2.4, p=0.857), wake after sleep onset (1.0 min, 95% CI: −9.6 to 11.7, p=0.849) and number of awakenings (0.8, 95% CI: −1.8 to "
+    },
+    {
+      "stratum": "C",
+      "pmc": "PMC11414779",
+      "doi": "10.1111/jsr.13971",
+      "year": "2024",
+      "title": "Improving sleep after stroke: A randomised controlled trial of digital cognitive behavioural therapy for insomnia.",
+      "xml": true,
+      "stored_rows": 8,
+      "sol_rows": 0,
+      "sol_poolable": 0,
+      "interventions": [
+        "CBT"
+      ],
+      "designs": [
+        "randomisierte Studie"
+      ],
+      "suggestion": "andere Intervention (kein Melatonin)",
+      "evidence": "fects using the SCI‐8 at the 8‐week follow‐up time‐point, as well as sleep‐onset latency (SOL; from the online sleep diary recorded during the first and last week of the intervention period)"
+    },
+    {
+      "stratum": "D",
+      "pmc": "PMC11537953",
+      "doi": "10.3389/fnins.2024.1427462",
+      "year": "2024",
+      "title": "A randomized study on the effect of a wearable device using 0.75 Hz transcranial electrical stimulation on sleep onset insomnia.",
+      "xml": true,
+      "stored_rows": 0,
+      "sol_rows": 0,
+      "sol_poolable": 0,
+      "interventions": [
+        "CBT"
+      ],
+      "designs": [
+        "randomisierte Studie"
+      ],
+      "suggestion": "andere Intervention (kein Melatonin)",
+      "evidence": "y on the effect of a wearable device using 0.75 Hz transcranial electrical stimulation on sleep onset insomnia Abstract Introduction The normal transition to sleep is characterized by a redu"
+    },
+    {
+      "stratum": "A",
+      "pmc": "PMC11893541",
+      "doi": "10.1093/sleep/zsae250",
+      "year": "2025",
+      "title": "A replicate crossover trial on the interindividual variability of sleep indices in response to acute exercise undertaken by healthy men.",
+      "xml": true,
+      "stored_rows": 12,
+      "sol_rows": 3,
+      "sol_poolable": 3,
+      "interventions": [
+        "bewegung"
+      ],
+      "designs": [
+        "systematische Uebersicht",
+        "randomisierte Studie",
+        "Crossover"
+      ],
+      "suggestion": "andere Intervention (kein Melatonin)",
+      "evidence": "actigraphy (MotionWatch 8) measured home-based sleep (total sleep time, actual wake time, sleep latency, and sleep efficiency) two nights before (nights 1 and 2) and three nights after (nigh"
+    },
+    {
+      "stratum": "C",
+      "pmc": "PMC12412596",
+      "doi": "10.2147/nss.s524348",
+      "year": "2025",
+      "title": "Magnesium Bisglycinate Supplementation in Healthy Adults Reporting Poor Sleep: A Randomized, Placebo-Controlled Trial.",
+      "xml": true,
+      "stored_rows": 12,
+      "sol_rows": 0,
+      "sol_poolable": 0,
+      "interventions": [
+        "CBT",
+        "ernaehrung"
+      ],
+      "designs": [
+        "randomisierte Studie",
+        "Placebo-kontrolliert",
+        "doppelblind"
+      ],
+      "suggestion": "andere Intervention (kein Melatonin)",
+      "evidence": "rch associates greater magnesium consumption with better sleep quality, including shorter sleep onset latency, longer sleep duration, and reduced daytime sleepiness. 19 Clinical trials furth"
+    },
+    {
+      "stratum": "C",
+      "pmc": "PMC12488620",
+      "doi": "10.3389/fpsyt.2025.1633673",
+      "year": "2025",
+      "title": "Five-element music therapy based on emotion classification to improve sleep in patients with cancer-related depression: a multi-group randomized controlled trial.",
+      "xml": true,
+      "stored_rows": 16,
+      "sol_rows": 0,
+      "sol_poolable": 0,
+      "interventions": [
+        "CBT"
+      ],
+      "designs": [
+        "randomisierte Studie"
+      ],
+      "suggestion": "andere Intervention (kein Melatonin)",
+      "evidence": "eep duration and quality to meet normal physiological needs, often manifesting as delayed sleep onset, sleep maintenance difficulty, reduced total sleep time, or early morning awakening ( 6 "
+    },
+    {
+      "stratum": "A",
+      "pmc": "PMC13265460",
+      "doi": "10.3389/fnins.2026.1816963",
+      "year": "2026",
+      "title": "Efficacy of repetitive transcranial magnetic stimulation for insomnia disorder: a systematic review and meta-analysis of randomized controlled trials.",
+      "xml": true,
+      "stored_rows": 17,
+      "sol_rows": 1,
+      "sol_poolable": 1,
+      "interventions": [
+        "rTMS",
+        "CBT",
+        "akupunktur"
+      ],
+      "designs": [
+        "systematische Uebersicht",
+        "randomisierte Studie",
+        "Beobachtung"
+      ],
+      "suggestion": "andere Intervention (kein Melatonin)",
+      "evidence": ""
+    },
+    {
+      "stratum": "A",
+      "pmc": "PMC13357889",
+      "doi": "10.1111/jsr.70311",
+      "year": "2026",
+      "title": "The Effect of 6 Months of Dietary Counselling on Sleep Outcomes Among Patients With Cardiovascular Diseases: A Randomised Controlled Trial.",
+      "xml": true,
+      "stored_rows": 16,
+      "sol_rows": 4,
+      "sol_poolable": 4,
+      "interventions": [
+        "ernaehrung"
+      ],
+      "designs": [
+        "randomisierte Studie"
+      ],
+      "suggestion": "andere Intervention (kein Melatonin)",
+      "evidence": "points on overall PSQI; 95% CI −0.6, 1.0), sleep duration (9.0 min; 95% CI −15.8, 33.8), sleep onset latency (3.8 min; 95% CI −3.5, 11.1), or sleep efficiency (−0.2%; 95% CI −4.0, 3.7). To c"
+    },
+    {
+      "stratum": "C",
+      "pmc": "PMC6482403",
+      "doi": "10.2196/12686",
+      "year": "2019",
+      "title": "Effectiveness of Internet-Delivered Computerized Cognitive Behavioral Therapy for Patients With Insomnia Who Remain Symptomatic Following Pharmacotherapy: Randomized Controlled Exploratory Trial.",
+      "xml": true,
+      "stored_rows": 28,
+      "sol_rows": 0,
+      "sol_poolable": 0,
+      "interventions": [
+        "CBT"
+      ],
+      "designs": [
+        "randomisierte Studie"
+      ],
+      "suggestion": "andere Intervention (kein Melatonin)",
+      "evidence": "Pittsburgh Sleep Quality Index (PSQI) at week 6 of the treatment. Secondary outcomes were sleep onset latency, total sleep time, sleep efficiency, number of awakenings, refreshment and sound"
+    },
+    {
+      "stratum": "C",
+      "pmc": "PMC6763980",
+      "doi": "10.1001/jamanetworkopen.2019.11944",
+      "year": "2019",
+      "title": "Effect of Light Flashes vs Sham Therapy During Sleep With Adjunct Cognitive Behavioral Therapy on Sleep Quality Among Adolescents: A Randomized Clinical Trial.",
+      "xml": true,
+      "stored_rows": 11,
+      "sol_rows": 0,
+      "sol_poolable": 0,
+      "interventions": [
+        "licht",
+        "CBT"
+      ],
+      "designs": [
+        "randomisierte Studie",
+        "Placebo-kontrolliert",
+        "doppelblind"
+      ],
+      "suggestion": "andere Intervention (kein Melatonin)",
+      "evidence": "er, compared with sham therapy plus CBT alone, light therapy plus CBT significantly moved sleep onset a mean (SD) of 50.1 (27.5) minutes earlier and increased nightly total sleep time by a m"
+    },
+    {
+      "stratum": "A",
+      "pmc": "PMC7953207",
+      "doi": "10.1093/sleep/zsaa194",
+      "year": "2021",
+      "title": "The evening light environment in hospitals can be designed to produce less disruptive effects on the circadian system and improve sleep.",
+      "xml": true,
+      "stored_rows": 9,
+      "sol_rows": 2,
+      "sol_poolable": 2,
+      "interventions": [
+        "licht"
+      ],
+      "designs": [
+        "randomisierte Studie",
+        "Crossover"
+      ],
+      "suggestion": "andere Intervention (kein Melatonin)",
+      "evidence": "f light, such as delaying the circadian phase, suppressing melatonin production, delaying sleep onset, changing sleep architecture, and increasing alertness [ 4–6 ]. Furthermore, circadian d"
+    },
+    {
+      "stratum": "A",
+      "pmc": "PMC9570822",
+      "doi": "10.3390/jcm11195845",
+      "year": "2022",
+      "title": "Cognitive Behavioral Therapy for Chronic Insomnia in Outpatients with Major Depression-A Randomised Controlled Trial.",
+      "xml": true,
+      "stored_rows": 46,
+      "sol_rows": 4,
+      "sol_poolable": 4,
+      "interventions": [
+        "CBT"
+      ],
+      "designs": [
+        "randomisierte Studie"
+      ],
+      "suggestion": "andere Intervention (kein Melatonin)",
+      "evidence": "m to have problems with disrupted sleep continuity, reduced sleep depth and shortened REM sleep latency and increased REM sleep [ 1 ]. The majority of patients with major depressive disorder"
+    },
+    {
+      "stratum": "C",
+      "pmc": "PMC11850413",
+      "doi": "10.1007/s41999-024-01100-z",
+      "year": "2025",
+      "title": "Effects of a daylight intervention in the morning on circadian rhythms and sleep in geriatric patients: a randomized crossover trial.",
+      "xml": true,
+      "stored_rows": 4,
+      "sol_rows": 0,
+      "sol_poolable": 0,
+      "interventions": [
+        "licht"
+      ],
+      "designs": [
+        "randomisierte Studie",
+        "Crossover"
+      ],
+      "suggestion": "kein SOL im Text",
+      "evidence": ""
+    },
+    {
+      "stratum": "C",
+      "pmc": "PMC12198936",
+      "doi": "10.1111/jcpp.14115",
+      "year": "2025",
+      "title": "Advancing adolescent bedtime by motivational interviewing and text message: a randomized controlled trial.",
+      "xml": true,
+      "stored_rows": 15,
+      "sol_rows": 0,
+      "sol_poolable": 0,
+      "interventions": [],
+      "designs": [
+        "randomisierte Studie"
+      ],
+      "suggestion": "kein SOL im Text",
+      "evidence": ""
+    },
+    {
+      "stratum": "C",
+      "pmc": "PMC12276649",
+      "doi": "10.1186/s12906-025-05009-3",
+      "year": "2025",
+      "title": "Acupuncture versus sham acupuncture in the treatment of insomnia for patients with Parkinson's disease: a randomized controlled clinical trial.",
+      "xml": true,
+      "stored_rows": 24,
+      "sol_rows": 0,
+      "sol_poolable": 0,
+      "interventions": [
+        "akupunktur"
+      ],
+      "designs": [
+        "randomisierte Studie"
+      ],
+      "suggestion": "kein SOL im Text",
+      "evidence": ""
+    },
+    {
+      "stratum": "C",
+      "pmc": "PMC12642372",
+      "doi": "10.1186/s12888-025-07568-8",
+      "year": "2025",
+      "title": "Effects of kefir on symptoms, sleep, and gut microbiota in children with ADHD: a randomised controlled trial.",
+      "xml": true,
+      "stored_rows": 4,
+      "sol_rows": 0,
+      "sol_poolable": 0,
+      "interventions": [
+        "ernaehrung"
+      ],
+      "designs": [
+        "randomisierte Studie",
+        "Placebo-kontrolliert",
+        "doppelblind"
+      ],
+      "suggestion": "kein SOL im Text",
+      "evidence": ""
+    },
+    {
+      "stratum": "C",
+      "pmc": "PMC12787598",
+      "doi": "10.3390/nu18010014",
+      "year": "2025",
+      "title": "Heat-Treated &lt;i&gt;Limosilactobacillus fermentum&lt;/i&gt; PS150 Improves Sleep Quality with Severity-Dependent Benefits: A Randomized, Placebo-Controlled Trial.",
+      "xml": true,
+      "stored_rows": 17,
+      "sol_rows": 0,
+      "sol_poolable": 0,
+      "interventions": [
+        "koffein"
+      ],
+      "designs": [
+        "randomisierte Studie",
+        "Placebo-kontrolliert",
+        "doppelblind",
+        "Beobachtung"
+      ],
+      "suggestion": "kein SOL im Text",
+      "evidence": ""
+    },
+    {
+      "stratum": "C",
+      "pmc": "PMC13269014",
+      "doi": "10.1002/alz.71591",
+      "year": "2026",
+      "title": "The impact of cognitive behavioral therapy for insomnia on cognitive performance and amyloid beta in older adults: A randomized controlled trial.",
+      "xml": true,
+      "stored_rows": 1,
+      "sol_rows": 0,
+      "sol_poolable": 0,
+      "interventions": [
+        "CBT"
+      ],
+      "designs": [
+        "randomisierte Studie"
+      ],
+      "suggestion": "kein SOL im Text",
+      "evidence": ""
+    },
+    {
+      "stratum": "C",
+      "pmc": "PMC13583673",
+      "doi": "10.3389/fpsyt.2026.1882984",
+      "year": "2026",
+      "title": "Effect of traditional Chinese medicine on sleep and blood pressure in patients with comorbid hypertension-insomnia: a systematic review and meta-analysis.",
+      "xml": true,
+      "stored_rows": 12,
+      "sol_rows": 0,
+      "sol_poolable": 0,
+      "interventions": [
+        "akupunktur"
+      ],
+      "designs": [
+        "systematische Uebersicht",
+        "randomisierte Studie"
+      ],
+      "suggestion": "kein SOL im Text",
+      "evidence": ""
+    },
+    {
+      "stratum": "C",
+      "pmc": "PMC2901361",
+      "doi": "10.1186/1472-6882-10-29",
+      "year": "2010",
+      "title": "A dietary supplement to improve the quality of sleep: a randomized placebo controlled trial.",
+      "xml": true,
+      "stored_rows": 4,
+      "sol_rows": 0,
+      "sol_poolable": 0,
+      "interventions": [
+        "ernaehrung"
+      ],
+      "designs": [
+        "randomisierte Studie",
+        "Placebo-kontrolliert"
+      ],
+      "suggestion": "kein SOL im Text",
+      "evidence": ""
+    },
+    {
+      "stratum": "C",
+      "pmc": "PMC4539464",
+      "doi": "10.1155/2015/710895",
+      "year": "2015",
+      "title": "Clinical Efficacy of Traditional Chinese Medicine, Suan Zao Ren Tang, for Sleep Disturbance during Methadone Maintenance: A Randomized, Double-Blind, Placebo-Controlled Trial.",
+      "xml": true,
+      "stored_rows": 8,
+      "sol_rows": 0,
+      "sol_poolable": 0,
+      "interventions": [],
+      "designs": [
+        "randomisierte Studie",
+        "Placebo-kontrolliert",
+        "doppelblind"
+      ],
+      "suggestion": "kein SOL im Text",
+      "evidence": ""
+    },
+    {
+      "stratum": "C",
+      "pmc": "PMC6276665",
+      "doi": "10.1093/hropen/hox027",
+      "year": "2017",
+      "title": "The impact of melatonin on the sleep patterns of women undergoing IVF: a double blind RCT.",
+      "xml": true,
+      "stored_rows": 6,
+      "sol_rows": 0,
+      "sol_poolable": 0,
+      "interventions": [
+        "melatonin"
+      ],
+      "designs": [
+        "systematische Uebersicht",
+        "randomisierte Studie",
+        "Placebo-kontrolliert",
+        "doppelblind"
+      ],
+      "suggestion": "kein SOL im Text",
+      "evidence": ""
+    },
+    {
+      "stratum": "C",
+      "pmc": "PMC6835535",
+      "doi": "10.3390/nu11102374",
+      "year": "2019",
+      "title": "Association between Macronutrient Intake and Excessive Daytime Sleepiness: An Iso-Caloric Substitution Analysis from the North West Adelaide Health Study.",
+      "xml": true,
+      "stored_rows": 126,
+      "sol_rows": 0,
+      "sol_poolable": 0,
+      "interventions": [
+        "ernaehrung"
+      ],
+      "designs": [
+        "randomisierte Studie"
+      ],
+      "suggestion": "kein SOL im Text",
+      "evidence": ""
+    },
+    {
+      "stratum": "C",
+      "pmc": "PMC7462016",
+      "doi": "10.3389/fpsyg.2020.02172",
+      "year": "2020",
+      "title": "Blue-Enriched White Light Improves Performance but Not Subjective Alertness and Circadian Adaptation During Three Consecutive Simulated Night Shifts.",
+      "xml": true,
+      "stored_rows": 1,
+      "sol_rows": 0,
+      "sol_poolable": 0,
+      "interventions": [
+        "licht"
+      ],
+      "designs": [
+        "Crossover"
+      ],
+      "suggestion": "kein SOL im Text",
+      "evidence": ""
+    },
+    {
+      "stratum": "C",
+      "pmc": "PMC8215288",
+      "doi": "10.3389/fpsyt.2021.664499",
+      "year": "2021",
+      "title": "Effects of Exercise on Sleep Quality and Insomnia in Adults: A Systematic Review and Meta-Analysis of Randomized Controlled Trials.",
+      "xml": true,
+      "stored_rows": 8,
+      "sol_rows": 0,
+      "sol_poolable": 0,
+      "interventions": [
+        "bewegung"
+      ],
+      "designs": [
+        "systematische Uebersicht",
+        "randomisierte Studie"
+      ],
+      "suggestion": "kein SOL im Text",
+      "evidence": ""
+    },
+    {
+      "stratum": "C",
+      "pmc": "PMC8567000",
+      "doi": "10.1016/j.sleepx.2021.100040",
+      "year": "2021",
+      "title": "No improvement of sleep from vitamin D supplementation: insights from a randomized controlled trial.",
+      "xml": true,
+      "stored_rows": 27,
+      "sol_rows": 0,
+      "sol_poolable": 0,
+      "interventions": [],
+      "designs": [
+        "randomisierte Studie",
+        "Beobachtung"
+      ],
+      "suggestion": "kein SOL im Text",
+      "evidence": ""
+    },
+    {
+      "stratum": "C",
+      "pmc": "PMC8797219",
+      "doi": "10.1371/journal.pone.0262799",
+      "year": "2022",
+      "title": "A randomized controlled trial on the effects of blue-blocking glasses compared to partial blue-blockers on sleep outcomes in the third trimester of pregnancy.",
+      "xml": true,
+      "stored_rows": 3,
+      "sol_rows": 0,
+      "sol_poolable": 0,
+      "interventions": [],
+      "designs": [
+        "randomisierte Studie",
+        "doppelblind"
+      ],
+      "suggestion": "kein SOL im Text",
+      "evidence": ""
+    },
+    {
+      "stratum": "C",
+      "pmc": "PMC10255271",
+      "doi": "10.3390/nu15112467",
+      "year": "2023",
+      "title": "Hypomagnesemia Is Associated with Excessive Daytime Sleepiness, but Not Insomnia, in Older Adults.",
+      "xml": true,
+      "stored_rows": 19,
+      "sol_rows": 0,
+      "sol_poolable": 0,
+      "interventions": [],
+      "designs": [],
+      "suggestion": "kein RCT",
+      "evidence": ""
+    },
+    {
+      "stratum": "C",
+      "pmc": "PMC10621812",
+      "doi": "10.1371/journal.pone.0293580",
+      "year": "2023",
+      "title": "Associations between sleep habits, quality, chronotype and depression in a large cross-sectional sample of Swedish adolescents.",
+      "xml": true,
+      "stored_rows": 16,
+      "sol_rows": 0,
+      "sol_poolable": 0,
+      "interventions": [],
+      "designs": [
+        "Beobachtung"
+      ],
+      "suggestion": "kein RCT",
+      "evidence": ""
+    },
+    {
+      "stratum": "C",
+      "pmc": "PMC10629458",
+      "doi": "10.2147/copd.s430609",
+      "year": "2023",
+      "title": "Association Between Hypnotic Use and All-Cause Mortality in Patients with Chronic Obstructive Pulmonary Disease and Insomnia.",
+      "xml": true,
+      "stored_rows": 2,
+      "sol_rows": 0,
+      "sol_poolable": 0,
+      "interventions": [],
+      "designs": [
+        "Beobachtung"
+      ],
+      "suggestion": "kein RCT",
+      "evidence": "PD treatment (ie β-agonists and corticosteroids). Sleep characteristics include prolonged sleep onset latency, frequent arousals, and lower sleep efficiency. 6 According to epidemiologic stu"
+    },
+    {
+      "stratum": "B",
+      "pmc": "PMC11302522",
+      "doi": "10.2147/nss.s460882",
+      "year": "2024",
+      "title": "Washed Microbiota Transplantation Improves the Sleep Quality in Patients with Inflammatory Bowel Disease.",
+      "xml": true,
+      "stored_rows": 5,
+      "sol_rows": 1,
+      "sol_poolable": 0,
+      "interventions": [],
+      "designs": [],
+      "suggestion": "kein RCT",
+      "evidence": ""
+    },
+    {
+      "stratum": "C",
+      "pmc": "PMC11557329",
+      "doi": "10.3389/fneur.2024.1420363",
+      "year": "2024",
+      "title": "Efficacy of non-invasive brain stimulation for post-stroke sleep disorders: a systematic review and meta-analysis.",
+      "xml": true,
+      "stored_rows": 25,
+      "sol_rows": 0,
+      "sol_poolable": 0,
+      "interventions": [
+        "rTMS",
+        "CBT",
+        "akupunktur"
+      ],
+      "designs": [
+        "systematische Uebersicht"
+      ],
+      "suggestion": "kein RCT",
+      "evidence": "RLS) ( 5 ). PSSD is primarily characterized by a reduction in total sleep time, prolonged sleep onset latency, increased frequency of awakenings, extended duration of light sleep, and a decr"
+    },
+    {
+      "stratum": "D",
+      "pmc": "PMC11848184",
+      "doi": "10.1002/alz.14495",
+      "year": "2025",
+      "title": "Association of rapid eye movement sleep latency with multimodal biomarkers of Alzheimer's disease.",
+      "xml": true,
+      "stored_rows": 0,
+      "sol_rows": 0,
+      "sol_poolable": 0,
+      "interventions": [],
+      "designs": [],
+      "suggestion": "kein RCT",
+      "evidence": ""
+    },
+    {
+      "stratum": "C",
+      "pmc": "PMC11976827",
+      "doi": "10.1007/s40520-025-03020-9",
+      "year": "2025",
+      "title": "Association between sleep characteristics and physical functioning in middle-aged and elderly adults: findings from Chinese cohorts.",
+      "xml": true,
+      "stored_rows": 194,
+      "sol_rows": 0,
+      "sol_poolable": 0,
+      "interventions": [
+        "bewegung"
+      ],
+      "designs": [
+        "Beobachtung"
+      ],
+      "suggestion": "kein RCT",
+      "evidence": "iduals, Inadequate or disrupted sleep patterns, such as shorter sleep duration, prolonged sleep onset latency, and fragmented sleep, are commonly observed and are associated with several age"
+    },
+    {
+      "stratum": "C",
+      "pmc": "PMC12013145",
+      "doi": "10.1080/07853890.2025.2491663",
+      "year": "2025",
+      "title": "Association between fish consumption and sleep disorders among Chinese adults: a cross-sectional study.",
+      "xml": true,
+      "stored_rows": 104,
+      "sol_rows": 0,
+      "sol_poolable": 0,
+      "interventions": [
+        "ernaehrung"
+      ],
+      "designs": [
+        "Beobachtung"
+      ],
+      "suggestion": "kein RCT",
+      "evidence": "Furthermore, a randomized controlled trial has shown that consuming oily fish can reduce sleep latency and daytime dysfunction in children [ 32 ]. Despite these findings, limited research ha"
+    },
+    {
+      "stratum": "D",
+      "pmc": "PMC12392164",
+      "doi": "10.3389/fpsyt.2025.1566390",
+      "year": "2025",
+      "title": "The optimal system of care for the management of delayed sleep onset in adult ADHD in the UK: a modified Delphi consensus.",
+      "xml": true,
+      "stored_rows": 0,
+      "sol_rows": 0,
+      "sol_poolable": 0,
+      "interventions": [],
+      "designs": [
+        "Beobachtung"
+      ],
+      "suggestion": "kein RCT",
+      "evidence": ""
+    },
+    {
+      "stratum": "C",
+      "pmc": "PMC13013474",
+      "doi": "10.3389/fpubh.2026.1685297",
+      "year": "2026",
+      "title": "Knowledge, attitude and practice regarding insomnia prevention and treatment among medical students in Inner Mongolia.",
+      "xml": true,
+      "stored_rows": 21,
+      "sol_rows": 0,
+      "sol_poolable": 0,
+      "interventions": [],
+      "designs": [
+        "Beobachtung"
+      ],
+      "suggestion": "kein RCT",
+      "evidence": ""
+    },
+    {
+      "stratum": "C",
+      "pmc": "PMC13033741",
+      "doi": "10.3389/fpsyt.2025.1726809",
+      "year": "2025",
+      "title": "Improved executive function and sleep quality in preteens with high-functioning autism following a structured physical activity program.",
+      "xml": true,
+      "stored_rows": 1,
+      "sol_rows": 0,
+      "sol_poolable": 0,
+      "interventions": [
+        "bewegung"
+      ],
+      "designs": [],
+      "suggestion": "kein RCT",
+      "evidence": ""
+    },
+    {
+      "stratum": "C",
+      "pmc": "PMC13101811",
+      "doi": "10.2147/nss.s573867",
+      "year": "2026",
+      "title": "Factors Affecting Sleep Quality in Pregnant Women During the Second Trimester and Its Association with Birth Outcomes.",
+      "xml": true,
+      "stored_rows": 26,
+      "sol_rows": 0,
+      "sol_poolable": 0,
+      "interventions": [
+        "ernaehrung",
+        "bewegung"
+      ],
+      "designs": [
+        "Beobachtung"
+      ],
+      "suggestion": "kein RCT",
+      "evidence": ""
+    },
+    {
+      "stratum": "C",
+      "pmc": "PMC13155930",
+      "doi": "10.1055/s-0044-1800807",
+      "year": "2024",
+      "title": "Association of Evening Eating with Sleep Quality and Insomnia among Adults in a Brazilian National Survey.",
+      "xml": true,
+      "stored_rows": 72,
+      "sol_rows": 0,
+      "sol_poolable": 0,
+      "interventions": [
+        "ernaehrung",
+        "koffein"
+      ],
+      "designs": [
+        "Beobachtung"
+      ],
+      "suggestion": "kein RCT",
+      "evidence": "n models were fitted to assess differences in the ORs(95%CI) of sleep duration < 7 hours, sleep latency > 30 minutes, poor sleep quality, and insomnia (outcomes) with the evening diet-relate"
+    },
+    {
+      "stratum": "A",
+      "pmc": "PMC13448793",
+      "doi": "10.1001/jamanetworkopen.2026.26983",
+      "year": "2026",
+      "title": "Melatonin Use and Polysomnographic Sleep Architecture in Children.",
+      "xml": true,
+      "stored_rows": 15,
+      "sol_rows": 1,
+      "sol_poolable": 1,
+      "interventions": [
+        "melatonin"
+      ],
+      "designs": [
+        "Beobachtung"
+      ],
+      "suggestion": "kein RCT",
+      "evidence": "outcomes were also assessed: total sleep time (minutes); sleep efficiency (percentages); sleep onset latency (minutes); REM latency (minutes); wake after sleep onset (WASO; minutes); stages "
+    },
+    {
+      "stratum": "C",
+      "pmc": "PMC13512466",
+      "doi": "10.3390/healthcare14162476",
+      "year": "2026",
+      "title": "Association of Domain-Specific Physical Activity with Sleep Disorders in U.S. Adults: A Cross-Sectional Study Based on NHANES.",
+      "xml": true,
+      "stored_rows": 12,
+      "sol_rows": 0,
+      "sol_poolable": 0,
+      "interventions": [
+        "ernaehrung",
+        "bewegung"
+      ],
+      "designs": [
+        "Beobachtung"
+      ],
+      "suggestion": "kein RCT",
+      "evidence": ""
+    },
+    {
+      "stratum": "D",
+      "pmc": "PMC3111733",
+      "doi": "10.1007/s00213-011-2202-y",
+      "year": "2011",
+      "title": "Evaluation of sleep, puberty and mental health in children with long-term melatonin treatment for chronic idiopathic childhood sleep onset insomnia.",
+      "xml": true,
+      "stored_rows": 0,
+      "sol_rows": 0,
+      "sol_poolable": 0,
+      "interventions": [
+        "melatonin"
+      ],
+      "designs": [],
+      "suggestion": "kein RCT",
+      "evidence": "Introduction The prevalence of chronic sleep onset insomnia (CSOI) is approximately 10% among the non-disabled school-aged population (Blader et al. 1997 ). CSO"
+    },
+    {
+      "stratum": "D",
+      "pmc": "PMC4274876",
+      "doi": "10.3389/fnhum.2014.01019",
+      "year": "2014",
+      "title": "Differential effects of theta/beta and SMR neurofeedback in ADHD on sleep onset latency.",
+      "xml": true,
+      "stored_rows": 0,
+      "sol_rows": 0,
+      "sol_poolable": 0,
+      "interventions": [],
+      "designs": [],
+      "suggestion": "kein RCT",
+      "evidence": "ntrol group ( N = 28) and investigated if differences existed in sleep parameters such as Sleep Onset Latency (SOL), Sleep Duration (DUR) and overall reported sleep problems (PSQI) and if th"
+    },
+    {
+      "stratum": "A",
+      "pmc": "PMC4517991",
+      "doi": "10.2188/jea.je20140201",
+      "year": "2015",
+      "title": "Comparisons of Objective Sleep Quality Between Elderly Individuals With and Without Cataract Surgery: A Cross-Sectional Study of the HEIJO-KYO Cohort.",
+      "xml": true,
+      "stored_rows": 12,
+      "sol_rows": 4,
+      "sol_poolable": 4,
+      "interventions": [
+        "licht",
+        "bewegung"
+      ],
+      "designs": [
+        "Beobachtung"
+      ],
+      "suggestion": "kein RCT",
+      "evidence": "e CS group ( n = 174) showed significantly higher sleep efficiency and shorter wake after sleep onset than the no CS group ( n = 863), even after adjustment for age, gender, body mass index,"
+    },
+    {
+      "stratum": "D",
+      "pmc": "PMC6243118",
+      "doi": "10.3389/fnins.2018.00809",
+      "year": "2018",
+      "title": "Complexity of Wake Electroencephalography Correlates With Slow Wave Activity After Sleep Onset.",
+      "xml": true,
+      "stored_rows": 0,
+      "sol_rows": 0,
+      "sol_poolable": 0,
+      "interventions": [],
+      "designs": [],
+      "suggestion": "kein RCT",
+      "evidence": "iation between wake complexity and quantified SWA in the beginning of sleep (90 min after sleep onset). Complexity metric could thus be considered as a potential indicator for sleep interven"
+    },
+    {
+      "stratum": "C",
+      "pmc": "PMC6593378",
+      "doi": "10.1002/fsn3.1050",
+      "year": "2019",
+      "title": "Diet quality, consumption of seafood and eggs are associated with sleep quality among Chinese urban adults: A cross-sectional study in eight cities of China.",
+      "xml": true,
+      "stored_rows": 34,
+      "sol_rows": 0,
+      "sol_poolable": 0,
+      "interventions": [
+        "ernaehrung"
+      ],
+      "designs": [],
+      "suggestion": "kein RCT",
+      "evidence": ""
+    },
+    {
+      "stratum": "C",
+      "pmc": "PMC7111581",
+      "doi": "10.1002/mdc3.12899",
+      "year": "2020",
+      "title": "Practical Evaluation and Management of Insomnia in Parkinson's Disease: A Review.",
+      "xml": true,
+      "stored_rows": 2,
+      "sol_rows": 0,
+      "sol_poolable": 0,
+      "interventions": [],
+      "designs": [],
+      "suggestion": "kein RCT",
+      "evidence": "attern over time. Individuals are asked to record their bed/rise times, total sleep time, sleep onset latency, number of awakenings, and sleep quality every morning. 8 Other sleep behaviors "
+    },
+    {
+      "stratum": "C",
+      "pmc": "PMC7181488",
+      "doi": "10.1186/s12610-020-00103-7",
+      "year": "2020",
+      "title": "Associations of bedtime, sleep duration, and sleep quality with semen quality in males seeking fertility treatment: a preliminary study.",
+      "xml": true,
+      "stored_rows": 14,
+      "sol_rows": 0,
+      "sol_poolable": 0,
+      "interventions": [],
+      "designs": [],
+      "suggestion": "kein RCT",
+      "evidence": ""
+    },
+    {
+      "stratum": "C",
+      "pmc": "PMC8364763",
+      "doi": "10.1002/1348-9585.12262",
+      "year": "2021",
+      "title": "Meta-analysis of differences in sleep quality based on actigraphs between day and night shift workers and the moderating effect of age.",
+      "xml": true,
+      "stored_rows": 4,
+      "sol_rows": 0,
+      "sol_poolable": 0,
+      "interventions": [],
+      "designs": [],
+      "suggestion": "kein RCT",
+      "evidence": "7, 95% CI: −0.03‐0.57), whereas night shift workers presented longer sleep‐onset latency (SOL) (SMD = 0.62, 95% CI: 0.15‐1.08), greater wake after sleep onset (WASO) (SMD = 0.41, 95% CI: 0.1"
+    },
+    {
+      "stratum": "C",
+      "pmc": "PMC11884929",
+      "doi": "10.1111/nhs.70075",
+      "year": "2025",
+      "title": "Effectiveness of Acupressure on Sleep Quality Among Inpatients: A Systematic Review and Meta-Analysis.",
+      "xml": true,
+      "stored_rows": 15,
+      "sol_rows": 0,
+      "sol_poolable": 0,
+      "interventions": [],
+      "designs": [
+        "systematische Uebersicht",
+        "randomisierte Studie"
+      ],
+      "suggestion": "ungeprueft",
+      "evidence": "me (SMD = 1.12, 95% CI [0.40, 1.83]), sleep efficiency (SMD = 0.90, 95% CI [0.29, 1.52]), sleep onset latency (SMD = −0.73, 95% CI [−1.14, −0.33]), and wake after sleep onset (SMD = −1.32, 9"
+    },
+    {
+      "stratum": "C",
+      "pmc": "PMC12511177",
+      "doi": "10.1007/s00210-025-04072-4",
+      "year": "2025",
+      "title": "Efficacy and safety of lemborexant vs placebo in treating adults with insomnia disorder: a systematic review and meta-analysis of 1976 patients.",
+      "xml": true,
+      "stored_rows": 12,
+      "sol_rows": 0,
+      "sol_poolable": 0,
+      "interventions": [],
+      "designs": [
+        "systematische Uebersicht",
+        "randomisierte Studie"
+      ],
+      "suggestion": "ungeprueft",
+      "evidence": "a total of 1976 patients were included. Lemborexant was superior to placebo in decreasing sleep onset latency and wake after sleep onset: (MD = − 9.23 min, P = 0.02 and MD = − 19.9 min, P < "
+    },
+    {
+      "stratum": "C",
+      "pmc": "PMC13199057",
+      "doi": "10.1093/gerona/glag105",
+      "year": "2026",
+      "title": "Effects of inhaled aromatherapy on sleep quality and cognitive function in older adults: a randomised controlled trial.",
+      "xml": true,
+      "stored_rows": 3,
+      "sol_rows": 0,
+      "sol_poolable": 0,
+      "interventions": [],
+      "designs": [
+        "randomisierte Studie"
+      ],
+      "suggestion": "ungeprueft",
+      "evidence": "sleep duration ( d = 1.34), and deep sleep (N3) duration ( d = 1.47), along with reduced sleep latency ( d = –1.12) (all p < .001). Daytime sleepiness decreased, and subjective sleep quality"
+    },
+    {
+      "stratum": "C",
+      "pmc": "PMC3489506",
+      "doi": "10.1136/bmj.e6664",
+      "year": "2012",
+      "title": "Melatonin for sleep problems in children with neurodevelopmental disorders: randomised double masked placebo controlled trial.",
+      "xml": true,
+      "stored_rows": 16,
+      "sol_rows": 0,
+      "sol_poolable": 0,
+      "interventions": [],
+      "designs": [
+        "randomisierte Studie",
+        "Placebo-kontrolliert"
+      ],
+      "suggestion": "ungeprueft",
+      "evidence": "diaries (n=110) and 13.3 (−15.5 to 42.2) measured by actigraphy (n=59). Melatonin reduced sleep onset latency measured by sleep diaries (−37.5 minutes, −55.3 to −19.7 minutes) and actigraphy"
+    }
+  ],
+  "counts": {
+    "andere Intervention (kein Melatonin)": 12,
+    "kein RCT": 23,
+    "Melatonin-Agonist (kein Melatonin)": 1,
+    "kein SOL im Text": 15,
+    "ungeprueft": 4,
+    "Melatonin: SOL erwaehnt, keine poolbare Zeile": 2
+  },
+  "with_xml": 57
+}
