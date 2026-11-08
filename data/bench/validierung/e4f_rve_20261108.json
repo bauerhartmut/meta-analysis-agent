@@ -1,0 +1,438 @@
+{
+  "test": "E4f-rve",
+  "stand": "2026-11-08T23:22:37",
+  "modellaufrufe": 0,
+  "tokens": 0,
+  "gruppen_gesamt": 10,
+  "zielgruppen": 8,
+  "rve_source_verfuegbar": 7,
+  "rve_breiter_als_hkj": 2,
+  "median_faktor": 0.86,
+  "rve_nicht_verfuegbar": [
+    {
+      "gruppe": "depressive symptoms [fisher_z]",
+      "grund": "nur 1 unabhaengiger Cluster - RVE braucht mindestens 2"
+    },
+    {
+      "gruppe": "frailty index [raw:beta]",
+      "grund": "nur 1 unabhaengiger Cluster - RVE braucht mindestens 2"
+    },
+    {
+      "gruppe": "preeclampsia [log_ratio]",
+      "grund": "nur 1 unabhaengiger Cluster - RVE braucht mindestens 2"
+    }
+  ],
+  "gruppen": [
+    {
+      "datei": "data/research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+      "gruppe": "depressive symptoms [log_ratio]",
+      "k_hkj": 6,
+      "k_zeilen": 11,
+      "hkj": {
+        "pooled": 0.03258083611964441,
+        "ci": [
+          -0.34165648037959157,
+          0.4068181526188804
+        ],
+        "breite": 0.748474632998472,
+        "tau2": 0.015263500150809272
+      },
+      "rve_study": {
+        "available": true,
+        "pooled": 0.08010626183269239,
+        "se": 0.013321124782702034,
+        "ci_low": 0.045863220436033796,
+        "ci_high": 0.11434930322935097,
+        "M": 6,
+        "df": 5,
+        "clusters": 6,
+        "note": "cluster-robustes Intervall (RVE CR0, t auf M-1 df): haengige Effektschaetzungen zählen ihren Cluster nur einmal; Punkt-Schätzung inverse-variance fixiert.",
+        "breite": 0.06848608279331717,
+        "faktor": 0.09
+      },
+      "rve_source": {
+        "available": true,
+        "pooled": 0.08010626183269239,
+        "se": 0.013321124782702034,
+        "ci_low": 0.045863220436033796,
+        "ci_high": 0.11434930322935097,
+        "M": 6,
+        "df": 5,
+        "clusters": 6,
+        "note": "cluster-robustes Intervall (RVE CR0, t auf M-1 df): haengige Effektschaetzungen zählen ihren Cluster nur einmal; Punkt-Schätzung inverse-variance fixiert.",
+        "breite": 0.06848608279331717,
+        "faktor": 0.09
+      }
+    },
+    {
+      "datei": "data/research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+      "gruppe": "depressive symptoms [hedges_g]",
+      "k_hkj": 3,
+      "k_zeilen": 4,
+      "hkj": {
+        "pooled": -0.5858165227193031,
+        "ci": [
+          -1.3190344469408934,
+          0.1474014015022873
+        ],
+        "breite": 1.4664358484431808,
+        "tau2": 0.08916820551443605
+      },
+      "rve_study": {
+        "available": true,
+        "pooled": -0.488907600479764,
+        "se": 0.18010991515578137,
+        "ci_low": -1.2638580185701271,
+        "ci_high": 0.28604281761059924,
+        "M": 3,
+        "df": 2,
+        "clusters": 3,
+        "note": "cluster-robustes Intervall (RVE CR0, t auf M-1 df): haengige Effektschaetzungen zählen ihren Cluster nur einmal; Punkt-Schätzung inverse-variance fixiert.",
+        "breite": 1.5499008361807265,
+        "faktor": 1.06
+      },
+      "rve_source": {
+        "available": true,
+        "pooled": -0.488907600479764,
+        "se": 0.18010991515578137,
+        "ci_low": -1.2638580185701271,
+        "ci_high": 0.28604281761059924,
+        "M": 3,
+        "df": 2,
+        "clusters": 3,
+        "note": "cluster-robustes Intervall (RVE CR0, t auf M-1 df): haengige Effektschaetzungen zählen ihren Cluster nur einmal; Punkt-Schätzung inverse-variance fixiert.",
+        "breite": 1.5499008361807265,
+        "faktor": 1.06
+      }
+    },
+    {
+      "datei": "data/research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+      "gruppe": "depressive symptoms [fisher_z]",
+      "k_hkj": 2,
+      "k_zeilen": 2,
+      "hkj": {
+        "pooled": -0.18006544697823212,
+        "ci": [
+          -0.5475925592784616,
+          0.18746166532199732
+        ],
+        "breite": 0.735054224600459,
+        "tau2": 0.0015259068671551355
+      },
+      "rve_study": {
+        "available": false,
+        "reason": "nur 1 unabhaengiger Cluster - RVE braucht mindestens 2",
+        "pooled": -0.18006544697823215,
+        "se": null,
+        "ci_low": null,
+        "ci_high": null,
+        "M": 1,
+        "df": null,
+        "clusters": 1,
+        "breite": null,
+        "faktor": null
+      },
+      "rve_source": {
+        "available": false,
+        "reason": "nur 1 unabhaengiger Cluster - RVE braucht mindestens 2",
+        "pooled": -0.18006544697823215,
+        "se": null,
+        "ci_low": null,
+        "ci_high": null,
+        "M": 1,
+        "df": null,
+        "clusters": 1,
+        "breite": null,
+        "faktor": null
+      }
+    },
+    {
+      "datei": "data/research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+      "gruppe": "depressive symptoms [raw:beta]",
+      "k_hkj": 4,
+      "k_zeilen": 4,
+      "hkj": {
+        "pooled": -0.03253429831168264,
+        "ci": [
+          -0.30063030484562286,
+          0.23556170822225758
+        ],
+        "breite": 0.5361920130678804,
+        "tau2": 0.015726000858976987
+      },
+      "rve_study": {
+        "available": true,
+        "pooled": -0.05345689686797206,
+        "se": 0.053280093346053256,
+        "ci_low": -0.2827026359418333,
+        "ci_high": 0.17578884220588922,
+        "M": 3,
+        "df": 2,
+        "clusters": 3,
+        "note": "cluster-robustes Intervall (RVE CR0, t auf M-1 df): haengige Effektschaetzungen zählen ihren Cluster nur einmal; Punkt-Schätzung inverse-variance fixiert.",
+        "breite": 0.4584914781477225,
+        "faktor": 0.86
+      },
+      "rve_source": {
+        "available": true,
+        "pooled": -0.05345689686797206,
+        "se": 0.053280093346053256,
+        "ci_low": -0.2827026359418333,
+        "ci_high": 0.17578884220588922,
+        "M": 3,
+        "df": 2,
+        "clusters": 3,
+        "note": "cluster-robustes Intervall (RVE CR0, t auf M-1 df): haengige Effektschaetzungen zählen ihren Cluster nur einmal; Punkt-Schätzung inverse-variance fixiert.",
+        "breite": 0.4584914781477225,
+        "faktor": 0.86
+      }
+    },
+    {
+      "datei": "data/research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+      "gruppe": "health status [log_ratio]",
+      "k_hkj": 5,
+      "k_zeilen": 10,
+      "hkj": {
+        "pooled": -0.1302070415466751,
+        "ci": [
+          -0.659526940572942,
+          0.3991128574795919
+        ],
+        "breite": 1.058639798052534,
+        "tau2": 0.028990076763629493
+      },
+      "rve_study": {
+        "available": true,
+        "pooled": -0.020842477503212872,
+        "se": 0.037040656866492036,
+        "ci_low": -0.12368382795349592,
+        "ci_high": 0.08199887294707017,
+        "M": 5,
+        "df": 4,
+        "clusters": 5,
+        "note": "cluster-robustes Intervall (RVE CR0, t auf M-1 df): haengige Effektschaetzungen zählen ihren Cluster nur einmal; Punkt-Schätzung inverse-variance fixiert.",
+        "breite": 0.2056827009005661,
+        "faktor": 0.19
+      },
+      "rve_source": {
+        "available": true,
+        "pooled": -0.020842477503212872,
+        "se": 0.037040656866492036,
+        "ci_low": -0.12368382795349592,
+        "ci_high": 0.08199887294707017,
+        "M": 5,
+        "df": 4,
+        "clusters": 5,
+        "note": "cluster-robustes Intervall (RVE CR0, t auf M-1 df): haengige Effektschaetzungen zählen ihren Cluster nur einmal; Punkt-Schätzung inverse-variance fixiert.",
+        "breite": 0.2056827009005661,
+        "faktor": 0.19
+      }
+    },
+    {
+      "datei": "data/research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+      "gruppe": "frailty index [raw:beta]",
+      "k_hkj": 2,
+      "k_zeilen": 2,
+      "hkj": {
+        "pooled": 0.14238733252131547,
+        "ci": [
+          0.08821959003957094,
+          0.19655507500306
+        ],
+        "breite": 0.10833548496348905,
+        "tau2": 0.0
+      },
+      "rve_study": {
+        "available": false,
+        "reason": "nur 1 unabhaengiger Cluster - RVE braucht mindestens 2",
+        "pooled": 0.14238733252131547,
+        "se": null,
+        "ci_low": null,
+        "ci_high": null,
+        "M": 1,
+        "df": null,
+        "clusters": 1,
+        "breite": null,
+        "faktor": null
+      },
+      "rve_source": {
+        "available": false,
+        "reason": "nur 1 unabhaengiger Cluster - RVE braucht mindestens 2",
+        "pooled": 0.14238733252131547,
+        "se": null,
+        "ci_low": null,
+        "ci_high": null,
+        "M": 1,
+        "df": null,
+        "clusters": 1,
+        "breite": null,
+        "faktor": null
+      }
+    },
+    {
+      "datei": "data/research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+      "gruppe": "incident cardiovascular disease [log_ratio]",
+      "k_hkj": 5,
+      "k_zeilen": 6,
+      "hkj": {
+        "pooled": 0.24029736413754801,
+        "ci": [
+          -0.5240470573358166,
+          1.0046417856109127
+        ],
+        "breite": 1.5286888429467291,
+        "tau2": 0.34690104842965935
+      },
+      "rve_study": {
+        "available": true,
+        "pooled": -0.12993969356776694,
+        "se": 0.22589258371275242,
+        "ci_low": -0.848830711995532,
+        "ci_high": 0.5889513248599981,
+        "M": 4,
+        "df": 3,
+        "clusters": 4,
+        "note": "cluster-robustes Intervall (RVE CR0, t auf M-1 df): haengige Effektschaetzungen zählen ihren Cluster nur einmal; Punkt-Schätzung inverse-variance fixiert.",
+        "breite": 1.43778203685553,
+        "faktor": 0.94
+      },
+      "rve_source": {
+        "available": true,
+        "pooled": -0.12993969356776694,
+        "se": 0.22589258371275242,
+        "ci_low": -0.848830711995532,
+        "ci_high": 0.5889513248599981,
+        "M": 4,
+        "df": 3,
+        "clusters": 4,
+        "note": "cluster-robustes Intervall (RVE CR0, t auf M-1 df): haengige Effektschaetzungen zählen ihren Cluster nur einmal; Punkt-Schätzung inverse-variance fixiert.",
+        "breite": 1.43778203685553,
+        "faktor": 0.94
+      }
+    },
+    {
+      "datei": "data/research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+      "gruppe": "cardiovascular mortality [log_ratio]",
+      "k_hkj": 2,
+      "k_zeilen": 2,
+      "hkj": {
+        "pooled": 1.0119458402184105,
+        "ci": [
+          0.7229076234592398,
+          1.3009840569775812
+        ],
+        "breite": 0.5780764335183415,
+        "tau2": 0.0
+      },
+      "rve_study": {
+        "available": true,
+        "pooled": 1.0119458402184105,
+        "se": 0.006435485730603514,
+        "ci_low": 0.930175240946975,
+        "ci_high": 1.093716439489846,
+        "M": 2,
+        "df": 1,
+        "clusters": 2,
+        "note": "cluster-robustes Intervall (RVE CR0, t auf M-1 df): haengige Effektschaetzungen zählen ihren Cluster nur einmal; Punkt-Schätzung inverse-variance fixiert.",
+        "breite": 0.16354119854287097,
+        "faktor": 0.28
+      },
+      "rve_source": {
+        "available": true,
+        "pooled": 1.0119458402184105,
+        "se": 0.006435485730603514,
+        "ci_low": 0.930175240946975,
+        "ci_high": 1.093716439489846,
+        "M": 2,
+        "df": 1,
+        "clusters": 2,
+        "note": "cluster-robustes Intervall (RVE CR0, t auf M-1 df): haengige Effektschaetzungen zählen ihren Cluster nur einmal; Punkt-Schätzung inverse-variance fixiert.",
+        "breite": 0.16354119854287097,
+        "faktor": 0.28
+      }
+    },
+    {
+      "datei": "data/research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+      "gruppe": "preeclampsia [log_ratio]",
+      "k_hkj": 5,
+      "k_zeilen": 5,
+      "hkj": {
+        "pooled": -0.3086131441470696,
+        "ci": [
+          -0.4908292005899775,
+          -0.1263970877041617
+        ],
+        "breite": 0.3644321128858158,
+        "tau2": 0.0
+      },
+      "rve_study": {
+        "available": false,
+        "reason": "nur 1 unabhaengiger Cluster - RVE braucht mindestens 2",
+        "pooled": -0.3086131441470696,
+        "se": null,
+        "ci_low": null,
+        "ci_high": null,
+        "M": 1,
+        "df": null,
+        "clusters": 1,
+        "breite": null,
+        "faktor": null
+      },
+      "rve_source": {
+        "available": false,
+        "reason": "nur 1 unabhaengiger Cluster - RVE braucht mindestens 2",
+        "pooled": -0.3086131441470696,
+        "se": null,
+        "ci_low": null,
+        "ci_high": null,
+        "M": 1,
+        "df": null,
+        "clusters": 1,
+        "breite": null,
+        "faktor": null
+      }
+    },
+    {
+      "datei": "data/research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+      "gruppe": "major adverse cardiovascular events [log_ratio]",
+      "k_hkj": 4,
+      "k_zeilen": 6,
+      "hkj": {
+        "pooled": 0.7415965409494402,
+        "ci": [
+          0.4297589550519663,
+          1.053434126846914
+        ],
+        "breite": 0.6236751717949478,
+        "tau2": 0.0
+      },
+      "rve_study": {
+        "available": true,
+        "pooled": 0.7505049227036904,
+        "se": 0.1321417348588765,
+        "ci_low": 0.18194492650636152,
+        "ci_high": 1.3190649189010193,
+        "M": 3,
+        "df": 2,
+        "clusters": 3,
+        "note": "cluster-robustes Intervall (RVE CR0, t auf M-1 df): haengige Effektschaetzungen zählen ihren Cluster nur einmal; Punkt-Schätzung inverse-variance fixiert.",
+        "breite": 1.1371199923946578,
+        "faktor": 1.82
+      },
+      "rve_source": {
+        "available": true,
+        "pooled": 0.7505049227036904,
+        "se": 0.1321417348588765,
+        "ci_low": 0.18194492650636152,
+        "ci_high": 1.3190649189010193,
+        "M": 3,
+        "df": 2,
+        "clusters": 3,
+        "note": "cluster-robustes Intervall (RVE CR0, t auf M-1 df): haengige Effektschaetzungen zählen ihren Cluster nur einmal; Punkt-Schätzung inverse-variance fixiert.",
+        "breite": 1.1371199923946578,
+        "faktor": 1.82
+      }
+    }
+  ],
+  "fehler": []
+}

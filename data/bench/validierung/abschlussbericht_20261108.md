@@ -398,3 +398,34 @@ zaehlt dieselben Personen doppelt; die Regel ist deshalb nur fuer klar
 verschiedene Expositionen richtig. Ruecknahme: die vier Dict-Typen zurueck
 auf `Dict[str, int]`, die Hit-Variablen entfernen, `comparison` aus dem
 standardisierten Dict streichen. Details: `e4e_vergleich_20261108.md`.
+
+### Nachtrag 9: RVE gegen HKJ (E4f)
+
+Die betroffenen Gruppen cluster-robust gerechnet (`pool_rve`, CR0, t auf
+M-1 df), Cluster = Quelle:
+
+| Gruppe | k | M | HKJ-Breite | RVE-Breite | Faktor |
+|---|---:|---:|---:|---:|---:|
+| preeclampsia [log_ratio] | 5 | 1 | 0,364 | - | - |
+| frailty index [raw:beta] | 2 | 1 | 0,108 | - | - |
+| depressive symptoms [fisher_z] | 2 | 1 | 0,735 | - | - |
+| MACE [log_ratio] | 4 | 3 | 0,624 | 1,137 | 1,82 |
+| incident CVD [log_ratio] | 5 | 4 | 1,529 | 1,438 | 0,94 |
+| depressive symptoms [raw:beta] | 4 | 3 | 0,536 | 0,458 | 0,86 |
+
+Drei der sechs Gruppen haben nur einen Cluster. Dort ist kein
+cluster-robustes Intervall schaetzbar - das HKJ-Intervall von preeclampsia
+[-0,491; -0,126] ist scheinpraezise, weil alle fuenf Zeilen aus einer Quelle
+stammen. Das ist der staerkste Befund dieser Messung.
+
+Bei den uebrigen ist RVE nur bei MACE deutlich breiter (Faktor 1,82); incident
+CVD und raw:beta sind etwas schmaler. Der Grund: `pool_rve` ist ein
+Fixed-Effect-Schaetzer und traegt tau2 nicht, waehrend HKJ random effects
+rechnet. Bei starker Heterogenitaet (depressive symptoms [log_ratio]:
+HKJ 0,748, RVE 0,068) ist RVE viel schmaler - das ist kein Gewinn an
+Praezision, sondern ein anderes Modell. Der Breitenvergleich ist deshalb nur
+bei gleichem Modell aussagekraeftig.
+
+Konsequenz: Der neue Kollaps-Schluessel ist fuer Gruppen mit M >= 2
+vertretbar, wenn das RVE-Intervall daneben berichtet wird; fuer M = 1 darf
+kein gepooltes KI stehen, nur eine Sichtung. Details: `e4f_rve_20261108.md`.
