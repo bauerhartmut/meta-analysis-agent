@@ -56,5 +56,7 @@ Die PDFs in `data/bench/sol2/volltext/` ablegen, dann die PDF-Kette
 (`scripts/read_pdf_corpus.py --dir data/bench/sol2/volltext`) darauf ansetzen.
 Zeigt der Bericht `Zeichen 0` oder `zu wenig Text`, ist die Datei ein Scan und
 gehoert nachbestellt oder abgetippt, nicht als leere Studie verbucht (siehe
-`scan_grenze_20261108.md`). Erfolgsschwelle bleibt k >= 5 poolbare Zeilen auf
-der Einschaflatenz.
+`scan_grenze_20261108.md`). Fuer diese fuenf Artikel gilt das Schritt-Ziel
+k >= 2 poolbare Zeilen auf der Einschaflatenz; das Gesamtziel k >= 5 ist an die
+A+B-Liste gebunden, weil fuenf Artikel im Schnitt eine poolbare Studie
+liefern (`schwelle_k5_20261108.md`).

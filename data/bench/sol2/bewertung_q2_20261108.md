@@ -38,6 +38,12 @@ Waere eine dieser Zeilen poolbar gewesen, waere sie als Effekt berichtet worden.
 Zu D4: Nachvollziehbarkeit ist kein Qualitaetsnachweis. Ein Zitat belegt, dass
 die Zahl im Dokument steht, nicht dass sie das Richtige misst.
 
+> **Nachtrag 2026-11-08** (nach der Messung in `schwelle_k5_20261108.md`):
+> Die Schwelle D1 wird zweistufig gefuehrt - Schritt-Ziel k >= 2 fuer die fuenf
+> A-Artikel, Gesamtziel k >= 5 fuer A + B. Das Urteil dieses Laufs (k = 0,
+> D1 nicht erfuellt) bleibt unveraendert; geaendert ist nur, woran der naechste
+> Schritt gemessen wird.
+
 ## 3. Warum k = 0: der Leser, nicht die Literatur
 
 Von den 31 Dokumenten enthalten **12 Einschaflatenz-Zeilen in Tabellen**,

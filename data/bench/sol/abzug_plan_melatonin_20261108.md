@@ -46,7 +46,7 @@ Streuung, 3 mit Streuung, 0 mit Arm-Mittelwerten).
 
 | Kriterium | Schwelle |
 |---|---|
-| D1 Daten | k >= 5 RCTs mit Arm-Mittelwerten in Minuten, jede Zeile mit quote_start |
+| D1 Daten | Schritt-Ziel **k >= 2**, Gesamtziel **k >= 5** RCTs mit Arm-Mittelwerten in Minuten, jede Zeile mit quote_start (Praezisierung in 4a) |
 | D2 Rechnung | gepoolte MD negativ und im publizierten CI -9,75 bis -4,37 min; bei ueberlappender Trialmenge zusaetzlich abs(Delta) <= 2 min |
 | D3 Ehrlichkeit | Bericht nennt k, Einheit, Modell (HKSJ), CI; bei k < 2 kein gepoolter Wert |
 | D4 Nachvollziehbarkeit | jede Zahl aus der DB rekonstruierbar; PRISMA-Zeilen = DB-Zeilen |
@@ -54,6 +54,28 @@ Streuung, 3 mit Streuung, 0 mit Arm-Mittelwerten).
 **Abbruch/Fehlschlag:** eine erfundene Zahl, eine falsche Einheit (min gegen h),
 ein gepoolter Wert ausserhalb des Referenz-CI ohne Erklaerung, oder ein
 gepoolter Wert trotz k < 2.
+
+### 4a. Schwellen, praezisiert am 2026-11-08
+
+Die urspruengliche Schwelle k >= 5 galt fuer die ganze Frage, wurde aber am
+ersten Zugang gemessen - an fuenf bestellten Artikeln. Die Messung in
+`data/bench/sol2/schwelle_k5_20261108.md` zeigt: von neun Dokumenten mit
+Einschaflatenz-Zeilen sind vier Crossover, und von fuenf parallelen Studien
+konvertiert eine. Bei dieser Quote erwartet man aus fuenf Artikeln **eine**
+Studie; k >= 5 erreicht erst die A+B-Liste (25 Dokumente) mit rund 58 Prozent
+Wahrscheinlichkeit.
+
+Deshalb zwei Stufen:
+
+| Ziel | Schwelle | Gilt fuer |
+|---|---|---|
+| Schritt-Ziel | k >= 2 | die fuenf A-Artikel |
+| Gesamtziel | k >= 5 | A + B (25 Dokumente) |
+
+Unveraendert bleibt: bei k < 2 kein gepoolter Wert (D3), und Crossover-Studien
+werden ohne Within-Subject-Korrektur nicht mit SE(g) fuer unabhaengige Gruppen
+gepoolt. Das Gesamtziel ist damit nicht abgeschwaecht, sondern an die Menge
+gebunden, die es tragen kann.
 
 ## 5. Was bewusst nicht passiert
 

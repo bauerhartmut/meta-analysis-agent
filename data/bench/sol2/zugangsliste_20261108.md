@@ -55,8 +55,9 @@ Mit DOI bestellbar: 80 von 83.
 
 1. Prioritaet A zuerst bestellen (DOI ist angegeben, PMID als Rueckfall).
 2. B nachziehen, wenn A nicht reicht.
-3. Nach Erhalt: dieselbe Kette (`scripts/read_q2_extended.py`) auf die
-   neuen XML/PDF ansetzen; die Erfolgsschwelle bleibt k >= 5.
+3. Nach Erhalt: XML mit `scripts/read_q2_extended.py`, PDFs mit
+   `scripts/read_pdf_corpus.py` lesen. Fuer A gilt das Schritt-Ziel k >= 2,
+   das Gesamtziel k >= 5 ist an A + B gebunden.
 
 Grenze: Die Einordnung liest nur den Titel. Ein Trial kann in A stehen
 und am Volltext scheitern (kein Arm-Mittelwert) oder in B stehen und
