@@ -166,7 +166,10 @@ Deskriptivum. Der Engpass ist die Berichtsform, nicht die Suchstrategie.
   `arm_q1.db`) sind lokal und nicht versioniert; die Zahlen sind ueber die
   Konverterbefehle reproduzierbar, die in `konverter_kopf_20261108.md` und
   `q1_befund_20261108.md` stehen.
-- 3 XML des Korpus fehlen weiterhin. Die 10 XML der Q1-Stichprobe, die
+- Der Korpus ist seit dem 08.11. vollstaendig (1.059 von 1.059 XML):
+  die drei fehlenden Dokumente (PMC7163627, PMC8959415, PMC9554922)
+  kamen ueber NCBI efetch, liefern 4 Tabellenzeilen und 0 Effekte. Die 10
+  XML der Q1-Stichprobe, die
   Europe PMC mit HTTP 500 verweigerte, wurden am 08.11. ueber NCBI efetch
   beschafft und gelesen: **33 von 33 Dokumenten, weiterhin 0 lesbare
   SOL-Zeilen** (`xml_nachladen_20261108.md`). Die frueher hier notierte

@@ -76,6 +76,24 @@ Zahlen nach diesem Schritt:
 | lesbare SOL-Zeilen | **0** |
 | SOL-Zeilen im Gesamtkorpus (unveraendert) | 11 aus 5 Quellen, k = 1 |
 
+## 3b. Nachtrag: auch der Gesamtkorpus ist vollstaendig
+
+Derselbe Weg schliesst die zweite Luecke. Im Korpus fehlten 3 von 1.059 XML:
+
+| PMCID | DOI | Bytes | Tabellenzeilen | Effekte |
+|---|---|---:|---:|---:|
+| PMC7163627 | (Poster-Sammelband) | 5.331 | 4 | 0 |
+| PMC8959415 | 10.3389/fnins.2022.825246 | 243.677 | (enthalten) | 0 |
+| PMC9554922 | 10.1016/j.brainresbull.2022.05.002 | 530.063 | (enthalten) | 0 |
+
+Beide Leser zusammen: 4 Tabellenzeilen, alle vier ohne Effektspalte im Kopf,
+0 konvertierbar, 0 SOL. Die beiden inhaltlich passenden Dokumente (Melatonin-
+Stoffwechsel bei psychiatrischen Patienten, translationale Schlaf-Regulation)
+sind Review- bzw. Uebersichtsarbeiten ohne Zwei-Arm-Effekttabelle.
+
+**Damit gilt: 1.059 von 1.059 Korpus-XML und 33 von 33 Stichproben-XML sind
+gelesen, und der Befund bleibt 0 lesbare SOL-Zeilen aus diesem Nachschub.**
+
 ## 4. Grenzen
 
 - Die 10 Dokumente wurden ueber einen anderen Anbieter geholt als die 23 aus

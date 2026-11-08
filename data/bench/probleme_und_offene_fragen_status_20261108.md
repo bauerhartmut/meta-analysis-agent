@@ -36,8 +36,9 @@ entschieden, 1 durch Budget blockiert.** Kein Punkt wartet mehr auf Arbeit.
 | 10 fehlende Dokumente beschaffen und lesen | NCBI statt Europe PMC: 10/10 geladen, 62 Tabellenzeilen, **0 Effekte**, 0 SOL | `xml_nachladen_20261108.md` |
 | Lohnt Spaltenauflöser/Vision? | 342 Mismatch-Zeilen, **0 mit Effektspalte** | `colspan_befund_20261108.md` |
 
-Der wichtigste Nebenbefund: Europe PMC lieferte für zehn PMCIDs in **20 von 20**
-Versuchen HTTP 500, NCBI efetch alle zehn. Ein Anbieterausfall ist kein
+Der wichtigste Nebenbefund: Europe PMC lieferte für zehn PMCIDs in **30 von 30**
+Versuchen HTTP 500, NCBI efetch alle zehn. Derselbe Weg schloss auch die drei
+fehlenden Korpus-XML (1.059 von 1.059 vollständig, 4 Tabellenzeilen, 0 Effekte). Ein Anbieterausfall ist kein
 „Dokument nicht verfügbar".
 
 ## 4. Was jetzt noch zu tun wäre — und warum nicht hier

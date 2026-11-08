@@ -1,0 +1,60 @@
+{
+  "generated": "2026-11-08T11:33:09",
+  "documents": [
+    {
+      "doi": "pmc:PMC7163627",
+      "pmc": "PMC7163627",
+      "table_rows": 0,
+      "aligned_rows": 0,
+      "model_tables": 0,
+      "model_rows": 0,
+      "candidates": 0,
+      "stored": 0,
+      "rejected": 0,
+      "kinds": {},
+      "reasons": {},
+      "effects": []
+    },
+    {
+      "doi": "10.3389/fnins.2022.825246",
+      "pmc": "PMC8959415",
+      "table_rows": 4,
+      "aligned_rows": 4,
+      "model_tables": 0,
+      "model_rows": 0,
+      "candidates": 0,
+      "stored": 0,
+      "rejected": 0,
+      "kinds": {},
+      "reasons": {
+        "keine Effektspalte im Kopf": 4
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.1016/j.brainresbull.2022.05.002",
+      "pmc": "PMC9554922",
+      "table_rows": 0,
+      "aligned_rows": 0,
+      "model_tables": 0,
+      "model_rows": 0,
+      "candidates": 0,
+      "stored": 0,
+      "rejected": 0,
+      "kinds": {},
+      "reasons": {},
+      "effects": []
+    }
+  ],
+  "totals": {
+    "table_rows": 4,
+    "aligned_rows": 4,
+    "model_tables": 0,
+    "model_rows": 0,
+    "candidates": 0,
+    "stored": 0,
+    "rejected": 0,
+    "missing_xml": 0
+  },
+  "missing_xml": []
+}

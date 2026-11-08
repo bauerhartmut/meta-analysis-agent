@@ -1,0 +1,45 @@
+{
+  "generated": "2026-11-08T11:33:10",
+  "documents": [
+    {
+      "doi": "pmc:PMC7163627",
+      "pmc": "PMC7163627",
+      "table_rows": 0,
+      "convertible": 0,
+      "stored": 0,
+      "rejected": 0,
+      "reasons": {},
+      "effects": []
+    },
+    {
+      "doi": "10.3389/fnins.2022.825246",
+      "pmc": "PMC8959415",
+      "table_rows": 4,
+      "convertible": 0,
+      "stored": 0,
+      "rejected": 0,
+      "reasons": {
+        "kein Mittelwert mit eindeutiger Streuung in zwei Spalten": 4
+      },
+      "effects": []
+    },
+    {
+      "doi": "10.1016/j.brainresbull.2022.05.002",
+      "pmc": "PMC9554922",
+      "table_rows": 0,
+      "convertible": 0,
+      "stored": 0,
+      "rejected": 0,
+      "reasons": {},
+      "effects": []
+    }
+  ],
+  "totals": {
+    "table_rows": 4,
+    "convertible": 0,
+    "stored": 0,
+    "rejected": 0,
+    "missing_xml": 0
+  },
+  "missing_xml": []
+}
