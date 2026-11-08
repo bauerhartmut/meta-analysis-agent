@@ -1,0 +1,59 @@
+{
+  "test": "E3c-llm-prompt-regel",
+  "stand": "2026-11-08T21:58:52",
+  "datei": "data/bench/sol2/volltext/23098680.txt",
+  "satz_zeichen": 254,
+  "satz": "A reduction in SOL, adjusted for baseline, was seen for melatonin compared with placebo when measured by sleep diaries (-37.49 minutes, 95% CI -55.27 to -19.71 minutes; p<0.0001) and actigraphy (-45.34 minutes, 95% CI -68.75 to -21.93 minutes; p=0.0003).",
+  "prompt_zeichen": 2417,
+  "prompt_zeichen_e3a": 25582,
+  "modell": "gwdg/qwen3.5-397b-a17b",
+  "double_pass": false,
+  "topic": "melatonin",
+  "backend_erreichbar": true,
+  "dauer_s": 4.9,
+  "tokens": {
+    "prompt": 662,
+    "completion": 291,
+    "gesamt": 953
+  },
+  "soll": {
+    "tagebuch": -37.49,
+    "aktigraphie": -45.34
+  },
+  "toleranz": 0.01,
+  "sollzahl_im_prompt": {
+    "tagebuch": true,
+    "aktigraphie": true
+  },
+  "zeilen": 1,
+  "abgelehnt": 0,
+  "fehler": "",
+  "engine_errors": 0,
+  "letzter_fehler": "",
+  "treffer": {
+    "tagebuch": {
+      "effect": -37.49,
+      "se": 9.071595264120347,
+      "ci_low": -55.27,
+      "ci_high": -19.71,
+      "effect_type": "mean_diff",
+      "outcome": "Sleep Onset Latency (SOL)",
+      "quote": "A reduction in SOL, adjusted for baseline, was seen for melatonin compared with placebo when measured by sleep diaries (-37.49 minutes, 95% CI -55.27 to -19.71 minutes; p<0.0001) and actigraphy (-45.34 minutes, 95% CI -68.75 to -21.93 minutes; p=0.0003)."
+    },
+    "aktigraphie": null
+  },
+  "alle_zeilen": [
+    {
+      "outcome": "Sleep Onset Latency (SOL)",
+      "comparison": "sleep diaries",
+      "effect_type": "mean_diff",
+      "effect": -37.49,
+      "se": 9.071595264120347,
+      "ci_low": -55.27,
+      "ci_high": -19.71,
+      "n": null,
+      "quote": "A reduction in SOL, adjusted for baseline, was seen for melatonin compared with placebo when measured by sleep diaries (-37.49 minutes, 95% CI -55.27 to -19.71 minutes; p<0.0001) and actigraphy (-45.34 minutes, 95% CI -68.75 to -21.93 minutes; p=0.0003).",
+      "rejection_reason": ""
+    }
+  ]
+}

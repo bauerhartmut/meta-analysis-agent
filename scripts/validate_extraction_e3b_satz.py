@@ -27,7 +27,12 @@ from research_agent.llm.engine import LLMEngine                    # noqa: E402
 from research_agent.meta.extraction import EffectExtractor          # noqa: E402
 
 TEXT_PATH = ROOT / "data" / "bench" / "sol2" / "volltext" / "23098680.txt"
-OUT_JSON = ROOT / "data" / "bench" / "validierung" / "e3b_satz_20261108.json"
+# Optional per argv: Dateiname und Test-ID, damit derselbe Aufbau fuer E3c
+# (Prompt-Regel lokal in extraction.py) wiederverwendet werden kann.
+OUT_JSON = ROOT / "data" / "bench" / "validierung" / (
+    sys.argv[1] if len(sys.argv) > 1 else "e3b_satz_20261108.json"
+)
+TEST_ID = sys.argv[2] if len(sys.argv) > 2 else "E3b-llm-isolierter-satz"
 
 TOPIC = "melatonin"
 
@@ -124,7 +129,7 @@ async def main() -> int:
                   f"effect={row.get('effect')} type={row.get('effect_type')}")
 
     ergebnis = {
-        "test": "E3b-llm-isolierter-satz",
+        "test": TEST_ID,
         "stand": time.strftime("%Y-%m-%dT%H:%M:%S"),
         "datei": str(TEXT_PATH.relative_to(ROOT)).replace("\\", "/"),
         "satz_zeichen": len(satz),

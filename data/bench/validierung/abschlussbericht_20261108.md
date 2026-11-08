@@ -244,3 +244,26 @@ aus. Fuer die Metaanalyse ist das der teuerste Fehlertyp: Die ankommende Zeile
 ist korrekt, das Fehlen der zweiten faellt nur beim Abgleich mit dem Sollwert
 auf. Ein Absatz-Chunking wuerde nicht helfen - der Satz war bereits allein.
 Details: `e3b_satz_20261108.md`.
+
+### Nachtrag 3: die Prompt-Regel (E3c)
+
+Lokal in `extraction.py` ergaenzt (gitignored, nicht committet): "One row per
+measurement method" - bei zwei Messmethoden in einem Satz eine Zeile je
+Methode. Prompt 2.417 Zeichen, 953 Tokens, 4,9 s. Ergebnis: **wieder 1 von 2**,
+diesmal das Tagebuch-Intervall -37,49 mit `comparison = sleep diaries`.
+
+Die Regel wird gelesen und befolgt - die Comparison nennt jetzt die
+Messmethode statt der Gruppengegenueberstellung - aber sie erzeugt keine
+zweite Zeile. Drei Laeufe, drei verschiedene Einzelzeilen (TST, Aktigraphie,
+Tagebuch): genau eine Zeile, Auswahl variabel.
+
+Das Harness ist als Ursache ausgeschlossen, soweit ohne Rohantwort pruefbar:
+`unwrap_json_list` laesst zwei Items in allen vier typischen Antwortformen
+durch, der Regex-Fallback halbiert keine reine Array-Antwort, und die
+Engine-Statistik zeigt einen einzigen Completion-Aufruf ohne Retry. Eine
+Zwei-Zeilen-Antwort waere angekommen.
+
+Konsequenz: Mehr Prompt loest es nicht. Der naechste Hebel ist eine
+deterministische Nachpruefung - enthaelt eine Quote zwei CI-Klammern, aber es
+kam nur eine Zeile zurueck, muss das als Luecke gemeldet werden statt still
+als k = 1 weiterzulaufen. Details: `e3c_regel_20261108.md`.
