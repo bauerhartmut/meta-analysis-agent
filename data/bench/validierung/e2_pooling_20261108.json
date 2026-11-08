@@ -1,0 +1,402 @@
+{
+  "test_id": "E2-pooling-20261108",
+  "stand": "2026-11-08T19:22:31+00:00",
+  "engine": "research_agent.meta.pooling.pool",
+  "referenz": "data/bench/sol2/pooling_sol3_20261108.json",
+  "analyse": "Hauptanalyse",
+  "eingabe": [
+    {
+      "label": "PMC3489506",
+      "est": -37.5,
+      "se": 9.0818
+    },
+    {
+      "label": "PMC2933606",
+      "est": -15.6,
+      "se": 4.9236
+    },
+    {
+      "label": "PMC2952772",
+      "est": -31.0,
+      "se": 10.0
+    }
+  ],
+  "modell": "keiner",
+  "netz": "keines",
+  "toleranz": 0.01,
+  "kennzahlen": [
+    {
+      "kennzahl": "pooled",
+      "name": "Gepoolter Effekt (min)",
+      "soll": -26.287198821361862,
+      "ist": -26.28720678117651,
+      "abweichung": 7.959814649183272e-06,
+      "art": "rundung",
+      "toleranz": 0.01,
+      "status": "PASS"
+    },
+    {
+      "kennzahl": "ci_low",
+      "name": "Untere 95%-KI-Grenze (min)",
+      "soll": -55.5718717281304,
+      "ist": -55.57187762840797,
+      "abweichung": 5.900277571413426e-06,
+      "art": "rundung",
+      "toleranz": 0.01,
+      "status": "PASS"
+    },
+    {
+      "kennzahl": "ci_high",
+      "name": "Obere 95%-KI-Grenze (min)",
+      "soll": 2.9974740854066724,
+      "ist": 2.9974640660549454,
+      "abweichung": 1.0019351726953118e-05,
+      "art": "rundung",
+      "toleranz": 0.01,
+      "status": "PASS"
+    },
+    {
+      "kennzahl": "tau2",
+      "name": "tau^2 (min^2)",
+      "soll": 104.49618426459917,
+      "ist": 104.495670228759,
+      "abweichung": 0.0005140358401689582,
+      "art": "rundung",
+      "toleranz": 0.01,
+      "status": "PASS"
+    },
+    {
+      "kennzahl": "q",
+      "name": "Cochran Q",
+      "soll": 5.409472762858641,
+      "ist": 5.409442924885038,
+      "abweichung": 2.983797360300855e-05,
+      "art": "rundung",
+      "toleranz": 0.01,
+      "status": "PASS"
+    },
+    {
+      "kennzahl": "i2",
+      "name": "I^2 (%)",
+      "soll": 63.02782012820233,
+      "ist": 63.02761619316828,
+      "abweichung": 0.0002039350340510282,
+      "art": "rundung",
+      "toleranz": 0.01,
+      "status": "PASS"
+    }
+  ],
+  "zusatz": {
+    "k": 3,
+    "method": "hksj",
+    "weight_type": "DL",
+    "se_hksj": 6.80618973618621,
+    "pi_low": -187.02561146984192,
+    "pi_high": 134.4511979074889,
+    "small_k_note": "Kleine Studienanzahl (k=3): Heterogenitaets- und Intervallangaben sind mit Vorsicht zu interpretieren.",
+    "fixed": -22.219644304087293
+  },
+  "unit_tests": [
+    {
+      "id": "U1-gleiche-varianzen",
+      "zweck": "identische SE: Q, tau^2 und I^2 muessen den Handwerten folgen",
+      "eingabe": [
+        {
+          "label": "A",
+          "est": -10.0,
+          "se": 5.0
+        },
+        {
+          "label": "B",
+          "est": -20.0,
+          "se": 5.0
+        },
+        {
+          "label": "C",
+          "est": -30.0,
+          "se": 5.0
+        }
+      ],
+      "pruefungen": [
+        {
+          "feld": "q",
+          "soll": 8.0,
+          "ist": 8.0,
+          "abweichung": 0.0,
+          "status": "PASS"
+        },
+        {
+          "feld": "tau2",
+          "soll": 75.0,
+          "ist": 75.00000000000001,
+          "abweichung": 1.4210854715202004e-14,
+          "status": "PASS"
+        },
+        {
+          "feld": "i2",
+          "soll": 75.0,
+          "ist": 75.0,
+          "abweichung": 0.0,
+          "status": "PASS"
+        },
+        {
+          "feld": "pooled",
+          "soll": -20.0,
+          "ist": -20.0,
+          "abweichung": 0.0,
+          "status": "PASS"
+        }
+      ],
+      "ergebnis": "PASS",
+      "beobachtung": "excluded-Liste nach dem Filtern: 0 Eintraege, k = 3"
+    },
+    {
+      "id": "U2-stark-unterschiedliche-se",
+      "zweck": "gleicher Effekt, SE 1 gegen 20: keine Heterogenitaet, Pool bleibt beim Effekt",
+      "eingabe": [
+        {
+          "label": "A",
+          "est": -10.0,
+          "se": 1.0
+        },
+        {
+          "label": "B",
+          "est": -10.0,
+          "se": 20.0
+        }
+      ],
+      "pruefungen": [
+        {
+          "feld": "q",
+          "soll": 0.0,
+          "ist": 0.0,
+          "abweichung": 0.0,
+          "status": "PASS"
+        },
+        {
+          "feld": "tau2",
+          "soll": 0.0,
+          "ist": 0.0,
+          "abweichung": 0.0,
+          "status": "PASS"
+        },
+        {
+          "feld": "i2",
+          "soll": 0.0,
+          "ist": 0.0,
+          "abweichung": 0.0,
+          "status": "PASS"
+        },
+        {
+          "feld": "pooled",
+          "soll": -10.0,
+          "ist": -10.0,
+          "abweichung": 0.0,
+          "status": "PASS"
+        }
+      ],
+      "ergebnis": "PASS",
+      "beobachtung": "excluded-Liste nach dem Filtern: 0 Eintraege, k = 2"
+    },
+    {
+      "id": "U3-sehr-grosser-se",
+      "zweck": "eine Studie mit SE 60 verschiebt den Pool nur um 0,033 min; ohne Heterogenitaet faellt RE auf FE zusammen",
+      "eingabe": [
+        {
+          "label": "A",
+          "est": -10.0,
+          "se": 2.0
+        },
+        {
+          "label": "B",
+          "est": -40.0,
+          "se": 60.0
+        }
+      ],
+      "pruefungen": [
+        {
+          "feld": "pooled",
+          "soll": -10.033296337402886,
+          "ist": -10.033296337402886,
+          "abweichung": 0.0,
+          "status": "PASS"
+        },
+        {
+          "feld": "tau2",
+          "soll": 0.0,
+          "ist": 0.0,
+          "abweichung": 0.0,
+          "status": "PASS"
+        },
+        {
+          "feld": "k",
+          "soll": 2,
+          "ist": 2.0,
+          "abweichung": 0.0,
+          "status": "PASS"
+        }
+      ],
+      "ergebnis": "PASS",
+      "beobachtung": "excluded-Liste nach dem Filtern: 0 Eintraege, k = 2"
+    },
+    {
+      "id": "U4-keine-heterogenitaet",
+      "zweck": "drei identische Effekte: Q = 0, tau^2 = 0, I^2 = 0",
+      "eingabe": [
+        {
+          "label": "A",
+          "est": -12.0,
+          "se": 2.0
+        },
+        {
+          "label": "B",
+          "est": -12.0,
+          "se": 3.0
+        },
+        {
+          "label": "C",
+          "est": -12.0,
+          "se": 4.0
+        }
+      ],
+      "pruefungen": [
+        {
+          "feld": "q",
+          "soll": 0.0,
+          "ist": 0.0,
+          "abweichung": 0.0,
+          "status": "PASS"
+        },
+        {
+          "feld": "tau2",
+          "soll": 0.0,
+          "ist": 0.0,
+          "abweichung": 0.0,
+          "status": "PASS"
+        },
+        {
+          "feld": "i2",
+          "soll": 0.0,
+          "ist": 0.0,
+          "abweichung": 0.0,
+          "status": "PASS"
+        },
+        {
+          "feld": "pooled",
+          "soll": -12.0,
+          "ist": -12.0,
+          "abweichung": 0.0,
+          "status": "PASS"
+        }
+      ],
+      "ergebnis": "PASS",
+      "beobachtung": "excluded-Liste nach dem Filtern: 0 Eintraege, k = 3"
+    },
+    {
+      "id": "U5-nur-eine-studie",
+      "zweck": "k = 1 darf kein gepooltes Ergebnis behaupten",
+      "eingabe": [
+        {
+          "label": "A",
+          "est": -5.0,
+          "se": 2.0
+        }
+      ],
+      "pruefungen": [
+        {
+          "feld": "k",
+          "soll": 1,
+          "ist": 1.0,
+          "abweichung": 0.0,
+          "status": "PASS"
+        },
+        {
+          "feld": "pooled",
+          "soll": null,
+          "ist": null,
+          "status": "PASS"
+        }
+      ],
+      "ergebnis": "PASS",
+      "beobachtung": "excluded-Liste nach dem Filtern: 0 Eintraege, k = 1"
+    },
+    {
+      "id": "U6-ungueltige-eingaben",
+      "zweck": "fehlender Effekt, fehlende SE, SE = 0: k = 0 statt Absturz",
+      "eingabe": [
+        {
+          "label": "A",
+          "est": null,
+          "se": 2.0
+        },
+        {
+          "label": "B",
+          "est": -10.0,
+          "se": null
+        },
+        {
+          "label": "C",
+          "est": -10.0,
+          "se": 0.0
+        }
+      ],
+      "pruefungen": [
+        {
+          "feld": "k",
+          "soll": 0,
+          "ist": 0.0,
+          "abweichung": 0.0,
+          "status": "PASS"
+        },
+        {
+          "feld": "pooled",
+          "soll": null,
+          "ist": null,
+          "status": "PASS"
+        }
+      ],
+      "ergebnis": "PASS",
+      "beobachtung": "excluded-Liste nach dem Filtern: 0 Eintraege, k = 0"
+    },
+    {
+      "id": "U7-fehlende-streuung",
+      "zweck": "eine Zeile ohne SE faellt still heraus - k sinkt auf 2",
+      "eingabe": [
+        {
+          "label": "A",
+          "est": -10.0,
+          "se": 2.0
+        },
+        {
+          "label": "B",
+          "est": -20.0,
+          "se": null
+        },
+        {
+          "label": "C",
+          "est": -30.0,
+          "se": 6.0
+        }
+      ],
+      "pruefungen": [
+        {
+          "feld": "k",
+          "soll": 2,
+          "ist": 2.0,
+          "abweichung": 0.0,
+          "status": "PASS"
+        }
+      ],
+      "ergebnis": "PASS",
+      "beobachtung": "excluded-Liste nach dem Filtern: 0 Eintraege, k = 2"
+    }
+  ],
+  "korrekturen": [
+    {
+      "fall": "U3-sehr-grosser-se",
+      "text": "Erste Fassung erwartete pooled = -10.0 und lief mit Abweichung 3,33e-02 auf FAIL. Der Sollwert war falsch, nicht die Engine: die Studie mit SE 60 traegt 0,11 % Gewicht, also fe = (-10/4 - 40/3600)/(1/4 + 1/3600) = -10,0333; Q = 0,2497 < df = 1, damit tau^2 = 0 und der RE-Pool gleich dem FE-Wert. Der Fall prueft jetzt den nachgerechneten Wert und tau^2 = 0."
+    }
+  ],
+  "gesamt": "PASS",
+  "laufzeit_s": 0.9238578000004054
+}
