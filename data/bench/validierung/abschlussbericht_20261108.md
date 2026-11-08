@@ -355,3 +355,46 @@ Informationsverlust, davon mindestens zwei mit falscher Auswahl, weil der
 Kollaps nach Quelle und Outcome gruppiert, nicht nach Exposition. Das ist
 eine inhaltliche Grenze des Poolings, nicht der Zaehlung.
 Details: `e4_kollaps_20261108.md`.
+
+### Nachtrag 8: Exposition im Kollaps-Schluessel (E4e)
+
+Lokal in `pooling.py` (gitignored, nicht committet): Der Kollaps vergleicht
+zusaetzlich die berichtete Exposition (`comparison`). Zwei Zeilen derselben
+Quelle kollabieren nur, wenn die Exposition gleich oder eine leer ist - oder
+wenn Effekt und Standardfehler identisch sind (dann ist es eine Kopie). Die
+vier Schluessel-Dicts fuehren Listen von Indizes, damit eine Kopie auch dann
+kollabiert, wenn zwischen ihr und dem Original eine andere Exposition steht.
+
+Gemessen auf Kopien, 10 Themen-DBs, 38 Gruppen: 6 aendern sich, 32 nicht.
+
+- preeclampsia [log_ratio]: k 1 -> 5, gepoolt -0,309 [-0,491; -0,126]
+  (vorher kein Pool).
+- incident CVD [log_ratio]: k 4 -> 5, 0,178 [-0,914; 1,269] ->
+  0,240 [-0,524; 1,005]. KI-Breite 2,18 -> 1,53.
+- MACE [log_ratio]: k 3 -> 4, 0,770 [0,259; 1,281] -> 0,742 [0,430; 1,053].
+  KI-Breite 1,02 -> 0,62.
+- depressive symptoms [raw:beta]: k 3 -> 4, -0,023 [-0,545; 0,499] ->
+  -0,033 [-0,301; 0,236].
+- depressive symptoms [fisher_z]: k 1 -> 2, -0,180 [-0,548; 0,187].
+- frailty index [raw:beta]: k 1 -> 2, 0,142 [0,088; 0,197].
+
+Der Gewinn ist die richtige Zeile: Bei incident CVD bleibt die
+Mittelmeer-Diaet-Schaetzung neben der Rheumatologie-Zeile stehen, statt
+willkuerlich ersetzt zu werden. Der Preis ist Ueberpraezision: Die neuen
+Zeilen stammen aus derselben Quelle und sind abhaengig; das KI wird enger
+(incident CVD 2,18 -> 1,53), obwohl die Unabhaengigkeit nicht gestiegen ist.
+Ohne cluster-robuste Schaetzung (`pool_rve`, gruppiert nach `source_id`) ist
+die Regel deshalb nur zusammen mit dem RVE-Pfad vertretbar.
+
+Die exakten Dubletten kollabieren weiter: `height` und `educational
+attainment` bleiben unveraendert. Ein erster Messlauf zeigte 16 geaenderte
+Gruppen, weil die Kopie-Erkennung fehlte und gleiche Werte mit anderem
+comparison-Text getrennt wurden; der Fehler ist behoben und steht hier, weil
+er sonst als Wirkung durchgegangen waere.
+
+Grenze: `comparison` unterscheidet nicht zwischen anderer Exposition und
+anderer Stufe derselben Exposition (Dosis-Kategorien). Ein Pool mit beiden
+zaehlt dieselben Personen doppelt; die Regel ist deshalb nur fuer klar
+verschiedene Expositionen richtig. Ruecknahme: die vier Dict-Typen zurueck
+auf `Dict[str, int]`, die Hit-Variablen entfernen, `comparison` aus dem
+standardisierten Dict streichen. Details: `e4e_vergleich_20261108.md`.

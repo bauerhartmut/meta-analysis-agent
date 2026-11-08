@@ -1,0 +1,388 @@
+{
+  "stand": "2026-11-08T23:18:21",
+  "modus": "vorher",
+  "modellaufrufe": 0,
+  "tokens": 0,
+  "gruppen": [
+    {
+      "datei": "data/harness_local.db",
+      "gruppe": "sleep onset latency [raw:mean_diff]",
+      "k": 1,
+      "pooled": null,
+      "ci_low": null,
+      "ci_high": null,
+      "tau2": null,
+      "zeilen": 1
+    },
+    {
+      "datei": "data/research-does-melatonin-improve-sleep-onset-laten-382747.db",
+      "gruppe": "sleep efficiency [raw:mean_diff]",
+      "k": 1,
+      "pooled": null,
+      "ci_low": null,
+      "ci_high": null,
+      "tau2": null,
+      "zeilen": 1
+    },
+    {
+      "datei": "data/research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+      "gruppe": "all cause mortality [log_ratio]",
+      "k": 1,
+      "pooled": null,
+      "ci_low": null,
+      "ci_high": null,
+      "tau2": null,
+      "zeilen": 1
+    },
+    {
+      "datei": "data/research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+      "gruppe": "chronic disease incidence [raw:beta]",
+      "k": 1,
+      "pooled": null,
+      "ci_low": null,
+      "ci_high": null,
+      "tau2": null,
+      "zeilen": 1
+    },
+    {
+      "datei": "data/research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+      "gruppe": "colorectal cancer risk [log_ratio]",
+      "k": 1,
+      "pooled": null,
+      "ci_low": null,
+      "ci_high": null,
+      "tau2": null,
+      "zeilen": 1
+    },
+    {
+      "datei": "data/research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+      "gruppe": "depressive symptoms [fisher_z]",
+      "k": 1,
+      "pooled": null,
+      "ci_low": null,
+      "ci_high": null,
+      "tau2": null,
+      "zeilen": 1
+    },
+    {
+      "datei": "data/research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+      "gruppe": "depressive symptoms [hedges_g]",
+      "k": 3,
+      "pooled": -0.5858165227193031,
+      "ci_low": -1.3190344469408934,
+      "ci_high": 0.1474014015022873,
+      "tau2": 0.08916820551443605,
+      "zeilen": 3
+    },
+    {
+      "datei": "data/research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+      "gruppe": "depressive symptoms [log_ratio]",
+      "k": 6,
+      "pooled": 0.03258083611964441,
+      "ci_low": -0.34165648037959157,
+      "ci_high": 0.4068181526188804,
+      "tau2": 0.015263500150809272,
+      "zeilen": 6
+    },
+    {
+      "datei": "data/research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+      "gruppe": "depressive symptoms [raw:beta]",
+      "k": 3,
+      "pooled": -0.023090776522521197,
+      "ci_low": -0.5449636754416773,
+      "ci_high": 0.49878212239663494,
+      "tau2": 0.03645254000809411,
+      "zeilen": 3
+    },
+    {
+      "datei": "data/research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+      "gruppe": "major depressive disorder [log_ratio]",
+      "k": 1,
+      "pooled": null,
+      "ci_low": null,
+      "ci_high": null,
+      "tau2": null,
+      "zeilen": 1
+    },
+    {
+      "datei": "data/research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+      "gruppe": "obesity [log_ratio]",
+      "k": 1,
+      "pooled": null,
+      "ci_low": null,
+      "ci_high": null,
+      "tau2": null,
+      "zeilen": 1
+    },
+    {
+      "datei": "data/research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+      "gruppe": "physical activity [raw:beta]",
+      "k": 1,
+      "pooled": null,
+      "ci_low": null,
+      "ci_high": null,
+      "tau2": null,
+      "zeilen": 1
+    },
+    {
+      "datei": "data/research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+      "gruppe": "physical activity agreement [fisher_z]",
+      "k": 1,
+      "pooled": null,
+      "ci_low": null,
+      "ci_high": null,
+      "tau2": null,
+      "zeilen": 1
+    },
+    {
+      "datei": "data/research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+      "gruppe": "physical activity at 2 years [log_ratio]",
+      "k": 1,
+      "pooled": null,
+      "ci_low": null,
+      "ci_high": null,
+      "tau2": null,
+      "zeilen": 1
+    },
+    {
+      "datei": "data/research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+      "gruppe": "recreational walking [log_ratio]",
+      "k": 1,
+      "pooled": null,
+      "ci_low": null,
+      "ci_high": null,
+      "tau2": null,
+      "zeilen": 1
+    },
+    {
+      "datei": "data/research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+      "gruppe": "cognitive ability [fisher_z]",
+      "k": 1,
+      "pooled": null,
+      "ci_low": null,
+      "ci_high": null,
+      "tau2": null,
+      "zeilen": 1
+    },
+    {
+      "datei": "data/research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+      "gruppe": "cognitive ability [raw:beta]",
+      "k": 1,
+      "pooled": null,
+      "ci_low": null,
+      "ci_high": null,
+      "tau2": null,
+      "zeilen": 1
+    },
+    {
+      "datei": "data/research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+      "gruppe": "educational attainment [raw:heritability]",
+      "k": 1,
+      "pooled": null,
+      "ci_low": null,
+      "ci_high": null,
+      "tau2": null,
+      "zeilen": 1
+    },
+    {
+      "datei": "data/research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+      "gruppe": "frailty index [raw:beta]",
+      "k": 1,
+      "pooled": null,
+      "ci_low": null,
+      "ci_high": null,
+      "tau2": null,
+      "zeilen": 1
+    },
+    {
+      "datei": "data/research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+      "gruppe": "general cognitive ability [raw:beta]",
+      "k": 1,
+      "pooled": null,
+      "ci_low": null,
+      "ci_high": null,
+      "tau2": null,
+      "zeilen": 1
+    },
+    {
+      "datei": "data/research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+      "gruppe": "health status [log_ratio]",
+      "k": 5,
+      "pooled": -0.1302070415466751,
+      "ci_low": -0.659526940572942,
+      "ci_high": 0.3991128574795919,
+      "tau2": 0.028990076763629493,
+      "zeilen": 5
+    },
+    {
+      "datei": "data/research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+      "gruppe": "height [raw:heritability]",
+      "k": 1,
+      "pooled": null,
+      "ci_low": null,
+      "ci_high": null,
+      "tau2": null,
+      "zeilen": 1
+    },
+    {
+      "datei": "data/research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+      "gruppe": "agreement between 12 medas and 24hr [fisher_z]",
+      "k": 1,
+      "pooled": null,
+      "ci_low": null,
+      "ci_high": null,
+      "tau2": null,
+      "zeilen": 1
+    },
+    {
+      "datei": "data/research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+      "gruppe": "body mass index [raw:beta]",
+      "k": 1,
+      "pooled": null,
+      "ci_low": null,
+      "ci_high": null,
+      "tau2": null,
+      "zeilen": 1
+    },
+    {
+      "datei": "data/research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+      "gruppe": "cardiovascular mortality [log_ratio]",
+      "k": 2,
+      "pooled": 1.0119458402184105,
+      "ci_low": 0.7229076234592398,
+      "ci_high": 1.3009840569775812,
+      "tau2": 0.0,
+      "zeilen": 2
+    },
+    {
+      "datei": "data/research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+      "gruppe": "correlation between diet scores [fisher_z]",
+      "k": 1,
+      "pooled": null,
+      "ci_low": null,
+      "ci_high": null,
+      "tau2": null,
+      "zeilen": 1
+    },
+    {
+      "datei": "data/research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+      "gruppe": "correlation between md indices [fisher_z]",
+      "k": 1,
+      "pooled": null,
+      "ci_low": null,
+      "ci_high": null,
+      "tau2": null,
+      "zeilen": 1
+    },
+    {
+      "datei": "data/research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+      "gruppe": "hypertension [log_ratio]",
+      "k": 1,
+      "pooled": null,
+      "ci_low": null,
+      "ci_high": null,
+      "tau2": null,
+      "zeilen": 1
+    },
+    {
+      "datei": "data/research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+      "gruppe": "hypertension preeclampsia [log_ratio]",
+      "k": 1,
+      "pooled": null,
+      "ci_low": null,
+      "ci_high": null,
+      "tau2": null,
+      "zeilen": 1
+    },
+    {
+      "datei": "data/research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+      "gruppe": "hypertensive disorders of pregnancy [log_ratio]",
+      "k": 1,
+      "pooled": null,
+      "ci_low": null,
+      "ci_high": null,
+      "tau2": null,
+      "zeilen": 1
+    },
+    {
+      "datei": "data/research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+      "gruppe": "incident cardiovascular disease [log_ratio]",
+      "k": 4,
+      "pooled": 0.17752888134495023,
+      "ci_low": -0.9138758921121994,
+      "ci_high": 1.2689336548021,
+      "tau2": 0.36318154113103296,
+      "zeilen": 4
+    },
+    {
+      "datei": "data/research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+      "gruppe": "major adverse cardiovascular events [log_ratio]",
+      "k": 3,
+      "pooled": 0.7701045812905178,
+      "ci_low": 0.25884151268305733,
+      "ci_high": 1.2813676498979785,
+      "tau2": 0.0026802742871075763,
+      "zeilen": 3
+    },
+    {
+      "datei": "data/research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+      "gruppe": "mediterranean diet adherence screener [raw:mean_diff]",
+      "k": 1,
+      "pooled": null,
+      "ci_low": null,
+      "ci_high": null,
+      "tau2": null,
+      "zeilen": 1
+    },
+    {
+      "datei": "data/research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+      "gruppe": "preeclampsia [log_ratio]",
+      "k": 1,
+      "pooled": null,
+      "ci_low": null,
+      "ci_high": null,
+      "tau2": null,
+      "zeilen": 1
+    },
+    {
+      "datei": "data/research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+      "gruppe": "test retest reliability [fisher_z]",
+      "k": 1,
+      "pooled": null,
+      "ci_low": null,
+      "ci_high": null,
+      "tau2": null,
+      "zeilen": 1
+    },
+    {
+      "datei": "data/research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+      "gruppe": "test retest reliability of medas [fisher_z]",
+      "k": 1,
+      "pooled": null,
+      "ci_low": null,
+      "ci_high": null,
+      "tau2": null,
+      "zeilen": 1
+    },
+    {
+      "datei": "data/research2-does-melatonin-improve-sleep-onset-laten-382747.db",
+      "gruppe": "sleep quality [fisher_z]",
+      "k": 1,
+      "pooled": null,
+      "ci_low": null,
+      "ci_high": null,
+      "tau2": null,
+      "zeilen": 1
+    },
+    {
+      "datei": "data/research2-does-melatonin-improve-sleep-onset-laten-382747.db",
+      "gruppe": "sleep quality [raw:beta]",
+      "k": 1,
+      "pooled": null,
+      "ci_low": null,
+      "ci_high": null,
+      "tau2": null,
+      "zeilen": 1
+    }
+  ]
+}

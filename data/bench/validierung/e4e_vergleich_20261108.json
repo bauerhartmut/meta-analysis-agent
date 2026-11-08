@@ -1,0 +1,116 @@
+{
+  "stand": "2026-11-08T23:20:39",
+  "modellaufrufe": 0,
+  "tokens": 0,
+  "geaendert": [
+    {
+      "datei": "data/research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+      "gruppe": "depressive symptoms [fisher_z]",
+      "k_vorher": 1,
+      "k_nachher": 2,
+      "pooled_vorher": null,
+      "pooled_nachher": -0.18006544697823212,
+      "ci_vorher": [
+        null,
+        null
+      ],
+      "ci_nachher": [
+        -0.5475925592784616,
+        0.18746166532199732
+      ],
+      "tau2_vorher": null,
+      "tau2_nachher": 0.0015259068671551355
+    },
+    {
+      "datei": "data/research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+      "gruppe": "depressive symptoms [raw:beta]",
+      "k_vorher": 3,
+      "k_nachher": 4,
+      "pooled_vorher": -0.023090776522521197,
+      "pooled_nachher": -0.03253429831168264,
+      "ci_vorher": [
+        -0.5449636754416773,
+        0.49878212239663494
+      ],
+      "ci_nachher": [
+        -0.30063030484562286,
+        0.23556170822225758
+      ],
+      "tau2_vorher": 0.03645254000809411,
+      "tau2_nachher": 0.015726000858976987
+    },
+    {
+      "datei": "data/research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+      "gruppe": "frailty index [raw:beta]",
+      "k_vorher": 1,
+      "k_nachher": 2,
+      "pooled_vorher": null,
+      "pooled_nachher": 0.14238733252131547,
+      "ci_vorher": [
+        null,
+        null
+      ],
+      "ci_nachher": [
+        0.08821959003957094,
+        0.19655507500306
+      ],
+      "tau2_vorher": null,
+      "tau2_nachher": 0.0
+    },
+    {
+      "datei": "data/research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+      "gruppe": "incident cardiovascular disease [log_ratio]",
+      "k_vorher": 4,
+      "k_nachher": 5,
+      "pooled_vorher": 0.17752888134495023,
+      "pooled_nachher": 0.24029736413754801,
+      "ci_vorher": [
+        -0.9138758921121994,
+        1.2689336548021
+      ],
+      "ci_nachher": [
+        -0.5240470573358166,
+        1.0046417856109127
+      ],
+      "tau2_vorher": 0.36318154113103296,
+      "tau2_nachher": 0.34690104842965935
+    },
+    {
+      "datei": "data/research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+      "gruppe": "major adverse cardiovascular events [log_ratio]",
+      "k_vorher": 3,
+      "k_nachher": 4,
+      "pooled_vorher": 0.7701045812905178,
+      "pooled_nachher": 0.7415965409494402,
+      "ci_vorher": [
+        0.25884151268305733,
+        1.2813676498979785
+      ],
+      "ci_nachher": [
+        0.4297589550519663,
+        1.053434126846914
+      ],
+      "tau2_vorher": 0.0026802742871075763,
+      "tau2_nachher": 0.0
+    },
+    {
+      "datei": "data/research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+      "gruppe": "preeclampsia [log_ratio]",
+      "k_vorher": 1,
+      "k_nachher": 5,
+      "pooled_vorher": null,
+      "pooled_nachher": -0.3086131441470696,
+      "ci_vorher": [
+        null,
+        null
+      ],
+      "ci_nachher": [
+        -0.4908292005899775,
+        -0.1263970877041617
+      ],
+      "tau2_vorher": null,
+      "tau2_nachher": 0.0
+    }
+  ],
+  "gruppen_gesamt": 38
+}
