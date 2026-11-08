@@ -330,3 +330,28 @@ Grenze: Der Kollaps greift je Outcome-Gruppe und zaehlt auch legitime
 abhaengige Zeilen (Arme, Kontraste) - bei kognition halbiert er k von 10 auf
 5. Das ist Absicht (Unabhaengigkeit), macht die 39 aber zur Obergrenze.
 Details: `e4_duplikate_20261108.md`.
+
+### Nachtrag 7: was der Kollaps verwirft (E4d)
+
+Die 39 verworfenen Zeilen wurden gegen ihre Quote klassifiziert (Nachbau der
+Kollaps-Logik, Abgleich 39 = 39): 26 exakte Dubletten, 4 mit gleichem Wert
+und anderer Belegstelle, 9 mit einem anderen Effekt.
+
+Die 26 exakten Dubletten sind ein Speicherfehler ohne Erkenntnisverlust; der
+Kollaps entfernt sie richtig. Bei den 9 anderen Effekten behaelt das Pooling
+willkuerlich die praezisere Zeile - und das ist nicht immer die richtige:
+
+- incident CVD: behalten OR 2,65 (Rheumatoide Arthritis), verworfen OR 1,67
+  (Mittelmeer-Diaet) - verschiedene Expositionen in einer Outcome-Gruppe.
+- MACE: behalten OR 2,2 (abdominale Adipositas), verworfen OR 1,78
+  (Ernaehrungsrisiko) - ebenfalls verschiedene Expositionen.
+- preeclampsia: 0,78 behalten gegen 0,31/0,72/0,76/0,61 verworfen - vier
+  unabhaengige Schaetzungen, teils andere Adjustierung oder anderes Mass.
+- frailty: 0,14 (ELSA) gegen 0,15 (LBC1936) - zwei Kohorten.
+- depressive symptoms: zwei Wertebereiche aus einer Aussage.
+
+Also: kein Gewichtsfehler (die Dubletten sind weg), aber 9 Zeilen
+Informationsverlust, davon mindestens zwei mit falscher Auswahl, weil der
+Kollaps nach Quelle und Outcome gruppiert, nicht nach Exposition. Das ist
+eine inhaltliche Grenze des Poolings, nicht der Zaehlung.
+Details: `e4_kollaps_20261108.md`.

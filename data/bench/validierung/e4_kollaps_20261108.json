@@ -1,0 +1,378 @@
+{
+  "test": "E4d-kollaps",
+  "stand": "2026-11-08T23:14:56",
+  "modellaufrufe": 0,
+  "tokens": 0,
+  "themen_dbs": 10,
+  "verworfen_gesamt": 39,
+  "kollabiert_laut_analysis": 39,
+  "zaehlung": {
+    "exakte_dublette": 26,
+    "gleicher_wert": 4,
+    "anderer_effekt": 9
+  },
+  "gruende": {
+    "quelle": 39
+  },
+  "dateien": [
+    {
+      "datei": "data/harness_local.db",
+      "verworfen_hier": 1,
+      "kollabiert_laut_analysis": 1
+    },
+    {
+      "datei": "data/research-does-acute-caffeine-versus-placebo-affec-972eac.db",
+      "verworfen_hier": 0,
+      "kollabiert_laut_analysis": 0
+    },
+    {
+      "datei": "data/research-does-caffeine-intake-affect-short-term-m-783a51.db",
+      "verworfen_hier": 0,
+      "kollabiert_laut_analysis": 0
+    },
+    {
+      "datei": "data/research-does-melatonin-improve-sleep-onset-laten-382747.db",
+      "verworfen_hier": 0,
+      "kollabiert_laut_analysis": 0
+    },
+    {
+      "datei": "data/research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+      "verworfen_hier": 12,
+      "kollabiert_laut_analysis": 12
+    },
+    {
+      "datei": "data/research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+      "verworfen_hier": 9,
+      "kollabiert_laut_analysis": 9
+    },
+    {
+      "datei": "data/research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+      "verworfen_hier": 16,
+      "kollabiert_laut_analysis": 16
+    },
+    {
+      "datei": "data/research.db",
+      "verworfen_hier": 0,
+      "kollabiert_laut_analysis": 0
+    },
+    {
+      "datei": "data/research2-does-melatonin-improve-sleep-onset-laten-382747.db",
+      "verworfen_hier": 1,
+      "kollabiert_laut_analysis": 1
+    }
+  ],
+  "details": [
+    {
+      "datei": "data/research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+      "art": "anderer_effekt",
+      "outcome": "depressive symptoms",
+      "grund": "quelle",
+      "behalten": {
+        "effect": -0.15,
+        "ci": [
+          null,
+          null
+        ],
+        "outcome": "depressive symptoms",
+        "quote": "PA was significantly negatively correlated with emotional depressive symptoms (rs=[−0.150, −0.206]; P < 0.001) and physical depressive symptoms (rs=[−0.225, −0.266]; P < 0.001)"
+      },
+      "verworfen": {
+        "effect": -0.206,
+        "ci": [
+          null,
+          null
+        ],
+        "outcome": "depressive symptoms",
+        "quote": "PA was significantly negatively correlated with emotional depressive symptoms (rs=[−0.150, −0.206]; P < 0.001) and physical depressive symptoms (rs=[−0.225, −0.266]; P < 0.001)"
+      }
+    },
+    {
+      "datei": "data/research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+      "art": "anderer_effekt",
+      "outcome": "depressive symptoms",
+      "grund": "quelle",
+      "behalten": {
+        "effect": -0.11,
+        "ci": [
+          -0.15,
+          -0.02
+        ],
+        "outcome": "depressive symptoms",
+        "quote": "depressive symptoms: −0.06 to −0.11 (standardized beta) and −0.02 to −0.15 (confidence intervals)."
+      },
+      "verworfen": {
+        "effect": -0.06,
+        "ci": [
+          -0.15,
+          -0.02
+        ],
+        "outcome": "depressive symptoms",
+        "quote": "depressive symptoms: −0.06 to −0.11 (standardized beta) and −0.02 to −0.15 (confidence intervals)."
+      }
+    },
+    {
+      "datei": "data/research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+      "art": "gleicher_wert",
+      "outcome": "height",
+      "grund": "quelle",
+      "behalten": {
+        "effect": 0.699,
+        "ci": [
+          null,
+          null
+        ],
+        "outcome": "Height",
+        "quote": "We validate our method in simulations and apply it to PGIs for height and educational attainment (EA), estimating that the equilibrium heritability of height is 0.699 (S.E. = 0.075"
+      },
+      "verworfen": {
+        "effect": 0.699,
+        "ci": [
+          null,
+          null
+        ],
+        "outcome": "Height",
+        "quote": "estimating that the equilibrium heritability of height is 0.699 (S.E. = 0.075)"
+      }
+    },
+    {
+      "datei": "data/research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+      "art": "anderer_effekt",
+      "outcome": "frailty index",
+      "grund": "quelle",
+      "behalten": {
+        "effect": 0.14,
+        "ci": [
+          0.1,
+          0.17
+        ],
+        "outcome": "Frailty Index",
+        "quote": "Frailty PRS significantly predicted frailty, measured via the FI, at all-time points in LBC1936 and ELSA, explaining 2.1% (β = 0.15, 95%CI, 0.085–0.21) and 1.8% (β = 0.14, 95%CI, 0"
+      },
+      "verworfen": {
+        "effect": 0.15,
+        "ci": [
+          0.085,
+          0.21
+        ],
+        "outcome": "Frailty Index",
+        "quote": "Frailty PRS significantly predicted frailty, measured via the FI, at all-time points in LBC1936 and ELSA, explaining 2.1% (β = 0.15, 95%CI, 0.085–0.21) and 1.8% (β = 0.14, 95%CI, 0"
+      }
+    },
+    {
+      "datei": "data/research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+      "art": "gleicher_wert",
+      "outcome": "educational attainment",
+      "grund": "quelle",
+      "behalten": {
+        "effect": 0.6,
+        "ci": [
+          0.39,
+          0.76
+        ],
+        "outcome": "Educational Attainment (HS+)",
+        "quote": "Additive twin heritability (h2twin) from Bayesian liability‑threshold ACE models (Figure 6a) was highest for HS+ (≈ 0.60, 95% credible interval [0.39, 0.76]) and declined progressi"
+      },
+      "verworfen": {
+        "effect": 0.6,
+        "ci": [
+          0.39,
+          0.76
+        ],
+        "outcome": "Educational Attainment (High School Completion)",
+        "quote": "Additive twin heritability (h2twin) from Bayesian liability‑threshold ACE models (Figure 6a) was highest for HS+ (≈ 0.60, 95% credible interval [0.39, 0.76]) and declined progressi"
+      }
+    },
+    {
+      "datei": "data/research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+      "art": "anderer_effekt",
+      "outcome": "incident cardiovascular disease",
+      "grund": "quelle",
+      "behalten": {
+        "effect": 2.65,
+        "ci": [
+          1.69,
+          4.16
+        ],
+        "outcome": "Incident cardiovascular disease",
+        "quote": "The result of multivariate logistic regression model indicated that RA was associated with an increased risk of CVD (Model 1: OR = 3.98, 95%CI: 2.76–5.73, P < 0.001; Model 2: OR = "
+      },
+      "verworfen": {
+        "effect": 1.67,
+        "ci": [
+          1.01,
+          2.77
+        ],
+        "outcome": "Incident cardiovascular disease",
+        "quote": "Compared to those who were high adherence to the MD, those who were low adherence to the MD were positively associated with the risk of CVD [OR of 1.82 (95% CI: 1.13–2.93, P = 0.01"
+      }
+    },
+    {
+      "datei": "data/research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+      "art": "anderer_effekt",
+      "outcome": "preeclampsia",
+      "grund": "quelle",
+      "behalten": {
+        "effect": 0.78,
+        "ci": [
+          0.64,
+          0.96
+        ],
+        "outcome": "Preeclampsia",
+        "quote": "Higher Mediterranean diet adherence was associated with lower preeclampsia odds (highest vs. lowest tertile aOR 0.78, 95% CI 0.64–0.96)."
+      },
+      "verworfen": {
+        "effect": 0.31,
+        "ci": [
+          0.11,
+          0.87
+        ],
+        "outcome": "Preeclampsia",
+        "quote": "Higher AMED scores at 8–13 weeks gestation were significantly associated with a lower risk of preeclampsia (adjusted RR for highest vs. lowest quartile: 0.31 [95% CI: 0.11, 0.87], "
+      }
+    },
+    {
+      "datei": "data/research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+      "art": "anderer_effekt",
+      "outcome": "preeclampsia",
+      "grund": "quelle",
+      "behalten": {
+        "effect": 0.78,
+        "ci": [
+          0.64,
+          0.96
+        ],
+        "outcome": "Preeclampsia",
+        "quote": "Higher Mediterranean diet adherence was associated with lower preeclampsia odds (highest vs. lowest tertile aOR 0.78, 95% CI 0.64–0.96)."
+      },
+      "verworfen": {
+        "effect": 0.72,
+        "ci": [
+          0.55,
+          0.93
+        ],
+        "outcome": "Preeclampsia",
+        "quote": "Using the Alternate Mediterranean Diet (aMed) score based on periconceptional dietary intake, researchers found that high vs. low aMed score was associated with 28% lower odds of p"
+      }
+    },
+    {
+      "datei": "data/research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+      "art": "anderer_effekt",
+      "outcome": "preeclampsia",
+      "grund": "quelle",
+      "behalten": {
+        "effect": 0.78,
+        "ci": [
+          0.64,
+          0.96
+        ],
+        "outcome": "Preeclampsia",
+        "quote": "Higher Mediterranean diet adherence was associated with lower preeclampsia odds (highest vs. lowest tertile aOR 0.78, 95% CI 0.64–0.96)."
+      },
+      "verworfen": {
+        "effect": 0.76,
+        "ci": [
+          0.56,
+          1.03
+        ],
+        "outcome": "Preeclampsia",
+        "quote": "The ESTEEM trial (48), which randomized 1,138 pregnant women with metabolic risk factors to a Mediterranean diet intervention supplemented with mixed nuts and extra virgin olive oi"
+      }
+    },
+    {
+      "datei": "data/research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+      "art": "anderer_effekt",
+      "outcome": "preeclampsia",
+      "grund": "quelle",
+      "behalten": {
+        "effect": 0.78,
+        "ci": [
+          0.64,
+          0.96
+        ],
+        "outcome": "Preeclampsia",
+        "quote": "Higher Mediterranean diet adherence was associated with lower preeclampsia odds (highest vs. lowest tertile aOR 0.78, 95% CI 0.64–0.96)."
+      },
+      "verworfen": {
+        "effect": 0.61,
+        "ci": [
+          0.37,
+          1.01
+        ],
+        "outcome": "Preeclampsia",
+        "quote": "Similarly, the study by Crovetto et al. (51) found a reduced risk of preeclampsia in the Mediterranean diet group (RR 0.61; 95% CI, 0.37–1.01) that approached statistical significa"
+      }
+    },
+    {
+      "datei": "data/research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+      "art": "anderer_effekt",
+      "outcome": "major adverse cardiovascular events",
+      "grund": "quelle",
+      "behalten": {
+        "effect": 2.2,
+        "ci": [
+          1.6,
+          4.2
+        ],
+        "outcome": "Major adverse cardiovascular events",
+        "quote": "In multivariate logistic regression, adjusted for age and other MetS components, abdominal obesity (OR = 2.2, 95% CI = 1.6–4.2, p = 0.001) and low HDL-c (OR = 1.9, 95% CI = 1.4–3.5"
+      },
+      "verworfen": {
+        "effect": 1.784,
+        "ci": [
+          1.04,
+          3.118
+        ],
+        "outcome": "Major adverse cardiovascular events",
+        "quote": "Baseline abdominal obesity, present in 78.1% of the cohort, was significantly associated with incident MACEs (OR = 1.784, 95% CI = 1.04–3.118, p = 0.038), whereas BMI-defined obesi"
+      }
+    },
+    {
+      "datei": "data/research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+      "art": "gleicher_wert",
+      "outcome": "major adverse cardiovascular events",
+      "grund": "quelle",
+      "behalten": {
+        "effect": 2.63,
+        "ci": [
+          1.81,
+          3.83
+        ],
+        "outcome": "Major adverse cardiovascular events",
+        "quote": "Likewise, the risk of major adverse cardiovascular events (MACE) escalated by 2.63 times (OR 2.63, 95% CI 1.813.83, p < 0.001), heart failure by 2.23 times (OR 2.23, 95% CI 1.403.5"
+      },
+      "verworfen": {
+        "effect": 2.63,
+        "ci": [
+          1.81,
+          3.83
+        ],
+        "outcome": "Major adverse cardiovascular events",
+        "quote": "High dietary risk was significantly associated with MACE (OR 2.63, 95% CI 1.81–3.83), stroke (OR 4.82, 95% CI 2.41–9.64), and cardiovascular mortality (OR 4.13, 95% CI 1.78–9.57)."
+      }
+    },
+    {
+      "datei": "data/research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+      "art": "gleicher_wert",
+      "outcome": "correlation between md indices",
+      "grund": "quelle",
+      "behalten": {
+        "effect": 0.69,
+        "ci": [
+          null,
+          null
+        ],
+        "outcome": "Correlation between MD indices",
+        "quote": "Significant positive correlations showing high levels of agreement between the results of the five indices were observed ( P < 0.001), with the highest correlations between the MDS"
+      },
+      "verworfen": {
+        "effect": 0.69,
+        "ci": [
+          null,
+          null
+        ],
+        "outcome": "Correlation between MD indices",
+        "quote": "Significant positive correlations showing high levels of agreement between the results of the five indices were observed ( P < 0.001), with the highest correlations between the MDS"
+      }
+    }
+  ]
+}
