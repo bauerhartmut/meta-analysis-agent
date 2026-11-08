@@ -62,7 +62,7 @@ lediglich Change-Werte (-3,71 (47,37) mit p-Werten); von 48 erkannten
 Bloecken hat kein Kopf Effektwort und KI.
 
 Fuer die Analyse ist das folgenlos - S1 stammt aus HTA-Tabelle 7
-(`mends_hta_zusatz_20261108.md`), und der Volltextsaetze bestaetigt die
+(`mends_hta_zusatz_20261108.md`), und der Volltextsatz bestaetigt die
 Zahl. Fuer die Automatisierung ist es die Grenze: Ein Fliesstext-Leser
 muesste zwei Effekte im selben Satz trennen, sonst wird S1 doppelt
 gezaehlt. Eine solche Erweiterung ist bewusst nicht gebaut.
