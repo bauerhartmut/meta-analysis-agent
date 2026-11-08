@@ -1,0 +1,170 @@
+{
+  "generated": "2026-11-08T13:00:21",
+  "screened_documents": 20,
+  "tables_with_sol": 19,
+  "tables_with_single_arm": 3,
+  "single_arm_rows": 5,
+  "pairable_tables": 0,
+  "finding": [
+    {
+      "pmc": "PMC12903794",
+      "table": 1,
+      "caption": "Clinical characteristics of the 33 patients enrolled in the study.",
+      "sol_rows": 2,
+      "single_arm_outcomes": [],
+      "pairable_outcomes": []
+    },
+    {
+      "pmc": "PMC12903794",
+      "table": 2,
+      "caption": "Sleep Latency in the FAS set. Non‐inferiority: Difference between treatments −0.35; non‐inferiority limit −0.3707/+∞.",
+      "sol_rows": 1,
+      "single_arm_outcomes": [],
+      "pairable_outcomes": []
+    },
+    {
+      "pmc": "PMC12903794",
+      "table": 3,
+      "caption": "Sleep Latency in the PP set. Non‐inferiority: Difference between treatments −0.37; non‐inferiority limit −0.3905/+∞.",
+      "sol_rows": 1,
+      "single_arm_outcomes": [],
+      "pairable_outcomes": []
+    },
+    {
+      "pmc": "PMC11103136",
+      "table": 1,
+      "caption": "Sleep pattern (mean ± SD; n = 64).",
+      "sol_rows": 1,
+      "single_arm_outcomes": [],
+      "pairable_outcomes": []
+    },
+    {
+      "pmc": "PMC10131443",
+      "table": 2,
+      "caption": "Sleep parameters at the beginning and end of the trial",
+      "sol_rows": 1,
+      "single_arm_outcomes": [
+        "Sleep Latency"
+      ],
+      "pairable_outcomes": []
+    },
+    {
+      "pmc": "PMC5774131",
+      "table": 0,
+      "caption": "Baseline characteristics across treatment sequence",
+      "sol_rows": 1,
+      "single_arm_outcomes": [],
+      "pairable_outcomes": []
+    },
+    {
+      "pmc": "PMC5774131",
+      "table": 1,
+      "caption": "Mixed-model results, including mean estimate under both treatments, the difference of treatments (melatonin minus placeb",
+      "sol_rows": 1,
+      "single_arm_outcomes": [],
+      "pairable_outcomes": []
+    },
+    {
+      "pmc": "PMC4365553",
+      "table": 0,
+      "caption": "Characteristics of healthy subjects in the baseline night of simulated ICU noise and light (Baseline NL )",
+      "sol_rows": 1,
+      "single_arm_outcomes": [],
+      "pairable_outcomes": []
+    },
+    {
+      "pmc": "PMC4365553",
+      "table": 1,
+      "caption": "Comparison of sleep architecture between baseline night and simulated ICU noise and light night",
+      "sol_rows": 1,
+      "single_arm_outcomes": [],
+      "pairable_outcomes": []
+    },
+    {
+      "pmc": "PMC4365553",
+      "table": 2,
+      "caption": "Comparison of sleep architecture in simulated ICU noise and light night for different study conditions",
+      "sol_rows": 1,
+      "single_arm_outcomes": [],
+      "pairable_outcomes": []
+    },
+    {
+      "pmc": "PMC4425994",
+      "table": 1,
+      "caption": "Subject characteristics and pre-treatment (baseline) data",
+      "sol_rows": 2,
+      "single_arm_outcomes": [],
+      "pairable_outcomes": []
+    },
+    {
+      "pmc": "PMC4425994",
+      "table": 2,
+      "caption": "Primary and secondary outcome results from each phase of trial",
+      "sol_rows": 2,
+      "single_arm_outcomes": [],
+      "pairable_outcomes": []
+    },
+    {
+      "pmc": "PMC3489506",
+      "table": 0,
+      "caption": "Baseline characteristics of children with neurodevelopmental disorders in study of effect of melatonin on sleep problems",
+      "sol_rows": 2,
+      "single_arm_outcomes": [],
+      "pairable_outcomes": []
+    },
+    {
+      "pmc": "PMC3489506",
+      "table": 2,
+      "caption": "Primary and secondary sleep outcomes in study of effect of melatonin on sleep problems in children with neurodevelopment",
+      "sol_rows": 2,
+      "single_arm_outcomes": [],
+      "pairable_outcomes": []
+    },
+    {
+      "pmc": "PMC3489506",
+      "table": 8,
+      "caption": "Summary of findings from systematic reviews of melatonin v placebo to treat sleep disorders",
+      "sol_rows": 3,
+      "single_arm_outcomes": [],
+      "pairable_outcomes": []
+    },
+    {
+      "pmc": "PMC2933606",
+      "table": 3,
+      "caption": "Sleep diary parameters in the low excretors.",
+      "sol_rows": 2,
+      "single_arm_outcomes": [
+        "Sleep latency",
+        "Sleep onset"
+      ],
+      "pairable_outcomes": []
+    },
+    {
+      "pmc": "PMC2933606",
+      "table": 5,
+      "caption": "Sleep Diary parameters in the 65-80 age group.",
+      "sol_rows": 2,
+      "single_arm_outcomes": [
+        "Sleep latency",
+        "Sleep onset"
+      ],
+      "pairable_outcomes": []
+    },
+    {
+      "pmc": "PMC2952772",
+      "table": 1,
+      "caption": "Comparison of DLMO and sleep measures sleep onset and sleep onset latency between the three melatonin dosage groups and ",
+      "sol_rows": 3,
+      "single_arm_outcomes": [],
+      "pairable_outcomes": []
+    },
+    {
+      "pmc": "PMC2952772",
+      "table": 2,
+      "caption": "Results of bivariate correlation analysis for dosage, PAD, TOA in clock time and in circadian time, and shifts of DLMO, ",
+      "sol_rows": 1,
+      "single_arm_outcomes": [],
+      "pairable_outcomes": []
+    }
+  ]
+}
