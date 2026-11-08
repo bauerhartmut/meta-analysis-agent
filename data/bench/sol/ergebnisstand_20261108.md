@@ -8,8 +8,7 @@ dieses Repos und sind mit den dort genannten Skripten nachrechenbar.
 Der Melatonin-Korpus traegt **keine gepoolte Aussage zur Einschaflatenz**.
 Von 1099 gespeicherten Effektzeilen betreffen 13 das Zielmass
 (1,2 %), sie stammen aus 7 Quellen; nach den Design- und
-Baseline-Gates bleiben **11 Zeilen aus 5 Quellen**. Fuer orales Melatonin
-bleibt **k = 1**. Ein gepoolter Wert wird nicht berichtet.
+Baseline-Gates bleiben **11 Zeilen aus 5 Quellen**. Fuer orales Melatonin bleibt **k = 0**: im Korpus wurde kein randomisierter Melatonin-Vergleich mit Arm-Mittelwerten zur Einschaflatenz gefunden. Ein gepoolter Wert wird nicht berichtet.
 
 Der Korpus ist vollstaendig ausgewertet: 1059 Manifest-Eintraege, alle
 Volltexte gelesen (1.056 aus dem Lauf plus 3 ueber NCBI nachgeladen; 33 von 33
@@ -26,7 +25,7 @@ Europe PMC).
 | SOL-Zeilen / Anteil | 13 / 1,2 % |
 | SOL-Quellen | 7 |
 | SOL-Zeilen nach Gates / Quellen | 11 / 5 |
-| unabhaengige Melatonin-Studien mit SOL in Minuten | **1** |
+| unabhaengige Melatonin-RCTs mit SOL-Armdaten | **0** |
 
 ## Die vier widerlegten Ausbeute-Hebel
 
@@ -80,3 +79,26 @@ aufgeloest.
 | `sol_kriterium_befund_20261108.md` | 14 Zeilen aus 8 Quellen, 3 neue ohne Melatonin |
 | `xml_nachladen_20261108.md` | 10 Dokumente ueber NCBI, 62 Zeilen, 0 Effekte |
 | `probleme_und_offene_fragen_status_20261108.md` | Endstand der elf Punkte |
+
+## Korrektur vom 08.11.2026: k = 0 statt k = 1
+
+Die maschinelle Vorsichtung der 57 Zensus-Dokumente
+(`zensus_vorurteil_20261108.md`) hat den frueheren Satz k = 1 widerlegt.
+Keine der sieben Quellen mit SOL-Zeilen ist eine Melatonin-RCT:
+
+| Quelle | Intervention | Verwendbarkeit fuer den Pool |
+|---|---|---|
+| doi:10.3389/fnins.2026.1816963 | rTMS (Metaanalyse) | kein Melatonin |
+| doi:10.2147/nss.s460882 | Mikrobiom-Transplantation | kein Melatonin |
+| doi:10.1093/sleep/zsae250 | Crossover, Schlafindizes | kein Melatonin |
+| doi:10.1111/jsr.70311 | Ernaehrungsberatung | kein Melatonin |
+| doi:10.1093/sleep/zsaa194 | Krankenhauslicht | kein Melatonin |
+| doi:10.2188/jea.je20140201 | Katarakt-Vergleich | kein Melatonin |
+| doi:10.1001/jamanetworkopen.2026.26983 | Melatonin bei Kindern | Beobachtungsstudie, Modellkoeffizient 0,07 (KI -0,04 bis 0,17), kein Arm-Mittelwert |
+
+Damit lautet der Befund: **im Korpus liegt kein Melatonin-RCT mit
+Arm-Mittelwerten zur Einschaflatenz**. Die Zahl der SOL-Zeilen (13 von 1.099,
+7 Quellen; nach Gates 11 aus 5) bleibt richtig - die Zuordnung "k = 1" war es
+nicht. Die Obergrenze aus der Sichtungsliste (49,4 Dokumente bei 0 Treffern in
+der Stichprobe) ist davon unberuehrt und bleibt bis zur Sichtung der 60
+Zufallsdokumente bestehen.
