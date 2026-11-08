@@ -357,7 +357,15 @@ def _role_columns(header: Sequence[str]) -> Dict[str, List[int]]:
     for index, head in enumerate(list(header or [])):
         if any(index in roles[key] for key in roles):
             continue
-        if re.search(r"\bn\b\s*\)?\s*$", str(head or ""), re.IGNORECASE):
+        text = str(head or "")
+        if re.search(r"\bn\b\s*\)?\s*$", text, re.IGNORECASE):
+            roles["n"].append(index)
+            continue
+        # "Melatonin No of children" ist ebenfalls eine Fallzahlspalte; die
+        # Schreibweise mit "n = 25" deckt die Rollenlogik oben nicht ab.
+        if re.search(r"\b(?:no\.?|number)\s+of\s+"
+                     r"(?:children|patients|participants|subjects)\b",
+                     text, re.IGNORECASE):
             roles["n"].append(index)
     for key in roles:
         roles[key].sort()
@@ -411,7 +419,7 @@ def _paired_arms(header: Sequence[str], cells: Sequence[str],
 
 def arms_from_row(header: Sequence[str], cells: Sequence[str],
                   n_per_arm: Optional[Sequence[int]] = None,
-                  row_group: str = ""
+                  row_group: str = "", spread_hint: str = ""
                   ) -> Tuple[List[ArmStats], str]:
     """Zwei Arme aus einer Tabellenzeile, oder ([], Grund).
 
@@ -452,7 +460,8 @@ def arms_from_row(header: Sequence[str], cells: Sequence[str],
             # zwei Arme zu zerlegen waere eine Rueckrechnung ohne Daten.
             skipped_ratio = True
             continue
-        parsed = parse_mean_spread(cell, role=_role_for(roles, index))
+        parsed = parse_mean_spread(
+            cell, role=_role_for(roles, index) or spread_hint)
         if not parsed:
             continue
         mean, spread, kind = parsed
@@ -551,7 +560,8 @@ def _n_for_column(header: Sequence[str], cells: Sequence[str], index: int,
 
 def convert_row(header: Sequence[str], cells: Sequence[str], outcome: str = "",
                 quote: str = "", n_per_arm: Optional[Sequence[int]] = None,
-                caption: str = "", row_group: str = "") -> Dict:
+                caption: str = "", row_group: str = "",
+                spread_hint: str = "") -> Dict:
     """Eine Tabellenzeile umrechnen; Ergebnis ist speicherfertig oder leer.
 
     Der ``quote`` muss die Zeile woertlich enthalten - der Aufrufer prueft
@@ -598,7 +608,7 @@ def convert_row(header: Sequence[str], cells: Sequence[str], outcome: str = "",
         break
 
     arms, reason = arms_from_row(header, cells, n_per_arm,
-                                  row_group=row_group)
+                                  row_group=row_group, spread_hint=spread_hint)
     if not arms:
         return {"ok": False, "reason": reason}
     named = [arm for arm in arms if _named_group(str(arm.label or ""))]

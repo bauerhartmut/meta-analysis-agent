@@ -1,0 +1,263 @@
+{
+  "generated": "2026-11-08T12:56:33",
+  "documents_total": 31,
+  "screened_in": 20,
+  "k": 0,
+  "rows": 0,
+  "reasons": {
+    "kein Mittelwert mit eindeutiger Streuung in zwei Spalten": 56,
+    "zu wenige Spalten": 12,
+    "nicht genau zwei Spalten mit Mittelwert und Streuung": 9,
+    "Crossover: Armwerte lesbar, n je Arm nicht unabhaengig": 3,
+    "Median/IQR statt Mittelwert mit SD/SE/CI (kein SMD)": 2,
+    "gemischte Zeitpunkte (Baseline und Follow-up) - kein Behandlungseffekt": 1
+  },
+  "documents": [
+    {
+      "pmc": "PMC12903794",
+      "doi": "10.1002/epi4.70169",
+      "year": "2026",
+      "title": "A prospective randomized crossover trial investigating melatonin versus sleep deprivation for sleep induction in nap ele",
+      "sol_rows": 20,
+      "candidates": 0,
+      "stored": 0,
+      "reasons": {
+        "kein Mittelwert mit eindeutiger Streuung in zwei Spalten": 18,
+        "Median/IQR statt Mittelwert mit SD/SE/CI (kein SMD)": 2
+      },
+      "effects": []
+    },
+    {
+      "pmc": "PMC12002473",
+      "doi": "10.1371/journal.pone.0321635",
+      "year": "2025",
+      "title": "Melatonin and sleep parameters in infertile women with endometriosis: first results from the triple-blind randomized con",
+      "sol_rows": 0,
+      "candidates": 0,
+      "stored": 0,
+      "reasons": {},
+      "effects": []
+    },
+    {
+      "pmc": "PMC11103136",
+      "doi": "10.1002/prp2.1205",
+      "year": "2024",
+      "title": "Exogenous melatonin's effect on salivary cortisol and amylase: A randomized controlled trial.",
+      "sol_rows": 1,
+      "candidates": 0,
+      "stored": 0,
+      "reasons": {
+        "Crossover: Armwerte lesbar, n je Arm nicht unabhaengig": 1
+      },
+      "effects": []
+    },
+    {
+      "pmc": "PMC10131443",
+      "doi": "10.1186/s12876-023-02760-0",
+      "year": "2023",
+      "title": "The effect of melatonin on irritable bowel syndrome patients with and without sleep disorders: a randomized double-blind",
+      "sol_rows": 1,
+      "candidates": 0,
+      "stored": 0,
+      "reasons": {
+        "kein Mittelwert mit eindeutiger Streuung in zwei Spalten": 1
+      },
+      "effects": []
+    },
+    {
+      "pmc": "PMC9819026",
+      "doi": "10.3390/ijerph20010552",
+      "year": "2022",
+      "title": "Efficacy of Liposomal Melatonin in sleep EEG in Childhood: A Double Blind Case Control Study.",
+      "sol_rows": 0,
+      "candidates": 0,
+      "stored": 0,
+      "reasons": {},
+      "effects": []
+    },
+    {
+      "pmc": "PMC9433621",
+      "doi": "10.1007/s40268-022-00394-3",
+      "year": "2022",
+      "title": "Bioavailability of Oniria®, a Melatonin Prolonged-Release Formulation, Versus Immediate-Release Melatonin in Healthy Vol",
+      "sol_rows": 0,
+      "candidates": 0,
+      "stored": 0,
+      "reasons": {},
+      "effects": []
+    },
+    {
+      "pmc": "PMC6302692",
+      "doi": "10.4103/ijp.IJP_250_18",
+      "year": "2018",
+      "title": "Efficacy of melatonin on sleep quality after laparoscopic cholecystectomy.",
+      "sol_rows": 0,
+      "candidates": 0,
+      "stored": 0,
+      "reasons": {},
+      "effects": []
+    },
+    {
+      "pmc": "PMC6306655",
+      "doi": "10.1089/cap.2018.0020",
+      "year": "2018",
+      "title": "Long-Term Efficacy and Safety of Pediatric Prolonged-Release Melatonin for Insomnia in Children with Autism Spectrum Dis",
+      "sol_rows": 0,
+      "candidates": 0,
+      "stored": 0,
+      "reasons": {},
+      "effects": []
+    },
+    {
+      "pmc": "PMC5774131",
+      "doi": "10.1186/s12916-017-0995-1",
+      "year": "2018",
+      "title": "Efficacy of melatonin for sleep disturbance following traumatic brain injury: a randomised controlled trial.",
+      "sol_rows": 2,
+      "candidates": 0,
+      "stored": 0,
+      "reasons": {
+        "kein Mittelwert mit eindeutiger Streuung in zwei Spalten": 1,
+        "nicht genau zwei Spalten mit Mittelwert und Streuung": 1
+      },
+      "effects": []
+    },
+    {
+      "pmc": "PMC4365553",
+      "doi": "10.1186/s13054-015-0842-8",
+      "year": "2015",
+      "title": "Effect of oral melatonin and wearing earplugs and eye masks on nocturnal sleep in healthy subjects in a simulated intens",
+      "sol_rows": 3,
+      "candidates": 0,
+      "stored": 0,
+      "reasons": {
+        "nicht genau zwei Spalten mit Mittelwert und Streuung": 2,
+        "gemischte Zeitpunkte (Baseline und Follow-up) - kein Behandlungseffekt": 1
+      },
+      "effects": []
+    },
+    {
+      "pmc": "PMC4425994",
+      "doi": "10.1016/j.sleep.2015.01.005",
+      "year": "2015",
+      "title": "Melatonin improves sleep in children with epilepsy: a randomized, double-blind, crossover study.",
+      "sol_rows": 4,
+      "candidates": 0,
+      "stored": 0,
+      "reasons": {
+        "kein Mittelwert mit eindeutiger Streuung in zwei Spalten": 2,
+        "nicht genau zwei Spalten mit Mittelwert und Streuung": 2
+      },
+      "effects": []
+    },
+    {
+      "pmc": "PMC4066551",
+      "doi": "10.1179/2045772313Y.0000000099",
+      "year": "2014",
+      "title": "Randomized controlled trial of pharmacological replacement of melatonin for sleep disruption in individuals with tetrapl",
+      "sol_rows": 0,
+      "candidates": 0,
+      "stored": 0,
+      "reasons": {},
+      "effects": []
+    },
+    {
+      "pmc": "PMC3489506",
+      "doi": "10.1136/bmj.e6664",
+      "year": "2012",
+      "title": "Melatonin for sleep problems in children with neurodevelopmental disorders: randomised double masked placebo controlled ",
+      "sol_rows": 7,
+      "candidates": 0,
+      "stored": 0,
+      "reasons": {
+        "kein Mittelwert mit eindeutiger Streuung in zwei Spalten": 5,
+        "Crossover: Armwerte lesbar, n je Arm nicht unabhaengig": 2
+      },
+      "effects": []
+    },
+    {
+      "pmc": "PMC3443766",
+      "doi": "10.5665/sleep.2122",
+      "year": "2012",
+      "title": "Repeated melatonin supplementation improves sleep in hypertensive patients treated with beta-blockers: a randomized cont",
+      "sol_rows": 0,
+      "candidates": 0,
+      "stored": 0,
+      "reasons": {},
+      "effects": []
+    },
+    {
+      "pmc": "PMC2933606",
+      "doi": "10.1186/1741-7015-8-51",
+      "year": "2010",
+      "title": "Nightly treatment of primary insomnia with prolonged release melatonin for 6 months: a randomized placebo controlled tri",
+      "sol_rows": 21,
+      "candidates": 0,
+      "stored": 0,
+      "reasons": {
+        "zu wenige Spalten": 9,
+        "kein Mittelwert mit eindeutiger Streuung in zwei Spalten": 8,
+        "nicht genau zwei Spalten mit Mittelwert und Streuung": 4
+      },
+      "effects": []
+    },
+    {
+      "pmc": "PMC2952772",
+      "doi": "10.1007/s00213-010-1962-0",
+      "year": "2010",
+      "title": "Dose finding of melatonin for chronic idiopathic childhood sleep onset insomnia: an RCT.",
+      "sol_rows": 24,
+      "candidates": 0,
+      "stored": 0,
+      "reasons": {
+        "kein Mittelwert mit eindeutiger Streuung in zwei Spalten": 21,
+        "zu wenige Spalten": 3
+      },
+      "effects": []
+    },
+    {
+      "pmc": "PMC2670334",
+      "doi": "pmid:19968048",
+      "year": "2009",
+      "title": "The efficacy of melatonin for sleep problems in children with autism, fragile X syndrome, or autism and fragile X syndro",
+      "sol_rows": 0,
+      "candidates": 0,
+      "stored": 0,
+      "reasons": {},
+      "effects": []
+    },
+    {
+      "pmc": "PMC2668086",
+      "doi": "10.1111/j.1365-2125.2008.03320.x",
+      "year": "2009",
+      "title": "The effects of melatonin on sleep-wake rhythm of daytime haemodialysis patients: a randomized, placebo-controlled, cross",
+      "sol_rows": 0,
+      "candidates": 0,
+      "stored": 0,
+      "reasons": {},
+      "effects": []
+    },
+    {
+      "pmc": "PMC1774717",
+      "doi": "10.1136/gut.2004.062034",
+      "year": "2005",
+      "title": "Melatonin improves abdominal pain in irritable bowel syndrome patients who have sleep disturbances: a randomised, double",
+      "sol_rows": 0,
+      "candidates": 0,
+      "stored": 0,
+      "reasons": {},
+      "effects": []
+    },
+    {
+      "pmc": "PMC3679650",
+      "doi": "10.1046/j.1365-2869.2001.00256.x",
+      "year": "2001",
+      "title": "Effects of melatonin administration on daytime sleep after simulated night shift work.",
+      "sol_rows": 0,
+      "candidates": 0,
+      "stored": 0,
+      "reasons": {},
+      "effects": []
+    }
+  ]
+}
