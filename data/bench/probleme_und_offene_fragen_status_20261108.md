@@ -22,7 +22,7 @@ entschieden, 1 durch Budget blockiert.** Kein Punkt wartet mehr auf Arbeit.
 | Frage | Stand | Beleg / Grund |
 |---|---|---|
 | **1** Endvergleich Run 1 vs. Run 2 | **erledigt** | Run 2 ausgewertet (`q1_befund_20261108.md`, Telemetrie) |
-| **2** PDF-Nachschub für OA-XML-Quellen | **erledigt** | offline 0 PDF / 23 XML / 10 nur PMC; Beschaffung 10 × HTTP 500 (Europe PMC, 20 von 20 Versuchen) und 10 × HTTP 200 (NCBI) → 33/33 lesbar. PDFs sind für die Text-Leser nicht nötig |
+| **2** PDF-Nachschub für OA-XML-Quellen | **erledigt** | offline 0 PDF / 23 XML / 10 nur PMC; Beschaffung 10 × HTTP 500 (Europe PMC; über drei Anläufe 30 von 30 Versuchen) und 10 × HTTP 200 (NCBI) → 33/33 lesbar. PDFs sind für die Text-Leser nicht nötig |
 | **3** Vision-Zeilen ersetzen oder behalten | **entfällt** | es existieren keine Vision-Zeilen; ohne Ziel (P2) auch keine geplant |
 | **4** Meta-Reports aus den Referenz-DBs | **erledigt** | `data/bench/regreports/{exercise,kognition,mediterran}_report_meta.json`, jetzt versioniert |
 | **5** Referenz-Reviews als Goldstandard | **blockiert** — Einkaufsfrage, kein Budget freigegeben | nicht durch Arbeit lösbar |
