@@ -626,7 +626,32 @@ weniger Zeilen und wird breiter, nicht weil sie ehrlicher waere, sondern weil
 ihr Information fehlt. Bei `MACE` und den depressiven Gruppen ist der Effekt
 deutlich; bei `raw:beta` ist er null, weil der Kollaps dort nichts entfernt.
 
-**Umsetzung.** Nur das Messskript wurde geaendert (`pool(sub_rows)` als
-dritte Rechnung, dreiteilige Zerlegung), `pooling.py` bleibt unangetastet.
-Damit entfaellt ein neuer Patch-Eintrag; der Report-Text wurde im bestehenden
-Eintrag `report_rve_re_20261109.md` nachgezogen.
+**Umsetzung.** Fuer die Messung wurde nur das Skript geaendert
+(`pool(sub_rows)` als dritte Rechnung, dreiteilige Zerlegung); der
+Report-Text wurde im bestehenden Eintrag `report_rve_re_20261109.md`
+nachgezogen.
+
+## Nachtrag 16 - Zeilenbasis im RVE-Block (2026-11-09)
+
+Die Zahl 1,82 bei MACE liest sich als reine Cluster-Korrektur. Sie beruht aber
+auf 6 Effektzeilen, waehrend das naive Intervall darueber nur die 4
+kollabierten Zeilen sieht. Ohne diese Angabe ist die Zahl nicht interpretierbar.
+
+**Patch.** `build_analysis` schreibt `rows` und `rows_collapsed` in `rve` und
+`rve_re` (Patch `pooling_rve_weights_20261109.md`); `_meta_section` druckt vor
+dem RVE-Block eine Basiszeile (Patch `report_rve_re_20261109.md`). Die
+Differenz wird gezaehlt, nicht aus `k` geschaetzt - `pool` filtert Zeilen ohne
+Praezision, deshalb waere `rows - k` nicht dasselbe.
+
+**Beleg** (`report_rve_re_20261109.txt`, DB-Kopie):
+
+- MACE: "Zeilenbasis: 6 Effektzeilen, davon 4 nach dem Kollaps (2 abhaengige
+  Zeilen zusammengelegt); gepoolt wurden 4 Zeilen, die RVE rechnet mit allen 6."
+- incident CVD: 6 Zeilen, 5 nach dem Kollaps, 1 zusammengelegt.
+- Eine Gruppe mit 2/2 und 0 zusammengelegten Zeilen zeigt die Zeile ebenfalls -
+sie belegt dann, dass Kollaps und Pool identisch sind.
+
+**Pruefung.** 38 Report-Tests gruen; `pruefe_report_patch.py` Exit 0 mit fuenf
+Markern in `report.py` und drei in `pooling.py`; Sicherungen byte-identisch.
+Fehlen `rows`/`rows_collapsed` (aeltere Analysen), wird die Basiszeile nicht
+ gedruckt.

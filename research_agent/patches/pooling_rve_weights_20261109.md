@@ -22,6 +22,9 @@ Trennung. Die Behauptung "Scheinpraezision" war damit nicht belegt.
   `rve_weights.random_effects_rve` mit denselben Zeilen.
 - `build_analysis` setzt zusaetzlich `analysis["rve_re"]`. Der Report liest
   weiterhin `rve`; das Gate bleibt unveraendert.
+- Nachtrag 2026-11-09 (E4k): `build_analysis` schreibt `rows` (Zeilen vor dem
+  Kollaps) und `rows_collapsed` in `rve` und `rve_re`, damit der Report die
+  Zeilenbasis nennen kann. Keine Rechnung geaendert.
 
 ## Wirkung
 

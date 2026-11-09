@@ -32,6 +32,12 @@ aus der Cluster-Korrektur". Das ist bei `incident CVD` falsch: Cluster 1,49
 und Duplikation 0,78 heben sich teilweise auf, die Summe ist 1,17. Der Text
 nennt die drei Anteile jetzt nicht mehr als Kausalkette.
 
+Nachtrag (2026-11-09, E4k): Vor dem RVE-Block steht jetzt die Zeilenbasis -
+Anzahl Effektzeilen, davon nach dem Kollaps, Anzahl zusammengelegter Zeilen.
+Sie kommt aus `rve["rows"]`/`rve["rows_collapsed"]` (Patch
+`pooling_rve_weights_20261109.md`) und fehlt bei aelteren Analysen, dann wird
+sie nicht gedruckt.
+
 Fehlt `rve_re` (aeltere Analysen), rendert der Report unveraendert.
 
 ## Pruefung

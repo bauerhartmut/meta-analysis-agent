@@ -103,9 +103,15 @@ Duplikation (HKJ_alle/HKJ_koll). Bei `incident CVD` haelt der 1,25-Faktor
 exakt, aber Cluster 1,49 und Duplikation 0,78 heben sich teilweise auf -
 der Report-Satz dazu war falsch und ist korrigiert.
 
+## Nachtrag: Zeilenbasis im RVE-Block (2026-11-09)
+
+Vor dem RVE-Block steht jetzt die Basis: Anzahl Effektzeilen, davon nach dem
+Kollaps, Anzahl zusammengelegter Zeilen. Bei `MACE` sind das 6 und 4 -
+damit ist klar, dass die 1,82 nicht allein die Cluster-Korrektur ist.
+38 Report-Tests gruen, Pruefskript Exit 0 mit fuenf Markern.
+
 ## Empfehlung
 
-Die Duplikation als eigene Groesse in den Report: Bei `MACE` senkt sie die
-Verbreiterung von 2,77 auf 1,82, und ein Leser sieht heute nur die 1,82. Ein
-Satz zur Zeilenbasis wuerde die Zahl davor bewahren, als reine
-Cluster-Korrektur gelesen zu werden.
+Volle Testsuite laufen lassen. `pooling.py` und `report.py` sind seit dem
+letzten Vollauf (1317 passed) dreimal lokal gepatcht; die Report-Suite allein
+deckt keine Aufrufer ausserhalb ab. Ein Lauf, rund 7 Minuten, kein Netz.

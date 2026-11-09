@@ -25,12 +25,13 @@ CHECKS = (
     ("research_agent/meta/pool_gates.py",
      ("def single_cluster_gate", '"single_cluster"')),
     ("research_agent/meta/pooling.py",
-     ("single_cluster_gate(analysis)", 'weights="random"')),
+     ("single_cluster_gate(analysis)", 'weights="random"', "rows_collapsed")),
     ("research_agent/meta/rve_weights.py",
      ("def random_effects_rve",)),
     ("research_agent/report.py",
      ('group.get("single_cluster")', "Kein Konfidenzintervall",
-      'group.get("rve_re")', "allein die Cluster-Korrektur")),
+      'group.get("rve_re")', "allein die Cluster-Korrektur",
+      "Zeilenbasis")),
 )
 
 BACKUP = Path("local_patches") / "report_20261109.py"
