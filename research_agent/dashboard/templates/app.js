@@ -1320,6 +1320,26 @@ async function pollMeta(){
           +(show&&g.pi_low!=null
             ?'<br>Pr\u00E4diktionsintervall: '+Number(g.pi_low).toFixed(3)+' bis '+Number(g.pi_high).toFixed(3)
             :'')
+          +(show&&g.rve&&g.rve.rows!=null
+            ?'<br><span style="color:var(--t3)">Basis: '+g.rve.rows+' Zeilen, '
+              +g.rve.rows_collapsed+' nach dem Kollaps'
+              +(g.rve.rows-g.rve.rows_collapsed>0
+                ?' ('+(g.rve.rows-g.rve.rows_collapsed)+' zusammengelegt)':'')
+              +'</span>'
+            :'')
+          +(show&&g.rve&&g.rve.available
+            ?'<br>RVE (M='+g.rve.M+'): '+Number(g.rve.pooled).toFixed(3)
+              +' ['+Number(g.rve.ci_low).toFixed(3)+'; '+Number(g.rve.ci_high).toFixed(3)+']'
+            :'')
+          +(show&&g.rve_re&&g.rve_re.available
+            ?'<br><span style="color:var(--t2)">RVE-RE (\u03C4\u00B2 in den Gewichten): </span>'
+              +Number(g.rve_re.pooled).toFixed(3)
+              +' ['+Number(g.rve_re.ci_low).toFixed(3)+'; '+Number(g.rve_re.ci_high).toFixed(3)+']'
+              +(g.rve&&g.rve.available&&g.rve.ci_low!=null&&g.rve.ci_high!=null
+                ?' <span style="color:var(--t3)">\u00B7 Breite \u00D7'
+                  +((g.rve_re.ci_high-g.rve_re.ci_low)/(g.rve.ci_high-g.rve.ci_low)).toFixed(2)+'</span>'
+                :'')
+            :'')
           +gradeLine
           +'</div></div>';
       }).join('')
