@@ -33,14 +33,19 @@ Zwei Nebenbefunde:
    vergleicht (Dashboards, Caches, Tests), vergleicht dann nicht dieselbe
    Sache. Für den Bericht ist das unkritisch, weil er Gruppen nicht über
    Namen adressiert.
-2. **Ein fehlerhaftes Ziel-Payload ergibt HTTP 200 mit `error`-Feld.** Mein
+2. **Ein fehlerhaftes Ziel-Payload ergab HTTP 200 mit `error`-Feld.** Mein
    erster Testlauf schrieb `outcomes` als Liste von Strings; `target_labels`
    erwartet Objekte mit `label` und warf `'str' object has no attribute 'get'`.
    Der Endpunkt fing das ab und antwortete mit `groups: {}` und
-   `error: "..."`, nicht mit 500. Das ist für den Betrieb gut (kein Absturz),
-   aber für Monitoring schlecht: Eine kaputte Zieldefinition sieht wie eine
-   leere Auswertung aus. Der Zustand ist von „keine Studien" nicht zu
-   unterscheiden, wenn man nur den Statuscode liest.
+   `error: "..."`, nicht mit 500 — eine kaputte Zieldefinition war von „keine
+   Studien" nur im Body zu unterscheiden.
+
+   **Behoben am selben Tag.** Die Zieldefinition wird nicht mehr geschluckt:
+   `_get_metaanalysis` reicht den Fehler weiter, die Route antwortet mit 500.
+   Test: `research_agent/tests/test_dashboard_metaanalysis_error.py` (echter
+   Serverstart, drei Fälle: kaputtes Ziel → 500, intaktes Ziel → 200, ohne
+   Thema → 200). Die übrigen Nebenauswertungen (PRISMA, RoB, GRADE) loggen
+   weiterhin nur — ihr Fehlen ändert die Gruppierung nicht.
 
 ## Test B — verfälscht gleichzeitiges Schreiben das Lesen?
 

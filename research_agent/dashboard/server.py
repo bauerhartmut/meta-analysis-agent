@@ -81,7 +81,13 @@ class DashboardHandler(SimpleHTTPRequestHandler):
         elif path == "/api/coverage":
             self._json_response(self._get_coverage())
         elif path == "/api/metaanalysis":
-            self._json_response(self._get_metaanalysis())
+            payload = self._get_metaanalysis()
+            # A broken target definition must not look like an empty
+            # analysis: 200 with groups={} is indistinguishable from "no
+            # studies", so the failure goes out as 500 and stays visible in
+            # monitoring and in the panel.
+            self._json_response(
+                payload, status=500 if payload.get("error") else 200)
         elif path == "/api/capabilities":
             # Eine Quelle der Uhr (Claude-Vorschlag 9): das UI fragt die
             # Endpunkt-Sichtbarkeit einmal, statt 404 als Rätsel zu raten.
@@ -178,9 +184,9 @@ class DashboardHandler(SimpleHTTPRequestHandler):
         self.end_headers()
         self.wfile.write(content)
 
-    def _json_response(self, data):
+    def _json_response(self, data, status: int = 200):
         body = json.dumps(data, default=str, ensure_ascii=False).encode("utf-8")
-        self.send_response(200)
+        self.send_response(status)
         self.send_header("Content-Type", "application/json")
         self.send_header("Access-Control-Allow-Origin", "*")
         self.send_header("Cache-Control", "no-store")
@@ -239,7 +245,12 @@ class DashboardHandler(SimpleHTTPRequestHandler):
                 if targets:
                     labels = meta_targets.target_labels(targets)
             except Exception as e:
-                logger.debug(f"Could not load review targets: {e}")
+                # A broken aim changes which rows are grouped, so it is not a
+                # side note like a missing PRISMA count: swallowing it here
+                # would render "no studies" for a defect. The caller turns
+                # this into 500.
+                logger.warning(f"Could not load review targets: {e}")
+                raise
             analysis = meta_pooling.build_analysis(
                 rows, outcomes=labels, targets=targets
             )
