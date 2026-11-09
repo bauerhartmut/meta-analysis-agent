@@ -686,3 +686,20 @@ Kurzfassung: Das Gate greift bei 3 von 10 Gruppen; MACE ist mit tau2 = 0
 reiner Cluster-Effekt; der 1,25-Faktor bei incident CVD haelt als
 Modellwechsel, waehrend Cluster und Duplikation sich teilweise aufheben; die
 Suite steht bei 1331 passed mit 0 Modellaufrufen in der ganzen Reihe.
+
+## Nachtrag 19 - Live-Endpunkt per HTTP geprueft (2026-11-09)
+
+Die offene Grenze aus Nachtrag 11 ("`/api/metaanalysis` nicht end-to-end
+geprueft") ist kleiner geworden. `scripts/pruefe_metaanalysis_api.py` startet
+den echten `DashboardServer` auf `127.0.0.1:0` gegen eine DB-Kopie, setzt
+einen Stub-Orchestrator (`db`, `current_topic`) und holt den Endpunkt ueber
+HTTP. Kein Modellaufruf, kein Netz.
+
+Ergebnis (Exit 0): 14 Gruppen im Payload, alle mit `rve.rows`, 3 mit
+verfuegbarem `rve_re`. MACE meldet `k=4, M=3, rows=6, rows_collapsed=4`,
+`rve` und `rve_re` mit identischem Intervall `[0.1819; 1.3191]` und
+tau2 = 0.0; `single_cluster` fehlt, weil M = 3.
+
+Damit ist der JSON-Pfad Endpunkt -> `build_analysis` -> Serialisierung belegt.
+Nicht belegt bleibt der Betrieb mit laufendem Orchestrator und die
+Browser-Darstellung dieses Payloads.

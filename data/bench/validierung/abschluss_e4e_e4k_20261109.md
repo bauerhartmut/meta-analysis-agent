@@ -72,9 +72,13 @@ bewusst, siehe `research_agent/patches/README.md`.
    und `pooling.py`; dann fehlt auch der M=1-Hinweis. Das Pruefskript meldet
    das (`Exit 1`), aber es repariert nichts. Aufheben liesse sich das nur
    durch Veroeffentlichung der Kerndateien - eine Projektentscheidung.
-2. **Der Live-Endpunkt `/api/metaanalysis` ist nicht end-to-end getestet.**
-   Er braucht den Orchestrator, also einen Lauf. Der Dashboard-Nachweis ist
-   ein Rendering-Test mit injizierter API-Antwort.
+2. **Der Live-Endpunkt ist auf HTTP-Ebene geprueft, nicht mit laufendem
+   Orchestrator.** `scripts/pruefe_metaanalysis_api.py` startet den echten
+   `DashboardServer` gegen eine DB-Kopie mit Stub-Orchestrator und holt
+   `/api/metaanalysis` ueber HTTP - die neuen RVE-Felder kommen an (MACE:
+   rows 6, rows_collapsed 4, rve_re verfuegbar, tau2 0). Offen bleibt der
+   Betrieb mit laufendem Orchestrator (current_topic gesetzt, Schreibrate,
+   parallele Zugriffe) und die Browser-Darstellung dieses Payloads.
 3. **Der Screenshot ist rechts abgeschnitten** (Karte breiter als der
    Viewport); der relevante Text ist lesbar, eine Interaktionspruefung gibt es
    nicht.
@@ -106,3 +110,23 @@ export PYTHONIOENCODING=utf-8
 
 Alle Rechnungen laufen auf Kopien oder rein im Speicher; keine der Skripte
 oeffnet eine laufende Datenbank zum Schreiben und keines ruft ein Modell auf.
+
+## 6. Nachtrag E4l - Live-Endpunkt per HTTP geprueft (2026-11-09)
+
+`scripts/pruefe_metaanalysis_api.py` startet den echten `DashboardServer` auf
+`127.0.0.1:0`, setzt einen Stub-Orchestrator (nur `db` und `current_topic`),
+kopiert die DB und ruft `GET /api/metaanalysis` ueber HTTP ab. Kein Modell,
+kein Netz, keine Aenderung an der DB.
+
+Ergebnis (Exit 0): 14 Gruppen im Payload, alle mit `rve.rows`, 3 mit
+verfuegbarem `rve_re`. MACE:
+
+```
+k=4 M=3 rows=6 rows_collapsed=4 single_cluster=None
+rve:    pooled=0.7505 ci=[0.1819, 1.3191]
+rve_re: available=True pooled=0.7505 ci=[0.1819, 1.3191] tau2=0.0
+```
+
+`single_cluster=None` ist korrekt (M = 3, das Gate greift nicht). RVE-FE und
+RVE-RE sind identisch, weil tau2 = 0 - dieselbe Aussage wie in E4i, jetzt
+durch die API bestaetigt statt nur im Direktaufruf.

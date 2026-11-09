@@ -121,6 +121,14 @@ Lauf 1: 1330 passed, 2 skipped, **1 failed** - ein zeitabhaengiger Test
 Assertions. Lauf 2: **1331 passed, 2 skipped, EXIT 0** in 7:47.
 Details: `testsuite_20261109.md`.
 
+## Live-Endpunkt (2026-11-09)
+
+`/api/metaanalysis` ueber echtes HTTP gegen eine DB-Kopie geprueft
+(`scripts/pruefe_metaanalysis_api.py`, Stub-Orchestrator, Exit 0): 14 Gruppen,
+MACE mit `rows=6`, `rows_collapsed=4`, `rve_re` verfuegbar, tau2 0. Die neuen
+Felder kommen durch die API. Offen: Betrieb mit laufendem Orchestrator und
+Browser-Darstellung.
+
 ## Empfehlung
 
 Die Validierungsreihe abschliessen: Die offenen Punkte aus E4e bis E4k sind
