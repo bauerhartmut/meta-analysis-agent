@@ -69,14 +69,15 @@ nachher: text = "Metaanalyse nicht verfügbar: Failed to fetch"
 ```
 
 `research_agent/tests/test_dashboard_contract.py`: Der statische Test hält
-`!r.ok||d.error` und den Text `Metaanalyse nicht verfügbar` fest, damit der
-Zweig bei einer UI-Änderung nicht still verschwindet.
+`!r.ok||d.error` und den Text `Metaanalyse nicht verfügbar` fest und verbietet
+ein leeres `}catch(e){}` in `pollMeta`, damit der Netzwerkfall nicht wieder
+still endet.
 
 ## Grenzen
 
-- Geprüft wurde der 500-Fall und der 200-Fall mit Daten. Ein Netzwerkfehler
-  (Server nicht erreichbar) läuft weiterhin in den `catch`-Zweig und wird
-  nicht angezeigt; das ist ein eigener Fall.
+- Geprüft wurden 500-Fall, 200-Fall mit Daten und der Netzwerkfall per
+  `fetch`-Mock. Ein Serverausfall und eine defekte Zieldefinition sehen beide
+  als Fehlerzeile aus; den Unterschied trägt nur der Text indirekt.
 - Kein automatisierter DOM-Test; der Nachweis ist ein Browserlauf plus ein
   statischer Contract-Test.
 - Der Fehlertext stammt aus der Python-Exception und ist englisch. Für die
