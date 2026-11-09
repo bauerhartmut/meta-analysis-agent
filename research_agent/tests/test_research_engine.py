@@ -123,7 +123,13 @@ class TestCircuitEscalation(unittest.TestCase):
     def test_a_provider_that_was_quiet_starts_fresh(self):
         self.memory.penalize("openalex", 300, "429")
         # Pretend the last failure was long ago: the next one is not a repeat.
-        self.memory._last_penalty["openalex"] = 0.0
+        # Relative to now, not 0.0: time.monotonic() is the system uptime, so on
+        # a freshly booted machine 0.0 is only seconds away and the test read
+        # the second call as a repeat (full suite, 2026-11-09, uptime ~1386 s).
+        import time
+
+        self.memory._last_penalty["openalex"] = (
+            time.monotonic() - search_module.CIRCUIT_QUIET_SECONDS - 1.0)
 
         self.memory.penalize("openalex", 300, "429")
 
