@@ -588,3 +588,45 @@ es ausdruecklich. Patch-Eintrag `report_rve_re_20261109.md`, Sicherung
 `test_report_honesty`); `pruefe_report_patch.py` Exit 0 mit vier Markern in
 `report.py`; Sicherung byte-identisch. Fehlt `rve_re` (aeltere Analysen),
 rendert der Report unveraendert.
+
+## Nachtrag 15 - tau2 auf demselben Material (2026-11-09)
+
+Frage: Haelt der 1,25-Faktor bei `incident CVD`?
+
+**Antwort: ja, aber er ist nicht das, was der Report zuerst behauptete.**
+
+- tau2: `HKJ(alle)` und `RVE-RE` benutzen dieselben Zeilen und dieselbe
+  DL-Schaetzung; in 7 von 7 verfuegbaren Gruppen ist die Zahl identisch. Die
+  Zerlegung Modell/Cluster ist damit konsistent - die frueher vermutete
+  Ungenauigkeit durch zwei verschiedene Zeilenbasen existiert fuer diesen
+  Vergleich nicht.
+- `incident CVD`: Modell `ln(RE/FE)` = 0,220 (Faktor 1,25), Cluster
+  `ln(RE_RVE/HKJ_alle)` = 0,401 (1,49), Duplikation
+  `ln(HKJ_alle/HKJ_koll)` = -0,242 (0,78), Summe 0,159 = RE/HKJ 1,17.
+- `MACE`: Modell 0, Cluster 1,018 (2,77), Duplikation -0,417 (0,66), Summe
+  0,601 = 1,82.
+
+Damit war der Satz im Report ("der restliche Teil der Verbreiterung kommt aus
+der Cluster-Korrektur") falsch: Bei `incident CVD` heben sich Cluster und
+Duplikation teilweise auf. Der Text nennt den Faktor jetzt "reiner
+Modellwechsel" und sagt, dass die Verbreiterung gegenueber dem naiven
+Intervall zusaetzlich Cluster-Korrektur und die andere Zeilenbasis enthaelt.
+
+| Gruppe | HKJ(koll) | HKJ(alle) | RVE-FE | RVE-RE | Cluster | Duplikation "
+"| Modell |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| MACE | 0,624 | 0,411 | 1,137 | 1,137 | 1,018 | -0,417 | 0,000 |
+| incident CVD | 1,529 | 1,200 | 1,438 | 1,791 | 0,401 | -0,242 | 0,220 |
+| depressive [raw:beta] | 0,536 | 0,536 | 0,458 | 0,772 | 0,365 | 0,000 | 0,521 |
+| depressive [hedges_g] | 1,466 | 0,805 | 1,550 | 1,270 | 0,456 | -0,600 | -0,199 |
+| depressive [log_ratio] | 0,748 | 0,507 | 0,068 | 0,659 | 0,262 | -0,389 | 2,264 |
+
+Die Duplikationsspalte ist der Preis der kollabierten Rechnung: Sie sieht
+weniger Zeilen und wird breiter, nicht weil sie ehrlicher waere, sondern weil
+ihr Information fehlt. Bei `MACE` und den depressiven Gruppen ist der Effekt
+deutlich; bei `raw:beta` ist er null, weil der Kollaps dort nichts entfernt.
+
+**Umsetzung.** Nur das Messskript wurde geaendert (`pool(sub_rows)` als
+dritte Rechnung, dreiteilige Zerlegung), `pooling.py` bleibt unangetastet.
+Damit entfaellt ein neuer Patch-Eintrag; der Report-Text wurde im bestehenden
+Eintrag `report_rve_re_20261109.md` nachgezogen.

@@ -95,8 +95,17 @@ dem Faktor zwischen beiden. Bei MACE steht ausdruecklich "Breite identisch
 (tau2 = 0): reiner Cluster-Effekt". Beleg `report_rve_re_20261109.txt`,
 Patch-Eintrag `report_rve_re_20261109.md`, 66 Report-Tests gruen.
 
+## Nachtrag: tau2 auf demselben Material (2026-11-09)
+
+tau2 ist in `HKJ(alle)` und `RVE-RE` identisch (7 von 7); die Zerlegung ist
+damit konsistent. Dreiteilig: Modell (RE/FE), Cluster (RE_RVE/HKJ_alle) und
+Duplikation (HKJ_alle/HKJ_koll). Bei `incident CVD` haelt der 1,25-Faktor
+exakt, aber Cluster 1,49 und Duplikation 0,78 heben sich teilweise auf -
+der Report-Satz dazu war falsch und ist korrigiert.
+
 ## Empfehlung
 
-tau2 fuer HKJ und RVE auf demselben Material schaetzen. Heute liest HKJ es
-aus den kollabierten Zeilen, RVE-RE aus allen - die verbleibende Ungenauigkeit
-in der Zerlegung. Reine Rechnung, kein Netz, kleiner Eingriff.
+Die Duplikation als eigene Groesse in den Report: Bei `MACE` senkt sie die
+Verbreiterung von 2,77 auf 1,82, und ein Leser sieht heute nur die 1,82. Ein
+Satz zur Zeilenbasis wuerde die Zahl davor bewahren, als reine
+Cluster-Korrektur gelesen zu werden.

@@ -22,8 +22,15 @@ Zweite Zeile je Gruppe, wenn `rve` und `rve_re` verfuegbar sind:
 
 - Punkt und Intervall mit Random-Effects-Gewichten.
 - Ist die Breite innerhalb 0,5 Prozent gleich der Fixed-Effect-Variante, sagt
-  der Text: tau2 = 0, die Verbreiterung ist reiner Cluster-Effekt.
-- Sonst: Faktor zur FE-Variante, Rest aus der Cluster-Korrektur.
+  der Text: tau2 = 0, der Unterschied ist allein die Cluster-Korrektur.
+- Sonst: Faktor zur FE-Variante, ausdruecklich als reiner Modellwechsel
+  gekennzeichnet; die Verbreiterung gegenueber dem naiven Intervall enthaelt
+  zusaetzlich Cluster-Korrektur und die andere Zeilenbasis.
+
+Nachtrag (2026-11-09, E4j): Die erste Fassung sagte "der restliche Teil kommt
+aus der Cluster-Korrektur". Das ist bei `incident CVD` falsch: Cluster 1,49
+und Duplikation 0,78 heben sich teilweise auf, die Summe ist 1,17. Der Text
+nennt die drei Anteile jetzt nicht mehr als Kausalkette.
 
 Fehlt `rve_re` (aeltere Analysen), rendert der Report unveraendert.
 
