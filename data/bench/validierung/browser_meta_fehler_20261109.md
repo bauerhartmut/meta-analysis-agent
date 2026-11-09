@@ -53,10 +53,20 @@ nicht bei einer gültigen Antwort.
 
 ## Was geändert wurde
 
-`research_agent/dashboard/templates/app.js`, in `pollMeta()`: Statusprüfung
-vor dem Rendern, bei Fehler eine rote Zeile mit dem Fehlertext und `–` in den
-Zählern statt `0`. Zusätzlich setzt die Karte `dataset.state` auf `ok` oder
-`leer`, damit sich die beiden Zustände später unterscheiden lassen.
+`research_agent/dashboard/templates/app.js`: ein Helfer `metaFehler(text)`
+rendert die rote Zeile und setzt die Zähler auf `–`. Beide Fehlerwege laufen
+dorthin: der 500-Fall (`!r.ok||d.error`) und der zuvor leere `catch(e){}` bei
+ einem Netzwerkfehler. Die Karte setzt `dataset.state` auf `ok`, `leer` oder
+`fehler`.
+
+Gemessen im Browser für den Netzwerkfall: `fetch` für `/api/metaanalysis`
+auf `Failed to fetch` gesetzt, dann `pollMeta()` aufgerufen. Ergebnis:
+
+```text
+vorher:  metaFehler = function, state = ok,   maUsable = 36
+nachher: text = "Metaanalyse nicht verfügbar: Failed to fetch"
+         state = fehler, maUsable = –, maEffectRows = –
+```
 
 `research_agent/tests/test_dashboard_contract.py`: Der statische Test hält
 `!r.ok||d.error` und den Text `Metaanalyse nicht verfügbar` fest, damit der

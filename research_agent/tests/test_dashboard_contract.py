@@ -115,6 +115,22 @@ class TestAppJsContract(unittest.TestCase):
         self.assertIn("!r.ok||d.error", text)
         self.assertIn("Metaanalyse nicht verf\u00fcgbar", text)
 
+    def test_metakarte_meldet_netzwerkfehler(self):
+        """Ein nicht erreichbarer Server darf in pollMeta nicht still enden.
+
+        ``}catch(e){}`` liess den letzten Fehlerfall ohne Anzeige: Die Karte
+        behielt die alten Zahlen und sah gueltig aus. Beide Fehlerwege muessen
+        in ``metaFehler`` landen.
+        """
+        text = _read(APP_JS)
+        start = text.index("async function pollMeta")
+        ende = text.index("setInterval(pollMeta", start)
+        body = text[start:ende]
+        self.assertIn("metaFehler(", body)
+        self.assertNotIn(
+            "}catch(e){}", body,
+            "Netzwerkfehler wird in pollMeta still verschluckt")
+
     def test_app_js_fraegt_capabilities_und_schirm(self):
         text = _read(APP_JS)
         self.assertIn("/api/capabilities", text)

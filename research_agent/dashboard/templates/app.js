@@ -1283,6 +1283,17 @@ async function pollCoverage(){
   }catch(e){}
 }
 setInterval(pollCoverage,3000);
+// Ein Fehler der Metaanalyse muss in der Karte stehen, nicht nur in der Konsole:
+// 500 (defekte Zieldefinition) und ein nicht erreichbarer Server sehen sonst
+// aus wie "keine Studien".
+function metaFehler(text){
+  const box=document.getElementById('maGroups');
+  if(box)box.innerHTML='<div class="empty" style="color:var(--red)">Metaanalyse nicht verfügbar: '
+    +esc(text||'unbekannter Fehler')+'</div>';
+  const set=(id,v)=>{const el=document.getElementById(id);if(el)el.textContent=v;};
+  set('maUsable','–');set('maEffectRows','–');
+  if(box)box.dataset.state='fehler';
+}
 // Poll meta-analysis when tab is active (reads /api/metaanalysis, read-only)
 async function pollMeta(){
   const tab=document.querySelector('.tab[data-tab="meta"]');
@@ -1295,10 +1306,7 @@ async function pollMeta(){
     // Pruefung sieht die Karte aus wie "keine Studien" - die Stoerung muss
     // dastehen, nicht die leere Auswertung.
     if(!r.ok||d.error){
-      const box=document.getElementById('maGroups');
-      if(box)box.innerHTML='<div class="empty" style="color:var(--red)">Metaanalyse nicht verfügbar: '
-        +esc(d.error||('HTTP '+r.status))+'</div>';
-      set('maUsable','–');set('maEffectRows','–');
+      metaFehler(d.error||('HTTP '+r.status));
       return;
     }
     set('maUsable',d.usable??0);
@@ -1380,7 +1388,7 @@ async function pollMeta(){
     if(ex)ex.innerHTML=exl.length
       ?exl.slice(0,20).map(e=>'<div style="padding:6px 10px;background:var(--bg);border-radius:6px;font-size:11px;color:var(--t2);margin-bottom:4px">'+esc(e.label||e.outcome||'-')+' \u2014 <span style="color:var(--t3)">'+esc(e.reason||'')+'</span></div>').join('')
       :'<div class="empty">Keine Ausschl\u00FCsse</div>';
-  }catch(e){}
+  }catch(e){metaFehler(e&&e.message?e.message:String(e))}
 }
 setInterval(pollMeta,3000);
 // Initial poll if monitoring tab is active
