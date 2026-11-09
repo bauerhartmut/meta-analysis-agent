@@ -655,3 +655,22 @@ sie belegt dann, dass Kollaps und Pool identisch sind.
 Markern in `report.py` und drei in `pooling.py`; Sicherungen byte-identisch.
 Fehlen `rows`/`rows_collapsed` (aeltere Analysen), wird die Basiszeile nicht
  gedruckt.
+
+## Nachtrag 17 - Volle Testsuite nach den lokalen Patches (2026-11-09)
+
+**Lauf 1:** `1 failed, 1330 passed, 2 skipped` in 8:41, EXIT 1. Der Fehler lag
+nicht bei den Patches: `test_a_provider_that_was_quiet_starts_fresh` setzte
+`_last_penalty = 0.0` und verliess sich darauf, dass `time.monotonic()`
+groesser ist als `CIRCUIT_QUIET_SECONDS = 1800`. `monotonic` ist die
+Systemlaufzeit; waehrend des Laufs waren es rund 1386 s, also darunter - der
+zweite Aufruf zaehlte als Wiederholung (600 statt 300 s). Isoliert lief der
+Test dreimal gruen.
+
+**Fix** (`63bc122`): `_last_penalty = time.monotonic() - CIRCUIT_QUIET_SECONDS
+- 1.0`; die Assertions sind unveraendert, kein Skip.
+
+**Lauf 2:** `1331 passed, 2 skipped`, EXIT 0 in 7:47. Die 14 zusaetzlichen
+Tests gegenueber dem Lauf vom 08.11. (1317) sind `test_rve_weights.py` (8) und
+`test_pruefe_report_patch.py` (6).
+
+Details in `testsuite_20261109.md`; die Rohlogs sind gitignored (`data/*.log`).

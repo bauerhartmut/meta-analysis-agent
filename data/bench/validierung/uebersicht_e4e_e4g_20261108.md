@@ -110,8 +110,17 @@ Kollaps, Anzahl zusammengelegter Zeilen. Bei `MACE` sind das 6 und 4 -
 damit ist klar, dass die 1,82 nicht allein die Cluster-Korrektur ist.
 38 Report-Tests gruen, Pruefskript Exit 0 mit fuenf Markern.
 
+## Volle Testsuite (2026-11-09)
+
+Lauf 1: 1330 passed, 2 skipped, **1 failed** - ein zeitabhaengiger Test
+(`_last_penalty = 0.0` gegen eine Uptime von 1386 s bei
+`CIRCUIT_QUIET_SECONDS = 1800`). Fix in `63bc122` ohne Aenderung der
+Assertions. Lauf 2: **1331 passed, 2 skipped, EXIT 0** in 7:47.
+Details: `testsuite_20261109.md`.
+
 ## Empfehlung
 
-Volle Testsuite laufen lassen. `pooling.py` und `report.py` sind seit dem
-letzten Vollauf (1317 passed) dreimal lokal gepatcht; die Report-Suite allein
-deckt keine Aufrufer ausserhalb ab. Ein Lauf, rund 7 Minuten, kein Netz.
+Die Validierungsreihe abschliessen: Die offenen Punkte aus E4e bis E4k sind
+abgearbeitet und belegt; ein Bericht ueber alle Nachweise mit den jeweiligen
+Grenzen (Report-Hinweis nur lokal, Live-Endpunkt ungetestet) waere der
+naechste sinnvolle Schritt.
