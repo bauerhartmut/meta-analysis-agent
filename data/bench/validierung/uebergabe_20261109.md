@@ -17,6 +17,7 @@ Lieferung, die noch nicht da ist.
 | Fernleihliste | 25 Positionen, 20 bestellfähig, druckfertig | `fernleihliste_20261109.md`/`.txt` |
 | Extraktionsformular | Register, Crossover-Pfad, Dedup gegen S1–S3, Prüfskript | `extraktionsformular_20261109.md` |
 | IP-Frage | Vorlage mit vier Alternativen, Entscheidung offen | `ip_entscheidungsvorlage_20261109.md` |
+| Testsuite | **1336 passed, 2 skipped**, 421 s, Exit 0 | Vollauf vom 2026-11-09 abends |
 
 Commits der Reihe: `ac9f107`, `18d7ea5`, `8e607d9`, `ab527f4`, `9687021`,
 `a0f1802`, `210fb34`, `465c09f`.
@@ -54,10 +55,11 @@ Sekundärpublikation von S2.
 3. **IP-Entscheidung.** `pooling.py`, `report.py` und der Orchestrator bleiben
    gitignored. Die Vorlage nennt vier Alternativen; die Entscheidung ist nicht
    technisch und steht beim Eigentümer.
-4. **Voll-Suite-Lauf.** Der letzte Vollauf (1331 passed, 2 skipped) stammt von
-   vor den heutigen Änderungen an `server.py`, `app.js` und den zwei neuen
-   Tests. Die betroffenen Tests sind einzeln grün (14 passed), ein Vollauf ist
-   offen und billig.
+4. ~~Voll-Suite-Lauf~~ **erledigt am 2026-11-09**: 1336 passed, 2 skipped,
+   3 warnings, 421 s, Exit 0. Gegenüber den 1331 des Vormittags sind das genau
+   die fünf neuen Dashboard-Tests (drei im Fehler-Test, zwei im
+   Contract-Test). Die drei Warnungen sind `datetime.utcnow()`-Hinweise aus
+   `orchestrator.py`, keine Fehler.
 5. **Phase 3 des Auftrags** (neue Untersuchungsfrage) ist ohne neue Daten nicht
    startbar. Ein Lauf würde dieselben drei Studien erneut lesen.
 
@@ -92,6 +94,5 @@ Schreibzugriffe auf die Original-DB.
 ändern.** Grund: Der Punktschätzer bei k = 3 liegt mit p = 0,061 knapp über der
 Schwelle; jede weitere Modell- oder UI-Variante verschiebt nur Nachkommastellen.
 Die einzige Größe, die sich bewegen kann, ist k, und die hängt an Volltexten,
-die ohne Bibliothek nicht erreichbar sind. Der billigste sinnvolle Schritt
-daneben ist der Voll-Suite-Lauf, weil er die heutigen Änderungen in einem
-Durchgang abdeckt.
+die ohne Bibliothek nicht erreichbar sind. Der Voll-Suite-Lauf ist erledigt;
+daneben bleibt nur die IP-Entscheidung, und die ist nicht technisch.
