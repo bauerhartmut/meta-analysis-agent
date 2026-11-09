@@ -11,6 +11,11 @@ Aufruf:
     .venv/bin/python.exe scripts/serve_dashboard_stub.py [db-pfad]
 
 Port: DASHBOARD_PORT (Standard 8099). Laeuft bis Ctrl+C.
+
+Mit ``--kaputtes-ziel`` wird in der Kopie eine defekte Zieldefinition
+abgelegt (``outcomes`` als String-Liste). Der Endpunkt antwortet dann mit 500;
+damit laesst sich pruefen, ob die Oberflaeche die Stoerung anzeigt statt einer
+leeren Auswertung.
 """
 
 import os
@@ -27,8 +32,13 @@ sys.path.insert(0, str(ROOT))
 VORGABE = "data/research-mediterrane-ernaehrung-und-kardiovaskula-475855.db"
 
 
+KAPUTTES_ZIEL = "Fehlertest: defekte Zieldefinition"
+
+
 def main() -> int:
-    pfad = Path(sys.argv[1]) if len(sys.argv) > 1 else ROOT / VORGABE
+    argumente = [a for a in sys.argv[1:] if not a.startswith("--")]
+    kaputt = "--kaputtes-ziel" in sys.argv
+    pfad = Path(argumente[0]) if argumente else ROOT / VORGABE
     if not pfad.is_file():
         print(f"DB nicht gefunden: {pfad}", flush=True)
         return 1
@@ -37,13 +47,32 @@ def main() -> int:
     ziel = Path(tempfile.mkdtemp(prefix="stub_kopie_")) / "kopie.db"
     shutil.copy2(pfad, ziel)
 
+    thema = ""
+    if kaputt:
+        import json
+        import sqlite3
+
+        conn = sqlite3.connect(ziel)
+        try:
+            conn.execute("DELETE FROM review_targets")
+            conn.execute(
+                "INSERT INTO review_targets (topic, payload, created_at)"
+                " VALUES (?,?,?)",
+                (KAPUTTES_ZIEL, json.dumps({"outcomes": ["kein objekt"]}),
+                 time.strftime("%Y-%m-%dT%H:%M:%S")),
+            )
+            conn.commit()
+        finally:
+            conn.close()
+        thema = KAPUTTES_ZIEL
+
     from research_agent.database import Database
     from research_agent.dashboard.server import DashboardServer
 
     db = Database(str(ziel))
     stub = SimpleNamespace(
         db=db,
-        current_topic="",
+        current_topic=thema,
         running=False,
         paused=False,
         parallel_stats={},

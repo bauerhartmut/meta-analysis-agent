@@ -1291,6 +1291,16 @@ async function pollMeta(){
   try{
     const r=await fetch(API+'/api/metaanalysis');const d=await r.json();
     const set=(id,v)=>{const el=document.getElementById(id);if(el)el.textContent=v;};
+    // Ein Fehler in der Zieldefinition kommt als 500 mit groups={}. Ohne diese
+    // Pruefung sieht die Karte aus wie "keine Studien" - die Stoerung muss
+    // dastehen, nicht die leere Auswertung.
+    if(!r.ok||d.error){
+      const box=document.getElementById('maGroups');
+      if(box)box.innerHTML='<div class="empty" style="color:var(--red)">Metaanalyse nicht verfügbar: '
+        +esc(d.error||('HTTP '+r.status))+'</div>';
+      set('maUsable','–');set('maEffectRows','–');
+      return;
+    }
     set('maUsable',d.usable??0);
     set('maEffectRows',d.effect_rows??0);
     const box=document.getElementById('maGroups');
@@ -1344,6 +1354,7 @@ async function pollMeta(){
           +'</div></div>';
       }).join('')
       :'<div class="empty">Noch keine poolbaren Effektzeilen</div>';
+    if(box)box.dataset.state=groups.length?'ok':'leer';
     const pr=d.prisma||{};
     const pbox=document.getElementById('maPrisma');
     const robCounts={low:0,some_concerns:0,high:0,strittig:0};

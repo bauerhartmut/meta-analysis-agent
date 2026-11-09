@@ -104,6 +104,17 @@ class TestAppJsContract(unittest.TestCase):
             unknown, [],
             f"app.js ruft Ende nicht aus dem Manifest: {unknown}")
 
+    def test_metakarte_meldet_fehler_statt_leerer_auswertung(self):
+        """Der Endpunkt antwortet bei defekter Zieldefinition mit 500.
+
+        Ohne ``r.ok``-Pruefung landet der Fehlerbody mit ``groups={}`` in der
+        Karte und sieht aus wie "keine Studien". Der Test haelt den Zweig
+        fest, damit er nicht bei der naechsten UI-Aenderung verschwindet.
+        """
+        text = _read(APP_JS)
+        self.assertIn("!r.ok||d.error", text)
+        self.assertIn("Metaanalyse nicht verf\u00fcgbar", text)
+
     def test_app_js_fraegt_capabilities_und_schirm(self):
         text = _read(APP_JS)
         self.assertIn("/api/capabilities", text)
