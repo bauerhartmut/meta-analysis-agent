@@ -20,7 +20,13 @@ jede Sitzung.
 
 - Push ist dauerhaft freigegeben; kein Force-Push, keine History-Rewrites.
 - `research_agent/orchestrator.py` ist gitignored und geschützt: lokal ändern
-  ist erlaubt, **niemals committen**.
+  ist erlaubt, **niemals committen**. Das gilt für alle Kerndateien in der
+  `.gitignore`-Sektion „Kernbausteine“ (u. a. `report.py`,
+  `meta/pooling.py`).
+- Änderungen an geschützten Dateien werden in `research_agent/patches/`
+  dokumentiert (Anlass, Ankerpunkt, Wirkung, Prüfung) und müssen
+  `python scripts/pruefe_report_patch.py` bestehen. Kein Quellcode und kein
+  Diff im Repo; Sicherung in `local_patches/`.
 
 ## Läufe und Kosten
 

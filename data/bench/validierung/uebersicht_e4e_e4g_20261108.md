@@ -60,8 +60,17 @@ HKJ-Intervall taeuscht Unabhaengigkeit vor.
 Grenze: Der Live-Endpunkt `/api/metaanalysis` wurde nicht end-to-end geprueft -
 er braucht den Orchestrator, also einen Lauf mit Freigabe.
 
+## Entscheidung zur report.py-Regel (2026-11-08)
+
+`report.py` bleibt gitignored - die Sektion "Kernbausteine: nicht oeffentlich"
+schuetzt IP, eine Aufhebung waere eine Veroeffentlichungsentscheidung. Der
+Patch ist stattdessen nachvollziehbar: Regel in `research_agent/patches/README.md`,
+Eintrag `report_single_cluster_20261108.md` mit Ankerpunkt und Wirkung, und
+`scripts/pruefe_report_patch.py` als objektiver Nachweis (Exit 0 = wirksam,
+Exit 1 = fehlt). Kein Diff und kein Quellcode im Repo.
+
 ## Empfehlung
 
-Die Repo-Regel fuer `report.py` entscheiden: Der Patch existiert nur lokal.
-Solange die Regel gilt, ist der Hinweis bei jedem neuen Klon wieder weg.
-Das ist keine technische, sondern eine Projektentscheidung.
+Inhaltlich weiter mit RVE auf Random-Effects-Gewichten: Erst damit laesst sich
+bei MACE trennen, wie viel der Verbreiterung von der Cluster-Korrektur und wie
+viel vom Fixed-Effect-Modell kommt.

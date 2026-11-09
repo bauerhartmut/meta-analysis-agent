@@ -489,3 +489,32 @@ Cluster)", MACE "[0.430; 1.050]", kein "[0,000; 0,000]". Protokoll:
 **Repo.** `local_patches/` ist gitignored; dort liegen Sicherungen von
 `pooling.py`, `report.py` und `pool_gates.py`. Fremde uncommittete Dateien
 wurden nicht angefasst.
+
+## Nachtrag 12 - Entscheidung zur report.py-Regel (2026-11-08)
+
+Die Regel bleibt: `report.py` ist gitignored und wird nicht committet. Der
+Grund ist nachgelesen, nicht angenommen: Die `.gitignore`-Sektion
+"Kernbausteine: nicht oeffentlich" schuetzt IP - Orchestrierung,
+Statistik-Engine, Extraktionslogik. `report.py` hat 2183 Zeilen und war nie
+im Repo. Die Regel aufzuheben waere eine Geschaeftsentscheidung ueber die
+Veroeffentlichung dieser Logik, keine technische. Ich habe sie deshalb nicht
+eigenmaechtig geaendert.
+
+Stattdessen ist die Aenderung jetzt ohne Quellcode nachvollziehbar:
+
+- `research_agent/patches/README.md` haelt die Regel fest. Ein Diff wird
+  bewusst nicht abgelegt - ein Diff ist Quellcode aus einer geschuetzten
+  Datei.
+- `research_agent/patches/report_single_cluster_20261108.md` beschreibt
+  Anlass, Ankerpunkt (`_meta_section`, vor dem `elif pooled_enough`-Zweig),
+  Wirkung, Pruefschritte und die lokale Sicherung.
+- `scripts/pruefe_report_patch.py` prueft read-only drei Marker (Gate
+  definiert, Gate aufgerufen, Report erklaert) plus den Byte-Vergleich mit
+  `local_patches/report_20261108.py`. Exit 1, wenn der Patch fehlt.
+- `research_agent/tests/test_pruefe_report_patch.py` prueft, dass das Skript
+  auch den Stand vor dem Patch als "nicht wirksam" erkennt - ein Pruefskript,
+  das immer OK sagt, ist keins.
+- `AGENTS.md` und `.gitignore` verweisen auf die Regel.
+
+Grenze, unveraendert: Bei einem frischen Klon fehlt der Hinweis trotzdem. Das
+ist die Folge des IP-Schutzes, jetzt aber sichtbar (Exit 1) statt still.

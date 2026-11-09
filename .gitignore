@@ -52,6 +52,8 @@ data/*.db-shm
 # Das Herzstueck des Research-Agents (Orchestrierung, Statistik-Engine,
 # Extraktions-IP, Agentenlogik). Die zugehoerigen *_PRIVAT.md-Dateien
 # im Repo erlaeutern den jeweiligen Baustein.
+# Aenderungen an diesen Dateien: Eintrag in research_agent/patches/ und
+# `python scripts/pruefe_report_patch.py` - Regel in patches/README.md.
 research_agent/orchestrator.py
 research_agent/config.py
 research_agent/database.py
