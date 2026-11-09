@@ -1,6 +1,9 @@
 # Uebersicht E4e bis E4g
 
-Stand: 2026-11-08. Zeitraum: Commit `c4aa70e` (E4e) bis HEAD.
+Stand: 2026-11-09. Zusammenfassung der gesamten Reihe (E4e bis E4k) mit
+Patch-Register und Grenzen: `abschluss_e4e_e4k_20261109.md`.
+
+Ursprungsstand: 2026-11-08. Zeitraum: Commit `c4aa70e` (E4e) bis HEAD.
 Modellaufrufe in diesem Zeitraum: **0**. Tokens: **0**.
 
 ## Was dazukam

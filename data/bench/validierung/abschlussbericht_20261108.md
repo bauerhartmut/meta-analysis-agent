@@ -674,3 +674,15 @@ Tests gegenueber dem Lauf vom 08.11. (1317) sind `test_rve_weights.py` (8) und
 `test_pruefe_report_patch.py` (6).
 
 Details in `testsuite_20261109.md`; die Rohlogs sind gitignored (`data/*.log`).
+
+## Nachtrag 18 - Abschlussdokument der Reihe (2026-11-09)
+
+`abschluss_e4e_e4k_20261109.md` fasst E4e bis E4k zusammen: eine Tabelle mit
+Frage, Befund, Beleg und Commit je Stufe, die Kernzahlen (Gate, Zerlegung,
+Suite), das Patch-Register mit den drei Eintraegen und den Sicherungen, die
+acht verbleibenden Grenzen und die fuenf Befehle zur Reproduktion.
+
+Kurzfassung: Das Gate greift bei 3 von 10 Gruppen; MACE ist mit tau2 = 0
+reiner Cluster-Effekt; der 1,25-Faktor bei incident CVD haelt als
+Modellwechsel, waehrend Cluster und Duplikation sich teilweise aufheben; die
+Suite steht bei 1331 passed mit 0 Modellaufrufen in der ganzen Reihe.
