@@ -1,0 +1,391 @@
+{
+  "test": "E4i-rve-modell",
+  "stand": "2026-11-09T14:26:44",
+  "modellaufrufe": 0,
+  "tokens": 0,
+  "gruppen_gesamt": 10,
+  "rve_re_verfuegbar": 7,
+  "gruppen": [
+    {
+      "datei": "data/research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+      "gruppe": "depressive symptoms [log_ratio]",
+      "k": 6,
+      "zeilen": 11,
+      "M": 6,
+      "hkj": {
+        "pooled": 0.03258083611964441,
+        "ci": [
+          -0.34165648037959157,
+          0.4068181526188804
+        ],
+        "breite": 0.748474632998472,
+        "tau2": 0.015263500150809272
+      },
+      "rve_fe": {
+        "pooled": 0.08010626183269239,
+        "breite": 0.06848608279331717,
+        "available": true
+      },
+      "rve_re": {
+        "pooled": 0.022684989928821345,
+        "breite": 0.6587145840149655,
+        "tau2": 0.016297295616537828,
+        "available": true
+      },
+      "rve_re_reml": {
+        "breite": 1.1639844512079898,
+        "tau2": 0.2195046222628991,
+        "available": true
+      },
+      "faktor_fe_hkj": 0.09150087360870783,
+      "faktor_re_fe": 9.618225443012818,
+      "faktor_re_hkj": 0.8800760306011738,
+      "log_modell": 2.2636597822785007,
+      "log_cluster": -2.3914067591100885,
+      "anteil_modell": -17.719869686331158
+    },
+    {
+      "datei": "data/research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+      "gruppe": "depressive symptoms [hedges_g]",
+      "k": 3,
+      "zeilen": 4,
+      "M": 3,
+      "hkj": {
+        "pooled": -0.5858165227193031,
+        "ci": [
+          -1.3190344469408934,
+          0.1474014015022873
+        ],
+        "breite": 1.4664358484431808,
+        "tau2": 0.08916820551443605
+      },
+      "rve_fe": {
+        "pooled": -0.488907600479764,
+        "breite": 1.5499008361807265,
+        "available": true
+      },
+      "rve_re": {
+        "pooled": -0.6184871131083806,
+        "breite": 1.270155929861632,
+        "tau2": 0.07245952917644596,
+        "available": true
+      },
+      "rve_re_reml": {
+        "breite": 1.297641056647985,
+        "tau2": 0.05419907268686196,
+        "available": true
+      },
+      "faktor_fe_hkj": 1.0569169035428008,
+      "faktor_re_fe": 0.8195078679946756,
+      "faktor_re_hkj": 0.8661517182698948,
+      "log_modell": -0.19905127987463386,
+      "log_cluster": 0.055356088417239435,
+      "anteil_modell": 1.3852327127707158
+    },
+    {
+      "datei": "data/research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+      "gruppe": "depressive symptoms [fisher_z]",
+      "k": 2,
+      "zeilen": 2,
+      "M": 1,
+      "hkj": {
+        "pooled": -0.18006544697823212,
+        "ci": [
+          -0.5475925592784616,
+          0.18746166532199732
+        ],
+        "breite": 0.735054224600459,
+        "tau2": 0.0015259068671551355
+      },
+      "rve_fe": {
+        "pooled": -0.18006544697823215,
+        "breite": null,
+        "available": false
+      },
+      "rve_re": {
+        "pooled": -0.18006544697823212,
+        "breite": null,
+        "tau2": 0.0015259068671551355,
+        "available": false
+      },
+      "rve_re_reml": {
+        "breite": null,
+        "tau2": 0.0015255406454325483,
+        "available": false
+      },
+      "faktor_fe_hkj": null,
+      "faktor_re_fe": null,
+      "faktor_re_hkj": null,
+      "log_modell": null,
+      "log_cluster": null,
+      "anteil_modell": null
+    },
+    {
+      "datei": "data/research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+      "gruppe": "depressive symptoms [raw:beta]",
+      "k": 4,
+      "zeilen": 4,
+      "M": 3,
+      "hkj": {
+        "pooled": -0.03253429831168264,
+        "ci": [
+          -0.30063030484562286,
+          0.23556170822225758
+        ],
+        "breite": 0.5361920130678804,
+        "tau2": 0.015726000858976987
+      },
+      "rve_fe": {
+        "pooled": -0.05345689686797206,
+        "breite": 0.4584914781477225,
+        "available": true
+      },
+      "rve_re": {
+        "pooled": -0.03253429831168264,
+        "breite": 0.7721761585883063,
+        "tau2": 0.015726000858976987,
+        "available": true
+      },
+      "rve_re_reml": {
+        "breite": 0.7850691669711289,
+        "tau2": 0.025209001161539155,
+        "available": true
+      },
+      "faktor_fe_hkj": 0.8550882276750339,
+      "faktor_re_fe": 1.6841668719947658,
+      "faktor_re_hkj": 1.44011126568301,
+      "log_modell": 0.5212710035442557,
+      "log_cluster": -0.15655062510592826,
+      "anteil_modell": 1.4292346530683375
+    },
+    {
+      "datei": "data/research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+      "gruppe": "health status [log_ratio]",
+      "k": 5,
+      "zeilen": 10,
+      "M": 5,
+      "hkj": {
+        "pooled": -0.1302070415466751,
+        "ci": [
+          -0.659526940572942,
+          0.3991128574795919
+        ],
+        "breite": 1.058639798052534,
+        "tau2": 0.028990076763629493
+      },
+      "rve_fe": {
+        "pooled": -0.020842477503212872,
+        "breite": 0.2056827009005661,
+        "available": true
+      },
+      "rve_re": {
+        "pooled": -0.11445333897159923,
+        "breite": 0.8056576882458627,
+        "tau2": 0.021041723975219626,
+        "available": true
+      },
+      "rve_re_reml": {
+        "breite": 1.1929609228103037,
+        "tau2": 0.1983173780228196,
+        "available": true
+      },
+      "faktor_fe_hkj": 0.19428959810403737,
+      "faktor_re_fe": 3.9169929445614615,
+      "faktor_re_hkj": 0.7610309849751962,
+      "log_modell": 1.3653242534468055,
+      "log_cluster": -1.638405459265786,
+      "anteil_modell": -4.999700544576653
+    },
+    {
+      "datei": "data/research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+      "gruppe": "frailty index [raw:beta]",
+      "k": 2,
+      "zeilen": 2,
+      "M": 1,
+      "hkj": {
+        "pooled": 0.14238733252131547,
+        "ci": [
+          0.08821959003957094,
+          0.19655507500306
+        ],
+        "breite": 0.10833548496348905,
+        "tau2": 0.0
+      },
+      "rve_fe": {
+        "pooled": 0.14238733252131547,
+        "breite": null,
+        "available": false
+      },
+      "rve_re": {
+        "pooled": 0.14238733252131547,
+        "breite": null,
+        "tau2": 0.0,
+        "available": false
+      },
+      "rve_re_reml": {
+        "breite": null,
+        "tau2": 6.021474972838077e-06,
+        "available": false
+      },
+      "faktor_fe_hkj": null,
+      "faktor_re_fe": null,
+      "faktor_re_hkj": null,
+      "log_modell": null,
+      "log_cluster": null,
+      "anteil_modell": null
+    },
+    {
+      "datei": "data/research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+      "gruppe": "incident cardiovascular disease [log_ratio]",
+      "k": 5,
+      "zeilen": 6,
+      "M": 4,
+      "hkj": {
+        "pooled": 0.24029736413754801,
+        "ci": [
+          -0.5240470573358166,
+          1.0046417856109127
+        ],
+        "breite": 1.5286888429467291,
+        "tau2": 0.34690104842965935
+      },
+      "rve_fe": {
+        "pooled": -0.12993969356776694,
+        "breite": 1.43778203685553,
+        "available": true
+      },
+      "rve_re": {
+        "pooled": 0.2951553511314504,
+        "breite": 1.7911994136974076,
+        "tau2": 0.34311012219047127,
+        "available": true
+      },
+      "rve_re_reml": {
+        "breite": 1.8011913096414527,
+        "tau2": 0.29326967234338924,
+        "available": true
+      },
+      "faktor_fe_hkj": 0.940532825557904,
+      "faktor_re_fe": 1.2458073392089466,
+      "faktor_re_hkj": 1.1717226968469647,
+      "log_modell": 0.21978378498201506,
+      "log_cluster": -0.06130872860886216,
+      "anteil_modell": 1.3868667411261348
+    },
+    {
+      "datei": "data/research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+      "gruppe": "cardiovascular mortality [log_ratio]",
+      "k": 2,
+      "zeilen": 2,
+      "M": 2,
+      "hkj": {
+        "pooled": 1.0119458402184105,
+        "ci": [
+          0.7229076234592398,
+          1.3009840569775812
+        ],
+        "breite": 0.5780764335183415,
+        "tau2": 0.0
+      },
+      "rve_fe": {
+        "pooled": 1.0119458402184105,
+        "breite": 0.16354119854287097,
+        "available": true
+      },
+      "rve_re": {
+        "pooled": 1.0119458402184105,
+        "breite": 0.16354119854287097,
+        "tau2": 0.0,
+        "available": true
+      },
+      "rve_re_reml": {
+        "breite": 0.16382684423372884,
+        "tau2": 5.513485093047811e-06,
+        "available": true
+      },
+      "faktor_fe_hkj": 0.28290583919415574,
+      "faktor_re_fe": 1.0,
+      "faktor_re_hkj": 0.28290583919415574,
+      "log_modell": 0.0,
+      "log_cluster": -1.2626411603992722,
+      "anteil_modell": -0.0
+    },
+    {
+      "datei": "data/research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+      "gruppe": "preeclampsia [log_ratio]",
+      "k": 5,
+      "zeilen": 5,
+      "M": 1,
+      "hkj": {
+        "pooled": -0.3086131441470696,
+        "ci": [
+          -0.4908292005899775,
+          -0.1263970877041617
+        ],
+        "breite": 0.3644321128858158,
+        "tau2": 0.0
+      },
+      "rve_fe": {
+        "pooled": -0.3086131441470696,
+        "breite": null,
+        "available": false
+      },
+      "rve_re": {
+        "pooled": -0.3086131441470696,
+        "breite": null,
+        "tau2": 0.0,
+        "available": false
+      },
+      "rve_re_reml": {
+        "breite": null,
+        "tau2": 5.280517167568206e-06,
+        "available": false
+      },
+      "faktor_fe_hkj": null,
+      "faktor_re_fe": null,
+      "faktor_re_hkj": null,
+      "log_modell": null,
+      "log_cluster": null,
+      "anteil_modell": null
+    },
+    {
+      "datei": "data/research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+      "gruppe": "major adverse cardiovascular events [log_ratio]",
+      "k": 4,
+      "zeilen": 6,
+      "M": 3,
+      "hkj": {
+        "pooled": 0.7415965409494402,
+        "ci": [
+          0.4297589550519663,
+          1.053434126846914
+        ],
+        "breite": 0.6236751717949478,
+        "tau2": 0.0
+      },
+      "rve_fe": {
+        "pooled": 0.7505049227036904,
+        "breite": 1.1371199923946578,
+        "available": true
+      },
+      "rve_re": {
+        "pooled": 0.7505049227036904,
+        "breite": 1.1371199923946578,
+        "tau2": 0.0,
+        "available": true
+      },
+      "rve_re_reml": {
+        "breite": 1.131229392543169,
+        "tau2": 0.002307328548591886,
+        "available": true
+      },
+      "faktor_fe_hkj": 1.8232567910664248,
+      "faktor_re_fe": 1.0,
+      "faktor_re_hkj": 1.8232567910664248,
+      "log_modell": 0.0,
+      "log_cluster": 0.6006243475791901,
+      "anteil_modell": 0.0
+    }
+  ],
+  "fehler": []
+}

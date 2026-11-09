@@ -518,3 +518,47 @@ Stattdessen ist die Aenderung jetzt ohne Quellcode nachvollziehbar:
 
 Grenze, unveraendert: Bei einem frischen Klon fehlt der Hinweis trotzdem. Das
 ist die Folge des IP-Schutzes, jetzt aber sichtbar (Exit 1) statt still.
+
+## Nachtrag 13 - RVE mit Random-Effects-Gewichten (2026-11-09)
+
+Die offene Frage aus E4f: Wie viel der MACE-Verbreiterung (1,137 gegen 0,624,
+Faktor 1,82) kommt vom Fixed-Effect-Modell, wie viel von der
+Cluster-Korrektur?
+
+**Umsetzung.** `pool_rve` kann jetzt beides. Die Mathematik liegt committet in
+`research_agent/meta/rve_weights.py`: `w = 1/(v + tau2)` fuer Punkt UND
+Sandwich, CR0 mit `M/(M-1)`, t auf `M-1` df. Nur so gilt die CR0-Identitaet;
+die frueher dokumentierte Sorge betraf den Mischfall FE-Punkt mit
+RE-Gewichten. `pooling.py` ist nur verdrahtet (Default bleibt
+`weights="fixed"`), Patch-Eintrag `pooling_rve_weights_20261109.md`.
+
+**Messung** auf denselben Zeilen vor dem Kollaps
+(`e4i_rve_modell_20261108.json`):
+
+| Gruppe | HKJ | RVE-FE | RVE-RE | RE/HKJ | Modellanteil |
+|---|---:|---:|---:|---:|---:|
+| MACE | 0,624 | 1,137 | 1,137 | 1,82 | 0 % |
+| incident CVD | 1,529 | 1,438 | 1,791 | 1,17 | 139 % |
+| depressive [raw:beta] | 0,536 | 0,458 | 0,772 | 1,44 | 143 % |
+| depressive [hedges_g] | 1,466 | 1,550 | 1,270 | 0,87 | 139 % |
+| depressive [log_ratio] | 0,748 | 0,068 | 0,659 | 0,88 | -1772 % |
+
+**MACE.** tau2 ist in beiden Rechnungen 0,000 (REML 0,002), die Gewichte sind
+identisch, RVE-FE und RVE-RE bitgleich. Die Verbreiterung ist damit
+**vollstaendig Cluster-Effekt** - das Modell traegt nichts dazu bei. Was E4f
+also offen liess ("interessant, aber nicht entschieden"), ist entschieden: Die
+naive Rechnung unterschätzt die Unsicherheit hier allein wegen abhaengiger
+Zeilen.
+
+**Die anderen Gruppen sind anders zu lesen.** Bei `hedges_g`, `raw:beta`,
+`log_ratio` und `incident CVD` wirken Modell- und Cluster-Beitrag teilweise
+gegeneinander; Anteile ueber 100 Prozent oder negativ zeigen das. Dort ist die
+Zahl kein "Anteil Scheinpraezision", sondern nur zusammen mit den beiden
+Log-Beitraegen lesbar. Ein generelles Urteil "RVE war zu breit" folgt daraus
+nicht - fuer MACE schon.
+
+**Grenzen.** tau2 wird aus den Zeilen vor dem Kollaps geschaetzt, HKJ aus den
+kollabierten Zeilen; das ist eine Annaeherung. Die Zerlegung ist eine
+Log-Breiten-Zerlegung, keine Varianzzerlegung. Sechs neue Tests
+(`test_rve_weights.py`) pruefen die Formel gegen handgerechnete Werte,
+darunter `tau2 = 0` gegen den FE-Fall.

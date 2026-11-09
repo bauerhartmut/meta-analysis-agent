@@ -69,8 +69,27 @@ Eintrag `report_single_cluster_20261108.md` mit Ankerpunkt und Wirkung, und
 `scripts/pruefe_report_patch.py` als objektiver Nachweis (Exit 0 = wirksam,
 Exit 1 = fehlt). Kein Diff und kein Quellcode im Repo.
 
+## E4i - RVE mit Random-Effects-Gewichten (2026-11-09)
+
+`pool_rve(weights="random")` rechnet Punkt und Sandwich mit `1/(v + tau2)`;
+die Formel steht committet in `meta/rve_weights.py`, `pooling.py` ist nur
+verdrahtet. Messung `e4i_rve_modell_20261108.json`:
+
+| Gruppe | HKJ | RVE-FE | RVE-RE | Modellanteil |
+|---|---:|---:|---:|---:|
+| MACE | 0,624 | 1,137 | 1,137 | 0 % |
+| incident CVD | 1,529 | 1,438 | 1,791 | 139 % |
+| depressive [raw:beta] | 0,536 | 0,458 | 0,772 | 143 % |
+| depressive [hedges_g] | 1,466 | 1,550 | 1,270 | 139 % |
+| depressive [log_ratio] | 0,748 | 0,068 | 0,659 | -1772 % |
+
+MACE: tau2 = 0 in beiden Rechnungen, RVE-FE und RVE-RE identisch - die
+Verbreiterung ist reiner Cluster-Effekt. Bei den anderen vier Gruppen heben
+sich Modell- und Clusterbeitrag teilweise auf; dort ist kein generelles
+Urteil ablesbar.
+
 ## Empfehlung
 
-Inhaltlich weiter mit RVE auf Random-Effects-Gewichten: Erst damit laesst sich
-bei MACE trennen, wie viel der Verbreiterung von der Cluster-Korrektur und wie
-viel vom Fixed-Effect-Modell kommt.
+`rve_re` neben `rve` in den Report nehmen (zweite Zeile mit Modellvergleich),
+damit die Trennung dort steht, wo sie gelesen wird - heute liegt sie nur im
+Validierungsordner.
