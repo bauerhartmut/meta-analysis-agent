@@ -62,7 +62,7 @@ Drei Eintraege, alle wirksam, Pruefskript Exit 0:
 Committet und damit im Klon vorhanden: die Mathematik
 (`meta/rve_weights.py`), das Gate (`meta/pool_gates.py`), das Pruefskript
 (`scripts/pruefe_report_patch.py`), die Mess- und Belegskripte
-(`scripts/messe_rve_modell.py`, `scripts/zeige_rve_in_report.py`) und die
+(`scripts/messe_rve_modell.py`, `scripts/zeige_rve_im_report.py`) und die
 Ergebnisdateien. Nicht im Repo: der Quellcode der geschuetzten Dateien -
 bewusst, siehe `research_agent/patches/README.md`.
 
