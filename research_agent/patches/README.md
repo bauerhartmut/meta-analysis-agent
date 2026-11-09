@@ -33,3 +33,4 @@ das Skript auf, statt den Code zu lesen.
 |---|---|---|
 | `report_single_cluster_20261108.md` | `research_agent/report.py` | wirksam, Pruefskript Exit 0 |
 | `pooling_rve_weights_20261109.md` | `research_agent/meta/pooling.py` | wirksam, Pruefskript Exit 0 |
+| `report_rve_re_20261109.md` | `research_agent/report.py` | wirksam, Pruefskript Exit 0 |

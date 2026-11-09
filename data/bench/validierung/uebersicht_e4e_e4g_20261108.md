@@ -88,8 +88,15 @@ Verbreiterung ist reiner Cluster-Effekt. Bei den anderen vier Gruppen heben
 sich Modell- und Clusterbeitrag teilweise auf; dort ist kein generelles
 Urteil ablesbar.
 
+## Nachtrag: RVE-RE im Report (2026-11-09)
+
+Der Report zeigt jetzt zwei RVE-Zeilen: Fixed Effect und Random Effects, mit
+dem Faktor zwischen beiden. Bei MACE steht ausdruecklich "Breite identisch
+(tau2 = 0): reiner Cluster-Effekt". Beleg `report_rve_re_20261109.txt`,
+Patch-Eintrag `report_rve_re_20261109.md`, 66 Report-Tests gruen.
+
 ## Empfehlung
 
-`rve_re` neben `rve` in den Report nehmen (zweite Zeile mit Modellvergleich),
-damit die Trennung dort steht, wo sie gelesen wird - heute liegt sie nur im
-Validierungsordner.
+tau2 fuer HKJ und RVE auf demselben Material schaetzen. Heute liest HKJ es
+aus den kollabierten Zeilen, RVE-RE aus allen - die verbleibende Ungenauigkeit
+in der Zerlegung. Reine Rechnung, kein Netz, kleiner Eingriff.

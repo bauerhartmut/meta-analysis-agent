@@ -29,10 +29,11 @@ CHECKS = (
     ("research_agent/meta/rve_weights.py",
      ("def random_effects_rve",)),
     ("research_agent/report.py",
-     ('group.get("single_cluster")', "Kein Konfidenzintervall")),
+     ('group.get("single_cluster")', "Kein Konfidenzintervall",
+      'group.get("rve_re")', "reiner Cluster-Effekt")),
 )
 
-BACKUP = Path("local_patches") / "report_20261108.py"
+BACKUP = Path("local_patches") / "report_20261109.py"
 
 
 def pruefe_text(text: str, marker: Iterable[str]) -> List[str]:

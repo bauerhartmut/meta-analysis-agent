@@ -562,3 +562,29 @@ kollabierten Zeilen; das ist eine Annaeherung. Die Zerlegung ist eine
 Log-Breiten-Zerlegung, keine Varianzzerlegung. Sechs neue Tests
 (`test_rve_weights.py`) pruefen die Formel gegen handgerechnete Werte,
 darunter `tau2 = 0` gegen den FE-Fall.
+
+## Nachtrag 14 - RVE-RE als zweite Zeile im Report (2026-11-09)
+
+Die Messung aus Nachtrag 13 lag nur in `data/bench/validierung/`. Der Report
+nannte die RVE-Breite und liess den Modellanteil offen - an der Stelle, an der
+er gelesen wird, fehlte die Trennung.
+
+**Patch.** `_meta_section` bekommt nach dem RVE-Block eine zweite Zeile aus
+`rve_re`: Punkt und Intervall mit Random-Effects-Gewichten, dazu der Faktor
+zur Fixed-Effect-Variante. Sind beide Breiten gleich (tau2 = 0), sagt der Text
+es ausdruecklich. Patch-Eintrag `report_rve_re_20261109.md`, Sicherung
+`local_patches/report_20261109.py`.
+
+**Beleg** (`report_rve_re_20261109.txt`, DB-Kopie, 282 Zeilen):
+
+- MACE: `RVE (M = 3): 0.751 [0.182; 1.319]` und `RVE mit Random-Effects-
+  Gewichten (M = 3): 0.751 [0.182; 1.319]. Breite identisch ... reiner
+  Cluster-Effekt.`
+- incident CVD: FE-Breite `[-0.849; 0.589]`, RE `0.295 [-0.600; 1.191]`,
+  Faktor 1.25 - hier wirkt das Modell mit.
+- preeclampsia: nur der M=1-Hinweis, keine RVE-Zeile (unveraendert).
+
+**Pruefung.** 66 Report-Tests gruen (u. a. `test_meta_report`,
+`test_report_honesty`); `pruefe_report_patch.py` Exit 0 mit vier Markern in
+`report.py`; Sicherung byte-identisch. Fehlt `rve_re` (aeltere Analysen),
+rendert der Report unveraendert.
