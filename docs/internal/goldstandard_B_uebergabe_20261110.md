@@ -21,23 +21,39 @@ eingesehen werden.
 
 - Die Annotation erfolgt unabhängig und manuell am Volltext. A nicht
   öffnen, nicht vergleichen und keine A-abgeleiteten Dateien verwenden.
+  Keine Modell- oder DB-Ergebnisse als Quelle nutzen.
+- Während der Annotation kein Austausch; nur Volltext, Anleitung v1.2,
+  Schema und das eigene Arbeitsblatt. Der Probelauf ist ein separater
+  Format- und Ablauftest; diese Anweisung betrifft die Vollannotation
+  aller 30 Dokumente, auch der drei mit `probelauf: true`.
 - Keine Zwischenabgabe: erst alle 30 Dokumente abschließen, dann
   zurückschicken.
 - Keine Zahlen umrechnen, nicht runden und keine Werte aus anderen
   Quellen ergänzen.
+- Alle 14 Pflichtfelder je Effektzeile und alle 9 Dokumentpflichtfelder
+  laut Schema setzen.
 - Jede Zeile braucht eine exakte `quote` sowie passende
   `quote_start`/`quote_end`.
 - Jedes Dokument braucht entweder Effektzeilen oder einen ausgefüllten
   `no_effect_reason`; beides zugleich ist nicht zulässig.
-- `year` bleibt ein String.
+- `year` im Gerüst unverändert lassen.
+- Ratio-Werte (`or`, `rr`, `hr`) positiv; der Effekt muss im
+  angegebenen KI liegen.
+- `design_category` nach 5.1 am Volltext bestimmen, nicht aus dem Titel
+  ableiten.
 - `is_primary: false` nur bei gepoolten Schätzern.
-- 5.7: p-Wert ohne Effektgröße ist keine Zeile.
-- 5.8: keine Einzelstudien aus Übersichtsarbeiten übernehmen.
+- 5.7: p-Wert ohne Effektgröße ist keine Zeile; Mittelwerte +/- SD
+  prüfen.
+- 5.8: narrativer Überblick ohne eigenen gepoolten Schätzer ergibt
+  keine Zeile, sondern `no_effect_reason`; keine Einzelstudien aus
+  Übersichtsarbeiten übernehmen.
+- 5.8 gepoolt: jeden gepoolten Schätzer als eigene Zeile mit
+  `is_primary: false` erfassen; bei 5cbf nur der Hauptschätzer, Peak und
+  Sensitivitätsanalyse in `notes`.
 - 5.11: eine Spannweite über Zeitpunkte ist keine Zeile; je Zeitpunkt
   eine Tabellenzeile.
-- Negativkontrollen nur bei einem echten quantifizierten Effekt mit
-  Unsicherheit als Zeile erfassen; sonst begründen.
-- Design am Volltext bestimmen, nicht aus dem Titel ableiten.
+- Negativkontrollen: keine Zeile, `no_effect_reason`; nur bei einem
+  echten quantifizierten Effekt mit Unsicherheit eine Zeile.
 - Maßgeblich sind `goldstandard_annotationsanleitung.md`,
   `goldstandard_schema.json` und das jeweilige Arbeitsblatt.
 
@@ -49,8 +65,10 @@ eingesehen werden.
        sha256sum -c SHA256SUMS.txt
 
    Unter Windows PowerShell alternativ mit `Get-FileHash` arbeiten.
-3. Zuerst die 12 Kalibrierungsdokumente bearbeiten, danach die übrigen
-   18; die fünf Negativkontrollen zuletzt.
+3. Zuerst die 12 Kalibrierungsdokumente bearbeiten (die ersten 12 in
+   der Reihenfolge des Gerüsts), danach die 13 übrigen Ergänzungen,
+   zuletzt die fünf Negativkontrollen (`stratum: negative_control`;
+   zusammen 18).
 4. Pro Dokument alle relevanten Effekte erfassen oder das Dokument
    begründet als effektlos abschließen.
 5. Nach jedem Dokument den Entwurfsprüfer laufen lassen:
