@@ -1,0 +1,80 @@
+{
+  "datei": "bmj.e6664.full.pdf",
+  "prompt_zeichen": 26161,
+  "roh_zeichen": 522,
+  "roh_gespeichert": "rohantwort_20261110.txt",
+  "json_ok": true,
+  "json_fehler": "",
+  "top_typ": "dict",
+  "top_schluessel": [
+    "outcome",
+    "comparison",
+    "effect_type",
+    "effect",
+    "se",
+    "ci_low",
+    "ci_high",
+    "ci_level",
+    "n",
+    "events"
+  ],
+  "dict_objekte_roh": 1,
+  "unwrap_items": 1,
+  "normalisierte_zeilen": 1,
+  "zeilen": [
+    {
+      "outcome": "Total sleep time",
+      "effect": 22.4,
+      "se": 11.173674706649921,
+      "ci_low": 0.5,
+      "ci_high": 44.3,
+      "effect_type": "mean_diff",
+      "quote": "22.4 (0.5 to 44.3)*"
+    }
+  ],
+  "wert_mit_intervall_im_rohtext": 1,
+  "tokens": {
+    "total_calls": 2,
+    "total_prompt_tokens": 8000,
+    "total_completion_tokens": 214,
+    "total_tokens": 8214,
+    "total_time_ms": 172.0,
+    "avg_time_ms": 86.0,
+    "avg_tokens_per_call": 107.0,
+    "errors": 0,
+    "phase_tokens": {
+      "idle": 8214
+    },
+    "phase_time_ms": {
+      "idle": 172.0
+    },
+    "phase_calls": {
+      "idle": 2
+    },
+    "consecutive_failures": 0,
+    "last_failure": "",
+    "recent_calls": [
+      {
+        "prompt_tokens": 13,
+        "completion_tokens": 14,
+        "total_tokens": 27,
+        "time_ms": 94.0,
+        "phase": "idle",
+        "success": true,
+        "model": "gwdg/qwen3.5-397b-a17b",
+        "timestamp": 1794320447.3644555
+      },
+      {
+        "prompt_tokens": 7987,
+        "completion_tokens": 200,
+        "total_tokens": 8187,
+        "time_ms": 78.0,
+        "phase": "idle",
+        "success": true,
+        "model": "gwdg/qwen3.5-397b-a17b",
+        "timestamp": 1794320447.452497
+      }
+    ]
+  },
+  "modell": "gwdg/qwen3.5-397b-a17b"
+}
