@@ -246,8 +246,10 @@ Dokumente mit mindestens einem Caption-Treffer: %d von 30.
 
 ## Naechster Schritt
 
-Kappa-Probelauf an drei Dokumenten (je eines aus RCT, Kohorte, Aggregat),
-bevor alle 30 annotiert werden. Liegt Kappa unter 0,80, wird die Anleitung
+Format- und Ablauftest an drei Dokumenten (je eines aus RCT, Kohorte,
+Aggregat), bevor alle 30 annotiert werden. Er prueft Pflichtfelder, Quotes
+und Design; eine Kappa-Zahl entsteht dabei nicht. Der Zeilen-Kappa wird nach
+der Vollannotation aller 30 Dokumente gemessen; unter 0,80 wird die Anleitung
 geschaerft, nicht die Auswahl geaendert.
 """
     (ROOT / "docs/internal/goldstandard_auswahl_20261110.md").write_text(md, encoding="utf-8")

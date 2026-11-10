@@ -1,15 +1,17 @@
-"""Wertet den Kappa-Probelauf zwischen zwei Annotationsdateien aus.
+"""Wertet den Kappa zwischen zwei Annotationsdateien aus (Vollannotation).
 
 Beispiel:
     export PYTHONIOENCODING=utf-8
     .venv/bin/python.exe scripts/werte_kappa_probe.py \
         --a data/golden_effects/goldstandard_A.json \
         --b data/golden_effects/goldstandard_B.json \
-        --probelauf --out data/golden_effects/kappa_probe.json
+        --out data/golden_effects/kappa.json
 
-Ohne --probelauf werden alle Dokumente verglichen. --schwelle setzt die
-Grenze fuer "bestanden" (Default 0,80, Zeilen-Kappa). Der Exit-Code ist 0,
-solange die Dateien lesbar sind; das Ergebnis steht im Bericht.
+Ohne --probelauf werden alle Dokumente verglichen; das ist der Kappa-Lauf
+nach der Vollannotation. --probelauf ist nur ein Techniktest auf den drei
+markierten Dokumenten und keine Kappa-Messung. --schwelle setzt die Grenze
+fuer "bestanden" (Default 0,80, Zeilen-Kappa). Der Exit-Code ist 0, solange
+die Dateien lesbar sind; das Ergebnis steht im Bericht.
 
 --selbsttest prueft die Kappa-Formel an konstruierten Faellen.
 """
@@ -55,7 +57,8 @@ def main(argv: list) -> int:
     p = argparse.ArgumentParser()
     p.add_argument("--a", default="data/golden_effects/goldstandard_A.json")
     p.add_argument("--b", default="data/golden_effects/goldstandard_B.json")
-    p.add_argument("--probelauf", action="store_true", help="nur Dokumente mit probelauf=true")
+    p.add_argument("--probelauf", action="store_true",
+                   help="nur Dokumente mit probelauf=true (Techniktest, keine Kappa-Messung)")
     p.add_argument("--schwelle", type=float, default=0.80)
     p.add_argument("--toleranz", type=float, default=0.01)
     p.add_argument("--out", default="")

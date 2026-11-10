@@ -1,7 +1,7 @@
 """Erzeugt die leeren Annotationsgerueste fuer A und B.
 
 Quelle ist data/golden_effects/documents.json. Die drei Dokumente fuer den
-Kappa-Probelauf werden mit "probelauf": true markiert. Vorhandene Dateien
+Format-Probelauf werden mit "probelauf": true markiert. Vorhandene Dateien
 werden nicht ueberschrieben, damit annotierte Arbeit nicht verloren geht;
 --force ersetzt sie ausdruecklich.
 

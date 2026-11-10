@@ -57,6 +57,14 @@ Probelauf prüft das Format und den Ablauf, nicht die Interrater-Reliabilität.
 Wenn vor der Vollannotation ein Kappa nötig ist, **Option 2** mit den sechs
 Dokumenten.
 
+## Entscheidung (2026-11-10)
+
+Option 1 ist umgesetzt. Der Probelauf ist ein Format- und Ablauftest: Er
+prüft Pflichtfelder, Quotes, Design und die Abgabe. Die Kappa-Messung ist
+auf die Vollannotation aller 30 Dokumente verschoben; dort gilt die Schwelle
+Zeilen-Kappa 0,80. `probelauf: true` bleibt nur die Markierung für den
+Formatprüfer.
+
 ## Prüfung
 
 - Pipeline-Zahlen aus `data/golden_effects/abgleich_pipeline.json`

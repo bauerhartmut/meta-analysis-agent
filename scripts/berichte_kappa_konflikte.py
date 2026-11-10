@@ -119,9 +119,9 @@ def markdown(ergebnis: dict, index_a: dict, index_b: dict,
                    + len(ergebnis["wert_abweichung"])
                    + len(ergebnis["ki_abweichung"]))
     text = [
-        "# Kappa-Probelauf: Konflikte fuer die dritte Stimme (2026-11-10)",
+        "# Kappa-Vergleich: Konflikte fuer die dritte Stimme",
         "",
-        f"Grundlage: {'nur die drei Probelauf-Dokumente' if probelauf else 'alle Dokumente'}, "
+        f"Grundlage: {'nur die Probelauf-Dokumente (Techniktest)' if probelauf else 'alle Dokumente'}, "
         f"Toleranz 1 %. Schwelle Zeilen-Kappa: {schwelle:.2f}.",
         "",
         f"- Dokumente: {ergebnis['n_dokumente']}",
@@ -275,7 +275,8 @@ def main(argv: list) -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--a", default="data/golden_effects/goldstandard_A.json")
     parser.add_argument("--b", default="data/golden_effects/goldstandard_B.json")
-    parser.add_argument("--probelauf", action="store_true")
+    parser.add_argument("--probelauf", action="store_true",
+                        help="nur die Probelauf-Dokumente (Techniktest, keine Kappa-Messung)")
     parser.add_argument("--schwelle", type=float, default=0.80)
     parser.add_argument("--toleranz", type=float, default=0.01)
     parser.add_argument("--md", default="docs/internal/kappa_konflikte_20261110.md")

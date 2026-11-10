@@ -1,7 +1,9 @@
 # Probelauf-Annotation: Arbeitsblatt (2026-11-10)
 
 Drei Dokumente, zwei unabhängige Annotatoren (A/B), Blindheit. Ziel:
-Zeilen-Kappa ≥ 0,80; danach Freigabe für die 30 Dokumente.
+Format- und Ablauftest (Pflichtfelder, Quotes, Design, Abgabe). Der
+Zeilen-Kappa wird erst nach der Vollannotation aller 30 Dokumente
+gemessen; Schwelle 0,80.
 
 ## Die drei Dokumente
 
@@ -40,14 +42,17 @@ KI berichtet ist.
    in `study_effects`, Pipeline-Ausgaben oder die Datei des anderen.
 2. Gerüst füllen: `effects` oder `no_effect_reason`; Quote exakt mit
    `quote_start`/`quote_end`.
-3. `.venv/bin/python.exe scripts/pruefe_goldstandard.py data/golden_effects/goldstandard_A.json`
-   (ohne `--entwurf`); Exit 0, SHA-256 notieren.
-4. `.venv/bin/python.exe scripts/werte_kappa_probe.py --probelauf --out data/golden_effects/kappa_probe.json`
-   (Schwelle 0,80).
-5. Erst nach beiden Abgaben vergleichen; Konflikte mit dritter Stimme.
+3. `.venv/bin/python.exe scripts/pruefe_probelauf_abgabe.py`; Exit 0,
+   SHA-256 notieren.
+4. Format auswerten: Zeilen und Begründungen je Dokument, die drei
+   Designfälle. Keine Kappa-Zahl in diesem Schritt.
+5. Kappa erst nach der Vollannotation aller 30 Dokumente:
+   `.venv/bin/python.exe scripts/werte_kappa_probe.py` (ohne
+   `--probelauf`, Schwelle 0,80); Konflikte mit dritter Stimme.
 
 ## Stand (Start)
 
 - Gerüste: 30 Dokumente, 3 mit `probelauf: true`, 0 Zeilen, 0 Begründungen.
 - `--entwurf`: 0 Fehler, 30 offen je Datei.
-- Kappa: `null`; ohne Annotation gibt es nichts zu messen.
+- Kappa: `null`; der Probelauf ist kein Kappa-Lauf, die Messung folgt
+  nach der Vollannotation.

@@ -238,9 +238,9 @@ Matching-Fehler (siehe `goldstandard_entscheidung_3790c91f96.md`).
 2. Der Prüfer meldet: fehlende Pflichtfelder, unbekannte Enum-Werte,
    Quote-Abweichung, Effekt außerhalb des KI, doppelte `effect_id`,
    Dokument ohne Zeile **und** ohne Begründung.
-3. Nach dem Vergleich: Precision/Recall je Dokument und je Schicht; Kappa
-   zwischen A und B. Unter **0,80** wird die Anleitung geschärft und die
-   betroffene Schicht neu annotiert, bevor der Goldstandard gilt.
+3. Nach der Vollannotation: Precision/Recall je Dokument und je Schicht;
+   Kappa zwischen A und B. Unter **0,80** wird die Anleitung geschärft und
+   die betroffene Schicht neu annotiert, bevor der Goldstandard gilt.
 4. Der Konsens wird aus A und B gebildet, Konflikte mit dritter Stimme. Die
    Konsensdatei hat `annotator: "consensus"`.
 
@@ -248,12 +248,12 @@ Matching-Fehler (siehe `goldstandard_entscheidung_3790c91f96.md`).
 
 ## 8. Abgabe
 
-**Probelauf:** `scripts/erzeuge_annotationsgeruest.py` legt die leeren
-Dateien an (drei Dokumente mit `probelauf: true`). Nach dem Ausfüllen wertet
-`scripts/werte_kappa_probe.py --probelauf` Übereinstimmung, Kappa und
-Konflikte aus. Die Gerüste bestehen `pruefe_goldstandard.py --entwurf`; ein
-vollständiger Lauf ohne `--entwurf` verlangt für jedes Dokument Zeilen oder
-Begründung.
+**Probelauf (Format- und Ablauftest):** `scripts/erzeuge_annotationsgeruest.py`
+legt die leeren Dateien an (drei Dokumente mit `probelauf: true`). Nach dem
+Ausfüllen prüft `scripts/pruefe_probelauf_abgabe.py` Pflichtfelder, Quotes und
+Design (Exit 0); eine Kappa-Zahl entsteht dabei nicht. Der Zeilen-Kappa wird
+erst nach der Vollannotation aller 30 Dokumente mit
+`scripts/werte_kappa_probe.py` (ohne `--probelauf`) gemessen; Schwelle 0,80.
 
 - Dateinamen: `data/golden_effects/goldstandard_A.json`,
   `goldstandard_B.json`, `goldstandard_consensus.json`.
