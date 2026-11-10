@@ -1,0 +1,26 @@
+{
+ "n_dokumente": 3,
+ "n_keys": 0,
+ "treffer": 0,
+ "quote": null,
+ "kappa_dokument": null,
+ "kappa_zeile": null,
+ "nur_a": [],
+ "nur_b": [],
+ "typ_abweichung": [],
+ "wert_abweichung": [],
+ "ki_abweichung": [],
+ "konflikte": {
+  "nur_a": [],
+  "nur_b": [],
+  "typ": [],
+  "wert": [],
+  "ki": []
+ },
+ "schwelle": 0.8,
+ "probelauf": true,
+ "dateien": [
+  "data/golden_effects/goldstandard_A.json",
+  "data/golden_effects/goldstandard_B.json"
+ ]
+}
