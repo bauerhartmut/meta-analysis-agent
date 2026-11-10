@@ -3,8 +3,8 @@
 - Dokument-ID: `7111ea978757a185d44ea9de90b453c3`
 - Volltext: `fulltext/7111ea978757a185d44ea9de90b453c3.txt` (99,296 Zeichen)
 - Jahr: 2025
-- Schicht: cohort | Design: observational
-- Design laut Dokument: Prospective multicenter cohort
+- Schicht: cohort | Design: aggregate
+- Design laut Dokument: narrative review
 
 **Für A und B identisch.** Getrennt ausfüllen und während der
 Annotation nicht austauschen. Nur Volltext, Anleitung und Schema
