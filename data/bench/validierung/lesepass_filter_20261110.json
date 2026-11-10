@@ -1,0 +1,4797 @@
+{
+  "test": "E5-lesepass-filter",
+  "stand": "2026-11-10T17:29:35",
+  "modellaufrufe": 0,
+  "tokens": 0,
+  "datenlage": {
+    "dbs": 48,
+    "zeilen": 7897,
+    "verteilung": {
+      "1": 7477,
+      "2": 412,
+      "3": 8
+    },
+    "dbs_mit_pass_ueber_1": [
+      {
+        "datei": "data/backups/research-kognition-vor-dedupe-20261028-165502.db",
+        "verteilung": {
+          "1": 18,
+          "2": 16
+        },
+        "zeilen_ueber_1": 16
+      },
+      {
+        "datei": "data/bench/backfill/run1.db",
+        "verteilung": {
+          "1": 10,
+          "2": 8,
+          "3": 1
+        },
+        "zeilen_ueber_1": 9
+      },
+      {
+        "datei": "data/bench/backfill/run2.db",
+        "verteilung": {
+          "1": 4,
+          "2": 4
+        },
+        "zeilen_ueber_1": 4
+      },
+      {
+        "datei": "data/bench/regreports/research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+        "verteilung": {
+          "1": 66,
+          "2": 63
+        },
+        "zeilen_ueber_1": 63
+      },
+      {
+        "datei": "data/bench/regreports/research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+        "verteilung": {
+          "1": 65,
+          "2": 62
+        },
+        "zeilen_ueber_1": 62
+      },
+      {
+        "datei": "data/bench/regreports/research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+        "verteilung": {
+          "1": 42,
+          "2": 49
+        },
+        "zeilen_ueber_1": 49
+      },
+      {
+        "datei": "data/bench/xml6/extract.db",
+        "verteilung": {
+          "1": 6,
+          "2": 6,
+          "3": 2
+        },
+        "zeilen_ueber_1": 8
+      },
+      {
+        "datei": "data/harness_local.db",
+        "verteilung": {
+          "1": 9,
+          "2": 8,
+          "3": 4
+        },
+        "zeilen_ueber_1": 12
+      },
+      {
+        "datei": "data/research-does-acute-caffeine-versus-placebo-affec-972eac.db",
+        "verteilung": {
+          "1": 4,
+          "2": 4
+        },
+        "zeilen_ueber_1": 4
+      },
+      {
+        "datei": "data/research-does-caffeine-intake-affect-short-term-m-783a51.db",
+        "verteilung": {
+          "1": 6,
+          "2": 6
+        },
+        "zeilen_ueber_1": 6
+      },
+      {
+        "datei": "data/research-does-melatonin-improve-sleep-onset-laten-382747.db",
+        "verteilung": {
+          "1": 10,
+          "2": 8,
+          "3": 1
+        },
+        "zeilen_ueber_1": 9
+      },
+      {
+        "datei": "data/research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+        "verteilung": {
+          "1": 66,
+          "2": 63
+        },
+        "zeilen_ueber_1": 63
+      },
+      {
+        "datei": "data/research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+        "verteilung": {
+          "1": 65,
+          "2": 62
+        },
+        "zeilen_ueber_1": 62
+      },
+      {
+        "datei": "data/research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+        "verteilung": {
+          "1": 42,
+          "2": 49
+        },
+        "zeilen_ueber_1": 49
+      },
+      {
+        "datei": "data/research2-does-melatonin-improve-sleep-onset-laten-382747.db",
+        "verteilung": {
+          "1": 4,
+          "2": 4
+        },
+        "zeilen_ueber_1": 4
+      }
+    ]
+  },
+  "mechanismusprobe": {
+    "datei": "data/bench/sol/direct_label2.db",
+    "hinweis": "Konstruktion: echte Zeilen, je einmal zusaetzlich als Zweitlesung. Kein Messwert ueber die Datenlage.",
+    "aggregat": {
+      "gruppen": 132,
+      "k_summe_referenz": 830,
+      "k_summe_ohne_regel": 1660,
+      "k_summe_mit_regel": 830,
+      "gruppen_mit_k_verdoppelt": 132,
+      "filter_haelt_referenz": true,
+      "breiten_reduktion_median": 0.6222,
+      "breiten_reduktion_max": 0.8929
+    },
+    "gruppen": [
+      {
+        "outcome": "30 90 min",
+        "scale": "raw:beta",
+        "n_zeilen": 34,
+        "referenz": {
+          "k": 34,
+          "pooled": 0.029966,
+          "ci": [
+            -0.015811,
+            0.075743
+          ],
+          "breite": 0.091554
+        },
+        "ohne_regel": {
+          "k": 68,
+          "pooled": 0.028303,
+          "ci": [
+            -0.002152,
+            0.058759
+          ],
+          "breite": 0.060911
+        },
+        "mit_regel": {
+          "k": 34,
+          "pooled": 0.029966,
+          "ci": [
+            -0.015811,
+            0.075743
+          ],
+          "breite": 0.091554
+        },
+        "breite_ohne_regel_rel": 0.3347,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "30 min",
+        "scale": "raw:beta",
+        "n_zeilen": 35,
+        "referenz": {
+          "k": 35,
+          "pooled": 0.007409,
+          "ci": [
+            -0.01597,
+            0.030788
+          ],
+          "breite": 0.046758
+        },
+        "ohne_regel": {
+          "k": 70,
+          "pooled": 0.007409,
+          "ci": [
+            -0.008701,
+            0.023519
+          ],
+          "breite": 0.03222
+        },
+        "mit_regel": {
+          "k": 35,
+          "pooled": 0.007409,
+          "ci": [
+            -0.01597,
+            0.030788
+          ],
+          "breite": 0.046758
+        },
+        "breite_ohne_regel_rel": 0.3109,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "6 8 hour",
+        "scale": "raw:beta",
+        "n_zeilen": 5,
+        "referenz": {
+          "k": 5,
+          "pooled": 0.019292,
+          "ci": [
+            -0.02003,
+            0.058613
+          ],
+          "breite": 0.078643
+        },
+        "ohne_regel": {
+          "k": 10,
+          "pooled": 0.019292,
+          "ci": [
+            -0.002067,
+            0.04065
+          ],
+          "breite": 0.042717
+        },
+        "mit_regel": {
+          "k": 5,
+          "pooled": 0.019292,
+          "ci": [
+            -0.02003,
+            0.058613
+          ],
+          "breite": 0.078643
+        },
+        "breite_ohne_regel_rel": 0.4568,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "6 hour",
+        "scale": "raw:beta",
+        "n_zeilen": 20,
+        "referenz": {
+          "k": 20,
+          "pooled": 0.012431,
+          "ci": [
+            -0.252775,
+            0.277637
+          ],
+          "breite": 0.530412
+        },
+        "ohne_regel": {
+          "k": 40,
+          "pooled": 0.046581,
+          "ci": [
+            -0.109298,
+            0.20246
+          ],
+          "breite": 0.311758
+        },
+        "mit_regel": {
+          "k": 20,
+          "pooled": 0.012431,
+          "ci": [
+            -0.252775,
+            0.277637
+          ],
+          "breite": 0.530412
+        },
+        "breite_ohne_regel_rel": 0.4122,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "7 observational studies 1 randomized trial",
+        "scale": "hedges_g",
+        "n_zeilen": 2,
+        "referenz": {
+          "k": 2,
+          "pooled": 0.398059,
+          "ci": [
+            -1.744041,
+            2.540159
+          ],
+          "breite": 4.2842
+        },
+        "ohne_regel": {
+          "k": 4,
+          "pooled": 0.374386,
+          "ci": [
+            0.080182,
+            0.66859
+          ],
+          "breite": 0.588408
+        },
+        "mit_regel": {
+          "k": 2,
+          "pooled": 0.398059,
+          "ci": [
+            -1.744041,
+            2.540159
+          ],
+          "breite": 4.2842
+        },
+        "breite_ohne_regel_rel": 0.8627,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "8 hour",
+        "scale": "raw:beta",
+        "n_zeilen": 25,
+        "referenz": {
+          "k": 25,
+          "pooled": 0.037086,
+          "ci": [
+            -0.097929,
+            0.1721
+          ],
+          "breite": 0.27003
+        },
+        "ohne_regel": {
+          "k": 50,
+          "pooled": 0.030024,
+          "ci": [
+            -0.057406,
+            0.117455
+          ],
+          "breite": 0.174862
+        },
+        "mit_regel": {
+          "k": 25,
+          "pooled": 0.037086,
+          "ci": [
+            -0.097929,
+            0.1721
+          ],
+          "breite": 0.27003
+        },
+        "breite_ohne_regel_rel": 0.3524,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "90 min",
+        "scale": "raw:beta",
+        "n_zeilen": 35,
+        "referenz": {
+          "k": 35,
+          "pooled": -0.025587,
+          "ci": [
+            -0.100646,
+            0.049473
+          ],
+          "breite": 0.150119
+        },
+        "ohne_regel": {
+          "k": 70,
+          "pooled": -0.026594,
+          "ci": [
+            -0.076873,
+            0.023685
+          ],
+          "breite": 0.100559
+        },
+        "mit_regel": {
+          "k": 35,
+          "pooled": -0.025587,
+          "ci": [
+            -0.100646,
+            0.049473
+          ],
+          "breite": 0.150119
+        },
+        "breite_ohne_regel_rel": 0.3301,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "actual wake time min",
+        "scale": "raw:mean_diff",
+        "n_zeilen": 3,
+        "referenz": {
+          "k": 3,
+          "pooled": -1.178499,
+          "ci": [
+            -14.048423,
+            11.691425
+          ],
+          "breite": 25.739847
+        },
+        "ohne_regel": {
+          "k": 6,
+          "pooled": -1.178499,
+          "ci": [
+            -6.041463,
+            3.684466
+          ],
+          "breite": 9.725929
+        },
+        "mit_regel": {
+          "k": 3,
+          "pooled": -1.178499,
+          "ci": [
+            -14.048423,
+            11.691425
+          ],
+          "breite": 25.739847
+        },
+        "breite_ohne_regel_rel": 0.6221,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "age",
+        "scale": "log_ratio",
+        "n_zeilen": 5,
+        "referenz": {
+          "k": 5,
+          "pooled": 0.051491,
+          "ci": [
+            -0.020946,
+            0.123927
+          ],
+          "breite": 0.144873
+        },
+        "ohne_regel": {
+          "k": 10,
+          "pooled": 0.052125,
+          "ci": [
+            0.013817,
+            0.090433
+          ],
+          "breite": 0.076616
+        },
+        "mit_regel": {
+          "k": 5,
+          "pooled": 0.051491,
+          "ci": [
+            -0.020946,
+            0.123927
+          ],
+          "breite": 0.144873
+        },
+        "breite_ohne_regel_rel": 0.4712,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "ancova",
+        "scale": "raw:mean_diff",
+        "n_zeilen": 6,
+        "referenz": {
+          "k": 6,
+          "pooled": -0.113966,
+          "ci": [
+            -1.003174,
+            0.775242
+          ],
+          "breite": 1.778416
+        },
+        "ohne_regel": {
+          "k": 12,
+          "pooled": -0.122862,
+          "ci": [
+            -0.593454,
+            0.347729
+          ],
+          "breite": 0.941182
+        },
+        "mit_regel": {
+          "k": 6,
+          "pooled": -0.113966,
+          "ci": [
+            -1.003174,
+            0.775242
+          ],
+          "breite": 1.778416
+        },
+        "breite_ohne_regel_rel": 0.4708,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "attitude",
+        "scale": "log_ratio",
+        "n_zeilen": 2,
+        "referenz": {
+          "k": 2,
+          "pooled": 0.053541,
+          "ci": [
+            0.053541,
+            0.053541
+          ],
+          "breite": 0.0
+        },
+        "ohne_regel": {
+          "k": 4,
+          "pooled": 0.053541,
+          "ci": [
+            0.053541,
+            0.053541
+          ],
+          "breite": 0.0
+        },
+        "mit_regel": {
+          "k": 2,
+          "pooled": 0.053541,
+          "ci": [
+            0.053541,
+            0.053541
+          ],
+          "breite": 0.0
+        },
+        "breite_ohne_regel_rel": null,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "baseline",
+        "scale": "raw:mean_diff",
+        "n_zeilen": 6,
+        "referenz": {
+          "k": 6,
+          "pooled": 0.155777,
+          "ci": [
+            -0.443931,
+            0.755484
+          ],
+          "breite": 1.199416
+        },
+        "ohne_regel": {
+          "k": 12,
+          "pooled": 0.155777,
+          "ci": [
+            -0.190413,
+            0.501966
+          ],
+          "breite": 0.692379
+        },
+        "mit_regel": {
+          "k": 6,
+          "pooled": 0.155777,
+          "ci": [
+            -0.443931,
+            0.755484
+          ],
+          "breite": 1.199416
+        },
+        "breite_ohne_regel_rel": 0.4227,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "basic characteristics of chinese urban adults by sleep quality pct",
+        "scale": "log_ratio",
+        "n_zeilen": 5,
+        "referenz": {
+          "k": 5,
+          "pooled": 0.55019,
+          "ci": [
+            -0.377888,
+            1.478269
+          ],
+          "breite": 1.856156
+        },
+        "ohne_regel": {
+          "k": 10,
+          "pooled": 0.549659,
+          "ci": [
+            0.045419,
+            1.053899
+          ],
+          "breite": 1.00848
+        },
+        "mit_regel": {
+          "k": 5,
+          "pooled": 0.55019,
+          "ci": [
+            -0.377888,
+            1.478269
+          ],
+          "breite": 1.856156
+        },
+        "breite_ohne_regel_rel": 0.4567,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "borderline sleep quality",
+        "scale": "log_ratio",
+        "n_zeilen": 2,
+        "referenz": {
+          "k": 2,
+          "pooled": 0.178196,
+          "ci": [
+            0.125037,
+            0.231355
+          ],
+          "breite": 0.106318
+        },
+        "ohne_regel": {
+          "k": 4,
+          "pooled": 0.178196,
+          "ci": [
+            0.170509,
+            0.185883
+          ],
+          "breite": 0.015374
+        },
+        "mit_regel": {
+          "k": 2,
+          "pooled": 0.178196,
+          "ci": [
+            0.125037,
+            0.231355
+          ],
+          "breite": 0.106318
+        },
+        "breite_ohne_regel_rel": 0.8554,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "boys",
+        "scale": "log_ratio",
+        "n_zeilen": 2,
+        "referenz": {
+          "k": 2,
+          "pooled": -1.286728,
+          "ci": [
+            -3.001443,
+            0.427988
+          ],
+          "breite": 3.429431
+        },
+        "ohne_regel": {
+          "k": 4,
+          "pooled": -1.288242,
+          "ci": [
+            -1.536124,
+            -1.04036
+          ],
+          "breite": 0.495764
+        },
+        "mit_regel": {
+          "k": 2,
+          "pooled": -1.286728,
+          "ci": [
+            -3.001443,
+            0.427988
+          ],
+          "breite": 3.429431
+        },
+        "breite_ohne_regel_rel": 0.8554,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "caffeine foods beverages",
+        "scale": "log_ratio",
+        "n_zeilen": 8,
+        "referenz": {
+          "k": 8,
+          "pooled": 0.277794,
+          "ci": [
+            0.210061,
+            0.345527
+          ],
+          "breite": 0.135465
+        },
+        "ohne_regel": {
+          "k": 16,
+          "pooled": 0.277794,
+          "ci": [
+            0.236086,
+            0.319502
+          ],
+          "breite": 0.083415
+        },
+        "mit_regel": {
+          "k": 8,
+          "pooled": 0.277794,
+          "ci": [
+            0.210061,
+            0.345527
+          ],
+          "breite": 0.135465
+        },
+        "breite_ohne_regel_rel": 0.3842,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "caffeine foods beverages",
+        "scale": "raw:beta",
+        "n_zeilen": 4,
+        "referenz": {
+          "k": 4,
+          "pooled": -0.176913,
+          "ci": [
+            -1.013302,
+            0.659476
+          ],
+          "breite": 1.672778
+        },
+        "ohne_regel": {
+          "k": 8,
+          "pooled": -0.192719,
+          "ci": [
+            -0.526767,
+            0.141329
+          ],
+          "breite": 0.668097
+        },
+        "mit_regel": {
+          "k": 4,
+          "pooled": -0.176913,
+          "ci": [
+            -1.013302,
+            0.659476
+          ],
+          "breite": 1.672778
+        },
+        "breite_ohne_regel_rel": 0.6006,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "carbohydrate model 1",
+        "scale": "log_ratio",
+        "n_zeilen": 3,
+        "referenz": {
+          "k": 3,
+          "pooled": 0.215581,
+          "ci": [
+            0.073659,
+            0.357504
+          ],
+          "breite": 0.283845
+        },
+        "ohne_regel": {
+          "k": 6,
+          "pooled": 0.215581,
+          "ci": [
+            0.161955,
+            0.269207
+          ],
+          "breite": 0.107252
+        },
+        "mit_regel": {
+          "k": 3,
+          "pooled": 0.215581,
+          "ci": [
+            0.073659,
+            0.357504
+          ],
+          "breite": 0.283845
+        },
+        "breite_ohne_regel_rel": 0.6221,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "carbohydrate model 2",
+        "scale": "log_ratio",
+        "n_zeilen": 3,
+        "referenz": {
+          "k": 3,
+          "pooled": 0.271494,
+          "ci": [
+            0.11044,
+            0.432549
+          ],
+          "breite": 0.322109
+        },
+        "ohne_regel": {
+          "k": 6,
+          "pooled": 0.271494,
+          "ci": [
+            0.210639,
+            0.33235
+          ],
+          "breite": 0.12171
+        },
+        "mit_regel": {
+          "k": 3,
+          "pooled": 0.271494,
+          "ci": [
+            0.11044,
+            0.432549
+          ],
+          "breite": 0.322109
+        },
+        "breite_ohne_regel_rel": 0.6221,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "chronotype",
+        "scale": "log_ratio",
+        "n_zeilen": 2,
+        "referenz": {
+          "k": 2,
+          "pooled": 0.217659,
+          "ci": [
+            -1.01424,
+            1.449559
+          ],
+          "breite": 2.463799
+        },
+        "ohne_regel": {
+          "k": 4,
+          "pooled": 0.218959,
+          "ci": [
+            0.040885,
+            0.397032
+          ],
+          "breite": 0.356148
+        },
+        "mit_regel": {
+          "k": 2,
+          "pooled": 0.217659,
+          "ci": [
+            -1.01424,
+            1.449559
+          ],
+          "breite": 2.463799
+        },
+        "breite_ohne_regel_rel": 0.8554,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "clinical insomnia",
+        "scale": "log_ratio",
+        "n_zeilen": 2,
+        "referenz": {
+          "k": 2,
+          "pooled": -0.694178,
+          "ci": [
+            -1.251878,
+            -0.136479
+          ],
+          "breite": 1.115399
+        },
+        "ohne_regel": {
+          "k": 4,
+          "pooled": -0.694178,
+          "ci": [
+            -0.774825,
+            -0.613532
+          ],
+          "breite": 0.161293
+        },
+        "mit_regel": {
+          "k": 2,
+          "pooled": -0.694178,
+          "ci": [
+            -1.251878,
+            -0.136479
+          ],
+          "breite": 1.115399
+        },
+        "breite_ohne_regel_rel": 0.8554,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "coefficients of scores of psqi and isi and corresponding 95 cis according to tertiles of pct",
+        "scale": "raw:beta",
+        "n_zeilen": 32,
+        "referenz": {
+          "k": 32,
+          "pooled": -0.301297,
+          "ci": [
+            -0.34271,
+            -0.259885
+          ],
+          "breite": 0.082825
+        },
+        "ohne_regel": {
+          "k": 64,
+          "pooled": -0.30138,
+          "ci": [
+            -0.329845,
+            -0.272914
+          ],
+          "breite": 0.05693
+        },
+        "mit_regel": {
+          "k": 32,
+          "pooled": -0.301297,
+          "ci": [
+            -0.34271,
+            -0.259885
+          ],
+          "breite": 0.082825
+        },
+        "breite_ohne_regel_rel": 0.3126,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "days 0 14 difference",
+        "scale": "raw:mean_diff",
+        "n_zeilen": 8,
+        "referenz": {
+          "k": 8,
+          "pooled": 0.456154,
+          "ci": [
+            -0.15012,
+            1.062429
+          ],
+          "breite": 1.212549
+        },
+        "ohne_regel": {
+          "k": 16,
+          "pooled": 0.43367,
+          "ci": [
+            0.073446,
+            0.793894
+          ],
+          "breite": 0.720448
+        },
+        "mit_regel": {
+          "k": 8,
+          "pooled": 0.456154,
+          "ci": [
+            -0.15012,
+            1.062429
+          ],
+          "breite": 1.212549
+        },
+        "breite_ohne_regel_rel": 0.4058,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "days 0 28 difference",
+        "scale": "raw:mean_diff",
+        "n_zeilen": 8,
+        "referenz": {
+          "k": 8,
+          "pooled": 1.733357,
+          "ci": [
+            0.461536,
+            3.005177
+          ],
+          "breite": 2.543641
+        },
+        "ohne_regel": {
+          "k": 16,
+          "pooled": 1.608541,
+          "ci": [
+            0.830669,
+            2.386414
+          ],
+          "breite": 1.555745
+        },
+        "mit_regel": {
+          "k": 8,
+          "pooled": 1.733357,
+          "ci": [
+            0.461536,
+            3.005177
+          ],
+          "breite": 2.543641
+        },
+        "breite_ohne_regel_rel": 0.3884,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "decreased",
+        "scale": "raw:beta",
+        "n_zeilen": 20,
+        "referenz": {
+          "k": 20,
+          "pooled": 0.048851,
+          "ci": [
+            -0.170447,
+            0.268149
+          ],
+          "breite": 0.438596
+        },
+        "ohne_regel": {
+          "k": 40,
+          "pooled": 0.06142,
+          "ci": [
+            -0.073083,
+            0.195923
+          ],
+          "breite": 0.269006
+        },
+        "mit_regel": {
+          "k": 20,
+          "pooled": 0.048851,
+          "ci": [
+            -0.170447,
+            0.268149
+          ],
+          "breite": 0.438596
+        },
+        "breite_ohne_regel_rel": 0.3867,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "delta",
+        "scale": "raw:mean_diff",
+        "n_zeilen": 6,
+        "referenz": {
+          "k": 6,
+          "pooled": -0.139537,
+          "ci": [
+            -1.040069,
+            0.760995
+          ],
+          "breite": 1.801064
+        },
+        "ohne_regel": {
+          "k": 12,
+          "pooled": -0.14875,
+          "ci": [
+            -0.622545,
+            0.325044
+          ],
+          "breite": 0.947588
+        },
+        "mit_regel": {
+          "k": 6,
+          "pooled": -0.139537,
+          "ci": [
+            -1.040069,
+            0.760995
+          ],
+          "breite": 1.801064
+        },
+        "breite_ohne_regel_rel": 0.4739,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "dinner is the largest meal",
+        "scale": "log_ratio",
+        "n_zeilen": 8,
+        "referenz": {
+          "k": 8,
+          "pooled": 0.404915,
+          "ci": [
+            0.352523,
+            0.457308
+          ],
+          "breite": 0.104785
+        },
+        "ohne_regel": {
+          "k": 16,
+          "pooled": 0.404915,
+          "ci": [
+            0.372654,
+            0.437177
+          ],
+          "breite": 0.064523
+        },
+        "mit_regel": {
+          "k": 8,
+          "pooled": 0.404915,
+          "ci": [
+            0.352523,
+            0.457308
+          ],
+          "breite": 0.104785
+        },
+        "breite_ohne_regel_rel": 0.3842,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "dinner is the largest meal",
+        "scale": "raw:beta",
+        "n_zeilen": 4,
+        "referenz": {
+          "k": 4,
+          "pooled": 0.063744,
+          "ci": [
+            -2.938257,
+            3.065744
+          ],
+          "breite": 6.004001
+        },
+        "ohne_regel": {
+          "k": 8,
+          "pooled": -0.023873,
+          "ci": [
+            -1.233362,
+            1.185616
+          ],
+          "breite": 2.418978
+        },
+        "mit_regel": {
+          "k": 4,
+          "pooled": 0.063744,
+          "ci": [
+            -2.938257,
+            3.065744
+          ],
+          "breite": 6.004001
+        },
+        "breite_ohne_regel_rel": 0.5971,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "dm",
+        "scale": "log_ratio",
+        "n_zeilen": 2,
+        "referenz": {
+          "k": 2,
+          "pooled": 1.529588,
+          "ci": [
+            1.04011,
+            2.019066
+          ],
+          "breite": 0.978956
+        },
+        "ohne_regel": {
+          "k": 4,
+          "pooled": 1.529588,
+          "ci": [
+            1.458807,
+            1.600369
+          ],
+          "breite": 0.141562
+        },
+        "mit_regel": {
+          "k": 2,
+          "pooled": 1.529588,
+          "ci": [
+            1.04011,
+            2.019066
+          ],
+          "breite": 0.978956
+        },
+        "breite_ohne_regel_rel": 0.8554,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "dvs",
+        "scale": "log_ratio",
+        "n_zeilen": 6,
+        "referenz": {
+          "k": 6,
+          "pooled": -0.302503,
+          "ci": [
+            -0.434657,
+            -0.170348
+          ],
+          "breite": 0.26431
+        },
+        "ohne_regel": {
+          "k": 12,
+          "pooled": -0.302503,
+          "ci": [
+            -0.378791,
+            -0.226214
+          ],
+          "breite": 0.152577
+        },
+        "mit_regel": {
+          "k": 6,
+          "pooled": -0.302503,
+          "ci": [
+            -0.434657,
+            -0.170348
+          ],
+          "breite": 0.26431
+        },
+        "breite_ohne_regel_rel": 0.4227,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "eds",
+        "scale": "log_ratio",
+        "n_zeilen": 2,
+        "referenz": {
+          "k": 2,
+          "pooled": 0.597934,
+          "ci": [
+            -0.132439,
+            1.328307
+          ],
+          "breite": 1.460745
+        },
+        "ohne_regel": {
+          "k": 4,
+          "pooled": 0.597934,
+          "ci": [
+            0.492318,
+            0.70355
+          ],
+          "breite": 0.211232
+        },
+        "mit_regel": {
+          "k": 2,
+          "pooled": 0.597934,
+          "ci": [
+            -0.132439,
+            1.328307
+          ],
+          "breite": 1.460745
+        },
+        "breite_ohne_regel_rel": 0.8554,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "end of study",
+        "scale": "raw:mean_diff",
+        "n_zeilen": 6,
+        "referenz": {
+          "k": 6,
+          "pooled": -0.080445,
+          "ci": [
+            -0.809296,
+            0.648406
+          ],
+          "breite": 1.457702
+        },
+        "ohne_regel": {
+          "k": 12,
+          "pooled": -0.080445,
+          "ci": [
+            -0.501184,
+            0.340295
+          ],
+          "breite": 0.841479
+        },
+        "mit_regel": {
+          "k": 6,
+          "pooled": -0.080445,
+          "ci": [
+            -0.809296,
+            0.648406
+          ],
+          "breite": 1.457702
+        },
+        "breite_ohne_regel_rel": 0.4227,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "epds",
+        "scale": "log_ratio",
+        "n_zeilen": 2,
+        "referenz": {
+          "k": 2,
+          "pooled": 1.093597,
+          "ci": [
+            1.072314,
+            1.114881
+          ],
+          "breite": 0.042567
+        },
+        "ohne_regel": {
+          "k": 4,
+          "pooled": 1.093597,
+          "ci": [
+            1.090519,
+            1.096675
+          ],
+          "breite": 0.006155
+        },
+        "mit_regel": {
+          "k": 2,
+          "pooled": 1.093597,
+          "ci": [
+            1.072314,
+            1.114881
+          ],
+          "breite": 0.042567
+        },
+        "breite_ohne_regel_rel": 0.8554,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "ess",
+        "scale": "raw:mean_diff",
+        "n_zeilen": 2,
+        "referenz": {
+          "k": 2,
+          "pooled": -0.609754,
+          "ci": [
+            -12.669811,
+            11.450304
+          ],
+          "breite": 24.120115
+        },
+        "ohne_regel": {
+          "k": 4,
+          "pooled": -0.588341,
+          "ci": [
+            -2.330178,
+            1.153495
+          ],
+          "breite": 3.483673
+        },
+        "mit_regel": {
+          "k": 2,
+          "pooled": -0.609754,
+          "ci": [
+            -12.669811,
+            11.450304
+          ],
+          "breite": 24.120115
+        },
+        "breite_ohne_regel_rel": 0.8556,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "factors of practice based univariable and multivariable logistic regression",
+        "scale": "log_ratio",
+        "n_zeilen": 2,
+        "referenz": {
+          "k": 2,
+          "pooled": 0.067556,
+          "ci": [
+            -3.485183,
+            3.620295
+          ],
+          "breite": 7.105478
+        },
+        "ohne_regel": {
+          "k": 4,
+          "pooled": 0.051619,
+          "ci": [
+            -0.458166,
+            0.561405
+          ],
+          "breite": 1.01957
+        },
+        "mit_regel": {
+          "k": 2,
+          "pooled": 0.067556,
+          "ci": [
+            -3.485183,
+            3.620295
+          ],
+          "breite": 7.105478
+        },
+        "breite_ohne_regel_rel": 0.8565,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "female",
+        "scale": "log_ratio",
+        "n_zeilen": 2,
+        "referenz": {
+          "k": 2,
+          "pooled": 0.075885,
+          "ci": [
+            -0.805136,
+            0.956905
+          ],
+          "breite": 1.76204
+        },
+        "ohne_regel": {
+          "k": 4,
+          "pooled": 0.075885,
+          "ci": [
+            -0.051516,
+            0.203285
+          ],
+          "breite": 0.254801
+        },
+        "mit_regel": {
+          "k": 2,
+          "pooled": 0.075885,
+          "ci": [
+            -0.805136,
+            0.956905
+          ],
+          "breite": 1.76204
+        },
+        "breite_ohne_regel_rel": 0.8554,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "gad 7 total",
+        "scale": "raw:beta",
+        "n_zeilen": 3,
+        "referenz": {
+          "k": 3,
+          "pooled": -0.560267,
+          "ci": [
+            -2.297203,
+            1.176669
+          ],
+          "breite": 3.473872
+        },
+        "ohne_regel": {
+          "k": 6,
+          "pooled": -0.569551,
+          "ci": [
+            -1.205458,
+            0.066356
+          ],
+          "breite": 1.271814
+        },
+        "mit_regel": {
+          "k": 3,
+          "pooled": -0.560267,
+          "ci": [
+            -2.297203,
+            1.176669
+          ],
+          "breite": 3.473872
+        },
+        "breite_ohne_regel_rel": 0.6339,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "girls",
+        "scale": "log_ratio",
+        "n_zeilen": 2,
+        "referenz": {
+          "k": 2,
+          "pooled": 1.265139,
+          "ci": [
+            -0.156078,
+            2.686356
+          ],
+          "breite": 2.842434
+        },
+        "ohne_regel": {
+          "k": 4,
+          "pooled": 1.268224,
+          "ci": [
+            1.063063,
+            1.473386
+          ],
+          "breite": 0.410323
+        },
+        "mit_regel": {
+          "k": 2,
+          "pooled": 1.265139,
+          "ci": [
+            -0.156078,
+            2.686356
+          ],
+          "breite": 2.842434
+        },
+        "breite_ohne_regel_rel": 0.8556,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "greasy",
+        "scale": "log_ratio",
+        "n_zeilen": 2,
+        "referenz": {
+          "k": 2,
+          "pooled": 0.325615,
+          "ci": [
+            0.279755,
+            0.371475
+          ],
+          "breite": 0.09172
+        },
+        "ohne_regel": {
+          "k": 4,
+          "pooled": 0.325615,
+          "ci": [
+            0.318983,
+            0.332246
+          ],
+          "breite": 0.013263
+        },
+        "mit_regel": {
+          "k": 2,
+          "pooled": 0.325615,
+          "ci": [
+            0.279755,
+            0.371475
+          ],
+          "breite": 0.09172
+        },
+        "breite_ohne_regel_rel": 0.8554,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "hdl",
+        "scale": "log_ratio",
+        "n_zeilen": 2,
+        "referenz": {
+          "k": 2,
+          "pooled": -0.026083,
+          "ci": [
+            -0.100883,
+            0.048718
+          ],
+          "breite": 0.149601
+        },
+        "ohne_regel": {
+          "k": 4,
+          "pooled": -0.026083,
+          "ci": [
+            -0.036899,
+            -0.015266
+          ],
+          "breite": 0.021633
+        },
+        "mit_regel": {
+          "k": 2,
+          "pooled": -0.026083,
+          "ci": [
+            -0.100883,
+            0.048718
+          ],
+          "breite": 0.149601
+        },
+        "breite_ohne_regel_rel": 0.8554,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "headache",
+        "scale": "log_ratio",
+        "n_zeilen": 2,
+        "referenz": {
+          "k": 2,
+          "pooled": 0.10173,
+          "ci": [
+            -1.453822,
+            1.657283
+          ],
+          "breite": 3.111105
+        },
+        "ohne_regel": {
+          "k": 4,
+          "pooled": 0.10173,
+          "ci": [
+            -0.123211,
+            0.326672
+          ],
+          "breite": 0.449883
+        },
+        "mit_regel": {
+          "k": 2,
+          "pooled": 0.10173,
+          "ci": [
+            -1.453822,
+            1.657283
+          ],
+          "breite": 3.111105
+        },
+        "breite_ohne_regel_rel": 0.8554,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "ht",
+        "scale": "log_ratio",
+        "n_zeilen": 2,
+        "referenz": {
+          "k": 2,
+          "pooled": 0.744939,
+          "ci": [
+            -0.12628,
+            1.616158
+          ],
+          "breite": 1.742439
+        },
+        "ohne_regel": {
+          "k": 4,
+          "pooled": 0.744939,
+          "ci": [
+            0.618956,
+            0.870922
+          ],
+          "breite": 0.251966
+        },
+        "mit_regel": {
+          "k": 2,
+          "pooled": 0.744939,
+          "ci": [
+            -0.12628,
+            1.616158
+          ],
+          "breite": 1.742439
+        },
+        "breite_ohne_regel_rel": 0.8554,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "in a relationship married",
+        "scale": "log_ratio",
+        "n_zeilen": 2,
+        "referenz": {
+          "k": 2,
+          "pooled": 0.593512,
+          "ci": [
+            -0.077394,
+            1.264418
+          ],
+          "breite": 1.341812
+        },
+        "ohne_regel": {
+          "k": 4,
+          "pooled": 0.593512,
+          "ci": [
+            0.496496,
+            0.690529
+          ],
+          "breite": 0.194033
+        },
+        "mit_regel": {
+          "k": 2,
+          "pooled": 0.593512,
+          "ci": [
+            -0.077394,
+            1.264418
+          ],
+          "breite": 1.341812
+        },
+        "breite_ohne_regel_rel": 0.8554,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "increased",
+        "scale": "raw:beta",
+        "n_zeilen": 20,
+        "referenz": {
+          "k": 20,
+          "pooled": 0.035791,
+          "ci": [
+            -0.124516,
+            0.196099
+          ],
+          "breite": 0.320615
+        },
+        "ohne_regel": {
+          "k": 40,
+          "pooled": 0.037343,
+          "ci": [
+            -0.058142,
+            0.132828
+          ],
+          "breite": 0.19097
+        },
+        "mit_regel": {
+          "k": 20,
+          "pooled": 0.035791,
+          "ci": [
+            -0.124516,
+            0.196099
+          ],
+          "breite": 0.320615
+        },
+        "breite_ohne_regel_rel": 0.4044,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "isi total",
+        "scale": "raw:beta",
+        "n_zeilen": 3,
+        "referenz": {
+          "k": 3,
+          "pooled": -1.074521,
+          "ci": [
+            -5.310135,
+            3.161093
+          ],
+          "breite": 8.471228
+        },
+        "ohne_regel": {
+          "k": 6,
+          "pooled": -1.103188,
+          "ci": [
+            -2.709954,
+            0.503579
+          ],
+          "breite": 3.213533
+        },
+        "mit_regel": {
+          "k": 3,
+          "pooled": -1.074521,
+          "ci": [
+            -5.310135,
+            3.161093
+          ],
+          "breite": 8.471228
+        },
+        "breite_ohne_regel_rel": 0.6207,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "l dlpfc dmpfc",
+        "scale": "raw:mean_diff",
+        "n_zeilen": 2,
+        "referenz": {
+          "k": 2,
+          "pooled": -3.427689,
+          "ci": [
+            -8.692494,
+            1.837116
+          ],
+          "breite": 10.52961
+        },
+        "ohne_regel": {
+          "k": 4,
+          "pooled": -3.427689,
+          "ci": [
+            -4.189008,
+            -2.666369
+          ],
+          "breite": 1.522639
+        },
+        "mit_regel": {
+          "k": 2,
+          "pooled": -3.427689,
+          "ci": [
+            -8.692494,
+            1.837116
+          ],
+          "breite": 10.52961
+        },
+        "breite_ohne_regel_rel": 0.8554,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "lai x et al",
+        "scale": "raw:mean_diff",
+        "n_zeilen": 2,
+        "referenz": {
+          "k": 2,
+          "pooled": -0.189853,
+          "ci": [
+            -1.042765,
+            0.663059
+          ],
+          "breite": 1.705824
+        },
+        "ohne_regel": {
+          "k": 4,
+          "pooled": -0.189853,
+          "ci": [
+            -0.313189,
+            -0.066517
+          ],
+          "breite": 0.246671
+        },
+        "mit_regel": {
+          "k": 2,
+          "pooled": -0.189853,
+          "ci": [
+            -1.042765,
+            0.663059
+          ],
+          "breite": 1.705824
+        },
+        "breite_ohne_regel_rel": 0.8554,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "last eating event",
+        "scale": "log_ratio",
+        "n_zeilen": 8,
+        "referenz": {
+          "k": 8,
+          "pooled": 0.164031,
+          "ci": [
+            0.110242,
+            0.217819
+          ],
+          "breite": 0.107577
+        },
+        "ohne_regel": {
+          "k": 16,
+          "pooled": 0.163909,
+          "ci": [
+            0.130818,
+            0.197001
+          ],
+          "breite": 0.066184
+        },
+        "mit_regel": {
+          "k": 8,
+          "pooled": 0.164031,
+          "ci": [
+            0.110242,
+            0.217819
+          ],
+          "breite": 0.107577
+        },
+        "breite_ohne_regel_rel": 0.3848,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "last eating event",
+        "scale": "raw:beta",
+        "n_zeilen": 4,
+        "referenz": {
+          "k": 4,
+          "pooled": 0.517468,
+          "ci": [
+            -1.70317,
+            2.738106
+          ],
+          "breite": 4.441277
+        },
+        "ohne_regel": {
+          "k": 8,
+          "pooled": 0.094304,
+          "ci": [
+            -0.603446,
+            0.792055
+          ],
+          "breite": 1.395501
+        },
+        "mit_regel": {
+          "k": 4,
+          "pooled": 0.517468,
+          "ci": [
+            -1.70317,
+            2.738106
+          ],
+          "breite": 4.441277
+        },
+        "breite_ohne_regel_rel": 0.6858,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "late bedtime",
+        "scale": "log_ratio",
+        "n_zeilen": 2,
+        "referenz": {
+          "k": 2,
+          "pooled": 1.313827,
+          "ci": [
+            0.513695,
+            2.113959
+          ],
+          "breite": 1.600264
+        },
+        "ohne_regel": {
+          "k": 4,
+          "pooled": 1.313827,
+          "ci": [
+            1.198123,
+            1.42953
+          ],
+          "breite": 0.231407
+        },
+        "mit_regel": {
+          "k": 2,
+          "pooled": 1.313827,
+          "ci": [
+            0.513695,
+            2.113959
+          ],
+          "breite": 1.600264
+        },
+        "breite_ohne_regel_rel": 0.8554,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "long sleep duration hour",
+        "scale": "log_ratio",
+        "n_zeilen": 2,
+        "referenz": {
+          "k": 2,
+          "pooled": 0.724031,
+          "ci": [
+            0.447313,
+            1.000749
+          ],
+          "breite": 0.553436
+        },
+        "ohne_regel": {
+          "k": 4,
+          "pooled": 0.724031,
+          "ci": [
+            0.684016,
+            0.764046
+          ],
+          "breite": 0.08003
+        },
+        "mit_regel": {
+          "k": 2,
+          "pooled": 0.724031,
+          "ci": [
+            0.447313,
+            1.000749
+          ],
+          "breite": 0.553436
+        },
+        "breite_ohne_regel_rel": 0.8554,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "moderate",
+        "scale": "log_ratio",
+        "n_zeilen": 2,
+        "referenz": {
+          "k": 2,
+          "pooled": 0.14842,
+          "ci": [
+            -0.047134,
+            0.343974
+          ],
+          "breite": 0.391109
+        },
+        "ohne_regel": {
+          "k": 4,
+          "pooled": 0.14842,
+          "ci": [
+            0.010142,
+            0.286698
+          ],
+          "breite": 0.276556
+        },
+        "mit_regel": {
+          "k": 2,
+          "pooled": 0.14842,
+          "ci": [
+            -0.047134,
+            0.343974
+          ],
+          "breite": 0.391109
+        },
+        "breite_ohne_regel_rel": 0.2929,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "moderate to severe",
+        "scale": "log_ratio",
+        "n_zeilen": 2,
+        "referenz": {
+          "k": 2,
+          "pooled": 0.584905,
+          "ci": [
+            0.478726,
+            0.691084
+          ],
+          "breite": 0.212358
+        },
+        "ohne_regel": {
+          "k": 4,
+          "pooled": 0.584905,
+          "ci": [
+            0.569551,
+            0.600259
+          ],
+          "breite": 0.030708
+        },
+        "mit_regel": {
+          "k": 2,
+          "pooled": 0.584905,
+          "ci": [
+            0.478726,
+            0.691084
+          ],
+          "breite": 0.212358
+        },
+        "breite_ohne_regel_rel": 0.8554,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "no",
+        "scale": "log_ratio",
+        "n_zeilen": 2,
+        "referenz": {
+          "k": 2,
+          "pooled": -2.410113,
+          "ci": [
+            -3.116697,
+            -1.70353
+          ],
+          "breite": 1.413167
+        },
+        "ohne_regel": {
+          "k": 4,
+          "pooled": -2.410113,
+          "ci": [
+            -2.512289,
+            -2.307938
+          ],
+          "breite": 0.204352
+        },
+        "mit_regel": {
+          "k": 2,
+          "pooled": -2.410113,
+          "ci": [
+            -3.116697,
+            -1.70353
+          ],
+          "breite": 1.413167
+        },
+        "breite_ohne_regel_rel": 0.8554,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "number of awakenings n",
+        "scale": "raw:mean_diff",
+        "n_zeilen": 2,
+        "referenz": {
+          "k": 2,
+          "pooled": 0.390244,
+          "ci": [
+            -5.807905,
+            6.588393
+          ],
+          "breite": 12.396297
+        },
+        "ohne_regel": {
+          "k": 4,
+          "pooled": 0.390244,
+          "ci": [
+            -0.506042,
+            1.28653
+          ],
+          "breite": 1.792572
+        },
+        "mit_regel": {
+          "k": 2,
+          "pooled": 0.390244,
+          "ci": [
+            -5.807905,
+            6.588393
+          ],
+          "breite": 12.396297
+        },
+        "breite_ohne_regel_rel": 0.8554,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "odds ratio for excessive daytime sleepiness associated with dec pct",
+        "scale": "log_ratio",
+        "n_zeilen": 96,
+        "referenz": {
+          "k": 96,
+          "pooled": 0.000911,
+          "ci": [
+            -0.037952,
+            0.039774
+          ],
+          "breite": 0.077725
+        },
+        "ohne_regel": {
+          "k": 192,
+          "pooled": 0.000836,
+          "ci": [
+            -0.026341,
+            0.028013
+          ],
+          "breite": 0.054353
+        },
+        "mit_regel": {
+          "k": 96,
+          "pooled": 0.000911,
+          "ci": [
+            -0.037952,
+            0.039774
+          ],
+          "breite": 0.077725
+        },
+        "breite_ohne_regel_rel": 0.3007,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "odds ratios of sleep disorders or psqi components and corresponding 95 cis according to t pct",
+        "scale": "log_ratio",
+        "n_zeilen": 16,
+        "referenz": {
+          "k": 16,
+          "pooled": -0.441105,
+          "ci": [
+            -0.668992,
+            -0.213218
+          ],
+          "breite": 0.455774
+        },
+        "ohne_regel": {
+          "k": 32,
+          "pooled": -0.44108,
+          "ci": [
+            -0.592772,
+            -0.289387
+          ],
+          "breite": 0.303385
+        },
+        "mit_regel": {
+          "k": 16,
+          "pooled": -0.441105,
+          "ci": [
+            -0.668992,
+            -0.213218
+          ],
+          "breite": 0.455774
+        },
+        "breite_ohne_regel_rel": 0.3344,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "panas",
+        "scale": "raw:mean_diff",
+        "n_zeilen": 2,
+        "referenz": {
+          "k": 2,
+          "pooled": 0.190025,
+          "ci": [
+            -1.074258,
+            1.454308
+          ],
+          "breite": 2.528566
+        },
+        "ohne_regel": {
+          "k": 4,
+          "pooled": 0.190025,
+          "ci": [
+            0.007203,
+            0.372847
+          ],
+          "breite": 0.365644
+        },
+        "mit_regel": {
+          "k": 2,
+          "pooled": 0.190025,
+          "ci": [
+            -1.074258,
+            1.454308
+          ],
+          "breite": 2.528566
+        },
+        "breite_ohne_regel_rel": 0.8554,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "pd",
+        "scale": "log_ratio",
+        "n_zeilen": 2,
+        "referenz": {
+          "k": 2,
+          "pooled": 0.02676,
+          "ci": [
+            -12.308334,
+            12.361853
+          ],
+          "breite": 24.670188
+        },
+        "ohne_regel": {
+          "k": 4,
+          "pooled": 0.038945,
+          "ci": [
+            -1.7441,
+            1.821989
+          ],
+          "breite": 3.566088
+        },
+        "mit_regel": {
+          "k": 2,
+          "pooled": 0.02676,
+          "ci": [
+            -12.308334,
+            12.361853
+          ],
+          "breite": 24.670188
+        },
+        "breite_ohne_regel_rel": 0.8554,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "phq 4",
+        "scale": "raw:mean_diff",
+        "n_zeilen": 2,
+        "referenz": {
+          "k": 2,
+          "pooled": 0.056637,
+          "ci": [
+            -0.573051,
+            0.686325
+          ],
+          "breite": 1.259376
+        },
+        "ohne_regel": {
+          "k": 4,
+          "pooled": 0.056637,
+          "ci": [
+            -0.034419,
+            0.147693
+          ],
+          "breite": 0.182113
+        },
+        "mit_regel": {
+          "k": 2,
+          "pooled": 0.056637,
+          "ci": [
+            -0.573051,
+            0.686325
+          ],
+          "breite": 1.259376
+        },
+        "breite_ohne_regel_rel": 0.8554,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "phq 9 total",
+        "scale": "raw:beta",
+        "n_zeilen": 3,
+        "referenz": {
+          "k": 3,
+          "pooled": -0.568922,
+          "ci": [
+            -2.897981,
+            1.760137
+          ],
+          "breite": 4.658118
+        },
+        "ohne_regel": {
+          "k": 6,
+          "pooled": -0.606832,
+          "ci": [
+            -1.492898,
+            0.279234
+          ],
+          "breite": 1.772132
+        },
+        "mit_regel": {
+          "k": 3,
+          "pooled": -0.568922,
+          "ci": [
+            -2.897981,
+            1.760137
+          ],
+          "breite": 4.658118
+        },
+        "breite_ohne_regel_rel": 0.6196,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "poor sleep quality",
+        "scale": "log_ratio",
+        "n_zeilen": 2,
+        "referenz": {
+          "k": 2,
+          "pooled": 0.887891,
+          "ci": [
+            0.146071,
+            1.629711
+          ],
+          "breite": 1.48364
+        },
+        "ohne_regel": {
+          "k": 4,
+          "pooled": 0.887891,
+          "ci": [
+            0.363345,
+            1.412437
+          ],
+          "breite": 1.049092
+        },
+        "mit_regel": {
+          "k": 2,
+          "pooled": 0.887891,
+          "ci": [
+            0.146071,
+            1.629711
+          ],
+          "breite": 1.48364
+        },
+        "breite_ohne_regel_rel": 0.2929,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "post",
+        "scale": "raw:mean_diff",
+        "n_zeilen": 5,
+        "referenz": {
+          "k": 5,
+          "pooled": -16.850025,
+          "ci": [
+            -29.183189,
+            -4.516861
+          ],
+          "breite": 24.666328
+        },
+        "ohne_regel": {
+          "k": 10,
+          "pooled": -15.992406,
+          "ci": [
+            -22.246226,
+            -9.738586
+          ],
+          "breite": 12.507641
+        },
+        "mit_regel": {
+          "k": 5,
+          "pooled": -16.850025,
+          "ci": [
+            -29.183189,
+            -4.516861
+          ],
+          "breite": 24.666328
+        },
+        "breite_ohne_regel_rel": 0.4929,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "protein model 1",
+        "scale": "log_ratio",
+        "n_zeilen": 3,
+        "referenz": {
+          "k": 3,
+          "pooled": 0.136004,
+          "ci": [
+            -0.240817,
+            0.512826
+          ],
+          "breite": 0.753643
+        },
+        "ohne_regel": {
+          "k": 6,
+          "pooled": 0.136004,
+          "ci": [
+            -0.00638,
+            0.278388
+          ],
+          "breite": 0.284768
+        },
+        "mit_regel": {
+          "k": 3,
+          "pooled": 0.136004,
+          "ci": [
+            -0.240817,
+            0.512826
+          ],
+          "breite": 0.753643
+        },
+        "breite_ohne_regel_rel": 0.6221,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "protein model 2",
+        "scale": "log_ratio",
+        "n_zeilen": 3,
+        "referenz": {
+          "k": 3,
+          "pooled": 0.188928,
+          "ci": [
+            -0.339395,
+            0.717252
+          ],
+          "breite": 1.056647
+        },
+        "ohne_regel": {
+          "k": 6,
+          "pooled": 0.188928,
+          "ci": [
+            -0.010701,
+            0.388558
+          ],
+          "breite": 0.399259
+        },
+        "mit_regel": {
+          "k": 3,
+          "pooled": 0.188928,
+          "ci": [
+            -0.339395,
+            0.717252
+          ],
+          "breite": 1.056647
+        },
+        "breite_ohne_regel_rel": 0.6221,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "psqi",
+        "scale": "raw:mean_diff",
+        "n_zeilen": 4,
+        "referenz": {
+          "k": 4,
+          "pooled": 0.244868,
+          "ci": [
+            -0.144835,
+            0.634571
+          ],
+          "breite": 0.779406
+        },
+        "ohne_regel": {
+          "k": 8,
+          "pooled": 0.244868,
+          "ci": [
+            0.055308,
+            0.434428
+          ],
+          "breite": 0.37912
+        },
+        "mit_regel": {
+          "k": 4,
+          "pooled": 0.244868,
+          "ci": [
+            -0.144835,
+            0.634571
+          ],
+          "breite": 0.779406
+        },
+        "breite_ohne_regel_rel": 0.5136,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "psqi component t2",
+        "scale": "log_ratio",
+        "n_zeilen": 28,
+        "referenz": {
+          "k": 28,
+          "pooled": -0.203048,
+          "ci": [
+            -0.312704,
+            -0.093393
+          ],
+          "breite": 0.219312
+        },
+        "ohne_regel": {
+          "k": 56,
+          "pooled": -0.202747,
+          "ci": [
+            -0.277813,
+            -0.127682
+          ],
+          "breite": 0.150131
+        },
+        "mit_regel": {
+          "k": 28,
+          "pooled": -0.203048,
+          "ci": [
+            -0.312704,
+            -0.093393
+          ],
+          "breite": 0.219312
+        },
+        "breite_ohne_regel_rel": 0.3154,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "psqi component t3",
+        "scale": "log_ratio",
+        "n_zeilen": 28,
+        "referenz": {
+          "k": 28,
+          "pooled": -0.330596,
+          "ci": [
+            -0.52445,
+            -0.136743
+          ],
+          "breite": 0.387707
+        },
+        "ohne_regel": {
+          "k": 56,
+          "pooled": -0.330618,
+          "ci": [
+            -0.46336,
+            -0.197876
+          ],
+          "breite": 0.265484
+        },
+        "mit_regel": {
+          "k": 28,
+          "pooled": -0.330596,
+          "ci": [
+            -0.52445,
+            -0.136743
+          ],
+          "breite": 0.387707
+        },
+        "breite_ohne_regel_rel": 0.3152,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "psqi global",
+        "scale": "raw:beta",
+        "n_zeilen": 3,
+        "referenz": {
+          "k": 3,
+          "pooled": -0.57137,
+          "ci": [
+            -2.443884,
+            1.301144
+          ],
+          "breite": 3.745028
+        },
+        "ohne_regel": {
+          "k": 6,
+          "pooled": -0.61614,
+          "ci": [
+            -1.326792,
+            0.094511
+          ],
+          "breite": 1.421304
+        },
+        "mit_regel": {
+          "k": 3,
+          "pooled": -0.57137,
+          "ci": [
+            -2.443884,
+            1.301144
+          ],
+          "breite": 3.745028
+        },
+        "breite_ohne_regel_rel": 0.6205,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "qlesq sf total",
+        "scale": "raw:beta",
+        "n_zeilen": 2,
+        "referenz": {
+          "k": 2,
+          "pooled": 0.989333,
+          "ci": [
+            -8.081608,
+            10.060274
+          ],
+          "breite": 18.141882
+        },
+        "ohne_regel": {
+          "k": 4,
+          "pooled": 0.989333,
+          "ci": [
+            -0.322374,
+            2.30104
+          ],
+          "breite": 2.623415
+        },
+        "mit_regel": {
+          "k": 2,
+          "pooled": 0.989333,
+          "ci": [
+            -8.081608,
+            10.060274
+          ],
+          "breite": 18.141882
+        },
+        "breite_ohne_regel_rel": 0.8554,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "r dlpfc",
+        "scale": "raw:mean_diff",
+        "n_zeilen": 2,
+        "referenz": {
+          "k": 2,
+          "pooled": -4.455969,
+          "ci": [
+            -19.861313,
+            10.949376
+          ],
+          "breite": 30.810689
+        },
+        "ohne_regel": {
+          "k": 4,
+          "pooled": -4.408798,
+          "ci": [
+            -6.629147,
+            -2.188449
+          ],
+          "breite": 4.440698
+        },
+        "mit_regel": {
+          "k": 2,
+          "pooled": -4.455969,
+          "ci": [
+            -19.861313,
+            10.949376
+          ],
+          "breite": 30.810689
+        },
+        "breite_ohne_regel_rel": 0.8559,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "regular bedtime",
+        "scale": "log_ratio",
+        "n_zeilen": 2,
+        "referenz": {
+          "k": 2,
+          "pooled": 0.92008,
+          "ci": [
+            -0.186229,
+            2.026389
+          ],
+          "breite": 2.212617
+        },
+        "ohne_regel": {
+          "k": 4,
+          "pooled": 0.92008,
+          "ci": [
+            0.760102,
+            1.080058
+          ],
+          "breite": 0.319956
+        },
+        "mit_regel": {
+          "k": 2,
+          "pooled": 0.92008,
+          "ci": [
+            -0.186229,
+            2.026389
+          ],
+          "breite": 2.212617
+        },
+        "breite_ohne_regel_rel": 0.8554,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "rem pct",
+        "scale": "raw:mean_diff",
+        "n_zeilen": 3,
+        "referenz": {
+          "k": 3,
+          "pooled": 1.142454,
+          "ci": [
+            -4.34129,
+            6.626199
+          ],
+          "breite": 10.967489
+        },
+        "ohne_regel": {
+          "k": 6,
+          "pooled": 1.112757,
+          "ci": [
+            -0.970909,
+            3.196424
+          ],
+          "breite": 4.167333
+        },
+        "mit_regel": {
+          "k": 3,
+          "pooled": 1.142454,
+          "ci": [
+            -4.34129,
+            6.626199
+          ],
+          "breite": 10.967489
+        },
+        "breite_ohne_regel_rel": 0.62,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "s1 pct",
+        "scale": "raw:mean_diff",
+        "n_zeilen": 3,
+        "referenz": {
+          "k": 3,
+          "pooled": 0.441088,
+          "ci": [
+            -1.431471,
+            2.313648
+          ],
+          "breite": 3.745119
+        },
+        "ohne_regel": {
+          "k": 6,
+          "pooled": 0.441088,
+          "ci": [
+            -0.266468,
+            1.148644
+          ],
+          "breite": 1.415112
+        },
+        "mit_regel": {
+          "k": 3,
+          "pooled": 0.441088,
+          "ci": [
+            -1.431471,
+            2.313648
+          ],
+          "breite": 3.745119
+        },
+        "breite_ohne_regel_rel": 0.6221,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "s2 pct",
+        "scale": "raw:mean_diff",
+        "n_zeilen": 2,
+        "referenz": {
+          "k": 2,
+          "pooled": -2.291019,
+          "ci": [
+            -7.5341,
+            2.952061
+          ],
+          "breite": 10.486162
+        },
+        "ohne_regel": {
+          "k": 4,
+          "pooled": -2.291019,
+          "ci": [
+            -3.049197,
+            -1.532841
+          ],
+          "breite": 1.516356
+        },
+        "mit_regel": {
+          "k": 2,
+          "pooled": -2.291019,
+          "ci": [
+            -7.5341,
+            2.952061
+          ],
+          "breite": 10.486162
+        },
+        "breite_ohne_regel_rel": 0.8554,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "s3 s4 pct",
+        "scale": "raw:mean_diff",
+        "n_zeilen": 3,
+        "referenz": {
+          "k": 3,
+          "pooled": 1.284256,
+          "ci": [
+            -1.163627,
+            3.732138
+          ],
+          "breite": 4.895765
+        },
+        "ohne_regel": {
+          "k": 6,
+          "pooled": 1.139907,
+          "ci": [
+            0.263018,
+            2.016796
+          ],
+          "breite": 1.753778
+        },
+        "mit_regel": {
+          "k": 3,
+          "pooled": 1.284256,
+          "ci": [
+            -1.163627,
+            3.732138
+          ],
+          "breite": 4.895765
+        },
+        "breite_ohne_regel_rel": 0.6418,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "saturated fat model 1",
+        "scale": "log_ratio",
+        "n_zeilen": 3,
+        "referenz": {
+          "k": 3,
+          "pooled": 0.538423,
+          "ci": [
+            -0.101183,
+            1.178028
+          ],
+          "breite": 1.279211
+        },
+        "ohne_regel": {
+          "k": 6,
+          "pooled": 0.538423,
+          "ci": [
+            0.296745,
+            0.780101
+          ],
+          "breite": 0.483356
+        },
+        "mit_regel": {
+          "k": 3,
+          "pooled": 0.538423,
+          "ci": [
+            -0.101183,
+            1.178028
+          ],
+          "breite": 1.279211
+        },
+        "breite_ohne_regel_rel": 0.6221,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "saturated fat model 2",
+        "scale": "log_ratio",
+        "n_zeilen": 3,
+        "referenz": {
+          "k": 3,
+          "pooled": 0.38266,
+          "ci": [
+            -0.033215,
+            0.798535
+          ],
+          "breite": 0.83175
+        },
+        "ohne_regel": {
+          "k": 6,
+          "pooled": 0.38266,
+          "ci": [
+            0.225519,
+            0.5398
+          ],
+          "breite": 0.314281
+        },
+        "mit_regel": {
+          "k": 3,
+          "pooled": 0.38266,
+          "ci": [
+            -0.033215,
+            0.798535
+          ],
+          "breite": 0.83175
+        },
+        "breite_ohne_regel_rel": 0.6221,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "se pct",
+        "scale": "raw:mean_diff",
+        "n_zeilen": 3,
+        "referenz": {
+          "k": 3,
+          "pooled": -1.169366,
+          "ci": [
+            -9.009055,
+            6.670323
+          ],
+          "breite": 15.679378
+        },
+        "ohne_regel": {
+          "k": 6,
+          "pooled": -1.087952,
+          "ci": [
+            -3.825566,
+            1.649663
+          ],
+          "breite": 5.475229
+        },
+        "mit_regel": {
+          "k": 3,
+          "pooled": -1.169366,
+          "ci": [
+            -9.009055,
+            6.670323
+          ],
+          "breite": 15.679378
+        },
+        "breite_ohne_regel_rel": 0.6508,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "sedentary time as a of waking time pct",
+        "scale": "raw:mean_diff",
+        "n_zeilen": 2,
+        "referenz": {
+          "k": 2,
+          "pooled": 0.5,
+          "ci": [
+            -5.853102,
+            6.853102
+          ],
+          "breite": 12.706205
+        },
+        "ohne_regel": {
+          "k": 4,
+          "pooled": 0.5,
+          "ci": [
+            -0.418693,
+            1.418693
+          ],
+          "breite": 1.837386
+        },
+        "mit_regel": {
+          "k": 2,
+          "pooled": 0.5,
+          "ci": [
+            -5.853102,
+            6.853102
+          ],
+          "breite": 12.706205
+        },
+        "breite_ohne_regel_rel": 0.8554,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "sedentary time min",
+        "scale": "raw:mean_diff",
+        "n_zeilen": 2,
+        "referenz": {
+          "k": 2,
+          "pooled": 0.727631,
+          "ci": [
+            -123.77971,
+            125.234971
+          ],
+          "breite": 249.014681
+        },
+        "ohne_regel": {
+          "k": 4,
+          "pooled": 0.727631,
+          "ci": [
+            -17.276807,
+            18.732068
+          ],
+          "breite": 36.008876
+        },
+        "mit_regel": {
+          "k": 2,
+          "pooled": 0.727631,
+          "ci": [
+            -123.77971,
+            125.234971
+          ],
+          "breite": 249.014681
+        },
+        "breite_ohne_regel_rel": 0.8554,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "serious teaes",
+        "scale": "log_ratio",
+        "n_zeilen": 2,
+        "referenz": {
+          "k": 2,
+          "pooled": 0.4191,
+          "ci": [
+            -0.373368,
+            1.211569
+          ],
+          "breite": 1.584937
+        },
+        "ohne_regel": {
+          "k": 4,
+          "pooled": 0.4191,
+          "ci": [
+            0.304505,
+            0.533695
+          ],
+          "breite": 0.22919
+        },
+        "mit_regel": {
+          "k": 2,
+          "pooled": 0.4191,
+          "ci": [
+            -0.373368,
+            1.211569
+          ],
+          "breite": 1.584937
+        },
+        "breite_ohne_regel_rel": 0.8554,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "ses",
+        "scale": "log_ratio",
+        "n_zeilen": 2,
+        "referenz": {
+          "k": 2,
+          "pooled": -0.527807,
+          "ci": [
+            -1.644741,
+            0.589126
+          ],
+          "breite": 2.233867
+        },
+        "ohne_regel": {
+          "k": 4,
+          "pooled": -0.528648,
+          "ci": [
+            -0.690131,
+            -0.367166
+          ],
+          "breite": 0.322966
+        },
+        "mit_regel": {
+          "k": 2,
+          "pooled": -0.527807,
+          "ci": [
+            -1.644741,
+            0.589126
+          ],
+          "breite": 2.233867
+        },
+        "breite_ohne_regel_rel": 0.8554,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "short sleep duration hour",
+        "scale": "log_ratio",
+        "n_zeilen": 2,
+        "referenz": {
+          "k": 2,
+          "pooled": 1.341164,
+          "ci": [
+            1.158485,
+            1.523843
+          ],
+          "breite": 0.365357
+        },
+        "ohne_regel": {
+          "k": 4,
+          "pooled": 1.341164,
+          "ci": [
+            1.314747,
+            1.36758
+          ],
+          "breite": 0.052833
+        },
+        "mit_regel": {
+          "k": 2,
+          "pooled": 1.341164,
+          "ci": [
+            1.158485,
+            1.523843
+          ],
+          "breite": 0.365357
+        },
+        "breite_ohne_regel_rel": 0.8554,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "sl min",
+        "scale": "raw:mean_diff",
+        "n_zeilen": 3,
+        "referenz": {
+          "k": 3,
+          "pooled": -2.461334,
+          "ci": [
+            -14.930707,
+            10.008038
+          ],
+          "breite": 24.938745
+        },
+        "ohne_regel": {
+          "k": 6,
+          "pooled": -2.192953,
+          "ci": [
+            -6.912614,
+            2.526708
+          ],
+          "breite": 9.439322
+        },
+        "mit_regel": {
+          "k": 3,
+          "pooled": -2.461334,
+          "ci": [
+            -14.930707,
+            10.008038
+          ],
+          "breite": 24.938745
+        },
+        "breite_ohne_regel_rel": 0.6215,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "sleep duration",
+        "scale": "raw:mean_diff",
+        "n_zeilen": 4,
+        "referenz": {
+          "k": 4,
+          "pooled": 7.256306,
+          "ci": [
+            -1.465975,
+            15.978587
+          ],
+          "breite": 17.444562
+        },
+        "ohne_regel": {
+          "k": 8,
+          "pooled": 7.256306,
+          "ci": [
+            3.013602,
+            11.49901
+          ],
+          "breite": 8.485408
+        },
+        "mit_regel": {
+          "k": 4,
+          "pooled": 7.256306,
+          "ci": [
+            -1.465975,
+            15.978587
+          ],
+          "breite": 17.444562
+        },
+        "breite_ohne_regel_rel": 0.5136,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "sleep duration weekdays",
+        "scale": "log_ratio",
+        "n_zeilen": 2,
+        "referenz": {
+          "k": 2,
+          "pooled": -0.486165,
+          "ci": [
+            -3.382361,
+            2.410031
+          ],
+          "breite": 5.792393
+        },
+        "ohne_regel": {
+          "k": 4,
+          "pooled": -0.486629,
+          "ci": [
+            -0.905431,
+            -0.067827
+          ],
+          "breite": 0.837604
+        },
+        "mit_regel": {
+          "k": 2,
+          "pooled": -0.486165,
+          "ci": [
+            -3.382361,
+            2.410031
+          ],
+          "breite": 5.792393
+        },
+        "breite_ohne_regel_rel": 0.8554,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "sleep duration weekends",
+        "scale": "log_ratio",
+        "n_zeilen": 2,
+        "referenz": {
+          "k": 2,
+          "pooled": -0.179812,
+          "ci": [
+            -2.423965,
+            2.064342
+          ],
+          "breite": 4.488307
+        },
+        "ohne_regel": {
+          "k": 4,
+          "pooled": -0.180607,
+          "ci": [
+            -0.50511,
+            0.143897
+          ],
+          "breite": 0.649007
+        },
+        "mit_regel": {
+          "k": 2,
+          "pooled": -0.179812,
+          "ci": [
+            -2.423965,
+            2.064342
+          ],
+          "breite": 4.488307
+        },
+        "breite_ohne_regel_rel": 0.8554,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "sleep efficiency",
+        "scale": "raw:mean_diff",
+        "n_zeilen": 5,
+        "referenz": {
+          "k": 5,
+          "pooled": -0.712536,
+          "ci": [
+            -1.820617,
+            0.395545
+          ],
+          "breite": 2.216161
+        },
+        "ohne_regel": {
+          "k": 10,
+          "pooled": -0.712536,
+          "ci": [
+            -1.314421,
+            -0.110651
+          ],
+          "breite": 1.203771
+        },
+        "mit_regel": {
+          "k": 5,
+          "pooled": -0.712536,
+          "ci": [
+            -1.820617,
+            0.395545
+          ],
+          "breite": 2.216161
+        },
+        "breite_ohne_regel_rel": 0.4568,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "sleep efficiency pct",
+        "scale": "raw:mean_diff",
+        "n_zeilen": 7,
+        "referenz": {
+          "k": 7,
+          "pooled": 1.010825,
+          "ci": [
+            0.268289,
+            1.753361
+          ],
+          "breite": 1.485072
+        },
+        "ohne_regel": {
+          "k": 14,
+          "pooled": 1.010825,
+          "ci": [
+            0.565445,
+            1.456206
+          ],
+          "breite": 0.890761
+        },
+        "mit_regel": {
+          "k": 7,
+          "pooled": 1.010825,
+          "ci": [
+            0.268289,
+            1.753361
+          ],
+          "breite": 1.485072
+        },
+        "breite_ohne_regel_rel": 0.4002,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "sleep mid time clock time",
+        "scale": "raw:mean_diff",
+        "n_zeilen": 2,
+        "referenz": {
+          "k": 2,
+          "pooled": 1.211075,
+          "ci": [
+            -5.577886,
+            8.000037
+          ],
+          "breite": 13.577923
+        },
+        "ohne_regel": {
+          "k": 4,
+          "pooled": 1.211075,
+          "ci": [
+            0.229355,
+            2.192796
+          ],
+          "breite": 1.963441
+        },
+        "mit_regel": {
+          "k": 2,
+          "pooled": 1.211075,
+          "ci": [
+            -5.577886,
+            8.000037
+          ],
+          "breite": 13.577923
+        },
+        "breite_ohne_regel_rel": 0.8554,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "sleep onset latency",
+        "scale": "raw:mean_diff",
+        "n_zeilen": 6,
+        "referenz": {
+          "k": 6,
+          "pooled": 1.22732,
+          "ci": [
+            -3.860052,
+            6.314693
+          ],
+          "breite": 10.174745
+        },
+        "ohne_regel": {
+          "k": 12,
+          "pooled": 0.817732,
+          "ci": [
+            -2.213296,
+            3.84876
+          ],
+          "breite": 6.062055
+        },
+        "mit_regel": {
+          "k": 6,
+          "pooled": 1.22732,
+          "ci": [
+            -3.860052,
+            6.314693
+          ],
+          "breite": 10.174745
+        },
+        "breite_ohne_regel_rel": 0.4042,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "sleep onset latency log min",
+        "scale": "raw:mean_diff",
+        "n_zeilen": 2,
+        "referenz": {
+          "k": 2,
+          "pooled": -0.06472,
+          "ci": [
+            -0.66242,
+            0.53298
+          ],
+          "breite": 1.1954
+        },
+        "ohne_regel": {
+          "k": 4,
+          "pooled": -0.06472,
+          "ci": [
+            -0.151151,
+            0.021711
+          ],
+          "breite": 0.172861
+        },
+        "mit_regel": {
+          "k": 2,
+          "pooled": -0.06472,
+          "ci": [
+            -0.66242,
+            0.53298
+          ],
+          "breite": 1.1954
+        },
+        "breite_ohne_regel_rel": 0.8554,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "sleep onset latency min",
+        "scale": "raw:mean_diff",
+        "n_zeilen": 3,
+        "referenz": {
+          "k": 3,
+          "pooled": -1.23158,
+          "ci": [
+            -7.985443,
+            5.522284
+          ],
+          "breite": 13.507727
+        },
+        "ohne_regel": {
+          "k": 6,
+          "pooled": -1.23158,
+          "ci": [
+            -3.783561,
+            1.320401
+          ],
+          "breite": 5.103962
+        },
+        "mit_regel": {
+          "k": 3,
+          "pooled": -1.23158,
+          "ci": [
+            -7.985443,
+            5.522284
+          ],
+          "breite": 13.507727
+        },
+        "breite_ohne_regel_rel": 0.6221,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "sleep period time min",
+        "scale": "raw:mean_diff",
+        "n_zeilen": 2,
+        "referenz": {
+          "k": 2,
+          "pooled": 12.776517,
+          "ci": [
+            -170.157359,
+            195.710393
+          ],
+          "breite": 365.867752
+        },
+        "ohne_regel": {
+          "k": 4,
+          "pooled": 11.82732,
+          "ci": [
+            -14.358289,
+            38.012928
+          ],
+          "breite": 52.371217
+        },
+        "mit_regel": {
+          "k": 2,
+          "pooled": 12.776517,
+          "ci": [
+            -170.157359,
+            195.710393
+          ],
+          "breite": 365.867752
+        },
+        "breite_ohne_regel_rel": 0.8569,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "sleep quality",
+        "scale": "log_ratio",
+        "n_zeilen": 2,
+        "referenz": {
+          "k": 2,
+          "pooled": -1.243015,
+          "ci": [
+            -2.822971,
+            0.336942
+          ],
+          "breite": 3.159913
+        },
+        "ohne_regel": {
+          "k": 4,
+          "pooled": -1.243471,
+          "ci": [
+            -1.471934,
+            -1.015008
+          ],
+          "breite": 0.456926
+        },
+        "mit_regel": {
+          "k": 2,
+          "pooled": -1.243015,
+          "ci": [
+            -2.822971,
+            0.336942
+          ],
+          "breite": 3.159913
+        },
+        "breite_ohne_regel_rel": 0.8554,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "somnolence",
+        "scale": "log_ratio",
+        "n_zeilen": 2,
+        "referenz": {
+          "k": 2,
+          "pooled": 1.600228,
+          "ci": [
+            -1.501769,
+            4.702224
+          ],
+          "breite": 6.203993
+        },
+        "ohne_regel": {
+          "k": 4,
+          "pooled": 1.600384,
+          "ci": [
+            1.151831,
+            2.048937
+          ],
+          "breite": 0.897106
+        },
+        "mit_regel": {
+          "k": 2,
+          "pooled": 1.600228,
+          "ci": [
+            -1.501769,
+            4.702224
+          ],
+          "breite": 6.203993
+        },
+        "breite_ohne_regel_rel": 0.8554,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "stratified analysis of the risk of all cause mortality for propensity matched cohort assoc",
+        "scale": "log_ratio",
+        "n_zeilen": 2,
+        "referenz": {
+          "k": 2,
+          "pooled": 0.206849,
+          "ci": [
+            -0.239769,
+            0.653466
+          ],
+          "breite": 0.893236
+        },
+        "ohne_regel": {
+          "k": 4,
+          "pooled": 0.206849,
+          "ci": [
+            0.142265,
+            0.271432
+          ],
+          "breite": 0.129167
+        },
+        "mit_regel": {
+          "k": 2,
+          "pooled": 0.206849,
+          "ci": [
+            -0.239769,
+            0.653466
+          ],
+          "breite": 0.893236
+        },
+        "breite_ohne_regel_rel": 0.8554,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "subgroup analysis for psqi total scores and isi scores of real rtms vs sham rtms",
+        "scale": "raw:mean_diff",
+        "n_zeilen": 6,
+        "referenz": {
+          "k": 6,
+          "pooled": -3.449357,
+          "ci": [
+            -4.490086,
+            -2.408629
+          ],
+          "breite": 2.081457
+        },
+        "ohne_regel": {
+          "k": 12,
+          "pooled": -3.421864,
+          "ci": [
+            -4.013597,
+            -2.830131
+          ],
+          "breite": 1.183466
+        },
+        "mit_regel": {
+          "k": 6,
+          "pooled": -3.449357,
+          "ci": [
+            -4.490086,
+            -2.408629
+          ],
+          "breite": 2.081457
+        },
+        "breite_ohne_regel_rel": 0.4314,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "sugary food",
+        "scale": "log_ratio",
+        "n_zeilen": 8,
+        "referenz": {
+          "k": 8,
+          "pooled": 0.183474,
+          "ci": [
+            0.060905,
+            0.306043
+          ],
+          "breite": 0.245139
+        },
+        "ohne_regel": {
+          "k": 16,
+          "pooled": 0.183763,
+          "ci": [
+            0.108398,
+            0.259129
+          ],
+          "breite": 0.150731
+        },
+        "mit_regel": {
+          "k": 8,
+          "pooled": 0.183474,
+          "ci": [
+            0.060905,
+            0.306043
+          ],
+          "breite": 0.245139
+        },
+        "breite_ohne_regel_rel": 0.3851,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "sugary food",
+        "scale": "raw:beta",
+        "n_zeilen": 4,
+        "referenz": {
+          "k": 4,
+          "pooled": 0.043761,
+          "ci": [
+            -1.290104,
+            1.377627
+          ],
+          "breite": 2.667731
+        },
+        "ohne_regel": {
+          "k": 8,
+          "pooled": 0.011613,
+          "ci": [
+            -0.522898,
+            0.546125
+          ],
+          "breite": 1.069022
+        },
+        "mit_regel": {
+          "k": 4,
+          "pooled": 0.043761,
+          "ci": [
+            -1.290104,
+            1.377627
+          ],
+          "breite": 2.667731
+        },
+        "breite_ohne_regel_rel": 0.5993,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "teaes",
+        "scale": "log_ratio",
+        "n_zeilen": 2,
+        "referenz": {
+          "k": 2,
+          "pooled": 0.042436,
+          "ci": [
+            -0.992756,
+            1.077627
+          ],
+          "breite": 2.070383
+        },
+        "ohne_regel": {
+          "k": 4,
+          "pooled": 0.021423,
+          "ci": [
+            -0.091857,
+            0.134703
+          ],
+          "breite": 0.226559
+        },
+        "mit_regel": {
+          "k": 2,
+          "pooled": 0.042436,
+          "ci": [
+            -0.992756,
+            1.077627
+          ],
+          "breite": 2.070383
+        },
+        "breite_ohne_regel_rel": 0.8906,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "teaes leading to study withdrawal",
+        "scale": "log_ratio",
+        "n_zeilen": 2,
+        "referenz": {
+          "k": 2,
+          "pooled": 0.405887,
+          "ci": [
+            -3.801596,
+            4.613371
+          ],
+          "breite": 8.414967
+        },
+        "ohne_regel": {
+          "k": 4,
+          "pooled": 0.418494,
+          "ci": [
+            -0.187736,
+            1.024724
+          ],
+          "breite": 1.21246
+        },
+        "mit_regel": {
+          "k": 2,
+          "pooled": 0.405887,
+          "ci": [
+            -3.801596,
+            4.613371
+          ],
+          "breite": 8.414967
+        },
+        "breite_ohne_regel_rel": 0.8559,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "tem",
+        "scale": "log_ratio",
+        "n_zeilen": 8,
+        "referenz": {
+          "k": 8,
+          "pooled": -0.2773,
+          "ci": [
+            -0.477373,
+            -0.077226
+          ],
+          "breite": 0.400147
+        },
+        "ohne_regel": {
+          "k": 16,
+          "pooled": -0.277105,
+          "ci": [
+            -0.400242,
+            -0.153969
+          ],
+          "breite": 0.246273
+        },
+        "mit_regel": {
+          "k": 8,
+          "pooled": -0.2773,
+          "ci": [
+            -0.477373,
+            -0.077226
+          ],
+          "breite": 0.400147
+        },
+        "breite_ohne_regel_rel": 0.3845,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "tem",
+        "scale": "raw:beta",
+        "n_zeilen": 4,
+        "referenz": {
+          "k": 4,
+          "pooled": 0.209664,
+          "ci": [
+            -0.962599,
+            1.381928
+          ],
+          "breite": 2.344526
+        },
+        "ohne_regel": {
+          "k": 8,
+          "pooled": 0.253391,
+          "ci": [
+            -0.223274,
+            0.730055
+          ],
+          "breite": 0.95333
+        },
+        "mit_regel": {
+          "k": 4,
+          "pooled": 0.209664,
+          "ci": [
+            -0.962599,
+            1.381928
+          ],
+          "breite": 2.344526
+        },
+        "breite_ohne_regel_rel": 0.5934,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "tem 6 hour",
+        "scale": "log_ratio",
+        "n_zeilen": 8,
+        "referenz": {
+          "k": 8,
+          "pooled": 0.809093,
+          "ci": [
+            0.257174,
+            1.361012
+          ],
+          "breite": 1.103839
+        },
+        "ohne_regel": {
+          "k": 16,
+          "pooled": 0.809026,
+          "ci": [
+            0.4692,
+            1.148853
+          ],
+          "breite": 0.679653
+        },
+        "mit_regel": {
+          "k": 8,
+          "pooled": 0.809093,
+          "ci": [
+            0.257174,
+            1.361012
+          ],
+          "breite": 1.103839
+        },
+        "breite_ohne_regel_rel": 0.3843,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "tem 6 hour",
+        "scale": "raw:beta",
+        "n_zeilen": 4,
+        "referenz": {
+          "k": 4,
+          "pooled": 0.919392,
+          "ci": [
+            -5.511914,
+            7.350699
+          ],
+          "breite": 12.862614
+        },
+        "ohne_regel": {
+          "k": 8,
+          "pooled": -0.574112,
+          "ci": [
+            -2.312172,
+            1.163948
+          ],
+          "breite": 3.476119
+        },
+        "mit_regel": {
+          "k": 4,
+          "pooled": 0.919392,
+          "ci": [
+            -5.511914,
+            7.350699
+          ],
+          "breite": 12.862614
+        },
+        "breite_ohne_regel_rel": 0.7298,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "total activity as a of waking time pct",
+        "scale": "raw:mean_diff",
+        "n_zeilen": 2,
+        "referenz": {
+          "k": 2,
+          "pooled": -0.821032,
+          "ci": [
+            -13.322092,
+            11.680029
+          ],
+          "breite": 25.002121
+        },
+        "ohne_regel": {
+          "k": 4,
+          "pooled": -0.819672,
+          "ci": [
+            -2.626937,
+            0.987593
+          ],
+          "breite": 3.61453
+        },
+        "mit_regel": {
+          "k": 2,
+          "pooled": -0.821032,
+          "ci": [
+            -13.322092,
+            11.680029
+          ],
+          "breite": 25.002121
+        },
+        "breite_ohne_regel_rel": 0.8554,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "total activity min",
+        "scale": "raw:mean_diff",
+        "n_zeilen": 2,
+        "referenz": {
+          "k": 2,
+          "pooled": -15.094211,
+          "ci": [
+            -72.78413,
+            42.595708
+          ],
+          "breite": 115.379839
+        },
+        "ohne_regel": {
+          "k": 4,
+          "pooled": -15.094211,
+          "ci": [
+            -23.436487,
+            -6.751935
+          ],
+          "breite": 16.684551
+        },
+        "mit_regel": {
+          "k": 2,
+          "pooled": -15.094211,
+          "ci": [
+            -72.78413,
+            42.595708
+          ],
+          "breite": 115.379839
+        },
+        "breite_ohne_regel_rel": 0.8554,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "total fat model 1",
+        "scale": "log_ratio",
+        "n_zeilen": 3,
+        "referenz": {
+          "k": 3,
+          "pooled": 0.35921,
+          "ci": [
+            0.038081,
+            0.680338
+          ],
+          "breite": 0.642257
+        },
+        "ohne_regel": {
+          "k": 6,
+          "pooled": 0.35921,
+          "ci": [
+            0.23787,
+            0.48055
+          ],
+          "breite": 0.24268
+        },
+        "mit_regel": {
+          "k": 3,
+          "pooled": 0.35921,
+          "ci": [
+            0.038081,
+            0.680338
+          ],
+          "breite": 0.642257
+        },
+        "breite_ohne_regel_rel": 0.6221,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "total fat model 2",
+        "scale": "log_ratio",
+        "n_zeilen": 3,
+        "referenz": {
+          "k": 3,
+          "pooled": 0.130418,
+          "ci": [
+            -0.034604,
+            0.29544
+          ],
+          "breite": 0.330044
+        },
+        "ohne_regel": {
+          "k": 6,
+          "pooled": 0.130418,
+          "ci": [
+            0.068063,
+            0.192772
+          ],
+          "breite": 0.124709
+        },
+        "mit_regel": {
+          "k": 3,
+          "pooled": 0.130418,
+          "ci": [
+            -0.034604,
+            0.29544
+          ],
+          "breite": 0.330044
+        },
+        "breite_ohne_regel_rel": 0.6221,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "total sleep time",
+        "scale": "raw:mean_diff",
+        "n_zeilen": 2,
+        "referenz": {
+          "k": 2,
+          "pooled": 0.166077,
+          "ci": [
+            -41.226311,
+            41.558465
+          ],
+          "breite": 82.784777
+        },
+        "ohne_regel": {
+          "k": 4,
+          "pooled": 0.166077,
+          "ci": [
+            -5.819487,
+            6.151641
+          ],
+          "breite": 11.971128
+        },
+        "mit_regel": {
+          "k": 2,
+          "pooled": 0.166077,
+          "ci": [
+            -41.226311,
+            41.558465
+          ],
+          "breite": 82.784777
+        },
+        "breite_ohne_regel_rel": 0.8554,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "total sleep time min",
+        "scale": "raw:mean_diff",
+        "n_zeilen": 7,
+        "referenz": {
+          "k": 7,
+          "pooled": 3.997514,
+          "ci": [
+            -8.050121,
+            16.045149
+          ],
+          "breite": 24.09527
+        },
+        "ohne_regel": {
+          "k": 14,
+          "pooled": 3.320851,
+          "ci": [
+            -3.581838,
+            10.223541
+          ],
+          "breite": 13.805378
+        },
+        "mit_regel": {
+          "k": 7,
+          "pooled": 3.997514,
+          "ci": [
+            -8.050121,
+            16.045149
+          ],
+          "breite": 24.09527
+        },
+        "breite_ohne_regel_rel": 0.4271,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "treatment related teae",
+        "scale": "log_ratio",
+        "n_zeilen": 2,
+        "referenz": {
+          "k": 2,
+          "pooled": 0.659777,
+          "ci": [
+            -0.720527,
+            2.040081
+          ],
+          "breite": 2.760608
+        },
+        "ohne_regel": {
+          "k": 4,
+          "pooled": 0.660719,
+          "ci": [
+            0.461174,
+            0.860263
+          ],
+          "breite": 0.399089
+        },
+        "mit_regel": {
+          "k": 2,
+          "pooled": 0.659777,
+          "ci": [
+            -0.720527,
+            2.040081
+          ],
+          "breite": 2.760608
+        },
+        "breite_ohne_regel_rel": 0.8554,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "tst min",
+        "scale": "raw:mean_diff",
+        "n_zeilen": 3,
+        "referenz": {
+          "k": 3,
+          "pooled": -3.29705,
+          "ci": [
+            -69.398702,
+            62.804601
+          ],
+          "breite": 132.203303
+        },
+        "ohne_regel": {
+          "k": 6,
+          "pooled": -3.29705,
+          "ci": [
+            -28.273888,
+            21.679787
+          ],
+          "breite": 49.953674
+        },
+        "mit_regel": {
+          "k": 3,
+          "pooled": -3.29705,
+          "ci": [
+            -69.398702,
+            62.804601
+          ],
+          "breite": 132.203303
+        },
+        "breite_ohne_regel_rel": 0.6221,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "unknown",
+        "scale": "log_ratio",
+        "n_zeilen": 3,
+        "referenz": {
+          "k": 3,
+          "pooled": -0.592931,
+          "ci": [
+            -3.333193,
+            2.147332
+          ],
+          "breite": 5.480525
+        },
+        "ohne_regel": {
+          "k": 6,
+          "pooled": -0.553653,
+          "ci": [
+            -1.604115,
+            0.49681
+          ],
+          "breite": 2.100925
+        },
+        "mit_regel": {
+          "k": 3,
+          "pooled": -0.592931,
+          "ci": [
+            -3.333193,
+            2.147332
+          ],
+          "breite": 5.480525
+        },
+        "breite_ohne_regel_rel": 0.6167,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "unsaturated fat model 1",
+        "scale": "log_ratio",
+        "n_zeilen": 3,
+        "referenz": {
+          "k": 3,
+          "pooled": 0.144504,
+          "ci": [
+            -0.304806,
+            0.593813
+          ],
+          "breite": 0.898618
+        },
+        "ohne_regel": {
+          "k": 6,
+          "pooled": 0.144504,
+          "ci": [
+            -0.02527,
+            0.314277
+          ],
+          "breite": 0.339547
+        },
+        "mit_regel": {
+          "k": 3,
+          "pooled": 0.144504,
+          "ci": [
+            -0.304806,
+            0.593813
+          ],
+          "breite": 0.898618
+        },
+        "breite_ohne_regel_rel": 0.6221,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "unsaturated fat model 2",
+        "scale": "log_ratio",
+        "n_zeilen": 3,
+        "referenz": {
+          "k": 3,
+          "pooled": -0.093452,
+          "ci": [
+            -0.236036,
+            0.049131
+          ],
+          "breite": 0.285167
+        },
+        "ohne_regel": {
+          "k": 6,
+          "pooled": -0.093452,
+          "ci": [
+            -0.147328,
+            -0.039577
+          ],
+          "breite": 0.107752
+        },
+        "mit_regel": {
+          "k": 3,
+          "pooled": -0.093452,
+          "ci": [
+            -0.236036,
+            0.049131
+          ],
+          "breite": 0.285167
+        },
+        "breite_ohne_regel_rel": 0.6221,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "updrs ii score at week 4 from baseline mean pct",
+        "scale": "raw:mean_diff",
+        "n_zeilen": 2,
+        "referenz": {
+          "k": 2,
+          "pooled": -0.911798,
+          "ci": [
+            -6.353261,
+            4.529665
+          ],
+          "breite": 10.882927
+        },
+        "ohne_regel": {
+          "k": 4,
+          "pooled": -0.911798,
+          "ci": [
+            -1.698663,
+            -0.124933
+          ],
+          "breite": 1.57373
+        },
+        "mit_regel": {
+          "k": 2,
+          "pooled": -0.911798,
+          "ci": [
+            -6.353261,
+            4.529665
+          ],
+          "breite": 10.882927
+        },
+        "breite_ohne_regel_rel": 0.8554,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "vas gi total",
+        "scale": "raw:beta",
+        "n_zeilen": 3,
+        "referenz": {
+          "k": 3,
+          "pooled": -0.178924,
+          "ci": [
+            -5.543604,
+            5.185756
+          ],
+          "breite": 10.72936
+        },
+        "ohne_regel": {
+          "k": 6,
+          "pooled": -0.337181,
+          "ci": [
+            -2.364025,
+            1.689664
+          ],
+          "breite": 4.053689
+        },
+        "mit_regel": {
+          "k": 3,
+          "pooled": -0.178924,
+          "ci": [
+            -5.543604,
+            5.185756
+          ],
+          "breite": 10.72936
+        },
+        "breite_ohne_regel_rel": 0.6222,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "very short sleep duratio hour",
+        "scale": "log_ratio",
+        "n_zeilen": 2,
+        "referenz": {
+          "k": 2,
+          "pooled": 1.824564,
+          "ci": [
+            1.783577,
+            1.865551
+          ],
+          "breite": 0.081974
+        },
+        "ohne_regel": {
+          "k": 4,
+          "pooled": 1.824564,
+          "ci": [
+            1.818637,
+            1.830491
+          ],
+          "breite": 0.011854
+        },
+        "mit_regel": {
+          "k": 2,
+          "pooled": 1.824564,
+          "ci": [
+            1.783577,
+            1.865551
+          ],
+          "breite": 0.081974
+        },
+        "breite_ohne_regel_rel": 0.8554,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "wake after sleep onset",
+        "scale": "raw:mean_diff",
+        "n_zeilen": 2,
+        "referenz": {
+          "k": 2,
+          "pooled": -2.703416,
+          "ci": [
+            -70.534974,
+            65.128142
+          ],
+          "breite": 135.663116
+        },
+        "ohne_regel": {
+          "k": 4,
+          "pooled": -4.361566,
+          "ci": [
+            -11.624159,
+            2.901027
+          ],
+          "breite": 14.525186
+        },
+        "mit_regel": {
+          "k": 2,
+          "pooled": -2.703416,
+          "ci": [
+            -70.534974,
+            65.128142
+          ],
+          "breite": 135.663116
+        },
+        "breite_ohne_regel_rel": 0.8929,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "wake after sleep onset min",
+        "scale": "raw:mean_diff",
+        "n_zeilen": 5,
+        "referenz": {
+          "k": 5,
+          "pooled": -12.969056,
+          "ci": [
+            -47.000939,
+            21.062826
+          ],
+          "breite": 68.063765
+        },
+        "ohne_regel": {
+          "k": 10,
+          "pooled": -12.328219,
+          "ci": [
+            -30.247917,
+            5.59148
+          ],
+          "breite": 35.839397
+        },
+        "mit_regel": {
+          "k": 5,
+          "pooled": -12.969056,
+          "ci": [
+            -47.000939,
+            21.062826
+          ],
+          "breite": 68.063765
+        },
+        "breite_ohne_regel_rel": 0.4734,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "week 12",
+        "scale": "raw:mean_diff",
+        "n_zeilen": 13,
+        "referenz": {
+          "k": 13,
+          "pooled": -1.468949,
+          "ci": [
+            -7.591328,
+            4.653431
+          ],
+          "breite": 12.244759
+        },
+        "ohne_regel": {
+          "k": 26,
+          "pooled": -1.472145,
+          "ci": [
+            -3.769127,
+            0.824836
+          ],
+          "breite": 4.593963
+        },
+        "mit_regel": {
+          "k": 13,
+          "pooled": -1.468949,
+          "ci": [
+            -7.591328,
+            4.653431
+          ],
+          "breite": 12.244759
+        },
+        "breite_ohne_regel_rel": 0.6248,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "week 16",
+        "scale": "raw:mean_diff",
+        "n_zeilen": 3,
+        "referenz": {
+          "k": 3,
+          "pooled": 4.831266,
+          "ci": [
+            -22.527429,
+            32.18996
+          ],
+          "breite": 54.717388
+        },
+        "ohne_regel": {
+          "k": 6,
+          "pooled": 4.852933,
+          "ci": [
+            -5.496993,
+            15.20286
+          ],
+          "breite": 20.699853
+        },
+        "mit_regel": {
+          "k": 3,
+          "pooled": 4.831266,
+          "ci": [
+            -22.527429,
+            32.18996
+          ],
+          "breite": 54.717388
+        },
+        "breite_ohne_regel_rel": 0.6217,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "week 3",
+        "scale": "raw:mean_diff",
+        "n_zeilen": 12,
+        "referenz": {
+          "k": 12,
+          "pooled": -1.849565,
+          "ci": [
+            -4.143616,
+            0.444486
+          ],
+          "breite": 4.588102
+        },
+        "ohne_regel": {
+          "k": 24,
+          "pooled": -1.339147,
+          "ci": [
+            -2.183021,
+            -0.495273
+          ],
+          "breite": 1.687748
+        },
+        "mit_regel": {
+          "k": 12,
+          "pooled": -1.849565,
+          "ci": [
+            -4.143616,
+            0.444486
+          ],
+          "breite": 4.588102
+        },
+        "breite_ohne_regel_rel": 0.6321,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "week 4",
+        "scale": "raw:mean_diff",
+        "n_zeilen": 2,
+        "referenz": {
+          "k": 2,
+          "pooled": 4.081125,
+          "ci": [
+            -215.736086,
+            223.898336
+          ],
+          "breite": 439.634422
+        },
+        "ohne_regel": {
+          "k": 4,
+          "pooled": 4.071567,
+          "ci": [
+            -27.715172,
+            35.858306
+          ],
+          "breite": 63.573478
+        },
+        "mit_regel": {
+          "k": 2,
+          "pooled": 4.081125,
+          "ci": [
+            -215.736086,
+            223.898336
+          ],
+          "breite": 439.634422
+        },
+        "breite_ohne_regel_rel": 0.8554,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "week 6",
+        "scale": "raw:mean_diff",
+        "n_zeilen": 9,
+        "referenz": {
+          "k": 9,
+          "pooled": -1.922164,
+          "ci": [
+            -8.216063,
+            4.371735
+          ],
+          "breite": 12.587798
+        },
+        "ohne_regel": {
+          "k": 18,
+          "pooled": -1.201205,
+          "ci": [
+            -3.108623,
+            0.706212
+          ],
+          "breite": 3.814835
+        },
+        "mit_regel": {
+          "k": 9,
+          "pooled": -1.922164,
+          "ci": [
+            -8.216063,
+            4.371735
+          ],
+          "breite": 12.587798
+        },
+        "breite_ohne_regel_rel": 0.6969,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "week 8",
+        "scale": "raw:mean_diff",
+        "n_zeilen": 3,
+        "referenz": {
+          "k": 3,
+          "pooled": 2.115336,
+          "ci": [
+            -37.636802,
+            41.867475
+          ],
+          "breite": 79.504276
+        },
+        "ohne_regel": {
+          "k": 6,
+          "pooled": 1.858446,
+          "ci": [
+            -13.035899,
+            16.75279
+          ],
+          "breite": 29.788688
+        },
+        "mit_regel": {
+          "k": 3,
+          "pooled": 2.115336,
+          "ci": [
+            -37.636802,
+            41.867475
+          ],
+          "breite": 79.504276
+        },
+        "breite_ohne_regel_rel": 0.6253,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "yes",
+        "scale": "log_ratio",
+        "n_zeilen": 29,
+        "referenz": {
+          "k": 29,
+          "pooled": -0.003943,
+          "ci": [
+            -0.112525,
+            0.104639
+          ],
+          "breite": 0.217164
+        },
+        "ohne_regel": {
+          "k": 58,
+          "pooled": -0.004726,
+          "ci": [
+            -0.078988,
+            0.069536
+          ],
+          "breite": 0.148524
+        },
+        "mit_regel": {
+          "k": 29,
+          "pooled": -0.003943,
+          "ci": [
+            -0.112525,
+            0.104639
+          ],
+          "breite": 0.217164
+        },
+        "breite_ohne_regel_rel": 0.3161,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "zhang dy et al",
+        "scale": "raw:mean_diff",
+        "n_zeilen": 2,
+        "referenz": {
+          "k": 2,
+          "pooled": 1.995457,
+          "ci": [
+            -2.175801,
+            6.166716
+          ],
+          "breite": 8.342517
+        },
+        "ohne_regel": {
+          "k": 4,
+          "pooled": 1.995457,
+          "ci": [
+            1.392271,
+            2.598644
+          ],
+          "breite": 1.206373
+        },
+        "mit_regel": {
+          "k": 2,
+          "pooled": 1.995457,
+          "ci": [
+            -2.175801,
+            6.166716
+          ],
+          "breite": 8.342517
+        },
+        "breite_ohne_regel_rel": 0.8554,
+        "filter_haelt_referenz": true
+      },
+      {
+        "outcome": "zheng et al hour",
+        "scale": "raw:mean_diff",
+        "n_zeilen": 2,
+        "referenz": {
+          "k": 2,
+          "pooled": 1.515286,
+          "ci": [
+            -14.274964,
+            17.305535
+          ],
+          "breite": 31.580499
+        },
+        "ohne_regel": {
+          "k": 4,
+          "pooled": 1.455539,
+          "ci": [
+            -0.813231,
+            3.724309
+          ],
+          "breite": 4.53754
+        },
+        "mit_regel": {
+          "k": 2,
+          "pooled": 1.515286,
+          "ci": [
+            -14.274964,
+            17.305535
+          ],
+          "breite": 31.580499
+        },
+        "breite_ohne_regel_rel": 0.8563,
+        "filter_haelt_referenz": true
+      }
+    ]
+  },
+  "hauptpfad": [
+    {
+      "datei": "data/harness_local.db",
+      "zeilen": 21,
+      "pass_ueber_1": 12,
+      "gruppen": 1,
+      "k_summe_alt": 1,
+      "k_summe_neu": 1,
+      "abgelehnt_alt": 20,
+      "abgelehnt_neu": 20,
+      "paarung": {
+        "pass_ueber_1": 12,
+        "mit_erstlesung": 3,
+        "ohne_erstlesung": 9,
+        "mit_wert_zwilling": 10,
+        "mit_zitat_zwilling": 9,
+        "ohne_jeden_zwilling": 2
+      }
+    },
+    {
+      "datei": "data/research-does-acute-caffeine-versus-placebo-affec-972eac.db",
+      "zeilen": 8,
+      "pass_ueber_1": 4,
+      "gruppen": 0,
+      "k_summe_alt": 0,
+      "k_summe_neu": 0,
+      "abgelehnt_alt": 8,
+      "abgelehnt_neu": 8,
+      "paarung": {
+        "pass_ueber_1": 4,
+        "mit_erstlesung": 4,
+        "ohne_erstlesung": 0,
+        "mit_wert_zwilling": 4,
+        "mit_zitat_zwilling": 4,
+        "ohne_jeden_zwilling": 0
+      }
+    },
+    {
+      "datei": "data/research-does-caffeine-intake-affect-short-term-m-783a51.db",
+      "zeilen": 12,
+      "pass_ueber_1": 6,
+      "gruppen": 0,
+      "k_summe_alt": 0,
+      "k_summe_neu": 0,
+      "abgelehnt_alt": 12,
+      "abgelehnt_neu": 12,
+      "paarung": {
+        "pass_ueber_1": 6,
+        "mit_erstlesung": 1,
+        "ohne_erstlesung": 5,
+        "mit_wert_zwilling": 4,
+        "mit_zitat_zwilling": 3,
+        "ohne_jeden_zwilling": 1
+      }
+    },
+    {
+      "datei": "data/research-does-melatonin-improve-sleep-onset-laten-382747.db",
+      "zeilen": 19,
+      "pass_ueber_1": 9,
+      "gruppen": 1,
+      "k_summe_alt": 1,
+      "k_summe_neu": 1,
+      "abgelehnt_alt": 18,
+      "abgelehnt_neu": 18,
+      "paarung": {
+        "pass_ueber_1": 9,
+        "mit_erstlesung": 5,
+        "ohne_erstlesung": 4,
+        "mit_wert_zwilling": 8,
+        "mit_zitat_zwilling": 8,
+        "ohne_jeden_zwilling": 0
+      }
+    },
+    {
+      "datei": "data/research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+      "zeilen": 129,
+      "pass_ueber_1": 63,
+      "gruppen": 13,
+      "k_summe_alt": 24,
+      "k_summe_neu": 21,
+      "abgelehnt_alt": 105,
+      "abgelehnt_neu": 108,
+      "paarung": {
+        "pass_ueber_1": 63,
+        "mit_erstlesung": 14,
+        "ohne_erstlesung": 49,
+        "mit_wert_zwilling": 48,
+        "mit_zitat_zwilling": 44,
+        "ohne_jeden_zwilling": 11
+      }
+    },
+    {
+      "datei": "data/research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+      "zeilen": 127,
+      "pass_ueber_1": 62,
+      "gruppen": 7,
+      "k_summe_alt": 12,
+      "k_summe_neu": 12,
+      "abgelehnt_alt": 115,
+      "abgelehnt_neu": 115,
+      "paarung": {
+        "pass_ueber_1": 62,
+        "mit_erstlesung": 20,
+        "ohne_erstlesung": 42,
+        "mit_wert_zwilling": 46,
+        "mit_zitat_zwilling": 39,
+        "ohne_jeden_zwilling": 13
+      }
+    },
+    {
+      "datei": "data/research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+      "zeilen": 91,
+      "pass_ueber_1": 49,
+      "gruppen": 14,
+      "k_summe_alt": 26,
+      "k_summe_neu": 26,
+      "abgelehnt_alt": 65,
+      "abgelehnt_neu": 65,
+      "paarung": {
+        "pass_ueber_1": 49,
+        "mit_erstlesung": 18,
+        "ohne_erstlesung": 31,
+        "mit_wert_zwilling": 30,
+        "mit_zitat_zwilling": 23,
+        "ohne_jeden_zwilling": 18
+      }
+    },
+    {
+      "datei": "data/research2-does-melatonin-improve-sleep-onset-laten-382747.db",
+      "zeilen": 8,
+      "pass_ueber_1": 4,
+      "gruppen": 2,
+      "k_summe_alt": 2,
+      "k_summe_neu": 2,
+      "abgelehnt_alt": 6,
+      "abgelehnt_neu": 6,
+      "paarung": {
+        "pass_ueber_1": 4,
+        "mit_erstlesung": 1,
+        "ohne_erstlesung": 3,
+        "mit_wert_zwilling": 4,
+        "mit_zitat_zwilling": 4,
+        "ohne_jeden_zwilling": 0
+      }
+    }
+  ],
+  "fehler": [
+    {
+      "datei": "data/test_run_20260831_202709.db",
+      "fehler": "no such table: study_effects"
+    }
+  ]
+}

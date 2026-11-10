@@ -1,79 +1,103 @@
-# pooling.py: nur die tragende Lesung geht in den Pool (2026-11-10)
+# pooling.py: Doppellesung zaehlt einmal (2026-11-10)
 
 **Entscheidung:** `pooling.py` und `extraction.py` bleiben gitignored
 (Kerndateien). Committet sind die Regel als Marker im Pruefskript, der
-Testfall und dieser Eintrag.
+Testfall, das Messskript und dieser Eintrag.
 
 ## Anlass
 
 Der Doppelpass auf T1b und T4 (siehe
-`data/bench/validierung/doppelpass_20261110.md`) hat gezeigt: Bei Einigkeit
+`data/bench/validierung/doppelpass_20261110.md`) zeigte: Bei Einigkeit
 speichert `extract` beide Paesse, `_normalize` vergibt je Zeile eine neue
-`gen_id()`, und `pooling.py` verwarf bisher nur `disputed` - nicht den
-Lesepass. Damit trug jeder bestaetigte Effekt zweimal in den Pool: gleiche
-Zahl, gleiches SE, doppeltes Gewicht, halber Varianzanteil, zu schmales
-Intervall. Bei T1b waeren das 10 Zeilen fuer 5 Effekte gewesen.
+`gen_id()`, und das Pooling verwarf bisher nur `disputed` - nicht den
+Lesepass. Zwei identische Zeilen tragen dann dasselbe Gewicht zweimal.
+
+## Erster Versuch und warum er verworfen wurde
+
+Die erste Fassung wies in `standardize` jede Zeile mit
+`extraction_pass > 1` ab. Die Messung (`scripts/messe_lesepass_dedup_20261110.py`,
+Bericht `data/bench/validierung/lesepass_filter_20261110.md`) hat das
+widerlegt: Von 209 Zweitlesungen in acht Themen-DBs haben 45 **keinen**
+Zwilling in Pass 1 - weder gleicher Wert, gleiche Quote noch gleicher
+Textschluessel. Das sind eigenstaendige Aussagen aus Pass B, keine
+Doppelzaehlung; der pauschale Filter haette sie aus dem Pool geworfen
+(Exercise-DB: k 24 -> 18, Mediterran: 26 -> 15). Ein pauschaler
+Lesepass-Filter ist deshalb falsch.
 
 ## Ankerpunkt
 
-`research_agent/meta/pooling.py`, `standardize`, direkt nach der
-`disputed`-Pruefung und vor der `rejection_reason`-Pruefung:
+`research_agent/meta/pooling.py`, neue Funktion `_drop_zweitlesungen`,
+aufgerufen am Anfang von `build_analysis`:
 
-    try:
-        lesepass = int(row.get("extraction_pass") or 1)
-    except (TypeError, ValueError):
-        lesepass = 1
-    if lesepass > 1:
-        return None, None, "", "zweite Lesung (Prüfspur, kein zweiter Effekt)"
+- Zwilling ist eine Zeile, die in **Wert** (Quelle, Effekt auf 9 Stellen,
+  SE) oder **Quote** (Quelle, normalisierter Zitattext) mit einer
+  Erstlesung uebereinstimmt.
+- Nur gegen **gueltige** Erstlesungen: eine Zeile mit `disputed != 0` ist
+  kein Zwilling. Sonst wuerde die vom dritten Leser bestaetigte Zweitlesung
+  als Kopie der widerlegten Erstlesung verschwinden.
+- Verworfen wird nur `extraction_pass > 1`. Die Erstlesung bleibt, die
+  Zweitlesung zaehlt im Report als abgelehnte Zeile mit Grund
+  "zweite Lesung (Zwilling der Erstlesung)".
+- Fehlt das Feld, gilt die Zeile als Erstlesung; aeltere Zeilen und Zeilen
+  aus `arm_level`/`effect_columns` bleiben unberuehrt.
 
-Fehlt das Feld, gilt die Zeile als Erstlesung - aeltere Zeilen und Zeilen aus
-`arm_level`/`effect_columns` bleiben unberuehrt.
+`research_agent/meta/extraction.py` bleibt unveraendert: Die zwischenzeitlich
+eingebaute Hebung einer bestaetigten Zweitlesung auf Pass 1 wurde
+zurueckgenommen. Sie war mit dem Zwillingstest unnoetig und haette die
+Herkunft der Zeile verfaelscht.
 
-`research_agent/meta/extraction.py`, `resolve_third_attempt`, im Zweig
-"Zweitlesung bestaetigt": dort wird zusaetzlich
-`second_row["extraction_pass"] = 1` gesetzt. Ohne diese Hebung wuerde der
-Filter genau die einzige vom dritten Leser bestaetigte Zeile verwerfen, weil
-sie als Pass 2 gespeichert ist. Die Erstlesung bleibt `disputed = 1` und damit
-draussen; gemittelt wird nichts.
+## Wirkung, gemessen
 
-## Wirkung
+Datenlage (48 DBs, 7897 Zeilen): 7477 Zeilen Pass 1, 412 Pass 2, 8 Pass 3;
+15 DBs enthalten Zeilen ueber Pass 1.
 
-- Ein Effekt erscheint hoechstens einmal im Pool, unabhaengig davon, wie oft
-  er gelesen wurde.
-- Die Zweitlesung bleibt als Pruefspur in `study_effects` und wird im Report
-  als abgelehnte Zeile mit Grund gezaehlt, nicht stillschweigend entfernt.
-- Die dritte Lesung (Klaerungshilfe) ist ebenfalls nicht poolbar; sie kann
-  keinen dritten Arm erzeugen.
-- Wird eine Zweitlesung bestaetigt, traegt sie allein - die widerlegte
-  Erstlesung bleibt strittig und draussen.
-- Nebenwirkung, bewusst: Eine Zeile, die nur Pass B liest und die Pass A
-  nicht hat, geht nicht in den Pool. Sie ist nicht gegengelesen; die
-  konservative Regel ist gewollt.
-- `screening.py` zaehlt `poolable_primary` ueber dieselbe Funktion und wird
-  damit ebenfalls korrekt.
+Mechanismusprobe an echten Zeilen (`direct_label2.db`, 132 Gruppen mit k >= 2,
+je Zeile eine zusaetzliche Zweitlesung):
+
+| | k-Summe | KI-Breite (Median) |
+|---|---:|---:|
+| Referenz | 830 | - |
+| ohne Regel | 1660 | 62,2 % enger (max. 89,3 %) |
+| mit Regel | 830 | wie Referenz |
+
+Hauptpfad `build_analysis` auf den echten Zeilen: 209 Zweitlesungen in acht
+Themen-DBs, davon verwirft die Regel **3** zusaetzlich (alle in der
+Exercise-DB, k 24 -> 21). In den uebrigen DBs aendert sich nichts, weil
+`_collapse_same_study` die Kopien dort schon vorher abfaengt. Der Gewinn ist
+also nicht "viele Zeilen weg", sondern: die Doppelzaehlung ist jetzt explizit
+und begruendet statt eine Nebenwirkung der Kollaps-Reihenfolge.
 
 ## Pruefung
 
 1. `pytest research_agent/tests/test_meta_lesepass_dedup.py` - 9 Tests:
-   Pass 2 und Pass 3 nicht poolbar, Pass 1 und fehlendes Feld poolbar,
-   Doppellesung ergibt k = 1 mit einem Ablehnungsgrund, zwei verschiedene
-   Studien bleiben k = 2, bestaetigte Zweitlesung wird zur tragenden Lesung,
-   bestaetigte Erstlesung bleibt allein, ungeklaert bleibt beides draussen.
-2. Volle Nachbarschaft: `test_meta_pooling`, `test_meta_extraction`,
+   Zweitlesung ohne Zwilling bleibt poolbar, Wert-Zwilling und Zitat-Zwilling
+   werden verworfen, dritte Lesung mit Zwilling ebenfalls, zwei Studien
+   bleiben k = 2, `standardize` filtert nicht mehr, fehlendes Passfeld gilt
+   als Erstlesung, widerlegte Erstlesung ist kein Zwilling, zwei strittige
+   Zeilen ergeben keinen Pool.
+2. Nachbarschaft: `test_meta_pooling`, `test_meta_extraction`,
    `test_meta_quality_gates`, `test_meta_targets`, `test_meta_cohort`,
    `test_rve_weights`, `test_pooling_reference`, `test_pruefe_report_patch` -
    zusammen 175 passed.
-3. `python scripts/pruefe_report_patch.py` - Exit 0.
+3. `python scripts/pruefe_report_patch.py` - Exit 0 (pooling.py 4 Marker,
+   darunter `_drop_zweitlesungen`).
+4. `python scripts/messe_lesepass_dedup_20261110.py` - Exit 0, 0
+   Modellaufrufe, 1 uebersprungene DB ohne `study_effects`.
 
 ## Lokale Sicherung
 
-`local_patches/pooling_20261110.py`, `local_patches/extraction_20261110_lesepass.py`
-(Stand vor der Aenderung).
+`local_patches/pooling_20261110.py` und
+`local_patches/extraction_20261110_lesepass.py` (Stand vor der Aenderung).
 
-## Grenze
+## Grenzen
 
-Die Regel ist mit 9 Tests und der Nachbarschaft belegt, aber **nicht** in
-einem echten Lauf mit `_store` und anschliessendem Pooling gemessen. Wer die
-Wirkung auf ein echtes Ergebnis sehen will, braucht einen Lauf, der speichert
-und danach `build_analysis` aufruft - das ist der naechste Schritt, nicht
-dieser.
+- 45 Zweitlesungen ohne Zwilling bleiben poolbar. Sie sind nicht doppelt,
+  aber auch nicht gegengelesen - das ist ein Qualitaetsthema fuer Gate und
+  Report, nicht fuer diese Regel.
+- Der Zitat-Zwilling vergleicht die ersten 200 normalisierten Zeichen. Zwei
+  verschiedene Arme mit identischem Zitattext werden als Kopie behandelt;
+  das ist die konservative Richtung (eine Zeile faellt raus, keine kommt
+  doppelt rein).
+- Die Regel wirkt in `build_analysis`. Skripte, die `standardize` und `pool`
+  direkt aufrufen, umgehen sie - dort muss der Aufrufer die Zeilen selbst
+  deduplizieren.
