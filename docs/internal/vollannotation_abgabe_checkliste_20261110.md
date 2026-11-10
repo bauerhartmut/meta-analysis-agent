@@ -1,7 +1,7 @@
 # Abgabe-Checkliste Vollannotation (2026-11-10)
 
 30 Dokumente, A und B getrennt. Während der Annotation kein
-Austausch; nur Volltext, Anleitung v1.1, Schema und das eigene
+Austausch; nur Volltext, Anleitung v1.2, Schema und das eigene
 Arbeitsblatt. Der Probelauf ist ein separater Format- und Ablauftest;
 diese Checkliste betrifft die Vollannotation.
 
@@ -62,7 +62,7 @@ Abgabe-Hashes werden unten eingetragen.
 
 - **5.8:** 5.8: narrativer Ueberblick ohne eigenen gepoolten Schaetzer; keine Zeile, `no_effect_reason`.
 - **5.7:** 5.7: p-Wert ohne Effektgroesse ist keine Zeile; Mittelwerte +/- SD pruefen.
-- **5.8 gepoolt:** 5.8: nur der gepoolte HR- und MD-Schaetzer, je eine Zeile mit `is_primary: false`.
+- **5.8 gepoolt:** 5.8: gepoolte Schaetzer als je eine Zeile mit `is_primary: false`; bei 5cbf nur der Hauptschaetzer, Peak und Sensitivitaetsanalyse in `notes`.
 - **5.11:** 5.11: Spannweite ueber Zeitpunkte ist keine Zeile; je Zeitpunkt eine Tabellenzeile.
 - **Negativkontrolle:** Negativkontrolle: keine Zeile, `no_effect_reason`; nur bei echtem quantifiziertem Effekt mit Unsicherheit eine Zeile.
 - **5.1:** Standardfall; Design am Volltext, nicht aus dem Titel.

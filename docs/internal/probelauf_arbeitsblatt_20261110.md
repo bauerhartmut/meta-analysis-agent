@@ -38,7 +38,7 @@ KI berichtet ist.
 
 ## Ablauf
 
-1. A und B getrennt; nur Volltext, Anleitung v1.1 und Schema. Keine Einsicht
+1. A und B getrennt; nur Volltext, Anleitung v1.2 und Schema. Keine Einsicht
    in `study_effects`, Pipeline-Ausgaben oder die Datei des anderen.
 2. Gerüst füllen: `effects` oder `no_effect_reason`; Quote exakt mit
    `quote_start`/`quote_end`.

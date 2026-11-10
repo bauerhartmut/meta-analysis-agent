@@ -1,9 +1,10 @@
-# Annotationsanleitung Goldstandard — Effektzeilen (v1.1, 2026-11-10)
+# Annotationsanleitung Goldstandard — Effektzeilen (v1.2, 2026-11-10)
 
 Ziel: Ein unabhängiger, wiederholbarer Maßstab für die Effektgrößen-Extraktion.
 Zwei Personen annotieren **dieselben 30 Dokumente getrennt**. Gemessen wird
 gegen den Konsens, nicht gegen die Datenbank. v1.1 ergänzt den Grenzfall 5.11
-(Spannweite über Zeitpunkte).
+(Spannweite über Zeitpunkte); v1.2 präzisiert 5.9 für Dosis-Wirkungs-Peaks und
+Sensitivitätsanalysen.
 
 Das JSON-Schema steht in `docs/internal/goldstandard_schema.json`, ein
 geprüftes Beispiel in `data/golden_effects/example_annotation.json`. Der
@@ -180,6 +181,15 @@ Keine Zeile. `no_effect_reason`: „nur p-Wert, keine Effektgröße".
 Je Arm eine Zeile, wenn ein eigener Effekt mit Unsicherheit berichtet wird.
 Ist nur ein gemeinsamer Effekt über Arme berichtet, ist es **eine** Zeile mit
 `notes`: „gepoolt über Arme".
+
+- Ein **Dosis-Wirkungs-Peak** oder ein Punkt der Dosis-Wirkungs-Kurve ist
+  **keine** eigene Zeile: Die Dosis ist kein Zeilenkriterium (Abschnitt 3);
+  der Peak ist ein Punkt derselben Kurve, kein eigener Vergleich. Der
+  gepoolte Hauptschätzer bleibt die Zeile; Peak, Dosis und Kurvenform stehen
+  in `notes`.
+- Eine **Sensitivitätsanalyse** ist **keine** eigene Zeile, wenn sie dieselbe
+  Kombination aus Outcome, Vergleich, Zeitpunkt, Adjustierung und Population
+  betrifft; sie steht in `notes` mit dem berichteten Wert.
 
 ### 5.10 Negativkontrolle
 
