@@ -1,0 +1,392 @@
+{
+ "dokumente": [
+  {
+   "document_id": "7111ea978757a185d44ea9de90b453c3",
+   "datei": "docs/internal/probelauf_arbeitsblatt_7111ea9787.md",
+   "titel": "Mediterranean diet in preeclampsia prevention: mechanisms of action an",
+   "stratum": "cohort",
+   "design_category": "observational",
+   "zeichen": 99296,
+   "tabellen": [],
+   "effektstellen": [
+    {
+     "zeile": 217,
+     "auszug": "preeclampsia in a dose-dependent manner (relative risk, 0.82; 95% CI,"
+    },
+    {
+     "zeile": 225,
+     "auszug": "preeclampsia by more than 60% (odds ratio, 0.38; 95% CI, 0.20 to 0.74)"
+    },
+    {
+     "zeile": 227,
+     "auszug": "in preventing preterm preeclampsia (relative risk, 0.62; 95% CI, 0.45"
+    },
+    {
+     "zeile": 234,
+     "auszug": "(relative risk, 0.49; 95% CI, 0.39 to 0.61), with efficacy observed"
+    },
+    {
+     "zeile": 248,
+     "auszug": "shown to reduce the risk of preeclampsia (odds ratio, 0.59; 95% CI, 0.37"
+    },
+    {
+     "zeile": 466,
+     "auszug": "quartile (RR 0.58; 95% CI, 0.42, 0.81). This study provided valuable"
+    },
+    {
+     "zeile": 477,
+     "auszug": "high adherence (OR 3.8; 95% CI 1.3–11.4, p = 0.019) ( 43)."
+    },
+    {
+     "zeile": 491,
+     "auszug": "vs. lowest quartile: 0.31 [95% CI: 0.11, 0.87], P-trend = 0.03),"
+    },
+    {
+     "zeile": 501,
+     "auszug": "lowest tertile aOR 0.78, 95% CI 0.64–0.96). Notably, the protective effect"
+    },
+    {
+     "zeile": 510,
+     "auszug": "preeclampsia (aOR 0.72, 95% CI 0.55–0.93). A dose–response"
+    },
+    {
+     "zeile": 534,
+     "auszug": "reduction in the prevalence of preeclampsia (aOR 0.76, 95% CI"
+    },
+    {
+     "zeile": 542,
+     "auszug": "hypertension (1.9% vs. 2.3%, RR 1.20, 95% CI 0.42–3.41) or"
+    },
+    {
+     "zeile": 543,
+     "auszug": "preeclampsia (1.1% vs. 0.8%, RR 0.72, 95% CI 0.11–4.62) ( 49)."
+    },
+    {
+     "zeile": 551,
+     "auszug": "CI, 0.32–1.57) and preeclampsia (RR 0.62; 95% CI, 0.20–1.87),"
+    },
+    {
+     "zeile": 561,
+     "auszug": "in the Mediterranean diet group (RR 0.61; 95% CI, 0.37–1.01) ( 51)."
+    },
+    {
+     "zeile": 570,
+     "auszug": "95% CI, 0.24–1.85) ( 52)."
+    },
+    {
+     "zeile": 683,
+     "auszug": "0.58; 95% CI, 0.42, 0.81)"
+    },
+    {
+     "zeile": 809,
+     "auszug": "(aOR 0.76, 95% CI 0.56–"
+    },
+    {
+     "zeile": 864,
+     "auszug": "RR 1.20, 95% CI 0.42–3.41)"
+    },
+    {
+     "zeile": 866,
+     "auszug": "0.8%, RR 0.72, 95% CI 0.11–"
+    },
+    {
+     "zeile": 986,
+     "auszug": "(adjusted RR [95% CI], Q4"
+    },
+    {
+     "zeile": 1025,
+     "auszug": "aOR 0.78, 95% CI 0.64–"
+    },
+    {
+     "zeile": 1093,
+     "auszug": "0.72, 95% CI 0.55–0.93);"
+    },
+    {
+     "zeile": 1130,
+     "auszug": "0.67; 95% CI,"
+    },
+    {
+     "zeile": 1180,
+     "auszug": "Alternate Mediterranean Diet; MSDS, Mediterranean-Style Diet Score; aMed, Alternate Mediterranean Diet; RCT, Randomized Controlled Trial; RR, Relative Risk; OR, Odds Ratio; aOR, Adjusted Odds Ratio; CI, Confidence Inter…"
+    }
+   ]
+  },
+  {
+   "document_id": "bb9218735fec8fc7f3b6aebbff430aba",
+   "datei": "docs/internal/probelauf_arbeitsblatt_bb9218735f.md",
+   "titel": "A Multicenter, Placebo-controlled Trial of Melatonin for Sleep Disturb",
+   "stratum": "rct",
+   "design_category": "parallel_rct",
+   "zeichen": 72047,
+   "tabellen": [
+    {
+     "tabelle": "Table 1",
+     "zeile": 105,
+     "auszug": "This was a multicenter, randomized, placebo-controlled study of 2 melatonin formulations (2.5 mg sustained-release (SR) and 10 mg immediate release). Subjects were randomly assigned (blocked by study site) in a double-b…"
+    },
+    {
+     "tabelle": "Table 2",
+     "zeile": 105,
+     "auszug": "This was a multicenter, randomized, placebo-controlled study of 2 melatonin formulations (2.5 mg sustained-release (SR) and 10 mg immediate release). Subjects were randomly assigned (blocked by study site) in a double-b…"
+    },
+    {
+     "tabelle": "Table 3",
+     "zeile": 209,
+     "auszug": "Wrist actigraphy is generally accepted as the most practical method for obtaining objective, quantitative, sleep-wake cycle data in persons with dementia. 48 , 50 – 53 The actigraphs used in this study were Actiwatch AW…"
+    },
+    {
+     "tabelle": "Table 2",
+     "zeile": 227,
+     "auszug": "Caregivers were asked to complete a Daily Sleep Diary form to document bedtimes, lights-out time, time of melatonin administration, and the rare times that the actigraph was left off the subject. The sleep diary also in…"
+    },
+    {
+     "tabelle": "Table 3",
+     "zeile": 233,
+     "auszug": "A computerized automated scoring technique was developed at ADCS by one of the authors (AG) to translate the vast amount of wrist-movement data into sleep values. The output of the automated algorithm was identical to t…"
+    },
+    {
+     "tabelle": "Table 3",
+     "zeile": 249,
+     "auszug": "We screened 244 potential subjects and enrolled 157. Randomized assignment to the 3 treatment arms was fairly well balanced: PLA: n=52, ML 2.5SR: n=54, and ML 10: n=51. The average age of the subjects was 77.4 ± 8.9 yea…"
+    },
+    {
+     "tabelle": "Table 2",
+     "zeile": 251,
+     "auszug": "None of the potential covariates were found to be out of balance at baseline (ie, all P >.30); therefore, no variable examined was included in the final analyses. Also, the groups did not differ on any baseline variable…"
+    },
+    {
+     "tabelle": "Table 4",
+     "zeile": 255,
+     "auszug": "Table 4 provides descriptive statistics for the baseline, treatment period, and changes for the primary and secondary sleep variables. In none of the statistical analyses of the primary sleep measures (baseline vs treat…"
+    },
+    {
+     "tabelle": "Table 5",
+     "zeile": 391,
+     "auszug": "Table 5 presents the demographic data and baseline and change scores for the secondary measures. Change scores in Mini-Mental State Examination, Alzheimer’s Disease Assessment Scale - cognitive sub-scale, activities of …"
+    },
+    {
+     "tabelle": "Table 6",
+     "zeile": 483,
+     "auszug": "There were no differences in the mean number, severity, seriousness, or relatedness ratings of spontaneously reported AEs across the 3 groups (ie, the proportions of each treatment group reporting any AE were equal). Ta…"
+    },
+    {
+     "tabelle": "Table 4",
+     "zeile": 527,
+     "auszug": "We have reported the results of the first multicenter clinical trial of a therapeutic agent for sleep disturbance in AD. No significant treatment effects were seen in the actigraph data, although 2 positive trends were …"
+    },
+    {
+     "tabelle": "Table 5",
+     "zeile": 531,
+     "auszug": "Although more AEs were reported in the ML 2.5SR group than in the ML 10 group ( Table 5 ), there was no difference between groups in the likelihood of AEs being related to study medication. No AEs were definitely relate…"
+    },
+    {
+     "tabelle": "Table 4",
+     "zeile": 541,
+     "auszug": "We do not know whether elevated daytime melatonin levels affected the outcome of this trial. The subject in the ML 10 group with the highest residual daytime level (680 ng/dL at 12:00) gained an average of 49 minutes of…"
+    },
+    {
+     "tabelle": "Table 6",
+     "zeile": 541,
+     "auszug": "We do not know whether elevated daytime melatonin levels affected the outcome of this trial. The subject in the ML 10 group with the highest residual daytime level (680 ng/dL at 12:00) gained an average of 49 minutes of…"
+    }
+   ],
+   "effektstellen": []
+  },
+  {
+   "document_id": "203c831dbeb178297006a888608f4f10",
+   "datei": "docs/internal/probelauf_arbeitsblatt_203c831dbe.md",
+   "titel": "Post-Diagnosis Adherence to the Mediterranean Diet and Cancer Recurren",
+   "stratum": "aggregate",
+   "design_category": "aggregate",
+   "zeichen": 115557,
+   "tabellen": [
+    {
+     "tabelle": "Table 1",
+     "zeile": 139,
+     "auszug": "Table 1 summarizes the inclusion and exclusion criteria applied in this systematic review and meta-analysis."
+    },
+    {
+     "tabelle": "Table 2",
+     "zeile": 337,
+     "auszug": "Table 2 summarizes the design, dietary adherence, fatigue outcomes, and assessment methods, offering important context for interpreting the pooled results and assessing the consistency of the available evidence."
+    },
+    {
+     "tabelle": "Table 3",
+     "zeile": 403,
+     "auszug": "Table 3 presents an overview of the six prospective cohort studies included in the meta-analysis evaluating the association between adherence to the Mediterranean Diet and cancer recurrence or cancer-related mortality. …"
+    },
+    {
+     "tabelle": "Table 4",
+     "zeile": 479,
+     "auszug": "The risk of bias assessment for the two randomized controlled trials ( Table 4 ) demonstrated generally favorable methodological quality. Both studies showed low risk of bias in randomization, outcome measurement, and s…"
+    },
+    {
+     "tabelle": "Table 5",
+     "zeile": 507,
+     "auszug": "The six prospective cohort studies ( Table 5 ) presented more variability in methodological rigor. Most studies were judged to have a moderate risk of bias, particularly due to confounding, potential misclassification o…"
+    },
+    {
+     "tabelle": "Table 2",
+     "zeile": 597,
+     "auszug": "Substantial heterogeneity was observed (Q = 58.19, I 2 = 96.6%), which may be attributed to differences in cancer types, sample sizes, intervention intensity, and fatigue assessment tools. The corresponding forest plot …"
+    },
+    {
+     "tabelle": "Table 3",
+     "zeile": 601,
+     "auszug": "Six prospective cohort studies investigating the association between the Mediterranean Diet and cancer recurrence or cancer-specific mortality were included in a separate meta-analysis. The pooled hazard ratio (HR) usin…"
+    },
+    {
+     "tabelle": "Table 6",
+     "zeile": 657,
+     "auszug": "While the MD is widely recognized for its cardiometabolic and anti-inflammatory benefits, its role in cancer care is often underemphasized in guidelines. To bridge this gap, it is helpful to compare it with the Alternat…"
+    },
+    {
+     "tabelle": "Table 6",
+     "zeile": 709,
+     "auszug": "Each component in Table 6 aligns with mechanisms relevant to cancer progression and survivorship. For instance, vegetables and fruits, rich in phytochemicals and antioxidants, support DNA repair and immune modulation. N…"
+    },
+    {
+     "tabelle": "Table 6",
+     "zeile": 717,
+     "auszug": "In conclusion, survivorship care is incomplete without attention to nutrition. Table 6 provides a clear, evidence-aligned framework that bridges research with clinical reality. As oncology evolves, dietary patterns like…"
+    },
+    {
+     "tabelle": "Table 6",
+     "zeile": 723,
+     "auszug": "The present review extends this literature by focusing specifically on post-diagnosis dietary adherence, conducting pooled quantitative analyses of recurrence outcomes, performing sensitivity analyses to address heterog…"
+    }
+   ],
+   "effektstellen": [
+    {
+     "zeile": 49,
+     "auszug": "Background: Cancer survivors face heightened risks of recurrence and persistent cancer-related fatigue (CRF), both of which impair quality of life. The Mediterranean Diet (MD), characterized by its antioxidant and anti-…"
+    },
+    {
+     "zeile": 213,
+     "auszug": "Outcomes were extracted as Hazard Ratios (HRs), Risk Ratios (RRs), and Odds Ratios (ORs) for dichotomous variables, or as mean differences for continuous variables. Effect estimates, 95% confidence intervals (CIs), and …"
+    },
+    {
+     "zeile": 237,
+     "auszug": "We extracted data on two primary outcomes: cancer recurrence and cancer-related fatigue (CRF). For recurrence, hazard ratios (HRs) and 95% confidence intervals (CIs) were collected from each cohort study, prioritizing t…"
+    },
+    {
+     "zeile": 255,
+     "auszug": "Effect sizes for cancer recurrence and fatigue were expressed as Hazard Ratios (HRs) where available. When HRs were not reported, Risk Ratios (RRs), Odds Ratios (ORs), or mean differences (MDs) were used, depending on t…"
+    },
+    {
+     "zeile": 259,
+     "auszug": "We conducted meta-analyses using random-effects models to account for between-study heterogeneity. Hazard ratios (HRs) for cancer recurrence and mean differences (MDs) for cancer-related fatigue (CRF) were pooled separa…"
+    },
+    {
+     "zeile": 285,
+     "auszug": "Fatigue outcomes assessed using different validated scales were standardized by calculating the standardized mean difference (SMD) to facilitate meta-analysis. If scales were not compatible or could not be reliably conv…"
+    },
+    {
+     "zeile": 309,
+     "auszug": "The outcomes from the included studies were expressed as mean differences with accompanying 95% confidence intervals (CIs). For the purpose of meta-analysis, a random-effects model was applied using the DerSimonian and …"
+    },
+    {
+     "zeile": 313,
+     "auszug": "The primary outcome of the meta-analysis was expressed as a Hazard Ratio (HR) or other effect measure derived from random-effects modeling, depending on how each included study reported its results. Alongside quantitati…"
+    },
+    {
+     "zeile": 323,
+     "auszug": "Given this clinical and methodological heterogeneity, the meta-analysis was conducted using a random-effects model, which is considered more appropriate when study populations, interventions, or designs differ [ 49 ]. A…"
+    },
+    {
+     "zeile": 373,
+     "auszug": "Figure 2 presents the forest plot of mean differences in cancer-related fatigue scores across two randomized controlled trials (RCTs), with one primary fatigue outcome included per study to maintain independence of obse…"
+    },
+    {
+     "zeile": 375,
+     "auszug": "Forest plot of mean differences in fatigue scores between Mediterranean Diet-aligned interventions and control groups across two randomized controlled trials (Zick et al., 2017 [ 50 ]; Baguley et al., 2021 [ 51 ]). One …"
+    },
+    {
+     "zeile": 377,
+     "auszug": "Forest plot of mean differences in fatigue scores between Mediterranean Diet-aligned interventions and control groups across two randomized controlled trials (Zick et al., 2017 [ 50 ]; Baguley et al., 2021 [ 51 ]). One …"
+    },
+    {
+     "zeile": 461,
+     "auszug": "Figure 3 shows the pooled hazard ratios (HRs) for cancer recurrence or cancer-related mortality across six prospective cohort studies examining adherence to a Mediterranean Diet. The pooled HR was 0.83 (95% CI: 0.70–0.9…"
+    },
+    {
+     "zeile": 463,
+     "auszug": "Forest Plot: Mediterranean Diet and Cancer Recurrence. Forest plot of hazard ratios (HRs) and 95% confidence intervals (CIs) from six prospective cohort studies assessing the association between Mediterranean diet adher…"
+    },
+    {
+     "zeile": 465,
+     "auszug": "Forest Plot: Mediterranean Diet and Cancer Recurrence. Forest plot of hazard ratios (HRs) and 95% confidence intervals (CIs) from six prospective cohort studies assessing the association between Mediterranean diet adher…"
+    },
+    {
+     "zeile": 467,
+     "auszug": "Figure 4 presents a funnel plot evaluating potential publication bias among the six prospective cohort studies examining the association between Mediterranean Diet adherence and cancer recurrence or mortality. Each poin…"
+    },
+    {
+     "zeile": 469,
+     "auszug": "Funnel Plot for Cancer Recurrence Studies. Funnel plot of log-transformed hazard ratios (log[HR]) versus standard errors from six prospective cohort studies evaluating Mediterranean diet adherence and cancer recurrence …"
+    },
+    {
+     "zeile": 471,
+     "auszug": "Funnel Plot for Cancer Recurrence Studies. Funnel plot of log-transformed hazard ratios (log[HR]) versus standard errors from six prospective cohort studies evaluating Mediterranean diet adherence and cancer recurrence …"
+    },
+    {
+     "zeile": 595,
+     "auszug": "Using a fixed-effects model due to the limited number of included trials, the pooled mean difference (MD) in fatigue scores between intervention and control groups was 0.29 (95% CI: −0.58 to 1.16), indicating no statist…"
+    },
+    {
+     "zeile": 601,
+     "auszug": "Six prospective cohort studies investigating the association between the Mediterranean Diet and cancer recurrence or cancer-specific mortality were included in a separate meta-analysis. The pooled hazard ratio (HR) usin…"
+    },
+    {
+     "zeile": 607,
+     "auszug": "For recurrence outcomes, a sensitivity analysis stratified by survivorship definition was conducted. Excluding studies that defined survivorship solely as ≥6 months post-diagnosis and/or relied on mortality as a proxy o…"
+    },
+    {
+     "zeile": 619,
+     "auszug": "Importantly, all recurrence-related findings were derived from observational cohort studies. Therefore, these associations should not be interpreted as causal, and residual confounding cannot be excluded. In the present…"
+    },
+    {
+     "zeile": 649,
+     "auszug": "Fatigue outcomes were assessed using validated instruments, but differences in measurement scales across studies may limit direct comparability. Standardized mean differences were therefore interpreted cautiously. The l…"
+    },
+    {
+     "zeile": 651,
+     "auszug": "For clinical interpretation, minimal clinically important differences (MCIDs) should be considered when evaluating fatigue outcomes. For example, a change of approximately 3–4 points on the Functional Assessment of Chro…"
+    },
+    {
+     "zeile": 771,
+     "auszug": "Hazard ratio"
+    }
+   ]
+  }
+ ],
+ "pflichtfelder": {
+  "dokument": [
+   "document_id",
+   "path",
+   "title",
+   "design_verbatim",
+   "design_category",
+   "stratum",
+   "has_text_layer",
+   "effects",
+   "no_effect_reason"
+  ],
+  "effekt": [
+   "effect_id",
+   "outcome_verbatim",
+   "outcome_normalized",
+   "comparison_verbatim",
+   "effect_type",
+   "effect",
+   "ci_low",
+   "ci_high",
+   "quote",
+   "quote_start",
+   "quote_end",
+   "design_verbatim",
+   "certainty",
+   "is_primary"
+  ]
+ }
+}
