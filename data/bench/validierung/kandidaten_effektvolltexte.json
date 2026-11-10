@@ -1,0 +1,4045 @@
+[
+ {
+  "fid": "3bbb142c717a970694bed1d393736b06",
+  "n": 2,
+  "ki": 0,
+  "zitate": 2,
+  "typen": [],
+  "alle_typen": [
+   "other"
+  ],
+  "design": "Randomised controlled trial (crossover)",
+  "kat": "crossover_rct",
+  "agg": false,
+  "caps": 0,
+  "chars": 40445,
+  "titel": "Effects of Acute Caffeine Ingestion on Reaction Time in Habitual and L",
+  "jahr": "2026",
+  "db": "research-does-acute-caffeine-versus-placebo-affec-972eac.db",
+  "gold": false
+ },
+ {
+  "fid": "016fcd8aa79180236d253bf7455d901d",
+  "n": 2,
+  "ki": 0,
+  "zitate": 2,
+  "typen": [],
+  "alle_typen": [
+   "other"
+  ],
+  "design": "Quasi-experimental with pretest-posttest design",
+  "kat": "quasi_experimental",
+  "agg": false,
+  "caps": 0,
+  "chars": 4103,
+  "titel": "Effect of 8-Week Lower Extremity Weight-Bearing Exercise Protocol and ",
+  "jahr": "2017",
+  "db": "research-does-acute-caffeine-versus-placebo-affec-972eac.db",
+  "gold": false
+ },
+ {
+  "fid": "945b24a8d6e07ff8ce025e2028c9a36f",
+  "n": 2,
+  "ki": 0,
+  "zitate": 2,
+  "typen": [],
+  "alle_typen": [
+   "other"
+  ],
+  "design": "Randomized Controlled Trial",
+  "kat": "parallel_rct",
+  "agg": false,
+  "caps": 0,
+  "chars": 5584,
+  "titel": "Acute caffeine ingestion improves 3-km run performance, cognitive func",
+  "jahr": "2021",
+  "db": "research-does-acute-caffeine-versus-placebo-affec-972eac.db",
+  "gold": false
+ },
+ {
+  "fid": "3fc64d3310f3933195db9b90691b3ce1",
+  "n": 2,
+  "ki": 0,
+  "zitate": 2,
+  "typen": [],
+  "alle_typen": [
+   "other"
+  ],
+  "design": "Randomized, double-blind, placebo-controlled crossover",
+  "kat": "crossover_rct",
+  "agg": false,
+  "caps": 0,
+  "chars": 3227,
+  "titel": "Acute caffeine ingestion improves sport-specific and cognitive perform",
+  "jahr": "2025",
+  "db": "research-does-acute-caffeine-versus-placebo-affec-972eac.db",
+  "gold": false
+ },
+ {
+  "fid": "801602df62330a9b3ed646e692241577",
+  "n": 1,
+  "ki": 0,
+  "zitate": 0,
+  "typen": [],
+  "alle_typen": [
+   "other"
+  ],
+  "design": "",
+  "kat": "unklassifiziert",
+  "agg": false,
+  "caps": 0,
+  "chars": 4044,
+  "titel": "Time to Recover From Daily Caffeine Intake",
+  "jahr": "2022",
+  "db": "research-does-caffeine-intake-affect-short-term-m-783a51.db",
+  "gold": false
+ },
+ {
+  "fid": "0d1d1e111eaaecb376b29743a773a56c",
+  "n": 1,
+  "ki": 0,
+  "zitate": 0,
+  "typen": [],
+  "alle_typen": [
+   "other"
+  ],
+  "design": "",
+  "kat": "unklassifiziert",
+  "agg": false,
+  "caps": 0,
+  "chars": 3396,
+  "titel": "Is Caffeine a Cognitive Enhancer?",
+  "jahr": "2010",
+  "db": "research-does-caffeine-intake-affect-short-term-m-783a51.db",
+  "gold": false
+ },
+ {
+  "fid": "87079ba88ae1f64f00c5fe32725248a6",
+  "n": 2,
+  "ki": 0,
+  "zitate": 2,
+  "typen": [
+   "mean_diff"
+  ],
+  "alle_typen": [
+   "mean_diff",
+   "other"
+  ],
+  "design": "within-subjects",
+  "kat": "crossover_rct",
+  "agg": false,
+  "caps": 0,
+  "chars": 38131,
+  "titel": "Withdrawal Symptoms and Executive Functions After 24-Hour Caffeine Abs",
+  "jahr": "2026",
+  "db": "research-does-caffeine-intake-affect-short-term-m-783a51.db",
+  "gold": false
+ },
+ {
+  "fid": "27a88ba1b38e4fa58e753422ff413e54",
+  "n": 2,
+  "ki": 0,
+  "zitate": 2,
+  "typen": [],
+  "alle_typen": [
+   "other"
+  ],
+  "design": "Quasi-experimental",
+  "kat": "quasi_experimental",
+  "agg": false,
+  "caps": 0,
+  "chars": 4297,
+  "titel": "CAFFEINE CONSUMPTION AND ITS EFFECTS TOWARDS YOUNG ADULTS' SHORT-TERM ",
+  "jahr": "2022",
+  "db": "research-does-caffeine-intake-affect-short-term-m-783a51.db",
+  "gold": false
+ },
+ {
+  "fid": "b3c35c1d63f972086d2e322e693c1a03",
+  "n": 2,
+  "ki": 0,
+  "zitate": 2,
+  "typen": [
+   "mean_diff"
+  ],
+  "alle_typen": [
+   "mean_diff"
+  ],
+  "design": "randomised, double-masked",
+  "kat": "parallel_rct",
+  "agg": false,
+  "caps": 3,
+  "chars": 24519,
+  "titel": "Consumption of caffeine-containing beverages improves sustained attent",
+  "jahr": "2026",
+  "db": "research-does-caffeine-intake-affect-short-term-m-783a51.db",
+  "gold": false
+ },
+ {
+  "fid": "44b7ca357bf888237ba30a45299ad380",
+  "n": 2,
+  "ki": 0,
+  "zitate": 1,
+  "typen": [],
+  "alle_typen": [
+   "other"
+  ],
+  "design": "Cross-sectional",
+  "kat": "observational",
+  "agg": false,
+  "caps": 0,
+  "chars": 7222,
+  "titel": "Habitual caffeine consumption and its relation to memory, attention, p",
+  "jahr": "2000",
+  "db": "research-does-caffeine-intake-affect-short-term-m-783a51.db",
+  "gold": false
+ },
+ {
+  "fid": "364d848cf8e92dbade3922c8f1c3ed61",
+  "n": 2,
+  "ki": 0,
+  "zitate": 2,
+  "typen": [],
+  "alle_typen": [
+   "other"
+  ],
+  "design": "cross-sectional",
+  "kat": "observational",
+  "agg": false,
+  "caps": 0,
+  "chars": 3290,
+  "titel": "The Short-term Effect of Caffeine Consumption on Reading Performance",
+  "jahr": "2024",
+  "db": "research-does-caffeine-intake-affect-short-term-m-783a51.db",
+  "gold": false
+ },
+ {
+  "fid": "0ff56727f895dece54667f1f3bad48cf",
+  "n": 2,
+  "ki": 0,
+  "zitate": 2,
+  "typen": [],
+  "alle_typen": [
+   "other"
+  ],
+  "design": "meta-analysis of controlled human intervention studies",
+  "kat": "unklassifiziert",
+  "agg": true,
+  "caps": 0,
+  "chars": 8965,
+  "titel": "Scientific Opinion on the substantiation of a health claim related to ",
+  "jahr": "2011",
+  "db": "research-does-melatonin-improve-sleep-onset-laten-382747.db",
+  "gold": false
+ },
+ {
+  "fid": "2e9e022e6dbfb3766acc99595fea85d9",
+  "n": 2,
+  "ki": 0,
+  "zitate": 1,
+  "typen": [],
+  "alle_typen": [
+   "other"
+  ],
+  "design": "Retrospective study",
+  "kat": "unklassifiziert",
+  "agg": false,
+  "caps": 0,
+  "chars": 5897,
+  "titel": "Melatonin in treatment of chronic sleep disorders in adults with autis",
+  "jahr": "2009",
+  "db": "research-does-melatonin-improve-sleep-onset-laten-382747.db",
+  "gold": false
+ },
+ {
+  "fid": "09b3171374b23e916c2b242f9f213d96",
+  "n": 2,
+  "ki": 0,
+  "zitate": 2,
+  "typen": [
+   "mean_diff"
+  ],
+  "alle_typen": [
+   "mean_diff"
+  ],
+  "design": "within-subjects",
+  "kat": "crossover_rct",
+  "agg": false,
+  "caps": 0,
+  "chars": 41362,
+  "titel": "Pulsing blue light through closed eyelids: effects on acute melatonin ",
+  "jahr": "2014",
+  "db": "research-does-melatonin-improve-sleep-onset-laten-382747.db",
+  "gold": false
+ },
+ {
+  "fid": "5495845e8766049a3523f8a8dd1415fa",
+  "n": 2,
+  "ki": 0,
+  "zitate": 2,
+  "typen": [],
+  "alle_typen": [
+   "other"
+  ],
+  "design": "initial study",
+  "kat": "unklassifiziert",
+  "agg": false,
+  "caps": 0,
+  "chars": 89484,
+  "titel": "Melatonin and its agonist ramelteon in Alzheimer's disease: possible t",
+  "jahr": "2010",
+  "db": "research-does-melatonin-improve-sleep-onset-laten-382747.db",
+  "gold": false
+ },
+ {
+  "fid": "aaf4e72f24ed884abf958f1e6f051bd4",
+  "n": 2,
+  "ki": 0,
+  "zitate": 2,
+  "typen": [],
+  "alle_typen": [
+   "other"
+  ],
+  "design": "randomized, double-blind, replicated crossover trial",
+  "kat": "crossover_rct",
+  "agg": false,
+  "caps": 0,
+  "chars": 24283,
+  "titel": "Comparison of exogenous melatonin versus placebo on sleep efficiency i",
+  "jahr": "2018",
+  "db": "research-does-melatonin-improve-sleep-onset-laten-382747.db",
+  "gold": false
+ },
+ {
+  "fid": "9dafa80f2cb57da5cea402c7ba37d140",
+  "n": 2,
+  "ki": 0,
+  "zitate": 2,
+  "typen": [
+   "mean_diff"
+  ],
+  "alle_typen": [
+   "mean_diff",
+   "other"
+  ],
+  "design": "double-blind, placebo-controlled, repeated-measures design",
+  "kat": "crossover_rct",
+  "agg": false,
+  "caps": 0,
+  "chars": 170602,
+  "titel": "The Efficacy of Melatonergic Receptor Agonists Used in Clinical Practi",
+  "jahr": "2025",
+  "db": "research-does-melatonin-improve-sleep-onset-laten-382747.db",
+  "gold": false
+ },
+ {
+  "fid": "39bc344f8f306fab2575dc81c12f0bc6",
+  "n": 1,
+  "ki": 0,
+  "zitate": 1,
+  "typen": [],
+  "alle_typen": [
+   "other"
+  ],
+  "design": "review",
+  "kat": "unklassifiziert",
+  "agg": false,
+  "caps": 0,
+  "chars": 33335,
+  "titel": "Melatonin and sleep: Exploring its role in regulating the circadian rh",
+  "jahr": "2026",
+  "db": "research-does-melatonin-improve-sleep-onset-laten-382747.db",
+  "gold": false
+ },
+ {
+  "fid": "6b71be30abee56f36cdc297f9ea8e11d",
+  "n": 1,
+  "ki": 0,
+  "zitate": 1,
+  "typen": [],
+  "alle_typen": [
+   "other"
+  ],
+  "design": "review of studies",
+  "kat": "unklassifiziert",
+  "agg": false,
+  "caps": 0,
+  "chars": 145368,
+  "titel": "Biological correlates of altered circadian rhythms, autonomic function",
+  "jahr": "2022",
+  "db": "research-does-melatonin-improve-sleep-onset-laten-382747.db",
+  "gold": false
+ },
+ {
+  "fid": "4f3f40f324ed677cb90ff1284deef7a1",
+  "n": 2,
+  "ki": 0,
+  "zitate": 2,
+  "typen": [],
+  "alle_typen": [
+   "other"
+  ],
+  "design": "narrative review",
+  "kat": "unklassifiziert",
+  "agg": true,
+  "caps": 0,
+  "chars": 7543,
+  "titel": "Melatonin administration in insomnia.",
+  "jahr": "1990",
+  "db": "research-does-melatonin-improve-sleep-onset-laten-382747.db",
+  "gold": false
+ },
+ {
+  "fid": "bb9218735fec8fc7f3b6aebbff430aba",
+  "n": 3,
+  "ki": 0,
+  "zitate": 3,
+  "typen": [
+   "z"
+  ],
+  "alle_typen": [
+   "z"
+  ],
+  "design": "randomized, placebo-controlled study",
+  "kat": "parallel_rct",
+  "agg": false,
+  "caps": 0,
+  "chars": 71085,
+  "titel": "A Multicenter, Placebo-controlled Trial of Melatonin for Sleep Disturb",
+  "jahr": "2003",
+  "db": "research-does-melatonin-improve-sleep-onset-laten-382747.db",
+  "gold": false
+ },
+ {
+  "fid": "2c7ab4d1244754e3966780f4bccbfa8c",
+  "n": 2,
+  "ki": 2,
+  "zitate": 2,
+  "typen": [
+   "or"
+  ],
+  "alle_typen": [
+   "or"
+  ],
+  "design": "cross-sectional",
+  "kat": "observational",
+  "agg": false,
+  "caps": 3,
+  "chars": 39970,
+  "titel": "Prevalence of depressive symptoms and its associated factors in older ",
+  "jahr": "2017",
+  "db": "research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+  "gold": false
+ },
+ {
+  "fid": "09843d40d3cc2c9ca039d6d1b45ac656",
+  "n": 2,
+  "ki": 0,
+  "zitate": 2,
+  "typen": [
+   "beta"
+  ],
+  "alle_typen": [
+   "beta"
+  ],
+  "design": "longitudinal panel study",
+  "kat": "observational",
+  "agg": false,
+  "caps": 3,
+  "chars": 65491,
+  "titel": "Bidirectional relationships between physical exercise and depressive s",
+  "jahr": "2025",
+  "db": "research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+  "gold": false
+ },
+ {
+  "fid": "a8b6e488030b6648ae4dd7b7ff5e2bdc",
+  "n": 2,
+  "ki": 0,
+  "zitate": 2,
+  "typen": [],
+  "alle_typen": [
+   "other"
+  ],
+  "design": "review",
+  "kat": "unklassifiziert",
+  "agg": false,
+  "caps": 0,
+  "chars": 82106,
+  "titel": "Physical activity as a promising alternative for young people with juv",
+  "jahr": "2023",
+  "db": "research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+  "gold": false
+ },
+ {
+  "fid": "334f5f679802315eeec71399149b51c3",
+  "n": 2,
+  "ki": 2,
+  "zitate": 2,
+  "typen": [
+   "smd"
+  ],
+  "alle_typen": [
+   "smd"
+  ],
+  "design": "Network Meta-Analysis",
+  "kat": "unklassifiziert",
+  "agg": true,
+  "caps": 0,
+  "chars": 79745,
+  "titel": "Optimal dose and type of exercise to improve depressive symptoms in ol",
+  "jahr": "2024",
+  "db": "research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+  "gold": false
+ },
+ {
+  "fid": "c55c83c3e9896ff3c72548ed37235da0",
+  "n": 2,
+  "ki": 0,
+  "zitate": 2,
+  "typen": [
+   "g"
+  ],
+  "alle_typen": [
+   "g"
+  ],
+  "design": "Randomized controlled trial (meta-analysis of 37 RCTs)",
+  "kat": "parallel_rct",
+  "agg": true,
+  "caps": 0,
+  "chars": 82065,
+  "titel": "Effects of Mind–Body Interventions Involving Meditative Movements on Q",
+  "jahr": "2020",
+  "db": "research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+  "gold": false
+ },
+ {
+  "fid": "3134fdc8c38f475075a70ca32dc4a3d9",
+  "n": 2,
+  "ki": 2,
+  "zitate": 2,
+  "typen": [
+   "rr"
+  ],
+  "alle_typen": [
+   "rr"
+  ],
+  "design": "Target trial emulation (longitudinal cohort)",
+  "kat": "observational",
+  "agg": false,
+  "caps": 0,
+  "chars": 85910,
+  "titel": "The risk associated with ultra-processed food intake on depressive sym",
+  "jahr": "2025",
+  "db": "research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+  "gold": false
+ },
+ {
+  "fid": "fb484d488b45d21bbdf407cba4b074d5",
+  "n": 2,
+  "ki": 2,
+  "zitate": 2,
+  "typen": [
+   "g"
+  ],
+  "alle_typen": [
+   "g"
+  ],
+  "design": "meta-analysis of randomized controlled trials",
+  "kat": "parallel_rct",
+  "agg": true,
+  "caps": 0,
+  "chars": 9659,
+  "titel": "The effect of exercise on depressive symptoms in multiple sclerosis ba",
+  "jahr": "2015",
+  "db": "research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+  "gold": false
+ },
+ {
+  "fid": "d0bec407a2a0dd19c0b67aa43f9e1dfb",
+  "n": 2,
+  "ki": 2,
+  "zitate": 2,
+  "typen": [
+   "hr"
+  ],
+  "alle_typen": [
+   "hr"
+  ],
+  "design": "cohort study with validation sub-study",
+  "kat": "observational",
+  "agg": false,
+  "caps": 0,
+  "chars": 3199,
+  "titel": "A quantitative bias analysis to estimate measurement error-related att",
+  "jahr": "2020",
+  "db": "research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+  "gold": false
+ },
+ {
+  "fid": "c9327c6cc8ef5de84d093ea5f0a9cf16",
+  "n": 2,
+  "ki": 0,
+  "zitate": 2,
+  "typen": [],
+  "alle_typen": [
+   "other"
+  ],
+  "design": "Network meta-analysis of randomized controlled trials",
+  "kat": "parallel_rct",
+  "agg": true,
+  "caps": 0,
+  "chars": 3060,
+  "titel": "Comparative efficacy of different exercise interventions for improving",
+  "jahr": "2026",
+  "db": "research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+  "gold": false
+ },
+ {
+  "fid": "5cbf039f22f1bfe9f5902cf3f626852f",
+  "n": 2,
+  "ki": 2,
+  "zitate": 2,
+  "typen": [
+   "g"
+  ],
+  "alle_typen": [
+   "g"
+  ],
+  "design": "Randomized controlled trial (meta-analysis of 12 RCTs)",
+  "kat": "parallel_rct",
+  "agg": true,
+  "caps": 0,
+  "chars": 87127,
+  "titel": "Aerobic exercise for depression symptoms in adolescents: a systematic ",
+  "jahr": "2026",
+  "db": "research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+  "gold": false
+ },
+ {
+  "fid": "3790c91f96877eb6e260b4d7e0c7e7ee",
+  "n": 2,
+  "ki": 0,
+  "zitate": 2,
+  "typen": [
+   "r"
+  ],
+  "alle_typen": [
+   "r"
+  ],
+  "design": "longitudinal cohort",
+  "kat": "observational",
+  "agg": false,
+  "caps": 5,
+  "chars": 70784,
+  "titel": "Bidirectional association between cognitive function and depressive sy",
+  "jahr": "2026",
+  "db": "research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+  "gold": false
+ },
+ {
+  "fid": "77f6f5719f147e89ae83faba6ffe8f82",
+  "n": 2,
+  "ki": 0,
+  "zitate": 1,
+  "typen": [],
+  "alle_typen": [
+   "(leer)",
+   "other"
+  ],
+  "design": "systematic review",
+  "kat": "unklassifiziert",
+  "agg": true,
+  "caps": 0,
+  "chars": 58083,
+  "titel": "Bidirectional Association between Physical Activity and Dopamine Acros",
+  "jahr": "2021",
+  "db": "research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+  "gold": false
+ },
+ {
+  "fid": "3561d107ac0d0f16d766b612d55562e5",
+  "n": 2,
+  "ki": 2,
+  "zitate": 2,
+  "typen": [
+   "beta"
+  ],
+  "alle_typen": [
+   "beta"
+  ],
+  "design": "prospective cohort",
+  "kat": "observational",
+  "agg": false,
+  "caps": 0,
+  "chars": 4361,
+  "titel": "The role of physical activity in the bidirectional association between",
+  "jahr": "2025",
+  "db": "research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+  "gold": false
+ },
+ {
+  "fid": "17c7628ed0e8f01d4ec063e2b730dc36",
+  "n": 2,
+  "ki": 1,
+  "zitate": 1,
+  "typen": [
+   "hr"
+  ],
+  "alle_typen": [
+   "(leer)",
+   "hr"
+  ],
+  "design": "longitudinal cohort",
+  "kat": "observational",
+  "agg": false,
+  "caps": 0,
+  "chars": 61790,
+  "titel": "Bidirectional association between ADL disability and depressive sympto",
+  "jahr": "2025",
+  "db": "research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+  "gold": false
+ },
+ {
+  "fid": "12d49f053f5fd10ac79258943daa38dd",
+  "n": 2,
+  "ki": 2,
+  "zitate": 2,
+  "typen": [
+   "or"
+  ],
+  "alle_typen": [
+   "or"
+  ],
+  "design": "cross-sectional",
+  "kat": "observational",
+  "agg": false,
+  "caps": 0,
+  "chars": 45313,
+  "titel": "Bidirectional association between physical activity and symptoms of an",
+  "jahr": "2012",
+  "db": "research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+  "gold": false
+ },
+ {
+  "fid": "7cf3c96213b5017384c4e15371436c32",
+  "n": 2,
+  "ki": 2,
+  "zitate": 2,
+  "typen": [
+   "smd"
+  ],
+  "alle_typen": [
+   "smd"
+  ],
+  "design": "Systematic Review and Meta-Analysis",
+  "kat": "unklassifiziert",
+  "agg": true,
+  "caps": 0,
+  "chars": 5182,
+  "titel": "Exercise as medicine for depressive symptoms? A systematic review and ",
+  "jahr": "2023",
+  "db": "research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+  "gold": false
+ },
+ {
+  "fid": "fe4eb94bdb39ff70e08874e9fb77ed7f",
+  "n": 2,
+  "ki": 2,
+  "zitate": 2,
+  "typen": [
+   "beta"
+  ],
+  "alle_typen": [
+   "beta"
+  ],
+  "design": "longitudinal observational (ESM)",
+  "kat": "observational",
+  "agg": false,
+  "caps": 0,
+  "chars": 66403,
+  "titel": "Temporal associations between objectively measured physical activity a",
+  "jahr": "2022",
+  "db": "research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+  "gold": false
+ },
+ {
+  "fid": "32d24822eaec2dc7ecfff2e8ea022c1b",
+  "n": 2,
+  "ki": 2,
+  "zitate": 2,
+  "typen": [
+   "smd"
+  ],
+  "alle_typen": [
+   "smd"
+  ],
+  "design": "Randomized controlled trials (pairwise meta-analysis)",
+  "kat": "parallel_rct",
+  "agg": true,
+  "caps": 0,
+  "chars": 47099,
+  "titel": "Effect of exercise intervention on depression in children and adolesce",
+  "jahr": "2023",
+  "db": "research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+  "gold": false
+ },
+ {
+  "fid": "03ae1f37d46443caa9b324af08dd968d",
+  "n": 1,
+  "ki": 1,
+  "zitate": 1,
+  "typen": [
+   "mean_diff"
+  ],
+  "alle_typen": [
+   "mean_diff"
+  ],
+  "design": "Bayesian network meta-analysis of RCTs",
+  "kat": "unklassifiziert",
+  "agg": true,
+  "caps": 0,
+  "chars": 104159,
+  "titel": "Comparative effectiveness and dose–response relationships of exercise ",
+  "jahr": "2026",
+  "db": "research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+  "gold": false
+ },
+ {
+  "fid": "42e15440cab778347164e017a241cf03",
+  "n": 2,
+  "ki": 0,
+  "zitate": 1,
+  "typen": [
+   "g"
+  ],
+  "alle_typen": [
+   "(leer)",
+   "g"
+  ],
+  "design": "RCT",
+  "kat": "unklassifiziert",
+  "agg": false,
+  "caps": 0,
+  "chars": 67285,
+  "titel": "Optimal exercise modalities and dosages for improving depression in mi",
+  "jahr": "2026",
+  "db": "research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+  "gold": false
+ },
+ {
+  "fid": "cfc6567ca3cb6eec8c47a64a1674a849",
+  "n": 2,
+  "ki": 0,
+  "zitate": 2,
+  "typen": [
+   "g"
+  ],
+  "alle_typen": [
+   "g"
+  ],
+  "design": "meta-analysis",
+  "kat": "unklassifiziert",
+  "agg": true,
+  "caps": 2,
+  "chars": 46378,
+  "titel": "The Effect of Exercise on Depressive Symptoms in Adolescents: A System",
+  "jahr": "2016",
+  "db": "research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+  "gold": false
+ },
+ {
+  "fid": "b5e492009e4ca350f512d5144fe8bf92",
+  "n": 2,
+  "ki": 2,
+  "zitate": 2,
+  "typen": [
+   "smd"
+  ],
+  "alle_typen": [
+   "smd"
+  ],
+  "design": "randomized controlled trials",
+  "kat": "parallel_rct",
+  "agg": false,
+  "caps": 0,
+  "chars": 48470,
+  "titel": "Impact of exercise type, duration, and intensity on depressive symptom",
+  "jahr": "2024",
+  "db": "research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+  "gold": false
+ },
+ {
+  "fid": "1bd8acf800e945b266ef39794933684f",
+  "n": 2,
+  "ki": 2,
+  "zitate": 2,
+  "typen": [
+   "or"
+  ],
+  "alle_typen": [
+   "or"
+  ],
+  "design": "prospective cohort",
+  "kat": "observational",
+  "agg": false,
+  "caps": 0,
+  "chars": 44575,
+  "titel": "Common mental disorder and obesity: insight from four repeat measures ",
+  "jahr": "2009",
+  "db": "research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+  "gold": false
+ },
+ {
+  "fid": "18048cf26bfc9cf8e1a160bd96cd66a4",
+  "n": 2,
+  "ki": 0,
+  "zitate": 1,
+  "typen": [
+   "rr"
+  ],
+  "alle_typen": [
+   "(leer)",
+   "rr"
+  ],
+  "design": "prospective observational study",
+  "kat": "observational",
+  "agg": false,
+  "caps": 0,
+  "chars": 7571,
+  "titel": "Exercise and depression in midlife: a prospective study.",
+  "jahr": "1997",
+  "db": "research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+  "gold": false
+ },
+ {
+  "fid": "f4e19fff04e7195ae52a28e55aff10f9",
+  "n": 2,
+  "ki": 2,
+  "zitate": 2,
+  "typen": [
+   "g"
+  ],
+  "alle_typen": [
+   "g"
+  ],
+  "design": "randomised controlled trials",
+  "kat": "parallel_rct",
+  "agg": false,
+  "caps": 0,
+  "chars": 3047,
+  "titel": "Dose-response effects of aerobic exercise on reducing depression in pa",
+  "jahr": "2025",
+  "db": "research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+  "gold": false
+ },
+ {
+  "fid": "1190898ad3980ba3b9f3fdecfbd6e54f",
+  "n": 2,
+  "ki": 2,
+  "zitate": 2,
+  "typen": [
+   "beta"
+  ],
+  "alle_typen": [
+   "beta"
+  ],
+  "design": "longitudinal cohort",
+  "kat": "observational",
+  "agg": false,
+  "caps": 0,
+  "chars": 3959,
+  "titel": "Association Between Depressive Symptoms and Self-Reported Physical Act",
+  "jahr": "2025",
+  "db": "research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+  "gold": false
+ },
+ {
+  "fid": "95f2e8bd0db9ceab2a2e902932278980",
+  "n": 2,
+  "ki": 2,
+  "zitate": 2,
+  "typen": [
+   "or"
+  ],
+  "alle_typen": [
+   "or"
+  ],
+  "design": "longitudinal cohort",
+  "kat": "observational",
+  "agg": false,
+  "caps": 0,
+  "chars": 49376,
+  "titel": "Association between physical activity duration and depressive symptoms",
+  "jahr": "2024",
+  "db": "research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+  "gold": false
+ },
+ {
+  "fid": "9b9f0f0659effa7f880332ab213371c0",
+  "n": 2,
+  "ki": 0,
+  "zitate": 2,
+  "typen": [
+   "g"
+  ],
+  "alle_typen": [
+   "g"
+  ],
+  "design": "systematic review and dose-response meta-analysis of randomi",
+  "kat": "parallel_rct",
+  "agg": true,
+  "caps": 0,
+  "chars": 3172,
+  "titel": "Optimal aerobic exercise dose for improving metabolic health and funct",
+  "jahr": "2026",
+  "db": "research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+  "gold": false
+ },
+ {
+  "fid": "d09561e81bbe09bdc34c8dc2ebfb25c3",
+  "n": 2,
+  "ki": 0,
+  "zitate": 0,
+  "typen": [],
+  "alle_typen": [
+   "(leer)"
+  ],
+  "design": "",
+  "kat": "unklassifiziert",
+  "agg": false,
+  "caps": 0,
+  "chars": 3457,
+  "titel": "Aerobic Exercise in the Adjunctive Treatment of Depression: A Randomiz",
+  "jahr": "1992",
+  "db": "research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+  "gold": false
+ },
+ {
+  "fid": "a81bdba6ad52c125b83386abdc0e1316",
+  "n": 2,
+  "ki": 0,
+  "zitate": 2,
+  "typen": [],
+  "alle_typen": [
+   "other"
+  ],
+  "design": "randomised controlled trial",
+  "kat": "parallel_rct",
+  "agg": false,
+  "caps": 2,
+  "chars": 37626,
+  "titel": "Exploring the feasibility of a community-based strength training progr",
+  "jahr": "2006",
+  "db": "research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+  "gold": false
+ },
+ {
+  "fid": "3b80b35ea0a6ff19bf08820e6efc1508",
+  "n": 2,
+  "ki": 0,
+  "zitate": 2,
+  "typen": [],
+  "alle_typen": [
+   "other"
+  ],
+  "design": "Randomized clinical trial",
+  "kat": "parallel_rct",
+  "agg": false,
+  "caps": 0,
+  "chars": 25800,
+  "titel": "A prática de exercícios físicos regulares como terapia complementar ao",
+  "jahr": "2007",
+  "db": "research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+  "gold": false
+ },
+ {
+  "fid": "bab903da4ce410b3d60db79cbad1336a",
+  "n": 2,
+  "ki": 0,
+  "zitate": 2,
+  "typen": [
+   "mean_diff"
+  ],
+  "alle_typen": [
+   "mean_diff"
+  ],
+  "design": "Randomized controlled trial",
+  "kat": "parallel_rct",
+  "agg": false,
+  "caps": 0,
+  "chars": 6839,
+  "titel": "Combined exercise and cognitive behavioral therapy improves outcomes i",
+  "jahr": "2010",
+  "db": "research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+  "gold": false
+ },
+ {
+  "fid": "172cbed6a4dfdada3849fccc644f04f4",
+  "n": 2,
+  "ki": 0,
+  "zitate": 1,
+  "typen": [],
+  "alle_typen": [
+   "(leer)",
+   "other"
+  ],
+  "design": "cohort study protocol",
+  "kat": "observational",
+  "agg": false,
+  "caps": 2,
+  "chars": 34909,
+  "titel": "Large-scale accelerometry-derived physical activity and sedentary beha",
+  "jahr": "2026",
+  "db": "research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+  "gold": false
+ },
+ {
+  "fid": "0288bd6b82d4bc80c8e7d49118ec2089",
+  "n": 2,
+  "ki": 1,
+  "zitate": 2,
+  "typen": [
+   "r",
+   "smd"
+  ],
+  "alle_typen": [
+   "r",
+   "smd"
+  ],
+  "design": "test-retest reliability study",
+  "kat": "unklassifiziert",
+  "agg": false,
+  "caps": 2,
+  "chars": 60721,
+  "titel": "Measuring physical activity among pregnant women using a structured on",
+  "jahr": "2010",
+  "db": "research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+  "gold": false
+ },
+ {
+  "fid": "927281c19970ec7e4bb804b41a07833f",
+  "n": 2,
+  "ki": 2,
+  "zitate": 2,
+  "typen": [
+   "or"
+  ],
+  "alle_typen": [
+   "or"
+  ],
+  "design": "cross-sectional",
+  "kat": "observational",
+  "agg": false,
+  "caps": 0,
+  "chars": 68479,
+  "titel": "Factors Associated with Smoking Status and Self-Reported Physical Acti",
+  "jahr": "2026",
+  "db": "research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+  "gold": false
+ },
+ {
+  "fid": "abee8bc7798664ae817baaf5ddac9c6e",
+  "n": 2,
+  "ki": 0,
+  "zitate": 2,
+  "typen": [
+   "beta"
+  ],
+  "alle_typen": [
+   "beta"
+  ],
+  "design": "cross-sectional",
+  "kat": "observational",
+  "agg": false,
+  "caps": 0,
+  "chars": 41519,
+  "titel": "The BDNF Val66Met polymorphism does not moderate the effect of self-re",
+  "jahr": "2014",
+  "db": "research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+  "gold": false
+ },
+ {
+  "fid": "36823a607abc2b0395c68486fe6f2b93",
+  "n": 2,
+  "ki": 0,
+  "zitate": 0,
+  "typen": [],
+  "alle_typen": [
+   "(leer)"
+  ],
+  "design": "",
+  "kat": "unklassifiziert",
+  "agg": false,
+  "caps": 6,
+  "chars": 93299,
+  "titel": "A latent profile analysis of physical activity participation patterns ",
+  "jahr": "2026",
+  "db": "research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+  "gold": false
+ },
+ {
+  "fid": "997a64ee1e9c3620f7c72b5cfa7b15e3",
+  "n": 2,
+  "ki": 0,
+  "zitate": 2,
+  "typen": [
+   "or"
+  ],
+  "alle_typen": [
+   "or"
+  ],
+  "design": "longitudinal cohort",
+  "kat": "observational",
+  "agg": false,
+  "caps": 0,
+  "chars": 15020,
+  "titel": "Association between trajectories of physical activity and depressive s",
+  "jahr": "2026",
+  "db": "research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+  "gold": false
+ },
+ {
+  "fid": "a407135d8ff9a48e88e77bbcfa98efa3",
+  "n": 2,
+  "ki": 0,
+  "zitate": 2,
+  "typen": [
+   "beta"
+  ],
+  "alle_typen": [
+   "beta"
+  ],
+  "design": "Longitudinal fixed-effects model",
+  "kat": "observational",
+  "agg": false,
+  "caps": 0,
+  "chars": 15020,
+  "titel": "Cross-national differences in the association between physical activit",
+  "jahr": "2026",
+  "db": "research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+  "gold": false
+ },
+ {
+  "fid": "dc746df43f965f03e3f2a1a4def99755",
+  "n": 2,
+  "ki": 1,
+  "zitate": 2,
+  "typen": [
+   "or"
+  ],
+  "alle_typen": [
+   "or",
+   "other"
+  ],
+  "design": "Case-control (genetic association)",
+  "kat": "observational",
+  "agg": false,
+  "caps": 1,
+  "chars": 47107,
+  "titel": "Polygenic risk scores of lithium response and treatment resistance in ",
+  "jahr": "2023",
+  "db": "research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+  "gold": false
+ },
+ {
+  "fid": "3d0c4b0317aafaf0d1c46106aa6db141",
+  "n": 2,
+  "ki": 0,
+  "zitate": 2,
+  "typen": [],
+  "alle_typen": [
+   "other"
+  ],
+  "design": "meta-analysis of RCTs",
+  "kat": "unklassifiziert",
+  "agg": true,
+  "caps": 0,
+  "chars": 164393,
+  "titel": "Treatment-resistant depression: molecular mechanisms and management",
+  "jahr": "2024",
+  "db": "research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+  "gold": false
+ },
+ {
+  "fid": "f44c4e1fc0a128a336870b9ef38bae01",
+  "n": 2,
+  "ki": 0,
+  "zitate": 2,
+  "typen": [
+   "beta"
+  ],
+  "alle_typen": [
+   "beta"
+  ],
+  "design": "Cross-Sectional Study",
+  "kat": "observational",
+  "agg": false,
+  "caps": 0,
+  "chars": 3062,
+  "titel": "Association Between cMIND Diet and Depressive Symptoms Among Chinese O",
+  "jahr": "2026",
+  "db": "research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+  "gold": false
+ },
+ {
+  "fid": "1744cc63453104ef0a14f5d45b158a6f",
+  "n": 1,
+  "ki": 0,
+  "zitate": 0,
+  "typen": [],
+  "alle_typen": [
+   "(leer)"
+  ],
+  "design": "",
+  "kat": "unklassifiziert",
+  "agg": false,
+  "caps": 0,
+  "chars": 87303,
+  "titel": "Early diagnosis of depressive symptoms as part of the comprehensive ma",
+  "jahr": "2025",
+  "db": "research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+  "gold": false
+ },
+ {
+  "fid": "c8dd6a11e5d390cc8afa0574d337a32f",
+  "n": 2,
+  "ki": 0,
+  "zitate": 2,
+  "typen": [],
+  "alle_typen": [
+   "other"
+  ],
+  "design": "cross-sectional",
+  "kat": "observational",
+  "agg": false,
+  "caps": 0,
+  "chars": 15000,
+  "titel": "Exercise, Mood, Self-Efficacy, and Social Support as Predictors of Dep",
+  "jahr": "2019",
+  "db": "research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+  "gold": false
+ },
+ {
+  "fid": "0fb91c003bd1ffe1010df3c75a644655",
+  "n": 2,
+  "ki": 2,
+  "zitate": 2,
+  "typen": [
+   "smd"
+  ],
+  "alle_typen": [
+   "smd"
+  ],
+  "design": "meta-analysis of RCTs",
+  "kat": "unklassifiziert",
+  "agg": true,
+  "caps": 0,
+  "chars": 55135,
+  "titel": "Impact of physical exercise on health and social interaction in older ",
+  "jahr": "2025",
+  "db": "research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+  "gold": false
+ },
+ {
+  "fid": "1faf4b78f05cd156029ee647c2e14c51",
+  "n": 2,
+  "ki": 0,
+  "zitate": 2,
+  "typen": [
+   "beta"
+  ],
+  "alle_typen": [
+   "beta"
+  ],
+  "design": "cross-sectional",
+  "kat": "observational",
+  "agg": false,
+  "caps": 0,
+  "chars": 27868,
+  "titel": "The Effect of Physical Exercise on Depression in College Students: The",
+  "jahr": "2022",
+  "db": "research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+  "gold": false
+ },
+ {
+  "fid": "ca2c52d13aaec47ebbeccdedb3ee1d8e",
+  "n": 2,
+  "ki": 0,
+  "zitate": 2,
+  "typen": [],
+  "alle_typen": [
+   "other"
+  ],
+  "design": "Mixed experimental design (repeated measures ANOVA)",
+  "kat": "crossover_rct",
+  "agg": false,
+  "caps": 0,
+  "chars": 79256,
+  "titel": "The effects of an 8-week Taekwondo exercise intervention on inhibitory",
+  "jahr": "2025",
+  "db": "research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+  "gold": false
+ },
+ {
+  "fid": "cf9d739f5090aeda8006074fce2f0b44",
+  "n": 2,
+  "ki": 1,
+  "zitate": 2,
+  "typen": [
+   "or"
+  ],
+  "alle_typen": [
+   "or",
+   "other"
+  ],
+  "design": "randomized clinical trial",
+  "kat": "parallel_rct",
+  "agg": false,
+  "caps": 0,
+  "chars": 61869,
+  "titel": "Impaired sleep, depressive symptoms, and pain as determinants of physi",
+  "jahr": "2025",
+  "db": "research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+  "gold": false
+ },
+ {
+  "fid": "825ad4a0c0f27c0e19566cd25ded25ca",
+  "n": 2,
+  "ki": 0,
+  "zitate": 1,
+  "typen": [
+   "beta"
+  ],
+  "alle_typen": [
+   "(leer)",
+   "beta"
+  ],
+  "design": "simulation",
+  "kat": "unklassifiziert",
+  "agg": false,
+  "caps": 0,
+  "chars": 15020,
+  "titel": "Effects of differential measurement error in self-reported diet in lon",
+  "jahr": "2021",
+  "db": "research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+  "gold": false
+ },
+ {
+  "fid": "67d083a4b72dfaa4ed43befb7254b70e",
+  "n": 2,
+  "ki": 2,
+  "zitate": 2,
+  "typen": [
+   "or"
+  ],
+  "alle_typen": [
+   "or"
+  ],
+  "design": "cross-sectional",
+  "kat": "observational",
+  "agg": false,
+  "caps": 0,
+  "chars": 15020,
+  "titel": "Relationship between accelerometer-measured physical activity and depr",
+  "jahr": "2025",
+  "db": "research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+  "gold": false
+ },
+ {
+  "fid": "1eaf63bb90f8f83b2ef7b846592528ec",
+  "n": 2,
+  "ki": 0,
+  "zitate": 2,
+  "typen": [
+   "r"
+  ],
+  "alle_typen": [
+   "other",
+   "r"
+  ],
+  "design": "cross-sectional",
+  "kat": "observational",
+  "agg": false,
+  "caps": 0,
+  "chars": 63542,
+  "titel": "Discordance Between Self-Reported Physical Activity and Field-Assessed",
+  "jahr": "2026",
+  "db": "research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+  "gold": false
+ },
+ {
+  "fid": "7ca468285bd24135c1a9bf48f6f5f202",
+  "n": 2,
+  "ki": 0,
+  "zitate": 2,
+  "typen": [
+   "beta"
+  ],
+  "alle_typen": [
+   "beta"
+  ],
+  "design": "cross-sectional",
+  "kat": "observational",
+  "agg": false,
+  "caps": 0,
+  "chars": 58006,
+  "titel": "Accelerometer-Assessed Physical Activity and Cognitive Performance amo",
+  "jahr": "2022",
+  "db": "research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+  "gold": false
+ },
+ {
+  "fid": "605cdb41a0dfd7b913978058e2b35b7e",
+  "n": 2,
+  "ki": 0,
+  "zitate": 1,
+  "typen": [
+   "smd"
+  ],
+  "alle_typen": [
+   "other",
+   "smd"
+  ],
+  "design": "N/A",
+  "kat": "unklassifiziert",
+  "agg": false,
+  "caps": 4,
+  "chars": 46203,
+  "titel": "From movement to METs: A validation of ActTrust® for energy expenditur",
+  "jahr": "2026",
+  "db": "research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+  "gold": false
+ },
+ {
+  "fid": "22b54572851267c49b5a3d7fadcc2677",
+  "n": 1,
+  "ki": 1,
+  "zitate": 1,
+  "typen": [
+   "or"
+  ],
+  "alle_typen": [
+   "or"
+  ],
+  "design": "Observational Study",
+  "kat": "observational",
+  "agg": false,
+  "caps": 0,
+  "chars": 3668,
+  "titel": "Dog owners are more likely to meet physical activity guidelines than p",
+  "jahr": "2019",
+  "db": "research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+  "gold": false
+ },
+ {
+  "fid": "7753292869e533f0224442f96dd01bb6",
+  "n": 2,
+  "ki": 2,
+  "zitate": 2,
+  "typen": [
+   "smd"
+  ],
+  "alle_typen": [
+   "smd"
+  ],
+  "design": "randomized controlled trial",
+  "kat": "parallel_rct",
+  "agg": false,
+  "caps": 0,
+  "chars": 4101,
+  "titel": "The Minimal Important Difference in Physical Activity in Patients with",
+  "jahr": "2016",
+  "db": "research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+  "gold": false
+ },
+ {
+  "fid": "0bb19f71ffd3948832f5e4159564dfa7",
+  "n": 2,
+  "ki": 0,
+  "zitate": 2,
+  "typen": [
+   "mean_diff",
+   "smd"
+  ],
+  "alle_typen": [
+   "mean_diff",
+   "smd"
+  ],
+  "design": "Systematic Review",
+  "kat": "unklassifiziert",
+  "agg": true,
+  "caps": 0,
+  "chars": 6365,
+  "titel": "Physical Activity as a Vital Sign: A Systematic Review",
+  "jahr": "2017",
+  "db": "research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+  "gold": false
+ },
+ {
+  "fid": "b18e72a627198936aff415727baa3942",
+  "n": 2,
+  "ki": 0,
+  "zitate": 1,
+  "typen": [],
+  "alle_typen": [
+   "(leer)",
+   "other"
+  ],
+  "design": "systematic review",
+  "kat": "unklassifiziert",
+  "agg": true,
+  "caps": 0,
+  "chars": 4949,
+  "titel": "Measuring Physical Activity with Activity Monitors in Patients with He",
+  "jahr": "2020",
+  "db": "research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+  "gold": false
+ },
+ {
+  "fid": "4324d96c305ad080b704bd2412dc8352",
+  "n": 2,
+  "ki": 2,
+  "zitate": 2,
+  "typen": [
+   "smd"
+  ],
+  "alle_typen": [
+   "smd"
+  ],
+  "design": "Systematic review and meta-analysis of randomised controlled",
+  "kat": "parallel_rct",
+  "agg": true,
+  "caps": 0,
+  "chars": 9080,
+  "titel": "Effects of yoga on depressive symptoms in people with mental disorders",
+  "jahr": "2021",
+  "db": "research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+  "gold": false
+ },
+ {
+  "fid": "337c2057fb860106b92451e914af9a37",
+  "n": 2,
+  "ki": 2,
+  "zitate": 2,
+  "typen": [
+   "hr"
+  ],
+  "alle_typen": [
+   "hr"
+  ],
+  "design": "prospective cohort",
+  "kat": "observational",
+  "agg": false,
+  "caps": 0,
+  "chars": 43730,
+  "titel": "Dose-response relationship of physical activity and sedentary time wit",
+  "jahr": "2025",
+  "db": "research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+  "gold": false
+ },
+ {
+  "fid": "8f1fd206e91537d2a3ea62e0de8e9a63",
+  "n": 2,
+  "ki": 1,
+  "zitate": 2,
+  "typen": [
+   "beta"
+  ],
+  "alle_typen": [
+   "beta"
+  ],
+  "design": "cross-sectional survey",
+  "kat": "observational",
+  "agg": false,
+  "caps": 0,
+  "chars": 4461,
+  "titel": "Physical activity and health related quality of life",
+  "jahr": "2012",
+  "db": "research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+  "gold": false
+ },
+ {
+  "fid": "c7c1c7c4508ca004f68decdc50570836",
+  "n": 1,
+  "ki": 0,
+  "zitate": 1,
+  "typen": [],
+  "alle_typen": [
+   "other"
+  ],
+  "design": "Observational Study",
+  "kat": "observational",
+  "agg": false,
+  "caps": 0,
+  "chars": 4443,
+  "titel": "Physical Activity and Health-Related Quality of Life Among Community D",
+  "jahr": "2015",
+  "db": "research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+  "gold": false
+ },
+ {
+  "fid": "4ef3ab07ed37ab1ff83ea62e0cb6d369",
+  "n": 2,
+  "ki": 0,
+  "zitate": 2,
+  "typen": [
+   "r"
+  ],
+  "alle_typen": [
+   "r"
+  ],
+  "design": "cross-sectional",
+  "kat": "observational",
+  "agg": false,
+  "caps": 0,
+  "chars": 3128,
+  "titel": "Regular Physical Activity, Short-Term Exercise, Mental Health, and Wel",
+  "jahr": "2020",
+  "db": "research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+  "gold": false
+ },
+ {
+  "fid": "563d84028decf51c3231547170626ba9",
+  "n": 2,
+  "ki": 2,
+  "zitate": 2,
+  "typen": [
+   "or"
+  ],
+  "alle_typen": [
+   "or"
+  ],
+  "design": "Mendelian randomization",
+  "kat": "unklassifiziert",
+  "agg": false,
+  "caps": 0,
+  "chars": 9115,
+  "titel": "Assessment of Bidirectional Relationships Between Physical Activity an",
+  "jahr": "2019",
+  "db": "research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+  "gold": false
+ },
+ {
+  "fid": "ec4ad736a856ba7932ac27bdd7405b74",
+  "n": 1,
+  "ki": 0,
+  "zitate": 0,
+  "typen": [],
+  "alle_typen": [
+   "(leer)"
+  ],
+  "design": "",
+  "kat": "unklassifiziert",
+  "agg": false,
+  "caps": 0,
+  "chars": 4228,
+  "titel": "Physical activity, exercise, and mental disorders: it is time to move ",
+  "jahr": "2021",
+  "db": "research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+  "gold": false
+ },
+ {
+  "fid": "0cc1729877ff2472a8e88cc7b04c51ec",
+  "n": 2,
+  "ki": 2,
+  "zitate": 2,
+  "typen": [
+   "smd"
+  ],
+  "alle_typen": [
+   "smd"
+  ],
+  "design": "Meta-Analysis of RCTs",
+  "kat": "unklassifiziert",
+  "agg": true,
+  "caps": 0,
+  "chars": 3916,
+  "titel": "Treatment of current depressive symptoms in dialysis patients: A syste",
+  "jahr": "2020",
+  "db": "research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+  "gold": false
+ },
+ {
+  "fid": "8c7396afb94139dc81e243acf529eaf6",
+  "n": 2,
+  "ki": 0,
+  "zitate": 2,
+  "typen": [],
+  "alle_typen": [
+   "other"
+  ],
+  "design": "Cross-sectional",
+  "kat": "observational",
+  "agg": false,
+  "caps": 0,
+  "chars": 21636,
+  "titel": "A Retrospective, Cross-Sectional Study of Self-Reported Physical Activ",
+  "jahr": "2021",
+  "db": "research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+  "gold": false
+ },
+ {
+  "fid": "b9a8ca208f26be0ca23bbfe18a7707a9",
+  "n": 2,
+  "ki": 0,
+  "zitate": 2,
+  "typen": [
+   "g"
+  ],
+  "alle_typen": [
+   "g"
+  ],
+  "design": "Randomized controlled trial",
+  "kat": "parallel_rct",
+  "agg": false,
+  "caps": 0,
+  "chars": 45308,
+  "titel": "Exercise and Epstein's TARGET for treatment of depressive symptoms: A ",
+  "jahr": "2015",
+  "db": "research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+  "gold": false
+ },
+ {
+  "fid": "876d893969bb71bc54c8c97cf9820d91",
+  "n": 2,
+  "ki": 0,
+  "zitate": 0,
+  "typen": [],
+  "alle_typen": [
+   "(leer)"
+  ],
+  "design": "",
+  "kat": "unklassifiziert",
+  "agg": false,
+  "caps": 0,
+  "chars": 15020,
+  "titel": "Analysis of shared heritability in common disorders of the brain",
+  "jahr": "",
+  "db": "research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+  "gold": false
+ },
+ {
+  "fid": "7217aed40fd302335a66027a5f8aeed8",
+  "n": 2,
+  "ki": 0,
+  "zitate": 0,
+  "typen": [],
+  "alle_typen": [
+   "(leer)"
+  ],
+  "design": "",
+  "kat": "unklassifiziert",
+  "agg": false,
+  "caps": 0,
+  "chars": 4206,
+  "titel": "Interpreting findings from Mendelian randomization using the MR-Egger ",
+  "jahr": "",
+  "db": "research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+  "gold": false
+ },
+ {
+  "fid": "18fbd83ba83f6f1794cf38ec33f64b78",
+  "n": 2,
+  "ki": 2,
+  "zitate": 2,
+  "typen": [
+   "or",
+   "rr"
+  ],
+  "alle_typen": [
+   "or",
+   "rr"
+  ],
+  "design": "Mendelian randomization using summarized data from five gene",
+  "kat": "unklassifiziert",
+  "agg": false,
+  "caps": 0,
+  "chars": 41676,
+  "titel": "Mendelian Randomization Analysis With Multiple Genetic Variants Using ",
+  "jahr": "",
+  "db": "research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+  "gold": false
+ },
+ {
+  "fid": "41f171e4e1f01053e9136df6b928a44e",
+  "n": 2,
+  "ki": 0,
+  "zitate": 0,
+  "typen": [],
+  "alle_typen": [
+   "(leer)"
+  ],
+  "design": "",
+  "kat": "unklassifiziert",
+  "agg": false,
+  "caps": 0,
+  "chars": 5035,
+  "titel": "Mendelian randomization with invalid instruments: effect estimation an",
+  "jahr": "",
+  "db": "research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+  "gold": false
+ },
+ {
+  "fid": "95665f6469d8c66b26990d1eac052363",
+  "n": 2,
+  "ki": 0,
+  "zitate": 1,
+  "typen": [],
+  "alle_typen": [
+   "(leer)",
+   "other"
+  ],
+  "design": "Multivariable Mendelian randomization (MVMR) using UK Bioban",
+  "kat": "unklassifiziert",
+  "agg": false,
+  "caps": 0,
+  "chars": 3279,
+  "titel": "An examination of multivariable Mendelian randomization in the single-",
+  "jahr": "",
+  "db": "research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+  "gold": false
+ },
+ {
+  "fid": "4cacb4685931aae4cad5a8938b98654e",
+  "n": 2,
+  "ki": 0,
+  "zitate": 0,
+  "typen": [],
+  "alle_typen": [
+   "(leer)"
+  ],
+  "design": "",
+  "kat": "unklassifiziert",
+  "agg": false,
+  "caps": 4,
+  "chars": 39912,
+  "titel": "Cognitive ability and physical health: a Mendelian randomization study",
+  "jahr": "",
+  "db": "research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+  "gold": false
+ },
+ {
+  "fid": "b983022c5a23285d532623a60ad92286",
+  "n": 2,
+  "ki": 0,
+  "zitate": 0,
+  "typen": [],
+  "alle_typen": [
+   "(leer)"
+  ],
+  "design": "",
+  "kat": "unklassifiziert",
+  "agg": false,
+  "caps": 0,
+  "chars": 53718,
+  "titel": "Causal links between obesity, lipids, adipokines, and cognition: a bid",
+  "jahr": "",
+  "db": "research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+  "gold": false
+ },
+ {
+  "fid": "2ef00eb8ebf980f61f295d7f25267ab9",
+  "n": 2,
+  "ki": 0,
+  "zitate": 2,
+  "typen": [],
+  "alle_typen": [
+   "other"
+  ],
+  "design": "Observational study with GRM correction",
+  "kat": "observational",
+  "agg": false,
+  "caps": 0,
+  "chars": 80355,
+  "titel": "Observational epidemiological studies can mitigate genetic confounding",
+  "jahr": "",
+  "db": "research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+  "gold": false
+ },
+ {
+  "fid": "9e8c86e4de091bb794205aa61ecbc4e6",
+  "n": 1,
+  "ki": 0,
+  "zitate": 0,
+  "typen": [],
+  "alle_typen": [
+   "(leer)"
+  ],
+  "design": "",
+  "kat": "unklassifiziert",
+  "agg": false,
+  "caps": 0,
+  "chars": 59614,
+  "titel": "Association of conicity index with cognitive function: Evidence from a",
+  "jahr": "",
+  "db": "research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+  "gold": false
+ },
+ {
+  "fid": "3c3bf57a80d6ad210f55ad7d78701e25",
+  "n": 2,
+  "ki": 2,
+  "zitate": 2,
+  "typen": [
+   "or"
+  ],
+  "alle_typen": [
+   "or"
+  ],
+  "design": "Mendelian Randomization (Forward)",
+  "kat": "unklassifiziert",
+  "agg": false,
+  "caps": 0,
+  "chars": 39854,
+  "titel": "Cognitive function and knee osteoarthritis: A bidirectional Mendelian ",
+  "jahr": "",
+  "db": "research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+  "gold": false
+ },
+ {
+  "fid": "8d9e6e9a6924765bd0029afb4143ed75",
+  "n": 1,
+  "ki": 0,
+  "zitate": 1,
+  "typen": [],
+  "alle_typen": [
+   "other"
+  ],
+  "design": "Mendelian randomization",
+  "kat": "unklassifiziert",
+  "agg": false,
+  "caps": 0,
+  "chars": 8051,
+  "titel": "CaPri: Bayesian Mendelian randomization for joint estimation of causal",
+  "jahr": "",
+  "db": "research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+  "gold": false
+ },
+ {
+  "fid": "a84ea5b5349d6272d6544e5cb0d7e145",
+  "n": 2,
+  "ki": 0,
+  "zitate": 2,
+  "typen": [
+   "z"
+  ],
+  "alle_typen": [
+   "other",
+   "z"
+  ],
+  "design": "Confounding model (structural equation modeling)",
+  "kat": "unklassifiziert",
+  "agg": false,
+  "caps": 0,
+  "chars": 77860,
+  "titel": "Polygenic Scores of Executive Function Provide Limited Support for Gen",
+  "jahr": "2025",
+  "db": "research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+  "gold": false
+ },
+ {
+  "fid": "4839b8046603d5e33e364bcdb79ff202",
+  "n": 2,
+  "ki": 2,
+  "zitate": 2,
+  "typen": [
+   "or"
+  ],
+  "alle_typen": [
+   "or"
+  ],
+  "design": "Two-sample Mendelian randomization",
+  "kat": "unklassifiziert",
+  "agg": false,
+  "caps": 0,
+  "chars": 45563,
+  "titel": "Genetic evidence for a causal role of depression in late-onset Alzheim",
+  "jahr": "2026",
+  "db": "research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+  "gold": false
+ },
+ {
+  "fid": "548c989c9d6699942aefe9842bac6cfb",
+  "n": 2,
+  "ki": 0,
+  "zitate": 1,
+  "typen": [],
+  "alle_typen": [
+   "(leer)",
+   "other"
+  ],
+  "design": "Simulation/Methodological",
+  "kat": "unklassifiziert",
+  "agg": false,
+  "caps": 0,
+  "chars": 6413,
+  "titel": "Inferring Causal Direction Between Two Traits in the Presence of Horiz",
+  "jahr": "2020",
+  "db": "research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+  "gold": false
+ },
+ {
+  "fid": "56ae5316aa72f4a8f684a0e6cd6da993",
+  "n": 2,
+  "ki": 0,
+  "zitate": 2,
+  "typen": [],
+  "alle_typen": [
+   "other"
+  ],
+  "design": "Observational cohort (CLSA)",
+  "kat": "observational",
+  "agg": false,
+  "caps": 0,
+  "chars": 97106,
+  "titel": "Genetic influences on brain and cognitive health and their interaction",
+  "jahr": "2024",
+  "db": "research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+  "gold": false
+ },
+ {
+  "fid": "d766c5711b5be373c1b770155ff497f1",
+  "n": 2,
+  "ki": 0,
+  "zitate": 2,
+  "typen": [],
+  "alle_typen": [
+   "other"
+  ],
+  "design": "Real data analysis using HVP model",
+  "kat": "unklassifiziert",
+  "agg": false,
+  "caps": 0,
+  "chars": 3718,
+  "titel": "Disentangling horizontal and vertical Pleiotropy in genetic correlatio",
+  "jahr": "2025",
+  "db": "research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+  "gold": false
+ },
+ {
+  "fid": "6993ccdb2f41ba92c020771e045b12df",
+  "n": 2,
+  "ki": 0,
+  "zitate": 2,
+  "typen": [
+   "beta"
+  ],
+  "alle_typen": [
+   "beta"
+  ],
+  "design": "Two-sample summary-data Mendelian Randomization (simulation ",
+  "kat": "unklassifiziert",
+  "agg": false,
+  "caps": 0,
+  "chars": 102116,
+  "titel": "A Modified Debiased Inverse‐Variance Weighted Estimator in Two‐Sample ",
+  "jahr": "2024",
+  "db": "research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+  "gold": false
+ },
+ {
+  "fid": "2d93b2d3cbb1f87df6334817a719d5d6",
+  "n": 2,
+  "ki": 0,
+  "zitate": 0,
+  "typen": [],
+  "alle_typen": [
+   "(leer)"
+  ],
+  "design": "",
+  "kat": "unklassifiziert",
+  "agg": false,
+  "caps": 0,
+  "chars": 4836,
+  "titel": "Bias correction for inverse variance weighting Mendelian randomization",
+  "jahr": "2021",
+  "db": "research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+  "gold": false
+ },
+ {
+  "fid": "123fe1fddc61e843ee17152febd10789",
+  "n": 2,
+  "ki": 0,
+  "zitate": 1,
+  "typen": [],
+  "alle_typen": [
+   "(leer)",
+   "other"
+  ],
+  "design": "Simulation",
+  "kat": "unklassifiziert",
+  "agg": false,
+  "caps": 0,
+  "chars": 102961,
+  "titel": "Bayesian Bidirectional Mendelian Randomization Under Correlated and Un",
+  "jahr": "2026",
+  "db": "research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+  "gold": false
+ },
+ {
+  "fid": "d0c9b922b9b4963e37fd5a54ab0ccab0",
+  "n": 2,
+  "ki": 2,
+  "zitate": 2,
+  "typen": [
+   "or"
+  ],
+  "alle_typen": [
+   "or"
+  ],
+  "design": "Mendelian Randomization",
+  "kat": "unklassifiziert",
+  "agg": false,
+  "caps": 1,
+  "chars": 64136,
+  "titel": "The global randomization test: A Mendelian randomization falsification",
+  "jahr": "2022",
+  "db": "research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+  "gold": false
+ },
+ {
+  "fid": "f74a9b15c3a41f9cc5a79548d1102d86",
+  "n": 2,
+  "ki": 2,
+  "zitate": 2,
+  "typen": [
+   "or"
+  ],
+  "alle_typen": [
+   "or"
+  ],
+  "design": "Mendelian Randomization (applied example in UK Biobank)",
+  "kat": "unklassifiziert",
+  "agg": false,
+  "caps": 0,
+  "chars": 15020,
+  "titel": "Using the global randomization test as a Mendelian randomization falsi",
+  "jahr": "2024",
+  "db": "research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+  "gold": false
+ },
+ {
+  "fid": "33a2bd3187187418317b277c704948fa",
+  "n": 3,
+  "ki": 2,
+  "zitate": 2,
+  "typen": [
+   "beta"
+  ],
+  "alle_typen": [
+   "(leer)",
+   "beta"
+  ],
+  "design": "Multiple regression in independent sample (LBC1936)",
+  "kat": "unklassifiziert",
+  "agg": false,
+  "caps": 0,
+  "chars": 15020,
+  "titel": "Validation of a polygenic risk score for frailty in the Lothian Birth ",
+  "jahr": "2024",
+  "db": "research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+  "gold": false
+ },
+ {
+  "fid": "b16c175715137044445b25c8355d0bda",
+  "n": 1,
+  "ki": 0,
+  "zitate": 1,
+  "typen": [],
+  "alle_typen": [
+   "other"
+  ],
+  "design": "Plasmode simulation",
+  "kat": "unklassifiziert",
+  "agg": false,
+  "caps": 0,
+  "chars": 34662,
+  "titel": "Age-varying genetic associations and implications for bias in Mendelia",
+  "jahr": "2021",
+  "db": "research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+  "gold": false
+ },
+ {
+  "fid": "7df874ca5386e7db9350901562d9408e",
+  "n": 2,
+  "ki": 0,
+  "zitate": 2,
+  "typen": [
+   "r"
+  ],
+  "alle_typen": [
+   "other",
+   "r"
+  ],
+  "design": "Longitudinal cohort study with linear regression and multile",
+  "kat": "observational",
+  "agg": false,
+  "caps": 0,
+  "chars": 5729,
+  "titel": "Age and cohort differences in the association between polygenic scores",
+  "jahr": "2026",
+  "db": "research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+  "gold": false
+ },
+ {
+  "fid": "c37355ea603abb29c262090a2f8a10d6",
+  "n": 2,
+  "ki": 2,
+  "zitate": 2,
+  "typen": [
+   "heritability"
+  ],
+  "alle_typen": [
+   "heritability"
+  ],
+  "design": "Twin study (Bayesian liability-threshold ACE models)",
+  "kat": "unklassifiziert",
+  "agg": false,
+  "caps": 0,
+  "chars": 80172,
+  "titel": "Beyond years of schooling: Genetic associations across educational mil",
+  "jahr": "2026",
+  "db": "research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+  "gold": false
+ },
+ {
+  "fid": "ccb8bf22e0366645dd51674e3947feed",
+  "n": 2,
+  "ki": 0,
+  "zitate": 0,
+  "typen": [],
+  "alle_typen": [
+   "(leer)"
+  ],
+  "design": "",
+  "kat": "unklassifiziert",
+  "agg": false,
+  "caps": 0,
+  "chars": 38304,
+  "titel": "Rietveld, C. A. et al. Common genetic variants associated with cogniti",
+  "jahr": "2014",
+  "db": "research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+  "gold": false
+ },
+ {
+  "fid": "7f1f032c8cad2743507e55edb8983a84",
+  "n": 2,
+  "ki": 0,
+  "zitate": 2,
+  "typen": [
+   "heritability"
+  ],
+  "alle_typen": [
+   "heritability"
+  ],
+  "design": "Polygenic index analysis with correction for assortative mat",
+  "kat": "unklassifiziert",
+  "agg": false,
+  "caps": 0,
+  "chars": 4310,
+  "titel": "Estimation of indirect genetic effects and heritability under assortat",
+  "jahr": "2023",
+  "db": "research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+  "gold": false
+ },
+ {
+  "fid": "990d34f9d6f30c6c0a66b528ab3d1f41",
+  "n": 1,
+  "ki": 0,
+  "zitate": 0,
+  "typen": [],
+  "alle_typen": [
+   "(leer)"
+  ],
+  "design": "",
+  "kat": "unklassifiziert",
+  "agg": false,
+  "caps": 0,
+  "chars": 5316,
+  "titel": "Estimating the correlation of exchangeable variables in assortative ma",
+  "jahr": "2026",
+  "db": "research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+  "gold": false
+ },
+ {
+  "fid": "0e9a71993bb652e1a552c805f21cca81",
+  "n": 1,
+  "ki": 0,
+  "zitate": 0,
+  "typen": [],
+  "alle_typen": [
+   "(leer)"
+  ],
+  "design": "",
+  "kat": "unklassifiziert",
+  "agg": false,
+  "caps": 0,
+  "chars": 4743,
+  "titel": "A quantitative genetic model for indirect genetic effects and genomic ",
+  "jahr": "2024",
+  "db": "research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+  "gold": false
+ },
+ {
+  "fid": "29cd157271973800d117470a16811fe7",
+  "n": 2,
+  "ki": 0,
+  "zitate": 0,
+  "typen": [],
+  "alle_typen": [
+   "(leer)"
+  ],
+  "design": "",
+  "kat": "unklassifiziert",
+  "agg": false,
+  "caps": 0,
+  "chars": 4631,
+  "titel": "The contribution of mate-choice, couple convergence and confounding to",
+  "jahr": "2022",
+  "db": "research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+  "gold": false
+ },
+ {
+  "fid": "ee6c590912e1e6bc904838074093369b",
+  "n": 2,
+  "ki": 0,
+  "zitate": 2,
+  "typen": [
+   "r"
+  ],
+  "alle_typen": [
+   "r"
+  ],
+  "design": "Population-wide register-based cross-sectional study",
+  "kat": "observational",
+  "agg": false,
+  "caps": 1,
+  "chars": 40378,
+  "titel": "Assortative Mating Across the Full Spectrum of Mental Disorders: A Nat",
+  "jahr": "2026",
+  "db": "research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+  "gold": false
+ },
+ {
+  "fid": "15b010d3c376c34f9c59b19b7ea20a92",
+  "n": 2,
+  "ki": 0,
+  "zitate": 1,
+  "typen": [],
+  "alle_typen": [
+   "(leer)",
+   "other"
+  ],
+  "design": "Simulation and summary-level MR testing",
+  "kat": "unklassifiziert",
+  "agg": false,
+  "caps": 0,
+  "chars": 6326,
+  "titel": "Widespread pleiotropy confounds causal relationships between complex t",
+  "jahr": "2017",
+  "db": "research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+  "gold": false
+ },
+ {
+  "fid": "fdd8a7f4f79145830129245cfee13af1",
+  "n": 2,
+  "ki": 2,
+  "zitate": 2,
+  "typen": [
+   "or"
+  ],
+  "alle_typen": [
+   "or"
+  ],
+  "design": "Mendelian Randomization (Empirical Example)",
+  "kat": "unklassifiziert",
+  "agg": false,
+  "caps": 0,
+  "chars": 46843,
+  "titel": "Mendelian randomization with Egger pleiotropy correction and weakly in",
+  "jahr": "2017",
+  "db": "research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+  "gold": false
+ },
+ {
+  "fid": "a164fce961705d25b0b8843122dd0608",
+  "n": 2,
+  "ki": 0,
+  "zitate": 1,
+  "typen": [
+   "r"
+  ],
+  "alle_typen": [
+   "(leer)",
+   "r"
+  ],
+  "design": "Cross-trait LD Score regression",
+  "kat": "unklassifiziert",
+  "agg": false,
+  "caps": 0,
+  "chars": 65219,
+  "titel": "Bulik-Sullivan, B. et al. An atlas of genetic correlations across huma",
+  "jahr": "2015",
+  "db": "research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+  "gold": false
+ },
+ {
+  "fid": "0d4dcc5dda47aa335ef52eb6310576a2",
+  "n": 2,
+  "ki": 0,
+  "zitate": 1,
+  "typen": [
+   "r"
+  ],
+  "alle_typen": [
+   "(leer)",
+   "r"
+  ],
+  "design": "LD score regression",
+  "kat": "unklassifiziert",
+  "agg": false,
+  "caps": 3,
+  "chars": 60040,
+  "titel": "Hagenaars, S. P. et al. Shared genetic aetiology between cognitive fun",
+  "jahr": "",
+  "db": "research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+  "gold": false
+ },
+ {
+  "fid": "98da6a17ae6d2edf51fa270603878626",
+  "n": 2,
+  "ki": 0,
+  "zitate": 2,
+  "typen": [
+   "beta"
+  ],
+  "alle_typen": [
+   "beta"
+  ],
+  "design": "Simulation",
+  "kat": "unklassifiziert",
+  "agg": false,
+  "caps": 0,
+  "chars": 48385,
+  "titel": "Does selective survival before study enrolment attenuate estimated eff",
+  "jahr": "2018",
+  "db": "research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+  "gold": false
+ },
+ {
+  "fid": "08b77bb8c96079ce3f2400fccdff0b43",
+  "n": 2,
+  "ki": 0,
+  "zitate": 2,
+  "typen": [],
+  "alle_typen": [
+   "other"
+  ],
+  "design": "Simulation",
+  "kat": "unklassifiziert",
+  "agg": false,
+  "caps": 0,
+  "chars": 3131,
+  "titel": "A Simulation Approach to Evaluate Pre-Enrollment Survival Bias in Cros",
+  "jahr": "2025",
+  "db": "research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+  "gold": false
+ },
+ {
+  "fid": "da04cffa709965d9994336bbd736ed0f",
+  "n": 2,
+  "ki": 0,
+  "zitate": 1,
+  "typen": [],
+  "alle_typen": [
+   "(leer)",
+   "other"
+  ],
+  "design": "Simulation and empirical analysis of local genetic correlati",
+  "kat": "unklassifiziert",
+  "agg": false,
+  "caps": 0,
+  "chars": 3932,
+  "titel": "Significance filtering induces denominator selection bias in local gen",
+  "jahr": "2026",
+  "db": "research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+  "gold": false
+ },
+ {
+  "fid": "81efb1fd1e9834c06614e71300af1f6a",
+  "n": 2,
+  "ki": 0,
+  "zitate": 2,
+  "typen": [],
+  "alle_typen": [
+   "other"
+  ],
+  "design": "Cohort study profile",
+  "kat": "observational",
+  "agg": false,
+  "caps": 0,
+  "chars": 47738,
+  "titel": "Collection of genetic data at scale for a nationally representative po",
+  "jahr": "2022",
+  "db": "research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+  "gold": false
+ },
+ {
+  "fid": "b23a1554d3c9aebd519237bf3ab13ab8",
+  "n": 2,
+  "ki": 0,
+  "zitate": 2,
+  "typen": [
+   "r"
+  ],
+  "alle_typen": [
+   "r"
+  ],
+  "design": "GWAS/LDSC",
+  "kat": "unklassifiziert",
+  "agg": false,
+  "caps": 0,
+  "chars": 126657,
+  "titel": "Patterns of item nonresponse behaviour to survey questionnaires are sy",
+  "jahr": "2023",
+  "db": "research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+  "gold": false
+ },
+ {
+  "fid": "6ce72a8d7ff95debc466dcfeb64d7d7d",
+  "n": 1,
+  "ki": 0,
+  "zitate": 1,
+  "typen": [],
+  "alle_typen": [
+   "other"
+  ],
+  "design": "Monte Carlo simulation",
+  "kat": "unklassifiziert",
+  "agg": false,
+  "caps": 4,
+  "chars": 51064,
+  "titel": "Use of genetic correlations to examine selection bias",
+  "jahr": "2023",
+  "db": "research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+  "gold": false
+ },
+ {
+  "fid": "f9937de40c6207eadf758b2956ea854c",
+  "n": 2,
+  "ki": 0,
+  "zitate": 0,
+  "typen": [],
+  "alle_typen": [
+   "(leer)"
+  ],
+  "design": "",
+  "kat": "unklassifiziert",
+  "agg": false,
+  "caps": 0,
+  "chars": 3667,
+  "titel": "340. Synaptic density in psychiatric and neurodegenerative disorders: ",
+  "jahr": "2026",
+  "db": "research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+  "gold": false
+ },
+ {
+  "fid": "7b8ec1ed58e6ee5e88602c0e6f6a1252",
+  "n": 2,
+  "ki": 0,
+  "zitate": 0,
+  "typen": [],
+  "alle_typen": [
+   "(leer)"
+  ],
+  "design": "",
+  "kat": "unklassifiziert",
+  "agg": false,
+  "caps": 0,
+  "chars": 91629,
+  "titel": "PET Imaging Unveils Neuroinflammatory Mechanisms in Psychiatric Disord",
+  "jahr": "2025",
+  "db": "research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+  "gold": false
+ },
+ {
+  "fid": "f0028d8f5dbaae281c8403d07a930c18",
+  "n": 2,
+  "ki": 2,
+  "zitate": 2,
+  "typen": [
+   "hr"
+  ],
+  "alle_typen": [
+   "hr"
+  ],
+  "design": "Meta-analysis of cohort studies",
+  "kat": "observational",
+  "agg": true,
+  "caps": 0,
+  "chars": 81292,
+  "titel": "Calvin, C. M. et al. Intelligence in youth and all-cause-mortality: sy",
+  "jahr": "2011",
+  "db": "research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+  "gold": false
+ },
+ {
+  "fid": "a275a9cb858aee4f25bdcf9e8be931c3",
+  "n": 2,
+  "ki": 0,
+  "zitate": 0,
+  "typen": [],
+  "alle_typen": [
+   "(leer)"
+  ],
+  "design": "",
+  "kat": "unklassifiziert",
+  "agg": false,
+  "caps": 0,
+  "chars": 7005,
+  "titel": "Evidence for sexual antagonism and antagonistic pleiotropy in the main",
+  "jahr": "2026",
+  "db": "research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+  "gold": false
+ },
+ {
+  "fid": "ecd202676f54ca1ee2522d903581ef76",
+  "n": 2,
+  "ki": 0,
+  "zitate": 2,
+  "typen": [
+   "r"
+  ],
+  "alle_typen": [
+   "other",
+   "r"
+  ],
+  "design": "GWAS association lookup",
+  "kat": "unklassifiziert",
+  "agg": false,
+  "caps": 0,
+  "chars": 56240,
+  "titel": "Large-scale GWAS reveals genetic architecture of brain white matter mi",
+  "jahr": "2019",
+  "db": "research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+  "gold": false
+ },
+ {
+  "fid": "86cefc0f24c2ae280eae27d66aa8a36f",
+  "n": 2,
+  "ki": 0,
+  "zitate": 2,
+  "typen": [
+   "r"
+  ],
+  "alle_typen": [
+   "r"
+  ],
+  "design": "Genetic correlation analysis",
+  "kat": "unklassifiziert",
+  "agg": false,
+  "caps": 0,
+  "chars": 50503,
+  "titel": "Dissecting Schizophrenia Biology Using Pleiotropy with Cognitive Genom",
+  "jahr": "2024",
+  "db": "research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+  "gold": false
+ },
+ {
+  "fid": "0b60faa9e35b57663efe8f99d7eff299",
+  "n": 2,
+  "ki": 0,
+  "zitate": 2,
+  "typen": [],
+  "alle_typen": [
+   "other"
+  ],
+  "design": "Twin study",
+  "kat": "unklassifiziert",
+  "agg": false,
+  "caps": 0,
+  "chars": 15020,
+  "titel": "Evocative gene–environment correlation in the mother–child relationshi",
+  "jahr": "2013",
+  "db": "research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+  "gold": false
+ },
+ {
+  "fid": "d32dd8a975660c13683e8ec032ce8c77",
+  "n": 2,
+  "ki": 0,
+  "zitate": 1,
+  "typen": [],
+  "alle_typen": [
+   "(leer)",
+   "other"
+  ],
+  "design": "Mendelian randomisation with non-inherited variants (MR-NIV)",
+  "kat": "unklassifiziert",
+  "agg": false,
+  "caps": 0,
+  "chars": 6847,
+  "titel": "Extending the Use of Mendelian Randomisation With Non-Inherited Varian",
+  "jahr": "2026",
+  "db": "research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+  "gold": false
+ },
+ {
+  "fid": "c8133e1208a755722786d870fd8c8bac",
+  "n": 2,
+  "ki": 0,
+  "zitate": 1,
+  "typen": [
+   "r"
+  ],
+  "alle_typen": [
+   "(leer)",
+   "r"
+  ],
+  "design": "Functional Burden analysis (FunBurd)",
+  "kat": "unklassifiziert",
+  "agg": false,
+  "caps": 0,
+  "chars": 73356,
+  "titel": "Determinants of functional burden pleiotropy and gene dosage responses",
+  "jahr": "2026",
+  "db": "research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+  "gold": false
+ },
+ {
+  "fid": "89e72f0e6e6f876bf930b5c77efa7898",
+  "n": 2,
+  "ki": 0,
+  "zitate": 0,
+  "typen": [],
+  "alle_typen": [
+   "(leer)"
+  ],
+  "design": "",
+  "kat": "unklassifiziert",
+  "agg": false,
+  "caps": 0,
+  "chars": 15020,
+  "titel": "The Impact of Population Demography and Selection on the Genetic Archi",
+  "jahr": "2014",
+  "db": "research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+  "gold": false
+ },
+ {
+  "fid": "c7483465a4e2796a4117f8f2629c36c6",
+  "n": 1,
+  "ki": 0,
+  "zitate": 0,
+  "typen": [],
+  "alle_typen": [
+   "(leer)"
+  ],
+  "design": "",
+  "kat": "unklassifiziert",
+  "agg": false,
+  "caps": 1,
+  "chars": 54813,
+  "titel": "Inclusion bias affects common variant discovery and replication in a h",
+  "jahr": "2025",
+  "db": "research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+  "gold": false
+ },
+ {
+  "fid": "7b41b0a388c3e478bc16a182539d65c8",
+  "n": 2,
+  "ki": 2,
+  "zitate": 2,
+  "typen": [
+   "beta"
+  ],
+  "alle_typen": [
+   "beta"
+  ],
+  "design": "Observational cohort (ALSPAC) with GREML-LDMS estimation",
+  "kat": "observational",
+  "agg": false,
+  "caps": 0,
+  "chars": 123282,
+  "titel": "Common and rare genetic variant associations with cognitive performanc",
+  "jahr": "2026",
+  "db": "research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+  "gold": false
+ },
+ {
+  "fid": "a5f1c27a8ccf3a504d5fd1a17599a6a5",
+  "n": 2,
+  "ki": 0,
+  "zitate": 2,
+  "typen": [],
+  "alle_typen": [
+   "other"
+  ],
+  "design": "FDR-corrected cross-trait genetic correlation analyses",
+  "kat": "unklassifiziert",
+  "agg": false,
+  "caps": 0,
+  "chars": 5110,
+  "titel": "Shared genetic and neuroimmune architecture links type 1 diabetes with",
+  "jahr": "2026",
+  "db": "research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+  "gold": false
+ },
+ {
+  "fid": "4bab834034e009b19ea1d0dd21cd8eaa",
+  "n": 2,
+  "ki": 0,
+  "zitate": 0,
+  "typen": [],
+  "alle_typen": [
+   "(leer)"
+  ],
+  "design": "",
+  "kat": "unklassifiziert",
+  "agg": false,
+  "caps": 0,
+  "chars": 3175,
+  "titel": "Relationship between LD Score and Haseman-Elston Regression",
+  "jahr": "2015",
+  "db": "research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+  "gold": false
+ },
+ {
+  "fid": "2599085df22f71a310b3f0816f5bc0fb",
+  "n": 2,
+  "ki": 0,
+  "zitate": 2,
+  "typen": [],
+  "alle_typen": [
+   "other"
+  ],
+  "design": "simulation",
+  "kat": "unklassifiziert",
+  "agg": false,
+  "caps": 0,
+  "chars": 40577,
+  "titel": "Significance testing for small annotations in stratified LD-Score regr",
+  "jahr": "2021",
+  "db": "research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+  "gold": false
+ },
+ {
+  "fid": "7191d05eee13e510efbdde12ec2ab0ce",
+  "n": 2,
+  "ki": 0,
+  "zitate": 2,
+  "typen": [
+   "r"
+  ],
+  "alle_typen": [
+   "r"
+  ],
+  "design": "gene expression analysis",
+  "kat": "unklassifiziert",
+  "agg": false,
+  "caps": 0,
+  "chars": 111713,
+  "titel": "Heritability enrichment of specifically expressed genes identifies dis",
+  "jahr": "2017",
+  "db": "research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+  "gold": false
+ },
+ {
+  "fid": "ac17f5e8ab9af50be03775ddd804f57e",
+  "n": 2,
+  "ki": 0,
+  "zitate": 2,
+  "typen": [
+   "beta"
+  ],
+  "alle_typen": [
+   "beta"
+  ],
+  "design": "Mendelian Randomization",
+  "kat": "unklassifiziert",
+  "agg": false,
+  "caps": 0,
+  "chars": 73046,
+  "titel": "Combining cross-sectional and longitudinal genomic approaches to ident",
+  "jahr": "2025",
+  "db": "research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+  "gold": false
+ },
+ {
+  "fid": "46158f8d63e0d1500400dab86837ceb1",
+  "n": 1,
+  "ki": 0,
+  "zitate": 1,
+  "typen": [],
+  "alle_typen": [
+   "other"
+  ],
+  "design": "Observational (UK Biobank)",
+  "kat": "observational",
+  "agg": false,
+  "caps": 0,
+  "chars": 4860,
+  "titel": "Highly parameterized polygenic scores tend to overfit to population st",
+  "jahr": "2024",
+  "db": "research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+  "gold": false
+ },
+ {
+  "fid": "3737ee60e2f8d054dc864a20cc9cb1f6",
+  "n": 2,
+  "ki": 0,
+  "zitate": 1,
+  "typen": [
+   "r"
+  ],
+  "alle_typen": [
+   "(leer)",
+   "r"
+  ],
+  "design": "GWAS",
+  "kat": "unklassifiziert",
+  "agg": false,
+  "caps": 0,
+  "chars": 7901,
+  "titel": "GWAS of 19,629 individuals identifies novel genetic variants for regio",
+  "jahr": "2019",
+  "db": "research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+  "gold": false
+ },
+ {
+  "fid": "130e9ff845b8c264786f910154c6b14d",
+  "n": 2,
+  "ki": 0,
+  "zitate": 0,
+  "typen": [],
+  "alle_typen": [
+   "(leer)"
+  ],
+  "design": "",
+  "kat": "unklassifiziert",
+  "agg": false,
+  "caps": 0,
+  "chars": 15020,
+  "titel": "Interpretation of Neurodegenerative GWAS Risk Alleles in Microglia and",
+  "jahr": "2024",
+  "db": "research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+  "gold": false
+ },
+ {
+  "fid": "aaeb844d1cfde2357711933a3c578827",
+  "n": 2,
+  "ki": 0,
+  "zitate": 0,
+  "typen": [],
+  "alle_typen": [
+   "(leer)"
+  ],
+  "design": "",
+  "kat": "unklassifiziert",
+  "agg": false,
+  "caps": 0,
+  "chars": 15020,
+  "titel": "eLife Assessment: Comprehensive Evaluation of Clonal Hematopoiesis and",
+  "jahr": "2024",
+  "db": "research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+  "gold": false
+ },
+ {
+  "fid": "5942828b2316d65a4ce4cb2052efa946",
+  "n": 2,
+  "ki": 1,
+  "zitate": 1,
+  "typen": [
+   "beta"
+  ],
+  "alle_typen": [
+   "(leer)",
+   "beta"
+  ],
+  "design": "Two-sample Mendelian randomization",
+  "kat": "unklassifiziert",
+  "agg": false,
+  "caps": 0,
+  "chars": 44811,
+  "titel": "Systemic inflammatory markers in relation to cognitive function and me",
+  "jahr": "2022",
+  "db": "research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+  "gold": false
+ },
+ {
+  "fid": "69e791a36efe06b182dc6f70fe4305ad",
+  "n": 1,
+  "ki": 0,
+  "zitate": 0,
+  "typen": [],
+  "alle_typen": [
+   "(leer)"
+  ],
+  "design": "",
+  "kat": "unklassifiziert",
+  "agg": false,
+  "caps": 2,
+  "chars": 69004,
+  "titel": "Peripheral blood somatic mosaicism and clonal hematopoiesis across anc",
+  "jahr": "2025",
+  "db": "research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+  "gold": false
+ },
+ {
+  "fid": "4e6ac52514dc146b73ea599b8ee5d4cd",
+  "n": 2,
+  "ki": 0,
+  "zitate": 0,
+  "typen": [],
+  "alle_typen": [
+   "(leer)"
+  ],
+  "design": "",
+  "kat": "unklassifiziert",
+  "agg": false,
+  "caps": 0,
+  "chars": 3872,
+  "titel": "Interpreting Polygenic Score Effects in Sibling Analysis",
+  "jahr": "2024",
+  "db": "research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+  "gold": false
+ },
+ {
+  "fid": "cb3ed1ca74f7c0a84df7b6319756cf3e",
+  "n": 2,
+  "ki": 0,
+  "zitate": 2,
+  "typen": [],
+  "alle_typen": [
+   "other"
+  ],
+  "design": "GWAS meta-analysis and simulation",
+  "kat": "unklassifiziert",
+  "agg": true,
+  "caps": 1,
+  "chars": 110701,
+  "titel": "Genetic architectures of brain-related traits are shaped by strong sel",
+  "jahr": "2026",
+  "db": "research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+  "gold": false
+ },
+ {
+  "fid": "1ebada98b112c8934910d51e1bbfa373",
+  "n": 1,
+  "ki": 0,
+  "zitate": 0,
+  "typen": [],
+  "alle_typen": [
+   "(leer)"
+  ],
+  "design": "",
+  "kat": "unklassifiziert",
+  "agg": false,
+  "caps": 0,
+  "chars": 4316,
+  "titel": "Neither nature nor nurture: Using extended pedigree data to understand",
+  "jahr": "2022",
+  "db": "research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+  "gold": false
+ },
+ {
+  "fid": "256ac3d125527e9f9d4d175556cb70bc",
+  "n": 2,
+  "ki": 2,
+  "zitate": 2,
+  "typen": [
+   "r"
+  ],
+  "alle_typen": [
+   "r"
+  ],
+  "design": "Cross-sectional validation study",
+  "kat": "observational",
+  "agg": false,
+  "caps": 0,
+  "chars": 26635,
+  "titel": "Cross-Cultural Adaptation of Mediterranean Diet Adherence Screener (ME",
+  "jahr": "2023",
+  "db": "research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+  "gold": false
+ },
+ {
+  "fid": "203c831dbeb178297006a888608f4f10",
+  "n": 1,
+  "ki": 1,
+  "zitate": 1,
+  "typen": [
+   "hr"
+  ],
+  "alle_typen": [
+   "hr"
+  ],
+  "design": "Prospective cohort studies (meta-analysis)",
+  "kat": "observational",
+  "agg": true,
+  "caps": 0,
+  "chars": 114459,
+  "titel": "Post-Diagnosis Adherence to the Mediterranean Diet and Cancer Recurren",
+  "jahr": "2026",
+  "db": "research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+  "gold": false
+ },
+ {
+  "fid": "0f5c402082adb4fbc5e35ae76d71ea1e",
+  "n": 2,
+  "ki": 0,
+  "zitate": 2,
+  "typen": [],
+  "alle_typen": [
+   "other"
+  ],
+  "design": "Scoping Review (summarizing one observational cohort study)",
+  "kat": "observational",
+  "agg": true,
+  "caps": 0,
+  "chars": 3781,
+  "titel": "Mediterranean Diet Adherence Tools in Post-Treatment Breast Cancer Sur",
+  "jahr": "2026",
+  "db": "research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+  "gold": false
+ },
+ {
+  "fid": "7111ea978757a185d44ea9de90b453c3",
+  "n": 8,
+  "ki": 7,
+  "zitate": 7,
+  "typen": [
+   "or",
+   "rr"
+  ],
+  "alle_typen": [
+   "(leer)",
+   "or",
+   "rr"
+  ],
+  "design": "Prospective multicenter cohort",
+  "kat": "observational",
+  "agg": false,
+  "caps": 0,
+  "chars": 97367,
+  "titel": "Mediterranean diet in preeclampsia prevention: mechanisms of action an",
+  "jahr": "2025",
+  "db": "research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+  "gold": false
+ },
+ {
+  "fid": "c18c44791fe78a4fc44f83f796ddf9d5",
+  "n": 2,
+  "ki": 0,
+  "zitate": 0,
+  "typen": [],
+  "alle_typen": [
+   "(leer)"
+  ],
+  "design": "",
+  "kat": "unklassifiziert",
+  "agg": false,
+  "caps": 0,
+  "chars": 62231,
+  "titel": "Parent-Child Concordance in Mediterranean Diet Adherence and Fast-Food",
+  "jahr": "2026",
+  "db": "research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+  "gold": false
+ },
+ {
+  "fid": "8a449acfa84e896c51fad53629912be7",
+  "n": 2,
+  "ki": 0,
+  "zitate": 2,
+  "typen": [
+   "r"
+  ],
+  "alle_typen": [
+   "r"
+  ],
+  "design": "Validation study",
+  "kat": "unklassifiziert",
+  "agg": false,
+  "caps": 0,
+  "chars": 58752,
+  "titel": "Validation and cultural adaptation of the pregnancy-adapted Mediterran",
+  "jahr": "2026",
+  "db": "research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+  "gold": false
+ },
+ {
+  "fid": "d3ef94a4dc00e33ce7ad2626518f8805",
+  "n": 2,
+  "ki": 2,
+  "zitate": 2,
+  "typen": [
+   "beta"
+  ],
+  "alle_typen": [
+   "beta"
+  ],
+  "design": "Cross-sectional",
+  "kat": "observational",
+  "agg": false,
+  "caps": 0,
+  "chars": 3173,
+  "titel": "Associations and interaction effects of socioeconomic, lifestyle, and ",
+  "jahr": "2026",
+  "db": "research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+  "gold": false
+ },
+ {
+  "fid": "4f4c7daf4b048e54ec855e7c465d7e96",
+  "n": 1,
+  "ki": 1,
+  "zitate": 1,
+  "typen": [
+   "rr"
+  ],
+  "alle_typen": [
+   "rr"
+  ],
+  "design": "Prospective cohort study",
+  "kat": "observational",
+  "agg": false,
+  "caps": 0,
+  "chars": 81212,
+  "titel": "Mediterranean Diet and Physical Exercise for Cardiometabolic Health: A",
+  "jahr": "2026",
+  "db": "research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+  "gold": false
+ },
+ {
+  "fid": "63336733be9e959c6bcaef09746f74b4",
+  "n": 2,
+  "ki": 1,
+  "zitate": 1,
+  "typen": [
+   "hr"
+  ],
+  "alle_typen": [
+   "(leer)",
+   "hr"
+  ],
+  "design": "Cohort study",
+  "kat": "observational",
+  "agg": false,
+  "caps": 0,
+  "chars": 15020,
+  "titel": "Effect of Mediterranean diet adherence on all-cause and cause-specific",
+  "jahr": "2024",
+  "db": "research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+  "gold": false
+ },
+ {
+  "fid": "9c11ffa26e23c67e803dc1a846edecfd",
+  "n": 2,
+  "ki": 0,
+  "zitate": 2,
+  "typen": [
+   "rr"
+  ],
+  "alle_typen": [
+   "rr"
+  ],
+  "design": "observational cohort (cited from Panagiotakos et al. 2007)",
+  "kat": "observational",
+  "agg": false,
+  "caps": 0,
+  "chars": 58272,
+  "titel": "Association between Diet-Quality Scores, Adiposity, Total Cholesterol ",
+  "jahr": "2018",
+  "db": "research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+  "gold": false
+ },
+ {
+  "fid": "86873a9b6a0873dd1acea8a36ad563b2",
+  "n": 2,
+  "ki": 0,
+  "zitate": 2,
+  "typen": [],
+  "alle_typen": [
+   "other"
+  ],
+  "design": "quasi-experimental study",
+  "kat": "quasi_experimental",
+  "agg": false,
+  "caps": 0,
+  "chars": 56536,
+  "titel": "Multidimensional Health Impact of Multicomponent Exercise and Sustaina",
+  "jahr": "2023",
+  "db": "research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+  "gold": false
+ },
+ {
+  "fid": "3729cea6bb95d00855f4a0989806bcf9",
+  "n": 2,
+  "ki": 0,
+  "zitate": 1,
+  "typen": [
+   "rr"
+  ],
+  "alle_typen": [
+   "(leer)",
+   "rr"
+  ],
+  "design": "Randomized controlled trial",
+  "kat": "parallel_rct",
+  "agg": false,
+  "caps": 0,
+  "chars": 15020,
+  "titel": "Review: The emerging role of Mediterranean diets in cardiovascular epi",
+  "jahr": "2004",
+  "db": "research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+  "gold": false
+ },
+ {
+  "fid": "3f775c03334aea1c9aebe4d3f2b2bf32",
+  "n": 2,
+  "ki": 0,
+  "zitate": 0,
+  "typen": [],
+  "alle_typen": [
+   "(leer)"
+  ],
+  "design": "",
+  "kat": "unklassifiziert",
+  "agg": false,
+  "caps": 0,
+  "chars": 15020,
+  "titel": "Mediterranean Diet and Cardiovascular Risk",
+  "jahr": "2012",
+  "db": "research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+  "gold": false
+ },
+ {
+  "fid": "45a4e4d4edf8339fdac0aeb3bca794e1",
+  "n": 2,
+  "ki": 1,
+  "zitate": 2,
+  "typen": [
+   "rr"
+  ],
+  "alle_typen": [
+   "rr"
+  ],
+  "design": "Epidemiologic studies (review)",
+  "kat": "unklassifiziert",
+  "agg": false,
+  "caps": 0,
+  "chars": 105275,
+  "titel": "Health benefits of nut consumption.",
+  "jahr": "2010",
+  "db": "research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+  "gold": false
+ },
+ {
+  "fid": "37cafe8444a2d0edd125109341865251",
+  "n": 2,
+  "ki": 0,
+  "zitate": 1,
+  "typen": [
+   "mean_diff"
+  ],
+  "alle_typen": [
+   "(leer)",
+   "mean_diff"
+  ],
+  "design": "cross-sectional",
+  "kat": "observational",
+  "agg": false,
+  "caps": 0,
+  "chars": 73766,
+  "titel": "A Cross-Sectional Study of Food Insecurity, Mediterranean Diet Adheren",
+  "jahr": "2026",
+  "db": "research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+  "gold": false
+ },
+ {
+  "fid": "d528fef96dba88b01993d297dc266ef6",
+  "n": 2,
+  "ki": 2,
+  "zitate": 2,
+  "typen": [
+   "hr"
+  ],
+  "alle_typen": [
+   "hr"
+  ],
+  "design": "prospective single-center study",
+  "kat": "unklassifiziert",
+  "agg": false,
+  "caps": 0,
+  "chars": 42029,
+  "titel": "Gut‐Derived Serum Lipopolysaccharide is Associated With Enhanced Risk ",
+  "jahr": "2017",
+  "db": "research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+  "gold": false
+ },
+ {
+  "fid": "3613fd0eb405938f9808a0e3d79cf598",
+  "n": 2,
+  "ki": 0,
+  "zitate": 0,
+  "typen": [],
+  "alle_typen": [
+   "(leer)"
+  ],
+  "design": "",
+  "kat": "unklassifiziert",
+  "agg": false,
+  "caps": 0,
+  "chars": 11021,
+  "titel": "Associations of Dietary Patterns and Micronutrients With Major Adverse",
+  "jahr": "2026",
+  "db": "research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+  "gold": false
+ },
+ {
+  "fid": "2b863e3a8ddc91d5723d87e126202dbd",
+  "n": 2,
+  "ki": 0,
+  "zitate": 2,
+  "typen": [
+   "r"
+  ],
+  "alle_typen": [
+   "r"
+  ],
+  "design": "Cross-sectional",
+  "kat": "observational",
+  "agg": false,
+  "caps": 5,
+  "chars": 49188,
+  "titel": "Comparison of five international indices of adherence to the Mediterra",
+  "jahr": "2019",
+  "db": "research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+  "gold": false
+ },
+ {
+  "fid": "17a7475fa6fc45876df3348938030c16",
+  "n": 2,
+  "ki": 2,
+  "zitate": 2,
+  "typen": [
+   "hr"
+  ],
+  "alle_typen": [
+   "hr"
+  ],
+  "design": "prospective cohort",
+  "kat": "observational",
+  "agg": false,
+  "caps": 0,
+  "chars": 52442,
+  "titel": "Sex-differences in Mediterranean diet: a key piece to explain sex-rela",
+  "jahr": "2024",
+  "db": "research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+  "gold": false
+ },
+ {
+  "fid": "8292449530d91db78a174f4bc5819402",
+  "n": 2,
+  "ki": 0,
+  "zitate": 0,
+  "typen": [],
+  "alle_typen": [
+   "(leer)"
+  ],
+  "design": "",
+  "kat": "unklassifiziert",
+  "agg": false,
+  "caps": 0,
+  "chars": 3069,
+  "titel": "Mediterranean Diet Pattern: Potential Impact on the Different Altered ",
+  "jahr": "2024",
+  "db": "research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+  "gold": false
+ },
+ {
+  "fid": "42c00cafbfc8faa437b395919392861a",
+  "n": 2,
+  "ki": 2,
+  "zitate": 2,
+  "typen": [
+   "or"
+  ],
+  "alle_typen": [
+   "or"
+  ],
+  "design": "Cross-sectional",
+  "kat": "observational",
+  "agg": false,
+  "caps": 0,
+  "chars": 45147,
+  "titel": "Interaction between rheumatoid arthritis and mediterranean diet on the",
+  "jahr": "2023",
+  "db": "research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+  "gold": false
+ },
+ {
+  "fid": "89276782ae363c0f8f8c0f98078c0625",
+  "n": 2,
+  "ki": 0,
+  "zitate": 2,
+  "typen": [
+   "mean_diff"
+  ],
+  "alle_typen": [
+   "mean_diff"
+  ],
+  "design": "Randomized controlled trial (baseline data)",
+  "kat": "parallel_rct",
+  "agg": false,
+  "caps": 0,
+  "chars": 8227,
+  "titel": "Intervention design and adherence to Mediterranean diet in the Cardiov",
+  "jahr": "2025",
+  "db": "research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+  "gold": false
+ },
+ {
+  "fid": "1b462e2d62348a1aed9a9dd4328e9f65",
+  "n": 2,
+  "ki": 0,
+  "zitate": 2,
+  "typen": [],
+  "alle_typen": [
+   "other"
+  ],
+  "design": "Randomized Controlled Trial",
+  "kat": "parallel_rct",
+  "agg": false,
+  "caps": 2,
+  "chars": 37289,
+  "titel": "Effects on cardiovascular risk factors of a low- vs high-glycemic inde",
+  "jahr": "2024",
+  "db": "research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+  "gold": false
+ },
+ {
+  "fid": "97d34536957aada693a755cde14c88d9",
+  "n": 2,
+  "ki": 0,
+  "zitate": 0,
+  "typen": [],
+  "alle_typen": [
+   "(leer)"
+  ],
+  "design": "",
+  "kat": "unklassifiziert",
+  "agg": false,
+  "caps": 0,
+  "chars": 54030,
+  "titel": "Mediterranean diet and obesity polygenic risk interaction on adiposity",
+  "jahr": "2025",
+  "db": "research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+  "gold": false
+ },
+ {
+  "fid": "80cd2f2450ebe2c46b64d7b132ba39a7",
+  "n": 2,
+  "ki": 0,
+  "zitate": 1,
+  "typen": [],
+  "alle_typen": [
+   "other"
+  ],
+  "design": "Review",
+  "kat": "unklassifiziert",
+  "agg": false,
+  "caps": 0,
+  "chars": 15020,
+  "titel": "Traditional Mediterranean Diet as a Holistic Diet: A Review of Mediter",
+  "jahr": "2026",
+  "db": "research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+  "gold": false
+ },
+ {
+  "fid": "61f894f10246fffb177057f0839727e7",
+  "n": 2,
+  "ki": 1,
+  "zitate": 1,
+  "typen": [
+   "rr"
+  ],
+  "alle_typen": [
+   "other",
+   "rr"
+  ],
+  "design": "Cohort studies",
+  "kat": "observational",
+  "agg": false,
+  "caps": 0,
+  "chars": 184379,
+  "titel": "Mediterranean Diet, Polyphenols, and Neuroprotection: Mechanistic Insi",
+  "jahr": "2025",
+  "db": "research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+  "gold": false
+ },
+ {
+  "fid": "6166a774def921c07db671ad7205e4d7",
+  "n": 2,
+  "ki": 0,
+  "zitate": 1,
+  "typen": [],
+  "alle_typen": [
+   "other"
+  ],
+  "design": "RCT",
+  "kat": "unklassifiziert",
+  "agg": false,
+  "caps": 0,
+  "chars": 71612,
+  "titel": "Targeting the Gut-Kidney-Heart Axis in Chronic Kidney Disease: The Med",
+  "jahr": "2026",
+  "db": "research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+  "gold": false
+ },
+ {
+  "fid": "b3536698e009fee4dfc2689dbd37ef05",
+  "n": 2,
+  "ki": 0,
+  "zitate": 2,
+  "typen": [],
+  "alle_typen": [
+   "other"
+  ],
+  "design": "Cumulative meta-analysis of prospective studies",
+  "kat": "unklassifiziert",
+  "agg": true,
+  "caps": 0,
+  "chars": 58069,
+  "titel": "Transferability of the Mediterranean Diet to Non-Mediterranean Countri",
+  "jahr": "2017",
+  "db": "research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+  "gold": false
+ },
+ {
+  "fid": "33331e0ff4b385138e1d120dc96d2507",
+  "n": 2,
+  "ki": 0,
+  "zitate": 2,
+  "typen": [
+   "beta"
+  ],
+  "alle_typen": [
+   "beta"
+  ],
+  "design": "Cross-sectional analysis of a prospective cohort",
+  "kat": "observational",
+  "agg": false,
+  "caps": 0,
+  "chars": 209579,
+  "titel": "Mediterranean diet adherence and microvascular function assessed by la",
+  "jahr": "2026",
+  "db": "research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+  "gold": false
+ },
+ {
+  "fid": "b4b4a5474c461a8dd508f69c434bbcdd",
+  "n": 2,
+  "ki": 1,
+  "zitate": 1,
+  "typen": [
+   "rr"
+  ],
+  "alle_typen": [
+   "(leer)",
+   "rr"
+  ],
+  "design": "Meta-analysis of cohort studies",
+  "kat": "observational",
+  "agg": true,
+  "caps": 0,
+  "chars": 49280,
+  "titel": "Dietary Fiber, Atherosclerosis, and Cardiovascular Disease",
+  "jahr": "2019",
+  "db": "research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+  "gold": false
+ },
+ {
+  "fid": "a2cab7b2c8893cbe57a0b6e7e05fcc0e",
+  "n": 2,
+  "ki": 0,
+  "zitate": 2,
+  "typen": [],
+  "alle_typen": [
+   "other"
+  ],
+  "design": "Meta-analysis of cohort studies",
+  "kat": "observational",
+  "agg": true,
+  "caps": 0,
+  "chars": 59878,
+  "titel": "Monounsaturated Fatty Acids and Risk of Cardiovascular Disease: Synops",
+  "jahr": "2012",
+  "db": "research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+  "gold": false
+ },
+ {
+  "fid": "e0591514664f83fab1401cd845497fc3",
+  "n": 2,
+  "ki": 0,
+  "zitate": 1,
+  "typen": [],
+  "alle_typen": [
+   "(leer)",
+   "other"
+  ],
+  "design": "Randomized controlled trial (PREDIMED)",
+  "kat": "parallel_rct",
+  "agg": false,
+  "caps": 0,
+  "chars": 76819,
+  "titel": "Monounsaturated Fatty Acids in Cardiovascular Disease: Intake, Individ",
+  "jahr": "2025",
+  "db": "research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+  "gold": false
+ },
+ {
+  "fid": "4c3c6c4dc74ef9bc61e61f10df8b698f",
+  "n": 2,
+  "ki": 0,
+  "zitate": 0,
+  "typen": [],
+  "alle_typen": [
+   "(leer)"
+  ],
+  "design": "",
+  "kat": "unklassifiziert",
+  "agg": false,
+  "caps": 0,
+  "chars": 64890,
+  "titel": "The Impact of the Alternate Mediterranean Diet (aMED) on the Preventio",
+  "jahr": "2025",
+  "db": "research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+  "gold": false
+ },
+ {
+  "fid": "e49730cf00e507e54ed1d1ad7d27a364",
+  "n": 2,
+  "ki": 2,
+  "zitate": 2,
+  "typen": [
+   "beta"
+  ],
+  "alle_typen": [
+   "beta"
+  ],
+  "design": "Cross-sectional",
+  "kat": "observational",
+  "agg": false,
+  "caps": 0,
+  "chars": 4718,
+  "titel": "Mediterranean diet and obesity polygenic risk interaction on adiposity",
+  "jahr": "2025",
+  "db": "research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+  "gold": false
+ },
+ {
+  "fid": "299fb8eca0554df1121806fc0d8e47cd",
+  "n": 2,
+  "ki": 0,
+  "zitate": 0,
+  "typen": [],
+  "alle_typen": [
+   "(leer)"
+  ],
+  "design": "",
+  "kat": "unklassifiziert",
+  "agg": false,
+  "caps": 0,
+  "chars": 6835,
+  "titel": "Mediterranean Diet in Older Adults: Cardiovascular Outcomes and Mortal",
+  "jahr": "2024",
+  "db": "research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+  "gold": false
+ },
+ {
+  "fid": "a585225562d5887886ab92f75e379628",
+  "n": 1,
+  "ki": 0,
+  "zitate": 0,
+  "typen": [],
+  "alle_typen": [
+   "(leer)"
+  ],
+  "design": "",
+  "kat": "unklassifiziert",
+  "agg": false,
+  "caps": 0,
+  "chars": 55111,
+  "titel": "Ancestry Specific Polygenic Risk Score, Dietary Patterns, Physical Act",
+  "jahr": "2026",
+  "db": "research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+  "gold": false
+ },
+ {
+  "fid": "7fd885bb56b4f80110058fce7f2cd590",
+  "n": 2,
+  "ki": 0,
+  "zitate": 1,
+  "typen": [],
+  "alle_typen": [
+   "other"
+  ],
+  "design": "Meta-analysis",
+  "kat": "unklassifiziert",
+  "agg": true,
+  "caps": 0,
+  "chars": 91498,
+  "titel": "The role of the Mediterranean diet in reducing the risk of cognitive i",
+  "jahr": "2025",
+  "db": "research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+  "gold": false
+ },
+ {
+  "fid": "71c86b675bdc30a57ac17ac779abdce5",
+  "n": 2,
+  "ki": 2,
+  "zitate": 2,
+  "typen": [
+   "beta"
+  ],
+  "alle_typen": [
+   "beta"
+  ],
+  "design": "Longitudinal analysis within a randomized controlled trial (",
+  "kat": "parallel_rct",
+  "agg": false,
+  "caps": 0,
+  "chars": 69105,
+  "titel": "Adherence to the Mediterranean diet to prevent or delay hepatic steato",
+  "jahr": "2025",
+  "db": "research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+  "gold": false
+ },
+ {
+  "fid": "a542d96b6f3c5a068fcd55b6655eb139",
+  "n": 2,
+  "ki": 2,
+  "zitate": 2,
+  "typen": [
+   "or"
+  ],
+  "alle_typen": [
+   "or"
+  ],
+  "design": "prospective cohort",
+  "kat": "observational",
+  "agg": false,
+  "caps": 0,
+  "chars": 55984,
+  "titel": "Improving cardiovascular risk stratification: the role of abdominal ob",
+  "jahr": "2025",
+  "db": "research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+  "gold": false
+ },
+ {
+  "fid": "5ddb805e444ba9bcfbc68dd4671e6546",
+  "n": 2,
+  "ki": 1,
+  "zitate": 1,
+  "typen": [
+   "rr"
+  ],
+  "alle_typen": [
+   "other",
+   "rr"
+  ],
+  "design": "Cohort study",
+  "kat": "observational",
+  "agg": false,
+  "caps": 0,
+  "chars": 81289,
+  "titel": "Improved prediction and risk stratification of major adverse cardiovas",
+  "jahr": "2025",
+  "db": "research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+  "gold": false
+ },
+ {
+  "fid": "349aabdf6e0ab58918718f9d74398bc9",
+  "n": 2,
+  "ki": 0,
+  "zitate": 2,
+  "typen": [
+   "r"
+  ],
+  "alle_typen": [
+   "r"
+  ],
+  "design": "Validation study",
+  "kat": "unklassifiziert",
+  "agg": false,
+  "caps": 2,
+  "chars": 24680,
+  "titel": "Validation of a Mediterranean Diet Scoring System for Intervention Bas",
+  "jahr": "2021",
+  "db": "research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+  "gold": false
+ },
+ {
+  "fid": "2675c25aabf33995fb6c2d3e72221923",
+  "n": 2,
+  "ki": 2,
+  "zitate": 2,
+  "typen": [
+   "r"
+  ],
+  "alle_typen": [
+   "r"
+  ],
+  "design": "cross-sectional",
+  "kat": "observational",
+  "agg": false,
+  "caps": 6,
+  "chars": 55267,
+  "titel": "Exploring the validity and internal consistency of the 12-point Medite",
+  "jahr": "2026",
+  "db": "research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+  "gold": false
+ },
+ {
+  "fid": "1a21e3d879b42d2814e4122e5a7214ea",
+  "n": 2,
+  "ki": 2,
+  "zitate": 2,
+  "typen": [
+   "or"
+  ],
+  "alle_typen": [
+   "or"
+  ],
+  "design": "Retrospective cross-sectional study",
+  "kat": "observational",
+  "agg": false,
+  "caps": 0,
+  "chars": 67097,
+  "titel": "Retrospective analysis of dietary risk factors and cardiovascular outc",
+  "jahr": "2026",
+  "db": "research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+  "gold": false
+ },
+ {
+  "fid": "e2860cb58bd42da812a01e1a6478fe37",
+  "n": 2,
+  "ki": 2,
+  "zitate": 2,
+  "typen": [
+   "or"
+  ],
+  "alle_typen": [
+   "or"
+  ],
+  "design": "Cross-sectional observational study",
+  "kat": "observational",
+  "agg": false,
+  "caps": 0,
+  "chars": 57238,
+  "titel": "Dietary Fats and Cardio-Metabolic Outcomes in a Cohort of Italian Adul",
+  "jahr": "2022",
+  "db": "research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+  "gold": false
+ }
+]
