@@ -1,0 +1,156 @@
+"""Abgleich Goldstandard gegen Pipeline-Extraktion.
+
+Verglichen werden Effektzeilen je Dokument. Der Goldstandard liefert
+outcome_normalized, comparison_verbatim, effect_type und effect; die
+Pipeline liefert outcome, comparison, effect_type und effect.
+
+Matching ist eine nachvollziehbare Heuristik, kein Modell:
+- Aehnlichkeit der Outcomes (Token-Jaccard ohne Stoppwoerter),
+- Aehnlichkeit des Vergleichs, wenn beide Seiten ihn nennen,
+- gleicher Effekttyp,
+- Effekt innerhalb einer relativen Toleranz.
+Paare werden absteigend nach Aehnlichkeit greedy zugewiesen, jede Zeile
+hoechstens einmal. Die Schwelle ist konfigurierbar und wird im Bericht
+ausgewiesen.
+
+Wichtig: Ein Dokument ohne Zeilen und ohne no_effect_reason ist *nicht
+annotiert*, nicht "keine Effekte". Solche Dokumente werden ausgelassen,
+sonst waere die Precision systematisch falsch.
+"""
+
+from __future__ import annotations
+
+import re
+from collections import defaultdict
+
+STOPP = frozenset("""
+the a an of and or in on for with to vs versus by at from after before during
+among between patients participants patient participant group groups effect
+effects risk odds hazard ratio mean difference change changes compared
+comparison intervention control controls study studies results outcome
+outcomes significant significantly
+""".split())
+
+
+def token(text) -> set:
+    woerter = re.findall(r"[a-z0-9]+", str(text or "").lower())
+    return {w for w in woerter if w not in STOPP and len(w) > 1}
+
+
+def jaccard(a: set, b: set) -> float:
+    if not a or not b:
+        return 0.0
+    return len(a & b) / len(a | b)
+
+
+def _zahl(effekt: dict, feld: str):
+    wert = effekt.get(feld)
+    return wert if isinstance(wert, (int, float)) and not isinstance(wert, bool) else None
+
+
+def _nah(x, y, toleranz: float) -> bool:
+    if x is None or y is None:
+        return False
+    return abs(x - y) <= max(1e-9, toleranz * max(abs(x), abs(y)))
+
+
+def aehnlichkeit(gold: dict, pipe: dict, toleranz: float = 0.01) -> float:
+    s_out = jaccard(token(gold.get("outcome_normalized") or gold.get("outcome")),
+                    token(pipe.get("outcome")))
+    g_cmp = token(gold.get("comparison_verbatim"))
+    p_cmp = token(pipe.get("comparison"))
+    s_cmp = jaccard(g_cmp, p_cmp) if g_cmp and p_cmp else None
+    s_typ = 1.0 if (gold.get("effect_type")
+                    and gold.get("effect_type") == pipe.get("effect_type")) else 0.0
+    s_wert = 1.0 if _nah(_zahl(gold, "effect"), _zahl(pipe, "effect"), toleranz) else 0.0
+    if s_cmp is None:
+        return 0.65 * s_out + 0.2 * s_typ + 0.15 * s_wert
+    return 0.5 * s_out + 0.25 * s_cmp + 0.15 * s_typ + 0.1 * s_wert
+
+
+def matche(gold: list, pipe: list, schwelle: float = 0.55,
+           toleranz: float = 0.01):
+    """Greedy-Paarung; Rueckgabe (paare, ungenutzt_gold, ungenutzt_pipeline)."""
+    kandidaten = []
+    for i, g in enumerate(gold):
+        for j, p in enumerate(pipe):
+            score = aehnlichkeit(g, p, toleranz)
+            if score >= schwelle:
+                kandidaten.append((score, i, j))
+    kandidaten.sort(reverse=True)
+
+    gi, pj = set(), set()
+    paare = []
+    for score, i, j in kandidaten:
+        if i in gi or j in pj:
+            continue
+        gi.add(i)
+        pj.add(j)
+        paare.append((score, gold[i], pipe[j]))
+    return (paare,
+            [g for i, g in enumerate(gold) if i not in gi],
+            [p for j, p in enumerate(pipe) if j not in pj])
+
+
+def _leer() -> dict:
+    return {"tp": 0, "fp": 0, "fn": 0, "typ_ok": 0, "wert_ok": 0,
+            "pipeline_zeilen": 0, "n_annotiert": 0, "n_offen": 0}
+
+
+def _abschluss(d: dict) -> dict:
+    tp, fp, fn = d["tp"], d["fp"], d["fn"]
+    d["precision"] = (tp / (tp + fp)) if (tp + fp) else None
+    d["recall"] = (tp / (tp + fn)) if (tp + fn) else None
+    d["typquote"] = (d["typ_ok"] / tp) if tp else None
+    d["wertquote"] = (d["wert_ok"] / tp) if tp else None
+    return d
+
+
+def werte(gold_docs: dict, pipe_docs: dict, docs: list, annotiert: set,
+          schwelle: float = 0.55, toleranz: float = 0.01) -> dict:
+    gesamt = _leer()
+    schichten = defaultdict(_leer)
+    details = []
+
+    for doc in docs:
+        fid = doc["document_id"]
+        schicht = doc["stratum"]
+        p = pipe_docs.get(fid, [])
+        gesamt["pipeline_zeilen"] += len(p)
+        schichten[schicht]["pipeline_zeilen"] += len(p)
+
+        if fid not in annotiert:
+            gesamt["n_offen"] += 1
+            schichten[schicht]["n_offen"] += 1
+            details.append({"document_id": fid, "stratum": schicht,
+                            "status": "offen", "gold": 0, "pipeline": len(p)})
+            continue
+
+        g = gold_docs.get(fid, [])
+        paare, rest_g, rest_p = matche(g, p, schwelle, toleranz)
+        zahlen = {"tp": len(paare), "fp": len(rest_p), "fn": len(rest_g),
+                  "typ_ok": sum(1 for _, ga, pa in paare
+                                if ga.get("effect_type") == pa.get("effect_type")),
+                  "wert_ok": sum(1 for _, ga, pa in paare
+                                 if _nah(_zahl(ga, "effect"), _zahl(pa, "effect"), toleranz))}
+        for ziel in (gesamt, schichten[schicht]):
+            for k, v in zahlen.items():
+                ziel[k] += v
+        for ziel in (gesamt, schichten[schicht]):
+            ziel["n_annotiert"] += 1
+        details.append({"document_id": fid, "stratum": schicht, "status": "annotiert",
+                        "gold": len(g), "pipeline": len(p), **zahlen,
+                        "paare": [{"score": round(s, 3),
+                                   "gold_outcome": ga.get("outcome_normalized"),
+                                   "pipe_outcome": pa.get("outcome"),
+                                   "gold_effect": _zahl(ga, "effect"),
+                                   "pipe_effect": _zahl(pa, "effect"),
+                                   "typ_gleich": ga.get("effect_type") == pa.get("effect_type")}
+                                  for s, ga, pa in paare],
+                        "nur_gold": [x.get("outcome_normalized") for x in rest_g],
+                        "nur_pipeline": [x.get("outcome") for x in rest_p]})
+
+    return {"stufen": {"schwelle": schwelle, "toleranz": toleranz},
+            "gesamt": _abschluss(gesamt),
+            "schichten": {k: _abschluss(v) for k, v in sorted(schichten.items())},
+            "dokumente": details}

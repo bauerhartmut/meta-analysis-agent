@@ -1,0 +1,347 @@
+{
+ "stufen": {
+  "schwelle": 0.55,
+  "toleranz": 0.01
+ },
+ "gesamt": {
+  "tp": 1,
+  "fp": 0,
+  "fn": 0,
+  "typ_ok": 1,
+  "wert_ok": 1,
+  "pipeline_zeilen": 37,
+  "n_annotiert": 1,
+  "n_offen": 29,
+  "precision": 1.0,
+  "recall": 1.0,
+  "typquote": 1.0,
+  "wertquote": 1.0
+ },
+ "schichten": {
+  "aggregate": {
+   "tp": 1,
+   "fp": 0,
+   "fn": 0,
+   "typ_ok": 1,
+   "wert_ok": 1,
+   "pipeline_zeilen": 7,
+   "n_annotiert": 1,
+   "n_offen": 3,
+   "precision": 1.0,
+   "recall": 1.0,
+   "typquote": 1.0,
+   "wertquote": 1.0
+  },
+  "cohort": {
+   "tp": 0,
+   "fp": 0,
+   "fn": 0,
+   "typ_ok": 0,
+   "wert_ok": 0,
+   "pipeline_zeilen": 17,
+   "n_annotiert": 0,
+   "n_offen": 7,
+   "precision": null,
+   "recall": null,
+   "typquote": null,
+   "wertquote": null
+  },
+  "cross_sectional": {
+   "tp": 0,
+   "fp": 0,
+   "fn": 0,
+   "typ_ok": 0,
+   "wert_ok": 0,
+   "pipeline_zeilen": 5,
+   "n_annotiert": 0,
+   "n_offen": 5,
+   "precision": null,
+   "recall": null,
+   "typquote": null,
+   "wertquote": null
+  },
+  "crossover": {
+   "tp": 0,
+   "fp": 0,
+   "fn": 0,
+   "typ_ok": 0,
+   "wert_ok": 0,
+   "pipeline_zeilen": 0,
+   "n_annotiert": 0,
+   "n_offen": 3,
+   "precision": null,
+   "recall": null,
+   "typquote": null,
+   "wertquote": null
+  },
+  "negative_control": {
+   "tp": 0,
+   "fp": 0,
+   "fn": 0,
+   "typ_ok": 0,
+   "wert_ok": 0,
+   "pipeline_zeilen": 0,
+   "n_annotiert": 0,
+   "n_offen": 5,
+   "precision": null,
+   "recall": null,
+   "typquote": null,
+   "wertquote": null
+  },
+  "rct": {
+   "tp": 0,
+   "fp": 0,
+   "fn": 0,
+   "typ_ok": 0,
+   "wert_ok": 0,
+   "pipeline_zeilen": 8,
+   "n_annotiert": 0,
+   "n_offen": 6,
+   "precision": null,
+   "recall": null,
+   "typquote": null,
+   "wertquote": null
+  }
+ },
+ "dokumente": [
+  {
+   "document_id": "7111ea978757a185d44ea9de90b453c3",
+   "stratum": "cohort",
+   "status": "offen",
+   "gold": 0,
+   "pipeline": 7
+  },
+  {
+   "document_id": "3134fdc8c38f475075a70ca32dc4a3d9",
+   "stratum": "cohort",
+   "status": "offen",
+   "gold": 0,
+   "pipeline": 2
+  },
+  {
+   "document_id": "d0bec407a2a0dd19c0b67aa43f9e1dfb",
+   "stratum": "cohort",
+   "status": "offen",
+   "gold": 0,
+   "pipeline": 2
+  },
+  {
+   "document_id": "bb9218735fec8fc7f3b6aebbff430aba",
+   "stratum": "rct",
+   "status": "offen",
+   "gold": 0,
+   "pipeline": 3
+  },
+  {
+   "document_id": "fb484d488b45d21bbdf407cba4b074d5",
+   "stratum": "rct",
+   "status": "offen",
+   "gold": 0,
+   "pipeline": 2
+  },
+  {
+   "document_id": "3bbb142c717a970694bed1d393736b06",
+   "stratum": "crossover",
+   "status": "offen",
+   "gold": 0,
+   "pipeline": 0
+  },
+  {
+   "document_id": "87079ba88ae1f64f00c5fe32725248a6",
+   "stratum": "crossover",
+   "status": "offen",
+   "gold": 0,
+   "pipeline": 0
+  },
+  {
+   "document_id": "2c7ab4d1244754e3966780f4bccbfa8c",
+   "stratum": "cross_sectional",
+   "status": "offen",
+   "gold": 0,
+   "pipeline": 2
+  },
+  {
+   "document_id": "09843d40d3cc2c9ca039d6d1b45ac656",
+   "stratum": "cohort",
+   "status": "offen",
+   "gold": 0,
+   "pipeline": 2
+  },
+  {
+   "document_id": "334f5f679802315eeec71399149b51c3",
+   "stratum": "aggregate",
+   "status": "offen",
+   "gold": 0,
+   "pipeline": 2
+  },
+  {
+   "document_id": "203c831dbeb178297006a888608f4f10",
+   "stratum": "aggregate",
+   "status": "annotiert",
+   "gold": 1,
+   "pipeline": 1,
+   "tp": 1,
+   "fp": 0,
+   "fn": 0,
+   "typ_ok": 1,
+   "wert_ok": 1,
+   "paare": [
+    {
+     "score": 0.906,
+     "gold_outcome": "Cancer recurrence or cancer-specific mortality",
+     "pipe_outcome": "Cancer recurrence or cancer-specific mortality",
+     "gold_effect": 0.83,
+     "pipe_effect": 0.83,
+     "typ_gleich": true
+    }
+   ],
+   "nur_gold": [],
+   "nur_pipeline": []
+  },
+  {
+   "document_id": "2675c25aabf33995fb6c2d3e72221923",
+   "stratum": "cross_sectional",
+   "status": "offen",
+   "gold": 0,
+   "pipeline": 1
+  },
+  {
+   "document_id": "71c86b675bdc30a57ac17ac779abdce5",
+   "stratum": "rct",
+   "status": "offen",
+   "gold": 0,
+   "pipeline": 0
+  },
+  {
+   "document_id": "cf9d739f5090aeda8006074fce2f0b44",
+   "stratum": "rct",
+   "status": "offen",
+   "gold": 0,
+   "pipeline": 1
+  },
+  {
+   "document_id": "b3c35c1d63f972086d2e322e693c1a03",
+   "stratum": "rct",
+   "status": "offen",
+   "gold": 0,
+   "pipeline": 0
+  },
+  {
+   "document_id": "b5e492009e4ca350f512d5144fe8bf92",
+   "stratum": "rct",
+   "status": "offen",
+   "gold": 0,
+   "pipeline": 2
+  },
+  {
+   "document_id": "ca2c52d13aaec47ebbeccdedb3ee1d8e",
+   "stratum": "crossover",
+   "status": "offen",
+   "gold": 0,
+   "pipeline": 0
+  },
+  {
+   "document_id": "3790c91f96877eb6e260b4d7e0c7e7ee",
+   "stratum": "cohort",
+   "status": "offen",
+   "gold": 0,
+   "pipeline": 2
+  },
+  {
+   "document_id": "7df874ca5386e7db9350901562d9408e",
+   "stratum": "cohort",
+   "status": "offen",
+   "gold": 0,
+   "pipeline": 1
+  },
+  {
+   "document_id": "17c7628ed0e8f01d4ec063e2b730dc36",
+   "stratum": "cohort",
+   "status": "offen",
+   "gold": 0,
+   "pipeline": 1
+  },
+  {
+   "document_id": "7ca468285bd24135c1a9bf48f6f5f202",
+   "stratum": "cross_sectional",
+   "status": "offen",
+   "gold": 0,
+   "pipeline": 0
+  },
+  {
+   "document_id": "1faf4b78f05cd156029ee647c2e14c51",
+   "stratum": "cross_sectional",
+   "status": "offen",
+   "gold": 0,
+   "pipeline": 2
+  },
+  {
+   "document_id": "37cafe8444a2d0edd125109341865251",
+   "stratum": "cross_sectional",
+   "status": "offen",
+   "gold": 0,
+   "pipeline": 0
+  },
+  {
+   "document_id": "5cbf039f22f1bfe9f5902cf3f626852f",
+   "stratum": "aggregate",
+   "status": "offen",
+   "gold": 0,
+   "pipeline": 2
+  },
+  {
+   "document_id": "cfc6567ca3cb6eec8c47a64a1674a849",
+   "stratum": "aggregate",
+   "status": "offen",
+   "gold": 0,
+   "pipeline": 2
+  },
+  {
+   "document_id": "9cac5e48f3873753223db0c3b5f2b501",
+   "stratum": "negative_control",
+   "status": "offen",
+   "gold": 0,
+   "pipeline": 0
+  },
+  {
+   "document_id": "83966faed7ce0817920e6bf366efc8bb",
+   "stratum": "negative_control",
+   "status": "offen",
+   "gold": 0,
+   "pipeline": 0
+  },
+  {
+   "document_id": "0843e61250179bd14f8d0a45fc678e5d",
+   "stratum": "negative_control",
+   "status": "offen",
+   "gold": 0,
+   "pipeline": 0
+  },
+  {
+   "document_id": "6e935d39b012f2a76075a3a7964879b1",
+   "stratum": "negative_control",
+   "status": "offen",
+   "gold": 0,
+   "pipeline": 0
+  },
+  {
+   "document_id": "af1bb4ac0c54f9ed49d13393b37f4ffd",
+   "stratum": "negative_control",
+   "status": "offen",
+   "gold": 0,
+   "pipeline": 0
+  }
+ ],
+ "gold_datei": "data/golden_effects/example_annotation.json",
+ "datenbanken": [
+  "research-does-acute-caffeine-versus-placebo-affec-972eac.db",
+  "research-does-caffeine-intake-affect-short-term-m-783a51.db",
+  "research-does-melatonin-improve-sleep-onset-laten-382747.db",
+  "research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+  "research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+  "research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+  "harness_local.db"
+ ],
+ "nur_akzeptiert": false,
+ "ohne_db": []
+}
