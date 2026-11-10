@@ -39,13 +39,7 @@ verwenden; keine DB-, Modell- oder Fremdausgaben.
 | Zeile | Auszug |
 |---|---|
 | 49 | Background: Cancer survivors face heightened risks of recurrence and persistent cancer-related fatigue (CRF), both of which impair quality of life. The Mediterranean Diet (MD), characterized by its antioxidant and anti-… |
-| 213 | Outcomes were extracted as Hazard Ratios (HRs), Risk Ratios (RRs), and Odds Ratios (ORs) for dichotomous variables, or as mean differences for continuous variables. Effect estimates, 95% confidence intervals (CIs), and … |
-| 237 | We extracted data on two primary outcomes: cancer recurrence and cancer-related fatigue (CRF). For recurrence, hazard ratios (HRs) and 95% confidence intervals (CIs) were collected from each cohort study, prioritizing t… |
-| 255 | Effect sizes for cancer recurrence and fatigue were expressed as Hazard Ratios (HRs) where available. When HRs were not reported, Risk Ratios (RRs), Odds Ratios (ORs), or mean differences (MDs) were used, depending on t… |
 | 259 | We conducted meta-analyses using random-effects models to account for between-study heterogeneity. Hazard ratios (HRs) for cancer recurrence and mean differences (MDs) for cancer-related fatigue (CRF) were pooled separa… |
-| 285 | Fatigue outcomes assessed using different validated scales were standardized by calculating the standardized mean difference (SMD) to facilitate meta-analysis. If scales were not compatible or could not be reliably conv… |
-| 309 | The outcomes from the included studies were expressed as mean differences with accompanying 95% confidence intervals (CIs). For the purpose of meta-analysis, a random-effects model was applied using the DerSimonian and … |
-| 313 | The primary outcome of the meta-analysis was expressed as a Hazard Ratio (HR) or other effect measure derived from random-effects modeling, depending on how each included study reported its results. Alongside quantitati… |
 | 323 | Given this clinical and methodological heterogeneity, the meta-analysis was conducted using a random-effects model, which is considered more appropriate when study populations, interventions, or designs differ [ 49 ]. A… |
 | 373 | Figure 2 presents the forest plot of mean differences in cancer-related fatigue scores across two randomized controlled trials (RCTs), with one primary fatigue outcome included per study to maintain independence of obse… |
 | 375 | Forest plot of mean differences in fatigue scores between Mediterranean Diet-aligned interventions and control groups across two randomized controlled trials (Zick et al., 2017 [ 50 ]; Baguley et al., 2021 [ 51 ]). One … |
@@ -62,6 +56,14 @@ verwenden; keine DB-, Modell- oder Fremdausgaben.
 | 619 | Importantly, all recurrence-related findings were derived from observational cohort studies. Therefore, these associations should not be interpreted as causal, and residual confounding cannot be excluded. In the present… |
 | 649 | Fatigue outcomes were assessed using validated instruments, but differences in measurement scales across studies may limit direct comparability. Standardized mean differences were therefore interpreted cautiously. The l… |
 | 651 | For clinical interpretation, minimal clinically important differences (MCIDs) should be considered when evaluating fatigue outcomes. For example, a change of approximately 3–4 points on the Functional Assessment of Chro… |
+| 879 | HR = 0.83 (0.70–0.99) |
+| 885 | MD = 0.29 (−0.58 to 1.16) |
+| 213 | Outcomes were extracted as Hazard Ratios (HRs), Risk Ratios (RRs), and Odds Ratios (ORs) for dichotomous variables, or as mean differences for continuous variables. Effect estimates, 95% confidence intervals (CIs), and … |
+| 237 | We extracted data on two primary outcomes: cancer recurrence and cancer-related fatigue (CRF). For recurrence, hazard ratios (HRs) and 95% confidence intervals (CIs) were collected from each cohort study, prioritizing t… |
+| 255 | Effect sizes for cancer recurrence and fatigue were expressed as Hazard Ratios (HRs) where available. When HRs were not reported, Risk Ratios (RRs), Odds Ratios (ORs), or mean differences (MDs) were used, depending on t… |
+| 285 | Fatigue outcomes assessed using different validated scales were standardized by calculating the standardized mean difference (SMD) to facilitate meta-analysis. If scales were not compatible or could not be reliably conv… |
+| 309 | The outcomes from the included studies were expressed as mean differences with accompanying 95% confidence intervals (CIs). For the purpose of meta-analysis, a random-effects model was applied using the DerSimonian and … |
+| 313 | The primary outcome of the meta-analysis was expressed as a Hazard Ratio (HR) or other effect measure derived from random-effects modeling, depending on how each included study reported its results. Alongside quantitati… |
 | 771 | Hazard ratio |
 
 Die Auszüge sind **Fundstellen, keine Annotation**. Werte nicht

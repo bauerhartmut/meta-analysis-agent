@@ -7,8 +7,81 @@
    "stratum": "cohort",
    "design_category": "observational",
    "zeichen": 99296,
-   "tabellen": [],
+   "tabellen": [
+    {
+     "tabelle": "Table 1",
+     "zeile": 607,
+     "auszug": "hypertensive disorders of pregnancy (Table 1)."
+    },
+    {
+     "tabelle": "Table 1",
+     "zeile": 629,
+     "auszug": "TABLE 1 The included studies of the review and their key characteristics."
+    },
+    {
+     "tabelle": "Table 1",
+     "zeile": 821,
+     "auszug": "TABLE 1 (Continued)"
+    },
+    {
+     "tabelle": "Table 1",
+     "zeile": 1038,
+     "auszug": "TABLE 1 (Continued)"
+    }
+   ],
    "effektstellen": [
+    {
+     "zeile": 477,
+     "auszug": "high adherence (OR 3.8; 95% CI 1.3–11.4, p = 0.019) ( 43)."
+    },
+    {
+     "zeile": 491,
+     "auszug": "vs. lowest quartile: 0.31 [95% CI: 0.11, 0.87], P-trend = 0.03),"
+    },
+    {
+     "zeile": 501,
+     "auszug": "lowest tertile aOR 0.78, 95% CI 0.64–0.96). Notably, the protective effect"
+    },
+    {
+     "zeile": 510,
+     "auszug": "preeclampsia (aOR 0.72, 95% CI 0.55–0.93). A dose–response"
+    },
+    {
+     "zeile": 542,
+     "auszug": "hypertension (1.9% vs. 2.3%, RR 1.20, 95% CI 0.42–3.41) or"
+    },
+    {
+     "zeile": 543,
+     "auszug": "preeclampsia (1.1% vs. 0.8%, RR 0.72, 95% CI 0.11–4.62) ( 49)."
+    },
+    {
+     "zeile": 809,
+     "auszug": "(aOR 0.76, 95% CI 0.56–"
+    },
+    {
+     "zeile": 864,
+     "auszug": "RR 1.20, 95% CI 0.42–3.41)"
+    },
+    {
+     "zeile": 866,
+     "auszug": "0.8%, RR 0.72, 95% CI 0.11–"
+    },
+    {
+     "zeile": 1025,
+     "auszug": "aOR 0.78, 95% CI 0.64–"
+    },
+    {
+     "zeile": 1093,
+     "auszug": "0.72, 95% CI 0.55–0.93);"
+    },
+    {
+     "zeile": 1193,
+     "auszug": "odds (highest vs. lowest tertile aOR 0.78, 95% CI 0.64–0.96), with"
+    },
+    {
+     "zeile": 1218,
+     "auszug": "preeclampsia (aOR 0.76, 95% CI 0.56–1.03). Despite not reaching"
+    },
     {
      "zeile": 217,
      "auszug": "preeclampsia in a dose-dependent manner (relative risk, 0.82; 95% CI,"
@@ -34,32 +107,8 @@
      "auszug": "quartile (RR 0.58; 95% CI, 0.42, 0.81). This study provided valuable"
     },
     {
-     "zeile": 477,
-     "auszug": "high adherence (OR 3.8; 95% CI 1.3–11.4, p = 0.019) ( 43)."
-    },
-    {
-     "zeile": 491,
-     "auszug": "vs. lowest quartile: 0.31 [95% CI: 0.11, 0.87], P-trend = 0.03),"
-    },
-    {
-     "zeile": 501,
-     "auszug": "lowest tertile aOR 0.78, 95% CI 0.64–0.96). Notably, the protective effect"
-    },
-    {
-     "zeile": 510,
-     "auszug": "preeclampsia (aOR 0.72, 95% CI 0.55–0.93). A dose–response"
-    },
-    {
      "zeile": 534,
      "auszug": "reduction in the prevalence of preeclampsia (aOR 0.76, 95% CI"
-    },
-    {
-     "zeile": 542,
-     "auszug": "hypertension (1.9% vs. 2.3%, RR 1.20, 95% CI 0.42–3.41) or"
-    },
-    {
-     "zeile": 543,
-     "auszug": "preeclampsia (1.1% vs. 0.8%, RR 0.72, 95% CI 0.11–4.62) ( 49)."
     },
     {
      "zeile": 551,
@@ -78,28 +127,8 @@
      "auszug": "0.58; 95% CI, 0.42, 0.81)"
     },
     {
-     "zeile": 809,
-     "auszug": "(aOR 0.76, 95% CI 0.56–"
-    },
-    {
-     "zeile": 864,
-     "auszug": "RR 1.20, 95% CI 0.42–3.41)"
-    },
-    {
-     "zeile": 866,
-     "auszug": "0.8%, RR 0.72, 95% CI 0.11–"
-    },
-    {
      "zeile": 986,
      "auszug": "(adjusted RR [95% CI], Q4"
-    },
-    {
-     "zeile": 1025,
-     "auszug": "aOR 0.78, 95% CI 0.64–"
-    },
-    {
-     "zeile": 1093,
-     "auszug": "0.72, 95% CI 0.55–0.93);"
     },
     {
      "zeile": 1130,
@@ -108,6 +137,18 @@
     {
      "zeile": 1180,
      "auszug": "Alternate Mediterranean Diet; MSDS, Mediterranean-Style Diet Score; aMed, Alternate Mediterranean Diet; RCT, Randomized Controlled Trial; RR, Relative Risk; OR, Odds Ratio; aOR, Adjusted Odds Ratio; CI, Confidence Inter…"
+    },
+    {
+     "zeile": 1186,
+     "auszug": "quartile (RR 0.58; 95% CI, 0.42–0.81). This large, population-based"
+    },
+    {
+     "zeile": 1199,
+     "auszug": "reporting a 28% reduction in preeclampsia odds (aOR 0.72, 95% CI"
+    },
+    {
+     "zeile": 1222,
+     "auszug": "preeclampsia in the Mediterranean diet group (RR 0.61; 95% CI,"
     }
    ]
   },
@@ -262,32 +303,8 @@
      "auszug": "Background: Cancer survivors face heightened risks of recurrence and persistent cancer-related fatigue (CRF), both of which impair quality of life. The Mediterranean Diet (MD), characterized by its antioxidant and anti-…"
     },
     {
-     "zeile": 213,
-     "auszug": "Outcomes were extracted as Hazard Ratios (HRs), Risk Ratios (RRs), and Odds Ratios (ORs) for dichotomous variables, or as mean differences for continuous variables. Effect estimates, 95% confidence intervals (CIs), and …"
-    },
-    {
-     "zeile": 237,
-     "auszug": "We extracted data on two primary outcomes: cancer recurrence and cancer-related fatigue (CRF). For recurrence, hazard ratios (HRs) and 95% confidence intervals (CIs) were collected from each cohort study, prioritizing t…"
-    },
-    {
-     "zeile": 255,
-     "auszug": "Effect sizes for cancer recurrence and fatigue were expressed as Hazard Ratios (HRs) where available. When HRs were not reported, Risk Ratios (RRs), Odds Ratios (ORs), or mean differences (MDs) were used, depending on t…"
-    },
-    {
      "zeile": 259,
      "auszug": "We conducted meta-analyses using random-effects models to account for between-study heterogeneity. Hazard ratios (HRs) for cancer recurrence and mean differences (MDs) for cancer-related fatigue (CRF) were pooled separa…"
-    },
-    {
-     "zeile": 285,
-     "auszug": "Fatigue outcomes assessed using different validated scales were standardized by calculating the standardized mean difference (SMD) to facilitate meta-analysis. If scales were not compatible or could not be reliably conv…"
-    },
-    {
-     "zeile": 309,
-     "auszug": "The outcomes from the included studies were expressed as mean differences with accompanying 95% confidence intervals (CIs). For the purpose of meta-analysis, a random-effects model was applied using the DerSimonian and …"
-    },
-    {
-     "zeile": 313,
-     "auszug": "The primary outcome of the meta-analysis was expressed as a Hazard Ratio (HR) or other effect measure derived from random-effects modeling, depending on how each included study reported its results. Alongside quantitati…"
     },
     {
      "zeile": 323,
@@ -352,6 +369,38 @@
     {
      "zeile": 651,
      "auszug": "For clinical interpretation, minimal clinically important differences (MCIDs) should be considered when evaluating fatigue outcomes. For example, a change of approximately 3–4 points on the Functional Assessment of Chro…"
+    },
+    {
+     "zeile": 879,
+     "auszug": "HR = 0.83 (0.70–0.99)"
+    },
+    {
+     "zeile": 885,
+     "auszug": "MD = 0.29 (−0.58 to 1.16)"
+    },
+    {
+     "zeile": 213,
+     "auszug": "Outcomes were extracted as Hazard Ratios (HRs), Risk Ratios (RRs), and Odds Ratios (ORs) for dichotomous variables, or as mean differences for continuous variables. Effect estimates, 95% confidence intervals (CIs), and …"
+    },
+    {
+     "zeile": 237,
+     "auszug": "We extracted data on two primary outcomes: cancer recurrence and cancer-related fatigue (CRF). For recurrence, hazard ratios (HRs) and 95% confidence intervals (CIs) were collected from each cohort study, prioritizing t…"
+    },
+    {
+     "zeile": 255,
+     "auszug": "Effect sizes for cancer recurrence and fatigue were expressed as Hazard Ratios (HRs) where available. When HRs were not reported, Risk Ratios (RRs), Odds Ratios (ORs), or mean differences (MDs) were used, depending on t…"
+    },
+    {
+     "zeile": 285,
+     "auszug": "Fatigue outcomes assessed using different validated scales were standardized by calculating the standardized mean difference (SMD) to facilitate meta-analysis. If scales were not compatible or could not be reliably conv…"
+    },
+    {
+     "zeile": 309,
+     "auszug": "The outcomes from the included studies were expressed as mean differences with accompanying 95% confidence intervals (CIs). For the purpose of meta-analysis, a random-effects model was applied using the DerSimonian and …"
+    },
+    {
+     "zeile": 313,
+     "auszug": "The primary outcome of the meta-analysis was expressed as a Hazard Ratio (HR) or other effect measure derived from random-effects modeling, depending on how each included study reported its results. Alongside quantitati…"
     },
     {
      "zeile": 771,

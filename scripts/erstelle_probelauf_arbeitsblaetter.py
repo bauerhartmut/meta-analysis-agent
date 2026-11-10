@@ -13,9 +13,11 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-TABELLE = re.compile(r"(?i)table +([0-9]+[a-z]?)")
+TABELLE = re.compile(r"(?i)table\s+([0-9]+[a-z]?)")
 EFFEKT = re.compile(r"(?i)(95% *CI|CI:|HR *=|OR *=|RR *=|MD *=|"
                     r"mean difference|hazard ratio|odds ratio|risk ratio)")
+ERGEBNIS = re.compile(r"(?i)(pooled|was [0-9]|=\s*(?:−|-)?[0-9]|"
+                      r"95% *CI\s*[:=]?\s*(?:−|-)?[0-9])")
 
 
 def _zelle(text: str) -> str:
@@ -40,16 +42,17 @@ def tabellen(text: str) -> list:
     return treffer
 
 
-def effektstellen(text: str, max_n: int = 25) -> list:
-    treffer = []
+def effektstellen(text: str, max_n: int = 40) -> list:
+    wichtig, rest = [], []
     for nr, zeile in enumerate(text.splitlines(), 1):
-        m = EFFEKT.search(zeile)
-        if not m:
+        if not EFFEKT.search(zeile):
             continue
-        treffer.append({"zeile": nr, "auszug": _kurz(zeile)})
-        if len(treffer) >= max_n:
-            break
-    return treffer
+        eintrag = {"zeile": nr, "auszug": _kurz(zeile)}
+        if ERGEBNIS.search(zeile):
+            wichtig.append(eintrag)
+        else:
+            rest.append(eintrag)
+    return (wichtig + rest)[:max_n]
 
 
 def pflichtfelder(schema: dict) -> dict:
