@@ -49,9 +49,11 @@ def priorisiere(klassen: dict) -> list:
         if klasse not in RANG:
             continue
         for c in eintraege or []:
+            kontext = "-"
             if klasse == "dokument":
                 a = f"{c['effekte']} Zeilen" if c.get("seite") == "A" else "0 Zeilen"
                 b = f"{c['effekte']} Zeilen" if c.get("seite") == "B" else "0 Zeilen"
+                kontext = f"{c.get('stratum', '?')} / {c.get('design_category', '?')}"
             elif klasse in ("nur_a", "nur_b"):
                 a, b = (_seite(c), "-") if klasse == "nur_a" else ("-", _seite(c))
             elif klasse == "ki":
@@ -63,6 +65,7 @@ def priorisiere(klassen: dict) -> list:
                 "rang": RANG[klasse], "klasse": klasse,
                 "schwere": NAMEN[RANG[klasse]],
                 "dokument": c.get("document_id", ""),
+                "kontext": kontext,
                 "outcome": c.get("outcome", "-"),
                 "a": a, "b": b,
                 "vorschlag": vorschlag(klasse, c),
@@ -94,13 +97,14 @@ def markdown(liste: list, quelle: str) -> str:
         "Zeilen, Typ, Wert und KI. Die Entscheidungsspalte fuellt die dritte",
         "Stimme.",
         "",
-        "| Rang | Klasse | Schwere | Dokument | Outcome | A | B | Vorschlag | Entscheidung |",
-        "|---|---|---|---|---|---|---|---|---|",
+        "| Rang | Klasse | Schwere | Dokument | Kontext | Outcome | A | B | Vorschlag | Entscheidung |",
+        "|---|---|---|---|---|---|---|---|---|---|",
     ]
     for x in liste:
         text.append(
             f"| {x['rang']} | {x['klasse']} | {x['schwere']} | {x['dokument'][:10]} | "
-            f"{str(x['outcome'])[:70]} | {x['a']} | {x['b']} | {x['vorschlag']} |  |")
+            f"{x['kontext']} | {str(x['outcome'])[:70]} | {x['a']} | {x['b']} | "
+            f"{x['vorschlag']} |  |")
     text += ["", "Volle Eintraege: `data/golden_effects/kappa_konflikte_priorisiert.json`.", ""]
     return "\n".join(text)
 
@@ -113,7 +117,8 @@ def selbsttest() -> int:
         "nur_b": [{"document_id": "d1", "outcome": "o", "effect_type": "hr",
                    "effect": 1.0, "ki": "0.8 bis 1.2", "quote": "Risk 1.0"}],
         "dokument": [{"document_id": "d1", "seite": "A", "effekte": 2,
-                      "begruendung": "keine relevanten Effekte"}],
+                      "begruendung": "keine relevanten Effekte",
+                      "stratum": "cohort", "design_category": "observational"}],
     }
     liste = priorisiere(faelle)
     reihenfolge = [x["klasse"] for x in liste]
@@ -125,6 +130,9 @@ def selbsttest() -> int:
         return 1
     if liste[0]["a"] != "2 Zeilen" or liste[0]["b"] != "0 Zeilen":
         print(f"Selbsttest fehlgeschlagen: Dokumentseiten {liste[0]['a']} / {liste[0]['b']}")
+        return 1
+    if liste[0]["kontext"] != "cohort / observational":
+        print(f"Selbsttest fehlgeschlagen: Kontext {liste[0]['kontext']}")
         return 1
     if "aufnehmen" not in liste[1]["vorschlag"]:
         print(f"Selbsttest fehlgeschlagen: Vorschlag fehlende Zeile {liste[1]['vorschlag']}")

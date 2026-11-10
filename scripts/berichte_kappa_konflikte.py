@@ -45,8 +45,19 @@ def lade(pfad: Path) -> dict:
     return {k: v["effects"] for k, v in lade_voll(pfad).items()}
 
 
-def dokument_konflikte(va: dict, vb: dict) -> list:
+def lade_meta(pfad: Path) -> dict:
+    """{document_id: Schicht, Design, Titel, Jahr} aus documents.json."""
+    daten = json.loads(pfad.read_text(encoding="utf-8"))
+    return {d["document_id"]: {"stratum": d.get("stratum") or "?",
+                               "design_category": d.get("design_category") or "?",
+                               "title": d.get("title") or "",
+                               "year": d.get("year") or ""}
+            for d in daten["documents"]}
+
+
+def dokument_konflikte(va: dict, vb: dict, meta=None) -> list:
     """Dokumente, in denen genau ein Annotator Zeilen hat."""
+    meta = meta or {}
     liste = []
     for doc in sorted(set(va) | set(vb)):
         ea = (va.get(doc) or {}).get("effects") or []
@@ -55,11 +66,16 @@ def dokument_konflikte(va: dict, vb: dict) -> list:
             continue
         seite = "A" if ea else "B"
         leer = vb if ea else va
+        m = meta.get(doc) or {}
         liste.append({
             "document_id": doc,
             "seite": seite,
             "effekte": len(ea) if ea else len(eb),
             "begruendung": (leer.get(doc) or {}).get("no_effect_reason") or "",
+            "stratum": m.get("stratum") or "?",
+            "design_category": m.get("design_category") or "?",
+            "title": m.get("title") or "",
+            "year": m.get("year") or "",
         })
     return liste
 
@@ -160,12 +176,14 @@ def markdown(ergebnis: dict, index_a: dict, index_b: dict,
     dok_zeilen = []
     for x in dok_konflikte:
         dok_zeilen.append(
-            f"| {x['document_id'][:10]} | "
+            f"| {x['document_id'][:10]} | {x.get('stratum', '?')} | "
+            f"{x.get('design_category', '?')} | {_kurz(x.get('title', ''), 40)} | "
             f"{x['effekte'] if x['seite'] == 'A' else 0} | "
             f"{x['effekte'] if x['seite'] == 'B' else 0} | "
             f"{_kurz(x['begruendung'], 100) or '-'} |  |")
     tabelle("Dokumentebene (ein Annotator ohne Zeile)", dok_zeilen,
-            ["Dokument", "Zeilen A", "Zeilen B", "Begruendung der leeren Seite", "Entscheidung"])
+            ["Dokument", "Schicht", "Design", "Titel", "Zeilen A", "Zeilen B",
+             "Begruendung der leeren Seite", "Entscheidung"])
 
     def nur(key, effekt):
         w = _werte(effekt)
@@ -225,7 +243,11 @@ def selbsttest() -> int:
         "d3": {"effects": [], "no_effect_reason": ""},
         "d4": {"effects": [{"effect_type": "or", "effect": 0.6}], "no_effect_reason": ""},
     }
-    liste = dokument_konflikte(va, vb)
+    meta = {"d1": {"stratum": "rct", "design_category": "parallel_rct",
+                    "title": "T1", "year": "2020"},
+            "d2": {"stratum": "cohort", "design_category": "observational",
+                    "title": "T2", "year": "2021"}}
+    liste = dokument_konflikte(va, vb, meta)
     if len(liste) != 2:
         print(f"Selbsttest fehlgeschlagen: {len(liste)} Dokumentkonflikte statt 2")
         return 1
@@ -239,7 +261,13 @@ def selbsttest() -> int:
     if not d1["begruendung"] or not d2["begruendung"]:
         print("Selbsttest fehlgeschlagen: Begruendung fehlt")
         return 1
-    print("Selbsttest Dokumentebene: 2 Faelle, d3/d4 korrekt ausgelassen")
+    if (d1["stratum"], d1["design_category"]) != ("rct", "parallel_rct"):
+        print(f"Selbsttest fehlgeschlagen: Metadaten d1 {d1}")
+        return 1
+    if (d2["stratum"], d2["design_category"]) != ("cohort", "observational"):
+        print(f"Selbsttest fehlgeschlagen: Metadaten d2 {d2}")
+        return 1
+    print("Selbsttest Dokumentebene: 2 Faelle mit Schicht/Design, d3/d4 korrekt ausgelassen")
     return 0
 
 
@@ -274,7 +302,8 @@ def main(argv: list) -> int:
     db = {k: v["effects"] for k, v in vb.items()}
 
     ergebnis = vergleiche(da, db, toleranz=args.toleranz)
-    ergebnis["dokument_konflikte"] = dokument_konflikte(va, vb)
+    meta = lade_meta(ROOT / "data/golden_effects/documents.json")
+    ergebnis["dokument_konflikte"] = dokument_konflikte(va, vb, meta)
     ia, ib = index(da), index(db)
     ergebnis["konflikte"] = {
         "dokument": ergebnis["dokument_konflikte"],
