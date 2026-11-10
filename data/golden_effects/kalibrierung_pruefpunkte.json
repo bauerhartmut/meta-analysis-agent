@@ -26,16 +26,16 @@
    "schicht": "cohort",
    "design": "observational",
    "pruefpunkt": "5.4 + 5.11",
-   "befund": "Tabelle 2: beta -0.536 (SE 0.101), beta -0.056 (SE 0.010); Abstract: T1->T2 beta -0.073",
-   "konsequenz": "Beta mit SE nutzen; p allein reicht nicht; je Modell/Phase mit SE eine Zeile"
+   "befund": "Tabelle 2/3: beta mit SE; 5 belastbare Zeilen (4 OLS + FE kategorial -0.210, SE 0.103); FE kontinuierlich -0.024 (SE 0.110) mit Stern p<0.05 inkonsistent (beta/SE -0.22); cross-lagged p-only",
+   "konsequenz": "5 Zeilen annotierbar; FE kontinuierlich vor Annotation klaeren; cross-lagged keine Zeile"
   },
   {
    "document_id": "2c7ab4d1244754e3966780f4bccbfa8c",
    "schicht": "cross_sectional",
    "design": "observational",
    "pruefpunkt": "5.2 + 5.7",
-   "befund": "univariate OR = 1.93, p = 0.016; multivariate aOR = 2.01, 95% CI 1.08-3.75",
-   "konsequenz": "Univariate ORs ohne KI keine Zeilen; multivariate aORs mit KI Zeilen"
+   "befund": "Tabelle 3: 16 univariate ORs mit 95%-KI; 5 multivariate aORs mit 95%-KI (z. B. aOR 2.01, 1.1-3.7); Narrativ nennt nur p",
+   "konsequenz": "21 belastbare Zeilen (16 univariat + 5 aOR); Tabelle als Primaerquelle; Richtung beachten"
   },
   {
    "document_id": "334f5f679802315eeec71399149b51c3",

@@ -1,0 +1,48 @@
+{
+ "datum": "2026-11-10",
+ "hinweis": "Keine Annotation; Zeilen mit Effekt und Unsicherheit. Die Zeilenwahl treffen A und B.",
+ "dokumente": [
+  {
+   "document_id": "09843d40d3cc2c9ca039d6d1b45ac656",
+   "tabelle": "2 und 3",
+   "outcome": "Depressive Symptoms",
+   "zeitpunkt": ["2016", "2016-2018"],
+   "zeilen": [
+    {"modell": "OLS 1", "praediktor": "kategorial, unadjustiert", "beta": -1.309, "se": 0.106, "p": "<0.001", "zeitpunkt": "2016", "belastbar": true},
+    {"modell": "OLS 2", "praediktor": "kategorial, adjustiert", "beta": -0.536, "se": 0.101, "p": "<0.001", "zeitpunkt": "2016", "belastbar": true},
+    {"modell": "OLS 3", "praediktor": "kontinuierlich, unadjustiert", "beta": -0.134, "se": 0.011, "p": "<0.001", "zeitpunkt": "2016", "belastbar": true},
+    {"modell": "OLS 4", "praediktor": "kontinuierlich, adjustiert", "beta": -0.056, "se": 0.010, "p": "<0.001", "zeitpunkt": "2016", "belastbar": true},
+    {"modell": "FE 1", "praediktor": "kategorial", "beta": -0.210, "se": 0.103, "p": "<0.05", "zeitpunkt": "2016-2018", "belastbar": true},
+    {"modell": "FE 2", "praediktor": "kontinuierlich", "beta": -0.024, "se": 0.110, "p": "Stern <0.05, beta/SE -0.22", "zeitpunkt": "2016-2018", "belastbar": false}
+   ],
+   "belastbare_zeilen": 5,
+   "problem": "FE 2 ist mit dem Stern p<0.05 inkonsistent; cross-lagged p-only ohne SE/CI."
+  },
+  {
+   "document_id": "2c7ab4d1244754e3966780f4bccbfa8c",
+   "tabelle": "3",
+   "outcome": "Depression (GDS-15)",
+   "n": 303,
+   "zeilen": [
+    {"faktor": "Aelter (>=75) vs juenger", "or": 1.9, "or_ci": [1.1, 3.3], "aor": null, "aor_ci": null},
+    {"faktor": "Weiblich vs maennlich", "or": 2.1, "or_ci": [1.3, 3.3], "aor": null, "aor_ci": null},
+    {"faktor": "Unverheiratet/getrennt/verwitwet/geschieden vs verheiratet", "or": 2.0, "or_ci": [1.2, 3.3], "aor": null, "aor_ci": null},
+    {"faktor": "Analphabet vs alphabetisiert", "or": 3.1, "or_ci": [1.9, 5.2], "aor": 2.01, "aor_ci": [1.1, 3.7]},
+    {"faktor": "Alleinlebend vs nicht", "or": 3.8, "or_ci": [0.8, 17.3], "aor": null, "aor_ci": null},
+    {"faktor": "Haushaltsmitglied vs Haushaltsvorstand", "or": 2.3, "or_ci": [1.3, 4.2], "aor": null, "aor_ci": null},
+    {"faktor": "Physische Unterstuetzung erhalten vs nicht", "or": 0.4, "or_ci": [0.2, 0.8], "aor": null, "aor_ci": null},
+    {"faktor": "Finanzielle Unterstuetzung erhalten vs nicht", "or": 0.5, "or_ci": [0.25, 0.96], "aor": null, "aor_ci": null},
+    {"faktor": "Respektiert gefuehlt vs nicht", "or": 0.05, "or_ci": [0.01, 0.22], "aor": null, "aor_ci": null},
+    {"faktor": "Keine Beruecksichtigung vs Beruecksichtigung", "or": 8.25, "or_ci": [4.48, 15.2], "aor": 4.02, "aor_ci": [2.01, 8.04]},
+    {"faktor": "Keine Zeit vs Zeit", "or": 8.76, "or_ci": [3.62, 21.18], "aor": 3.55, "aor_ci": [1.29, 9.76]},
+    {"faktor": "Nicht misshandelt vs misshandelt", "or": 0.13, "or_ci": [0.04, 0.43], "aor": null, "aor_ci": null},
+    {"faktor": "Raucher vs Nichtraucher", "or": 1.02, "or_ci": [0.6, 1.7], "aor": null, "aor_ci": null},
+    {"faktor": "Alkohol trinkend vs nicht", "or": 1.1, "or_ci": [0.6, 1.8], "aor": null, "aor_ci": null},
+    {"faktor": "Koerperliche Gesundheitsprobleme vs keine", "or": 2.0, "or_ci": [1.2, 3.5], "aor": 1.97, "aor_ci": [1.03, 3.8]},
+    {"faktor": "Immobil vs mobil", "or": 5.3, "or_ci": [1.8, 15.5], "aor": 5.62, "aor_ci": [1.76, 18.0]}
+   ],
+   "belastbare_zeilen": 21,
+   "problem": "Narrativ nennt nur p-Werte; Tabelle 3 hat 95%-KI fuer alle 16 univariaten ORs. Richtungs- und Rundungsabweichungen beachten."
+  }
+ ]
+}
