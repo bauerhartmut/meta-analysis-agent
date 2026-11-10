@@ -4,7 +4,7 @@
 - Volltext: `fulltext/203c831dbeb178297006a888608f4f10.txt` (115,557 Zeichen)
 - Jahr: 2026
 - Schicht: aggregate | Design: aggregate
-- Design laut Dokument: Prospective cohort studies (meta-analysis)
+- Design laut Dokument: systematic review and meta-analysis
 
 **Für A und B identisch.** Getrennt ausfüllen und während der
 Annotation nicht austauschen. Nur Volltext, Anleitung und Schema
