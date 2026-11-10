@@ -1,6 +1,6 @@
 # E5 - Wirkung des Lesepass-Filters auf Pool und Intervall
 
-Stand: 2026-11-10 17:29 · Modellaufrufe: 0 · Tokens: 0
+Stand: 2026-11-10 17:59 · Modellaufrufe: 0 · Tokens: 0
 
 Read-only auf Kopien. Teil B ist eine Konstruktion an echten Zeilen,
 kein Messwert ueber die Datenlage.

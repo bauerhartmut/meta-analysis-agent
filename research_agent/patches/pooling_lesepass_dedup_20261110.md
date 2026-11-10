@@ -101,3 +101,22 @@ und begruendet statt eine Nebenwirkung der Kollaps-Reihenfolge.
 - Die Regel wirkt in `build_analysis`. Skripte, die `standardize` und `pool`
   direkt aufrufen, umgehen sie - dort muss der Aufrufer die Zeilen selbst
   deduplizieren.
+
+## Nachtrag: Schluessel ohne Beleg (gleicher Tag)
+
+Die Klassifikation der 45 Pass-B-Zeilen ohne Zwilling hat einen Fehler in den
+Zwilling-Schluesseln aufgedeckt. `_wert_zwilling` gab fuer eine Zeile ohne
+Effekt `("", None, None)` zurueck und `_zitat_zwilling` fuer eine Zeile ohne
+Quote `("", "")` - beides fuer alle solche Zeilen identisch. Damit galt eine
+Zweitlesung ohne Effekt als Kopie jeder Erstlesung ohne Effekt, und eine ohne
+Quote als Kopie jeder Erstlesung ohne Quote, jeweils unabhaengig von der Quelle.
+
+Wirkung: Die Menge der Zeilen "ohne Zwilling" war zu klein, weil beleglose
+Zeilen faelschlich als Kopien zaehlten. Auf den Hauptpfad hatte der Fehler
+keine Wirkung - die drei zusaetzlich verworfenen Zeilen in der Exercise-DB
+sind echte Wert- oder Zitat-Zwillinge (k bleibt 24 -> 21, abgelehnt 105 -> 108).
+
+Behoben: Beide Schluessel tragen ohne Beleg die Zeilen-ID und sind damit nur
+mit sich selbst gleich; dann entscheidet allein der jeweils andere Vergleich.
+Zwei Tests halten das fest (Zeile ohne Effekt, Zeile ohne Quote), 11 Tests im
+Modul gruen. Nach der Korrektur ergibt die Klassifikation exakt 45 Zeilen.

@@ -13,7 +13,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 
-from research_agent.meta.pooling import build_analysis, standardize
+from research_agent.meta.pooling import _drop_zweitlesungen, build_analysis, standardize
 
 
 def _row(pass_no, **extra):
@@ -92,6 +92,37 @@ class TestWiderspruch(unittest.TestCase):
         analysis = build_analysis([_row(1, disputed=1), _row(2, disputed=1)])
         self.assertEqual(analysis["groups"], {})
         self.assertEqual(len(analysis["excluded"]), 2)
+
+
+class TestOhneBelegKeinZwilling(unittest.TestCase):
+    """Fehlende Zahl oder fehlende Quote belegt keine Kopie.
+
+    Vorher gaben beide Schluessel fuer alle solche Zeilen denselben Wert
+    zurueck - dann galt eine Zweitlesung ohne Effekt als Kopie jeder
+    Erstlesung ohne Effekt, und eine ohne Quote als Kopie jeder ohne Quote.
+    """
+
+    def test_zeile_ohne_effekt_ist_kein_zwilling(self):
+        rows = [
+            {"id": "a", "source_id": "s1", "effect": None, "se": None,
+             "quote": "Zitat A", "extraction_pass": 1},
+            {"id": "b", "source_id": "s1", "effect": None, "se": None,
+             "quote": "Zitat B", "extraction_pass": 2},
+        ]
+        behalten, verworfen = _drop_zweitlesungen(rows)
+        self.assertEqual(len(behalten), 2)
+        self.assertEqual(verworfen, [])
+
+    def test_zeile_ohne_quote_ist_kein_zwilling(self):
+        rows = [
+            {"id": "a", "source_id": "s1", "effect": 0.3, "se": 0.1,
+             "quote": "", "extraction_pass": 1},
+            {"id": "b", "source_id": "s1", "effect": 0.7, "se": 0.2,
+             "quote": "", "extraction_pass": 2},
+        ]
+        behalten, verworfen = _drop_zweitlesungen(rows)
+        self.assertEqual(len(behalten), 2)
+        self.assertEqual(verworfen, [])
 
 
 if __name__ == "__main__":

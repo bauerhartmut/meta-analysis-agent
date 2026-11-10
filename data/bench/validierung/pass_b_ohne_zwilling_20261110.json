@@ -1,0 +1,799 @@
+{
+  "definition": "Pass > 1 ohne Treffer in Textschluessel, Wert oder Quote gegen alle Zeilen aus Pass 1",
+  "dbs_geprueft": 8,
+  "dbs_ohne_tabelle": [
+    {
+      "datei": "data/test_run_20260831_202709.db",
+      "fehler": "no such table: study_effects"
+    }
+  ],
+  "ohne_zwilling_gesamt": 45,
+  "davon_poolbar": 20,
+  "davon_im_pool": 4,
+  "verteilung": {
+    "anderes_outcome_unpoolbar": 15,
+    "anderes_outcome": 15,
+    "nur_pass_b_unpoolbar": 6,
+    "andere_aussage": 4,
+    "andere_aussage_unpoolbar": 3,
+    "gleiche_stelle_unpoolbar": 1,
+    "nur_pass_b": 1
+  },
+  "eintraege": [
+    {
+      "quelle": "eadc35037dca",
+      "outcome": "sleep onset latency",
+      "effect": null,
+      "se": null,
+      "disputed": 1,
+      "erstlesungen_der_quelle": 1,
+      "outcomes_pass_1": [
+        "sleep onset latency"
+      ],
+      "pass_1_vergleiche": [
+        "MT1/2+/+ mice vs MT1/2-/- mice under 65 lux light pulse"
+      ],
+      "klasse": "andere_aussage_unpoolbar",
+      "datei": "data/harness_local.db",
+      "id": "476a681db2cf",
+      "pass": 2,
+      "poolbar": false,
+      "im_pool": false
+    },
+    {
+      "quelle": "683bd1c26269",
+      "outcome": "total sleep time",
+      "effect": 3.0,
+      "se": null,
+      "disputed": 0,
+      "erstlesungen_der_quelle": 1,
+      "outcomes_pass_1": [
+        "sleep onset latency"
+      ],
+      "klasse": "anderes_outcome_unpoolbar",
+      "datei": "data/harness_local.db",
+      "id": "48a9afcae944",
+      "pass": 2,
+      "poolbar": false,
+      "im_pool": false
+    },
+    {
+      "quelle": "de5d50203d6e",
+      "outcome": "",
+      "effect": null,
+      "se": null,
+      "disputed": 0,
+      "erstlesungen_der_quelle": 0,
+      "outcomes_pass_1": [],
+      "klasse": "nur_pass_b_unpoolbar",
+      "datei": "data/research-does-caffeine-intake-affect-short-term-m-783a51.db",
+      "id": "cb21f139f32c",
+      "pass": 2,
+      "poolbar": false,
+      "im_pool": false
+    },
+    {
+      "quelle": "4927a0818af5",
+      "outcome": "chronic disease incidence",
+      "effect": 0.005,
+      "se": 0.001785747,
+      "disputed": 0,
+      "erstlesungen_der_quelle": 1,
+      "outcomes_pass_1": [
+        "depressive symptoms"
+      ],
+      "klasse": "anderes_outcome",
+      "datei": "data/research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+      "id": "e8507115f66f",
+      "pass": 2,
+      "poolbar": true,
+      "im_pool": true
+    },
+    {
+      "quelle": "182b05a12853",
+      "outcome": "",
+      "effect": null,
+      "se": null,
+      "disputed": 0,
+      "erstlesungen_der_quelle": 1,
+      "outcomes_pass_1": [
+        "depressive symptoms"
+      ],
+      "klasse": "anderes_outcome_unpoolbar",
+      "datei": "data/research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+      "id": "282df81c3b34",
+      "pass": 2,
+      "poolbar": false,
+      "im_pool": false
+    },
+    {
+      "quelle": "9d341af7b02a",
+      "outcome": "depressive symptoms",
+      "effect": -0.18,
+      "se": 0.079083086,
+      "disputed": 0,
+      "erstlesungen_der_quelle": 1,
+      "outcomes_pass_1": [
+        "physical activity"
+      ],
+      "klasse": "anderes_outcome",
+      "datei": "data/research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+      "id": "bea3f96332eb",
+      "pass": 2,
+      "poolbar": true,
+      "im_pool": true
+    },
+    {
+      "quelle": "b0e4bca955f2",
+      "outcome": "treatment resistance (TRD vs non-TRD)",
+      "effect": null,
+      "se": 0.005102135,
+      "disputed": 0,
+      "erstlesungen_der_quelle": 1,
+      "outcomes_pass_1": [
+        "depressive symptoms"
+      ],
+      "klasse": "anderes_outcome_unpoolbar",
+      "datei": "data/research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+      "id": "a906ac202fa9",
+      "pass": 2,
+      "poolbar": false,
+      "im_pool": false
+    },
+    {
+      "quelle": "4ed4d3592910",
+      "outcome": "depressive symptoms",
+      "effect": null,
+      "se": null,
+      "disputed": 0,
+      "erstlesungen_der_quelle": 1,
+      "outcomes_pass_1": [
+        "physical activity (moderate to vigorous, perceived intensity)"
+      ],
+      "klasse": "anderes_outcome_unpoolbar",
+      "datei": "data/research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+      "id": "e43440184932",
+      "pass": 2,
+      "poolbar": false,
+      "im_pool": false
+    },
+    {
+      "quelle": "78724545a3f7",
+      "outcome": "",
+      "effect": null,
+      "se": null,
+      "disputed": 0,
+      "erstlesungen_der_quelle": 0,
+      "outcomes_pass_1": [],
+      "klasse": "nur_pass_b_unpoolbar",
+      "datei": "data/research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+      "id": "f603ebb5731d",
+      "pass": 2,
+      "poolbar": false,
+      "im_pool": false
+    },
+    {
+      "quelle": "b181ec03741f",
+      "outcome": "physical activity at 2 years",
+      "effect": 1.87,
+      "se": 0.303577007,
+      "disputed": 0,
+      "erstlesungen_der_quelle": 1,
+      "outcomes_pass_1": [
+        "depressive symptoms"
+      ],
+      "klasse": "anderes_outcome",
+      "datei": "data/research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+      "id": "588c59214a33",
+      "pass": 2,
+      "poolbar": true,
+      "im_pool": false
+    },
+    {
+      "quelle": "ad24b3f96a7e",
+      "outcome": "physical activity agreement",
+      "effect": 0.083,
+      "se": null,
+      "disputed": 0,
+      "erstlesungen_der_quelle": 1,
+      "outcomes_pass_1": [
+        "physical activity agreement"
+      ],
+      "pass_1_vergleiche": [
+        "IPAQ-SF categories vs ISWT distance tertiles"
+      ],
+      "klasse": "andere_aussage_unpoolbar",
+      "datei": "data/research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+      "id": "c50541fc1dc9",
+      "pass": 2,
+      "poolbar": false,
+      "im_pool": false
+    },
+    {
+      "quelle": "f8f920ccfcd5",
+      "outcome": "",
+      "effect": null,
+      "se": null,
+      "disputed": 0,
+      "erstlesungen_der_quelle": 1,
+      "outcomes_pass_1": [
+        "dietary intake measurement error bias"
+      ],
+      "klasse": "anderes_outcome_unpoolbar",
+      "datei": "data/research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+      "id": "e0cf46f2d25f",
+      "pass": 2,
+      "poolbar": false,
+      "im_pool": false
+    },
+    {
+      "quelle": "391f5e3b8980",
+      "outcome": "depressive symptoms",
+      "effect": null,
+      "se": null,
+      "disputed": 0,
+      "erstlesungen_der_quelle": 1,
+      "outcomes_pass_1": [
+        "body mass index"
+      ],
+      "klasse": "anderes_outcome_unpoolbar",
+      "datei": "data/research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+      "id": "992900db101e",
+      "pass": 2,
+      "poolbar": false,
+      "im_pool": false
+    },
+    {
+      "quelle": "f9d8fbabbc39",
+      "outcome": "depressive symptoms",
+      "effect": -0.24,
+      "se": 0.12,
+      "disputed": 1,
+      "erstlesungen_der_quelle": 1,
+      "outcomes_pass_1": [
+        "depressive symptoms"
+      ],
+      "pass_1_vergleiche": [
+        "exercise vs control"
+      ],
+      "klasse": "andere_aussage",
+      "datei": "data/research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+      "id": "0d6b1b995a0c",
+      "pass": 2,
+      "poolbar": true,
+      "im_pool": false
+    },
+    {
+      "quelle": "9c2a6e8014d4",
+      "outcome": "",
+      "effect": null,
+      "se": null,
+      "disputed": 0,
+      "erstlesungen_der_quelle": 1,
+      "outcomes_pass_1": [
+        "Cognitive ability"
+      ],
+      "klasse": "anderes_outcome_unpoolbar",
+      "datei": "data/research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+      "id": "89b0b12c6d59",
+      "pass": 2,
+      "poolbar": false,
+      "im_pool": false
+    },
+    {
+      "quelle": "d5fccff30221",
+      "outcome": "",
+      "effect": null,
+      "se": null,
+      "disputed": 0,
+      "erstlesungen_der_quelle": 1,
+      "outcomes_pass_1": [
+        "Causal relationship validity"
+      ],
+      "klasse": "anderes_outcome_unpoolbar",
+      "datei": "data/research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+      "id": "9cdf43080a21",
+      "pass": 2,
+      "poolbar": false,
+      "im_pool": false
+    },
+    {
+      "quelle": "1983c81d6173",
+      "outcome": "",
+      "effect": null,
+      "se": null,
+      "disputed": 0,
+      "erstlesungen_der_quelle": 1,
+      "outcomes_pass_1": [
+        "Cognitive ability"
+      ],
+      "klasse": "anderes_outcome_unpoolbar",
+      "datei": "data/research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+      "id": "0e1243ba14f3",
+      "pass": 2,
+      "poolbar": false,
+      "im_pool": false
+    },
+    {
+      "quelle": "4ac5e3b8b1a7",
+      "outcome": "",
+      "effect": null,
+      "se": null,
+      "disputed": 0,
+      "erstlesungen_der_quelle": 0,
+      "outcomes_pass_1": [],
+      "klasse": "nur_pass_b_unpoolbar",
+      "datei": "data/research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+      "id": "b5647d0a07d4",
+      "pass": 2,
+      "poolbar": false,
+      "im_pool": false
+    },
+    {
+      "quelle": "95f947ecfddd",
+      "outcome": "Frailty Index",
+      "effect": 0.15,
+      "se": 0.031888341,
+      "disputed": 0,
+      "erstlesungen_der_quelle": 1,
+      "outcomes_pass_1": [
+        ""
+      ],
+      "klasse": "anderes_outcome",
+      "datei": "data/research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+      "id": "a46fe74ed51e",
+      "pass": 2,
+      "poolbar": true,
+      "im_pool": true
+    },
+    {
+      "quelle": "95f947ecfddd",
+      "outcome": "Frailty Index",
+      "effect": 0.14,
+      "se": 0.017857471,
+      "disputed": 0,
+      "erstlesungen_der_quelle": 1,
+      "outcomes_pass_1": [
+        ""
+      ],
+      "klasse": "anderes_outcome",
+      "datei": "data/research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+      "id": "57de13baf7c3",
+      "pass": 2,
+      "poolbar": true,
+      "im_pool": true
+    },
+    {
+      "quelle": "8ea9d03a3fa8",
+      "outcome": "Health status",
+      "effect": null,
+      "se": null,
+      "disputed": 0,
+      "erstlesungen_der_quelle": 1,
+      "outcomes_pass_1": [
+        "Coronary artery disease risk"
+      ],
+      "klasse": "anderes_outcome_unpoolbar",
+      "datei": "data/research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+      "id": "c089baf5f080",
+      "pass": 2,
+      "poolbar": false,
+      "im_pool": false
+    },
+    {
+      "quelle": "e29e120227be",
+      "outcome": "",
+      "effect": null,
+      "se": null,
+      "disputed": 0,
+      "erstlesungen_der_quelle": 1,
+      "outcomes_pass_1": [
+        "General cognitive ability"
+      ],
+      "klasse": "anderes_outcome_unpoolbar",
+      "datei": "data/research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+      "id": "77cfd6f94b50",
+      "pass": 2,
+      "poolbar": false,
+      "im_pool": false
+    },
+    {
+      "quelle": "febd6d28db9c",
+      "outcome": "",
+      "effect": null,
+      "se": null,
+      "disputed": 0,
+      "erstlesungen_der_quelle": 0,
+      "outcomes_pass_1": [],
+      "klasse": "nur_pass_b_unpoolbar",
+      "datei": "data/research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+      "id": "0181e215a22d",
+      "pass": 2,
+      "poolbar": false,
+      "im_pool": false
+    },
+    {
+      "quelle": "ef15aa99ac24",
+      "outcome": "General cognitive ability",
+      "effect": 0.39,
+      "se": null,
+      "disputed": 0,
+      "erstlesungen_der_quelle": 1,
+      "outcomes_pass_1": [
+        ""
+      ],
+      "klasse": "anderes_outcome_unpoolbar",
+      "datei": "data/research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+      "id": "a535278c7994",
+      "pass": 2,
+      "poolbar": false,
+      "im_pool": false
+    },
+    {
+      "quelle": "df23352f42dd",
+      "outcome": "General cognitive ability",
+      "effect": null,
+      "se": null,
+      "disputed": 0,
+      "erstlesungen_der_quelle": 1,
+      "outcomes_pass_1": [
+        "General cognitive ability"
+      ],
+      "pass_1_vergleiche": [
+        "Genetic correlation with IDK factor"
+      ],
+      "klasse": "andere_aussage_unpoolbar",
+      "datei": "data/research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+      "id": "56080661900b",
+      "pass": 2,
+      "poolbar": false,
+      "im_pool": false
+    },
+    {
+      "quelle": "f67d0c13014c",
+      "outcome": "",
+      "effect": null,
+      "se": null,
+      "disputed": 0,
+      "erstlesungen_der_quelle": 0,
+      "outcomes_pass_1": [],
+      "klasse": "nur_pass_b_unpoolbar",
+      "datei": "data/research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+      "id": "7776ef79c8e0",
+      "pass": 2,
+      "poolbar": false,
+      "im_pool": false
+    },
+    {
+      "quelle": "ad44822de20b",
+      "outcome": "Psychological distress",
+      "effect": null,
+      "se": null,
+      "disputed": 0,
+      "erstlesungen_der_quelle": 1,
+      "outcomes_pass_1": [
+        "Psychological distress"
+      ],
+      "pass_1_zitat": [
+        "incremental r² rose from 1.83% to 2.86% in the 1958c and fro"
+      ],
+      "klasse": "gleiche_stelle_unpoolbar",
+      "datei": "data/research-kognition-und-gesundheit-ist-der-zusamme-ec45a1.db",
+      "id": "ab83f90b0c14",
+      "pass": 2,
+      "poolbar": false,
+      "im_pool": false
+    },
+    {
+      "quelle": "bbd18327e2ae",
+      "outcome": "Incident cardiovascular disease",
+      "effect": 0.67,
+      "se": 0.130104432,
+      "disputed": 0,
+      "erstlesungen_der_quelle": 1,
+      "outcomes_pass_1": [
+        "Incident cardiovascular disease"
+      ],
+      "pass_1_vergleiche": [
+        "Each weekly serving of nuts vs. no serving"
+      ],
+      "klasse": "andere_aussage",
+      "datei": "data/research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+      "id": "ab77032d7752",
+      "pass": 2,
+      "poolbar": true,
+      "im_pool": false
+    },
+    {
+      "quelle": "8e89a530f9cb",
+      "outcome": "Cardiovascular mortality",
+      "effect": 2.35,
+      "se": 0.966854501,
+      "disputed": 0,
+      "erstlesungen_der_quelle": 1,
+      "outcomes_pass_1": [
+        ""
+      ],
+      "klasse": "anderes_outcome",
+      "datei": "data/research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+      "id": "166c46312454",
+      "pass": 2,
+      "poolbar": true,
+      "im_pool": false
+    },
+    {
+      "quelle": "2f953eb85dd6",
+      "outcome": "",
+      "effect": null,
+      "se": null,
+      "disputed": 0,
+      "erstlesungen_der_quelle": 1,
+      "outcomes_pass_1": [
+        "Major adverse cardiovascular events"
+      ],
+      "klasse": "anderes_outcome_unpoolbar",
+      "datei": "data/research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+      "id": "4c31bf391efc",
+      "pass": 2,
+      "poolbar": false,
+      "im_pool": false
+    },
+    {
+      "quelle": "85a47de24314",
+      "outcome": "Cancer recurrence or cancer-specific mortality",
+      "effect": 0.83,
+      "se": 0.073980951,
+      "disputed": 0,
+      "erstlesungen_der_quelle": 0,
+      "outcomes_pass_1": [],
+      "klasse": "nur_pass_b",
+      "datei": "data/research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+      "id": "e8ba18ca3525",
+      "pass": 2,
+      "poolbar": true,
+      "im_pool": false
+    },
+    {
+      "quelle": "33e5c6d7224e",
+      "outcome": "Hypertensive disorders of pregnancy",
+      "effect": 0.58,
+      "se": 0.099491624,
+      "disputed": 0,
+      "erstlesungen_der_quelle": 1,
+      "outcomes_pass_1": [
+        ""
+      ],
+      "klasse": "anderes_outcome",
+      "datei": "data/research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+      "id": "737c07943f84",
+      "pass": 2,
+      "poolbar": true,
+      "im_pool": false
+    },
+    {
+      "quelle": "33e5c6d7224e",
+      "outcome": "Hypertension/preeclampsia",
+      "effect": 3.8,
+      "se": 2.576577957,
+      "disputed": 0,
+      "erstlesungen_der_quelle": 1,
+      "outcomes_pass_1": [
+        ""
+      ],
+      "klasse": "anderes_outcome",
+      "datei": "data/research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+      "id": "e3db1f20cc9f",
+      "pass": 2,
+      "poolbar": true,
+      "im_pool": false
+    },
+    {
+      "quelle": "33e5c6d7224e",
+      "outcome": "Preeclampsia",
+      "effect": 0.31,
+      "se": 0.193881114,
+      "disputed": 0,
+      "erstlesungen_der_quelle": 1,
+      "outcomes_pass_1": [
+        ""
+      ],
+      "klasse": "anderes_outcome",
+      "datei": "data/research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+      "id": "2d91a2f87d50",
+      "pass": 2,
+      "poolbar": true,
+      "im_pool": false
+    },
+    {
+      "quelle": "33e5c6d7224e",
+      "outcome": "Preeclampsia",
+      "effect": 0.78,
+      "se": 0.081634153,
+      "disputed": 0,
+      "erstlesungen_der_quelle": 1,
+      "outcomes_pass_1": [
+        ""
+      ],
+      "klasse": "anderes_outcome",
+      "datei": "data/research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+      "id": "d754a8fc4cd8",
+      "pass": 2,
+      "poolbar": true,
+      "im_pool": false
+    },
+    {
+      "quelle": "33e5c6d7224e",
+      "outcome": "Preeclampsia",
+      "effect": 0.72,
+      "se": 0.096940557,
+      "disputed": 0,
+      "erstlesungen_der_quelle": 1,
+      "outcomes_pass_1": [
+        ""
+      ],
+      "klasse": "anderes_outcome",
+      "datei": "data/research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+      "id": "f02306352162",
+      "pass": 2,
+      "poolbar": true,
+      "im_pool": false
+    },
+    {
+      "quelle": "33e5c6d7224e",
+      "outcome": "Preeclampsia",
+      "effect": 0.76,
+      "se": 0.119900162,
+      "disputed": 0,
+      "erstlesungen_der_quelle": 1,
+      "outcomes_pass_1": [
+        ""
+      ],
+      "klasse": "anderes_outcome",
+      "datei": "data/research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+      "id": "5f2e805cd955",
+      "pass": 2,
+      "poolbar": true,
+      "im_pool": false
+    },
+    {
+      "quelle": "33e5c6d7224e",
+      "outcome": "Preeclampsia",
+      "effect": 0.61,
+      "se": 0.163268306,
+      "disputed": 0,
+      "erstlesungen_der_quelle": 1,
+      "outcomes_pass_1": [
+        ""
+      ],
+      "klasse": "anderes_outcome",
+      "datei": "data/research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+      "id": "a15349bb4350",
+      "pass": 2,
+      "poolbar": true,
+      "im_pool": false
+    },
+    {
+      "quelle": "ad7207a5e12f",
+      "outcome": "Incident cardiovascular disease",
+      "effect": 1.67,
+      "se": 0.448987842,
+      "disputed": 0,
+      "erstlesungen_der_quelle": 1,
+      "outcomes_pass_1": [
+        "Incident cardiovascular disease"
+      ],
+      "pass_1_vergleiche": [
+        "Rheumatoid arthritis (RA) vs No RA (Model 2, adjusted)"
+      ],
+      "klasse": "andere_aussage",
+      "datei": "data/research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+      "id": "262706991232",
+      "pass": 2,
+      "poolbar": true,
+      "im_pool": false
+    },
+    {
+      "quelle": "861ae98e8bdc",
+      "outcome": "",
+      "effect": null,
+      "se": null,
+      "disputed": 0,
+      "erstlesungen_der_quelle": 0,
+      "outcomes_pass_1": [],
+      "klasse": "nur_pass_b_unpoolbar",
+      "datei": "data/research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+      "id": "783d9e2ffbc3",
+      "pass": 2,
+      "poolbar": false,
+      "im_pool": false
+    },
+    {
+      "quelle": "fd1b108e450c",
+      "outcome": "Incident cardiovascular disease",
+      "effect": 0.84,
+      "se": 0.073980951,
+      "disputed": 0,
+      "erstlesungen_der_quelle": 1,
+      "outcomes_pass_1": [
+        ""
+      ],
+      "klasse": "anderes_outcome",
+      "datei": "data/research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+      "id": "7da2267625c0",
+      "pass": 2,
+      "poolbar": true,
+      "im_pool": false
+    },
+    {
+      "quelle": "aa9a32a3635a",
+      "outcome": "Agreement between 12-MEDAS and FFQ",
+      "effect": 0.15,
+      "se": 0.045153891,
+      "disputed": 0,
+      "erstlesungen_der_quelle": 1,
+      "outcomes_pass_1": [
+        "Agreement between 12-MEDAS and 24HR"
+      ],
+      "klasse": "anderes_outcome",
+      "datei": "data/research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+      "id": "f7665f077eb0",
+      "pass": 2,
+      "poolbar": true,
+      "im_pool": false
+    },
+    {
+      "quelle": "be86f50d8f30",
+      "outcome": "Major adverse cardiovascular events",
+      "effect": 1.784,
+      "se": 0.530111782,
+      "disputed": 0,
+      "erstlesungen_der_quelle": 1,
+      "outcomes_pass_1": [
+        "Major adverse cardiovascular events"
+      ],
+      "pass_1_vergleiche": [
+        "Abdominal obesity (WC ≥ 94 cm males / ≥ 80 cm females) vs no abdominal obesity"
+      ],
+      "klasse": "andere_aussage",
+      "datei": "data/research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+      "id": "bd1c06c0c6b2",
+      "pass": 2,
+      "poolbar": true,
+      "im_pool": false
+    },
+    {
+      "quelle": "4d58c91c2a69",
+      "outcome": "",
+      "effect": null,
+      "se": null,
+      "disputed": 0,
+      "erstlesungen_der_quelle": 1,
+      "outcomes_pass_1": [
+        "Cardiovascular mortality"
+      ],
+      "klasse": "anderes_outcome_unpoolbar",
+      "datei": "data/research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+      "id": "2c754f387a45",
+      "pass": 2,
+      "poolbar": false,
+      "im_pool": false
+    },
+    {
+      "quelle": "81217ceb6aae",
+      "outcome": "Incident Alzheimer's disease",
+      "effect": null,
+      "se": 0.051021346,
+      "disputed": 0,
+      "erstlesungen_der_quelle": 1,
+      "outcomes_pass_1": [
+        ""
+      ],
+      "klasse": "anderes_outcome_unpoolbar",
+      "datei": "data/research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
+      "id": "aaab67d91037",
+      "pass": 2,
+      "poolbar": false,
+      "im_pool": false
+    }
+  ]
+}
