@@ -13,7 +13,7 @@ Eine Kappa-Zahl entsteht hier nicht; sie folgt nach der Vollannotation.
 
 Aktuelle Hashes (Stand nach der Designkorrektur):
 
-- A: `2f91254e3a4b262403db3bf8e26231a7c57b70b4f252fe741085300d91223182`
+- A: `b31f06e7a7fefd58c663bb046ee30435e43d1a048bffe5006b295dea455a0672`
 - B: `2030d8a186ab19f242aefc854bc2a1c350bb97f9d1067a6b8b7da5b38daed0bc`
 
 Die Hashes sind **Startwerte**. Nach dem Ausfüllen ändern sie sich;
