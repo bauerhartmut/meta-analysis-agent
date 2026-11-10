@@ -1,0 +1,225 @@
+{
+  "definition": "A: Skala der gespeicherten SE bei Ratio-Typen gegen (hi-lo)/(2z) und (ln hi - ln lo)/(2z). B: Abweichung nur dort, wo standardize die SE wirklich liest.",
+  "code_befund": "Ratio + KI: standardize rechnet die log-SE aus dem KI, se bleibt unbenutzt. Ratio ohne KI: se wird als log-SE gelesen. Linear: se wird direkt gelesen.",
+  "dbs": 48,
+  "dbs_fehler": [
+    {
+      "datei": "data/test_run_20260831_202709.db",
+      "fehler": "no such table: study_effects"
+    }
+  ],
+  "nicht_pruefbar": {
+    "kein_se": 89,
+    "typ_unbekannt": 464,
+    "linear_ohne_ki": 709,
+    "kein_effekt": 52
+  },
+  "nutzung": {
+    "linear_se_genutzt": 3947,
+    "ratio_mit_ki_se_unbenutzt": 2636
+  },
+  "skala_ratio": {
+    "hr|-": 36,
+    "hr|linear": 40,
+    "hr|log": 4,
+    "hr|naeher_linear": 40,
+    "or|-": 2239,
+    "or|linear": 2512,
+    "or|log": 281,
+    "or|naeher_linear": 2512,
+    "or|naeher_log": 4,
+    "rr|-": 70,
+    "rr|linear": 80,
+    "rr|log": 10,
+    "rr|naeher_linear": 80
+  },
+  "ratio_ohne_ki": {
+    "n": 0,
+    "median_se_je_effect": null,
+    "beispiele": []
+  },
+  "genutzte_se_nach_typ": {
+    "beta": {
+      "n": 1884,
+      "passt_5": 1884,
+      "ueber_10": 0,
+      "ueber_20": 0,
+      "anteil_ueber_10": 0.0,
+      "median_abs_rel": 0.0,
+      "p90_abs_rel": 0.0
+    },
+    "mean_diff": {
+      "n": 1733,
+      "passt_5": 1733,
+      "ueber_10": 0,
+      "ueber_20": 0,
+      "anteil_ueber_10": 0.0,
+      "median_abs_rel": 0.0,
+      "p90_abs_rel": 0.0
+    },
+    "g": {
+      "n": 195,
+      "passt_5": 195,
+      "ueber_10": 0,
+      "ueber_20": 0,
+      "anteil_ueber_10": 0.0,
+      "median_abs_rel": 0.0,
+      "p90_abs_rel": 0.0
+    },
+    "smd": {
+      "n": 131,
+      "passt_5": 129,
+      "ueber_10": 2,
+      "ueber_20": 0,
+      "anteil_ueber_10": 0.0153,
+      "median_abs_rel": 0.0,
+      "p90_abs_rel": 0.0
+    },
+    "heritability": {
+      "n": 4,
+      "passt_5": 4,
+      "ueber_10": 0,
+      "ueber_20": 0,
+      "anteil_ueber_10": 0.0,
+      "median_abs_rel": 0.0,
+      "p90_abs_rel": 0.0
+    }
+  },
+  "genutzte_se_nach_design": {
+    "(unklassifiziert)": {
+      "n": 3886,
+      "passt_5": 3886,
+      "ueber_10": 0,
+      "ueber_20": 0,
+      "anteil_ueber_10": 0.0,
+      "median_abs_rel": 0.0,
+      "p90_abs_rel": 0.0
+    },
+    "observational": {
+      "n": 31,
+      "passt_5": 31,
+      "ueber_10": 0,
+      "ueber_20": 0,
+      "anteil_ueber_10": 0.0,
+      "median_abs_rel": 0.0,
+      "p90_abs_rel": 0.0
+    },
+    "parallel_rct": {
+      "n": 28,
+      "passt_5": 26,
+      "ueber_10": 2,
+      "ueber_20": 0,
+      "anteil_ueber_10": 0.0714,
+      "median_abs_rel": 0.0,
+      "p90_abs_rel": 0.0226
+    },
+    "crossover_rct": {
+      "n": 2,
+      "passt_5": 2,
+      "ueber_10": 0,
+      "ueber_20": 0,
+      "anteil_ueber_10": 0.0,
+      "median_abs_rel": 0.0,
+      "p90_abs_rel": 0.0
+    }
+  },
+  "genutzte_se_nach_aggregat": {
+    "primaer": {
+      "n": 3913,
+      "passt_5": 3911,
+      "ueber_10": 2,
+      "ueber_20": 0,
+      "anteil_ueber_10": 0.0005,
+      "median_abs_rel": 0.0,
+      "p90_abs_rel": 0.0
+    },
+    "uebersicht": {
+      "n": 34,
+      "passt_5": 34,
+      "ueber_10": 0,
+      "ueber_20": 0,
+      "anteil_ueber_10": 0.0,
+      "median_abs_rel": 0.0,
+      "p90_abs_rel": 0.0
+    }
+  },
+  "genutzte_se_nach_bestand": {
+    "andere": {
+      "n": 3901,
+      "passt_5": 3900,
+      "ueber_10": 1,
+      "ueber_20": 0,
+      "anteil_ueber_10": 0.0003,
+      "median_abs_rel": 0.0,
+      "p90_abs_rel": 0.0
+    },
+    "themen": {
+      "n": 46,
+      "passt_5": 45,
+      "ueber_10": 1,
+      "ueber_20": 0,
+      "anteil_ueber_10": 0.0217,
+      "median_abs_rel": 0.0,
+      "p90_abs_rel": 0.0
+    }
+  },
+  "genutzte_se_nach_pass": {
+    "pass 1": {
+      "n": 3900,
+      "passt_5": 3900,
+      "ueber_10": 0,
+      "ueber_20": 0,
+      "anteil_ueber_10": 0.0,
+      "median_abs_rel": 0.0,
+      "p90_abs_rel": 0.0
+    },
+    "pass 2": {
+      "n": 46,
+      "passt_5": 44,
+      "ueber_10": 2,
+      "ueber_20": 0,
+      "anteil_ueber_10": 0.0435,
+      "median_abs_rel": 0.0,
+      "p90_abs_rel": 0.0
+    },
+    "pass 3": {
+      "n": 1,
+      "passt_5": 1,
+      "ueber_10": 0,
+      "ueber_20": 0,
+      "anteil_ueber_10": 0.0,
+      "median_abs_rel": 0.0,
+      "p90_abs_rel": 0.0
+    }
+  },
+  "beispiele_ueber_10": [
+    {
+      "datei": "data/bench/regreports/research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+      "id": "0d6b1b995a0c",
+      "typ": "smd",
+      "design_kat": "parallel_rct",
+      "effect": -0.24,
+      "ci": [
+        -0.45,
+        -0.03
+      ],
+      "se_ges": 0.12,
+      "se_ki": 0.107145,
+      "rel": 0.12
+    },
+    {
+      "datei": "data/research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
+      "id": "0d6b1b995a0c",
+      "typ": "smd",
+      "design_kat": "parallel_rct",
+      "effect": -0.24,
+      "ci": [
+        -0.45,
+        -0.03
+      ],
+      "se_ges": 0.12,
+      "se_ki": 0.107145,
+      "rel": 0.12
+    }
+  ]
+}

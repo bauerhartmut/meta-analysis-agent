@@ -46,16 +46,23 @@ Sie steht in keiner Gruppe und auch nicht in `off_target`. **Entscheidung: Die
 Zeile bleibt draussen; es ist keine Aenderung noetig.** Sie bleibt als Zeile mit
 Zitat und Grund im Bericht sichtbar.
 
-## Zusatzbefund: die SE passt nicht zum berichteten KI
+## Zusatzbefund: die SE steht auf der HR-Skala (korrigiert)
 
-- SE aus dem berichteten 95%-KI: (ln 0.99 - ln 0.70) / (2 * 1.96) = **0.0884**
-- gespeichert: **0.0740** - das sind **16.3 % zu klein**
-- KI aus der gespeicherten SE: 0.718–0.960 statt 0.7–0.99
+Die gespeicherte SE 0,073981 ist (0,99 - 0,70) / 3,92 - also die SE auf der
+HR-Skala. Eine erste Fassung dieses Berichts hat sie mit der log-SE verglichen
+und daraus "16,3 % zu klein" geschlossen. Das war eine falsche Skalenannahme
+und ist hiermit zurueckgenommen.
 
-Der Punktschaetzer stimmt, die Praezision ist zu optimistisch. Fuer den Pool ist
-das hier folgenlos, weil das Aggregat-Gate vorher greift; fuer primaere Zeilen
-mit demselben Muster waere es ein Fehler. Die Abweichung ist nicht repariert
-worden - sie ist ein Befund, keine stille Korrektur.
+Fuer den Pool ist die Frage ohnehin gegenstandslos: `standardize` rechnet bei
+Ratio-Typen mit vorhandenem KI die log-SE **aus dem KI** und liest die
+gespeicherte SE gar nicht (siehe `se_ki_konsistenz_20261110.md`). Fuer diese
+Zeile gilt also 0,0884 als SE, nicht 0,0740. Der Punktschaetzer stimmt, das
+Zitat stimmt.
+
+Der eigentliche Skalenbefund aus der Messung: Die Extraktion speichert die SE
+bei Ratio-Typen durchgaengig auf der Ratio-Skala (2632 von 2636 Zeilen mit KI),
+was unschaedlich ist, solange ein KI mitgespeichert wird - und das ist bei
+jeder Ratio-Zeile im Bestand der Fall (0 Zeilen ohne KI).
 
 ## Folge fuer die Klassifikation
 
