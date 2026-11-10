@@ -22,16 +22,22 @@ REPO = Path(__file__).resolve().parent.parent
 
 # Datei relativ zum Repo -> Marker, die alle vorkommen muessen.
 CHECKS = (
+    ("research_agent/meta/extraction.py",
+     ("Answer with ONE JSON object", "holds one object per",
+      "If the text reports no effect size")),
+    ("research_agent/llm/engine.py",
+     ('"effects", "effect_rows", "rows",',)),
     ("research_agent/meta/pool_gates.py",
      ("def single_cluster_gate", '"single_cluster"')),
     ("research_agent/meta/pooling.py",
-     ("single_cluster_gate(analysis)", 'weights="random"', "rows_collapsed")),
+     ("single_cluster_gate(analysis)", 'weights="random"',
+      "rows_collapsed")),
     ("research_agent/meta/rve_weights.py",
      ("def random_effects_rve",)),
     ("research_agent/report.py",
-     ('group.get("single_cluster")', "Kein Konfidenzintervall",
-      'group.get("rve_re")', "allein die Cluster-Korrektur",
-      "Zeilenbasis")),
+     ('group.get("single_cluster")',
+      "Kein Konfidenzintervall", 'group.get("rve_re")',
+      "allein die Cluster-Korrektur", "Zeilenbasis")),
 )
 
 BACKUP = Path("local_patches") / "report_20261109.py"

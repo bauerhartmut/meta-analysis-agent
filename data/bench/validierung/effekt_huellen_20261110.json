@@ -1,0 +1,132 @@
+{
+  "faelle": [
+    {
+      "fall": "T1b",
+      "datei": "bmj.e6664.full.pdf",
+      "huelle_im_prompt": true,
+      "roh_zeichen": 3108,
+      "roh_datei": "effekt_huellen_T1b_20261110.txt",
+      "top_typ": "dict",
+      "schluessel": [
+        "effects"
+      ],
+      "listen": {
+        "effects": 5
+      },
+      "unwrap_items": 5,
+      "zeilen": 5,
+      "zeilen_mit_se": 5,
+      "soll_treffer": [
+        {
+          "soll": -37.5,
+          "getroffen": true,
+          "outcome": "Sleep onset latency"
+        },
+        {
+          "soll": -45.3,
+          "getroffen": true,
+          "outcome": "Sleep onset latency"
+        }
+      ],
+      "outcomes": [
+        "Total sleep time",
+        "Sleep onset latency",
+        "Total sleep time",
+        "Sleep onset latency",
+        "Sleep efficiency"
+      ]
+    },
+    {
+      "fall": "T4",
+      "datei": "1-s2.0-S1389945724004866-main.pdf",
+      "huelle_im_prompt": true,
+      "roh_zeichen": 11309,
+      "roh_datei": "effekt_huellen_T4_20261110.txt",
+      "top_typ": "dict",
+      "schluessel": [
+        "effects"
+      ],
+      "listen": {
+        "effects": 13
+      },
+      "unwrap_items": 13,
+      "zeilen": 13,
+      "zeilen_mit_se": 6,
+      "soll_treffer": [
+        {
+          "soll": 8.36,
+          "getroffen": true,
+          "outcome": "Polysomnography sleep latency"
+        }
+      ],
+      "outcomes": [
+        "Pittsburgh Sleep Quality Index (PSQI) score",
+        "Epworth Sleepiness Scale (ESS) score",
+        "Non-Motor Symptoms Scale (NMSS) score",
+        "Parkinson's Disease Questionnaire (PDQ 39) score",
+        "Polysomnography sleep latency",
+        "Polysomnography total sleep time",
+        "Drowsiness",
+        "Nausea",
+        "Dizziness",
+        "Fatigue",
+        "Headache",
+        "Decreased appetite",
+        "Worsening of Insomnia"
+      ]
+    }
+  ],
+  "tokens": {
+    "total_calls": 3,
+    "total_prompt_tokens": 13979,
+    "total_completion_tokens": 4796,
+    "total_tokens": 18775,
+    "total_time_ms": 102016.0,
+    "avg_time_ms": 34005.3,
+    "avg_tokens_per_call": 1598.7,
+    "errors": 0,
+    "phase_tokens": {
+      "idle": 18775
+    },
+    "phase_time_ms": {
+      "idle": 102016.0
+    },
+    "phase_calls": {
+      "idle": 3
+    },
+    "consecutive_failures": 0,
+    "last_failure": "",
+    "recent_calls": [
+      {
+        "prompt_tokens": 13,
+        "completion_tokens": 14,
+        "total_tokens": 27,
+        "time_ms": 94.0,
+        "phase": "idle",
+        "success": true,
+        "model": "gwdg/qwen3.5-397b-a17b",
+        "timestamp": 1794322861.509637
+      },
+      {
+        "prompt_tokens": 8008,
+        "completion_tokens": 1040,
+        "total_tokens": 9048,
+        "time_ms": 22812.0,
+        "phase": "idle",
+        "success": true,
+        "model": "gwdg/qwen3.5-397b-a17b",
+        "timestamp": 1794322885.080385
+      },
+      {
+        "prompt_tokens": 5958,
+        "completion_tokens": 3742,
+        "total_tokens": 9700,
+        "time_ms": 79110.0,
+        "phase": "idle",
+        "success": true,
+        "model": "gwdg/qwen3.5-397b-a17b",
+        "timestamp": 1794322965.7329662
+      }
+    ]
+  }
+}

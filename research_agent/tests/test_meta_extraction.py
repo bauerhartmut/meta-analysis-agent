@@ -336,7 +336,7 @@ class PromptSplitTest(unittest.TestCase):
         self.assertIn("INDEPENDENT SECOND READER", b)
         self.assertNotIn(
             "You read effect sizes out of research papers for the topic:",
-            b.split("Return a JSON array")[0][:400])
+            b.split("Answer with ONE JSON object")[0][:400])
 
     def test_first_frame_keeps_its_shape(self):
         a = self._system("first", "effect_first")
@@ -346,12 +346,12 @@ class PromptSplitTest(unittest.TestCase):
     def test_return_contract_identical_both_frames(self):
         a = self._system("first", "effect_first")
         b = self._system("second", "precision_first")
-        self.assertIn("Return a JSON array", a)
-        self.assertIn("Return a JSON array", b)
+        self.assertIn("Answer with ONE JSON object", a)
+        self.assertIn("Answer with ONE JSON object", b)
         # Same field set as a set; only the (intended) order differs.
         import re
-        fa = re.findall(r"[a-z_]+", a.split("Return a JSON array")[1])
-        fb = re.findall(r"[a-z_]+", b.split("Return a JSON array")[1])
+        fa = re.findall(r"[a-z_]+", a.split("Answer with ONE JSON object")[1])
+        fb = re.findall(r"[a-z_]+", b.split("Answer with ONE JSON object")[1])
         self.assertEqual(set(fa), set(fb))
 
     def test_pass_two_sends_second_frame(self):
@@ -382,7 +382,7 @@ class PromptSplitTest(unittest.TestCase):
         self.assertNotIn("INDEPENDENT SECOND READER", c)
         # Dieselben harten Regeln wie in beiden anderen Framings:
         self.assertIn("Never estimate, never compute", c)
-        self.assertIn("Return a JSON array", c)
+        self.assertIn("Answer with ONE JSON object", c)
 
     def test_frames_all_differ(self):
         a = self._system("first", "effect_first")
