@@ -1,7 +1,74 @@
 # Handoff: Status des Autonomous Research Agents
 
-**Stand:** 01.11.2026, Abend · **Projekt:** `D:\daswu\AIResearch`, Paket `research_agent/`
-**Auftrag an die empfangende KI:** verbesserungsvorschläge machen. Siehe Abschnitt 6 (bekannte Schwächen) und 7 (offene To-dos).
+**Stand:** 01.11.2026, Abend (Research-Agent) · Goldstandard B: 10.11.2026 · **Projekt:** `D:\daswu\AIResearch`, Paket `research_agent/`
+**Auftrag an die empfangende KI:** verbesserungsvorschläge machen. Siehe Abschnitt 6 (bekannte Schwächen) und 7 (offene To-dos). Für den Goldstandard-Workstream siehe Abschnitt 0.
+
+## 0. Goldstandard B: Stand 10.11.2026
+
+Dieser Workstream ist getrennt vom Agenten-Betrieb. A und B bleiben
+getrennt; es gab keinen Vergleich zwischen A und B.
+
+### Stand
+
+| Gegenstand | Stand |
+|---|---|
+| `goldstandard_A.json` | 69 Zeilen, 13 Begründungen, 0 offen, 30 Dokumente |
+| A-Hash | `d9bb867c303dc19ddaf90cce3414ada0f4484b5a03881d65261950db0762a810` |
+| `goldstandard_B.json` | 0 Zeilen, 0 Begründungen, 30 offen, 30 Dokumente |
+| B-Hash (Gerüst) | `93802e1798ae5e54ef3896e162e2fdeb2d783486a40239df590ddfa0dfe46d20` |
+| B-Rücklauf | liegt nicht vor |
+| B-Abgabe-Hash | nicht eingefroren |
+| Kappa/Konflikte | nicht gestartet |
+
+### Vorhandene Artefakte
+
+- `blind_b_20261110.zip` — portables Blind-Paket mit 30 Volltexten,
+  SHA-256 `2f9db202c218abaf34bbabbb332c7e31d64693b0faed467dda3854e5a3b9b173`.
+- `data/golden_effects/blind_b_20261110/` — Vorlage mit B-Gerüst,
+  Anleitung v1.2, Schema, 30 Arbeitsblättern, Manifest und Prüfsummen.
+- `scripts/pruefe_b_ruecklauf.py` — prüft IDs, Vollständigkeit,
+  Designmetadaten und Hash; schreibt die Abgabenotiz nur bei 0 Fehlern
+  und 0 offenen Dokumenten.
+- `docs/internal/goldstandard_B_uebergabe_20261110.md` — versandfertige
+  Anweisung für die externe Annotation.
+- `docs/internal/status_20261110_b_ruecklauf.md` — ausführlicher
+  Statusbericht.
+- `docs/internal/vollannotation_abgabe_checkliste_20261110.md` —
+  Checkliste mit offenen Abgabe-Hashes.
+- Paketprüfung: 36 Prüfsummen OK, ZIP mit 67 Dateien und 30 Volltexten,
+  B im ZIP mit 0 Fehlern und 30 offen; keine echte A-Datei.
+
+### Nächste Schritte
+
+1. Externen B-Rücklauf unter
+   `data/golden_effects/goldstandard_B_ruecklauf.json` ablegen.
+2. Zuerst nur prüfen:
+
+       .venv/bin/python.exe scripts/pruefe_b_ruecklauf.py data/golden_effects/goldstandard_B_ruecklauf.json --keine-notiz
+
+3. Bei Fehlern den Rücklauf an die annotierende Person zurückgeben;
+   keine inhaltlichen Korrekturen selbst vornehmen.
+4. Bei 0 Fehlern und 0 offenen Dokumenten ohne `--keine-notiz` laufen
+   lassen; die Abgabenotiz mit SHA-256 erzeugen.
+5. B-Hash in die Abgabe-Checkliste eintragen und B nicht mehr ändern.
+6. Erst danach A öffnen und Kappa/Konflikte mit dem Rücklauf berechnen:
+
+       B=data/golden_effects/goldstandard_B_ruecklauf.json
+
+       .venv/bin/python.exe scripts/werte_kappa_probe.py --b "$B"
+       .venv/bin/python.exe scripts/berichte_kappa_konflikte.py --b "$B" --md docs/internal/kappa_konflikte_vollannotation_20261110.md --out data/golden_effects/kappa_konflikte_vollannotation.json
+       .venv/bin/python.exe scripts/priorisiere_kappa_konflikte.py --quelle data/golden_effects/kappa_konflikte_vollannotation.json --md docs/internal/kappa_konflikte_priorisiert_vollannotation_20261110.md --out data/golden_effects/kappa_konflikte_priorisiert_vollannotation.json
+
+7. Konflikte für die dritte Stimme klären; Schwelle Zeilen-Kappa 0,80.
+
+### Guardrails
+
+- B nicht selbst annotieren: Der Assistent hat A geschrieben; die
+  Zweitannotation muss unabhängig bleiben.
+- A erst nach eingefrorenem B-Hash öffnen oder vergleichen.
+- Keine Netzläufe und keine Modellaufrufe für diesen Schritt.
+- Das portable ZIP bleibt untracked; es enthält Volltexte und gehört
+  nicht ins Repository.
 
 ## 1. Zweck und Arbeitsweise
 
