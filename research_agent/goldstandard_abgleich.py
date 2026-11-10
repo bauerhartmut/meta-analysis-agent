@@ -156,6 +156,7 @@ def dedupe(zeilen: list):
 def _leer() -> dict:
     return {"tp": 0, "fp": 0, "fn": 0, "typ_ok": 0, "wert_ok": 0,
             "pipeline_zeilen": 0, "pipeline_zeilen_annotiert": 0,
+            "pipeline_unique": 0, "pipeline_duplikate": 0,
             "unique": 0, "duplikate": 0,
             "poolbar": 0, "poolbar_unique": 0, "poolbar_tp": 0,
             "n_annotiert": 0, "n_offen": 0}
@@ -178,6 +179,8 @@ def _abschluss(d: dict) -> dict:
     d["ausbeute_poolbar_unique"] = ((d["poolbar_unique"] / d["n_annotiert"])
                                     if d["n_annotiert"] else None)
     d["duplikatquote"] = ((d["duplikate"] / n) if n else None)
+    d["baseline_duplikatquote"] = ((d["pipeline_duplikate"] / d["pipeline_zeilen"])
+                                    if d["pipeline_zeilen"] else None)
     return d
 
 
@@ -191,8 +194,11 @@ def werte(gold_docs: dict, pipe_docs: dict, docs: list, annotiert: set,
         fid = doc["document_id"]
         schicht = doc["stratum"]
         p = pipe_docs.get(fid, [])
-        gesamt["pipeline_zeilen"] += len(p)
-        schichten[schicht]["pipeline_zeilen"] += len(p)
+        p_unique, duplikate = dedupe(p)
+        for ziel in (gesamt, schichten[schicht]):
+            ziel["pipeline_zeilen"] += len(p)
+            ziel["pipeline_unique"] += len(p_unique)
+            ziel["pipeline_duplikate"] += duplikate
 
         if fid not in annotiert:
             gesamt["n_offen"] += 1
@@ -203,7 +209,6 @@ def werte(gold_docs: dict, pipe_docs: dict, docs: list, annotiert: set,
 
         g = gold_docs.get(fid, [])
         paare, rest_g, rest_p = matche(g, p, schwelle, toleranz)
-        p_unique, duplikate = dedupe(p)
         zahlen = {"tp": len(paare), "fp": len(rest_p), "fn": len(rest_g),
                   "typ_ok": sum(1 for _, ga, pa in paare
                                 if ga.get("effect_type") == pa.get("effect_type")),

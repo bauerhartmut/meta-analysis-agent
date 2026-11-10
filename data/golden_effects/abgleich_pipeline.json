@@ -11,6 +11,8 @@
   "wert_ok": 0,
   "pipeline_zeilen": 37,
   "pipeline_zeilen_annotiert": 0,
+  "pipeline_unique": 24,
+  "pipeline_duplikate": 13,
   "unique": 0,
   "duplikate": 0,
   "poolbar": 0,
@@ -28,7 +30,8 @@
   "ausbeute_poolbar": null,
   "poolbare_quote_unique": null,
   "ausbeute_poolbar_unique": null,
-  "duplikatquote": null
+  "duplikatquote": null,
+  "baseline_duplikatquote": 0.35135135135135137
  },
  "schichten": {
   "aggregate": {
@@ -39,6 +42,8 @@
    "wert_ok": 0,
    "pipeline_zeilen": 7,
    "pipeline_zeilen_annotiert": 0,
+   "pipeline_unique": 4,
+   "pipeline_duplikate": 3,
    "unique": 0,
    "duplikate": 0,
    "poolbar": 0,
@@ -56,7 +61,8 @@
    "ausbeute_poolbar": null,
    "poolbare_quote_unique": null,
    "ausbeute_poolbar_unique": null,
-   "duplikatquote": null
+   "duplikatquote": null,
+   "baseline_duplikatquote": 0.42857142857142855
   },
   "cohort": {
    "tp": 0,
@@ -66,6 +72,8 @@
    "wert_ok": 0,
    "pipeline_zeilen": 17,
    "pipeline_zeilen_annotiert": 0,
+   "pipeline_unique": 13,
+   "pipeline_duplikate": 4,
    "unique": 0,
    "duplikate": 0,
    "poolbar": 0,
@@ -83,7 +91,8 @@
    "ausbeute_poolbar": null,
    "poolbare_quote_unique": null,
    "ausbeute_poolbar_unique": null,
-   "duplikatquote": null
+   "duplikatquote": null,
+   "baseline_duplikatquote": 0.23529411764705882
   },
   "cross_sectional": {
    "tp": 0,
@@ -93,6 +102,8 @@
    "wert_ok": 0,
    "pipeline_zeilen": 5,
    "pipeline_zeilen_annotiert": 0,
+   "pipeline_unique": 3,
+   "pipeline_duplikate": 2,
    "unique": 0,
    "duplikate": 0,
    "poolbar": 0,
@@ -110,7 +121,8 @@
    "ausbeute_poolbar": null,
    "poolbare_quote_unique": null,
    "ausbeute_poolbar_unique": null,
-   "duplikatquote": null
+   "duplikatquote": null,
+   "baseline_duplikatquote": 0.4
   },
   "crossover": {
    "tp": 0,
@@ -120,6 +132,8 @@
    "wert_ok": 0,
    "pipeline_zeilen": 0,
    "pipeline_zeilen_annotiert": 0,
+   "pipeline_unique": 0,
+   "pipeline_duplikate": 0,
    "unique": 0,
    "duplikate": 0,
    "poolbar": 0,
@@ -137,7 +151,8 @@
    "ausbeute_poolbar": null,
    "poolbare_quote_unique": null,
    "ausbeute_poolbar_unique": null,
-   "duplikatquote": null
+   "duplikatquote": null,
+   "baseline_duplikatquote": null
   },
   "negative_control": {
    "tp": 0,
@@ -147,6 +162,8 @@
    "wert_ok": 0,
    "pipeline_zeilen": 0,
    "pipeline_zeilen_annotiert": 0,
+   "pipeline_unique": 0,
+   "pipeline_duplikate": 0,
    "unique": 0,
    "duplikate": 0,
    "poolbar": 0,
@@ -164,7 +181,8 @@
    "ausbeute_poolbar": null,
    "poolbare_quote_unique": null,
    "ausbeute_poolbar_unique": null,
-   "duplikatquote": null
+   "duplikatquote": null,
+   "baseline_duplikatquote": null
   },
   "rct": {
    "tp": 0,
@@ -174,6 +192,8 @@
    "wert_ok": 0,
    "pipeline_zeilen": 8,
    "pipeline_zeilen_annotiert": 0,
+   "pipeline_unique": 4,
+   "pipeline_duplikate": 4,
    "unique": 0,
    "duplikate": 0,
    "poolbar": 0,
@@ -191,7 +211,8 @@
    "ausbeute_poolbar": null,
    "poolbare_quote_unique": null,
    "ausbeute_poolbar_unique": null,
-   "duplikatquote": null
+   "duplikatquote": null,
+   "baseline_duplikatquote": 0.5
   }
  },
  "dokumente": [

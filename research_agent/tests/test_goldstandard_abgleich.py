@@ -177,6 +177,18 @@ def test_ausbeute_unique_entfernt_doppelzeilen():
     assert s["duplikatquote"] == pytest.approx(0.25)
 
 
+def test_baseline_duplikate_auch_ohne_annotation():
+    docs = [{"document_id": "d1", "stratum": "rct"}]
+    p = {"d1": [pipe("x", 1.0, se=0.1), pipe("x", 1.0, se=0.1)]}
+    r = werte({}, p, docs, annotiert=set())
+    s = r["gesamt"]
+    assert s["pipeline_zeilen"] == 2
+    assert s["pipeline_unique"] == 1
+    assert s["pipeline_duplikate"] == 1
+    assert s["baseline_duplikatquote"] == pytest.approx(0.5)
+    assert s["ausbeute_poolbar_unique"] is None
+
+
 def test_ausbeute_nur_annotierte_dokumente():
     docs = [{"document_id": "d1", "stratum": "rct"},
             {"document_id": "d2", "stratum": "rct"}]

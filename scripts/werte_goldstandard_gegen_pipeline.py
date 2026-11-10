@@ -92,7 +92,11 @@ def bericht_text(ergebnis: dict, gold_datei: str, quelle: dict) -> str:
     zeilen = [
         f"Goldstandard: {gold_datei}",
         f"Dokumente: {quelle['n_dokumente']} | annotiert: {g['n_annotiert']} | offen: {g['n_offen']}",
-        f"Pipelinezeilen: {g['pipeline_zeilen']} | Toleranz: {ergebnis['stufen']['toleranz']:.0%} | Schwelle: {ergebnis['stufen']['schwelle']:.2f}",
+        f"Pipelinezeilen: {g['pipeline_zeilen']} | unique: {g['pipeline_unique']} | "
+        f"Duplikate: {g['pipeline_duplikate']} "
+        f"({100 * g['baseline_duplikatquote']:.0f} %)" if g['baseline_duplikatquote'] is not None
+        else f"Pipelinezeilen: {g['pipeline_zeilen']} | unique: {g['pipeline_unique']} | Duplikate: {g['pipeline_duplikate']}",
+        f"Toleranz: {ergebnis['stufen']['toleranz']:.0%} | Schwelle: {ergebnis['stufen']['schwelle']:.2f}",
     ]
     if not g["n_annotiert"]:
         zeilen.append("Keine Annotation: es gibt nichts auszuwerten. Die Pipeline-Zahlen stehen nur als Baseline.")

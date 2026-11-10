@@ -6,7 +6,8 @@ research-does-acute-caffeine-versus-placebo-affec-972eac.db, research-does-caffe
 ```
 Goldstandard: data/golden_effects/goldstandard_A.json
 Dokumente: 30 | annotiert: 0 | offen: 30
-Pipelinezeilen: 37 | Toleranz: 1% | Schwelle: 0.55
+Pipelinezeilen: 37 | unique: 24 | Duplikate: 13 (35 %)
+Toleranz: 1% | Schwelle: 0.55
 Keine Annotation: es gibt nichts auszuwerten. Die Pipeline-Zahlen stehen nur als Baseline.
 ```
 
