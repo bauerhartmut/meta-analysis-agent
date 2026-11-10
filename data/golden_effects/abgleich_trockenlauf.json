@@ -10,12 +10,19 @@
   "typ_ok": 1,
   "wert_ok": 1,
   "pipeline_zeilen": 37,
+  "pipeline_zeilen_annotiert": 1,
+  "poolbar": 1,
+  "poolbar_tp": 1,
   "n_annotiert": 1,
   "n_offen": 29,
   "precision": 1.0,
   "recall": 1.0,
   "typquote": 1.0,
-  "wertquote": 1.0
+  "wertquote": 1.0,
+  "poolbare_quote": 1.0,
+  "poolbare_quote_tp": 1.0,
+  "zeilen_pro_dokument": 1.0,
+  "ausbeute_poolbar": 1.0
  },
  "schichten": {
   "aggregate": {
@@ -25,12 +32,19 @@
    "typ_ok": 1,
    "wert_ok": 1,
    "pipeline_zeilen": 7,
+   "pipeline_zeilen_annotiert": 1,
+   "poolbar": 1,
+   "poolbar_tp": 1,
    "n_annotiert": 1,
    "n_offen": 3,
    "precision": 1.0,
    "recall": 1.0,
    "typquote": 1.0,
-   "wertquote": 1.0
+   "wertquote": 1.0,
+   "poolbare_quote": 1.0,
+   "poolbare_quote_tp": 1.0,
+   "zeilen_pro_dokument": 1.0,
+   "ausbeute_poolbar": 1.0
   },
   "cohort": {
    "tp": 0,
@@ -39,12 +53,19 @@
    "typ_ok": 0,
    "wert_ok": 0,
    "pipeline_zeilen": 17,
+   "pipeline_zeilen_annotiert": 0,
+   "poolbar": 0,
+   "poolbar_tp": 0,
    "n_annotiert": 0,
    "n_offen": 7,
    "precision": null,
    "recall": null,
    "typquote": null,
-   "wertquote": null
+   "wertquote": null,
+   "poolbare_quote": null,
+   "poolbare_quote_tp": null,
+   "zeilen_pro_dokument": null,
+   "ausbeute_poolbar": null
   },
   "cross_sectional": {
    "tp": 0,
@@ -53,12 +74,19 @@
    "typ_ok": 0,
    "wert_ok": 0,
    "pipeline_zeilen": 5,
+   "pipeline_zeilen_annotiert": 0,
+   "poolbar": 0,
+   "poolbar_tp": 0,
    "n_annotiert": 0,
    "n_offen": 5,
    "precision": null,
    "recall": null,
    "typquote": null,
-   "wertquote": null
+   "wertquote": null,
+   "poolbare_quote": null,
+   "poolbare_quote_tp": null,
+   "zeilen_pro_dokument": null,
+   "ausbeute_poolbar": null
   },
   "crossover": {
    "tp": 0,
@@ -67,12 +95,19 @@
    "typ_ok": 0,
    "wert_ok": 0,
    "pipeline_zeilen": 0,
+   "pipeline_zeilen_annotiert": 0,
+   "poolbar": 0,
+   "poolbar_tp": 0,
    "n_annotiert": 0,
    "n_offen": 3,
    "precision": null,
    "recall": null,
    "typquote": null,
-   "wertquote": null
+   "wertquote": null,
+   "poolbare_quote": null,
+   "poolbare_quote_tp": null,
+   "zeilen_pro_dokument": null,
+   "ausbeute_poolbar": null
   },
   "negative_control": {
    "tp": 0,
@@ -81,12 +116,19 @@
    "typ_ok": 0,
    "wert_ok": 0,
    "pipeline_zeilen": 0,
+   "pipeline_zeilen_annotiert": 0,
+   "poolbar": 0,
+   "poolbar_tp": 0,
    "n_annotiert": 0,
    "n_offen": 5,
    "precision": null,
    "recall": null,
    "typquote": null,
-   "wertquote": null
+   "wertquote": null,
+   "poolbare_quote": null,
+   "poolbare_quote_tp": null,
+   "zeilen_pro_dokument": null,
+   "ausbeute_poolbar": null
   },
   "rct": {
    "tp": 0,
@@ -95,12 +137,19 @@
    "typ_ok": 0,
    "wert_ok": 0,
    "pipeline_zeilen": 8,
+   "pipeline_zeilen_annotiert": 0,
+   "poolbar": 0,
+   "poolbar_tp": 0,
    "n_annotiert": 0,
    "n_offen": 6,
    "precision": null,
    "recall": null,
    "typquote": null,
-   "wertquote": null
+   "wertquote": null,
+   "poolbare_quote": null,
+   "poolbare_quote_tp": null,
+   "zeilen_pro_dokument": null,
+   "ausbeute_poolbar": null
   }
  },
  "dokumente": [
@@ -185,6 +234,9 @@
    "fn": 0,
    "typ_ok": 1,
    "wert_ok": 1,
+   "pipeline_zeilen_annotiert": 1,
+   "poolbar": 1,
+   "poolbar_tp": 1,
    "paare": [
     {
      "score": 0.906,

@@ -18,6 +18,13 @@ Keine Annotation: es gibt nichts auszuwerten. Die Pipeline-Zahlen stehen nur als
 - **Precision** = TP / (TP + FP), **Recall** = TP / (TP + FN).
 - **Typquote** = gepaarte Zeilen mit gleichem `effect_type` / TP.
 - **Wertquote** = gepaarte Zeilen mit Effekt innerhalb 1% / TP.
+- **Poolbar** = Anteil der Pipelinezeilen mit `Database.POOLABLE`
+  (`disputed=0`, kein `rejection_reason`, `quote_start >= 0`, SE oder KI).
+- **Ausbeute** = poolbare Pipelinezeilen je annotiertem Volltext.
+
+Die Ausbeute zaehlt nur Zeilen **annotierter** Dokumente; offene Dokumente
+liefern keine Quote. `nur_akzeptiert` aendert die Poolbarkeit nicht, weil
+die POOLABLE-Definition Verworfenes und Strittiges ohnehin ausschliesst.
 
 Gepaart wird greedy nach Aehnlichkeit aus Outcome-Tokens, Vergleich,
 Effekttyp und Wertnaehe; Schwelle 0.55. Das ist eine

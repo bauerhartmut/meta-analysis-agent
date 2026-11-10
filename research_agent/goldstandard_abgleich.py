@@ -92,9 +92,33 @@ def matche(gold: list, pipe: list, schwelle: float = 0.55,
             [p for j, p in enumerate(pipe) if j not in pj])
 
 
+def ist_poolbar(zeile: dict) -> bool:
+    """Dieselbe Definition wie ``Database.POOLABLE``.
+
+    Nicht strittig, nicht verworfen, mit verifiziertem Zitatbereich und
+    einer Praezision (SE oder KI). Eine zweite Definition hier waere eine
+    zweite Wahrheit; der Abgleich muss zaehlen, was das Pooling zaehlt.
+    """
+    if zeile.get("disputed"):
+        return False
+    if str(zeile.get("rejection_reason") or "").strip():
+        return False
+    try:
+        start = zeile.get("quote_start")
+        if start is None or int(start) < 0:
+            return False
+    except (TypeError, ValueError):
+        return False
+    return (zeile.get("se") is not None
+            or (zeile.get("ci_low") is not None
+                and zeile.get("ci_high") is not None))
+
+
 def _leer() -> dict:
     return {"tp": 0, "fp": 0, "fn": 0, "typ_ok": 0, "wert_ok": 0,
-            "pipeline_zeilen": 0, "n_annotiert": 0, "n_offen": 0}
+            "pipeline_zeilen": 0, "pipeline_zeilen_annotiert": 0,
+            "poolbar": 0, "poolbar_tp": 0,
+            "n_annotiert": 0, "n_offen": 0}
 
 
 def _abschluss(d: dict) -> dict:
@@ -103,6 +127,12 @@ def _abschluss(d: dict) -> dict:
     d["recall"] = (tp / (tp + fn)) if (tp + fn) else None
     d["typquote"] = (d["typ_ok"] / tp) if tp else None
     d["wertquote"] = (d["wert_ok"] / tp) if tp else None
+    n = d["pipeline_zeilen_annotiert"]
+    d["poolbare_quote"] = (d["poolbar"] / n) if n else None
+    d["poolbare_quote_tp"] = (d["poolbar_tp"] / tp) if tp else None
+    d["zeilen_pro_dokument"] = (n / d["n_annotiert"]) if d["n_annotiert"] else None
+    d["ausbeute_poolbar"] = ((d["poolbar"] / d["n_annotiert"])
+                             if d["n_annotiert"] else None)
     return d
 
 
@@ -132,7 +162,10 @@ def werte(gold_docs: dict, pipe_docs: dict, docs: list, annotiert: set,
                   "typ_ok": sum(1 for _, ga, pa in paare
                                 if ga.get("effect_type") == pa.get("effect_type")),
                   "wert_ok": sum(1 for _, ga, pa in paare
-                                 if _nah(_zahl(ga, "effect"), _zahl(pa, "effect"), toleranz))}
+                                 if _nah(_zahl(ga, "effect"), _zahl(pa, "effect"), toleranz)),
+                  "pipeline_zeilen_annotiert": len(p),
+                  "poolbar": sum(1 for x in p if ist_poolbar(x)),
+                  "poolbar_tp": sum(1 for _, _, pa in paare if ist_poolbar(pa))}
         for ziel in (gesamt, schichten[schicht]):
             for k, v in zahlen.items():
                 ziel[k] += v
@@ -148,7 +181,9 @@ def werte(gold_docs: dict, pipe_docs: dict, docs: list, annotiert: set,
                                    "typ_gleich": ga.get("effect_type") == pa.get("effect_type")}
                                   for s, ga, pa in paare],
                         "nur_gold": [x.get("outcome_normalized") for x in rest_g],
-                        "nur_pipeline": [x.get("outcome") for x in rest_p]})
+                        "nur_pipeline": [x.get("outcome") for x in rest_p],
+                        "poolbar": zahlen["poolbar"],
+                        "poolbar_tp": zahlen["poolbar_tp"]})
 
     return {"stufen": {"schwelle": schwelle, "toleranz": toleranz},
             "gesamt": _abschluss(gesamt),

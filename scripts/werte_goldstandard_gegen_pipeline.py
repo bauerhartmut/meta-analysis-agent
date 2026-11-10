@@ -69,7 +69,8 @@ def lade_pipeline(docs: list, dbs: list, nur_akzeptiert: bool):
             continue
         treffer_db[fid] = db.name
         sql = ("select e.id, e.outcome, e.comparison, e.effect_type, e.effect, "
-               "e.ci_low, e.ci_high, e.se, e.quote, e.disputed, e.rejection_reason "
+               "e.ci_low, e.ci_high, e.se, e.quote, e.quote_start, e.disputed, "
+               "e.rejection_reason "
                "from study_effects e join source_texts t on e.source_text_id = t.id "
                "where t.id = ? and e.effect is not null")
         if nur_akzeptiert:
@@ -78,7 +79,8 @@ def lade_pipeline(docs: list, dbs: list, nur_akzeptiert: bool):
         ergebnis[fid] = [{"id": z[0], "outcome": z[1], "comparison": z[2],
                           "effect_type": z[3], "effect": z[4], "ci_low": z[5],
                           "ci_high": z[6], "se": z[7], "quote": z[8],
-                          "disputed": z[9], "rejection_reason": z[10]}
+                          "quote_start": z[9], "disputed": z[10],
+                          "rejection_reason": z[11]}
                          for z in zeilen]
     for con in verbindungen.values():
         con.close()
@@ -99,16 +101,21 @@ def bericht_text(ergebnis: dict, gold_datei: str, quelle: dict) -> str:
     def p(x):
         return "n/a" if x is None else f"{100 * x:.0f} %"
 
+    def a(x):
+        return "n/a" if x is None else f"{x:.2f}"
+
     zeilen += [
         "",
-        "| Schicht | TP | FP | FN | Precision | Recall | Typ | Wert |",
-        "|---|---|---|---|---|---|---|---|",
+        "| Schicht | TP | FP | FN | Precision | Recall | Typ | Wert | Poolbar | Ausbeute |",
+        "|---|---|---|---|---|---|---|---|---|---|",
     ]
     for name, s in ergebnis["schichten"].items():
         zeilen.append(f"| {name} | {s['tp']} | {s['fp']} | {s['fn']} | {p(s['precision'])} | "
-                      f"{p(s['recall'])} | {p(s['typquote'])} | {p(s['wertquote'])} |")
+                      f"{p(s['recall'])} | {p(s['typquote'])} | {p(s['wertquote'])} | "
+                      f"{p(s['poolbare_quote'])} | {a(s['ausbeute_poolbar'])} |")
     zeilen.append(f"| **gesamt** | {g['tp']} | {g['fp']} | {g['fn']} | {p(g['precision'])} | "
-                  f"{p(g['recall'])} | {p(g['typquote'])} | {p(g['wertquote'])} |")
+                  f"{p(g['recall'])} | {p(g['typquote'])} | {p(g['wertquote'])} | "
+                  f"{p(g['poolbare_quote'])} | {a(g['ausbeute_poolbar'])} |")
     return "\n".join(zeilen)
 
 
@@ -170,6 +177,13 @@ Kein Modellaufruf. Quelle: `{gold_pfad.relative_to(ROOT)}`, Datenbanken:
 - **Precision** = TP / (TP + FP), **Recall** = TP / (TP + FN).
 - **Typquote** = gepaarte Zeilen mit gleichem `effect_type` / TP.
 - **Wertquote** = gepaarte Zeilen mit Effekt innerhalb {args.toleranz:.0%} / TP.
+- **Poolbar** = Anteil der Pipelinezeilen mit `Database.POOLABLE`
+  (`disputed=0`, kein `rejection_reason`, `quote_start >= 0`, SE oder KI).
+- **Ausbeute** = poolbare Pipelinezeilen je annotiertem Volltext.
+
+Die Ausbeute zaehlt nur Zeilen **annotierter** Dokumente; offene Dokumente
+liefern keine Quote. `nur_akzeptiert` aendert die Poolbarkeit nicht, weil
+die POOLABLE-Definition Verworfenes und Strittiges ohnehin ausschliesst.
 
 Gepaart wird greedy nach Aehnlichkeit aus Outcome-Tokens, Vergleich,
 Effekttyp und Wertnaehe; Schwelle {args.schwelle:.2f}. Das ist eine
