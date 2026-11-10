@@ -35,4 +35,5 @@ das Skript auf, statt den Code zu lesen.
 | `pooling_rve_weights_20261109.md` | `research_agent/meta/pooling.py` | wirksam, Pruefskript Exit 0 |
 | `report_rve_re_20261109.md` | `research_agent/report.py` | wirksam, Pruefskript Exit 0 |
 | `extraction_effects_huellen_20261110.md` | `research_agent/meta/extraction.py`, `research_agent/llm/engine.py` | wirksam, Pruefskript Exit 0 |
-| `pooling_lesepass_dedup_20261110.md` | `research_agent/meta/pooling.py`, `research_agent/meta/extraction.py` | wirksam, Pruefskript Exit 0 |
+| `pooling_lesepass_dedup_20261110.md` | `research_agent/meta/pooling.py` | wirksam, Pruefskript Exit 0 |
+| `report_pruefspur_20261110.md` | `research_agent/report.py`, `research_agent/meta/pooling.py` | wirksam, Pruefskript Exit 0 |
