@@ -9,7 +9,7 @@
   "crossover": 3,
   "cross_sectional": 5,
   "aggregate": 4,
-  "negative": 5
+  "negative_control": 5
  },
  "type_coverage_db": {
   "or": 3,
@@ -412,7 +412,7 @@
   {
    "document_id": "9cac5e48f3873753223db0c3b5f2b501",
    "path": "fulltext/9cac5e48f3873753223db0c3b5f2b501.txt",
-   "stratum": "negative",
+   "stratum": "negative_control",
    "design_category": "unknown",
    "design_verbatim": "",
    "title": "Protocol for Objective Measurement of Infants’ Physical Activity using",
@@ -427,7 +427,7 @@
   {
    "document_id": "83966faed7ce0817920e6bf366efc8bb",
    "path": "fulltext/83966faed7ce0817920e6bf366efc8bb.txt",
-   "stratum": "negative",
+   "stratum": "negative_control",
    "design_category": "unknown",
    "design_verbatim": "",
    "title": "Editorial: New developments in the intention-behavior gap for physical",
@@ -442,7 +442,7 @@
   {
    "document_id": "0843e61250179bd14f8d0a45fc678e5d",
    "path": "fulltext/0843e61250179bd14f8d0a45fc678e5d.txt",
-   "stratum": "negative",
+   "stratum": "negative_control",
    "design_category": "unknown",
    "design_verbatim": "",
    "title": "Invited Commentary: Detecting Individual and Global Horizontal Pleiotr",
@@ -457,7 +457,7 @@
   {
    "document_id": "6e935d39b012f2a76075a3a7964879b1",
    "path": "fulltext/6e935d39b012f2a76075a3a7964879b1.txt",
-   "stratum": "negative",
+   "stratum": "negative_control",
    "design_category": "unknown",
    "design_verbatim": "",
    "title": "Editorial: Causal inference in diet, nutrition and health outcomes",
@@ -472,7 +472,7 @@
   {
    "document_id": "af1bb4ac0c54f9ed49d13393b37f4ffd",
    "path": "fulltext/af1bb4ac0c54f9ed49d13393b37f4ffd.txt",
-   "stratum": "negative",
+   "stratum": "negative_control",
    "design_category": "unknown",
    "design_verbatim": "",
    "title": "A computational perspective of the role of Thalamus in cognition",

@@ -65,11 +65,11 @@ Dokumente mit mindestens einem Caption-Treffer: 19 von 30.
 | 23 | cross_sectional | observational | 1 | 73766 | `37cafe8444` | A Cross-Sectional Study of Food Insecurity, Mediterranean ... |
 | 24 | aggregate | parallel_rct | 3 | 87127 | `5cbf039f22` | Aerobic exercise for depression symptoms in adolescents: a... |
 | 25 | aggregate | aggregate | 2 | 46378 | `cfc6567ca3` | The Effect of Exercise on Depressive Symptoms in Adolescen... |
-| 26 | negative | unknown | 2 | 44012 | `9cac5e48f3` | Protocol for Objective Measurement of Infants’ Physical Ac... |
-| 27 | negative | unknown | 0 | 16093 | `83966faed7` | Editorial: New developments in the intention-behavior gap ... |
-| 28 | negative | unknown | 0 | 15000 | `0843e61250` | Invited Commentary: Detecting Individual and Global Horizo... |
-| 29 | negative | unknown | 0 | 11304 | `6e935d39b0` | Editorial: Causal inference in diet, nutrition and health ... |
-| 30 | negative | unknown | 0 | 106600 | `af1bb4ac0c` | A computational perspective of the role of Thalamus in cog... |
+| 26 | negative_control | unknown | 2 | 44012 | `9cac5e48f3` | Protocol for Objective Measurement of Infants’ Physical Ac... |
+| 27 | negative_control | unknown | 0 | 16093 | `83966faed7` | Editorial: New developments in the intention-behavior gap ... |
+| 28 | negative_control | unknown | 0 | 15000 | `0843e61250` | Invited Commentary: Detecting Individual and Global Horizo... |
+| 29 | negative_control | unknown | 0 | 11304 | `6e935d39b0` | Editorial: Causal inference in diet, nutrition and health ... |
+| 30 | negative_control | unknown | 0 | 106600 | `af1bb4ac0c` | A computational perspective of the role of Thalamus in cog... |
 
 ## Begruendung je Dokument
 

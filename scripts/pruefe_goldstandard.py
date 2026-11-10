@@ -6,12 +6,16 @@ Regeln, die fuer die Annotation zaehlen: Pflichtfelder, Enum-Werte, Quote-
 Span gegen den Volltext, Effekt innerhalb des KI, doppelte IDs und Dokumente
 ohne Zeile ohne Begruendung.
 
+Mit --entwurf gelten Dokumente ohne Zeile und ohne Begruendung als "offen"
+(nicht als Fehler); so lassen sich die leeren Gerueste pruefen. Ohne
+--entwurf ist ein solches Dokument ein Fehler.
+
 Aufruf:
     export PYTHONIOENCODING=utf-8
-    .venv/bin/python.exe scripts/pruefe_goldstandard.py data/golden_effects/goldstandard_A.json
-    ... data/golden_effects/*.json
+    .venv/bin/python.exe scripts/pruefe_goldstandard.py --entwurf data/golden_effects/goldstandard_A.json
+    .venv/bin/python.exe scripts/pruefe_goldstandard.py data/golden_effects/*.json
 
-Exit 0 = alle Dateien in Ordnung. Exit 1 = mindestens ein Fehler.
+Exit 0 = keine Fehler. Exit 1 = mindestens ein Fehler.
 Der SHA-256 jeder Datei wird ausgegeben (zum Einfrieren).
 """
 
@@ -22,25 +26,24 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 SCHEMA = ROOT / "docs" / "internal" / "goldstandard_schema.json"
-VOLLTEXT = ROOT / "data" / "fulltext"
 
 
 def lade_schema() -> dict:
     return json.loads(SCHEMA.read_text(encoding="utf-8"))
 
 
-def pruefe_datei(pfad: Path, schema: dict) -> list:
-    fehler = []
+def pruefe_datei(pfad: Path, schema: dict, entwurf: bool = False):
+    fehler, offen = [], []
     try:
         daten = json.loads(pfad.read_text(encoding="utf-8"))
     except (OSError, json.JSONDecodeError) as exc:
-        return [f"{pfad.name}: nicht lesbar ({exc})"]
+        return [f"{pfad.name}: nicht lesbar ({exc})"], []
 
     def f(meldung: str) -> None:
         fehler.append(f"{pfad.name}: {meldung}")
 
-    for feld, regel in schema["properties"].items():
-        if feld in schema["required"] and feld not in daten:
+    for feld in schema["required"]:
+        if feld not in daten:
             f(f"Pflichtfeld '{feld}' fehlt")
     if daten.get("dataset") != "goldstandard_effects":
         f("dataset muss 'goldstandard_effects' sein")
@@ -61,12 +64,12 @@ def pruefe_datei(pfad: Path, schema: dict) -> list:
     docs = daten.get("documents")
     if not isinstance(docs, list) or not docs:
         f("documents muss eine nicht-leere Liste sein")
-        return fehler
+        return fehler, offen
 
     gesehen_docs = set()
     zeilen_gesamt = 0
     for index, doc in enumerate(docs, start=1):
-        name = f"Dokument {index} ({doc.get('document_id', '?')})"
+        name = f"Dokument {index} ({str(doc.get('document_id', '?'))[:10]})"
         for feld in pflicht_doc:
             if feld not in doc:
                 f(f"{name}: Pflichtfeld '{feld}' fehlt")
@@ -94,7 +97,8 @@ def pruefe_datei(pfad: Path, schema: dict) -> list:
             f(f"{name}: effects muss eine Liste sein")
             continue
         if not effekte and not str(doc.get("no_effect_reason") or "").strip():
-            f(f"{name}: keine Zeile und keine Begruendung (no_effect_reason)")
+            meldung = f"{name}: keine Zeile und keine Begruendung (no_effect_reason)"
+            (offen if entwurf else fehler).append(f"{pfad.name}: {meldung}")
 
         ids = set()
         for eff in effekte:
@@ -134,32 +138,36 @@ def pruefe_datei(pfad: Path, schema: dict) -> list:
                 elif text[start:ende] != quote:
                     f(f"{name}/{eid}: Quote passt nicht zum Span [{start}:{ende}]")
 
-    return fehler
+    return fehler, offen
 
 
 def main(argv: list) -> int:
-    if not argv:
+    entwurf = "--entwurf" in argv
+    dateien = [a for a in argv if a != "--entwurf"]
+    if not dateien:
         print(__doc__)
         return 1
     schema = lade_schema()
     alle = []
-    for arg in argv:
+    for arg in dateien:
         pfad = Path(arg)
         if not pfad.is_absolute():
             pfad = ROOT / pfad
         if not pfad.exists():
             alle.append(f"{pfad}: Datei fehlt")
             continue
-        fehler = pruefe_datei(pfad, schema)
+        fehler, offen = pruefe_datei(pfad, schema, entwurf)
         digest = hashlib.sha256(pfad.read_bytes()).hexdigest()
-        print(f"{pfad.name}: {len(fehler)} Fehler, sha256={digest}")
+        print(f"{pfad.name}: {len(fehler)} Fehler, {len(offen)} offen, sha256={digest}")
         alle.extend(fehler)
+        for eintrag in offen:
+            print(f"  offen: {eintrag}")
     if alle:
         print("\nFEHLER:")
         for zeile in alle:
             print(f"  - {zeile}")
         return 1
-    print("\nOK: alle Dateien entsprechen den Annotationsregeln.")
+    print("\nOK: keine Regelverstoesse.")
     return 0
 
 

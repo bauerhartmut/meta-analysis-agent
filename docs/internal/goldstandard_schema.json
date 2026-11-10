@@ -48,6 +48,7 @@
                    "aggregate", "negative_control"]
         },
         "has_text_layer": {"type": "boolean"},
+        "probelauf": {"type": "boolean"},
         "expected_effects": {"type": ["integer", "null"], "minimum": 0},
         "effects": {
           "type": "array",

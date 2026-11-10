@@ -112,13 +112,13 @@ def main():
         text = voll[fid].read_text(encoding="utf-8", errors="replace")
         gewaehlt.append({"fid": fid, "titel": str(meta.get("titel") or ""),
                          "jahr": meta.get("jahr"), "chars": len(text),
-                         "schicht": "negative", "caps": len(CAP.findall(text)),
+                         "schicht": "negative_control", "caps": len(CAP.findall(text)),
                          "typen": [], "design": "", "kat": "unknown", "agg": False,
                          "n": 0, "fix": False})
 
     docs = []
     for r in gewaehlt:
-        neg = r["schicht"] == "negative"
+        neg = r["schicht"] == "negative_control"
         docs.append({
             "document_id": r["fid"],
             "path": f"fulltext/{r['fid']}.txt",
@@ -176,7 +176,7 @@ def main():
         d["document_id"][:10], kurz(d["title"])) for i, d in enumerate(docs, 1)]
     reihen = [("RCT (parallel/cluster)", "rct"), ("Crossover", "crossover"),
               ("Kohorte", "cohort"), ("Querschnitt/Fall-Kontrolle", "cross_sectional"),
-              ("Aggregat (Uebersicht)", "aggregate"), ("Negativkontrolle", "negative")]
+              ("Aggregat (Uebersicht)", "aggregate"), ("Negativkontrolle", "negative_control")]
     schicht_zeilen = ["| %s | %d |" % (name, strata.get(key, 0))
                       for name, key in reihen]
     typen_text = ", ".join("%s %d" % (k, v) for k, v in sorted(typen.items()))

@@ -220,6 +220,13 @@ Annotation.
 
 ## 8. Abgabe
 
+**Probelauf:** `scripts/erzeuge_annotationsgeruest.py` legt die leeren
+Dateien an (drei Dokumente mit `probelauf: true`). Nach dem Ausfüllen wertet
+`scripts/werte_kappa_probe.py --probelauf` Übereinstimmung, Kappa und
+Konflikte aus. Die Gerüste bestehen `pruefe_goldstandard.py --entwurf`; ein
+vollständiger Lauf ohne `--entwurf` verlangt für jedes Dokument Zeilen oder
+Begründung.
+
 - Dateinamen: `data/golden_effects/goldstandard_A.json`,
   `goldstandard_B.json`, `goldstandard_consensus.json`.
 - Eine Datei enthält alle Dokumente des jeweiligen Annotators.
