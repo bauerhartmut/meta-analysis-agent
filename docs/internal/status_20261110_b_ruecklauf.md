@@ -40,8 +40,8 @@ A und B bleiben getrennt; es gab keinen Vergleich zwischen A und B.
 - Enthält B-Gerüst, Anleitung v1.2, Schema, 30 Arbeitsblätter,
   Manifest, SHA256SUMS und Prüfer.
 - Portables ZIP: `blind_b_20261110.zip` mit den 30 Volltexten.
-- Im entpackten ZIP geprüft: B hat 0 Fehler und 30 offen; keine Datei
-  mit `goldstandard_A` im Namen.
+- Im entpackten ZIP geprüft: B hat 0 Fehler und 30 offen; keine
+  A-Annotationsdatei (`goldstandard_A.json`).
 - Das ZIP ist absichtlich untracked und nicht committed.
 - Commit der Vorlage: `04a9a15`.
 
@@ -64,6 +64,22 @@ A und B bleiben getrennt; es gab keinen Vergleich zwischen A und B.
 - Schutzregeln: A-Dateien werden abgewiesen; Rücklauf und Gerüst
   dürfen nicht dieselbe Datei sein.
 - Commit: `c74e23e`.
+
+### 5. Eingangscheck und Portabilitaetskorrektur
+
+- `SHA256SUMS.txt` hatte CRLF-Zeilenenden; `sha256sum -c` scheiterte
+  dadurch an jedem Dateinamen.
+- Die Pruefsummen wurden mit LF neu erzeugt; alle 36 Eintraege stimmen.
+- `.gitattributes` haelt die Pruefsummendatei kuenftig von der
+  Zeilenenden-Konvertierung aus.
+- Das ZIP wurde mit den 30 Volltexten neu gebaut: 67 Dateien,
+  `unzip -t` ohne Fehler, SHA-256
+  `2f9db202c218abaf34bbabbb332c7e31d64693b0faed467dda3854e5a3b9b173`.
+- Im entpackten ZIP: 36 Pruefsummen OK, B hat 30 Dokumente, 0 Zeilen und
+  30 offen; keine A-Annotationsdatei.
+- Der fruehere A-Treffer war ein False Positive:
+  `goldstandard_annotationsanleitung.md` enthaelt die Zeichenfolge
+  `goldstandard_A`, ist aber keine A-Datei.
 
 ## Aktueller Stand
 

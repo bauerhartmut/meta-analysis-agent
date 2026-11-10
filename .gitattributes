@@ -1,0 +1,2 @@
+# Pruefsummen muessen LF behalten, sonst scheitert sha256sum -c an CRLF.
+data/golden_effects/blind_b_20261110/SHA256SUMS.txt -text

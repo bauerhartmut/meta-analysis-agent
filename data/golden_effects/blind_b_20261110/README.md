@@ -48,5 +48,5 @@ Anpassung laeuft. Es enthaelt nur Standardbibliothek, keine Projektabhaengigkeit
 ## Pruefung des Pakets
 
 - 30 Dokumente, 30 Arbeitsblaetter, im ZIP 30 Volltexte.
-- Keine Datei mit `goldstandard_A` im Namen.
+- Keine A-Annotationsdatei (`goldstandard_A.json`) im Paket.
 - `manifest.json` und `SHA256SUMS.txt` stimmen mit den Dateien ueberein.
