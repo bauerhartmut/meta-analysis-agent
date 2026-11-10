@@ -1,0 +1,46 @@
+{
+ "datum": "2026-11-10",
+ "hinweis": "Erwartete Goldzeilen sind eine Einschaetzung aus den Designpruefungen, keine Annotation. Pipeline-Zeilen sind extrahierte Zeilen, kein Goldstandard.",
+ "probelauf": [
+  {
+   "document_id": "7111ea978757a185d44ea9de90b453c3",
+   "design": "aggregate / narrative review",
+   "pipeline_zeilen": 7,
+   "db_effect_rows": 8,
+   "erwartete_goldzeilen": 0,
+   "begruendung": "5.8: Einzelstudien nicht uebernehmen; kein eigener gepoolter Schaetzer"
+  },
+  {
+   "document_id": "bb9218735fec8fc7f3b6aebbff430aba",
+   "design": "parallel_rct",
+   "pipeline_zeilen": 3,
+   "db_effect_rows": 3,
+   "erwartete_goldzeilen": 0,
+   "begruendung": "5.7: Mittelwerte +/- SD und p-Werte, keine KI/SE"
+  },
+  {
+   "document_id": "203c831dbeb178297006a888608f4f10",
+   "design": "aggregate / systematic review and meta-analysis",
+   "pipeline_zeilen": 1,
+   "db_effect_rows": 1,
+   "erwartete_goldzeilen": 2,
+   "begruendung": "zwei gepoolte Schaetzer (HR und MD); Pipeline hat nur eine Zeile"
+  }
+ ],
+ "summe": {
+  "pipeline_zeilen": 11,
+  "erwartete_goldzeilen": 2
+ },
+ "kandidaten": [
+  {"document_id": "3134fdc8c38f475075a70ca32dc4a3d9", "stratum": "cohort", "design": "observational", "pipeline_zeilen": 2, "db_effect_rows": 2},
+  {"document_id": "fb484d488b45d21bbdf407cba4b074d5", "stratum": "rct", "design": "parallel_rct", "pipeline_zeilen": 2, "db_effect_rows": 2},
+  {"document_id": "334f5f679802315eeec71399149b51c3", "stratum": "aggregate", "design": "aggregate", "pipeline_zeilen": 2, "db_effect_rows": 2},
+  {"document_id": "b5e492009e4ca350f512d5144fe8bf92", "stratum": "rct", "design": "parallel_rct", "pipeline_zeilen": 2, "db_effect_rows": 2},
+  {"document_id": "cfc6567ca3cb6eec8c47a64a1674a849", "stratum": "aggregate", "design": "aggregate", "pipeline_zeilen": 2, "db_effect_rows": 2},
+  {"document_id": "d0bec407a2a0dd19c0b67aa43f9e1dfb", "stratum": "cohort", "design": "observational", "pipeline_zeilen": 2, "db_effect_rows": 2}
+ ],
+ "kandidaten_summe": {
+  "pipeline_zeilen": 12,
+  "erwartete_goldzeilen": "8-12 (Schaetzung)"
+ }
+}
