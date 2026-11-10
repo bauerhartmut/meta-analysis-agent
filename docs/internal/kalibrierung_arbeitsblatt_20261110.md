@@ -46,7 +46,7 @@ Summe: 12 Dokumente, 79 Tabellenstellen, 102 Effektstellen.
 - **5.8:** 5.8: narrativer Ueberblick ohne eigenen gepoolten Schaetzer; keine Zeile, `no_effect_reason`.
 - **5.1:** 5.1: Design am Volltext; nur Effekte mit Unsicherheit; Quote exakt.
 - **5.7:** 5.7: p-Wert ohne Effektgroesse ist keine Zeile; Mittelwerte +/- SD pruefen.
-- **5.8 gepoolt:** 5.8: gepoolte Schaetzer als je eine Zeile mit `is_primary: false`; bei 5cbf nur der Hauptschaetzer, Peak und Sensitivitaetsanalyse in `notes`.
+- **5.8 gepoolt:** 5.8: gepoolte Schaetzer als je eine Zeile mit `is_primary: false`; Dosis-Wirkungs-Peak und Sensitivitaetsanalyse in `notes`.
 
 ## Ablauf
 

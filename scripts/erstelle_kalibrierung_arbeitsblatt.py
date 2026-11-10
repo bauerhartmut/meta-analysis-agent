@@ -17,6 +17,12 @@ sys.path.insert(0, str(ROOT / "scripts"))
 
 from erstelle_vollannotations_checkliste import ERKLAERUNG, _punkt  # noqa: E402
 
+ERKLAERUNG_KAL = dict(ERKLAERUNG)
+ERKLAERUNG_KAL["5.8 gepoolt"] = (
+    "5.8: gepoolte Schaetzer als je eine Zeile mit `is_primary: false`; "
+    "Dosis-Wirkungs-Peak und Sensitivitaetsanalyse in `notes`."
+)
+
 DOCS = ROOT / "data" / "golden_effects" / "documents.json"
 BLAETTER = ROOT / "data" / "golden_effects" / "vollannotation_arbeitsblaetter.json"
 A = ROOT / "data" / "golden_effects" / "goldstandard_A.json"
@@ -135,7 +141,7 @@ def main() -> int:
         if e["punkt"] not in punkte:
             punkte.append(e["punkt"])
     for p in punkte:
-        zeilen.append(f"- **{p}:** {ERKLAERUNG.get(p, '')}")
+        zeilen.append(f"- **{p}:** {ERKLAERUNG_KAL.get(p, '')}")
     zeilen += [
         "",
         "## Ablauf",
