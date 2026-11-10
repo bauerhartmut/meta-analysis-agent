@@ -22,6 +22,7 @@ SONDERFALL = {
     "203c831dbe": "5.8 gepoolt",
     "3790c91f96": "5.11",
     "5cbf039f22": "5.8 gepoolt",
+    "fb484d488b": "5.8 gepoolt",
 }
 
 ERKLAERUNG = {

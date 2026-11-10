@@ -53,12 +53,12 @@
    "datei": "docs/internal/vollannotation_arbeitsblatt_fb484d488b.md",
    "titel": "The effect of exercise on depressive symptoms in multiple sclerosis ba",
    "stratum": "rct",
-   "design_category": "parallel_rct",
+   "design_category": "aggregate",
    "design_verbatim": "meta-analysis of randomized controlled trials",
    "zeichen": 9659,
    "tabellen": 0,
    "effektstellen": 6,
-   "punkt": "5.1"
+   "punkt": "5.8 gepoolt"
   },
   {
    "document_id": "3bbb142c717a970694bed1d393736b06",

@@ -12,7 +12,7 @@ Annotation. Die Auszüge sind Fundstellen, keine Annotation.
 | 3134fdc8c3 | cohort | observational | 85,910 | 9 | 14 | [vollannotation_arbeitsblatt_3134fdc8c3.md](vollannotation_arbeitsblatt_3134fdc8c3.md) |
 | d0bec407a2 | cohort | observational | 3,199 | 0 | 4 | [vollannotation_arbeitsblatt_d0bec407a2.md](vollannotation_arbeitsblatt_d0bec407a2.md) |
 | bb9218735f | rct | parallel_rct | 71,085 | 14 | 0 | [vollannotation_arbeitsblatt_bb9218735f.md](vollannotation_arbeitsblatt_bb9218735f.md) |
-| fb484d488b | rct | parallel_rct | 9,659 | 0 | 6 | [vollannotation_arbeitsblatt_fb484d488b.md](vollannotation_arbeitsblatt_fb484d488b.md) |
+| fb484d488b | rct | aggregate | 9,659 | 0 | 6 | [vollannotation_arbeitsblatt_fb484d488b.md](vollannotation_arbeitsblatt_fb484d488b.md) |
 | 3bbb142c71 | crossover | crossover_rct | 40,445 | 2 | 0 | [vollannotation_arbeitsblatt_3bbb142c71.md](vollannotation_arbeitsblatt_3bbb142c71.md) |
 | 87079ba88a | crossover | crossover_rct | 38,131 | 6 | 1 | [vollannotation_arbeitsblatt_87079ba88a.md](vollannotation_arbeitsblatt_87079ba88a.md) |
 | 2c7ab4d124 | cross_sectional | observational | 39,970 | 7 | 19 | [vollannotation_arbeitsblatt_2c7ab4d124.md](vollannotation_arbeitsblatt_2c7ab4d124.md) |

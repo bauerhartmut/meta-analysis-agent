@@ -20,7 +20,7 @@ Zeilen-Kappa folgen nach allen 30 Dokumenten.
 | [3134fdc8c3](vollannotation_arbeitsblatt_3134fdc8c3.md) | cohort | observational | 85,910 | 9 | 14 | 5.1 |
 | [d0bec407a2](vollannotation_arbeitsblatt_d0bec407a2.md) | cohort | observational | 3,199 | 0 | 4 | 5.1 |
 | [bb9218735f](vollannotation_arbeitsblatt_bb9218735f.md) | rct | parallel_rct | 71,085 | 14 | 0 | 5.7 |
-| [fb484d488b](vollannotation_arbeitsblatt_fb484d488b.md) | rct | parallel_rct | 9,659 | 0 | 6 | 5.1 |
+| [fb484d488b](vollannotation_arbeitsblatt_fb484d488b.md) | rct | aggregate | 9,659 | 0 | 6 | 5.8 gepoolt |
 | [3bbb142c71](vollannotation_arbeitsblatt_3bbb142c71.md) | crossover | crossover_rct | 40,445 | 2 | 0 | 5.1 |
 | [87079ba88a](vollannotation_arbeitsblatt_87079ba88a.md) | crossover | crossover_rct | 38,131 | 6 | 1 | 5.1 |
 | [2c7ab4d124](vollannotation_arbeitsblatt_2c7ab4d124.md) | cross_sectional | observational | 39,970 | 7 | 19 | 5.1 |
@@ -62,5 +62,5 @@ Summe: 12 Dokumente, 79 Tabellenstellen, 102 Effektstellen.
 
 - A: 0 Zeilen, 0 Begründungen, 12 offen (von 12).
 - B: 0 Zeilen, 0 Begründungen, 12 offen (von 12).
-- Hash A: `2cf31e5e5283a3cc21b5c919fd9d187c920e001aacbd8736d4e4b206a384408e`
-- Hash B: `a2ba075a1741a1a9d0a356c63ab36eba997e4c7f9b6eb20b9e1227841bc425a0`
+- Hash A: `2f91254e3a4b262403db3bf8e26231a7c57b70b4f252fe741085300d91223182`
+- Hash B: `2030d8a186ab19f242aefc854bc2a1c350bb97f9d1067a6b8b7da5b38daed0bc`

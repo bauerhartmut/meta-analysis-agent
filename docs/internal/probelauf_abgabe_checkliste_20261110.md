@@ -13,8 +13,8 @@ Eine Kappa-Zahl entsteht hier nicht; sie folgt nach der Vollannotation.
 
 Aktuelle Hashes (Stand nach der Designkorrektur):
 
-- A: `2cf31e5e5283a3cc21b5c919fd9d187c920e001aacbd8736d4e4b206a384408e`
-- B: `a2ba075a1741a1a9d0a356c63ab36eba997e4c7f9b6eb20b9e1227841bc425a0`
+- A: `2f91254e3a4b262403db3bf8e26231a7c57b70b4f252fe741085300d91223182`
+- B: `2030d8a186ab19f242aefc854bc2a1c350bb97f9d1067a6b8b7da5b38daed0bc`
 
 Die Hashes sind **Startwerte**. Nach dem Ausfüllen ändern sie sich;
 der Abgabe-Hash wird vom Prüfer ausgegeben und unten eingetragen.

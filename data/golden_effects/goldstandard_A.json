@@ -73,7 +73,7 @@
    "title": "The effect of exercise on depressive symptoms in multiple sclerosis ba",
    "year": "2015",
    "design_verbatim": "meta-analysis of randomized controlled trials",
-   "design_category": "parallel_rct",
+   "design_category": "aggregate",
    "stratum": "rct",
    "has_text_layer": true,
    "probelauf": false,

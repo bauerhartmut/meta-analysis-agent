@@ -3,7 +3,7 @@
 - Dokument-ID: `fb484d488b45d21bbdf407cba4b074d5`
 - Volltext: `fulltext/fb484d488b45d21bbdf407cba4b074d5.txt` (9,659 Zeichen)
 - Jahr: 2015
-- Schicht: rct | Design: parallel_rct
+- Schicht: rct | Design: aggregate
 - Design laut Dokument: meta-analysis of randomized controlled trials
 
 **Für A und B identisch.** Getrennt ausfüllen und während der

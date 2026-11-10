@@ -55,6 +55,9 @@ der Übersicht nicht übernehmen.
 **Prüffrage `334f`:** Metaanalyse. Nur der gepoolte Schätzer zählt, keine
 Einzelstudien.
 
+**Prüffrage `fb484`:** Metaanalyse, kein RCT (Abstract: 15 RCTs, 12 in der
+Metaanalyse). Der gepoolte SMD ist eine Zeile mit `is_primary: false`.
+
 ## 5.9 Mehrere Arme und Dosis
 
 - **Je Arm eine Zeile**, wenn ein eigener Effekt mit Unsicherheit berichtet

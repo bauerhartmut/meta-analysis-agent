@@ -1,0 +1,89 @@
+{
+ "datum": "2026-11-10",
+ "hinweis": "Keine Annotation; die Pruefpunkte sind Regelanwendungen. Anker sind Volltextzitate.",
+ "geprueft": [
+  "fb484d488b45d21bbdf407cba4b074d5",
+  "09843d40d3cc2c9ca039d6d1b45ac656",
+  "2c7ab4d1244754e3966780f4bccbfa8c",
+  "334f5f679802315eeec71399149b51c3",
+  "2675c25aabf33995fb6c2d3e72221923",
+  "87079ba88ae1f64f00c5fe32725248a6",
+  "3bbb142c717a970694bed1d393736b06",
+  "3134fdc8c38f475075a70ca32dc4a3d9",
+  "d0bec407a2a0dd19c0b67aa43f9e1dfb"
+ ],
+ "befunde": [
+  {
+   "document_id": "fb484d488b45d21bbdf407cba4b074d5",
+   "schicht": "rct",
+   "design": "aggregate",
+   "pruefpunkt": "5.1 + 5.8",
+   "befund": "systematic review and meta-analysis; 15 RCTs, 12 in der Metaanalyse; SMD g = -0.37 (95% CI -0.56; -0.17)",
+   "konsequenz": "design_category aggregate; gepoolter SMD eine Zeile, is_primary false"
+  },
+  {
+   "document_id": "09843d40d3cc2c9ca039d6d1b45ac656",
+   "schicht": "cohort",
+   "design": "observational",
+   "pruefpunkt": "5.4 + 5.11",
+   "befund": "Tabelle 2: beta -0.536 (SE 0.101), beta -0.056 (SE 0.010); Abstract: T1->T2 beta -0.073",
+   "konsequenz": "Beta mit SE nutzen; p allein reicht nicht; je Modell/Phase mit SE eine Zeile"
+  },
+  {
+   "document_id": "2c7ab4d1244754e3966780f4bccbfa8c",
+   "schicht": "cross_sectional",
+   "design": "observational",
+   "pruefpunkt": "5.2 + 5.7",
+   "befund": "univariate OR = 1.93, p = 0.016; multivariate aOR = 2.01, 95% CI 1.08-3.75",
+   "konsequenz": "Univariate ORs ohne KI keine Zeilen; multivariate aORs mit KI Zeilen"
+  },
+  {
+   "document_id": "334f5f679802315eeec71399149b51c3",
+   "schicht": "aggregate",
+   "design": "aggregate",
+   "pruefpunkt": "5.8 + 5.9 + 5.4",
+   "befund": "47 Studien, 2895 Teilnehmer; Beta 0.36 (0.05; 0.68), Beta -0.51 (-0.80; -0.22); SMD -0.97 (-1.30 to -0.63) bei 800 METs",
+   "konsequenz": "Netzwerkschaetzer als Zeilen; Dosis-Kurve/Peak in notes; Meta-Regressions-Betas mit CrI als 5.4-Zeilen"
+  },
+  {
+   "document_id": "2675c25aabf33995fb6c2d3e72221923",
+   "schicht": "cross_sectional",
+   "design": "observational",
+   "pruefpunkt": "5.5",
+   "befund": "Spearman-Korrelation, Kappa, Cronbach alpha; Validierungsstudie",
+   "konsequenz": "Nur Korrelationen mit KI sind Zeilen; Kappa/Alpha keine Schema-Effekttypen; sonst no_effect_reason"
+  },
+  {
+   "document_id": "87079ba88ae1f64f00c5fe32725248a6",
+   "schicht": "crossover",
+   "design": "crossover_rct",
+   "pruefpunkt": "5.11 + 5.7",
+   "befund": "Baseline vs 24-h-Abstinenz; Mittelwerte/p (all p-values<0.05); keine KI berichtet",
+   "konsequenz": "Mittelwerte/p allein keine Zeile; nur Mean Difference mit KI/SE"
+  },
+  {
+   "document_id": "3bbb142c717a970694bed1d393736b06",
+   "schicht": "crossover",
+   "design": "crossover_rct",
+   "pruefpunkt": "5.3 + 5.7 + 5.9",
+   "befund": "Cohen's d und partial eta-squared; F/t-Tests mit p; Fig. 2 nennt Standardfehler",
+   "konsequenz": "Cohen's d -> smd; eta-squared kein Schema-Typ; ohne KI/SE keine Zeile; Crossover-Bedingungen getrennt pruefen"
+  },
+  {
+   "document_id": "3134fdc8c38f475075a70ca32dc4a3d9",
+   "schicht": "cohort",
+   "design": "observational",
+   "pruefpunkt": "5.2 + 5.4 + 5.9",
+   "befund": "RR 1.10 (95% CI 1.04-1.18); MCS beta -0.40 (95% CI -0.65 to -0.15); median follow-up 5.8 +/- 2.5 Jahre",
+   "konsequenz": "Haupt-RR und MCS-Beta Zeilen; Sensitivitaets-/Subgruppen-RRs in notes oder eigene Population; median follow-up kein Effekt"
+  },
+  {
+   "document_id": "d0bec407a2a0dd19c0b67aa43f9e1dfb",
+   "schicht": "cohort",
+   "design": "observational",
+   "pruefpunkt": "5.2",
+   "befund": "HR 0.95 (95% CI 0.87, 1.05) vor Bias-Adjustierung; HR 0.78 (95% CI 0.47, 1.28) danach",
+   "konsequenz": "Zwei HRs (unadjustiert/bias-adjustiert) zwei Zeilen; Validitaet/Attenuation keine Effektzeilen"
+  }
+ ]
+}
