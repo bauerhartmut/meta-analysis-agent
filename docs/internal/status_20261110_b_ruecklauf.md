@@ -81,6 +81,17 @@ A und B bleiben getrennt; es gab keinen Vergleich zwischen A und B.
   `goldstandard_annotationsanleitung.md` enthaelt die Zeichenfolge
   `goldstandard_A`, ist aber keine A-Datei.
 
+### 6. Kappa-Werkzeuge vorbereitet
+
+- `werte_kappa_probe.py --selbsttest`: Kappa-Formel ok, 4 Faelle plus
+  leerer Fall.
+- `berichte_kappa_konflikte.py --selbsttest`: Dokumentebene ok.
+- `priorisiere_kappa_konflikte.py --selbsttest`: Reihenfolge und
+  Vorschlaege ok.
+- Die beiden A/B-Skripte akzeptieren `--b`; der Ruecklauf muss nicht in
+  die kanonische B-Datei kopiert werden. Das leere Geruest bleibt als
+  Referenz erhalten.
+
 ## Aktueller Stand
 
 | Gegenstand | Stand |
@@ -135,10 +146,14 @@ ist kein Abgabe-Hash und wurde nach dem Test gelöscht.
 4. Bei 0 Fehlern und 0 offenen Dokumenten ohne `--keine-notiz` laufen
    lassen und die Abgabenotiz mit SHA-256 erzeugen.
 5. B-Hash in der Abgabe-Checkliste eintragen; B nicht mehr ändern.
-6. Erst danach A öffnen und Kappa/Konflikte berechnen:
+6. Erst danach A öffnen und Kappa/Konflikte berechnen. B explizit auf
+   den Rücklauf zeigen lassen, damit nicht versehentlich das leere
+   Gerüst gelesen wird:
 
-       .venv/bin/python.exe scripts/werte_kappa_probe.py
-       .venv/bin/python.exe scripts/berichte_kappa_konflikte.py --md docs/internal/kappa_konflikte_vollannotation_20261110.md --out data/golden_effects/kappa_konflikte_vollannotation.json
+       B=data/golden_effects/goldstandard_B_ruecklauf.json
+
+       .venv/bin/python.exe scripts/werte_kappa_probe.py --b "$B"
+       .venv/bin/python.exe scripts/berichte_kappa_konflikte.py --b "$B" --md docs/internal/kappa_konflikte_vollannotation_20261110.md --out data/golden_effects/kappa_konflikte_vollannotation.json
        .venv/bin/python.exe scripts/priorisiere_kappa_konflikte.py --quelle data/golden_effects/kappa_konflikte_vollannotation.json --md docs/internal/kappa_konflikte_priorisiert_vollannotation_20261110.md --out data/golden_effects/kappa_konflikte_priorisiert_vollannotation.json
 
 ## Empfehlung

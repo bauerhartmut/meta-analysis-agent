@@ -96,6 +96,9 @@ Abgabe-Hashes werden unten eingetragen.
 - `.venv/bin/python.exe scripts/berichte_kappa_konflikte.py --md docs/internal/kappa_konflikte_vollannotation_20261110.md --out data/golden_effects/kappa_konflikte_vollannotation.json`
   (ohne `--probelauf`).
 - `.venv/bin/python.exe scripts/priorisiere_kappa_konflikte.py --quelle data/golden_effects/kappa_konflikte_vollannotation.json --md docs/internal/kappa_konflikte_priorisiert_vollannotation_20261110.md --out data/golden_effects/kappa_konflikte_priorisiert_vollannotation.json`
+- Liegt B als separater Rücklauf vor, bei den beiden A/B-Skripten
+  `--b data/golden_effects/goldstandard_B_ruecklauf.json` ergänzen; das
+  leere Gerüst nicht als B verwenden.
 - Konflikte für die dritte Stimme; Schwelle Zeilen-Kappa 0,80.
 
 ## Abgabe-Hashes
