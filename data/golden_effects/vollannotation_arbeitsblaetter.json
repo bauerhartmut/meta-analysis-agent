@@ -1623,8 +1623,8 @@
    "datei": "docs/internal/vollannotation_arbeitsblatt_5cbf039f22.md",
    "titel": "Aerobic exercise for depression symptoms in adolescents: a systematic",
    "stratum": "aggregate",
-   "design_category": "parallel_rct",
-   "design_verbatim": "Randomized controlled trial (meta-analysis of 12 RCTs)",
+   "design_category": "aggregate",
+   "design_verbatim": "systematic review and dose-response meta-analysis",
    "zeichen": 87127,
    "tabellen": [
     {

@@ -3,8 +3,8 @@
 - Dokument-ID: `5cbf039f22f1bfe9f5902cf3f626852f`
 - Volltext: `fulltext/5cbf039f22f1bfe9f5902cf3f626852f.txt` (87,127 Zeichen)
 - Jahr: 2026
-- Schicht: aggregate | Design: parallel_rct
-- Design laut Dokument: Randomized controlled trial (meta-analysis of 12 RCTs)
+- Schicht: aggregate | Design: aggregate
+- Design laut Dokument: systematic review and dose-response meta-analysis
 
 **Für A und B identisch.** Getrennt ausfüllen und während der
 Annotation nicht austauschen. Nur Volltext, Anleitung und Schema

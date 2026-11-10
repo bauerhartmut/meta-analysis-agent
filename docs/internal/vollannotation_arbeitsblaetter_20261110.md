@@ -31,7 +31,7 @@ Annotation. Die Auszüge sind Fundstellen, keine Annotation.
 | 7ca468285b | cross_sectional | observational | 58,006 | 3 | 2 | [vollannotation_arbeitsblatt_7ca468285b.md](vollannotation_arbeitsblatt_7ca468285b.md) |
 | 1faf4b78f0 | cross_sectional | observational | 27,868 | 4 | 0 | [vollannotation_arbeitsblatt_1faf4b78f0.md](vollannotation_arbeitsblatt_1faf4b78f0.md) |
 | 37cafe8444 | cross_sectional | observational | 73,766 | 6 | 12 | [vollannotation_arbeitsblatt_37cafe8444.md](vollannotation_arbeitsblatt_37cafe8444.md) |
-| 5cbf039f22 | aggregate | parallel_rct | 87,127 | 4 | 3 | [vollannotation_arbeitsblatt_5cbf039f22.md](vollannotation_arbeitsblatt_5cbf039f22.md) |
+| 5cbf039f22 | aggregate | aggregate | 87,127 | 4 | 3 | [vollannotation_arbeitsblatt_5cbf039f22.md](vollannotation_arbeitsblatt_5cbf039f22.md) |
 | cfc6567ca3 | aggregate | aggregate | 46,378 | 4 | 12 | [vollannotation_arbeitsblatt_cfc6567ca3.md](vollannotation_arbeitsblatt_cfc6567ca3.md) |
 | 9cac5e48f3 | negative_control | unknown | 44,012 | 3 | 7 | [vollannotation_arbeitsblatt_9cac5e48f3.md](vollannotation_arbeitsblatt_9cac5e48f3.md) |
 | 83966faed7 | negative_control | unknown | 16,093 | 0 | 0 | [vollannotation_arbeitsblatt_83966faed7.md](vollannotation_arbeitsblatt_83966faed7.md) |

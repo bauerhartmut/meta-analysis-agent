@@ -21,7 +21,7 @@ SONDERFALL = {
     "bb9218735f": "5.7",
     "203c831dbe": "5.8 gepoolt",
     "3790c91f96": "5.11",
-    "5cbf039f22": "Design",
+    "5cbf039f22": "5.8 gepoolt",
 }
 
 ERKLAERUNG = {
@@ -29,7 +29,6 @@ ERKLAERUNG = {
     "5.7": "5.7: p-Wert ohne Effektgroesse ist keine Zeile; Mittelwerte +/- SD pruefen.",
     "5.8 gepoolt": "5.8: nur der gepoolte HR- und MD-Schaetzer, je eine Zeile mit `is_primary: false`.",
     "5.11": "5.11: Spannweite ueber Zeitpunkte ist keine Zeile; je Zeitpunkt eine Tabellenzeile.",
-    "Design": "Design pruefen: Schicht `aggregate`, `design_category: parallel_rct`; vor der Annotation klaeren.",
     "Negativkontrolle": "Negativkontrolle: keine Zeile, `no_effect_reason`; nur bei echtem quantifiziertem Effekt mit Unsicherheit eine Zeile.",
     "5.1": "5.1: Design am Volltext; nur Effekte mit Unsicherheit; Quote exakt.",
 }
@@ -132,7 +131,7 @@ def main() -> int:
         "## Besondere Prüfpunkte",
         "",
     ]
-    for punkt in ("5.8", "5.7", "5.8 gepoolt", "5.11", "Design", "Negativkontrolle"):
+    for punkt in ("5.8", "5.7", "5.8 gepoolt", "5.11", "Negativkontrolle"):
         zeilen.append(f"- **{punkt}:** {ERKLAERUNG[punkt]}")
     zeilen += [
         "- **5.1:** Standardfall; Design am Volltext, nicht aus dem Titel.",

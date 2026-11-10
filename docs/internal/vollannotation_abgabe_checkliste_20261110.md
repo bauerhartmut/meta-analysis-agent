@@ -9,8 +9,8 @@ diese Checkliste betrifft die Vollannotation.
 
 | Datei | Zeilen | Begründungen | offen | Dokumente | Hash |
 |---|---|---|---|---|---|
-| `goldstandard_A.json` | 0 | 0 | 30 | 30 | `d11b28301475840b90af51a2fd0d1aabe1d5d9eab765d19b9a54455e8d584f91` |
-| `goldstandard_B.json` | 0 | 0 | 30 | 30 | `3b3759e7df357791fc9dd0dae3c14ba8687fc2209564c5bf895eb557f23fe327` |
+| `goldstandard_A.json` | 0 | 0 | 30 | 30 | `2cf31e5e5283a3cc21b5c919fd9d187c920e001aacbd8736d4e4b206a384408e` |
+| `goldstandard_B.json` | 0 | 0 | 30 | 30 | `a2ba075a1741a1a9d0a356c63ab36eba997e4c7f9b6eb20b9e1227841bc425a0` |
 
 Die Hashes sind Startwerte; nach dem Ausfüllen ändern sie sich. Die
 Abgabe-Hashes werden unten eingetragen.
@@ -50,7 +50,7 @@ Abgabe-Hashes werden unten eingetragen.
 | [7ca468285b](vollannotation_arbeitsblatt_7ca468285b.md) | cross_sectional | observational | — | offen | offen | 5.1 |
 | [1faf4b78f0](vollannotation_arbeitsblatt_1faf4b78f0.md) | cross_sectional | observational | — | offen | offen | 5.1 |
 | [37cafe8444](vollannotation_arbeitsblatt_37cafe8444.md) | cross_sectional | observational | — | offen | offen | 5.1 |
-| [5cbf039f22](vollannotation_arbeitsblatt_5cbf039f22.md) | aggregate | parallel_rct | — | offen | offen | Design |
+| [5cbf039f22](vollannotation_arbeitsblatt_5cbf039f22.md) | aggregate | aggregate | — | offen | offen | 5.8 gepoolt |
 | [cfc6567ca3](vollannotation_arbeitsblatt_cfc6567ca3.md) | aggregate | aggregate | — | offen | offen | 5.1 |
 | [9cac5e48f3](vollannotation_arbeitsblatt_9cac5e48f3.md) | negative_control | unknown | — | offen | offen | Negativkontrolle |
 | [83966faed7](vollannotation_arbeitsblatt_83966faed7.md) | negative_control | unknown | — | offen | offen | Negativkontrolle |
@@ -64,7 +64,6 @@ Abgabe-Hashes werden unten eingetragen.
 - **5.7:** 5.7: p-Wert ohne Effektgroesse ist keine Zeile; Mittelwerte +/- SD pruefen.
 - **5.8 gepoolt:** 5.8: nur der gepoolte HR- und MD-Schaetzer, je eine Zeile mit `is_primary: false`.
 - **5.11:** 5.11: Spannweite ueber Zeitpunkte ist keine Zeile; je Zeitpunkt eine Tabellenzeile.
-- **Design:** Design pruefen: Schicht `aggregate`, `design_category: parallel_rct`; vor der Annotation klaeren.
 - **Negativkontrolle:** Negativkontrolle: keine Zeile, `no_effect_reason`; nur bei echtem quantifiziertem Effekt mit Unsicherheit eine Zeile.
 - **5.1:** Standardfall; Design am Volltext, nicht aus dem Titel.
 
