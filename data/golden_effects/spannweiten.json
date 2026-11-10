@@ -1,0 +1,968 @@
+{
+ "dokumente": [
+  {
+   "document_id": "7111ea978757a185d44ea9de90b453c3",
+   "stratum": "cohort",
+   "zeichen": 97367,
+   "treffer": [
+    {
+     "art": "range",
+     "start": 2085,
+     "treffer": "ranging from 22 to 69",
+     "satz": "Observational studies demonstrated significant protective associations between higher Mediterranean diet adherence and reduced preeclampsia risk, with effect sizes ranging from 22 to 69% risk reduction."
+    },
+    {
+     "art": "range",
+     "start": 5553,
+     "treffer": "range from as low as 1% in some European countries to over 7% in certain developing regions (1, 2",
+     "satz": "Incidence rates range from as low as 1% in some European countries to over 7% in certain developing regions (1, 2)."
+    },
+    {
+     "art": "von_bis",
+     "start": 13104,
+     "treffer": "from 11 to 1",
+     "satz": "In the landmark ASPRE (Combined Multimarker Screening and Randomized Patient Treatment with Aspirin for Evidence-Based Preeclampsia Prevention) trial, aspirin (150 mg per day) administered from 11 to 13 weeks’ gestation until 36 weeks’ gestation reduced the risk of preterm preeclampsia by more than 60% (odds ratio, 0."
+    },
+    {
+     "art": "range",
+     "start": 27224,
+     "treffer": "ranged from 82 to 8,507 participants, with studies published between 2015 and 2023",
+     "satz": "Sample sizes ranged from 82 to 8,507 participants, with studies published between 2015 and 2023."
+    },
+    {
+     "art": "zeitpunkte",
+     "start": 28908,
+     "treffer": "at three time points",
+     "satz": "Researchers assessed Alternate Mediterranean Diet (AMED) scores at three time points during pregnancy (8–13, 16–22, and 24–29 weeks)."
+    },
+    {
+     "art": "range",
+     "start": 29265,
+     "treffer": "ranges from 0 to 9, with higher scores indicating greater adherence (44",
+     "satz": "It typically ranges from 0 to 9, with higher scores indicating greater adherence (44)."
+    },
+    {
+     "art": "von_bis",
+     "start": 33193,
+     "treffer": "from 19 to 2",
+     "satz": "The Mediterranean diet intervention was supplemented with EVOO (2 L/month) and walnuts (15 g/day) from 19 to 23 gestational weeks until 34–36 gestational weeks."
+    },
+    {
+     "art": "range",
+     "start": 35167,
+     "treffer": "ranged from 22 to 69% risk reduction, with the strongest effects observed in the Healthy Dietary Patterns Study (44), which reported a 69",
+     "satz": "The effect sizes ranged from 22 to 69% risk reduction, with the strongest effects observed in the Healthy Dietary Patterns Study (44), which reported a 69% lower risk of preeclampsia in women with the highest AMED scores (44)."
+    },
+    {
+     "art": "klammer_zwei_zahlen",
+     "start": 43286,
+     "treffer": "[0.11, 0.87]",
+     "satz": "31 [0.11, 0.87], P-trend = 0."
+    },
+    {
+     "art": "range",
+     "start": 58420,
+     "treffer": "ranging from 8 to 12 weeks (47, 50) to 19–23 weeks (51",
+     "satz": "The interventional studies in our review initiated Mediterranean diet interventions at various gestational ages, ranging from 8 to 12 weeks (47, 50) to 19–23 weeks (51)."
+    }
+   ]
+  },
+  {
+   "document_id": "3134fdc8c38f475075a70ca32dc4a3d9",
+   "stratum": "cohort",
+   "zeichen": 85910,
+   "treffer": [
+    {
+     "art": "range",
+     "start": 6235,
+     "treffer": "range of adverse health outcomes, including dementia [ 15 ], mental health disorders [ 20 ], cardiovascular diseases, cancer, type 2",
+     "satz": "Extant literature demonstrates that UPF is associated with a range of adverse health outcomes, including dementia [ 15 ], mental health disorders [ 20 ], cardiovascular diseases, cancer, type 2 diabetes, frailty, chronic inflammation and all-cause mortality [ 18 , 21 , 22 ]."
+    },
+    {
+     "art": "range",
+     "start": 10308,
+     "treffer": "range of factors that contribute to healthy ageing [ 35",
+     "satz": "The follow-up of participants after the trial phase continued through the ASPREE-eXTension (ASPREE-XT) study and investigates the long-lasting effects of aspirin and a broad range of factors that contribute to healthy ageing [ 35 ]."
+    },
+    {
+     "art": "range",
+     "start": 17636,
+     "treffer": "range from 0 to 30",
+     "satz": "The CES-D 10 is a self-administered questionnaire of 10 items on depressive symptoms, which range from 0 to 30, with higher scores indicating more severe depressive symptoms."
+    },
+    {
+     "art": "range",
+     "start": 18441,
+     "treffer": "ranges from 0 to 100, with higher scores indicating better mental health functions and being a valid measure of depression [ 49",
+     "satz": "The SF-12 MCS ranges from 0 to 100, with higher scores indicating better mental health functions and being a valid measure of depression [ 49 ]."
+    },
+    {
+     "art": "range",
+     "start": 25646,
+     "treffer": "range: 5",
+     "satz": "During the follow-up period (median with interquartile range: 5."
+    },
+    {
+     "art": "range",
+     "start": 30436,
+     "treffer": "range) follow-up of 5",
+     "satz": "We included 11,192 older adults with a median (interquartile range) follow-up of 5."
+    }
+   ]
+  },
+  {
+   "document_id": "d0bec407a2a0dd19c0b67aa43f9e1dfb",
+   "stratum": "cohort",
+   "zeichen": 3199,
+   "treffer": []
+  },
+  {
+   "document_id": "bb9218735fec8fc7f3b6aebbff430aba",
+   "stratum": "rct",
+   "zeichen": 71085,
+   "treffer": [
+    {
+     "art": "range",
+     "start": 10012,
+     "treffer": "range from 1 ( very poor night with no or little sleep ) to 5",
+     "satz": "Scores range from 1 ( very poor night with no or little sleep ) to 5 ( outstanding night with no awakenings )."
+    },
+    {
+     "art": "range",
+     "start": 10283,
+     "treffer": "range doses (0",
+     "satz": "High doses of melatonin (50 mg) but not physiologic-range doses (0."
+    },
+    {
+     "art": "range",
+     "start": 10755,
+     "treffer": "range doses of melatonin for this study—1 moderately high (10 mg) and the other moderately low (2",
+     "satz": "We chose 2 pharmacologic-range doses of melatonin for this study—1 moderately high (10 mg) and the other moderately low (2."
+    },
+    {
+     "art": "range",
+     "start": 41335,
+     "treffer": "range” dose of 0",
+     "satz": "At the time we designed this trial, lower doses had never been shown to improve sleep maintenance in any subjects, although a recent report of a small sample of subjects suggests that a “physiologic-range” dose of 0."
+    },
+    {
+     "art": "range",
+     "start": 41478,
+     "treffer": "range melatonin produced elevated daytime levels at the last study visit in several of our subjects, especially at the 10-mg dose ( Figure 3",
+     "satz": "With nightly administration for 8 weeks, pharmacologic-range melatonin produced elevated daytime levels at the last study visit in several of our subjects, especially at the 10-mg dose ( Figure 3 )."
+    }
+   ]
+  },
+  {
+   "document_id": "fb484d488b45d21bbdf407cba4b074d5",
+   "stratum": "rct",
+   "zeichen": 9659,
+   "treffer": []
+  },
+  {
+   "document_id": "3bbb142c717a970694bed1d393736b06",
+   "stratum": "crossover",
+   "zeichen": 40445,
+   "treffer": [
+    {
+     "art": "range",
+     "start": 7107,
+     "treffer": "ranging from 1 “very active, alert or awake” to 7",
+     "satz": "Subjective levels of arousal were assessed using the Stanford Sleepiness Scale (SSS) which consists in a 7-point Likert, ranging from 1 “very active, alert or awake” to 7 “very sleepy” (Hoddes et al."
+    }
+   ]
+  },
+  {
+   "document_id": "87079ba88ae1f64f00c5fe32725248a6",
+   "stratum": "crossover",
+   "zeichen": 38131,
+   "treffer": [
+    {
+     "art": "von_bis",
+     "start": 12757,
+     "treffer": "from 0, “not at all” to 4",
+     "satz": "17, the participants were instructed to rate each item regarding how they felt right now using a 5-point scale from 0, “not at all” to 4, “extremely”."
+    },
+    {
+     "art": "von_bis",
+     "start": 13721,
+     "treffer": "from 1 to 2",
+     "satz": "For both parts, the participants were required to draw lines using the mouse to connect the circles in ascending order, from 1 to 25, in the TMTA and alternating between the numbers and the letters in the TMTB as quickly and accurately as possible."
+    },
+    {
+     "art": "range",
+     "start": 14790,
+     "treffer": "ranged from 1",
+     "satz": "7 s and ranged from 1."
+    },
+    {
+     "art": "range",
+     "start": 16013,
+     "treffer": "Range Coffee consumption duration (year) 6",
+     "satz": "Range Coffee consumption duration (year) 6."
+    },
+    {
+     "art": "klammer_zwei_zahlen",
+     "start": 16474,
+     "treffer": "[-9.22, -4.56]",
+     "satz": "01, 95% CI [-9.22, -4.56]), 3 (p-value<0."
+    },
+    {
+     "art": "range",
+     "start": 27834,
+     "treffer": "range from 20-51 hours 6",
+     "satz": "Since this review has suggested that peak intensity of withdrawal symptoms can range from 20-51 hours 6, the finding of this research is that there is no significant difference for the other variables of the TMT and FKT, except for the TMTB number of errors between caffeine abstinence and baseline typical consumption, which may result from the short time between the start of caffeine abstinence and the start of asses"
+    },
+    {
+     "art": "von_bis",
+     "start": 33292,
+     "treffer": "from 9 to 5",
+     "satz": "The Office Staff: Your Duties from 9 to 5 [monograph on the Internet]."
+    }
+   ]
+  },
+  {
+   "document_id": "2c7ab4d1244754e3966780f4bccbfa8c",
+   "stratum": "cross_sectional",
+   "zeichen": 39970,
+   "treffer": [
+    {
+     "art": "range",
+     "start": 9579,
+     "treffer": "ranges from 0 to 15 where a test score from 0 to 4 is considered to be normal, 5 to 8 indicates mild depression, 9 to 11",
+     "satz": "The score ranges from 0 to 15 where a test score from 0 to 4 is considered to be normal, 5 to 8 indicates mild depression, 9 to 11 indicates moderate depression, and a score of 12 or more indicates severe depression."
+    }
+   ]
+  },
+  {
+   "document_id": "09843d40d3cc2c9ca039d6d1b45ac656",
+   "stratum": "cohort",
+   "zeichen": 65491,
+   "treffer": [
+    {
+     "art": "von_bis",
+     "start": 14651,
+     "treffer": "from 2016 to 2",
+     "satz": "There are two reasons why the data from the three China Family Panel Studies from 2016 to 2020 were selected for this paper."
+    },
+    {
+     "art": "range",
+     "start": 17889,
+     "treffer": "ranges from 0 to 24",
+     "satz": "The final depression score is the sum of the respondents’ answers and ranges from 0 to 24, where higher scores represent more severe depressive symptoms."
+    },
+    {
+     "art": "zeitpunkte",
+     "start": 18044,
+     "treffer": "at the three time points",
+     "satz": "747 at the three time points."
+    },
+    {
+     "art": "zeitpunkte",
+     "start": 21311,
+     "treffer": "at time point",
+     "satz": ", physical exercise time) at time point t may affect the value of variable Y (e."
+    },
+    {
+     "art": "zeitpunkte",
+     "start": 21390,
+     "treffer": "at time point",
+     "satz": ", depressive symptoms) at time point t + 1, and vice versa."
+    },
+    {
+     "art": "range",
+     "start": 22725,
+     "treffer": "ranged from 5",
+     "satz": "On average, the depression symptom scores of the respondents ranged from 5."
+    },
+    {
+     "art": "range",
+     "start": 23200,
+     "treffer": "ranged from 2",
+     "satz": "1% of the older adults reaching the number of physical exercises per week > 3 and the duration of exercise > 30 min; self-assessed health status ranged from 2."
+    },
+    {
+     "art": "zeitpunkte",
+     "start": 31172,
+     "treffer": "across the three time points",
+     "satz": "1) that in the autoregressive effects, there was a strong autocorrelation between physical exercise and depressive symptoms across the three time points."
+    },
+    {
+     "art": "von_bis",
+     "start": 51912,
+     "treffer": "from 2010 to 2",
+     "satz": "Prevalence rate of depression in Chinese elderly from 2010 to 2019: a meta-analysis."
+    }
+   ]
+  },
+  {
+   "document_id": "334f5f679802315eeec71399149b51c3",
+   "stratum": "aggregate",
+   "zeichen": 79745,
+   "treffer": [
+    {
+     "art": "range",
+     "start": 2148,
+     "treffer": "range of 600 ~ 970",
+     "satz": "In terms of clinical benefits, we found that overall exercise doses in the range of 600 ~ 970 METs-min/week were clinically effective."
+    },
+    {
+     "art": "range",
+     "start": 2345,
+     "treffer": "ranging from 820 ~ 1000 METs-min/week, 520 ~ 1000 METs-min/week, 650 ~ 1000 METs-min/week, 680 ~ 1000",
+     "satz": "Considering the specific types of exercise, Aerobic exercise, Resistance training, Walking, and Yoga were found to be effective at doses ranging from 820 ~ 1000 METs-min/week, 520 ~ 1000 METs-min/week, 650 ~ 1000 METs-min/week, 680 ~ 1000 METs-min/week, respectively."
+    },
+    {
+     "art": "range",
+     "start": 19413,
+     "treffer": "range of doses) at which interventions were able to achieve the minimum clinically important difference (MCID) [ 43",
+     "satz": "To further enhance the clinical utility of our results, we estimated the dose (or range of doses) at which interventions were able to achieve the minimum clinically important difference (MCID) [ 43 ]."
+    },
+    {
+     "art": "range",
+     "start": 20886,
+     "treffer": "ranged from 5 to 83, with a median of 23",
+     "satz": "The sample size of the included studies ranged from 5 to 83, with a median of 23."
+    },
+    {
+     "art": "range",
+     "start": 20941,
+     "treffer": "ranged from 59",
+     "satz": "The mean age ranged from 59."
+    },
+    {
+     "art": "range",
+     "start": 21015,
+     "treffer": "ranged from 1990 and 2023, with a median of 2011",
+     "satz": "The year of publication ranged from 1990 and 2023, with a median of 2011."
+    },
+    {
+     "art": "range",
+     "start": 21139,
+     "treffer": "range 2 to 26), frequency was 3 times (range 1 to 5), and single session time was 45 min (range 20 to 70",
+     "satz": "For specific exercise variables, the median reported period was 12 weeks (range 2 to 26), frequency was 3 times (range 1 to 5), and single session time was 45 min (range 20 to 70)."
+    },
+    {
+     "art": "range",
+     "start": 21925,
+     "treffer": "ranged between -0",
+     "satz": "7%) of 7 exercise types significantly relieved symptoms of depression, and the SMDs (95% CrI) ranged between -0."
+    },
+    {
+     "art": "range",
+     "start": 28377,
+     "treffer": "range of 350 ~ 1000METs-min/week, and the optimal dose was 800METs-min/week (clinically effective: 600–970",
+     "satz": "Second, this dose–response meta-analysis emphasized the in U-shaped dose–response relationship between exercise and depressive symptoms, with an effective dose range of 350 ~ 1000METs-min/week, and the optimal dose was 800METs-min/week (clinically effective: 600–970 METs-min/week)."
+    },
+    {
+     "art": "range",
+     "start": 29015,
+     "treffer": "ranges from 520 ~ 1000",
+     "satz": "Fourth, when considering the MCID, the minimum threshold dose for AE, Walking and Yoga was 820METs-min/week, 650METs-min/week and 680METs-min/week, respectively, and the effective dose of RT ranges from 520 ~ 1000METs-min/week, other types of exercise were not clinical effective."
+    },
+    {
+     "art": "range",
+     "start": 32441,
+     "treffer": "ranges with the optimal dose (800",
+     "satz": "In the absence of considering exercise types, our research findings indicated a U-shaped relationship between exercise and the alleviation of depressive symptoms in the older adults, and our study provided statistically (350–1000 METs-min/week) and clinically (600–970 METs-min/week) meaningful dosage ranges with the optimal dose (800 METs-min/week)."
+    }
+   ]
+  },
+  {
+   "document_id": "203c831dbeb178297006a888608f4f10",
+   "stratum": "aggregate",
+   "zeichen": 114459,
+   "treffer": [
+    {
+     "art": "range",
+     "start": 3975,
+     "treffer": "ranges from approximately 30",
+     "satz": "The 5-year recurrence risk following curative-intent surgery for colorectal cancer ranges from approximately 30% in patients with stage II–III disease to substantially higher rates in advanced-stage cases treated with surgery alone."
+    },
+    {
+     "art": "range",
+     "start": 11496,
+     "treffer": "ranging from 30% to 80",
+     "satz": "Among these, cancer recurrence remains a major concern, with rates ranging from 30% to 80%, depending on the cancer stage and treatment type—such as surgery alone versus combined with adjuvant chemotherapy."
+    }
+   ]
+  },
+  {
+   "document_id": "2675c25aabf33995fb6c2d3e72221923",
+   "stratum": "cross_sectional",
+   "zeichen": 55267,
+   "treffer": [
+    {
+     "art": "range",
+     "start": 14828,
+     "treffer": "ranges from 0 to 14, with varying adherence categories distributed as follows: a score ≤5 indicates weak adherence, a score from 6 to 9",
+     "satz": "The 14-MEDAS is based on 14 questions; its total score ranges from 0 to 14, with varying adherence categories distributed as follows: a score ≤5 indicates weak adherence, a score from 6 to 9 indicates moderate to fair adherence, and a score ≥10 indicates good or very good adherence."
+    },
+    {
+     "art": "range",
+     "start": 17697,
+     "treffer": "ranged from 0 to 12, and the tool’s name was modified to 12-MEDAS to reflect the 12",
+     "satz": "Accordingly, following the exclusion of the “wine consumption” and “olive oil quantity” items, the total score ranged from 0 to 12, and the tool’s name was modified to 12-MEDAS to reflect the 12-item scale."
+    },
+    {
+     "art": "klammer_zwei_zahlen",
+     "start": 30372,
+     "treffer": "[0.153, 0.323]",
+     "satz": "240, CI [0.153, 0.323], p < 0."
+    },
+    {
+     "art": "klammer_zwei_zahlen",
+     "start": 30412,
+     "treffer": "[0.06, 0.237]",
+     "satz": "150, CI [0.06, 0.237], p < 0."
+    },
+    {
+     "art": "klammer_zwei_zahlen",
+     "start": 30470,
+     "treffer": "[-0.034, 0.068]",
+     "satz": "017, CI [-0.034, 0.068] k = 0."
+    },
+    {
+     "art": "klammer_zwei_zahlen",
+     "start": 30500,
+     "treffer": "[-0.008, 0.062]",
+     "satz": "027, CI [-0.008, 0.062] Gamma Coefficient γ = 0."
+    },
+    {
+     "art": "klammer_zwei_zahlen",
+     "start": 30549,
+     "treffer": "[0.089, 0.375]",
+     "satz": "232, CI [0.089, 0.375], p = 0."
+    },
+    {
+     "art": "klammer_zwei_zahlen",
+     "start": 30589,
+     "treffer": "[0.021, 0.401]",
+     "satz": "211, CI [0.021, 0.401], p = 0."
+    },
+    {
+     "art": "range",
+     "start": 39206,
+     "treffer": "range between 0",
+     "satz": "These correlation values are, however, consistent with existing validation literature in pregnant populations, where coefficients typically range between 0."
+    }
+   ]
+  },
+  {
+   "document_id": "71c86b675bdc30a57ac17ac779abdce5",
+   "stratum": "rct",
+   "zeichen": 69105,
+   "treffer": [
+    {
+     "art": "range",
+     "start": 10037,
+     "treffer": "ranging from 55",
+     "satz": "7% ( 8, 9), ranging from 55."
+    },
+    {
+     "art": "range",
+     "start": 18943,
+     "treffer": "ranges from 0 to 14",
+     "satz": "The ﬁnal score that can be obtained with this questionnaire ranges from 0 to 14 points."
+    },
+    {
+     "art": "von_bis",
+     "start": 26768,
+     "treffer": "from 93% to 4",
+     "satz": "Similarly, a 6-month single-arm counseling intervention with MedDiet decreased the percentage of patients with steatosis grade 2 or higher from 93% to 48% ( 58)."
+    }
+   ]
+  },
+  {
+   "document_id": "cf9d739f5090aeda8006074fce2f0b44",
+   "stratum": "rct",
+   "zeichen": 61869,
+   "treffer": []
+  },
+  {
+   "document_id": "b3c35c1d63f972086d2e322e693c1a03",
+   "stratum": "rct",
+   "zeichen": 24519,
+   "treffer": []
+  },
+  {
+   "document_id": "b5e492009e4ca350f512d5144fe8bf92",
+   "stratum": "rct",
+   "zeichen": 48470,
+   "treffer": [
+    {
+     "art": "von_bis",
+     "start": 4892,
+     "treffer": "from 1 billion to 1",
+     "satz": ", 2020 ), coinciding with a expected increase in the population of older adults aged 60 and above from 1 billion to 1."
+    }
+   ]
+  },
+  {
+   "document_id": "ca2c52d13aaec47ebbeccdedb3ee1d8e",
+   "stratum": "crossover",
+   "zeichen": 79256,
+   "treffer": [
+    {
+     "art": "von_bis",
+     "start": 12171,
+     "treffer": "from 0 to 3",
+     "satz": "It uses a 4-point scoring system from 0 to 3, where scores of 0–13 indicate no depressive symptoms, 14–19 indicate mild depressive symptoms, 20–28 indicate moderate depressive symptoms, and ≥ 29 indicate severe depressive symptoms."
+    },
+    {
+     "art": "range",
+     "start": 13510,
+     "treffer": "range is approximately 12–15",
+     "satz": "For moderate-intensity exercise, the recommended perceived exertion (RPE) range is approximately 12–15."
+    },
+    {
+     "art": "von_bis",
+     "start": 17376,
+     "treffer": "from 1:00 PM to 5",
+     "satz": "The exercise time for participants is primarily concentrated during the day, specifically from 1:00 PM to 5:00 PM."
+    }
+   ]
+  },
+  {
+   "document_id": "3790c91f96877eb6e260b4d7e0c7e7ee",
+   "stratum": "cohort",
+   "zeichen": 70784,
+   "treffer": [
+    {
+     "art": "korrelation_spanne",
+     "start": 3470,
+     "treffer": "rs=[−0.225, 0.447]",
+     "satz": "0353689 July 21, 2026 2 / 19 (rs=[−0.225, 0.447], P < 0."
+    },
+    {
+     "art": "klammer_zwei_zahlen",
+     "start": 4299,
+     "treffer": "[−0.004, −0.001]",
+     "satz": "002, 95% CI=[−0.004, −0.001]), with the mediation effect accounting for 5."
+    },
+    {
+     "art": "von_bis",
+     "start": 7889,
+     "treffer": "from 10% to 1",
+     "satz": "According to the 2022 report World Population Prospects, the proportion of the global population aged 65 and over is expected to increase from 10% to 16% between 2022 and 2050 [6]."
+    },
+    {
+     "art": "range",
+     "start": 16190,
+     "treffer": "ranging from 0 to 20",
+     "satz": "Memory scores are the sum of immediate memory and delayed memory scores, ranging from 0 to 20."
+    },
+    {
+     "art": "range",
+     "start": 16367,
+     "treffer": "ranging from 0 to 4",
+     "satz": "Cognitive flexibility is assessed based on the participant’s responses to four date-related questions: day, month, year, and day of the week, with scores ranging from 0 to 4 points."
+    },
+    {
+     "art": "range",
+     "start": 19854,
+     "treffer": "ranges for affective depressive symptoms and somatic depressive symptoms were 0–5 points and 0–3",
+     "satz": "The scoring ranges for affective depressive symptoms and somatic depressive symptoms were 0–5 points and 0–3 points, respectively."
+    },
+    {
+     "art": "range",
+     "start": 27656,
+     "treffer": "range) of participants at baseline was 66",
+     "satz": "The median age (interquartile range) of participants at baseline was 66 years."
+    },
+    {
+     "art": "von_bis",
+     "start": 28015,
+     "treffer": "from 0 at T1 and T2 to 1",
+     "satz": "In contrast, the median score for physical depression symptoms increased from 0 at T1 and T2 to 1 at T3."
+    },
+    {
+     "art": "zeitpunkte",
+     "start": 29182,
+     "treffer": "at all three time points",
+     "satz": "Correlation analysis between different variables The results showed that there were significant correlations between CF, PA, emotional depression symptoms, and physical depression symptoms at all three time points (P < 0."
+    },
+    {
+     "art": "zeitpunkte",
+     "start": 29261,
+     "treffer": "across time points",
+     "satz": "Specifically, at the same time point and across time points, CF was significantly positively correlated with PA (rs=[0."
+    },
+    {
+     "art": "korrelation_spanne",
+     "start": 29397,
+     "treffer": "rs=[−0.096, −0.131]",
+     "satz": "001), emotional depressive symptoms (rs=[−0.096, −0.131]; P < 0."
+    },
+    {
+     "art": "korrelation_spanne",
+     "start": 29464,
+     "treffer": "rs=[−0.132, −0.159]",
+     "satz": "001), and physical depressive symptoms (rs=[−0.132, −0.159]; P < 0."
+    },
+    {
+     "art": "korrelation_spanne",
+     "start": 29577,
+     "treffer": "rs=[−0.150, −0.206]",
+     "satz": "001); PA was significantly negatively correlated with emotional depressive symptoms (rs=[−0.150, −0.206]; P < 0."
+    },
+    {
+     "art": "korrelation_spanne",
+     "start": 29645,
+     "treffer": "rs=[−0.225, −0.266]",
+     "satz": "001) and physical depressive symp- toms (rs=[−0.225, −0.266]; P < 0."
+    },
+    {
+     "art": "korrelation_spanne",
+     "start": 29783,
+     "treffer": "rs=[0.281, 0.447]",
+     "satz": "001); affective depressive symptoms and somatic depressive symptoms were significantly positively correlated (rs=[0.281, 0.447]; P < 0."
+    },
+    {
+     "art": "range",
+     "start": 31965,
+     "treffer": "range) 66(13) 68(13) 70(13) BMI (kg/m², median, interquartile range) 27",
+     "satz": "Parameters T1 T2 T3 Age (median, interquartile range) 66(13) 68(13) 70(13) BMI (kg/m², median, interquartile range) 27."
+    },
+    {
+     "art": "range",
+     "start": 32837,
+     "treffer": "range) 37 (12) 37 (12) 37 (13) Physical activity level Sedentary 358 (5",
+     "satz": "2) Cognitive function (median, interquartile range) 37 (12) 37 (12) 37 (13) Physical activity level Sedentary 358 (5."
+    },
+    {
+     "art": "range",
+     "start": 33098,
+     "treffer": "range) Emotional depression symptom 0 (0) 0 (1) 0 (1) Physical depression symptom 0 (1) 0 (1) 1 (1",
+     "satz": "3) Depression symptom (median, interquartile range) Emotional depression symptom 0 (0) 0 (1) 0 (1) Physical depression symptom 0 (1) 0 (1) 1 (1) https://doi."
+    },
+    {
+     "art": "klammer_zwei_zahlen",
+     "start": 37176,
+     "treffer": "[−0.004, −0.001]",
+     "satz": "002, 95% CI=[−0.004, −0.001])."
+    },
+    {
+     "art": "klammer_zwei_zahlen",
+     "start": 40532,
+     "treffer": "[−0.004, −0.001]",
+     "satz": "002, 95% CI=[−0.004, −0.001]), indicating that PA mediated the longitudinal association from earlier CF to later depressive symptoms."
+    },
+    {
+     "art": "von_bis",
+     "start": 42322,
+     "treffer": "from 2014 to 2",
+     "satz": "0353689 July 21, 2026 14 / 19 Discussion This study was based on longitudinal data from ELSA from 2014 to 2018, involving a total of 6,787 participants aged 50 and over."
+    }
+   ]
+  },
+  {
+   "document_id": "7df874ca5386e7db9350901562d9408e",
+   "stratum": "cohort",
+   "zeichen": 5729,
+   "treffer": []
+  },
+  {
+   "document_id": "17c7628ed0e8f01d4ec063e2b730dc36",
+   "stratum": "cohort",
+   "zeichen": 61790,
+   "treffer": [
+    {
+     "art": "von_bis",
+     "start": 733,
+     "treffer": "from 2015 to 2",
+     "satz": "This study investigates the bidirectional relationship between Activities of Daily Living (ADL) disability and depressive symptoms (DS) among middle-aged and older adults in China, utilizing data from the China Health and Retirement Longitudinal Study (CHARLS) from 2015 to 2018."
+    },
+    {
+     "art": "range",
+     "start": 3795,
+     "treffer": "ranging from 5",
+     "satz": "Major depressive disorder stands out as one of the primary causes of suicide among the elderly, with its prevalence ranging from 5."
+    },
+    {
+     "art": "von_bis",
+     "start": 10515,
+     "treffer": "from 2015 to 2",
+     "satz": "Time-to-event data were handled by defining the follow-up period from 2015 to 2018, with censoring applied to participants lost to follow-up."
+    },
+    {
+     "art": "von_bis",
+     "start": 10641,
+     "treffer": "from 2015 to 2",
+     "satz": "This study represents an analysis of CHARLS data from 2015 to 2018, with participants entirely selected from the 2015 cohort of CHARLS."
+    },
+    {
+     "art": "range",
+     "start": 12761,
+     "treffer": "ranging from 0 (rarely or none of the time) to 3 (most or all of the time), with 8 items being negative and 2",
+     "satz": "” Each item is scored on a four-point scale, ranging from 0 (rarely or none of the time) to 3 (most or all of the time), with 8 items being negative and 2 items being positive."
+    },
+    {
+     "art": "range",
+     "start": 12952,
+     "treffer": "ranges from 0 to 30",
+     "satz": "Overall, the scale score ranges from 0 to 30, with higher scores indicating more severe depressive symptoms and a higher likelihood of depression."
+    },
+    {
+     "art": "range",
+     "start": 14193,
+     "treffer": "ranging from 0 to 11",
+     "satz": "The ADL score is the sum of the BADL and IADL scores, ranging from 0 to 11."
+    },
+    {
+     "art": "von_bis",
+     "start": 17253,
+     "treffer": "from 2015 to 2",
+     "satz": "During the longitudinal follow-up from 2015 to 2018, 2,292 participants developed probable DS, yielding a cumulative incidence rate of 25%."
+    }
+   ]
+  },
+  {
+   "document_id": "7ca468285bd24135c1a9bf48f6f5f202",
+   "stratum": "cross_sectional",
+   "zeichen": 58006,
+   "treffer": [
+    {
+     "art": "range",
+     "start": 6104,
+     "treffer": "range of cut points used, and is more sensitive to subtle differences in physical activity [ 19",
+     "satz": "It also does not impose arbitrary cut points on data, thus overcoming the lack of comparability between studies due to the wide range of cut points used, and is more sensitive to subtle differences in physical activity [ 19 ]."
+    },
+    {
+     "art": "range",
+     "start": 13946,
+     "treffer": "ranges from 0 to 10",
+     "satz": "The final score for each task ranges from 0 to 10 points."
+    },
+    {
+     "art": "range",
+     "start": 17638,
+     "treffer": "range of 0 to 12",
+     "satz": "The final score summed the answers with a range of 0 to 12, and a greater score indicated more depressive symptoms."
+    },
+    {
+     "art": "von_bis",
+     "start": 18153,
+     "treffer": "from 0 = none to 6",
+     "satz": "Education was measured using the ISCED-1997 classification that includes 7 education levels (from 0 = none to 6 = second stage of tertiary education)."
+    },
+    {
+     "art": "range",
+     "start": 22555,
+     "treffer": "ranged between 50 and 99 (Mean = 70",
+     "satz": "Age ranged between 50 and 99 (Mean = 70."
+    },
+    {
+     "art": "range",
+     "start": 23123,
+     "treffer": "range: −6 to −1",
+     "satz": "42 (range: −6 to −1)."
+    },
+    {
+     "art": "range",
+     "start": 23382,
+     "treffer": "range: 0–12",
+     "satz": "4 depressive symptoms (range: 0–12)."
+    }
+   ]
+  },
+  {
+   "document_id": "1faf4b78f05cd156029ee647c2e14c51",
+   "stratum": "cross_sectional",
+   "zeichen": 27868,
+   "treffer": [
+    {
+     "art": "range",
+     "start": 10512,
+     "treffer": "ranged in age from 17 to 24 (21",
+     "satz": "The subjects ranged in age from 17 to 24 (21."
+    },
+    {
+     "art": "range",
+     "start": 12019,
+     "treffer": "ranging from 1, ” very dissatisﬁed ”to 7",
+     "satz": "The questionnaire was scored on a 7-point Likert scale ranging from 1, ” very dissatisﬁed ”to 7, ” dissatisﬁed”."
+    }
+   ]
+  },
+  {
+   "document_id": "37cafe8444a2d0edd125109341865251",
+   "stratum": "cross_sectional",
+   "zeichen": 73766,
+   "treffer": [
+    {
+     "art": "range",
+     "start": 15258,
+     "treffer": "range of 0",
+     "satz": "The TMAO assay had a standard curve range of 0."
+    },
+    {
+     "art": "range",
+     "start": 15323,
+     "treffer": "range of 62",
+     "satz": "2–60 ng/mL, and the L-carnitine assay had a detection range of 62."
+    },
+    {
+     "art": "range",
+     "start": 19360,
+     "treffer": "ranged from 1",
+     "satz": "All VIF values ranged from 1."
+    }
+   ]
+  },
+  {
+   "document_id": "5cbf039f22f1bfe9f5902cf3f626852f",
+   "stratum": "aggregate",
+   "zeichen": 87127,
+   "treffer": [
+    {
+     "art": "von_bis",
+     "start": 4569,
+     "treffer": "From 1989 to 2",
+     "satz": "From 1989 to 2022, the prevalence of mild to moderate depression has significantly increased by 21."
+    },
+    {
+     "art": "range",
+     "start": 21557,
+     "treffer": "ranging from 22 to 151",
+     "satz": "The 12 studies included a total of 723 adolescent participants, with sample sizes ranging from 22 to 151."
+    },
+    {
+     "art": "range",
+     "start": 21604,
+     "treffer": "ranged from 12 to 18",
+     "satz": "The participants’ ages ranged from 12 to 18."
+    },
+    {
+     "art": "range",
+     "start": 22040,
+     "treffer": "ranging from 2 to 5 times per week, with 3",
+     "satz": "The interventions included walking, jogging, dancing, ball games, and combined training, with exercise frequencies ranging from 2 to 5 times per week, with 3 times per week being the most common."
+    },
+    {
+     "art": "von_bis",
+     "start": 22146,
+     "treffer": "from 20 min to 90 min, with the majority of studies focusing on durations of 40 to 6",
+     "satz": "Session durations varied from 20 min to 90 min, with the majority of studies focusing on durations of 40 to 60 min."
+    },
+    {
+     "art": "range",
+     "start": 22262,
+     "treffer": "ranged from 5 weeks to 22",
+     "satz": "The intervention periods ranged from 5 weeks to 22 weeks."
+    },
+    {
+     "art": "klammer_zwei_zahlen",
+     "start": 25870,
+     "treffer": "[−0.02, −0.00]",
+     "satz": "01, 95% CrI [−0.02, −0.00]), indicating that higher proportions of females in the studies were associated with better intervention effects (greater negative effect size)."
+    },
+    {
+     "art": "klammer_zwei_zahlen",
+     "start": 26069,
+     "treffer": "[−0.17, 0.05]",
+     "satz": "06, 95% CrI [−0.17, 0.05]), baseline depression levels (Estimate = −0."
+    },
+    {
+     "art": "klammer_zwei_zahlen",
+     "start": 26139,
+     "treffer": "[−0.25, 0.14]",
+     "satz": "06, 95% CrI [−0.25, 0.14]), and total intervention weeks (Estimate = 0."
+    },
+    {
+     "art": "klammer_zwei_zahlen",
+     "start": 26210,
+     "treffer": "[−0.01, 0.04]",
+     "satz": "01, 95% CrI [−0.01, 0.04]) did not have significant moderating effects, as their 95% credible intervals included zero."
+    },
+    {
+     "art": "klammer_zwei_zahlen",
+     "start": 27047,
+     "treffer": "[0.21, 0.38]",
+     "satz": "29 (95% CI [0.21, 0.38]), while the main estimate remained 0."
+    },
+    {
+     "art": "klammer_zwei_zahlen",
+     "start": 27108,
+     "treffer": "[0.08, 0.19]",
+     "satz": "28 (95% CI [0.08, 0.19])."
+    },
+    {
+     "art": "range",
+     "start": 33370,
+     "treffer": "range [ 7 , 24 , 70",
+     "satz": "As for session duration, 30 to 60 min is widely recognized as the effective range [ 7 , 24 , 70 ]."
+    },
+    {
+     "art": "range",
+     "start": 37326,
+     "treffer": "range of 0",
+     "satz": "Although based on aggregated data, it is not possible to directly calculate the probability of achieving the minimal clinically important difference; existing evidence suggests that effect sizes in the range of 0."
+    }
+   ]
+  },
+  {
+   "document_id": "cfc6567ca3cb6eec8c47a64a1674a849",
+   "stratum": "aggregate",
+   "zeichen": 46378,
+   "treffer": [
+    {
+     "art": "range",
+     "start": 14411,
+     "treffer": "ranged from 30 to 90 minutes, with intervention frequency from 1 to 6 times per week, lasting 4 to 32",
+     "satz": "Single session durations ranged from 30 to 90 minutes, with intervention frequency from 1 to 6 times per week, lasting 4 to 32 weeks."
+    },
+    {
+     "art": "range",
+     "start": 18790,
+     "treffer": "ranged from 4 to 5",
+     "satz": "PEDro scale scores ranged from 4 to 5 Zheng H, et al."
+    }
+   ]
+  },
+  {
+   "document_id": "9cac5e48f3873753223db0c3b5f2b501",
+   "stratum": "negative_control",
+   "zeichen": 44012,
+   "treffer": [
+    {
+     "art": "von_bis",
+     "start": 29937,
+     "treffer": "From 5 to 1",
+     "satz": "From 5 to 12 months, the infant makes several efforts toward walking, but each child has different processes for motor skills acquisition, parallel to cognitive development, and is susceptible to environmental influences ( 5 )."
+    }
+   ]
+  },
+  {
+   "document_id": "83966faed7ce0817920e6bf366efc8bb",
+   "stratum": "negative_control",
+   "zeichen": 16093,
+   "treffer": []
+  },
+  {
+   "document_id": "0843e61250179bd14f8d0a45fc678e5d",
+   "stratum": "negative_control",
+   "zeichen": 15000,
+   "treffer": [
+    {
+     "art": "von_bis",
+     "start": 7527,
+     "treffer": "from 1 to 2",
+     "satz": "The single nucleotide polymorphisms were individually numbered from 1 to 25 for illustrative purposes."
+    }
+   ]
+  },
+  {
+   "document_id": "6e935d39b012f2a76075a3a7964879b1",
+   "stratum": "negative_control",
+   "zeichen": 11304,
+   "treffer": []
+  },
+  {
+   "document_id": "af1bb4ac0c54f9ed49d13393b37f4ffd",
+   "stratum": "negative_control",
+   "zeichen": 106600,
+   "treffer": []
+  }
+ ]
+}
