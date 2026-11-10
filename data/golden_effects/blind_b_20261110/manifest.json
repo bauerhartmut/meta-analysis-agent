@@ -1,0 +1,278 @@
+{
+ "dataset": "goldstandard_effects",
+ "annotator": "B",
+ "blind": true,
+ "created": "2026-11-10",
+ "documents": [
+  {
+   "document_id": "7111ea978757a185d44ea9de90b453c3",
+   "prefix": "7111ea9787",
+   "title": "Mediterranean diet in preeclampsia prevention: mechanisms of action an",
+   "worksheet": "docs/internal/vollannotation_arbeitsblatt_7111ea9787.md",
+   "fulltext": "data/fulltext/7111ea978757a185d44ea9de90b453c3.txt",
+   "sha256_fulltext": "2b520cd8fc70262af536132ac776b61b68a141d1806d48f410e47a02def8e764",
+   "sha256_worksheet": "b44a4c1c588f997aadb49d03aea5205f1f2086c7d65301c6db654c9bb9aa0d9f"
+  },
+  {
+   "document_id": "3134fdc8c38f475075a70ca32dc4a3d9",
+   "prefix": "3134fdc8c3",
+   "title": "The risk associated with ultra-processed food intake on depressive sym",
+   "worksheet": "docs/internal/vollannotation_arbeitsblatt_3134fdc8c3.md",
+   "fulltext": "data/fulltext/3134fdc8c38f475075a70ca32dc4a3d9.txt",
+   "sha256_fulltext": "eecf0a1c60fab55d503fd15224630f43a0a5a808b924e2a9f75e2038ea07696e",
+   "sha256_worksheet": "53624e19b5ece37c3eb90432935e22d0e90278891810cd6e3729056f5b3b310c"
+  },
+  {
+   "document_id": "d0bec407a2a0dd19c0b67aa43f9e1dfb",
+   "prefix": "d0bec407a2",
+   "title": "A quantitative bias analysis to estimate measurement error-related att",
+   "worksheet": "docs/internal/vollannotation_arbeitsblatt_d0bec407a2.md",
+   "fulltext": "data/fulltext/d0bec407a2a0dd19c0b67aa43f9e1dfb.txt",
+   "sha256_fulltext": "a9e56cd60c09cc579f7da6dc63e4d3df9e96dda8e3e83a1341ab8c6e1db29563",
+   "sha256_worksheet": "8ab9523cd46678c46098e8a061a2a697dfacfec471dab2af8266f602fb35c679"
+  },
+  {
+   "document_id": "bb9218735fec8fc7f3b6aebbff430aba",
+   "prefix": "bb9218735f",
+   "title": "A Multicenter, Placebo-controlled Trial of Melatonin for Sleep Disturb",
+   "worksheet": "docs/internal/vollannotation_arbeitsblatt_bb9218735f.md",
+   "fulltext": "data/fulltext/bb9218735fec8fc7f3b6aebbff430aba.txt",
+   "sha256_fulltext": "a905ced3d3f222b100adec8515d71fc5c3c4da74fb58aaf460766a2dc9d98d64",
+   "sha256_worksheet": "8e5be414a2cd6a949aa429e9c2df776d679035bb79008371aff97cd33a2a984a"
+  },
+  {
+   "document_id": "fb484d488b45d21bbdf407cba4b074d5",
+   "prefix": "fb484d488b",
+   "title": "The effect of exercise on depressive symptoms in multiple sclerosis ba",
+   "worksheet": "docs/internal/vollannotation_arbeitsblatt_fb484d488b.md",
+   "fulltext": "data/fulltext/fb484d488b45d21bbdf407cba4b074d5.txt",
+   "sha256_fulltext": "d8a4a5a41b8b503e227b4eda8366fa5acbb410f6ca50bd228f9e6a72cf76d1ef",
+   "sha256_worksheet": "746114840b4b27f8aafff5e2a033ddef82f57df95f44172bcbcaaaebe9c60ea4"
+  },
+  {
+   "document_id": "3bbb142c717a970694bed1d393736b06",
+   "prefix": "3bbb142c71",
+   "title": "Effects of Acute Caffeine Ingestion on Reaction Time in Habitual and L",
+   "worksheet": "docs/internal/vollannotation_arbeitsblatt_3bbb142c71.md",
+   "fulltext": "data/fulltext/3bbb142c717a970694bed1d393736b06.txt",
+   "sha256_fulltext": "02d5c2ae7db68815bfea30eef78899b7be8b6dd25ceb3e63d5de1b37f4f3316e",
+   "sha256_worksheet": "6aceb10da618c0e9e0d4a7c575d7238f6637f7ac32652a1b44f072978a59c53b"
+  },
+  {
+   "document_id": "87079ba88ae1f64f00c5fe32725248a6",
+   "prefix": "87079ba88a",
+   "title": "Withdrawal Symptoms and Executive Functions After 24-Hour Caffeine Abs",
+   "worksheet": "docs/internal/vollannotation_arbeitsblatt_87079ba88a.md",
+   "fulltext": "data/fulltext/87079ba88ae1f64f00c5fe32725248a6.txt",
+   "sha256_fulltext": "36e3f5a12a69cf06822e0fc52588b1180ac43f5d10905e77edf92655b34d9c9d",
+   "sha256_worksheet": "57aa7d8f89ee1a8b3bbd3775b2c9c2bb4a5d7112aa3aca05d3e97e1012795e3c"
+  },
+  {
+   "document_id": "2c7ab4d1244754e3966780f4bccbfa8c",
+   "prefix": "2c7ab4d124",
+   "title": "Prevalence of depressive symptoms and its associated factors in older",
+   "worksheet": "docs/internal/vollannotation_arbeitsblatt_2c7ab4d124.md",
+   "fulltext": "data/fulltext/2c7ab4d1244754e3966780f4bccbfa8c.txt",
+   "sha256_fulltext": "b48f07c5ca1626ac5c39c304c9fcfe32f61d85350772ca4370a2ce7aad3360f7",
+   "sha256_worksheet": "6121758fb0372ebcbad176a826f6bd2ab6206a4b598a6127f5241f1de6d100db"
+  },
+  {
+   "document_id": "09843d40d3cc2c9ca039d6d1b45ac656",
+   "prefix": "09843d40d3",
+   "title": "Bidirectional relationships between physical exercise and depressive s",
+   "worksheet": "docs/internal/vollannotation_arbeitsblatt_09843d40d3.md",
+   "fulltext": "data/fulltext/09843d40d3cc2c9ca039d6d1b45ac656.txt",
+   "sha256_fulltext": "80984652990dc634211924f4ae152a09d8af31655b390da9335d9c46e1427595",
+   "sha256_worksheet": "7f6e4f427cd00442d7827c40a17f6492a430954e3717d31359e2bf8daa7c5068"
+  },
+  {
+   "document_id": "334f5f679802315eeec71399149b51c3",
+   "prefix": "334f5f6798",
+   "title": "Optimal dose and type of exercise to improve depressive symptoms in ol",
+   "worksheet": "docs/internal/vollannotation_arbeitsblatt_334f5f6798.md",
+   "fulltext": "data/fulltext/334f5f679802315eeec71399149b51c3.txt",
+   "sha256_fulltext": "7ad77978eaabc320c90b0636fc589b86952a720471e6c5eb050f36c513d54800",
+   "sha256_worksheet": "1d4763bc0c7ded291f8d502c8a06ffa7a1d7599d606dddcf8b9d629dedacb741"
+  },
+  {
+   "document_id": "203c831dbeb178297006a888608f4f10",
+   "prefix": "203c831dbe",
+   "title": "Post-Diagnosis Adherence to the Mediterranean Diet and Cancer Recurren",
+   "worksheet": "docs/internal/vollannotation_arbeitsblatt_203c831dbe.md",
+   "fulltext": "data/fulltext/203c831dbeb178297006a888608f4f10.txt",
+   "sha256_fulltext": "2891389bed3d458ef9553e741a52f4ed9d1430fcb79814a3faabdff7ff4da4c6",
+   "sha256_worksheet": "88f52355322ec499bd0c5d78a5534011f872e075f5307e152b06f4ef43a7b585"
+  },
+  {
+   "document_id": "2675c25aabf33995fb6c2d3e72221923",
+   "prefix": "2675c25aab",
+   "title": "Exploring the validity and internal consistency of the 12-point Medite",
+   "worksheet": "docs/internal/vollannotation_arbeitsblatt_2675c25aab.md",
+   "fulltext": "data/fulltext/2675c25aabf33995fb6c2d3e72221923.txt",
+   "sha256_fulltext": "b15dc89d88b446b79fbeeb1f07d1101dd15ef8293021b0c4afa32c37cb089a35",
+   "sha256_worksheet": "6deeaf97d216849c258a5a94ef8eff9eaf7facfa43769d8be85d983c7e13047b"
+  },
+  {
+   "document_id": "71c86b675bdc30a57ac17ac779abdce5",
+   "prefix": "71c86b675b",
+   "title": "Adherence to the Mediterranean diet to prevent or delay hepatic steato",
+   "worksheet": "docs/internal/vollannotation_arbeitsblatt_71c86b675b.md",
+   "fulltext": "data/fulltext/71c86b675bdc30a57ac17ac779abdce5.txt",
+   "sha256_fulltext": "2ae597071f0dc632260cbb684f68f30a6037aef8eeb6d8819f2a91c2a181aa11",
+   "sha256_worksheet": "17a441066ccaee712c05f41600113f77e4929cbc59fd65d2b842585189f22078"
+  },
+  {
+   "document_id": "cf9d739f5090aeda8006074fce2f0b44",
+   "prefix": "cf9d739f50",
+   "title": "Impaired sleep, depressive symptoms, and pain as determinants of physi",
+   "worksheet": "docs/internal/vollannotation_arbeitsblatt_cf9d739f50.md",
+   "fulltext": "data/fulltext/cf9d739f5090aeda8006074fce2f0b44.txt",
+   "sha256_fulltext": "20a39b9e18d272d252b14f17c216e4dbd3202cbaadc5dba887c62688d2e1b4de",
+   "sha256_worksheet": "e7867ccf052fe0ca99743f7f82c03837fab33d29de1b5704bef2355a3a106168"
+  },
+  {
+   "document_id": "b3c35c1d63f972086d2e322e693c1a03",
+   "prefix": "b3c35c1d63",
+   "title": "Consumption of caffeine-containing beverages improves sustained attent",
+   "worksheet": "docs/internal/vollannotation_arbeitsblatt_b3c35c1d63.md",
+   "fulltext": "data/fulltext/b3c35c1d63f972086d2e322e693c1a03.txt",
+   "sha256_fulltext": "d20e11fee6dcb8b6fe5039c23ee37dada072718c0b8c5792cc341065d5d8b550",
+   "sha256_worksheet": "cb672a16b9a2389d9902e1f74ff5cd2302bdc8b27e12ad37c722baf970837b9e"
+  },
+  {
+   "document_id": "b5e492009e4ca350f512d5144fe8bf92",
+   "prefix": "b5e492009e",
+   "title": "Impact of exercise type, duration, and intensity on depressive symptom",
+   "worksheet": "docs/internal/vollannotation_arbeitsblatt_b5e492009e.md",
+   "fulltext": "data/fulltext/b5e492009e4ca350f512d5144fe8bf92.txt",
+   "sha256_fulltext": "b4b782c3a1ee5c1a3e77bdbb3cfeaccb1d78b1a7c506567f68c2ba0e18263e39",
+   "sha256_worksheet": "753f3e8f0dd1270ada5cbedbe1ff852be516919bf9bc1e7e42aafcd06559fe07"
+  },
+  {
+   "document_id": "ca2c52d13aaec47ebbeccdedb3ee1d8e",
+   "prefix": "ca2c52d13a",
+   "title": "The effects of an 8-week Taekwondo exercise intervention on inhibitory",
+   "worksheet": "docs/internal/vollannotation_arbeitsblatt_ca2c52d13a.md",
+   "fulltext": "data/fulltext/ca2c52d13aaec47ebbeccdedb3ee1d8e.txt",
+   "sha256_fulltext": "e6284628f4459c581e8c9ab40ae94991d17d3797f9e59d3c98030d771a3f7ebd",
+   "sha256_worksheet": "aaf8af15afd8a645c412ef6a10a882f8cb6bfafe6ab6137175512988014f1724"
+  },
+  {
+   "document_id": "3790c91f96877eb6e260b4d7e0c7e7ee",
+   "prefix": "3790c91f96",
+   "title": "Bidirectional association between cognitive function and depressive sy",
+   "worksheet": "docs/internal/vollannotation_arbeitsblatt_3790c91f96.md",
+   "fulltext": "data/fulltext/3790c91f96877eb6e260b4d7e0c7e7ee.txt",
+   "sha256_fulltext": "e7b6ce302d5c979d74e924178a6952ec60e6fb78b85b1f6f611d7e68e3b3a4b3",
+   "sha256_worksheet": "b744d7cfbd3b4cd895175397db22f298c2dcda5844d07bc096ccb85eb5859055"
+  },
+  {
+   "document_id": "7df874ca5386e7db9350901562d9408e",
+   "prefix": "7df874ca53",
+   "title": "Age and cohort differences in the association between polygenic scores",
+   "worksheet": "docs/internal/vollannotation_arbeitsblatt_7df874ca53.md",
+   "fulltext": "data/fulltext/7df874ca5386e7db9350901562d9408e.txt",
+   "sha256_fulltext": "6f6a08a99139460b091a374c502137896c52722c27a215bd0d80b87b66d079af",
+   "sha256_worksheet": "fd3bf904aa71d34ff02675c165feab0c72bddaa2970ea412076828c71e473ca7"
+  },
+  {
+   "document_id": "17c7628ed0e8f01d4ec063e2b730dc36",
+   "prefix": "17c7628ed0",
+   "title": "Bidirectional association between ADL disability and depressive sympto",
+   "worksheet": "docs/internal/vollannotation_arbeitsblatt_17c7628ed0.md",
+   "fulltext": "data/fulltext/17c7628ed0e8f01d4ec063e2b730dc36.txt",
+   "sha256_fulltext": "c8420cb3acde4df04d24912ce1360c978e44d1615a24cd3b688f376ca6db2fff",
+   "sha256_worksheet": "5d8fef7326a4497df0575063362a764b508042a2fd760dd7592b4b3cf9de3c8a"
+  },
+  {
+   "document_id": "7ca468285bd24135c1a9bf48f6f5f202",
+   "prefix": "7ca468285b",
+   "title": "Accelerometer-Assessed Physical Activity and Cognitive Performance amo",
+   "worksheet": "docs/internal/vollannotation_arbeitsblatt_7ca468285b.md",
+   "fulltext": "data/fulltext/7ca468285bd24135c1a9bf48f6f5f202.txt",
+   "sha256_fulltext": "79bc177e43f212d8700556af1ec2b049b92dfeddd5ffe0ad698b2d511c2f9010",
+   "sha256_worksheet": "dd88bab0a1d178667794e1b369d128dbb464ed498e80301962f55b54ca1e9755"
+  },
+  {
+   "document_id": "1faf4b78f05cd156029ee647c2e14c51",
+   "prefix": "1faf4b78f0",
+   "title": "The Effect of Physical Exercise on Depression in College Students: The",
+   "worksheet": "docs/internal/vollannotation_arbeitsblatt_1faf4b78f0.md",
+   "fulltext": "data/fulltext/1faf4b78f05cd156029ee647c2e14c51.txt",
+   "sha256_fulltext": "52d85e7435c68849d1f62e54d1e3c359e2a69012f632a6a0548c9c31ed0d04b2",
+   "sha256_worksheet": "d528304215c17224113ccab32fa4bf5b2a636587e78f786bb4858ef552fd59c7"
+  },
+  {
+   "document_id": "37cafe8444a2d0edd125109341865251",
+   "prefix": "37cafe8444",
+   "title": "A Cross-Sectional Study of Food Insecurity, Mediterranean Diet Adheren",
+   "worksheet": "docs/internal/vollannotation_arbeitsblatt_37cafe8444.md",
+   "fulltext": "data/fulltext/37cafe8444a2d0edd125109341865251.txt",
+   "sha256_fulltext": "6966507da04f171107ae5c202a3dd257ee3935ad7e7cc7f0a936843db1341626",
+   "sha256_worksheet": "5974f018a64a8b26e279ded3845078564d473c0e8e80d248c7834b8924f10a21"
+  },
+  {
+   "document_id": "5cbf039f22f1bfe9f5902cf3f626852f",
+   "prefix": "5cbf039f22",
+   "title": "Aerobic exercise for depression symptoms in adolescents: a systematic",
+   "worksheet": "docs/internal/vollannotation_arbeitsblatt_5cbf039f22.md",
+   "fulltext": "data/fulltext/5cbf039f22f1bfe9f5902cf3f626852f.txt",
+   "sha256_fulltext": "37af04b2451d2a0a81dc8af662febbf1b20f2ba853a860b73096bc9f0bf20d89",
+   "sha256_worksheet": "a475978179889908b5fd0fc9bf2f342ead1819d1a3cf54ea26824a848e91e348"
+  },
+  {
+   "document_id": "cfc6567ca3cb6eec8c47a64a1674a849",
+   "prefix": "cfc6567ca3",
+   "title": "The Effect of Exercise on Depressive Symptoms in Adolescents: A System",
+   "worksheet": "docs/internal/vollannotation_arbeitsblatt_cfc6567ca3.md",
+   "fulltext": "data/fulltext/cfc6567ca3cb6eec8c47a64a1674a849.txt",
+   "sha256_fulltext": "0210899c29ac1cd89ce78e715cf4d9c9512914c3f6733e7ba6e310a5612a0ad9",
+   "sha256_worksheet": "d4d5407cf99c0178abdd3c16a2452b77139829af3a5c663e17eba0fcf7dab667"
+  },
+  {
+   "document_id": "9cac5e48f3873753223db0c3b5f2b501",
+   "prefix": "9cac5e48f3",
+   "title": "Protocol for Objective Measurement of Infants’ Physical Activity using",
+   "worksheet": "docs/internal/vollannotation_arbeitsblatt_9cac5e48f3.md",
+   "fulltext": "data/fulltext/9cac5e48f3873753223db0c3b5f2b501.txt",
+   "sha256_fulltext": "c4e64c8cfbeddab6396d8318f95691a2d8e6567f854027e7b1afebb5e719244f",
+   "sha256_worksheet": "e61019b1a4be25db6987bd495651a9e00fc04121fcbf3b9dd5821e38382283f0"
+  },
+  {
+   "document_id": "83966faed7ce0817920e6bf366efc8bb",
+   "prefix": "83966faed7",
+   "title": "Editorial: New developments in the intention-behavior gap for physical",
+   "worksheet": "docs/internal/vollannotation_arbeitsblatt_83966faed7.md",
+   "fulltext": "data/fulltext/83966faed7ce0817920e6bf366efc8bb.txt",
+   "sha256_fulltext": "f5c8182a24d067cf9029a1abd5e3805ada70fcefeb8aeb9bbe797ade776a6149",
+   "sha256_worksheet": "a127524a7891de2a89f7a6128fb61ea3922a2ab50b7a77818223f8f13d0103ff"
+  },
+  {
+   "document_id": "0843e61250179bd14f8d0a45fc678e5d",
+   "prefix": "0843e61250",
+   "title": "Invited Commentary: Detecting Individual and Global Horizontal Pleiotr",
+   "worksheet": "docs/internal/vollannotation_arbeitsblatt_0843e61250.md",
+   "fulltext": "data/fulltext/0843e61250179bd14f8d0a45fc678e5d.txt",
+   "sha256_fulltext": "4a2285e2865b6e222d09f27132f273bf506c62c70b233bfcad3cecf0da164cf6",
+   "sha256_worksheet": "996f0123fe7c3b547ac9d4cee7e2aea7490fd064c4f55133a56ff5fb1a1a3598"
+  },
+  {
+   "document_id": "6e935d39b012f2a76075a3a7964879b1",
+   "prefix": "6e935d39b0",
+   "title": "Editorial: Causal inference in diet, nutrition and health outcomes",
+   "worksheet": "docs/internal/vollannotation_arbeitsblatt_6e935d39b0.md",
+   "fulltext": "data/fulltext/6e935d39b012f2a76075a3a7964879b1.txt",
+   "sha256_fulltext": "73d2befaedb3eed861e73876d76316b22e8742e8e924a2b64b8ace1cdd5d5ad6",
+   "sha256_worksheet": "5f0d2011314972504eecc93c697bf4704e05f3f46fa259bb25888790062717a6"
+  },
+  {
+   "document_id": "af1bb4ac0c54f9ed49d13393b37f4ffd",
+   "prefix": "af1bb4ac0c",
+   "title": "A computational perspective of the role of Thalamus in cognition",
+   "worksheet": "docs/internal/vollannotation_arbeitsblatt_af1bb4ac0c.md",
+   "fulltext": "data/fulltext/af1bb4ac0c54f9ed49d13393b37f4ffd.txt",
+   "sha256_fulltext": "7ddff8f142652bf9d57efee02ebb648a1fe1aa5cfcb1ef197e885771a579d8fa",
+   "sha256_worksheet": "1b493105eb8d11744cb3c3f52504402ff67754bf34c6d657cf9b372ee809fd5f"
+  }
+ ]
+}
