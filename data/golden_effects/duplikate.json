@@ -1,0 +1,484 @@
+{
+ "dokumente": [
+  {
+   "document_id": "7111ea978757a185d44ea9de90b453c3",
+   "stratum": "cohort",
+   "titel": "Mediterranean diet in preeclampsia prevention: mechanisms of action an",
+   "zeilen": 7,
+   "unique": 7,
+   "duplikate": 0,
+   "details": []
+  },
+  {
+   "document_id": "3134fdc8c38f475075a70ca32dc4a3d9",
+   "stratum": "cohort",
+   "titel": "The risk associated with ultra-processed food intake on depressive sym",
+   "zeilen": 2,
+   "unique": 1,
+   "duplikate": 1,
+   "details": [
+    {
+     "id": "558364b4633b",
+     "original_id": "309a2d343351",
+     "grund": "wert",
+     "outcome": "depressive symptoms",
+     "effect_type": "rr",
+     "effect": 1.1,
+     "ci_low": 1.04,
+     "ci_high": 1.18,
+     "poolbar": true,
+     "quote": "High UPF consumption at time zero was associated with an increased risk of depressive symptoms at follow-ups (RR: 1.10; CI: 1.04–1.18).",
+     "quote_start": 2046,
+     "original_effect": 1.1,
+     "original_outcome": "depressive symptoms"
+    }
+   ]
+  },
+  {
+   "document_id": "d0bec407a2a0dd19c0b67aa43f9e1dfb",
+   "stratum": "cohort",
+   "titel": "A quantitative bias analysis to estimate measurement error-related att",
+   "zeilen": 2,
+   "unique": 1,
+   "duplikate": 1,
+   "details": [
+    {
+     "id": "4c8774f1239a",
+     "original_id": "28f5c2501d2e",
+     "grund": "wert",
+     "outcome": "colorectal cancer risk",
+     "effect_type": "hr",
+     "effect": 0.95,
+     "ci_low": 0.87,
+     "ci_high": 1.05,
+     "poolbar": true,
+     "quote": "The HRs for colorectal cancer risk for high (75th percentile; 411 min/week) versus low (25th percentile; 62 min/week) levels of self-reported physical activity were 0.95 (95% CI: 0.87, 1.05) before and 0.78 (95% CI: 0.47, 1.28) after bias adjustment.",
+     "quote_start": 2481,
+     "original_effect": 0.95,
+     "original_outcome": "colorectal cancer risk"
+    }
+   ]
+  },
+  {
+   "document_id": "bb9218735fec8fc7f3b6aebbff430aba",
+   "stratum": "rct",
+   "titel": "A Multicenter, Placebo-controlled Trial of Melatonin for Sleep Disturb",
+   "zeilen": 3,
+   "unique": 1,
+   "duplikate": 2,
+   "details": [
+    {
+     "id": "36e42882e6ae",
+     "original_id": "28fd9333e3b7",
+     "grund": "wert",
+     "outcome": "sleep quality",
+     "effect_type": "z",
+     "effect": -2.44,
+     "ci_low": null,
+     "ci_high": null,
+     "poolbar": false,
+     "quote": "Quality of sleep ratings from the Daily Sleep Diaries showed that the average gain in sleep quality was significantly greater in the ML 2.5SR group than in PLA (Z = −2.44, adjusted P = .03) but not for ML 10 (unadjusted P = .36).",
+     "quote_start": 34430,
+     "original_effect": -2.44,
+     "original_outcome": "sleep quality"
+    },
+    {
+     "id": "7ebbe24a69b9",
+     "original_id": "28fd9333e3b7",
+     "grund": "wert",
+     "outcome": "sleep quality",
+     "effect_type": "z",
+     "effect": -2.44,
+     "ci_low": null,
+     "ci_high": null,
+     "poolbar": false,
+     "quote": "Quality of sleep ratings from the Daily Sleep Diaries showed that the average gain in sleep quality was significantly greater in the ML 2.5SR group than in PLA (Z = −2.44, adjusted P = .03) but not for ML 10 (unadjusted P = .36).",
+     "quote_start": 34430,
+     "original_effect": -2.44,
+     "original_outcome": "sleep quality"
+    }
+   ]
+  },
+  {
+   "document_id": "fb484d488b45d21bbdf407cba4b074d5",
+   "stratum": "rct",
+   "titel": "The effect of exercise on depressive symptoms in multiple sclerosis ba",
+   "zeilen": 2,
+   "unique": 1,
+   "duplikate": 1,
+   "details": [
+    {
+     "id": "3172c98126d0",
+     "original_id": "18c9cbfed292",
+     "grund": "wert",
+     "outcome": "depressive symptoms",
+     "effect_type": "g",
+     "effect": -0.37,
+     "ci_low": -0.56,
+     "ci_high": -0.17,
+     "poolbar": true,
+     "quote": "The standardized mean difference across studies was g = -0.37, 95% confidence interval (-0.56; -0.17), and the null hypothesis of homogeneity within the sample could not be rejected (Q = 12.05, df = 11, P = 0.36).",
+     "quote_start": 2116,
+     "original_effect": -0.37,
+     "original_outcome": "depressive symptoms"
+    }
+   ]
+  },
+  {
+   "document_id": "3bbb142c717a970694bed1d393736b06",
+   "stratum": "crossover",
+   "titel": "Effects of Acute Caffeine Ingestion on Reaction Time in Habitual and L",
+   "zeilen": 0,
+   "unique": 0,
+   "duplikate": 0,
+   "details": []
+  },
+  {
+   "document_id": "87079ba88ae1f64f00c5fe32725248a6",
+   "stratum": "crossover",
+   "titel": "Withdrawal Symptoms and Executive Functions After 24-Hour Caffeine Abs",
+   "zeilen": 0,
+   "unique": 0,
+   "duplikate": 0,
+   "details": []
+  },
+  {
+   "document_id": "2c7ab4d1244754e3966780f4bccbfa8c",
+   "stratum": "cross_sectional",
+   "titel": "Prevalence of depressive symptoms and its associated factors in older",
+   "zeilen": 2,
+   "unique": 1,
+   "duplikate": 1,
+   "details": [
+    {
+     "id": "b6bcefe80b50",
+     "original_id": "8a217ca9800a",
+     "grund": "wert",
+     "outcome": "depressive symptoms",
+     "effect_type": "or",
+     "effect": 2.01,
+     "ci_low": 1.08,
+     "ci_high": 3.75,
+     "poolbar": true,
+     "quote": "In multivariate analysis (Table 3), those participants who were illiterate were twice as likely to be depressed compared to those who were literate (adjusted OR (aOR) = 2.01, 95% CI: 1.08-3.75).",
+     "quote_start": 13238,
+     "original_effect": 2.01,
+     "original_outcome": "depressive symptoms"
+    }
+   ]
+  },
+  {
+   "document_id": "09843d40d3cc2c9ca039d6d1b45ac656",
+   "stratum": "cohort",
+   "titel": "Bidirectional relationships between physical exercise and depressive s",
+   "zeilen": 2,
+   "unique": 1,
+   "duplikate": 1,
+   "details": [
+    {
+     "id": "8c16a3167523",
+     "original_id": "84937140138b",
+     "grund": "wert",
+     "outcome": "depressive symptoms",
+     "effect_type": "beta",
+     "effect": -0.024,
+     "ci_low": null,
+     "ci_high": null,
+     "poolbar": false,
+     "quote": "Specifically, for each additional minute of physical exercise time, depressive symptoms scores decreased by an average of 0.024 points ( β=−0.024, p < 0.05).",
+     "quote_start": 28462,
+     "original_effect": -0.024,
+     "original_outcome": "depressive symptoms"
+    }
+   ]
+  },
+  {
+   "document_id": "334f5f679802315eeec71399149b51c3",
+   "stratum": "aggregate",
+   "titel": "Optimal dose and type of exercise to improve depressive symptoms in ol",
+   "zeilen": 2,
+   "unique": 1,
+   "duplikate": 1,
+   "details": [
+    {
+     "id": "e4d1b9d6b139",
+     "original_id": "19d3007b1d41",
+     "grund": "wert",
+     "outcome": "depressive symptoms",
+     "effect_type": "smd",
+     "effect": -2.02,
+     "ci_low": -2.8,
+     "ci_high": -1.17,
+     "poolbar": true,
+     "quote": "AE presented the optimal dose at 1000METs-min/week (SMD: -2.02; 95% Crl (-2.80 to -1.17)) in this study, and the minimum effective dose was 350 METs-min/week (SMD: -0.44; 95% Crl (-0.84 to -0.25)).",
+     "quote_start": 25109,
+     "original_effect": -2.02,
+     "original_outcome": "depressive symptoms"
+    }
+   ]
+  },
+  {
+   "document_id": "203c831dbeb178297006a888608f4f10",
+   "stratum": "aggregate",
+   "titel": "Post-Diagnosis Adherence to the Mediterranean Diet and Cancer Recurren",
+   "zeilen": 1,
+   "unique": 1,
+   "duplikate": 0,
+   "details": []
+  },
+  {
+   "document_id": "2675c25aabf33995fb6c2d3e72221923",
+   "stratum": "cross_sectional",
+   "titel": "Exploring the validity and internal consistency of the 12-point Medite",
+   "zeilen": 1,
+   "unique": 1,
+   "duplikate": 0,
+   "details": []
+  },
+  {
+   "document_id": "71c86b675bdc30a57ac17ac779abdce5",
+   "stratum": "rct",
+   "titel": "Adherence to the Mediterranean diet to prevent or delay hepatic steato",
+   "zeilen": 0,
+   "unique": 0,
+   "duplikate": 0,
+   "details": []
+  },
+  {
+   "document_id": "cf9d739f5090aeda8006074fce2f0b44",
+   "stratum": "rct",
+   "titel": "Impaired sleep, depressive symptoms, and pain as determinants of physi",
+   "zeilen": 1,
+   "unique": 1,
+   "duplikate": 0,
+   "details": []
+  },
+  {
+   "document_id": "b3c35c1d63f972086d2e322e693c1a03",
+   "stratum": "rct",
+   "titel": "Consumption of caffeine-containing beverages improves sustained attent",
+   "zeilen": 0,
+   "unique": 0,
+   "duplikate": 0,
+   "details": []
+  },
+  {
+   "document_id": "b5e492009e4ca350f512d5144fe8bf92",
+   "stratum": "rct",
+   "titel": "Impact of exercise type, duration, and intensity on depressive symptom",
+   "zeilen": 2,
+   "unique": 1,
+   "duplikate": 1,
+   "details": [
+    {
+     "id": "87aee722dbfd",
+     "original_id": "06110eb3a59e",
+     "grund": "wert",
+     "outcome": "depressive symptoms",
+     "effect_type": "smd",
+     "effect": -0.82,
+     "ci_low": -1.19,
+     "ci_high": -0.45,
+     "poolbar": true,
+     "quote": "The findings demonstrated a notable improvement in depression symptoms among older persons as an immediate result of engaging in physical exercise [SMD = −0.82, 95% CI ( −1.19, −0.45)].",
+     "quote_start": 1942,
+     "original_effect": -0.82,
+     "original_outcome": "depressive symptoms"
+    }
+   ]
+  },
+  {
+   "document_id": "ca2c52d13aaec47ebbeccdedb3ee1d8e",
+   "stratum": "crossover",
+   "titel": "The effects of an 8-week Taekwondo exercise intervention on inhibitory",
+   "zeilen": 0,
+   "unique": 0,
+   "duplikate": 0,
+   "details": []
+  },
+  {
+   "document_id": "3790c91f96877eb6e260b4d7e0c7e7ee",
+   "stratum": "cohort",
+   "titel": "Bidirectional association between cognitive function and depressive sy",
+   "zeilen": 2,
+   "unique": 1,
+   "duplikate": 1,
+   "details": [
+    {
+     "id": "bf76f02078bd",
+     "original_id": "302e393aeaa2",
+     "grund": "zitat",
+     "outcome": "depressive symptoms",
+     "effect_type": "r",
+     "effect": -0.206,
+     "ci_low": null,
+     "ci_high": null,
+     "poolbar": false,
+     "quote": "PA was significantly negatively correlated with emotional depressive symptoms (rs=[−0.150, −0.206]; P < 0.001) and physical depressive symptoms (rs=[−0.225, −0.266]; P < 0.001)",
+     "quote_start": 29497,
+     "original_effect": -0.15,
+     "original_outcome": "depressive symptoms"
+    }
+   ]
+  },
+  {
+   "document_id": "7df874ca5386e7db9350901562d9408e",
+   "stratum": "cohort",
+   "titel": "Age and cohort differences in the association between polygenic scores",
+   "zeilen": 1,
+   "unique": 1,
+   "duplikate": 0,
+   "details": []
+  },
+  {
+   "document_id": "17c7628ed0e8f01d4ec063e2b730dc36",
+   "stratum": "cohort",
+   "titel": "Bidirectional association between ADL disability and depressive sympto",
+   "zeilen": 1,
+   "unique": 1,
+   "duplikate": 0,
+   "details": []
+  },
+  {
+   "document_id": "7ca468285bd24135c1a9bf48f6f5f202",
+   "stratum": "cross_sectional",
+   "titel": "Accelerometer-Assessed Physical Activity and Cognitive Performance amo",
+   "zeilen": 0,
+   "unique": 0,
+   "duplikate": 0,
+   "details": []
+  },
+  {
+   "document_id": "1faf4b78f05cd156029ee647c2e14c51",
+   "stratum": "cross_sectional",
+   "titel": "The Effect of Physical Exercise on Depression in College Students: The",
+   "zeilen": 2,
+   "unique": 1,
+   "duplikate": 1,
+   "details": [
+    {
+     "id": "db268ea1b4d1",
+     "original_id": "0bc50c14c188",
+     "grund": "wert",
+     "outcome": "depressive symptoms",
+     "effect_type": "beta",
+     "effect": -0.08,
+     "ci_low": null,
+     "ci_high": null,
+     "poolbar": false,
+     "quote": "the results also showed that physical exercise had a negative predictive eﬀect on the depression of college students ( β = −0.08, P < 0.05), the direct eﬀect was 0.08, so H3 was valid, which indicates the mediating role of self-concept and social support.",
+     "quote_start": 15433,
+     "original_effect": -0.08,
+     "original_outcome": "depressive symptoms"
+    }
+   ]
+  },
+  {
+   "document_id": "37cafe8444a2d0edd125109341865251",
+   "stratum": "cross_sectional",
+   "titel": "A Cross-Sectional Study of Food Insecurity, Mediterranean Diet Adheren",
+   "zeilen": 0,
+   "unique": 0,
+   "duplikate": 0,
+   "details": []
+  },
+  {
+   "document_id": "5cbf039f22f1bfe9f5902cf3f626852f",
+   "stratum": "aggregate",
+   "titel": "Aerobic exercise for depression symptoms in adolescents: a systematic",
+   "zeilen": 2,
+   "unique": 1,
+   "duplikate": 1,
+   "details": [
+    {
+     "id": "87d5f9d02e36",
+     "original_id": "0245d800c74a",
+     "grund": "wert",
+     "outcome": "depressive symptoms",
+     "effect_type": "g",
+     "effect": -0.28,
+     "ci_low": -0.43,
+     "ci_high": -0.13,
+     "poolbar": true,
+     "quote": "Bayesian random-effects model analysis indicated that compared to the control group, aerobic exercise significantly improved adolescent depression symptoms with a small-to-moderate effect size (Hedges' g = −0.28, 95% CrI: −0.43, −0.13), suggesting that physical activity can significantly alleviate depression symptoms in adolescents (Fig. 3 A).",
+     "quote_start": 23556,
+     "original_effect": -0.28,
+     "original_outcome": "depressive symptoms"
+    }
+   ]
+  },
+  {
+   "document_id": "cfc6567ca3cb6eec8c47a64a1674a849",
+   "stratum": "aggregate",
+   "titel": "The Effect of Exercise on Depressive Symptoms in Adolescents: A System",
+   "zeilen": 2,
+   "unique": 1,
+   "duplikate": 1,
+   "details": [
+    {
+     "id": "a0a1b6e425ef",
+     "original_id": "95dc509e541f",
+     "grund": "wert",
+     "outcome": "depressive symptoms",
+     "effect_type": "g",
+     "effect": 1.09,
+     "ci_low": null,
+     "ci_high": null,
+     "poolbar": false,
+     "quote": "Results showed that flexibility training had the most significant effect on alleviating depressive symptoms (g = 1.09, P < 0.01), followed by traditional Chinese health exercises (g = 0.80, P < 0.01), anaerobic exercise (g = 0.78, P < 0.01) and aerobic exercise (g = 0.70, P < 0.01).",
+     "quote_start": 1591,
+     "original_effect": 1.09,
+     "original_outcome": "depressive symptoms"
+    }
+   ]
+  },
+  {
+   "document_id": "9cac5e48f3873753223db0c3b5f2b501",
+   "stratum": "negative_control",
+   "titel": "Protocol for Objective Measurement of Infants’ Physical Activity using",
+   "zeilen": 0,
+   "unique": 0,
+   "duplikate": 0,
+   "details": []
+  },
+  {
+   "document_id": "83966faed7ce0817920e6bf366efc8bb",
+   "stratum": "negative_control",
+   "titel": "Editorial: New developments in the intention-behavior gap for physical",
+   "zeilen": 0,
+   "unique": 0,
+   "duplikate": 0,
+   "details": []
+  },
+  {
+   "document_id": "0843e61250179bd14f8d0a45fc678e5d",
+   "stratum": "negative_control",
+   "titel": "Invited Commentary: Detecting Individual and Global Horizontal Pleiotr",
+   "zeilen": 0,
+   "unique": 0,
+   "duplikate": 0,
+   "details": []
+  },
+  {
+   "document_id": "6e935d39b012f2a76075a3a7964879b1",
+   "stratum": "negative_control",
+   "titel": "Editorial: Causal inference in diet, nutrition and health outcomes",
+   "zeilen": 0,
+   "unique": 0,
+   "duplikate": 0,
+   "details": []
+  },
+  {
+   "document_id": "af1bb4ac0c54f9ed49d13393b37f4ffd",
+   "stratum": "negative_control",
+   "titel": "A computational perspective of the role of Thalamus in cognition",
+   "zeilen": 0,
+   "unique": 0,
+   "duplikate": 0,
+   "details": []
+  }
+ ],
+ "zeilen": 37,
+ "unique": 24,
+ "duplikate": 13
+}

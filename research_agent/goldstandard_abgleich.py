@@ -127,7 +127,7 @@ def _zitat_zwilling(zeile: dict):
     return text or None
 
 
-def dedupe(zeilen: list):
+def dedupe_details(zeilen: list):
     """Entfernt Wert- und Zitat-Zwillinge, die erste Zeile bleibt.
 
     Dieselbe Semantik wie ``_drop_zweitlesungen`` in ``meta/pooling.py``:
@@ -135,22 +135,36 @@ def dedupe(zeilen: list):
     gleicher normalisierter Zitattext (erste 200 Zeichen). Hier ohne
     Pass-Filter, weil der Abgleich die gespeicherte Ausgabe bewertet, nicht
     den Lesepass. Eine Zeile ohne Wert und ohne Quote wird nie verworfen.
+
+    Rueckgabe: (behalten, details). Jedes Detail nennt die verworfene Zeile,
+    den Grund (``wert``/``zitat``) und die Zeile, die stehen bleibt.
     """
-    gesehen_wert, gesehen_zitat = set(), set()
-    behalten, duplikate = [], 0
+    gesehen_wert, gesehen_zitat = {}, {}
+    behalten, details = [], []
     for zeile in zeilen:
         wert = _wert_zwilling(zeile)
         zitat = _zitat_zwilling(zeile)
-        if (wert is not None and wert in gesehen_wert) or (
-                zitat is not None and zitat in gesehen_zitat):
-            duplikate += 1
+        original, grund = None, None
+        if wert is not None and wert in gesehen_wert:
+            original, grund = gesehen_wert[wert], "wert"
+        elif zitat is not None and zitat in gesehen_zitat:
+            original, grund = gesehen_zitat[zitat], "zitat"
+        if grund is not None:
+            details.append({"zeile": zeile, "grund": grund,
+                            "original": original})
             continue
         if wert is not None:
-            gesehen_wert.add(wert)
+            gesehen_wert[wert] = zeile
         if zitat is not None:
-            gesehen_zitat.add(zitat)
+            gesehen_zitat[zitat] = zeile
         behalten.append(zeile)
-    return behalten, duplikate
+    return behalten, details
+
+
+def dedupe(zeilen: list):
+    """Wie ``dedupe_details``, aber nur (behalten, Anzahl Duplikate)."""
+    behalten, details = dedupe_details(zeilen)
+    return behalten, len(details)
 
 
 def _leer() -> dict:

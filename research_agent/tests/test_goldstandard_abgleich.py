@@ -3,7 +3,8 @@
 import pytest
 
 from research_agent.goldstandard_abgleich import (
-    aehnlichkeit, dedupe, ist_poolbar, jaccard, matche, token, werte,
+    aehnlichkeit, dedupe, dedupe_details, ist_poolbar, jaccard, matche,
+    token, werte,
 )
 
 
@@ -153,6 +154,18 @@ def test_dedupe_entfernt_zitat_zwilling_auch_bei_anderem_wert():
     ])
     assert len(behalten) == 1
     assert duplikate == 1
+
+
+def test_dedupe_details_nennt_grund_und_original():
+    a = pipe("x", 1.0, se=0.1, quote="Risk 1.0")
+    b = pipe("y", 1.0, se=0.1, quote="Risk 1.0")
+    c = pipe("z", 2.0, se=0.2, quote="Risk 1.0")
+    behalten, details = dedupe_details([a, b, c])
+    assert len(behalten) == 1
+    assert details[0]["grund"] == "wert"
+    assert details[0]["original"] is a
+    assert details[1]["grund"] == "zitat"
+    assert details[1]["original"] is a
 
 
 def test_dedupe_ohne_beleg_verwirft_nichts():
