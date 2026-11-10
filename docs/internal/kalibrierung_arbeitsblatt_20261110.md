@@ -60,7 +60,7 @@ Summe: 12 Dokumente, 79 Tabellenstellen, 102 Effektstellen.
 
 ## Stand (Start)
 
-- A: 26 Zeilen, 0 Begründungen, 10 offen (von 12).
+- A: 35 Zeilen, 5 Begründungen, 0 offen (von 12).
 - B: 0 Zeilen, 0 Begründungen, 12 offen (von 12).
-- Hash A: `b31f06e7a7fefd58c663bb046ee30435e43d1a048bffe5006b295dea455a0672`
+- Hash A: `dc3cedf55dc2177d6875c182b540d91f4c8ae06cd4d2c1cde675763fb2d0e137`
 - Hash B: `2030d8a186ab19f242aefc854bc2a1c350bb97f9d1067a6b8b7da5b38daed0bc`

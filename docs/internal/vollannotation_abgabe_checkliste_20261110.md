@@ -9,7 +9,7 @@ diese Checkliste betrifft die Vollannotation.
 
 | Datei | Zeilen | Begründungen | offen | Dokumente | Hash |
 |---|---|---|---|---|---|
-| `goldstandard_A.json` | 26 | 0 | 28 | 30 | `b31f06e7a7fefd58c663bb046ee30435e43d1a048bffe5006b295dea455a0672` |
+| `goldstandard_A.json` | 35 | 5 | 18 | 30 | `dc3cedf55dc2177d6875c182b540d91f4c8ae06cd4d2c1cde675763fb2d0e137` |
 | `goldstandard_B.json` | 0 | 0 | 30 | 30 | `2030d8a186ab19f242aefc854bc2a1c350bb97f9d1067a6b8b7da5b38daed0bc` |
 
 Die Hashes sind Startwerte; nach dem Ausfüllen ändern sie sich. Die
@@ -27,18 +27,18 @@ Abgabe-Hashes werden unten eingetragen.
 
 | Dokument | Schicht | Design | Kalibrierung | A | B | Punkt |
 |---|---|---|---|---|---|---|
-| [7111ea9787](vollannotation_arbeitsblatt_7111ea9787.md) | cohort | aggregate | ja | offen | offen | 5.8 |
-| [3134fdc8c3](vollannotation_arbeitsblatt_3134fdc8c3.md) | cohort | observational | ja | offen | offen | 5.1 |
-| [d0bec407a2](vollannotation_arbeitsblatt_d0bec407a2.md) | cohort | observational | ja | offen | offen | 5.1 |
-| [bb9218735f](vollannotation_arbeitsblatt_bb9218735f.md) | rct | parallel_rct | ja | offen | offen | 5.7 |
-| [fb484d488b](vollannotation_arbeitsblatt_fb484d488b.md) | rct | aggregate | ja | offen | offen | 5.8 gepoolt |
-| [3bbb142c71](vollannotation_arbeitsblatt_3bbb142c71.md) | crossover | crossover_rct | ja | offen | offen | 5.1 |
-| [87079ba88a](vollannotation_arbeitsblatt_87079ba88a.md) | crossover | crossover_rct | ja | offen | offen | 5.1 |
+| [7111ea9787](vollannotation_arbeitsblatt_7111ea9787.md) | cohort | aggregate | ja | Begruendung | offen | 5.8 |
+| [3134fdc8c3](vollannotation_arbeitsblatt_3134fdc8c3.md) | cohort | observational | ja | 2 Zeilen | offen | 5.1 |
+| [d0bec407a2](vollannotation_arbeitsblatt_d0bec407a2.md) | cohort | observational | ja | 2 Zeilen | offen | 5.1 |
+| [bb9218735f](vollannotation_arbeitsblatt_bb9218735f.md) | rct | parallel_rct | ja | Begruendung | offen | 5.7 |
+| [fb484d488b](vollannotation_arbeitsblatt_fb484d488b.md) | rct | aggregate | ja | 1 Zeilen | offen | 5.8 gepoolt |
+| [3bbb142c71](vollannotation_arbeitsblatt_3bbb142c71.md) | crossover | crossover_rct | ja | Begruendung | offen | 5.1 |
+| [87079ba88a](vollannotation_arbeitsblatt_87079ba88a.md) | crossover | crossover_rct | ja | Begruendung | offen | 5.1 |
 | [2c7ab4d124](vollannotation_arbeitsblatt_2c7ab4d124.md) | cross_sectional | observational | ja | 21 Zeilen | offen | 5.1 |
 | [09843d40d3](vollannotation_arbeitsblatt_09843d40d3.md) | cohort | observational | ja | 5 Zeilen | offen | 5.1 |
-| [334f5f6798](vollannotation_arbeitsblatt_334f5f6798.md) | aggregate | aggregate | ja | offen | offen | 5.1 |
-| [203c831dbe](vollannotation_arbeitsblatt_203c831dbe.md) | aggregate | aggregate | ja | offen | offen | 5.8 gepoolt |
-| [2675c25aab](vollannotation_arbeitsblatt_2675c25aab.md) | cross_sectional | observational | ja | offen | offen | 5.1 |
+| [334f5f6798](vollannotation_arbeitsblatt_334f5f6798.md) | aggregate | aggregate | ja | 2 Zeilen | offen | 5.1 |
+| [203c831dbe](vollannotation_arbeitsblatt_203c831dbe.md) | aggregate | aggregate | ja | 2 Zeilen | offen | 5.8 gepoolt |
+| [2675c25aab](vollannotation_arbeitsblatt_2675c25aab.md) | cross_sectional | observational | ja | Begruendung | offen | 5.1 |
 | [71c86b675b](vollannotation_arbeitsblatt_71c86b675b.md) | rct | parallel_rct | — | offen | offen | 5.1 |
 | [cf9d739f50](vollannotation_arbeitsblatt_cf9d739f50.md) | rct | parallel_rct | — | offen | offen | 5.1 |
 | [b3c35c1d63](vollannotation_arbeitsblatt_b3c35c1d63.md) | rct | parallel_rct | — | offen | offen | 5.1 |

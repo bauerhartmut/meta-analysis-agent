@@ -8,12 +8,12 @@ Eine Kappa-Zahl entsteht hier nicht; sie folgt nach der Vollannotation.
 
 | Datei | Zeilen | Begründungen | offen | Probelauf-Dokumente |
 |---|---|---|---|---|
-| `goldstandard_A.json` | 0 | 0 | 3 | 3 |
+| `goldstandard_A.json` | 2 | 2 | 0 | 3 |
 | `goldstandard_B.json` | 0 | 0 | 3 | 3 |
 
 Aktuelle Hashes (Stand nach der Designkorrektur):
 
-- A: `b31f06e7a7fefd58c663bb046ee30435e43d1a048bffe5006b295dea455a0672`
+- A: `dc3cedf55dc2177d6875c182b540d91f4c8ae06cd4d2c1cde675763fb2d0e137`
 - B: `2030d8a186ab19f242aefc854bc2a1c350bb97f9d1067a6b8b7da5b38daed0bc`
 
 Die Hashes sind **Startwerte**. Nach dem Ausfüllen ändern sie sich;
