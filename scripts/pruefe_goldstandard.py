@@ -80,6 +80,8 @@ def pruefe_datei(pfad: Path, schema: dict) -> list:
             f(f"{name}: stratum '{doc.get('stratum')}' unbekannt")
 
         rel = str(doc.get("path") or "")
+        if rel != f"fulltext/{doc_id}.txt":
+            f(f"{name}: path passt nicht zur document_id (erwartet fulltext/{doc_id}.txt)")
         volltext = ROOT / "data" / rel
         if not volltext.exists():
             f(f"{name}: Volltext fehlt ({rel})")

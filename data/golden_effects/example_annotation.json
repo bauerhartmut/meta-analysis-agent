@@ -8,7 +8,7 @@
   "notes": "Beispieldatei zur Formatpruefung, kein Goldstandard. Dokument ist eine Uebersichtsarbeit (Aggregat).",
   "documents": [
     {
-      "document_id": "203c831dbe",
+      "document_id": "203c831dbeb178297006a888608f4f10",
       "path": "fulltext/203c831dbeb178297006a888608f4f10.txt",
       "title": "Post-Diagnosis Adherence to the Mediterranean Diet and Cancer Recurrence and Fatigue Outcomes in Cancer Survivors, with Emphasis on Colorectal Cancer: A Systematic Review and Meta-Analysis.",
       "year": 2026,
@@ -19,7 +19,7 @@
       "expected_effects": 1,
       "effects": [
         {
-          "effect_id": "203c831dbe-01",
+          "effect_id": "203c831dbeb178297006a888608f4f10-01",
           "outcome_verbatim": "cancer recurrence or cancer-specific mortality",
           "outcome_normalized": "Cancer recurrence or cancer-specific mortality",
           "comparison_verbatim": "higher post-diagnosis MD adherence vs. lower adherence",
