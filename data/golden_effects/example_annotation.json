@@ -1,0 +1,53 @@
+{
+  "dataset": "goldstandard_effects",
+  "version": "1.0",
+  "annotator": "A",
+  "annotation_date": "2026-11-10",
+  "instructions_version": "1.0",
+  "blind": true,
+  "notes": "Beispieldatei zur Formatpruefung, kein Goldstandard. Dokument ist eine Uebersichtsarbeit (Aggregat).",
+  "documents": [
+    {
+      "document_id": "203c831dbe",
+      "path": "fulltext/203c831dbeb178297006a888608f4f10.txt",
+      "title": "Post-Diagnosis Adherence to the Mediterranean Diet and Cancer Recurrence and Fatigue Outcomes in Cancer Survivors, with Emphasis on Colorectal Cancer: A Systematic Review and Meta-Analysis.",
+      "year": 2026,
+      "design_verbatim": "systematic review and meta-analysis",
+      "design_category": "aggregate",
+      "stratum": "aggregate",
+      "has_text_layer": true,
+      "expected_effects": 1,
+      "effects": [
+        {
+          "effect_id": "203c831dbe-01",
+          "outcome_verbatim": "cancer recurrence or cancer-specific mortality",
+          "outcome_normalized": "Cancer recurrence or cancer-specific mortality",
+          "comparison_verbatim": "higher post-diagnosis MD adherence vs. lower adherence",
+          "effect_type": "hr",
+          "effect": 0.83,
+          "se": null,
+          "ci_low": 0.7,
+          "ci_high": 0.99,
+          "ci_level": 0.95,
+          "p_value": null,
+          "n": 6697,
+          "adjusted": null,
+          "time_point": null,
+          "population": "cancer survivors",
+          "design_verbatim": "six prospective cohort studies",
+          "quote": "For recurrence, higher post-diagnosis MD adherence was associated with a lower hazard of recurrence or cancer-specific mortality (HR = 0.83; 95% CI: 0.70–0.99; I 2 = 49%).",
+          "quote_start": 2398,
+          "quote_end": 2569,
+          "section": "Results",
+          "page": null,
+          "source_table": null,
+          "certainty": "high",
+          "is_primary": false,
+          "notes": "Gepoolter Schaetzer ueber sechs Kohorten; I2 = 49 Prozent."
+        }
+      ],
+      "no_effect_reason": null,
+      "notes": "Beispiel: Aggregat-Zeile mit is_primary=false."
+    }
+  ]
+}
