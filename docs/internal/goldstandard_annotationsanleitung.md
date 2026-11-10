@@ -1,8 +1,9 @@
-# Annotationsanleitung Goldstandard — Effektzeilen (v1.0, 2026-11-10)
+# Annotationsanleitung Goldstandard — Effektzeilen (v1.1, 2026-11-10)
 
 Ziel: Ein unabhängiger, wiederholbarer Maßstab für die Effektgrößen-Extraktion.
 Zwei Personen annotieren **dieselben 30 Dokumente getrennt**. Gemessen wird
-gegen den Konsens, nicht gegen die Datenbank.
+gegen den Konsens, nicht gegen die Datenbank. v1.1 ergänzt den Grenzfall 5.11
+(Spannweite über Zeitpunkte).
 
 Das JSON-Schema steht in `docs/internal/goldstandard_schema.json`, ein
 geprüftes Beispiel in `data/golden_effects/example_annotation.json`. Der
@@ -152,6 +153,7 @@ Metaanalyse über RCTs ist `aggregate`.
 - `r` nur, wenn die Korrelation selbst berichtet ist; `z` nur, wenn
   Fisher-z dasteht.
 - Ein KI auf r-Skala bleibt auf r-Skala. Nicht in z umrechnen.
+- Nennt der Text eine Spannweite über Zeitpunkte (z. B. `rs=[a, b]`), gilt 5.11.
 
 ### 5.6 Median und Interquartilsabstand
 
@@ -186,6 +188,32 @@ Dokumente der Schicht `negative_control` haben keine erwartete Effektzeile.
 Statistik", „Review ohne eigene Zahl", „nur p-Werte"). Eine trotzdem
 gefundene Zeile wird erfasst — dann ist die Erwartung falsch, nicht die
 Annotation.
+
+### 5.11 Spannweite über Zeitpunkte
+
+Nennt der Fließtext eine Spannweite über Zeitpunkte ("rs=[−0.150, −0.206]",
+"range across T1-T3"), ist das **keine** einzelne Effektzeile: Die Einheit
+verlangt einen Zeitpunkt (Abschnitt 3).
+
+- **Tabelle oder Abbildung ist die Quelle**, wenn sie die Werte je Zeitpunkt
+  auflöst. Je Zeitpunkt eine Zeile, mit `time_point` und Tabellenzitat.
+- **Keine Tabelle und keine Auflösung:** keine Zeile raten.
+  `no_effect_reason` mit "Spannweite ohne Zeitpunktauflösung"; die Spanne in
+  `notes` nennen.
+- Eine Spanne ist **kein KI**. `ci_low`/`ci_high` bleiben den berichteten
+  Konfidenzgrenzen vorbehalten; Min/Max über Zeitpunkte gehören nicht hinein.
+- Bei Korrelationen nennt `notes` das Zeitpunktpaar (z. B. "T3-PA × T1-EDS"),
+  weil eine Korrelationsmatrix auch Kreuzkorrelationen enthält.
+- Ist nur ein Zeitpunkt genannt und zusätzlich eine Spanne, gilt der genannte
+  Zeitpunkt; die Spanne steht in `notes`.
+
+**Beispiel `3790c91f96`:** Der Satz nennt PA × emotionale Symptome
+`rs=[−0.150, −0.206]` und PA × körperliche Symptome `rs=[−0.225, −0.266]`.
+Tabelle 2 löst auf: emotional T1 −0,17, T2 −0,206, T3 −0,199; körperlich
+T1 −0,248, T2 −0,265, T3 −0,266. Das sind sechs Zeilen, nicht zwei. Die
+Pipeline speicherte zwei emotionale Zeilen ohne `time_point` und keine
+körperliche Zeile; der Abgleich wertet das als Recall-Lücke, nicht als
+Matching-Fehler (siehe `goldstandard_entscheidung_3790c91f96.md`).
 
 ---
 
@@ -243,4 +271,6 @@ Begründung.
 - [ ] Ratio-Werte positiv, KI plausibel (`ci_low < effect < ci_high`).
 - [ ] `is_primary: false` nur bei Übersichtsarbeiten.
 - [ ] `design_category` nach 5.1, nicht nach Bauchgefühl.
+- [ ] Spannweite über Zeitpunkte: je Zeitpunkt eine Zeile aus der Tabelle,
+      `time_point` gesetzt (5.11).
 - [ ] Prüfskript Exit 0, Hash notiert.
