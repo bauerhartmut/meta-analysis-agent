@@ -1,0 +1,153 @@
+{
+ "dokumente": [
+  {
+   "document_id": "7111ea978757a185d44ea9de90b453c3",
+   "datei": "docs/internal/vollannotation_arbeitsblatt_7111ea9787.md",
+   "titel": "Mediterranean diet in preeclampsia prevention: mechanisms of action an",
+   "stratum": "cohort",
+   "design_category": "aggregate",
+   "design_verbatim": "narrative review",
+   "zeichen": 97367,
+   "tabellen": 4,
+   "effektstellen": 30,
+   "punkt": "5.8"
+  },
+  {
+   "document_id": "3134fdc8c38f475075a70ca32dc4a3d9",
+   "datei": "docs/internal/vollannotation_arbeitsblatt_3134fdc8c3.md",
+   "titel": "The risk associated with ultra-processed food intake on depressive sym",
+   "stratum": "cohort",
+   "design_category": "observational",
+   "design_verbatim": "Target trial emulation (longitudinal cohort)",
+   "zeichen": 85910,
+   "tabellen": 9,
+   "effektstellen": 14,
+   "punkt": "5.1"
+  },
+  {
+   "document_id": "d0bec407a2a0dd19c0b67aa43f9e1dfb",
+   "datei": "docs/internal/vollannotation_arbeitsblatt_d0bec407a2.md",
+   "titel": "A quantitative bias analysis to estimate measurement error-related att",
+   "stratum": "cohort",
+   "design_category": "observational",
+   "design_verbatim": "cohort study with validation sub-study",
+   "zeichen": 3199,
+   "tabellen": 0,
+   "effektstellen": 4,
+   "punkt": "5.1"
+  },
+  {
+   "document_id": "bb9218735fec8fc7f3b6aebbff430aba",
+   "datei": "docs/internal/vollannotation_arbeitsblatt_bb9218735f.md",
+   "titel": "A Multicenter, Placebo-controlled Trial of Melatonin for Sleep Disturb",
+   "stratum": "rct",
+   "design_category": "parallel_rct",
+   "design_verbatim": "randomized, placebo-controlled study",
+   "zeichen": 71085,
+   "tabellen": 14,
+   "effektstellen": 0,
+   "punkt": "5.7"
+  },
+  {
+   "document_id": "fb484d488b45d21bbdf407cba4b074d5",
+   "datei": "docs/internal/vollannotation_arbeitsblatt_fb484d488b.md",
+   "titel": "The effect of exercise on depressive symptoms in multiple sclerosis ba",
+   "stratum": "rct",
+   "design_category": "parallel_rct",
+   "design_verbatim": "meta-analysis of randomized controlled trials",
+   "zeichen": 9659,
+   "tabellen": 0,
+   "effektstellen": 6,
+   "punkt": "5.1"
+  },
+  {
+   "document_id": "3bbb142c717a970694bed1d393736b06",
+   "datei": "docs/internal/vollannotation_arbeitsblatt_3bbb142c71.md",
+   "titel": "Effects of Acute Caffeine Ingestion on Reaction Time in Habitual and L",
+   "stratum": "crossover",
+   "design_category": "crossover_rct",
+   "design_verbatim": "Randomised controlled trial (crossover)",
+   "zeichen": 40445,
+   "tabellen": 2,
+   "effektstellen": 0,
+   "punkt": "5.1"
+  },
+  {
+   "document_id": "87079ba88ae1f64f00c5fe32725248a6",
+   "datei": "docs/internal/vollannotation_arbeitsblatt_87079ba88a.md",
+   "titel": "Withdrawal Symptoms and Executive Functions After 24-Hour Caffeine Abs",
+   "stratum": "crossover",
+   "design_category": "crossover_rct",
+   "design_verbatim": "within-subjects",
+   "zeichen": 38131,
+   "tabellen": 6,
+   "effektstellen": 1,
+   "punkt": "5.1"
+  },
+  {
+   "document_id": "2c7ab4d1244754e3966780f4bccbfa8c",
+   "datei": "docs/internal/vollannotation_arbeitsblatt_2c7ab4d124.md",
+   "titel": "Prevalence of depressive symptoms and its associated factors in older",
+   "stratum": "cross_sectional",
+   "design_category": "observational",
+   "design_verbatim": "cross-sectional",
+   "zeichen": 39970,
+   "tabellen": 7,
+   "effektstellen": 19,
+   "punkt": "5.1"
+  },
+  {
+   "document_id": "09843d40d3cc2c9ca039d6d1b45ac656",
+   "datei": "docs/internal/vollannotation_arbeitsblatt_09843d40d3.md",
+   "titel": "Bidirectional relationships between physical exercise and depressive s",
+   "stratum": "cohort",
+   "design_category": "observational",
+   "design_verbatim": "longitudinal panel study",
+   "zeichen": 65491,
+   "tabellen": 7,
+   "effektstellen": 0,
+   "punkt": "5.1"
+  },
+  {
+   "document_id": "334f5f679802315eeec71399149b51c3",
+   "datei": "docs/internal/vollannotation_arbeitsblatt_334f5f6798.md",
+   "titel": "Optimal dose and type of exercise to improve depressive symptoms in ol",
+   "stratum": "aggregate",
+   "design_category": "aggregate",
+   "design_verbatim": "Network Meta-Analysis",
+   "zeichen": 79745,
+   "tabellen": 6,
+   "effektstellen": 1,
+   "punkt": "5.1"
+  },
+  {
+   "document_id": "203c831dbeb178297006a888608f4f10",
+   "datei": "docs/internal/vollannotation_arbeitsblatt_203c831dbe.md",
+   "titel": "Post-Diagnosis Adherence to the Mediterranean Diet and Cancer Recurren",
+   "stratum": "aggregate",
+   "design_category": "aggregate",
+   "design_verbatim": "systematic review and meta-analysis",
+   "zeichen": 114459,
+   "tabellen": 11,
+   "effektstellen": 27,
+   "punkt": "5.8 gepoolt"
+  },
+  {
+   "document_id": "2675c25aabf33995fb6c2d3e72221923",
+   "datei": "docs/internal/vollannotation_arbeitsblatt_2675c25aab.md",
+   "titel": "Exploring the validity and internal consistency of the 12-point Medite",
+   "stratum": "cross_sectional",
+   "design_category": "observational",
+   "design_verbatim": "cross-sectional",
+   "zeichen": 55267,
+   "tabellen": 13,
+   "effektstellen": 0,
+   "punkt": "5.1"
+  }
+ ],
+ "summe": {
+  "dokumente": 12,
+  "tabellen": 79,
+  "effektstellen": 102
+ }
+}
