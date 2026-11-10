@@ -9,8 +9,8 @@ diese Checkliste betrifft die Vollannotation.
 
 | Datei | Zeilen | Begründungen | offen | Dokumente | Hash |
 |---|---|---|---|---|---|
-| `goldstandard_A.json` | 35 | 5 | 18 | 30 | `dc3cedf55dc2177d6875c182b540d91f4c8ae06cd4d2c1cde675763fb2d0e137` |
-| `goldstandard_B.json` | 0 | 0 | 30 | 30 | `2030d8a186ab19f242aefc854bc2a1c350bb97f9d1067a6b8b7da5b38daed0bc` |
+| `goldstandard_A.json` | 69 | 13 | 0 | 30 | `d9bb867c303dc19ddaf90cce3414ada0f4484b5a03881d65261950db0762a810` |
+| `goldstandard_B.json` | 0 | 0 | 30 | 30 | `93802e1798ae5e54ef3896e162e2fdeb2d783486a40239df590ddfa0dfe46d20` |
 
 Die Hashes sind Startwerte; nach dem Ausfüllen ändern sie sich. Die
 Abgabe-Hashes werden unten eingetragen.
@@ -39,24 +39,24 @@ Abgabe-Hashes werden unten eingetragen.
 | [334f5f6798](vollannotation_arbeitsblatt_334f5f6798.md) | aggregate | aggregate | ja | 2 Zeilen | offen | 5.1 |
 | [203c831dbe](vollannotation_arbeitsblatt_203c831dbe.md) | aggregate | aggregate | ja | 2 Zeilen | offen | 5.8 gepoolt |
 | [2675c25aab](vollannotation_arbeitsblatt_2675c25aab.md) | cross_sectional | observational | ja | Begruendung | offen | 5.1 |
-| [71c86b675b](vollannotation_arbeitsblatt_71c86b675b.md) | rct | parallel_rct | — | offen | offen | 5.1 |
-| [cf9d739f50](vollannotation_arbeitsblatt_cf9d739f50.md) | rct | parallel_rct | — | offen | offen | 5.1 |
-| [b3c35c1d63](vollannotation_arbeitsblatt_b3c35c1d63.md) | rct | parallel_rct | — | offen | offen | 5.1 |
-| [b5e492009e](vollannotation_arbeitsblatt_b5e492009e.md) | rct | parallel_rct | — | offen | offen | 5.1 |
-| [ca2c52d13a](vollannotation_arbeitsblatt_ca2c52d13a.md) | crossover | crossover_rct | — | offen | offen | 5.1 |
-| [3790c91f96](vollannotation_arbeitsblatt_3790c91f96.md) | cohort | observational | — | offen | offen | 5.11 |
-| [7df874ca53](vollannotation_arbeitsblatt_7df874ca53.md) | cohort | observational | — | offen | offen | 5.1 |
-| [17c7628ed0](vollannotation_arbeitsblatt_17c7628ed0.md) | cohort | observational | — | offen | offen | 5.1 |
-| [7ca468285b](vollannotation_arbeitsblatt_7ca468285b.md) | cross_sectional | observational | — | offen | offen | 5.1 |
-| [1faf4b78f0](vollannotation_arbeitsblatt_1faf4b78f0.md) | cross_sectional | observational | — | offen | offen | 5.1 |
-| [37cafe8444](vollannotation_arbeitsblatt_37cafe8444.md) | cross_sectional | observational | — | offen | offen | 5.1 |
-| [5cbf039f22](vollannotation_arbeitsblatt_5cbf039f22.md) | aggregate | aggregate | — | offen | offen | 5.8 gepoolt |
-| [cfc6567ca3](vollannotation_arbeitsblatt_cfc6567ca3.md) | aggregate | aggregate | — | offen | offen | 5.1 |
-| [9cac5e48f3](vollannotation_arbeitsblatt_9cac5e48f3.md) | negative_control | unknown | — | offen | offen | Negativkontrolle |
-| [83966faed7](vollannotation_arbeitsblatt_83966faed7.md) | negative_control | unknown | — | offen | offen | Negativkontrolle |
-| [0843e61250](vollannotation_arbeitsblatt_0843e61250.md) | negative_control | unknown | — | offen | offen | Negativkontrolle |
-| [6e935d39b0](vollannotation_arbeitsblatt_6e935d39b0.md) | negative_control | unknown | — | offen | offen | Negativkontrolle |
-| [af1bb4ac0c](vollannotation_arbeitsblatt_af1bb4ac0c.md) | negative_control | unknown | — | offen | offen | Negativkontrolle |
+| [71c86b675b](vollannotation_arbeitsblatt_71c86b675b.md) | rct | parallel_rct | — | 2 Zeilen | offen | 5.1 |
+| [cf9d739f50](vollannotation_arbeitsblatt_cf9d739f50.md) | rct | parallel_rct | — | 5 Zeilen | offen | 5.1 |
+| [b3c35c1d63](vollannotation_arbeitsblatt_b3c35c1d63.md) | rct | parallel_rct | — | Begruendung | offen | 5.1 |
+| [b5e492009e](vollannotation_arbeitsblatt_b5e492009e.md) | rct | aggregate | — | 1 Zeilen | offen | 5.1 |
+| [ca2c52d13a](vollannotation_arbeitsblatt_ca2c52d13a.md) | crossover | crossover_rct | — | Begruendung | offen | 5.1 |
+| [3790c91f96](vollannotation_arbeitsblatt_3790c91f96.md) | cohort | observational | — | 6 Zeilen | offen | 5.11 |
+| [7df874ca53](vollannotation_arbeitsblatt_7df874ca53.md) | cohort | observational | — | Begruendung | offen | 5.1 |
+| [17c7628ed0](vollannotation_arbeitsblatt_17c7628ed0.md) | cohort | observational | — | 4 Zeilen | offen | 5.1 |
+| [7ca468285b](vollannotation_arbeitsblatt_7ca468285b.md) | cross_sectional | observational | — | 4 Zeilen | offen | 5.1 |
+| [1faf4b78f0](vollannotation_arbeitsblatt_1faf4b78f0.md) | cross_sectional | observational | — | 5 Zeilen | offen | 5.1 |
+| [37cafe8444](vollannotation_arbeitsblatt_37cafe8444.md) | cross_sectional | observational | — | 2 Zeilen | offen | 5.1 |
+| [5cbf039f22](vollannotation_arbeitsblatt_5cbf039f22.md) | aggregate | aggregate | — | 1 Zeilen | offen | 5.8 gepoolt |
+| [cfc6567ca3](vollannotation_arbeitsblatt_cfc6567ca3.md) | aggregate | aggregate | — | 4 Zeilen | offen | 5.1 |
+| [9cac5e48f3](vollannotation_arbeitsblatt_9cac5e48f3.md) | negative_control | unknown | — | Begruendung | offen | Negativkontrolle |
+| [83966faed7](vollannotation_arbeitsblatt_83966faed7.md) | negative_control | unknown | — | Begruendung | offen | Negativkontrolle |
+| [0843e61250](vollannotation_arbeitsblatt_0843e61250.md) | negative_control | unknown | — | Begruendung | offen | Negativkontrolle |
+| [6e935d39b0](vollannotation_arbeitsblatt_6e935d39b0.md) | negative_control | unknown | — | Begruendung | offen | Negativkontrolle |
+| [af1bb4ac0c](vollannotation_arbeitsblatt_af1bb4ac0c.md) | negative_control | unknown | — | Begruendung | offen | Negativkontrolle |
 
 ## Besondere Prüfpunkte
 

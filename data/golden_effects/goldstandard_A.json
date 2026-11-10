@@ -35,7 +35,7 @@
    "expected_effects": null,
    "effects": [
     {
-     "effect_id": "3134fdc8c38f475075a70ca32dc4a3d9-01",
+     "effect_id": "3134fdc8c3-01",
      "outcome_verbatim": "depressive symptoms",
      "outcome_normalized": "Depressive symptoms",
      "comparison_verbatim": "high UPF (4 or more servings/day) vs low UPF (less than 4 servings/day)",
@@ -62,7 +62,7 @@
      "notes": "Haupt-RR; IPTW-MSM; Sensitivitaets-RRs 1.11 (1.04–1.20), 1.09 (1.00–1.19), 1.12 (1.05–1.20), 1.12 (1.03–1.21), 1.12 (1.02–1.23); Subgruppen Q4 Serving 1.10 (1.02–1.20), Q4 Portion 1.15 (1.04–1.26); E-value 1.43; keine eigenen Zeilen."
     },
     {
-     "effect_id": "3134fdc8c38f475075a70ca32dc4a3d9-02",
+     "effect_id": "3134fdc8c3-02",
      "outcome_verbatim": "mental health quality of life",
      "outcome_normalized": "Mental health quality of life (SF-12 MCS)",
      "comparison_verbatim": "high UPF consumption vs low UPF consumption",
@@ -105,7 +105,7 @@
    "expected_effects": null,
    "effects": [
     {
-     "effect_id": "d0bec407a2a0dd19c0b67aa43f9e1dfb-01",
+     "effect_id": "d0bec407a2-01",
      "outcome_verbatim": "colorectal cancer risk",
      "outcome_normalized": "Colorectal cancer risk",
      "comparison_verbatim": "high (75th percentile; 411 min/week) vs low (25th percentile; 62 min/week) self-reported physical activity",
@@ -132,7 +132,7 @@
      "notes": "HR vor Bias-Adjustierung; Validitaetskoeffizient 0.32 (0.20, 0.43) und Attenuationsfaktor 0.20 (0.12, 0.28) sind keine Effektzeilen."
     },
     {
-     "effect_id": "d0bec407a2a0dd19c0b67aa43f9e1dfb-02",
+     "effect_id": "d0bec407a2-02",
      "outcome_verbatim": "colorectal cancer risk",
      "outcome_normalized": "Colorectal cancer risk",
      "comparison_verbatim": "high (75th percentile; 411 min/week) vs low (25th percentile; 62 min/week) self-reported physical activity",
@@ -190,7 +190,7 @@
    "expected_effects": null,
    "effects": [
     {
-     "effect_id": "fb484d488b45d21bbdf407cba4b074d5-01",
+     "effect_id": "fb484d488b-01",
      "outcome_verbatim": "depressive symptoms",
      "outcome_normalized": "Depressive symptoms",
      "comparison_verbatim": "exercise vs control",
@@ -263,7 +263,7 @@
    "expected_effects": null,
    "effects": [
     {
-     "effect_id": "2c7ab4d1244754e3966780f4bccbfa8c-01",
+     "effect_id": "2c7ab4d124-01",
      "outcome_verbatim": "Depression",
      "outcome_normalized": "Depression (GDS-15)",
      "comparison_verbatim": "Older age (≥75 years)",
@@ -290,7 +290,7 @@
      "notes": "Tabelle 3, univariat (unadjustiert); Subgruppe N=92; p≤0.05 (Stern); Tabelle nennt ≥75 Jahre (OR 1.9), Narrativ 60–74 Jahre (OR 1.93); Tabelle als Primaerquelle."
     },
     {
-     "effect_id": "2c7ab4d1244754e3966780f4bccbfa8c-02",
+     "effect_id": "2c7ab4d124-02",
      "outcome_verbatim": "Depression",
      "outcome_normalized": "Depression (GDS-15)",
      "comparison_verbatim": "Female gender",
@@ -317,7 +317,7 @@
      "notes": "Tabelle 3, univariat (unadjustiert); Subgruppe N=164; p≤0.05 (Stern); Narrativ OR 2.06, Tabelle 2.1 (Rundung)."
     },
     {
-     "effect_id": "2c7ab4d1244754e3966780f4bccbfa8c-03",
+     "effect_id": "2c7ab4d124-03",
      "outcome_verbatim": "Depression",
      "outcome_normalized": "Depression (GDS-15)",
      "comparison_verbatim": "Unmarried/separated/widowed/divorced",
@@ -344,7 +344,7 @@
      "notes": "Tabelle 3, univariat (unadjustiert); Subgruppe N=121; p≤0.05 (Stern)."
     },
     {
-     "effect_id": "2c7ab4d1244754e3966780f4bccbfa8c-04",
+     "effect_id": "2c7ab4d124-04",
      "outcome_verbatim": "Depression",
      "outcome_normalized": "Depression (GDS-15)",
      "comparison_verbatim": "Illiterate (unable to read and write)",
@@ -371,7 +371,7 @@
      "notes": "Tabelle 3, univariat (unadjustiert); Subgruppe N=208; p≤0.05 (Stern); Narrativ OR 3.13, Tabelle 3.1 (Rundung)."
     },
     {
-     "effect_id": "2c7ab4d1244754e3966780f4bccbfa8c-05",
+     "effect_id": "2c7ab4d124-05",
      "outcome_verbatim": "Depression",
      "outcome_normalized": "Depression (GDS-15)",
      "comparison_verbatim": "Illiterate (unable to read and write)",
@@ -398,7 +398,7 @@
      "notes": "Tabelle 3, multivariat (adjustiert); Subgruppe N=208; p≤0.05 (Stern); Narrativ aOR 2.01 (KI 1.08–3.75), Tabelle 2.01 (1.1–3.7); Tabelle als Primaerquelle."
     },
     {
-     "effect_id": "2c7ab4d1244754e3966780f4bccbfa8c-06",
+     "effect_id": "2c7ab4d124-06",
      "outcome_verbatim": "Depression",
      "outcome_normalized": "Depression (GDS-15)",
      "comparison_verbatim": "Living alone",
@@ -425,7 +425,7 @@
      "notes": "Tabelle 3, univariat (unadjustiert); Subgruppe N=13; n.s. (KI enthaelt 1); Narrativ OR 5.27 (p=0.002); Tabelle als Primaerquelle."
     },
     {
-     "effect_id": "2c7ab4d1244754e3966780f4bccbfa8c-07",
+     "effect_id": "2c7ab4d124-07",
      "outcome_verbatim": "Depression",
      "outcome_normalized": "Depression (GDS-15)",
      "comparison_verbatim": "Status in the family as household member",
@@ -452,7 +452,7 @@
      "notes": "Tabelle 3, univariat (unadjustiert); Subgruppe N=77; p≤0.05 (Stern); Status als Haushaltsmitglied vs Haushaltsvorstand."
     },
     {
-     "effect_id": "2c7ab4d1244754e3966780f4bccbfa8c-08",
+     "effect_id": "2c7ab4d124-08",
      "outcome_verbatim": "Depression",
      "outcome_normalized": "Depression (GDS-15)",
      "comparison_verbatim": "Received physical support",
@@ -479,7 +479,7 @@
      "notes": "Tabelle 3, univariat (unadjustiert); Subgruppe N=254; p≤0.05 (Stern); protektiv."
     },
     {
-     "effect_id": "2c7ab4d1244754e3966780f4bccbfa8c-09",
+     "effect_id": "2c7ab4d124-09",
      "outcome_verbatim": "Depression",
      "outcome_normalized": "Depression (GDS-15)",
      "comparison_verbatim": "Received financial support",
@@ -506,7 +506,7 @@
      "notes": "Tabelle 3, univariat (unadjustiert); Subgruppe N=242; p≤0.05 (Stern); protektiv."
     },
     {
-     "effect_id": "2c7ab4d1244754e3966780f4bccbfa8c-10",
+     "effect_id": "2c7ab4d124-10",
      "outcome_verbatim": "Depression",
      "outcome_normalized": "Depression (GDS-15)",
      "comparison_verbatim": "Felt respected",
@@ -533,7 +533,7 @@
      "notes": "Tabelle 3, univariat (unadjustiert); Subgruppe N=244; p≤0.05 (Stern); protektiv."
     },
     {
-     "effect_id": "2c7ab4d1244754e3966780f4bccbfa8c-11",
+     "effect_id": "2c7ab4d124-11",
      "outcome_verbatim": "Depression",
      "outcome_normalized": "Depression (GDS-15)",
      "comparison_verbatim": "Lack of consideration in family decisions",
@@ -560,7 +560,7 @@
      "notes": "Tabelle 3, univariat (unadjustiert); Subgruppe N=123; p≤0.05 (Stern)."
     },
     {
-     "effect_id": "2c7ab4d1244754e3966780f4bccbfa8c-12",
+     "effect_id": "2c7ab4d124-12",
      "outcome_verbatim": "Depression",
      "outcome_normalized": "Depression (GDS-15)",
      "comparison_verbatim": "Lack of consideration in family decisions",
@@ -587,7 +587,7 @@
      "notes": "Tabelle 3, multivariat (adjustiert); Subgruppe N=123; p≤0.05 (Stern); Narrativ aOR 4.02 (2.01–8.04)."
     },
     {
-     "effect_id": "2c7ab4d1244754e3966780f4bccbfa8c-13",
+     "effect_id": "2c7ab4d124-13",
      "outcome_verbatim": "Depression",
      "outcome_normalized": "Depression (GDS-15)",
      "comparison_verbatim": "Lack of time spent with family members",
@@ -614,7 +614,7 @@
      "notes": "Tabelle 3, univariat (unadjustiert); Subgruppe N=65; p≤0.05 (Stern)."
     },
     {
-     "effect_id": "2c7ab4d1244754e3966780f4bccbfa8c-14",
+     "effect_id": "2c7ab4d124-14",
      "outcome_verbatim": "Depression",
      "outcome_normalized": "Depression (GDS-15)",
      "comparison_verbatim": "Lack of time spent with family members",
@@ -641,7 +641,7 @@
      "notes": "Tabelle 3, multivariat (adjustiert); Subgruppe N=65; p≤0.05 (Stern); Narrativ aOR 3.55 (1.29–9.76)."
     },
     {
-     "effect_id": "2c7ab4d1244754e3966780f4bccbfa8c-15",
+     "effect_id": "2c7ab4d124-15",
      "outcome_verbatim": "Depression",
      "outcome_normalized": "Depression (GDS-15)",
      "comparison_verbatim": "Not mistreated by family members",
@@ -668,7 +668,7 @@
      "notes": "Tabelle 3, univariat (unadjustiert); Subgruppe N=260; p≤0.05 (Stern); protektiv."
     },
     {
-     "effect_id": "2c7ab4d1244754e3966780f4bccbfa8c-16",
+     "effect_id": "2c7ab4d124-16",
      "outcome_verbatim": "Depression",
      "outcome_normalized": "Depression (GDS-15)",
      "comparison_verbatim": "Smoker",
@@ -695,7 +695,7 @@
      "notes": "Tabelle 3, univariat (unadjustiert); Subgruppe N=117; n.s. (KI enthaelt 1)."
     },
     {
-     "effect_id": "2c7ab4d1244754e3966780f4bccbfa8c-17",
+     "effect_id": "2c7ab4d124-17",
      "outcome_verbatim": "Depression",
      "outcome_normalized": "Depression (GDS-15)",
      "comparison_verbatim": "Drinking alcohol",
@@ -722,7 +722,7 @@
      "notes": "Tabelle 3, univariat (unadjustiert); Subgruppe N=78; n.s. (KI enthaelt 1)."
     },
     {
-     "effect_id": "2c7ab4d1244754e3966780f4bccbfa8c-18",
+     "effect_id": "2c7ab4d124-18",
      "outcome_verbatim": "Depression",
      "outcome_normalized": "Depression (GDS-15)",
      "comparison_verbatim": "Presence of physical health problems",
@@ -749,7 +749,7 @@
      "notes": "Tabelle 3, univariat (unadjustiert); Subgruppe N=224; p≤0.05 (Stern)."
     },
     {
-     "effect_id": "2c7ab4d1244754e3966780f4bccbfa8c-19",
+     "effect_id": "2c7ab4d124-19",
      "outcome_verbatim": "Depression",
      "outcome_normalized": "Depression (GDS-15)",
      "comparison_verbatim": "Presence of physical health problems",
@@ -776,7 +776,7 @@
      "notes": "Tabelle 3, multivariat (adjustiert); Subgruppe N=224; p≤0.05 (Stern); Narrativ aOR 1.97 (1.03–3.77), Tabelle 1.97 (1.03–3.8)."
     },
     {
-     "effect_id": "2c7ab4d1244754e3966780f4bccbfa8c-20",
+     "effect_id": "2c7ab4d124-20",
      "outcome_verbatim": "Depression",
      "outcome_normalized": "Depression (GDS-15)",
      "comparison_verbatim": "Unable to leave home (immobile)",
@@ -803,7 +803,7 @@
      "notes": "Tabelle 3, univariat (unadjustiert); Subgruppe N=35; p≤0.05 (Stern)."
     },
     {
-     "effect_id": "2c7ab4d1244754e3966780f4bccbfa8c-21",
+     "effect_id": "2c7ab4d124-21",
      "outcome_verbatim": "Depression",
      "outcome_normalized": "Depression (GDS-15)",
      "comparison_verbatim": "Unable to leave home (immobile)",
@@ -846,7 +846,7 @@
    "expected_effects": null,
    "effects": [
     {
-     "effect_id": "09843d40d3cc2c9ca039d6d1b45ac656-01",
+     "effect_id": "09843d40d3-01",
      "outcome_verbatim": "Depressive Symptoms",
      "outcome_normalized": "Depressive symptoms (CES-D8)",
      "comparison_verbatim": "Categorical Variables",
@@ -873,7 +873,7 @@
      "notes": "Tabelle 2, Modell 1 (OLS, robuste SE, unadjustiert, kategorial: Teilnahme vs keine Teilnahme); p<0.001; SE berichtet, KI nicht berichtet."
     },
     {
-     "effect_id": "09843d40d3cc2c9ca039d6d1b45ac656-02",
+     "effect_id": "09843d40d3-02",
      "outcome_verbatim": "Depressive Symptoms",
      "outcome_normalized": "Depressive symptoms (CES-D8)",
      "comparison_verbatim": "Categorical Variables",
@@ -900,7 +900,7 @@
      "notes": "Tabelle 2, Modell 2 (OLS, robuste SE, adjustiert: Geschlecht, Hukou, Alter, Bildung, Familienstand, selbstbewertete Gesundheit); p<0.001."
     },
     {
-     "effect_id": "09843d40d3cc2c9ca039d6d1b45ac656-03",
+     "effect_id": "09843d40d3-03",
      "outcome_verbatim": "Depressive Symptoms",
      "outcome_normalized": "Depressive symptoms (CES-D8)",
      "comparison_verbatim": "Continuous Variable",
@@ -927,7 +927,7 @@
      "notes": "Tabelle 2, Modell 3 (OLS, unadjustiert, kontinuierlich: PEtime; Wurzel-transformierte mittlere taegliche Bewegungszeit, daher Einheit nicht Minuten); p<0.001."
     },
     {
-     "effect_id": "09843d40d3cc2c9ca039d6d1b45ac656-04",
+     "effect_id": "09843d40d3-04",
      "outcome_verbatim": "Depressive Symptoms",
      "outcome_normalized": "Depressive symptoms (CES-D8)",
      "comparison_verbatim": "Continuous Variable",
@@ -954,7 +954,7 @@
      "notes": "Tabelle 2, Modell 4 (OLS, adjustiert, kontinuierlich: PEtime; Wurzel-transformiert; Text interpretiert 'pro Minute', die Variable ist transformiert); p<0.001."
     },
     {
-     "effect_id": "09843d40d3cc2c9ca039d6d1b45ac656-05",
+     "effect_id": "09843d40d3-05",
      "outcome_verbatim": "Depressive Symptoms",
      "outcome_normalized": "Depressive symptoms (CES-D8)",
      "comparison_verbatim": "Categorical Variables",
@@ -997,7 +997,7 @@
    "expected_effects": null,
    "effects": [
     {
-     "effect_id": "334f5f679802315eeec71399149b51c3-01",
+     "effect_id": "334f5f6798-01",
      "outcome_verbatim": "depressive symptoms",
      "outcome_normalized": "Depressive symptoms",
      "comparison_verbatim": "Walking vs control",
@@ -1024,7 +1024,7 @@
      "notes": "Netzwerkschaetzer Walking; 47 Studien, 2895 Teilnehmer; 800-METs-Peak SMD −0.97 (−1.30 to −0.63) in notes; Meta-Regression Alter 0.36 (0.05; 0.68), Dosis −0.51 (−0.80; −0.22); Dosis-Kurve in notes."
     },
     {
-     "effect_id": "334f5f679802315eeec71399149b51c3-02",
+     "effect_id": "334f5f6798-02",
      "outcome_verbatim": "depressive symptoms",
      "outcome_normalized": "Depressive symptoms",
      "comparison_verbatim": "Tai Chi vs control",
@@ -1067,7 +1067,7 @@
    "expected_effects": null,
    "effects": [
     {
-     "effect_id": "203c831dbeb178297006a888608f4f10-01",
+     "effect_id": "203c831dbe-01",
      "outcome_verbatim": "cancer recurrence or cancer-specific mortality",
      "outcome_normalized": "Cancer recurrence or cancer-specific mortality",
      "comparison_verbatim": "higher post-diagnosis MD adherence vs lower adherence",
@@ -1094,7 +1094,7 @@
      "notes": "Gepoolter HR ueber sechs prospektive Kohorten; random-effects; I2=49%."
     },
     {
-     "effect_id": "203c831dbeb178297006a888608f4f10-02",
+     "effect_id": "203c831dbe-02",
      "outcome_verbatim": "cancer-related fatigue",
      "outcome_normalized": "Cancer-related fatigue",
      "comparison_verbatim": "Mediterranean Diet-aligned intervention vs control",
@@ -1150,7 +1150,48 @@
    "has_text_layer": true,
    "probelauf": false,
    "expected_effects": null,
-   "effects": [],
+   "effects": [
+    {
+     "outcome_verbatim": "hepatic steatosis index (HSI)",
+     "outcome_normalized": "hepatic_steatosis_index",
+     "comparison_verbatim": "MedDiet with EVOO vs low-fat diet",
+     "effect_type": "beta",
+     "effect": -0.62,
+     "ci_low": -1.077,
+     "ci_high": -0.164,
+     "quote": "with EVOO, the HSI was 0.620 units ( β = −0.620, 95%CI: −1.077,\n−0.164)",
+     "quote_start": 25094,
+     "quote_end": 25165,
+     "design_verbatim": "Longitudinal analysis within a randomized controlled trial (",
+     "certainty": "high",
+     "is_primary": true,
+     "adjusted": true,
+     "time_point": "follow-up",
+     "section": "Results",
+     "notes": "Model 3; reference low-fat diet; PREDIMED.",
+     "effect_id": "71c86b675b-01"
+    },
+    {
+     "outcome_verbatim": "hepatic steatosis index (HSI)",
+     "outcome_normalized": "hepatic_steatosis_index",
+     "comparison_verbatim": "MedDiet with nuts vs low-fat diet",
+     "effect_type": "beta",
+     "effect": -0.881,
+     "ci_low": -1.366,
+     "ci_high": -0.406,
+     "quote": "those who consumed the MedDiet with nuts, the corresponding\ndiﬀerence was 0.881 units ( β = −0.881, 95% CI: −1.366, −0.406).",
+     "quote_start": 25225,
+     "quote_end": 25349,
+     "design_verbatim": "Longitudinal analysis within a randomized controlled trial (",
+     "certainty": "high",
+     "is_primary": true,
+     "adjusted": true,
+     "time_point": "follow-up",
+     "section": "Results",
+     "notes": "Model 3; reference low-fat diet; PREDIMED.",
+     "effect_id": "71c86b675b-02"
+    }
+   ],
    "no_effect_reason": null,
    "notes": ""
   },
@@ -1165,7 +1206,113 @@
    "has_text_layer": true,
    "probelauf": false,
    "expected_effects": null,
-   "effects": [],
+   "effects": [
+    {
+     "outcome_verbatim": "exercise adherence",
+     "outcome_normalized": "exercise_adherence",
+     "comparison_verbatim": "sleep < 6 h vs 7-8 h",
+     "effect_type": "or",
+     "effect": 0.46,
+     "ci_low": 0.21,
+     "ci_high": 0.99,
+     "quote": "were significantly less likely to be adherent compared with participants sleeping ≥ 7–<8 h, (OR 0.46, 95% CI 0.21–0.99) and (OR 0.38, 95% CI 0.20–0.74), respectively (Model 1, Table 2 ).",
+     "quote_start": 15979,
+     "quote_end": 16165,
+     "design_verbatim": "randomized clinical trial",
+     "certainty": "high",
+     "is_primary": true,
+     "n": 1100,
+     "adjusted": true,
+     "time_point": "baseline",
+     "section": "Results",
+     "notes": "Model 1; Model 2/3 consistent.",
+     "effect_id": "cf9d739f50-01"
+    },
+    {
+     "outcome_verbatim": "exercise adherence",
+     "outcome_normalized": "exercise_adherence",
+     "comparison_verbatim": "sleep >= 9 h vs 7-8 h",
+     "effect_type": "or",
+     "effect": 0.38,
+     "ci_low": 0.2,
+     "ci_high": 0.74,
+     "quote": "were significantly less likely to be adherent compared with participants sleeping ≥ 7–<8 h, (OR 0.46, 95% CI 0.21–0.99) and (OR 0.38, 95% CI 0.20–0.74), respectively (Model 1, Table 2 ).",
+     "quote_start": 15979,
+     "quote_end": 16165,
+     "design_verbatim": "randomized clinical trial",
+     "certainty": "high",
+     "is_primary": true,
+     "n": 1100,
+     "adjusted": true,
+     "time_point": "baseline",
+     "section": "Results",
+     "notes": "Model 1; Model 2/3 consistent.",
+     "effect_id": "cf9d739f50-02"
+    },
+    {
+     "outcome_verbatim": "physical activity at 2 years",
+     "outcome_normalized": "physical_activity",
+     "comparison_verbatim": "sleep < 6 h vs 7-8 h",
+     "effect_type": "or",
+     "effect": 0.36,
+     "ci_low": 0.18,
+     "ci_high": 0.72,
+     "quote": "to be physically active at two years, (OR 0.36, 95% CI 0.18–0.72)",
+     "quote_start": 18241,
+     "quote_end": 18306,
+     "design_verbatim": "randomized clinical trial",
+     "certainty": "high",
+     "is_primary": true,
+     "n": 1100,
+     "adjusted": true,
+     "time_point": "2 years",
+     "section": "Results",
+     "notes": "Model 1; combined intervention and control.",
+     "effect_id": "cf9d739f50-03"
+    },
+    {
+     "outcome_verbatim": "physical activity at 2 years",
+     "outcome_normalized": "physical_activity",
+     "comparison_verbatim": "active at baseline vs inactive",
+     "effect_type": "or",
+     "effect": 7.6,
+     "ci_low": 5.51,
+     "ci_high": 10.48,
+     "quote": "As expected, participants who were physically active at baseline were more likely to remain physically active also after 2 years, regardless of the randomization group (OR 7.60, 95% CI 5.51–10.48).",
+     "quote_start": 17060,
+     "quote_end": 17257,
+     "design_verbatim": "randomized clinical trial",
+     "certainty": "high",
+     "is_primary": true,
+     "n": 1100,
+     "adjusted": false,
+     "time_point": "2 years",
+     "section": "Results",
+     "notes": "Both randomization groups combined.",
+     "effect_id": "cf9d739f50-04"
+    },
+    {
+     "outcome_verbatim": "physical activity at 2 years",
+     "outcome_normalized": "physical_activity",
+     "comparison_verbatim": "intervention vs control",
+     "effect_type": "or",
+     "effect": 1.87,
+     "ci_low": 1.36,
+     "ci_high": 2.55,
+     "quote": "PA increased significantly more in the intervention group compared with control group (OR 1.87, 95% CI 1.36–2.55).",
+     "quote_start": 17258,
+     "quote_end": 17372,
+     "design_verbatim": "randomized clinical trial",
+     "certainty": "high",
+     "is_primary": true,
+     "n": 1100,
+     "adjusted": false,
+     "time_point": "2 years",
+     "section": "Results",
+     "notes": "Randomized intervention effect.",
+     "effect_id": "cf9d739f50-05"
+    }
+   ],
    "no_effect_reason": null,
    "notes": ""
   },
@@ -1181,7 +1328,7 @@
    "probelauf": false,
    "expected_effects": null,
    "effects": [],
-   "no_effect_reason": null,
+   "no_effect_reason": "Nur Mittelwerte und p-Werte in Tabelle 3; keine Effektgroesse mit KI/SE.",
    "notes": ""
   },
   {
@@ -1189,13 +1336,33 @@
    "path": "fulltext/b5e492009e4ca350f512d5144fe8bf92.txt",
    "title": "Impact of exercise type, duration, and intensity on depressive symptom",
    "year": "2024",
-   "design_verbatim": "randomized controlled trials",
-   "design_category": "parallel_rct",
+   "design_verbatim": "meta-analysis of randomized controlled trials",
+   "design_category": "aggregate",
    "stratum": "rct",
    "has_text_layer": true,
    "probelauf": false,
    "expected_effects": null,
-   "effects": [],
+   "effects": [
+    {
+     "outcome_verbatim": "depressive symptoms",
+     "outcome_normalized": "depressive_symptoms",
+     "comparison_verbatim": "physical exercise vs control",
+     "effect_type": "smd",
+     "effect": -0.82,
+     "ci_low": -1.19,
+     "ci_high": -0.45,
+     "quote": "demonstrated a notable improvement in depression symptoms among older \npersons as an immediate result of engaging in physical exercise [SMD  =  −0.82, \n95% CI ( −1.19, −0.45)].",
+     "quote_start": 1956,
+     "quote_end": 2132,
+     "design_verbatim": "meta-analysis of randomized controlled trials",
+     "certainty": "high",
+     "is_primary": false,
+     "n": 1346,
+     "section": "Results",
+     "notes": "15 articles/20 studies; subgroup SMDs: moderate -0.25, high -0.94, resistance -0.70, group -0.97, 3 months -0.81, 6 months -0.93; no own rows.",
+     "effect_id": "b5e492009e-01"
+    }
+   ],
    "no_effect_reason": null,
    "notes": ""
   },
@@ -1211,7 +1378,7 @@
    "probelauf": false,
    "expected_effects": null,
    "effects": [],
-   "no_effect_reason": null,
+   "no_effect_reason": "Nur BDI-II-Mittelwerte, ANOVA/p und Eta-Quadrat; keine Effektgroesse mit KI/SE.",
    "notes": ""
   },
   {
@@ -1225,7 +1392,140 @@
    "has_text_layer": true,
    "probelauf": false,
    "expected_effects": null,
-   "effects": [],
+   "effects": [
+    {
+     "outcome_verbatim": "emotional depression symptoms (EDS)",
+     "outcome_normalized": "depressive_symptoms",
+     "comparison_verbatim": "physical activity (PA)",
+     "effect_type": "r",
+     "effect": -0.17,
+     "ci_low": null,
+     "ci_high": null,
+     "quote": "EDS −0.102* −0.17* 1**",
+     "quote_start": 34047,
+     "quote_end": 34069,
+     "design_verbatim": "longitudinal cohort",
+     "certainty": "high",
+     "is_primary": true,
+     "se": 0.011963466864801467,
+     "n": 6787,
+     "adjusted": false,
+     "time_point": "T1",
+     "section": "Table 2",
+     "notes": "Korrelation PA x Symptome; 5.11-Fall, Tabelle 2 loest Zeitpunkte auf; SE aus r und n=6787 abgeleitet.",
+     "effect_id": "3790c91f96-01"
+    },
+    {
+     "outcome_verbatim": "emotional depression symptoms (EDS)",
+     "outcome_normalized": "depressive_symptoms",
+     "comparison_verbatim": "physical activity (PA)",
+     "effect_type": "r",
+     "effect": -0.206,
+     "ci_low": null,
+     "ci_high": null,
+     "quote": "EDS −0.115* −0.171* 0.431* 0.321* −0.118* −0.206* 1**",
+     "quote_start": 34187,
+     "quote_end": 34240,
+     "design_verbatim": "longitudinal cohort",
+     "certainty": "high",
+     "is_primary": true,
+     "se": 0.011879795893827377,
+     "n": 6787,
+     "adjusted": false,
+     "time_point": "T2",
+     "section": "Table 2",
+     "notes": "Korrelation PA x Symptome; 5.11-Fall, Tabelle 2 loest Zeitpunkte auf; SE aus r und n=6787 abgeleitet.",
+     "effect_id": "3790c91f96-02"
+    },
+    {
+     "outcome_verbatim": "emotional depression symptoms (EDS)",
+     "outcome_normalized": "depressive_symptoms",
+     "comparison_verbatim": "physical activity (PA)",
+     "effect_type": "r",
+     "effect": -0.199,
+     "ci_low": null,
+     "ci_high": null,
+     "quote": "EDS −0.123* −0.176* 0.388* 0.3* −0.123* −0.189* 0.433* 0.31* −0.131* −0.199* 1**",
+     "quote_start": 34446,
+     "quote_end": 34526,
+     "design_verbatim": "longitudinal cohort",
+     "certainty": "high",
+     "is_primary": true,
+     "se": 0.011897368782010209,
+     "n": 6787,
+     "adjusted": false,
+     "time_point": "T3",
+     "section": "Table 2",
+     "notes": "Korrelation PA x Symptome; 5.11-Fall, Tabelle 2 loest Zeitpunkte auf; SE aus r und n=6787 abgeleitet.",
+     "effect_id": "3790c91f96-03"
+    },
+    {
+     "outcome_verbatim": "physical depression symptoms (PDS)",
+     "outcome_normalized": "depressive_symptoms",
+     "comparison_verbatim": "physical activity (PA)",
+     "effect_type": "r",
+     "effect": -0.248,
+     "ci_low": null,
+     "ci_high": null,
+     "quote": "PDS −0.136* −0.248* 0.447* 1**",
+     "quote_start": 34070,
+     "quote_end": 34100,
+     "design_verbatim": "longitudinal cohort",
+     "certainty": "high",
+     "is_primary": true,
+     "se": 0.01176091976010113,
+     "n": 6787,
+     "adjusted": false,
+     "time_point": "T1",
+     "section": "Table 2",
+     "notes": "Korrelation PA x Symptome; 5.11-Fall, Tabelle 2 loest Zeitpunkte auf; SE aus r und n=6787 abgeleitet.",
+     "effect_id": "3790c91f96-04"
+    },
+    {
+     "outcome_verbatim": "physical depression symptoms (PDS)",
+     "outcome_normalized": "depressive_symptoms",
+     "comparison_verbatim": "physical activity (PA)",
+     "effect_type": "r",
+     "effect": -0.265,
+     "ci_low": null,
+     "ci_high": null,
+     "quote": "PDS −0.152* −0.226* 0.316* 0.505** −0.155* −0.265* 0.44* 1**",
+     "quote_start": 34241,
+     "quote_end": 34301,
+     "design_verbatim": "longitudinal cohort",
+     "certainty": "high",
+     "is_primary": true,
+     "se": 0.011706147884982691,
+     "n": 6787,
+     "adjusted": false,
+     "time_point": "T2",
+     "section": "Table 2",
+     "notes": "Korrelation PA x Symptome; 5.11-Fall, Tabelle 2 loest Zeitpunkte auf; SE aus r und n=6787 abgeleitet.",
+     "effect_id": "3790c91f96-05"
+    },
+    {
+     "outcome_verbatim": "physical depression symptoms (PDS)",
+     "outcome_normalized": "depressive_symptoms",
+     "comparison_verbatim": "physical activity (PA)",
+     "effect_type": "r",
+     "effect": -0.266,
+     "ci_low": null,
+     "ci_high": null,
+     "quote": "PDS −0.139* −0.225* 0.281* 0.465* −0.144* −0.241* 0.307* 0.483* −0.159* −0.266* 0.439* 1**",
+     "quote_start": 34527,
+     "quote_end": 34617,
+     "design_verbatim": "longitudinal cohort",
+     "certainty": "high",
+     "is_primary": true,
+     "se": 0.011702804682447688,
+     "n": 6787,
+     "adjusted": false,
+     "time_point": "T3",
+     "section": "Table 2",
+     "notes": "Korrelation PA x Symptome; 5.11-Fall, Tabelle 2 loest Zeitpunkte auf; SE aus r und n=6787 abgeleitet.",
+     "effect_id": "3790c91f96-06"
+    }
+   ],
    "no_effect_reason": null,
    "notes": ""
   },
@@ -1241,7 +1541,7 @@
    "probelauf": false,
    "expected_effects": null,
    "effects": [],
-   "no_effect_reason": null,
+   "no_effect_reason": "Nur Abstract/Metadaten; keine quantifizierte Effektgroesse mit Unsicherheit (nur R2-Spannen).",
    "notes": ""
   },
   {
@@ -1255,7 +1555,88 @@
    "has_text_layer": true,
    "probelauf": false,
    "expected_effects": null,
-   "effects": [],
+   "effects": [
+    {
+     "outcome_verbatim": "depressive symptoms",
+     "outcome_normalized": "depressive_symptoms",
+     "comparison_verbatim": "per one-unit increase in ADL disability score",
+     "effect_type": "hr",
+     "effect": 1.163,
+     "ci_low": 1.132,
+     "ci_high": 1.194,
+     "quote": "In the unadjusted model, the ADL disability score in 2015 was a significant predictor of DS, with each one-unit increase in the ADL disability score associated with a 16.3% increase in the risk of developing DS (HR = 1.163, 95% CI: 1.132–1.194).",
+     "quote_start": 19656,
+     "quote_end": 19901,
+     "design_verbatim": "longitudinal cohort",
+     "certainty": "high",
+     "is_primary": true,
+     "n": 8994,
+     "adjusted": false,
+     "time_point": "2015-2018",
+     "section": "Results",
+     "effect_id": "17c7628ed0-01"
+    },
+    {
+     "outcome_verbatim": "depressive symptoms",
+     "outcome_normalized": "depressive_symptoms",
+     "comparison_verbatim": "per one-unit increase in ADL disability score",
+     "effect_type": "hr",
+     "effect": 1.09,
+     "ci_low": 1.058,
+     "ci_high": 1.123,
+     "quote": "After sequential adjustments for age, gender, education, marital status, place of residence, alcohol consumption, smoking, social engagement, disability, chronic diseases, and pain, ADL disability remained significantly associated with an elevated risk of DS (HR = 1.090, 95% CI: 1.058–1.123).",
+     "quote_start": 19902,
+     "quote_end": 20195,
+     "design_verbatim": "longitudinal cohort",
+     "certainty": "high",
+     "is_primary": true,
+     "n": 8994,
+     "adjusted": true,
+     "time_point": "2015-2018",
+     "section": "Results",
+     "effect_id": "17c7628ed0-02"
+    },
+    {
+     "outcome_verbatim": "ADL disability",
+     "outcome_normalized": "adl_disability",
+     "comparison_verbatim": "per one-unit increase in DS score",
+     "effect_type": "hr",
+     "effect": 1.062,
+     "ci_low": 1.054,
+     "ci_high": 1.069,
+     "quote": "Similarly, the unadjusted model demonstrated that the DS score in 2015 was a significant predictor of ADL disability, with each one-unit increase in the DS score associated with a 6% increase in the risk of developing ADL disability (HR = 1.062, 95% CI: 1.054–1.069).",
+     "quote_start": 20196,
+     "quote_end": 20463,
+     "design_verbatim": "longitudinal cohort",
+     "certainty": "high",
+     "is_primary": true,
+     "n": 9673,
+     "adjusted": false,
+     "time_point": "2015-2018",
+     "section": "Results",
+     "effect_id": "17c7628ed0-03"
+    },
+    {
+     "outcome_verbatim": "ADL disability",
+     "outcome_normalized": "adl_disability",
+     "comparison_verbatim": "per one-unit increase in DS score",
+     "effect_type": "hr",
+     "effect": 1.033,
+     "ci_low": 1.025,
+     "ci_high": 1.042,
+     "quote": "This association persisted even after adjusting for multiple confounding factors (HR = 1.033, 95% CI: 1.025–1.042).",
+     "quote_start": 20464,
+     "quote_end": 20579,
+     "design_verbatim": "longitudinal cohort",
+     "certainty": "high",
+     "is_primary": true,
+     "n": 9673,
+     "adjusted": true,
+     "time_point": "2015-2018",
+     "section": "Results",
+     "effect_id": "17c7628ed0-04"
+    }
+   ],
    "no_effect_reason": null,
    "notes": ""
   },
@@ -1270,7 +1651,88 @@
    "has_text_layer": true,
    "probelauf": false,
    "expected_effects": null,
-   "effects": [],
+   "effects": [
+    {
+     "outcome_verbatim": "cognitive performance",
+     "outcome_normalized": "cognitive_performance",
+     "comparison_verbatim": "intensity gradient of physical activity",
+     "effect_type": "beta",
+     "effect": 0.17,
+     "ci_low": 0.046,
+     "ci_high": 0.295,
+     "quote": "The results indicated a significant total direct effect (path c; without mediators) of the intensity gradient on cognitive performance (B = 0.170, t = −2.69, p = 0.007, 95% CI = 0.046, 0.295; R 2 = 0.210).",
+     "quote_start": 26395,
+     "quote_end": 26600,
+     "design_verbatim": "cross-sectional",
+     "certainty": "high",
+     "is_primary": true,
+     "n": 855,
+     "adjusted": true,
+     "section": "Results",
+     "notes": "Path c, total direct effect without mediators.",
+     "effect_id": "7ca468285b-01"
+    },
+    {
+     "outcome_verbatim": "cognitive performance",
+     "outcome_normalized": "cognitive_performance",
+     "comparison_verbatim": "intensity gradient of physical activity",
+     "effect_type": "beta",
+     "effect": 0.19,
+     "ci_low": 0.015,
+     "ci_high": 0.264,
+     "quote": "The direct effect was also significant after taking the mediators into account (path c’; B = 0.19, t = 2.20, p = 0.028, 95% CI = 0.015, 0.264; R 2 = 0.240).",
+     "quote_start": 26719,
+     "quote_end": 26875,
+     "design_verbatim": "cross-sectional",
+     "certainty": "high",
+     "is_primary": true,
+     "n": 855,
+     "adjusted": true,
+     "section": "Results",
+     "notes": "Path c', direct effect with mediators.",
+     "effect_id": "7ca468285b-02"
+    },
+    {
+     "outcome_verbatim": "cognitive performance",
+     "outcome_normalized": "cognitive_performance",
+     "comparison_verbatim": "indirect effect via contact frequency",
+     "effect_type": "beta",
+     "effect": 0.009,
+     "ci_low": 0.009,
+     "ci_high": 0.025,
+     "quote": "The results showed a significant indirect effect through contact frequency with the social network (B = 0.009, 95% CI = 0.009, 0.025) and through depressive symptoms (B = 0.022, 95% CI = 0.005, 0.046).",
+     "quote_start": 26876,
+     "quote_end": 27077,
+     "design_verbatim": "cross-sectional",
+     "certainty": "high",
+     "is_primary": true,
+     "n": 855,
+     "adjusted": true,
+     "section": "Results",
+     "notes": "PROCESS model 4; indirect effect.",
+     "effect_id": "7ca468285b-03"
+    },
+    {
+     "outcome_verbatim": "cognitive performance",
+     "outcome_normalized": "cognitive_performance",
+     "comparison_verbatim": "indirect effect via depressive symptoms",
+     "effect_type": "beta",
+     "effect": 0.022,
+     "ci_low": 0.005,
+     "ci_high": 0.046,
+     "quote": "The results showed a significant indirect effect through contact frequency with the social network (B = 0.009, 95% CI = 0.009, 0.025) and through depressive symptoms (B = 0.022, 95% CI = 0.005, 0.046).",
+     "quote_start": 26876,
+     "quote_end": 27077,
+     "design_verbatim": "cross-sectional",
+     "certainty": "high",
+     "is_primary": true,
+     "n": 855,
+     "adjusted": true,
+     "section": "Results",
+     "notes": "PROCESS model 4; indirect effect.",
+     "effect_id": "7ca468285b-04"
+    }
+   ],
    "no_effect_reason": null,
    "notes": ""
   },
@@ -1285,7 +1747,98 @@
    "has_text_layer": true,
    "probelauf": false,
    "expected_effects": null,
-   "effects": [],
+   "effects": [
+    {
+     "outcome_verbatim": "depression",
+     "outcome_normalized": "depression",
+     "comparison_verbatim": "physical exercise, direct effect",
+     "effect_type": "beta",
+     "effect": -0.08,
+     "ci_low": -0.13,
+     "ci_high": -0.02,
+     "quote": "PE - > DS −0.08 −0.13 −0.02",
+     "quote_start": 13886,
+     "quote_end": 13913,
+     "design_verbatim": "cross-sectional",
+     "certainty": "high",
+     "is_primary": true,
+     "section": "Table 2",
+     "notes": "Bootstrap 5,000; Tabelle 2 ohne SE-Spalte lesbar, KI als LLCI/ULCI.",
+     "effect_id": "1faf4b78f0-01"
+    },
+    {
+     "outcome_verbatim": "depression",
+     "outcome_normalized": "depression",
+     "comparison_verbatim": "via self-concept",
+     "effect_type": "beta",
+     "effect": -0.103,
+     "ci_low": -0.18,
+     "ci_high": -0.05,
+     "quote": "PE - > SC- > DS −0.103 −0.18 −0.05",
+     "quote_start": 13914,
+     "quote_end": 13948,
+     "design_verbatim": "cross-sectional",
+     "certainty": "high",
+     "is_primary": true,
+     "section": "Table 2",
+     "notes": "Bootstrap 5,000; Tabelle 2 ohne SE-Spalte lesbar, KI als LLCI/ULCI.",
+     "effect_id": "1faf4b78f0-02"
+    },
+    {
+     "outcome_verbatim": "depression",
+     "outcome_normalized": "depression",
+     "comparison_verbatim": "via social support",
+     "effect_type": "beta",
+     "effect": -0.07,
+     "ci_low": -0.1,
+     "ci_high": -0.03,
+     "quote": "PE - > SS- > DS −0.070 −0.10 −0.03",
+     "quote_start": 13954,
+     "quote_end": 13988,
+     "design_verbatim": "cross-sectional",
+     "certainty": "high",
+     "is_primary": true,
+     "section": "Table 2",
+     "notes": "Bootstrap 5,000; Tabelle 2 ohne SE-Spalte lesbar, KI als LLCI/ULCI.",
+     "effect_id": "1faf4b78f0-03"
+    },
+    {
+     "outcome_verbatim": "depression",
+     "outcome_normalized": "depression",
+     "comparison_verbatim": "via self-concept and social support",
+     "effect_type": "beta",
+     "effect": -0.023,
+     "ci_low": -0.03,
+     "ci_high": -0.003,
+     "quote": "PE - > SC- > SS- > DS −0.023 −0.03 −0.003",
+     "quote_start": 13994,
+     "quote_end": 14035,
+     "design_verbatim": "cross-sectional",
+     "certainty": "high",
+     "is_primary": true,
+     "section": "Table 2",
+     "notes": "Bootstrap 5,000; Tabelle 2 ohne SE-Spalte lesbar, KI als LLCI/ULCI.",
+     "effect_id": "1faf4b78f0-04"
+    },
+    {
+     "outcome_verbatim": "depression",
+     "outcome_normalized": "depression",
+     "comparison_verbatim": "total effect",
+     "effect_type": "beta",
+     "effect": -0.196,
+     "ci_low": -0.2,
+     "ci_high": -0.11,
+     "quote": "Total Effect −0.196 −0.20 −0.11",
+     "quote_start": 14041,
+     "quote_end": 14072,
+     "design_verbatim": "cross-sectional",
+     "certainty": "high",
+     "is_primary": true,
+     "section": "Table 2",
+     "notes": "Bootstrap 5,000; Tabelle 2 ohne SE-Spalte lesbar, KI als LLCI/ULCI.",
+     "effect_id": "1faf4b78f0-05"
+    }
+   ],
    "no_effect_reason": null,
    "notes": ""
   },
@@ -1300,7 +1853,48 @@
    "has_text_layer": true,
    "probelauf": false,
    "expected_effects": null,
-   "effects": [],
+   "effects": [
+    {
+     "outcome_verbatim": "intermediate HbA1c tertile (6.62-8.22%)",
+     "outcome_normalized": "hba1c_intermediate",
+     "comparison_verbatim": "FI+/MDA-up vs FI-/MDA-up",
+     "effect_type": "or",
+     "effect": 3.41,
+     "ci_low": 0.76,
+     "ci_high": 15.25,
+     "quote": "the point estimates suggested higher odds of the intermediate HbA1c tertile among participants with food insecurity and high MDA adherence (FI+/MDA↑; AOR = 3.41, 95% CI: 0.76–15.25; p = 0.108)",
+     "quote_start": 26830,
+     "quote_end": 27022,
+     "design_verbatim": "cross-sectional",
+     "certainty": "low",
+     "is_primary": true,
+     "n": 120,
+     "adjusted": true,
+     "section": "Results",
+     "notes": "Multinomial logistic regression; reference outcome lowest HbA1c tertile; wide CI, exploratory.",
+     "effect_id": "37cafe8444-01"
+    },
+    {
+     "outcome_verbatim": "highest HbA1c tertile (>8.22%)",
+     "outcome_normalized": "hba1c_highest",
+     "comparison_verbatim": "FI+/MDA-down vs FI-/MDA-up",
+     "effect_type": "or",
+     "effect": 4.74,
+     "ci_low": 0.66,
+     "ci_high": 34.16,
+     "quote": "higher odds of the highest HbA1c tertile among participants with food insecurity and low MDA adherence (FI+/MDA↓; AOR = 4.74, 95% CI: 0.66–34.16; p = 0.123).",
+     "quote_start": 27027,
+     "quote_end": 27184,
+     "design_verbatim": "cross-sectional",
+     "certainty": "low",
+     "is_primary": true,
+     "n": 120,
+     "adjusted": true,
+     "section": "Results",
+     "notes": "Multinomial logistic regression; wide CI, exploratory.",
+     "effect_id": "37cafe8444-02"
+    }
+   ],
    "no_effect_reason": null,
    "notes": ""
   },
@@ -1315,7 +1909,27 @@
    "has_text_layer": true,
    "probelauf": false,
    "expected_effects": null,
-   "effects": [],
+   "effects": [
+    {
+     "outcome_verbatim": "depressive symptoms",
+     "outcome_normalized": "depressive_symptoms",
+     "comparison_verbatim": "aerobic exercise vs control",
+     "effect_type": "g",
+     "effect": -0.28,
+     "ci_low": -0.43,
+     "ci_high": -0.13,
+     "quote": "The Bayesian meta-analysis revealed that aerobic exercise intervention significantly improved depression symptoms in adolescents compared to control groups, demonstrating a small effect size (Hedges’ g = -0.28, 95% credible interval (CrI): -0.43 to -0.13).",
+     "quote_start": 1811,
+     "quote_end": 2067,
+     "design_verbatim": "systematic review and dose-response meta-analysis",
+     "certainty": "high",
+     "is_primary": false,
+     "n": 723,
+     "section": "Abstract",
+     "notes": "12 RCTs; peak ca. 740 METs-min/week g=-0.44 (CrI -0.27 to -0.73); sensitivity 0.29 (0.21-0.38); no own rows.",
+     "effect_id": "5cbf039f22-01"
+    }
+   ],
    "no_effect_reason": null,
    "notes": ""
   },
@@ -1330,7 +1944,77 @@
    "has_text_layer": true,
    "probelauf": false,
    "expected_effects": null,
-   "effects": [],
+   "effects": [
+    {
+     "outcome_verbatim": "depressive symptoms",
+     "outcome_normalized": "depressive_symptoms",
+     "comparison_verbatim": "flexibility training vs control",
+     "effect_type": "g",
+     "effect": 1.09,
+     "ci_low": 0.57,
+     "ci_high": 1.6,
+     "quote": "After pooling the effect sizes, flexibility training showed the best \nintervention effect (g = 1.09, 95% CI = 0.57–1.60, P < 0.01).",
+     "quote_start": 19269,
+     "quote_end": 19400,
+     "design_verbatim": "meta-analysis",
+     "certainty": "high",
+     "is_primary": false,
+     "section": "Results",
+     "notes": "Meta-analysis; 13 interventions/4 types; further modalities and dose subgroups in notes.",
+     "effect_id": "cfc6567ca3-01"
+    },
+    {
+     "outcome_verbatim": "depressive symptoms",
+     "outcome_normalized": "depressive_symptoms",
+     "comparison_verbatim": "traditional health-preserving exercises vs control",
+     "effect_type": "g",
+     "effect": 0.8,
+     "ci_low": 0.15,
+     "ci_high": 1.44,
+     "quote": "Traditional health-preserving exercises (g = 0.80, 95% CI = \n0.15–1.44, P < 0.01),",
+     "quote_start": 19402,
+     "quote_end": 19484,
+     "design_verbatim": "meta-analysis",
+     "certainty": "high",
+     "is_primary": false,
+     "section": "Results",
+     "effect_id": "cfc6567ca3-02"
+    },
+    {
+     "outcome_verbatim": "depressive symptoms",
+     "outcome_normalized": "depressive_symptoms",
+     "comparison_verbatim": "anaerobic exercises vs control",
+     "effect_type": "g",
+     "effect": 0.78,
+     "ci_low": 0.63,
+     "ci_high": 1.38,
+     "quote": "anaerobic exercises (g = 0.78, 95% CI = \n0.63–1.38, P < 0.01) and aerobic exercises (g = 0.70, 95% CI = \n0.19–1.20, P < 0.01) all showed varying degrees of improvement \nin depressive symptoms. Among different exercise modalities, \ncycling (g = 1.60, 95% CI = 1.23–2.19, P < 0.05) and yoga (g \n= 1.26, 95% CI = 0.70–1.82, P < 0.01) significantly improved \ndepressive symptoms, while ball games showed a weaker effect \n(g = 0.16, 95% CI = -0.15–0.47, P < 0.01). The main pooled \neffect sizes are presented in (Figure 3).\nFigure 3: Main pooled effect sizes of the results.\n3.5. Subgroup analysis results\nThe optimal exercise intervention dose for improving \ndepressive symptoms in college students was a single session \nduration of ≥90 minutes (g = 0.77, 95% CI = 0.41–1.13, P < \n0.01), exercising 3-4 times per week (g = 0.79, 95% CI = 0.38–\n1.20, P < 0.01),",
+     "quote_start": 19485,
+     "quote_end": 20341,
+     "design_verbatim": "meta-analysis",
+     "certainty": "high",
+     "is_primary": false,
+     "section": "Results",
+     "effect_id": "cfc6567ca3-03"
+    },
+    {
+     "outcome_verbatim": "depressive symptoms",
+     "outcome_normalized": "depressive_symptoms",
+     "comparison_verbatim": "aerobic exercises vs control",
+     "effect_type": "g",
+     "effect": 0.7,
+     "ci_low": 0.19,
+     "ci_high": 1.2,
+     "quote": "aerobic exercises (g = 0.70, 95% CI = \n0.19–1.20, P < 0.01)",
+     "quote_start": 19551,
+     "quote_end": 19610,
+     "design_verbatim": "meta-analysis",
+     "certainty": "high",
+     "is_primary": false,
+     "section": "Results",
+     "effect_id": "cfc6567ca3-04"
+    }
+   ],
    "no_effect_reason": null,
    "notes": ""
   },
@@ -1346,7 +2030,7 @@
    "probelauf": false,
    "expected_effects": null,
    "effects": [],
-   "no_effect_reason": null,
+   "no_effect_reason": "Protokollstudie; nur ICC/Bland-Altman und deskriptive Statistik; kein Interventionseffekt mit Unsicherheit.",
    "notes": ""
   },
   {
@@ -1361,7 +2045,7 @@
    "probelauf": false,
    "expected_effects": null,
    "effects": [],
-   "no_effect_reason": null,
+   "no_effect_reason": "Editorial; keine eigene quantitative Effektgroesse mit Unsicherheit.",
    "notes": ""
   },
   {
@@ -1376,7 +2060,7 @@
    "probelauf": false,
    "expected_effects": null,
    "effects": [],
-   "no_effect_reason": null,
+   "no_effect_reason": "Kommentar; keine eigene quantitative Effektgroesse mit Unsicherheit.",
    "notes": ""
   },
   {
@@ -1391,7 +2075,7 @@
    "probelauf": false,
    "expected_effects": null,
    "effects": [],
-   "no_effect_reason": null,
+   "no_effect_reason": "Editorial; keine eigene quantitative Effektgroesse mit Unsicherheit.",
    "notes": ""
   },
   {
@@ -1406,7 +2090,7 @@
    "probelauf": false,
    "expected_effects": null,
    "effects": [],
-   "no_effect_reason": null,
+   "no_effect_reason": "Narrativer Ueberblick/Modellierung; keine eigene quantitative Effektgroesse mit Unsicherheit.",
    "notes": ""
   }
  ]
