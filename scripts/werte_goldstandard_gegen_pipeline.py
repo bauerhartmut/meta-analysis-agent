@@ -106,16 +106,18 @@ def bericht_text(ergebnis: dict, gold_datei: str, quelle: dict) -> str:
 
     zeilen += [
         "",
-        "| Schicht | TP | FP | FN | Precision | Recall | Typ | Wert | Poolbar | Ausbeute |",
-        "|---|---|---|---|---|---|---|---|---|---|",
+        "| Schicht | TP | FP | FN | Precision | Recall | Typ | Wert | Poolbar | Ausbeute | Ausbeute dedupe | Duplikate |",
+        "|---|---|---|---|---|---|---|---|---|---|---|---|",
     ]
     for name, s in ergebnis["schichten"].items():
         zeilen.append(f"| {name} | {s['tp']} | {s['fp']} | {s['fn']} | {p(s['precision'])} | "
                       f"{p(s['recall'])} | {p(s['typquote'])} | {p(s['wertquote'])} | "
-                      f"{p(s['poolbare_quote'])} | {a(s['ausbeute_poolbar'])} |")
+                      f"{p(s['poolbare_quote'])} | {a(s['ausbeute_poolbar'])} | "
+                      f"{a(s['ausbeute_poolbar_unique'])} | {p(s['duplikatquote'])} |")
     zeilen.append(f"| **gesamt** | {g['tp']} | {g['fp']} | {g['fn']} | {p(g['precision'])} | "
                   f"{p(g['recall'])} | {p(g['typquote'])} | {p(g['wertquote'])} | "
-                  f"{p(g['poolbare_quote'])} | {a(g['ausbeute_poolbar'])} |")
+                  f"{p(g['poolbare_quote'])} | {a(g['ausbeute_poolbar'])} | "
+                  f"{a(g['ausbeute_poolbar_unique'])} | {p(g['duplikatquote'])} |")
     return "\n".join(zeilen)
 
 
@@ -180,6 +182,12 @@ Kein Modellaufruf. Quelle: `{gold_pfad.relative_to(ROOT)}`, Datenbanken:
 - **Poolbar** = Anteil der Pipelinezeilen mit `Database.POOLABLE`
   (`disputed=0`, kein `rejection_reason`, `quote_start >= 0`, SE oder KI).
 - **Ausbeute** = poolbare Pipelinezeilen je annotiertem Volltext.
+- **Ausbeute dedupe** = dasselbe nach Entfernen von Wert- und
+  Zitat-Zwillingen (gleiche Quelle + Effekt auf 9 Stellen und SE, oder
+  gleicher normalisierter Zitattext der ersten 200 Zeichen; die erste Zeile
+  bleibt). Dieselbe Semantik wie `_drop_zweitlesungen` im Pooling.
+- **Duplikate** = Anteil der ueberzaehligen Zeilen an allen Pipelinezeilen
+  der annotierten Dokumente.
 
 Die Ausbeute zaehlt nur Zeilen **annotierter** Dokumente; offene Dokumente
 liefern keine Quote. `nur_akzeptiert` aendert die Poolbarkeit nicht, weil

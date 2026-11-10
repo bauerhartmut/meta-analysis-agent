@@ -3,7 +3,7 @@
 import pytest
 
 from research_agent.goldstandard_abgleich import (
-    aehnlichkeit, ist_poolbar, jaccard, matche, token, werte,
+    aehnlichkeit, dedupe, ist_poolbar, jaccard, matche, token, werte,
 )
 
 
@@ -13,12 +13,12 @@ def gold(outcome, effekt_wert, typ="hr", vergleich="Intervention vs Kontrolle"):
 
 
 def pipe(outcome, effekt_wert, typ="hr", vergleich="Intervention vs Kontrolle",
-         se=None, ci_low=None, ci_high=None, quote_start=0,
+         se=None, ci_low=None, ci_high=None, quote_start=0, quote="",
          disputed=0, rejection_reason=""):
     return {"outcome": outcome, "comparison": vergleich,
             "effect_type": typ, "effect": effekt_wert,
             "se": se, "ci_low": ci_low, "ci_high": ci_high,
-            "quote_start": quote_start, "disputed": disputed,
+            "quote": quote, "quote_start": quote_start, "disputed": disputed,
             "rejection_reason": rejection_reason}
 
 
@@ -138,6 +138,43 @@ def test_poolbare_quote_und_ausbeute():
     assert s["zeilen_pro_dokument"] == pytest.approx(1.5)
     assert s["poolbar_tp"] == 1
     assert s["poolbare_quote_tp"] == pytest.approx(1.0)
+
+
+def test_dedupe_entfernt_wert_zwilling():
+    behalten, duplikate = dedupe([pipe("x", 1.0, se=0.1), pipe("x", 1.0, se=0.1)])
+    assert len(behalten) == 1
+    assert duplikate == 1
+
+
+def test_dedupe_entfernt_zitat_zwilling_auch_bei_anderem_wert():
+    behalten, duplikate = dedupe([
+        pipe("x", 1.0, se=0.1, quote="Risk 1.0 (0.8-1.2)"),
+        pipe("y", 2.0, se=0.2, quote="Risk  1.0 (0.8-1.2)"),
+    ])
+    assert len(behalten) == 1
+    assert duplikate == 1
+
+
+def test_dedupe_ohne_beleg_verwirft_nichts():
+    behalten, duplikate = dedupe([pipe("x", 1.0), pipe("y", 2.0)])
+    assert len(behalten) == 2
+    assert duplikate == 0
+
+
+def test_ausbeute_unique_entfernt_doppelzeilen():
+    docs = [{"document_id": "d1", "stratum": "rct"},
+            {"document_id": "d2", "stratum": "rct"}]
+    p = {"d1": [pipe("x", 1.0, se=0.1), pipe("x", 1.0, se=0.1),
+                pipe("y", 2.0, se=0.2)],
+         "d2": [pipe("z", 3.0, se=0.3)]}
+    r = werte({"d1": [], "d2": []}, p, docs, annotiert={"d1", "d2"})
+    s = r["gesamt"]
+    assert s["pipeline_zeilen_annotiert"] == 4
+    assert s["unique"] == 3
+    assert s["duplikate"] == 1
+    assert s["ausbeute_poolbar"] == pytest.approx(2.0)
+    assert s["ausbeute_poolbar_unique"] == pytest.approx(1.5)
+    assert s["duplikatquote"] == pytest.approx(0.25)
 
 
 def test_ausbeute_nur_annotierte_dokumente():

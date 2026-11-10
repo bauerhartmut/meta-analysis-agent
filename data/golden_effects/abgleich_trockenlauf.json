@@ -11,7 +11,10 @@
   "wert_ok": 1,
   "pipeline_zeilen": 37,
   "pipeline_zeilen_annotiert": 1,
+  "unique": 1,
+  "duplikate": 0,
   "poolbar": 1,
+  "poolbar_unique": 1,
   "poolbar_tp": 1,
   "n_annotiert": 1,
   "n_offen": 29,
@@ -22,7 +25,10 @@
   "poolbare_quote": 1.0,
   "poolbare_quote_tp": 1.0,
   "zeilen_pro_dokument": 1.0,
-  "ausbeute_poolbar": 1.0
+  "ausbeute_poolbar": 1.0,
+  "poolbare_quote_unique": 1.0,
+  "ausbeute_poolbar_unique": 1.0,
+  "duplikatquote": 0.0
  },
  "schichten": {
   "aggregate": {
@@ -33,7 +39,10 @@
    "wert_ok": 1,
    "pipeline_zeilen": 7,
    "pipeline_zeilen_annotiert": 1,
+   "unique": 1,
+   "duplikate": 0,
    "poolbar": 1,
+   "poolbar_unique": 1,
    "poolbar_tp": 1,
    "n_annotiert": 1,
    "n_offen": 3,
@@ -44,7 +53,10 @@
    "poolbare_quote": 1.0,
    "poolbare_quote_tp": 1.0,
    "zeilen_pro_dokument": 1.0,
-   "ausbeute_poolbar": 1.0
+   "ausbeute_poolbar": 1.0,
+   "poolbare_quote_unique": 1.0,
+   "ausbeute_poolbar_unique": 1.0,
+   "duplikatquote": 0.0
   },
   "cohort": {
    "tp": 0,
@@ -54,7 +66,10 @@
    "wert_ok": 0,
    "pipeline_zeilen": 17,
    "pipeline_zeilen_annotiert": 0,
+   "unique": 0,
+   "duplikate": 0,
    "poolbar": 0,
+   "poolbar_unique": 0,
    "poolbar_tp": 0,
    "n_annotiert": 0,
    "n_offen": 7,
@@ -65,7 +80,10 @@
    "poolbare_quote": null,
    "poolbare_quote_tp": null,
    "zeilen_pro_dokument": null,
-   "ausbeute_poolbar": null
+   "ausbeute_poolbar": null,
+   "poolbare_quote_unique": null,
+   "ausbeute_poolbar_unique": null,
+   "duplikatquote": null
   },
   "cross_sectional": {
    "tp": 0,
@@ -75,7 +93,10 @@
    "wert_ok": 0,
    "pipeline_zeilen": 5,
    "pipeline_zeilen_annotiert": 0,
+   "unique": 0,
+   "duplikate": 0,
    "poolbar": 0,
+   "poolbar_unique": 0,
    "poolbar_tp": 0,
    "n_annotiert": 0,
    "n_offen": 5,
@@ -86,7 +107,10 @@
    "poolbare_quote": null,
    "poolbare_quote_tp": null,
    "zeilen_pro_dokument": null,
-   "ausbeute_poolbar": null
+   "ausbeute_poolbar": null,
+   "poolbare_quote_unique": null,
+   "ausbeute_poolbar_unique": null,
+   "duplikatquote": null
   },
   "crossover": {
    "tp": 0,
@@ -96,7 +120,10 @@
    "wert_ok": 0,
    "pipeline_zeilen": 0,
    "pipeline_zeilen_annotiert": 0,
+   "unique": 0,
+   "duplikate": 0,
    "poolbar": 0,
+   "poolbar_unique": 0,
    "poolbar_tp": 0,
    "n_annotiert": 0,
    "n_offen": 3,
@@ -107,7 +134,10 @@
    "poolbare_quote": null,
    "poolbare_quote_tp": null,
    "zeilen_pro_dokument": null,
-   "ausbeute_poolbar": null
+   "ausbeute_poolbar": null,
+   "poolbare_quote_unique": null,
+   "ausbeute_poolbar_unique": null,
+   "duplikatquote": null
   },
   "negative_control": {
    "tp": 0,
@@ -117,7 +147,10 @@
    "wert_ok": 0,
    "pipeline_zeilen": 0,
    "pipeline_zeilen_annotiert": 0,
+   "unique": 0,
+   "duplikate": 0,
    "poolbar": 0,
+   "poolbar_unique": 0,
    "poolbar_tp": 0,
    "n_annotiert": 0,
    "n_offen": 5,
@@ -128,7 +161,10 @@
    "poolbare_quote": null,
    "poolbare_quote_tp": null,
    "zeilen_pro_dokument": null,
-   "ausbeute_poolbar": null
+   "ausbeute_poolbar": null,
+   "poolbare_quote_unique": null,
+   "ausbeute_poolbar_unique": null,
+   "duplikatquote": null
   },
   "rct": {
    "tp": 0,
@@ -138,7 +174,10 @@
    "wert_ok": 0,
    "pipeline_zeilen": 8,
    "pipeline_zeilen_annotiert": 0,
+   "unique": 0,
+   "duplikate": 0,
    "poolbar": 0,
+   "poolbar_unique": 0,
    "poolbar_tp": 0,
    "n_annotiert": 0,
    "n_offen": 6,
@@ -149,7 +188,10 @@
    "poolbare_quote": null,
    "poolbare_quote_tp": null,
    "zeilen_pro_dokument": null,
-   "ausbeute_poolbar": null
+   "ausbeute_poolbar": null,
+   "poolbare_quote_unique": null,
+   "ausbeute_poolbar_unique": null,
+   "duplikatquote": null
   }
  },
  "dokumente": [
@@ -235,7 +277,10 @@
    "typ_ok": 1,
    "wert_ok": 1,
    "pipeline_zeilen_annotiert": 1,
+   "unique": 1,
+   "duplikate": 0,
    "poolbar": 1,
+   "poolbar_unique": 1,
    "poolbar_tp": 1,
    "paare": [
     {

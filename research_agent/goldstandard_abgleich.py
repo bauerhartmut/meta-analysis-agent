@@ -114,10 +114,50 @@ def ist_poolbar(zeile: dict) -> bool:
                 and zeile.get("ci_high") is not None))
 
 
+def _wert_zwilling(zeile: dict):
+    effekt = _zahl(zeile, "effect")
+    if effekt is None:
+        return None
+    se = _zahl(zeile, "se")
+    return (round(effekt, 9), None if se is None else round(se, 9))
+
+
+def _zitat_zwilling(zeile: dict):
+    text = " ".join(str(zeile.get("quote") or "").split()).lower()[:200]
+    return text or None
+
+
+def dedupe(zeilen: list):
+    """Entfernt Wert- und Zitat-Zwillinge, die erste Zeile bleibt.
+
+    Dieselbe Semantik wie ``_drop_zweitlesungen`` in ``meta/pooling.py``:
+    Zwilling ist gleiche Quelle plus gleicher Effekt (9 Stellen, SE) oder
+    gleicher normalisierter Zitattext (erste 200 Zeichen). Hier ohne
+    Pass-Filter, weil der Abgleich die gespeicherte Ausgabe bewertet, nicht
+    den Lesepass. Eine Zeile ohne Wert und ohne Quote wird nie verworfen.
+    """
+    gesehen_wert, gesehen_zitat = set(), set()
+    behalten, duplikate = [], 0
+    for zeile in zeilen:
+        wert = _wert_zwilling(zeile)
+        zitat = _zitat_zwilling(zeile)
+        if (wert is not None and wert in gesehen_wert) or (
+                zitat is not None and zitat in gesehen_zitat):
+            duplikate += 1
+            continue
+        if wert is not None:
+            gesehen_wert.add(wert)
+        if zitat is not None:
+            gesehen_zitat.add(zitat)
+        behalten.append(zeile)
+    return behalten, duplikate
+
+
 def _leer() -> dict:
     return {"tp": 0, "fp": 0, "fn": 0, "typ_ok": 0, "wert_ok": 0,
             "pipeline_zeilen": 0, "pipeline_zeilen_annotiert": 0,
-            "poolbar": 0, "poolbar_tp": 0,
+            "unique": 0, "duplikate": 0,
+            "poolbar": 0, "poolbar_unique": 0, "poolbar_tp": 0,
             "n_annotiert": 0, "n_offen": 0}
 
 
@@ -133,6 +173,11 @@ def _abschluss(d: dict) -> dict:
     d["zeilen_pro_dokument"] = (n / d["n_annotiert"]) if d["n_annotiert"] else None
     d["ausbeute_poolbar"] = ((d["poolbar"] / d["n_annotiert"])
                              if d["n_annotiert"] else None)
+    d["poolbare_quote_unique"] = ((d["poolbar_unique"] / d["unique"])
+                                  if d["unique"] else None)
+    d["ausbeute_poolbar_unique"] = ((d["poolbar_unique"] / d["n_annotiert"])
+                                    if d["n_annotiert"] else None)
+    d["duplikatquote"] = ((d["duplikate"] / n) if n else None)
     return d
 
 
@@ -158,13 +203,16 @@ def werte(gold_docs: dict, pipe_docs: dict, docs: list, annotiert: set,
 
         g = gold_docs.get(fid, [])
         paare, rest_g, rest_p = matche(g, p, schwelle, toleranz)
+        p_unique, duplikate = dedupe(p)
         zahlen = {"tp": len(paare), "fp": len(rest_p), "fn": len(rest_g),
                   "typ_ok": sum(1 for _, ga, pa in paare
                                 if ga.get("effect_type") == pa.get("effect_type")),
                   "wert_ok": sum(1 for _, ga, pa in paare
                                  if _nah(_zahl(ga, "effect"), _zahl(pa, "effect"), toleranz)),
                   "pipeline_zeilen_annotiert": len(p),
+                  "unique": len(p_unique), "duplikate": duplikate,
                   "poolbar": sum(1 for x in p if ist_poolbar(x)),
+                  "poolbar_unique": sum(1 for x in p_unique if ist_poolbar(x)),
                   "poolbar_tp": sum(1 for _, _, pa in paare if ist_poolbar(pa))}
         for ziel in (gesamt, schichten[schicht]):
             for k, v in zahlen.items():
@@ -183,6 +231,8 @@ def werte(gold_docs: dict, pipe_docs: dict, docs: list, annotiert: set,
                         "nur_gold": [x.get("outcome_normalized") for x in rest_g],
                         "nur_pipeline": [x.get("outcome") for x in rest_p],
                         "poolbar": zahlen["poolbar"],
+                        "poolbar_unique": zahlen["poolbar_unique"],
+                        "duplikate": zahlen["duplikate"],
                         "poolbar_tp": zahlen["poolbar_tp"]})
 
     return {"stufen": {"schwelle": schwelle, "toleranz": toleranz},

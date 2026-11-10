@@ -21,6 +21,12 @@ Keine Annotation: es gibt nichts auszuwerten. Die Pipeline-Zahlen stehen nur als
 - **Poolbar** = Anteil der Pipelinezeilen mit `Database.POOLABLE`
   (`disputed=0`, kein `rejection_reason`, `quote_start >= 0`, SE oder KI).
 - **Ausbeute** = poolbare Pipelinezeilen je annotiertem Volltext.
+- **Ausbeute dedupe** = dasselbe nach Entfernen von Wert- und
+  Zitat-Zwillingen (gleiche Quelle + Effekt auf 9 Stellen und SE, oder
+  gleicher normalisierter Zitattext der ersten 200 Zeichen; die erste Zeile
+  bleibt). Dieselbe Semantik wie `_drop_zweitlesungen` im Pooling.
+- **Duplikate** = Anteil der ueberzaehligen Zeilen an allen Pipelinezeilen
+  der annotierten Dokumente.
 
 Die Ausbeute zaehlt nur Zeilen **annotierter** Dokumente; offene Dokumente
 liefern keine Quote. `nur_akzeptiert` aendert die Poolbarkeit nicht, weil
