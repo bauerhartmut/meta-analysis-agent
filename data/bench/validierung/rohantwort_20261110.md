@@ -66,6 +66,22 @@ mit zwei Listenwerten, greift keine der bekannten Tasten und
 `outcome` statt der Effektliste. Bei nur einem Listenwert (`{"effects": [...]}`)
 funktioniert es dagegen, weil dann `len(list_values) == 1` greift.
 
+## Gegenprobe am Parser (offline, ohne Netz)
+
+Gegen die gespeicherte Rohantwort und zwei synthetische Huellen, ausgefuehrt mit
+demselben `unwrap_json_list`:
+
+| Eingabe | Items |
+|---|---:|
+| Rohantwort (flaches Objekt, 18 Felder) | 1 |
+| `{"effects": [3 Objekte]}` | **3** |
+| `{"effects": [3 Objekte], "notes": ["x"]}` | **1** (dict, keine Effektzeile) |
+
+Damit ist die Parser-Seite gemessen: Eine Huelle mit **einem** Listenwert wird
+sauber entpackt, eine mit **zwei** Listenwerten kollabiert zu einer
+Pseudo-Zeile. Ein Fix muss also beides treffen - die Huellenform im Prompt
+und die fehlende Taste `effects` in `_LIST_ENVELOPE_KEYS`.
+
 ## Was daraus folgt (nicht in diesem Schritt umgesetzt)
 
 Der kleinste Fix ist eine Prompt-Aenderung: statt "Return a JSON array" die
@@ -78,7 +94,8 @@ Kerndatei: Aenderung nur mit Eintrag in `research_agent/patches/` und
 
 ## Grenzen
 
-- Ein Dokument, ein Aufruf. Dass die Form `{"effects": [...]}` das Verhalten
-  aendert, ist nicht gemessen - nur, dass die aktuelle Form ein Objekt erzwingt.
+- Ein Dokument, ein Aufruf. Am Parser ist die Huellenform gemessen (siehe
+  Gegenprobe), am Modell nicht: ob TUDaGPT dann wirklich alle Zeilen liefert,
+  ist offen.
 - Die Rohantwort ist gespeichert; der Parser-Teil ist damit offline
   wiederholbar, der Modellaufruf nicht.
