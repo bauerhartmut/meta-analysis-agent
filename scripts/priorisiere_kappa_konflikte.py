@@ -4,10 +4,11 @@ Read-only, kein Modellaufruf. Quelle ist `data/golden_effects/kappa_konflikte.js
 aus `berichte_kappa_konflikte.py`. Die Reihenfolge folgt dem Schaden fuer den
 Goldstandard:
 
-1. fehlende Zeile (`nur_a`/`nur_b`) - Vollstaendigkeit,
-2. Effekttyp (`typ`) - Poolingfaehigkeit,
-3. Wert (`wert`) - Praezision,
-4. KI (`ki`) - Unsicherheit.
+1. Dokument ohne Zeile (`dokument`) - ein Annotator findet das Dokument leer,
+2. fehlende Zeile (`nur_a`/`nur_b`) - Vollstaendigkeit,
+3. Effekttyp (`typ`) - Poolingfaehigkeit,
+4. Wert (`wert`) - Praezision,
+5. KI (`ki`) - Unsicherheit.
 
 Die Vorschlaege sind Pruefhinweise, keine Entscheidung. Die dritte Stimme
 entscheidet am Volltext; die Spalte bleibt leer.
@@ -19,8 +20,9 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-RANG = {"nur_a": 1, "nur_b": 1, "typ": 2, "wert": 3, "ki": 4}
-NAMEN = {1: "fehlende Zeile", 2: "Effekttyp", 3: "Wert", 4: "KI"}
+RANG = {"dokument": 0, "nur_a": 1, "nur_b": 1, "typ": 2, "wert": 3, "ki": 4}
+NAMEN = {0: "Dokument ohne Zeile", 1: "fehlende Zeile",
+         2: "Effekttyp", 3: "Wert", 4: "KI"}
 
 
 def _seite(c: dict) -> str:
@@ -28,6 +30,8 @@ def _seite(c: dict) -> str:
 
 
 def vorschlag(klasse: str, c: dict) -> str:
+    if klasse == "dokument":
+        return "Volltext pruefen: Effekte vorhanden? Sonst Begruendung uebernehmen"
     if klasse in ("nur_a", "nur_b"):
         if str(c.get("quote") or "").strip() and c.get("ki") not in (None, "", "n/a"):
             return "aufnehmen, Quote am Volltext verifizieren"
@@ -45,7 +49,10 @@ def priorisiere(klassen: dict) -> list:
         if klasse not in RANG:
             continue
         for c in eintraege or []:
-            if klasse in ("nur_a", "nur_b"):
+            if klasse == "dokument":
+                a = f"{c['effekte']} Zeilen" if c.get("seite") == "A" else "0 Zeilen"
+                b = f"{c['effekte']} Zeilen" if c.get("seite") == "B" else "0 Zeilen"
+            elif klasse in ("nur_a", "nur_b"):
                 a, b = (_seite(c), "-") if klasse == "nur_a" else ("-", _seite(c))
             elif klasse == "ki":
                 a = f"{c['a'][0]} bis {c['a'][1]}"
@@ -56,7 +63,7 @@ def priorisiere(klassen: dict) -> list:
                 "rang": RANG[klasse], "klasse": klasse,
                 "schwere": NAMEN[RANG[klasse]],
                 "dokument": c.get("document_id", ""),
-                "outcome": c.get("outcome", ""),
+                "outcome": c.get("outcome", "-"),
                 "a": a, "b": b,
                 "vorschlag": vorschlag(klasse, c),
             })
@@ -68,8 +75,9 @@ def markdown(liste: list, quelle: str) -> str:
     text = [
         "# Priorisierte Kappa-Konflikte fuer die dritte Stimme (2026-11-10)",
         "",
-        f"Quelle: `{quelle}`. Reihenfolge: fehlende Zeile vor Effekttyp vor Wert",
-        "vor KI. Die Vorschlaege sind Pruefhinweise, keine Entscheidung.",
+        f"Quelle: `{quelle}`. Reihenfolge: Dokument ohne Zeile vor fehlender",
+        "Zeile vor Effekttyp vor Wert vor KI. Die Vorschlaege sind",
+        "Pruefhinweise, keine Entscheidung.",
         "",
     ]
     if not liste:
@@ -82,8 +90,9 @@ def markdown(liste: list, quelle: str) -> str:
         return "\n".join(text)
 
     text += [
-        f"**{len(liste)} Konflikte.** Zuerst die fehlenden Zeilen, dann Typ,",
-        "Wert und KI. Die Entscheidungsspalte fuellt die dritte Stimme.",
+        f"**{len(liste)} Konflikte.** Zuerst die Dokumentebene, dann fehlende",
+        "Zeilen, Typ, Wert und KI. Die Entscheidungsspalte fuellt die dritte",
+        "Stimme.",
         "",
         "| Rang | Klasse | Schwere | Dokument | Outcome | A | B | Vorschlag | Entscheidung |",
         "|---|---|---|---|---|---|---|---|---|",
@@ -103,19 +112,24 @@ def selbsttest() -> int:
         "typ": [{"document_id": "d1", "outcome": "o", "a": "hr", "b": "or"}],
         "nur_b": [{"document_id": "d1", "outcome": "o", "effect_type": "hr",
                    "effect": 1.0, "ki": "0.8 bis 1.2", "quote": "Risk 1.0"}],
+        "dokument": [{"document_id": "d1", "seite": "A", "effekte": 2,
+                      "begruendung": "keine relevanten Effekte"}],
     }
     liste = priorisiere(faelle)
     reihenfolge = [x["klasse"] for x in liste]
-    if reihenfolge != ["nur_b", "typ", "wert", "ki"]:
+    if reihenfolge != ["dokument", "nur_b", "typ", "wert", "ki"]:
         print(f"Selbsttest fehlgeschlagen: Reihenfolge {reihenfolge}")
         return 1
     if not all(x["vorschlag"] for x in liste):
         print("Selbsttest fehlgeschlagen: leerer Vorschlag")
         return 1
-    if "aufnehmen" not in liste[0]["vorschlag"]:
-        print(f"Selbsttest fehlgeschlagen: Vorschlag fehlende Zeile {liste[0]['vorschlag']}")
+    if liste[0]["a"] != "2 Zeilen" or liste[0]["b"] != "0 Zeilen":
+        print(f"Selbsttest fehlgeschlagen: Dokumentseiten {liste[0]['a']} / {liste[0]['b']}")
         return 1
-    print("Selbsttest: Reihenfolge und Vorschlaege ok (4 konstruierte Faelle)")
+    if "aufnehmen" not in liste[1]["vorschlag"]:
+        print(f"Selbsttest fehlgeschlagen: Vorschlag fehlende Zeile {liste[1]['vorschlag']}")
+        return 1
+    print("Selbsttest: Reihenfolge und Vorschlaege ok (5 konstruierte Faelle)")
     return 0
 
 

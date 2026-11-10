@@ -8,6 +8,9 @@ der Kappa-Lauf (`goldstandard_kappa.vergleiche`):
 - `typ`: gleicher Schluessel, unterschiedlicher `effect_type`.
 - `wert`: gleicher Typ, Effekt ausserhalb der Toleranz.
 - `ki`: gleicher Wert, KI ausserhalb der Toleranz.
+- `dokument`: ein Annotator hat fuer ein Dokument Zeilen, der andere keine.
+  Diese Dokumentebene steht getrennt vor den Zeilenkonflikten, weil sie die
+  Zeilen des anderen Annotators erklaert (oder eben nicht).
 
 Die Markdown-Datei hat eine leere Spalte "Entscheidung" fuer die dritte
 Stimme. Das JSON enthaelt die vollen Zeilen. Ohne Annotation ist der Bericht
@@ -30,9 +33,35 @@ sys.path.insert(0, str(ROOT))
 from research_agent.goldstandard_kappa import schluessel, vergleiche  # noqa: E402
 
 
-def lade(pfad: Path) -> dict:
+def lade_voll(pfad: Path) -> dict:
+    """{document_id: {"effects": [...], "no_effect_reason": "..."}}."""
     daten = json.loads(pfad.read_text(encoding="utf-8"))
-    return {d["document_id"]: d.get("effects") or [] for d in daten["documents"]}
+    return {d["document_id"]: {"effects": d.get("effects") or [],
+                               "no_effect_reason": (d.get("no_effect_reason") or "").strip()}
+            for d in daten["documents"]}
+
+
+def lade(pfad: Path) -> dict:
+    return {k: v["effects"] for k, v in lade_voll(pfad).items()}
+
+
+def dokument_konflikte(va: dict, vb: dict) -> list:
+    """Dokumente, in denen genau ein Annotator Zeilen hat."""
+    liste = []
+    for doc in sorted(set(va) | set(vb)):
+        ea = (va.get(doc) or {}).get("effects") or []
+        eb = (vb.get(doc) or {}).get("effects") or []
+        if bool(ea) == bool(eb):
+            continue
+        seite = "A" if ea else "B"
+        leer = vb if ea else va
+        liste.append({
+            "document_id": doc,
+            "seite": seite,
+            "effekte": len(ea) if ea else len(eb),
+            "begruendung": (leer.get(doc) or {}).get("no_effect_reason") or "",
+        })
+    return liste
 
 
 def index(docs: dict) -> dict:
@@ -67,7 +96,9 @@ def markdown(ergebnis: dict, index_a: dict, index_b: dict,
     def q(x):
         return "n/a" if x is None else f"{100 * x:.1f} %"
 
-    n_konflikte = (len(ergebnis["nur_a"]) + len(ergebnis["nur_b"])
+    dok_konflikte = ergebnis.get("dokument_konflikte") or []
+    n_konflikte = (len(dok_konflikte)
+                   + len(ergebnis["nur_a"]) + len(ergebnis["nur_b"])
                    + len(ergebnis["typ_abweichung"])
                    + len(ergebnis["wert_abweichung"])
                    + len(ergebnis["ki_abweichung"]))
@@ -83,9 +114,10 @@ def markdown(ergebnis: dict, index_a: dict, index_b: dict,
         f"- Kappa Dokumentebene: {k(ergebnis['kappa_dokument'])}",
         f"- Kappa Zeilenebene: {k(ergebnis['kappa_zeile'])}",
         f"- Konflikte: {n_konflikte}",
+        f"- davon Dokumentebene: {len(dok_konflikte)}",
         "",
     ]
-    if ergebnis["n_keys"] == 0:
+    if ergebnis["n_keys"] == 0 and not dok_konflikte:
         text += [
             "**Keine Konflikte, weil keine Annotation vorliegt.** Beide Dateien",
             "enthalten keine Effektzeilen. Die Liste fuellt sich, sobald A und B",
@@ -96,9 +128,14 @@ def markdown(ergebnis: dict, index_a: dict, index_b: dict,
         "Der Schluessel ist (Dokument, Outcome, Vergleich, Zeitpunkt). Zwei",
         "Zeilen mit demselben Schluessel, aber anderem Typ oder Wert sind ein",
         "Konflikt; zwei Zeilen mit verschiedenen Schluesseln sind `nur_a`/`nur_b`.",
+        "Hat ein Annotator fuer ein Dokument gar keine Zeile, steht das zuerst",
+        "in der Dokumentebene; die Zeilen des anderen sind dann `nur_a`/`nur_b`.",
         "",
         "## Entscheidungsregeln",
         "",
+        "- `dokument`: Volltext pruefen, ob das Dokument Effekte hat. Wenn ja,",
+        "  die Zeilen des anderen uebernehmen; wenn nein, die Begruendung",
+        "  uebernehmen und die Zeilen verwerfen.",
         "- `nur_a` / `nur_b`: Volltext pruefen. Belegt -> in den Konsens;",
         "  nicht belegt -> verwerfen und Grund notieren.",
         "- `typ`: Anleitung 5.2-5.5. `other` nur, wenn keine Kategorie passt.",
@@ -119,6 +156,16 @@ def markdown(ergebnis: dict, index_a: dict, index_b: dict,
         text.append("|" + "---|" * len(kopf))
         text.extend(zeilen)
         text.append("")
+
+    dok_zeilen = []
+    for x in dok_konflikte:
+        dok_zeilen.append(
+            f"| {x['document_id'][:10]} | "
+            f"{x['effekte'] if x['seite'] == 'A' else 0} | "
+            f"{x['effekte'] if x['seite'] == 'B' else 0} | "
+            f"{_kurz(x['begruendung'], 100) or '-'} |  |")
+    tabelle("Dokumentebene (ein Annotator ohne Zeile)", dok_zeilen,
+            ["Dokument", "Zeilen A", "Zeilen B", "Begruendung der leeren Seite", "Entscheidung"])
 
     def nur(key, effekt):
         w = _werte(effekt)
@@ -165,6 +212,37 @@ def markdown(ergebnis: dict, index_a: dict, index_b: dict,
     return "\n".join(text)
 
 
+def selbsttest() -> int:
+    va = {
+        "d1": {"effects": [{"effect_type": "hr", "effect": 1.0}], "no_effect_reason": ""},
+        "d2": {"effects": [], "no_effect_reason": "keine relevanten Effekte"},
+        "d3": {"effects": [], "no_effect_reason": ""},
+        "d4": {"effects": [{"effect_type": "or", "effect": 0.5}], "no_effect_reason": ""},
+    }
+    vb = {
+        "d1": {"effects": [], "no_effect_reason": "keine relevanten Effekte"},
+        "d2": {"effects": [{"effect_type": "or", "effect": 0.5}], "no_effect_reason": ""},
+        "d3": {"effects": [], "no_effect_reason": ""},
+        "d4": {"effects": [{"effect_type": "or", "effect": 0.6}], "no_effect_reason": ""},
+    }
+    liste = dokument_konflikte(va, vb)
+    if len(liste) != 2:
+        print(f"Selbsttest fehlgeschlagen: {len(liste)} Dokumentkonflikte statt 2")
+        return 1
+    d1, d2 = liste
+    if (d1["document_id"], d1["seite"], d1["effekte"]) != ("d1", "A", 1):
+        print(f"Selbsttest fehlgeschlagen: d1 {d1}")
+        return 1
+    if (d2["document_id"], d2["seite"], d2["effekte"]) != ("d2", "B", 1):
+        print(f"Selbsttest fehlgeschlagen: d2 {d2}")
+        return 1
+    if not d1["begruendung"] or not d2["begruendung"]:
+        print("Selbsttest fehlgeschlagen: Begruendung fehlt")
+        return 1
+    print("Selbsttest Dokumentebene: 2 Faelle, d3/d4 korrekt ausgelassen")
+    return 0
+
+
 def main(argv: list) -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--a", default="data/golden_effects/goldstandard_A.json")
@@ -174,24 +252,32 @@ def main(argv: list) -> int:
     parser.add_argument("--toleranz", type=float, default=0.01)
     parser.add_argument("--md", default="docs/internal/kappa_konflikte_20261110.md")
     parser.add_argument("--out", default="data/golden_effects/kappa_konflikte.json")
+    parser.add_argument("--selbsttest", action="store_true")
     args = parser.parse_args(argv)
+
+    if args.selbsttest:
+        return selbsttest()
 
     pa, pb = ROOT / args.a, ROOT / args.b
     for pfad in (pa, pb):
         if not pfad.exists():
             print(f"Datei fehlt: {pfad}")
             return 1
-    da, db = lade(pa), lade(pb)
+    va, vb = lade_voll(pa), lade_voll(pb)
     if args.probelauf:
         ids = {d["document_id"] for d in
                json.loads(pa.read_text(encoding="utf-8"))["documents"]
                if d.get("probelauf")}
-        da = {k: v for k, v in da.items() if k in ids}
-        db = {k: v for k, v in db.items() if k in ids}
+        va = {k: v for k, v in va.items() if k in ids}
+        vb = {k: v for k, v in vb.items() if k in ids}
+    da = {k: v["effects"] for k, v in va.items()}
+    db = {k: v["effects"] for k, v in vb.items()}
 
     ergebnis = vergleiche(da, db, toleranz=args.toleranz)
+    ergebnis["dokument_konflikte"] = dokument_konflikte(va, vb)
     ia, ib = index(da), index(db)
     ergebnis["konflikte"] = {
+        "dokument": ergebnis["dokument_konflikte"],
         "nur_a": [{**_key_teile(k), **_werte(ia[k])} for k in ergebnis["nur_a"]],
         "nur_b": [{**_key_teile(k), **_werte(ib[k])} for k in ergebnis["nur_b"]],
         "typ": [{**_key_teile(x["key"]), "a": x["a"], "b": x["b"]}

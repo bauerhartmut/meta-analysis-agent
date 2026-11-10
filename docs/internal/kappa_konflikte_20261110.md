@@ -8,6 +8,7 @@ Grundlage: nur die drei Probelauf-Dokumente, Toleranz 1 %. Schwelle Zeilen-Kappa
 - Kappa Dokumentebene: n/a
 - Kappa Zeilenebene: n/a
 - Konflikte: 0
+- davon Dokumentebene: 0
 
 **Keine Konflikte, weil keine Annotation vorliegt.** Beide Dateien
 enthalten keine Effektzeilen. Die Liste fuellt sich, sobald A und B
@@ -16,9 +17,14 @@ abgegeben haben; sie ist kein Beleg fuer Uebereinstimmung.
 Der Schluessel ist (Dokument, Outcome, Vergleich, Zeitpunkt). Zwei
 Zeilen mit demselben Schluessel, aber anderem Typ oder Wert sind ein
 Konflikt; zwei Zeilen mit verschiedenen Schluesseln sind `nur_a`/`nur_b`.
+Hat ein Annotator fuer ein Dokument gar keine Zeile, steht das zuerst
+in der Dokumentebene; die Zeilen des anderen sind dann `nur_a`/`nur_b`.
 
 ## Entscheidungsregeln
 
+- `dokument`: Volltext pruefen, ob das Dokument Effekte hat. Wenn ja,
+  die Zeilen des anderen uebernehmen; wenn nein, die Begruendung
+  uebernehmen und die Zeilen verwerfen.
 - `nur_a` / `nur_b`: Volltext pruefen. Belegt -> in den Konsens;
   nicht belegt -> verwerfen und Grund notieren.
 - `typ`: Anleitung 5.2-5.5. `other` nur, wenn keine Kategorie passt.
@@ -27,6 +33,10 @@ Konflikt; zwei Zeilen mit verschiedenen Schluesseln sind `nur_a`/`nur_b`.
 - `ki`: berichtetes KI uebernehmen, nicht umrechnen.
 - Dokument ohne Zeile bei einem Annotator: pruefen, ob die Zeilen des
   anderen belegt sind; wenn nicht, der Begruendung folgen.
+
+## Dokumentebene (ein Annotator ohne Zeile)
+
+Keine.
 
 ## Nur A (in B nicht vorhanden)
 

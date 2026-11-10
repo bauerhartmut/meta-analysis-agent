@@ -10,7 +10,9 @@
  "typ_abweichung": [],
  "wert_abweichung": [],
  "ki_abweichung": [],
+ "dokument_konflikte": [],
  "konflikte": {
+  "dokument": [],
   "nur_a": [],
   "nur_b": [],
   "typ": [],
