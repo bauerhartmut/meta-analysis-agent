@@ -8,16 +8,15 @@
     }
   ],
   "ohne_zwilling_gesamt": 45,
-  "davon_poolbar": 20,
+  "davon_poolbar": 16,
   "davon_im_pool": 4,
   "verteilung": {
-    "anderes_outcome_unpoolbar": 15,
-    "anderes_outcome": 15,
-    "nur_pass_b_unpoolbar": 6,
-    "andere_aussage": 4,
-    "andere_aussage_unpoolbar": 3,
-    "gleiche_stelle_unpoolbar": 1,
-    "nur_pass_b": 1
+    "anderes_outcome_unpoolbar": 17,
+    "anderes_outcome": 13,
+    "nur_pass_b_unpoolbar": 7,
+    "andere_aussage_unpoolbar": 4,
+    "andere_aussage": 3,
+    "gleiche_stelle_unpoolbar": 1
   },
   "eintraege": [
     {
@@ -256,11 +255,11 @@
       "pass_1_vergleiche": [
         "exercise vs control"
       ],
-      "klasse": "andere_aussage",
+      "klasse": "andere_aussage_unpoolbar",
       "datei": "data/research-exercise-and-depressive-symptoms-in-adul-bbb324.db",
       "id": "0d6b1b995a0c",
       "pass": 2,
-      "poolbar": true,
+      "poolbar": false,
       "im_pool": false
     },
     {
@@ -546,11 +545,11 @@
       "disputed": 0,
       "erstlesungen_der_quelle": 0,
       "outcomes_pass_1": [],
-      "klasse": "nur_pass_b",
+      "klasse": "nur_pass_b_unpoolbar",
       "datei": "data/research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
       "id": "e8ba18ca3525",
       "pass": 2,
-      "poolbar": true,
+      "poolbar": false,
       "im_pool": false
     },
     {
@@ -717,11 +716,11 @@
       "outcomes_pass_1": [
         ""
       ],
-      "klasse": "anderes_outcome",
+      "klasse": "anderes_outcome_unpoolbar",
       "datei": "data/research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
       "id": "7da2267625c0",
       "pass": 2,
-      "poolbar": true,
+      "poolbar": false,
       "im_pool": false
     },
     {
@@ -734,11 +733,11 @@
       "outcomes_pass_1": [
         "Agreement between 12-MEDAS and 24HR"
       ],
-      "klasse": "anderes_outcome",
+      "klasse": "anderes_outcome_unpoolbar",
       "datei": "data/research-mediterrane-ernaehrung-und-kardiovaskula-475855.db",
       "id": "f7665f077eb0",
       "pass": 2,
-      "poolbar": true,
+      "poolbar": false,
       "im_pool": false
     },
     {

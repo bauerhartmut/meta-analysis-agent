@@ -180,8 +180,10 @@ def main() -> int:
                 "datei": path.relative_to(ROOT).as_posix(),
                 "id": row.get("id"),
                 "pass": pass_nummer(row),
-                "poolbar": (zahl("effect", row) is not None
-                            and zahl("se", row) is not None),
+                # Poolbar heisst: standardize akzeptiert die Zeile. Eine
+                # vorhandene Zahl genuegt nicht - Review-Aggregate und
+                # fehlende Belege fallen dort heraus.
+                "poolbar": standardize(row)[3] == "",
                 "im_pool": (str(row.get("source_id") or ""),
                             zahl("effect", row), zahl("se", row)) in im_pool,
             })
