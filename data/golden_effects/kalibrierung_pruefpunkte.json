@@ -26,8 +26,8 @@
    "schicht": "cohort",
    "design": "observational",
    "pruefpunkt": "5.4 + 5.11",
-   "befund": "Tabelle 2/3: beta mit SE; 5 belastbare Zeilen (4 OLS + FE kategorial -0.210, SE 0.103); FE kontinuierlich -0.024 (SE 0.110) mit Stern p<0.05 inkonsistent (beta/SE -0.22); cross-lagged p-only",
-   "konsequenz": "5 Zeilen annotierbar; FE kontinuierlich vor Annotation klaeren; cross-lagged keine Zeile"
+   "befund": "Tabelle 2/3: beta mit SE; 5 belastbare Zeilen; FE kontinuierlich -0.024 (SE 0.110) ist mit Stern p<0.05 inkonsistent (beta/SE -0.22); Table S4 IPW -0.023 (SE 0.011, p 0.039); cross-lagged p-only",
+   "konsequenz": "5 Zeilen annotierbar; FE kontinuierlich keine Primaerzeile; IPW in notes; cross-lagged keine Zeile"
   },
   {
    "document_id": "2c7ab4d1244754e3966780f4bccbfa8c",

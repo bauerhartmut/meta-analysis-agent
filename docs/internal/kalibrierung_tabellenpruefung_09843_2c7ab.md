@@ -23,10 +23,15 @@ cluster-robuste Standardfehler.
 FE-Modell mit der kategorialen Exposition. Die SE stehen in Klammern;
 KI werden nicht berichtet, der Code kann sie aus den SE berechnen.
 
-**Widerspruch bei FE 2:** beta = -0.024, SE = 0.110, Stern p < 0.05.
-beta/SE = -0.22; ein p < 0.05 ist damit nicht vereinbar (p wäre ca. 0.83).
-Entweder ist die SE ein Tippfehler (0.010 wie in Tabelle 2) oder der Stern
-ist falsch. Vor der Annotation klären; ohne Klärung keine Zeile.
+**Widerspruch bei FE 2 (geklärt am 2026-11-10):** beta = -0.024,
+SE = 0.110, Stern p < 0.05. beta/SE = -0.22; p wäre ca. 0.83.
+Das Artikel-PDF (Tabelle 3) und die HTML-Tabellenseite bestätigen
+`-0.024*(0.110)`; Tabelle 2 definiert `*p<0.05`. Supplement-Tabelle S4
+(IPW) berichtet `-0.023*`, SE 0.011, p = 0.039; die OLS-SE ist 0.010.
+Die 0.110 ist daher mit hoher Wahrscheinlichkeit ein Tippfehler (0.010),
+aber die exakte FE-SE aus Figur S12 ist nicht verifiziert (Bild; kein
+PDF-Renderer/Pillow). Die FE-Zeile bleibt ohne Primärzeile; die IPW-
+Schätzung ist eine Sensitivitätsanalyse (5.9, `notes`).
 
 **Cross-lagged (Fig. 1):** beta = -0.073 (T1 → T2), -0.068 und -0.082,
 jeweils p < 0.001, aber keine SE/CI im Text. Fig. 1 ist eine Abbildung;
@@ -89,8 +94,9 @@ keine multivariate Zeile; die univariate OR mit KI bleibt.
 
 ## Konsequenz
 
-- `09843`: 5 belastbare Zeilen; FE 2 vor Annotation klären; cross-lagged
-  p-only, keine Zeile.
+- `09843`: 5 belastbare Zeilen; FE 2 nicht als Primärzeile (SE 0.110
+  unvereinbar, Tippfehler 0.010 wahrscheinlich); IPW Table S4 in `notes`;
+  cross-lagged p-only, keine Zeile.
 - `2c7ab`: 21 belastbare Zeilen (16 univariat + 5 aOR), nicht nur 5.
 - Der Prüfpunkt `2c7ab` in `kalibrierung_pruefpunkte_20261110.md` ist
   entsprechend präzisiert: 5.2, nicht 5.2 + 5.7.

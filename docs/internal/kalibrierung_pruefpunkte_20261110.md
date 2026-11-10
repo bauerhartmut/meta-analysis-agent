@@ -9,7 +9,7 @@ Prüfhinweise, keine Vorgaben. Anker sind kurze Volltextzitate.
 | Dokument | Schicht / Design | Prüfpunkt | Anker | Frage |
 |---|---|---|---|---|
 | `fb484` | rct / **aggregate** (vorher `parallel_rct`) | 5.1 + 5.8 | Abstract: „systematic review … meta-analytical procedures“; „g = -0.37, 95% confidence interval (-0.56; -0.17)“ | Metaanalyse, kein RCT (15 RCTs, 12 in der Metaanalyse); gepoolter SMD eine Zeile, `is_primary: false`. |
-| `09843` | cohort / observational | 5.4 + 5.11 | Tabelle 2: `−0.536***(0.101)`, `−0.056***(0.010)`; Tabelle 3: `−0.210*(0.103)`, `−0.024*(0.110)`; Abstract: T1→T2 `β=−0.073` | Tabelle 2/3: SE bestätigt; 5 belastbare Zeilen (4 OLS + FE kategorial). FE kontinuierlich `−0.024 (0.110)` mit Stern p<0.05 ist inkonsistent (β/SE ≈ −0.22); vor Annotation klären. Cross-lagged p-only → keine Zeile. |
+| `09843` | cohort / observational | 5.4 + 5.11 | Tabelle 3: `−0.210*(0.103)`, `−0.024*(0.110)`; Table S4 (IPW): `−0.023*`, SE 0.011, p 0.039; Abstract: T1→T2 `β=−0.073` | 5 belastbare Zeilen (4 OLS + FE kategorial). FE kontinuierlich `−0.024 (0.110)` ist mit Stern p<0.05 unvereinbar (β/SE ≈ −0.22); SE 0.110 ist Tippfehler, exakte FE-SE nicht bestätigt. Keine Primärzeile; IPW in `notes`; cross-lagged p-only. |
 | `2c7ab` | cross_sectional / observational | 5.2 | Tabelle 3: alle 16 univariaten ORs mit 95 % KI (z. B. `OR 3.1, 1.9-5.2`), 5 multivariate aORs (z. B. `aOR 2.01, 1.1-3.7`) | Tabelle als Primärquelle: univariate ORs mit KI sind Zeilen, nicht nur die aORs. Richtung beachten: Narrativ nennt bei Alter 60-74, Tabelle ≥75; `considered` 0.12 ist reziprok zu `lack of consideration` 8.25, `spent time` 0.11 zu `lack of time` 8.76. |
 | `334f` | aggregate / aggregate | 5.8 + 5.9 + 5.4 | Abstract: 47 Studien, 2895 Teilnehmer; `Beta: 0.36 (0.05; 0.68)`, `Beta: -0.51 (-0.80; -0.22)`; `SMD: -0.97 (-1.30 to -0.63)` bei 800 METs | Netzwerkschätzer als Zeilen; Dosis-Kurve/Peak in `notes`; Meta-Regressions-Betas mit CrI als 5.4-Zeilen. |
 | `2675` | cross_sectional / observational | 5.5 | Statistik: „Spearman’s rank correlation“, Kappa, Cronbach alpha | Nur Korrelationen mit KI sind Zeilen; Kappa/Alpha sind keine Schema-Effekttypen; sonst `no_effect_reason`. |
@@ -38,4 +38,5 @@ Prüfhinweise, keine Vorgaben. Anker sind kurze Volltextzitate.
   Regelanwendungen, keine Änderungen.
 - Die Tabellenprüfung 09843/2c7ab hat die 2c7ab-Regel präzisiert:
   univariate ORs mit KI sind Zeilen; 09843 hat fünf belastbare Zeilen.
+- Die Klärung 09843 steht in `goldstandard_klaerung_09843.md`.
 - A und B bleiben leer; es wird keine Effektzeile erfunden.

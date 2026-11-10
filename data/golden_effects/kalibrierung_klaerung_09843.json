@@ -1,0 +1,31 @@
+{
+ "datum": "2026-11-10",
+ "document_id": "09843d40d3cc2c9ca039d6d1b45ac656",
+ "quellen": {
+  "artikel_pdf": "https://www.nature.com/articles/s41598-025-00947-x.pdf",
+  "tabelle3_html": "https://www.nature.com/articles/s41598-025-00947-x/tables/3",
+  "supplement_zip": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41598-025-00947-x/MediaObjects/41598_2025_947_MOESM1_ESM.zip"
+ },
+ "veroeffentlicht": {
+  "beta": -0.024,
+  "se": 0.110,
+  "stern": "*",
+  "p_text": "<0.05"
+ },
+ "rechnung": {
+  "beta_se": -0.2181818182,
+  "p_approx": 0.827
+ },
+ "supplement_table_s4": {
+  "modell": "IPW",
+  "beta": -0.023,
+  "se": 0.011,
+  "t": -2.07,
+  "p": 0.039,
+  "ci": [-0.044, -0.001],
+  "n": 5757
+ },
+ "ols_kontinuierlich_adjustiert_se": 0.010,
+ "befund": "Die veroeffentlichte FE-SE 0.110 ist mit Stern und Text p<0.05 unvereinbar (beta/SE -0.218, p ca. 0.83). OLS-SE 0.010 und IPW-SE 0.011 stuetzen einen Tippfehler 0.010; die exakte FE-SE aus Figure S12 ist nicht verifiziert (Bild, kein PDF-Renderer/Pillow).",
+ "entscheidung": "5 belastbare Zeilen (4 OLS + FE kategorial); FE kontinuierlich keine Primaerzeile; IPW Table S4 in notes; cross-lagged p-only keine Zeile."
+}
