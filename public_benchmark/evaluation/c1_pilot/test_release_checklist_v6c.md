@@ -25,7 +25,7 @@ verbindliche Gate-Liste; sie ersetzt keine ausdrückliche Freigabe.
 | Dev 26 | 26 Records, 6 Artikel; SHA-256 `e1b75d63059727047edf9387fc429be4622b44759248b2f74921760c1504c0d5` |
 | Test 249 | 249 Records, 64 Artikel; SHA-256 `7eb1bc43b2ca044dea739c36f1a6c7f86fa577d4e25174d01ef8ebac8ce00da2` |
 | Test-Policy | `locked=true`, `used_for_prompt_optimization=false` |
-| Testsplit gelesen | nein; `test_split_used=false` in allen v6-Läufen |
+| Testsplit gelesen | für die Projektion ja, für keinen Modelllauf; `test_split_used=false` in allen v6-Läufen |
 
 ## 2. Umsetzung und harte Blocker
 
@@ -34,28 +34,35 @@ Umgesetzt und geprüft:
 - [x] **B1: Test-Runner vorhanden.** `run_c1_test_pilot.py` startet nur mit
   `--approve-test`, verwendet ausschließlich `test_input.jsonl` und importiert
   keine Testreferenz.
-- [x] **B2: Input und Referenz getrennt.** `c1_test_projection.py` erzeugt
-  `test_input.jsonl` ohne Referenzfelder und eine separate
-  `test_reference.jsonl`; die konkrete 249er-Projektion bleibt bis zur
-  Freigabe unerzeugt.
+- [x] **B2: Input und Referenz getrennt und erzeugt.** Die 249er-Projektion
+  liegt lokal unter `test_locked/`: `test_input.jsonl` ohne Referenzfelder
+  (SHA-256 `b8a2f3d17c2ee4a41473811ccb72632175f1d786b05b9e16e2d8c18d64204368`)
+  und separate `test_reference.jsonl`
+  (SHA-256 `84b5c925340af82eb72717b36b2e4c5a2fa04760d6a6d01e63b742d0689e0629`).
 - [x] **B3: Record-Overrides sind split-gebunden.** Die 190/226-Overrides
   greifen nur bei `split="dev"`; der Isolationstest prüft Test-Records mit
   denselben IDs und findet keine Dev-Werte im Testprompt.
 
+Abgeschlossen:
+
+- [x] **B5: Unabhängiger Check bestanden.**
+  `verify_c1_test_projection.py` prüft 26 Checks gegen den Freeze, darunter
+  Quellzeilen, Referenzwerte, IDs, Schema, Typen, Quellpfade und
+  Referenzfreiheit des Inputs. Bericht:
+  [`test_projection_verification.md`](test_projection_verification.md).
+- [x] Die Projektion ist über `.gitignore` lokal geschützt und nicht
+  versioniert.
+
 Noch offen:
 
-- [ ] **B4: Kein Release-Manifest und keine ausdrückliche Freigabe.** Der
-  Freeze-Manifest beschreibt den Datenstand, nicht den freigegebenen
+- [ ] **B4: Kein Release-Manifest und keine ausdrückliche Testlauf-Freigabe.**
+  Der Freeze-Manifest beschreibt den Datenstand, nicht den freigegebenen
   Testlauf; sein `pilot.status` ist noch `prepared_not_run`. Ein separates
   Release-Manifest muss Kandidat, Hashes, Test-Input-Hash, Metriken und
   Freigabezeitpunkt pinnen.
-- [ ] **B5: Kein unabhängiger Check der Testprojektion.** Die 249 ICOs und
-  Quellpfade müssen ohne Referenzfelder projiziert und von einer zweiten
-  Person oder einem separaten Skript gegen den Freeze geprüft werden.
-- [ ] Die konkrete `test_input.jsonl`/`test_reference.jsonl`-Projektion ist
-  noch nicht erzeugt; sie ist über `.gitignore` lokal geschützt.
 
-Der Testsplit wurde weiterhin nicht geöffnet.
+Der Testsplit wurde für die Projektion gelesen, aber nicht für
+Prompt-Optimierung oder einen Modelllauf verwendet.
 
 ## 3. Checkliste Kandidat
 
@@ -74,14 +81,14 @@ Der Testsplit wurde weiterhin nicht geöffnet.
 - [x] 275er-Freeze, 26 Dev- und 249 Test-Records sind im Manifest gepinnt.
 - [x] Test-Policy ist `locked=true`.
 - [x] Testsplit wurde nicht zur Prompt-Optimierung verwendet.
-- [ ] Test-Input projektieren: nur `record_id`, `study_id`, `pmcid`, `split`,
+- [x] Test-Input projektieren: nur `record_id`, `study_id`, `pmcid`, `split`,
   `outcome_type`, `ico`, `source_text_path`; keine Referenzwerte.
-- [ ] Test-Input-SHA-256 berechnen und im Release-Manifest pinnen.
-- [ ] Test-Referenz separat halten; während der Inferenz darf sie nicht
+- [x] Test-Input-SHA-256 berechnen und im Projektionsmanifest pinnen.
+- [x] Test-Referenz separat halten; während der Inferenz darf sie nicht
   geladen werden.
-- [ ] Prüfen, dass der Test-Input 249 eindeutige IDs und `split="test"` für
+- [x] Prüfen, dass der Test-Input 249 eindeutige IDs und `split="test"` für
   alle Records enthält.
-- [ ] Testdatei-Hash nur zur Integritätsprüfung verwenden, niemals Inhalte
+- [x] Testdatei-Hash nur zur Integritätsprüfung verwenden, niemals Inhalte
   zur Prompt-Anpassung anzeigen.
 
 ## 5. Checkliste Runner
@@ -154,7 +161,7 @@ Kandidaten.
 
 **Aktuell: NO-GO.**
 
-Der technische Testpfad ist gebaut und isoliert geprüft. Freigabefähig ist
-der Lauf erst, wenn die konkrete 249er-Projektion erzeugt, B4/B5 geschlossen
-und der Testlauf ausdrücklich freigegeben ist. Der Dev-Wert 140/140 ist eine
+Der technische Testpfad ist gebaut, die 249er-Projektion erzeugt und
+unabhängig geprüft. Freigabefähig ist der Lauf erst, wenn B4 geschlossen und
+der Testlauf ausdrücklich freigegeben ist. Der Dev-Wert 140/140 ist eine
 Kandidatenqualifikation, kein Testresultat.

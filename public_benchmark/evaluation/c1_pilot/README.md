@@ -3,7 +3,8 @@
 Stand: 2026-11-11
 
 Status: **Dev-Pilot gelaufen; 26/26 Records verarbeitet; Zeitpunktregel entschieden;
-Prompt v6 getestet: 140/140 exakt, 26/26 Records vollständig; Testsplit unangetastet.**
+Prompt v6 getestet: 140/140 exakt, 26/26 Records vollständig; Testprojektion
+erzeugt und unabhängig geprüft; Testlauf gesperrt.**
 Modell: `gwdg/qwen3.5-397b-a17b` über TUDaGPT, Temperatur 0. Der belastbare
 Vergleichspunkt ist `c1_dev_20261111` mit Prompt `c1-dev-extract-v1`.
 
@@ -198,9 +199,17 @@ verweigert den Start ohne `--approve-test`, und
 die Referenz erst nach dem Output-Freeze. Die Overrides 190/226 sind auf
 `split="dev"` begrenzt; der Isolationstest
 [`check_c1_test_isolation.py`](../../scripts/check_c1_test_isolation.py)
-besteht. Offen sind die konkrete 249er-Projektion, das Release-Manifest, die
-unabhängige Prüfung und die ausdrückliche Freigabe. Der Testsplit wurde nicht
-geöffnet.
+besteht.
+
+Die 249er-Projektion ist erzeugt und unabhängig geprüft:
+[`test_projection_verification.md`](test_projection_verification.md) meldet
+**PASSED** (249 Records, 64 Artikel, 1.308 Felder). Input-SHA-256
+`b8a2f3d17c2ee4a41473811ccb72632175f1d786b05b9e16e2d8c18d64204368`,
+Referenz-SHA-256
+`84b5c925340af82eb72717b36b2e4c5a2fa04760d6a6d01e63b742d0689e0629`.
+Offen sind das Release-Manifest und die ausdrückliche Testlauf-Freigabe. Der
+Testsplit wurde für die Projektion gelesen, aber nicht für Prompt-Optimierung
+oder einen Modelllauf verwendet; der Testlauf bleibt gesperrt.
 
 ## Eingefrorene Daten
 

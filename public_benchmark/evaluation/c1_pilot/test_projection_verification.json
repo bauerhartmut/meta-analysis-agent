@@ -1,0 +1,151 @@
+{
+  "verified_at": "2026-11-11T23:16:37",
+  "status": "passed",
+  "checks": [
+    {
+      "name": "freeze_sha256",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "projection_records",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "reference_records",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "source_records",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "projection_input_sha256",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "projection_reference_sha256",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "projection_frozen_sha256",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "input_ids_unique",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "reference_ids_unique",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "input_reference_same_ids",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "no_dev_test_id_overlap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "input_schema",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "reference_schema",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "input_split_test",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "reference_split_test",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "input_ico_schema",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "no_reference_fields_in_input",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "article_count",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "type_counts",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "expected_fields_1308",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "input_matches_freeze",
+      "passed": true,
+      "detail": "0 Abweichungen"
+    },
+    {
+      "name": "reference_matches_freeze",
+      "passed": true,
+      "detail": "0 Abweichungen"
+    },
+    {
+      "name": "source_paths_exist",
+      "passed": true,
+      "detail": "0 fehlend"
+    },
+    {
+      "name": "test_policy_locked",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "reference_not_loaded_by_runner",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "no_prompt_optimization",
+      "passed": true,
+      "detail": ""
+    }
+  ],
+  "counts": {
+    "records": 249,
+    "articles": 64,
+    "by_type": {
+      "continuous": 156,
+      "binary": 93
+    },
+    "expected_fields": 1308
+  },
+  "hashes": {
+    "freeze_sha256": "567d54b81ca07163979684e43ab333a740812909614b7215c2de5edd200bf13c",
+    "input_sha256": "b8a2f3d17c2ee4a41473811ccb72632175f1d786b05b9e16e2d8c18d64204368",
+    "reference_sha256": "84b5c925340af82eb72717b36b2e4c5a2fa04760d6a6d01e63b742d0689e0629"
+  },
+  "note": "Nur Zaehlungen und Hashes; keine Testwerte im Bericht."
+}

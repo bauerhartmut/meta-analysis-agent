@@ -141,7 +141,7 @@ def validate_test_reference(records: list[dict[str, Any]], *,
 def build_projection(frozen_path: Path, output_dir: Path) -> dict[str, Any]:
     from run_c1_dev_pilot import load_jsonl, sha256_file, write_jsonl_atomic
 
-    rows = load_jsonl(frozen_path)
+    rows = [row for row in load_jsonl(frozen_path) if row.get("split") == "test"]
     inputs, references = project_rows(rows)
 
     output_dir.mkdir(parents=True, exist_ok=True)
