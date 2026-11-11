@@ -3,9 +3,9 @@
 Stand: 2026-11-11
 
 Status: **Dev-Pilot gelaufen; 26/26 Records verarbeitet; Zeitpunktregel entschieden;
-Prompt v2 getestet, aber nicht wirksam; Testsplit unangetastet.**
+Prompt v3 getestet: 123/140 exakt, aber noch nicht testreif; Testsplit unangetastet.**
 Modell: `gwdg/qwen3.5-397b-a17b` über TUDaGPT, Temperatur 0. Der belastbare
-Baseline-Lauf ist `c1_dev_20261111` mit Prompt `c1-dev-extract-v1`.
+Vergleichspunkt ist `c1_dev_20261111` mit Prompt `c1-dev-extract-v1`.
 
 ## Ergebnis
 
@@ -72,6 +72,12 @@ Artefakte der Läufe:
   [`dev_evaluation.md`](runs/c1_dev_20261111_v2/dev_evaluation.md),
   [`run_manifest.json`](runs/c1_dev_20261111_v2/run_manifest.json),
   [`v2_result.md`](runs/c1_dev_20261111_v2/v2_result.md)
+- v3: [`runs/c1_dev_20261111_v3/dev_output.jsonl`](runs/c1_dev_20261111_v3/dev_output.jsonl),
+  [`dev_raw.jsonl`](runs/c1_dev_20261111_v3/dev_raw.jsonl),
+  [`dev_evaluation.json`](runs/c1_dev_20261111_v3/dev_evaluation.json),
+  [`dev_evaluation.md`](runs/c1_dev_20261111_v3/dev_evaluation.md),
+  [`run_manifest.json`](runs/c1_dev_20261111_v3/run_manifest.json),
+  [`v3_result.md`](runs/c1_dev_20261111_v3/v3_result.md)
 
 ## Prompt v2: Test ohne Verbesserung
 
@@ -80,15 +86,27 @@ Der zweite Lauf `c1_dev_20261111_v2` mit `c1-dev-extract-v2` liefert
 v1. Die MAE sinkt von 4,7066 auf 4,6404, weil Record 120 eine andere falsche
 Ergebniszeile wählt; das ist kein Qualitätsgewinn.
 
-Die Zeitpunktregel wird vom Modell nicht umgesetzt: Die 10 Records aus
-PMC5498715 verwenden weiterhin den 4-Monats-Follow-up, Record 190 bleibt
-`null`. v2 ist damit keine Grundlage für eine Testfreigabe. Details:
+Bei v2 blieb die Zeitpunktregel wirkungslos: Die 10 Records aus PMC5498715
+verwenden weiterhin den 4-Monats-Follow-up, Record 190 bleibt `null`. v2 ist
+damit keine Grundlage für eine Testfreigabe. Details:
 [`runs/c1_dev_20261111_v2/v2_result.md`](runs/c1_dev_20261111_v2/v2_result.md).
 
-Der Testsplit bleibt gesperrt. Vor einer Testfreigabe müssen der Umgang mit
-unterspezifizierten ICOs geklärt, die Tabellenextraktion für Record 190
-nachgebessert und ein v3-Prompt auf Dev validiert werden; die Zeitpunktregel
-ist entschieden.
+## Prompt v3: Deutliche Verbesserung, nicht testreif
+
+Der dritte Lauf `c1_dev_20261111_v3` mit `c1-dev-extract-v3` liefert
+**123/140 exakt (87,9 %)**, 11 falsche und 6 fehlende Felder bei 0
+Halluzinationen. Die MAE sinkt auf 0,234; 22/26 Records sind vollständig exakt.
+
+Die explizite Post-test-Priorisierung korrigiert **32 der 39 Zeitpunktfelder**.
+Offen bleiben 224 und 226 (beide weiterhin Follow-up, 226 zusätzlich ohne
+Gruppengrößen), Record 120 (falsche Ergebniszeile) und Record 190 (3 statt 12
+Monate, keine Counts). v3 ist der bisher beste Kandidat, aber keine
+Testgrundlage. Details:
+[`runs/c1_dev_20261111_v3/v3_result.md`](runs/c1_dev_20261111_v3/v3_result.md).
+
+Der Testsplit bleibt gesperrt. Vor einer Testfreigabe müssen Record 120, 224,
+226 und 190 geklärt und ein v4-Prompt auf Dev validiert werden; die
+Zeitpunktregel ist entschieden.
 
 ## Eingefrorene Daten
 

@@ -3,10 +3,12 @@
 Stand: 2026-11-11
 Status: **entschieden und verbindlich für künftige C1-Läufe**
 
-Umsetzungsstand: Der Prompt `c1-dev-extract-v2` wurde am 2026-11-11 auf den
-26 Dev-Records getestet. Das Modell hat die Regel nicht befolgt; die
-Trefferzahl blieb bei 93/140. v2 ist keine Testgrundlage. Ein v3-Prompt muss
-die Spaltenwahl expliziter machen und erneut auf Dev geprüft werden.
+Umsetzungsstand: `c1-dev-extract-v2` hat die Regel nicht umgesetzt (93/140).
+`c1-dev-extract-v3` priorisiert die Post-test-Spalte explizit und erreicht
+123/140 (87,9 %); 32 der 39 Zeitpunktfelder sind korrigiert. v3 ist noch nicht
+testreif: 224 und 226 bleiben Follow-up-Ausreißer, 190 wählt 3 statt 12
+Monate. Die Regel braucht für solche longitudinalen binären Outcomes eine
+explizite Record-Zeitpunktangabe.
 
 ## Regel
 
@@ -45,15 +47,20 @@ wie der nächste Lauf den Zeitpunkt behandeln muss.
   `c1-dev-extract-v1` bleibt als historischer Messpunkt unverändert.
 - `c1-dev-extract-v2` hat die Regel im Prompt codiert, aber im Dev-Test nicht
   umgesetzt; er ist nicht für eine Testfreigabe freigegeben.
+- `c1-dev-extract-v3` setzt die Spaltenpriorisierung weitgehend um, ist aber
+  wegen der vier offenen Records (120, 224, 226, 190) noch nicht testreif.
 - Sie ist eine Benchmark-Entscheidung, keine klinische Empfehlung. Für eine
   spätere gepoolte Analyse kann ein studienübergreifend einheitlicher
   klinischer Zeitpunkt sinnvoller sein; dann muss die Referenz neu eingefroren
   werden, nicht stillschweigend uminterpretiert.
 - Der Testsplit `yun_c1_test_249.jsonl` wurde für diese Entscheidung nicht
   geöffnet und bleibt gesperrt.
-- Record 120 bleibt ein separates ICO-Problem (DTPA-Subgruppe vs. Rezidiv);
-  Record 190 bleibt ein Tabellen-Extraktionsfehler. Beide werden durch die
-  Zeitpunktregel nicht gelöst.
+- Record 120 bleibt ein separates ICO-Problem (DTPA-Subgruppe vs. Rezidiv).
+- Record 190 zeigt eine Grenze der Fallback-Regel: Die Referenz nutzt den
+  12-Monats-Wert, die Regel würde den frühesten Follow-up (3 Monate) wählen.
+  Dieser Record braucht vor einer Testfreigabe einen expliziten Zeitpunkt.
+- Record 226 zeigt einen zusätzlichen Tabellenfehler: Der Post-Test ist
+  berichtet, wird aber als leer behandelt.
 
 ## Prüfung
 
