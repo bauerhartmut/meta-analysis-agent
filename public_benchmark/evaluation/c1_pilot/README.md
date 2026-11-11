@@ -235,6 +235,19 @@ Die Testreferenz wurde erst nach dem Output-Freeze geladen
 Testbeginn und keine Verwendung des Testergebnisses zur Prompt-Optimierung.
 Details: [`test_result.md`](runs_test/c1_test_20261111_v6c/test_result.md).
 
+## Fehleranalyse v6c
+
+Die deskriptive Fehleranalyse des eingefrorenen Laufs zeigt eine klare
+Record-Trennung: **22 kontinuierliche und 10 binäre Records haben nur
+fehlende Werte**, **55 bzw. 14 nur falsche Werte**; kein Record hat beides.
+**148/249 Records sind vollständig exakt**. Continuous ist mit 678/936
+(72,4 %) schwächer als binary mit 314/372 (84,4 %). Die häufigsten Blöcke
+sind fehlende Mean/SD-Arme bzw. falsche Mean/SD-Blöcke bei exakten n-Feldern.
+Es gibt 0 Halluzinationen und 0 Schema-/Parsefehler; die Null-Disziplin liegt
+bei 684/684. Details:
+[`test_error_analysis.md`](runs_test/c1_test_20261111_v6c/test_error_analysis.md).
+Keine Prompt-Änderung, kein neuer Modelllauf.
+
 ## Eingefrorene Daten
 
 Der Pilot verwendet ausschließlich die 26 nutzbaren Dev-Records aus 6

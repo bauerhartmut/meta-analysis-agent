@@ -51,6 +51,9 @@ Abgeschlossen:
 - [x] **Testlauf durchgeführt.** 249/249 Records, 992/1308 exakt, 0
   Parse-/Schemafehler, 0 Halluzinationen. Ergebnis:
   [`runs_test/c1_test_20261111_v6c/test_result.md`](runs_test/c1_test_20261111_v6c/test_result.md).
+- [x] **Deskriptive Fehleranalyse.** Fehlende und falsche Werte sind
+  Record-getrennt; 148/249 vollständig exakt. Bericht:
+  [`runs_test/c1_test_20261111_v6c/test_error_analysis.md`](runs_test/c1_test_20261111_v6c/test_error_analysis.md).
 - [x] **B5: Unabhängiger Check bestanden.**
   `verify_c1_test_projection.py` prüft 26 Checks gegen den Freeze, darunter
   Quellzeilen, Referenzwerte, IDs, Schema, Typen, Quellpfade und

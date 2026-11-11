@@ -1,0 +1,563 @@
+{
+  "analysis_version": 1,
+  "created_at": "2026-11-11T23:40:35",
+  "run_id": "c1_test_20261111_v6c",
+  "scope": "descriptive_only",
+  "new_model_run": false,
+  "post_test_prompt_changes": false,
+  "test_split_used_for_optimization": false,
+  "source_test_evaluation_sha256": "ab1e8cdf2a654d2887ad0b65a66ecbcc2583fdd1757db4c47d286c19e8704d27",
+  "overall": {
+    "records": 249,
+    "expected_fields": 1308,
+    "exact_fields": 992,
+    "missing_fields": 140,
+    "wrong_fields": 176,
+    "hallucinated_fields": 0,
+    "exact_rate": 0.7584,
+    "coverage": 0.893,
+    "mae_paired_all": 1.5305,
+    "all_exact_records": 148,
+    "missing_only_records": 32,
+    "wrong_only_records": 69,
+    "both_missing_and_wrong_records": 0,
+    "zero_exact_records": 18
+  },
+  "by_type": {
+    "continuous": {
+      "records": 156,
+      "expected_fields": 936,
+      "exact_fields": 678,
+      "missing_fields": 106,
+      "wrong_fields": 152,
+      "all_exact_records": 79,
+      "missing_only_records": 22,
+      "wrong_only_records": 55,
+      "both_missing_and_wrong_records": 0,
+      "zero_exact_records": 11,
+      "missing_field_count_distribution": {
+        "2": 1,
+        "4": 11,
+        "6": 10
+      },
+      "wrong_field_count_distribution": {
+        "1": 13,
+        "2": 13,
+        "3": 5,
+        "4": 23,
+        "6": 1
+      },
+      "exact_field_count_distribution": {
+        "0": 11,
+        "2": 34,
+        "3": 5,
+        "4": 14,
+        "5": 13,
+        "6": 79
+      },
+      "missing_patterns": [
+        {
+          "fields": [
+            "comparator_mean",
+            "comparator_sd",
+            "intervention_mean",
+            "intervention_sd"
+          ],
+          "field_count": 4,
+          "records": 11,
+          "share_of_type": 0.0705
+        },
+        {
+          "fields": [
+            "comparator_mean",
+            "comparator_n",
+            "comparator_sd",
+            "intervention_mean",
+            "intervention_n",
+            "intervention_sd"
+          ],
+          "field_count": 6,
+          "records": 10,
+          "share_of_type": 0.0641
+        },
+        {
+          "fields": [
+            "comparator_n",
+            "intervention_n"
+          ],
+          "field_count": 2,
+          "records": 1,
+          "share_of_type": 0.0064
+        }
+      ],
+      "wrong_patterns": [
+        {
+          "fields": [
+            "comparator_mean",
+            "comparator_sd",
+            "intervention_mean",
+            "intervention_sd"
+          ],
+          "field_count": 4,
+          "records": 23,
+          "share_of_type": 0.1474
+        },
+        {
+          "fields": [
+            "comparator_n"
+          ],
+          "field_count": 1,
+          "records": 10,
+          "share_of_type": 0.0641
+        },
+        {
+          "fields": [
+            "comparator_n",
+            "intervention_n"
+          ],
+          "field_count": 2,
+          "records": 10,
+          "share_of_type": 0.0641
+        },
+        {
+          "fields": [
+            "comparator_mean",
+            "comparator_n",
+            "comparator_sd"
+          ],
+          "field_count": 3,
+          "records": 4,
+          "share_of_type": 0.0256
+        },
+        {
+          "fields": [
+            "intervention_sd"
+          ],
+          "field_count": 1,
+          "records": 2,
+          "share_of_type": 0.0128
+        },
+        {
+          "fields": [
+            "comparator_mean",
+            "comparator_sd",
+            "intervention_sd"
+          ],
+          "field_count": 3,
+          "records": 1,
+          "share_of_type": 0.0064
+        },
+        {
+          "fields": [
+            "comparator_mean",
+            "comparator_sd"
+          ],
+          "field_count": 2,
+          "records": 1,
+          "share_of_type": 0.0064
+        },
+        {
+          "fields": [
+            "comparator_mean",
+            "comparator_n",
+            "comparator_sd",
+            "intervention_mean",
+            "intervention_n",
+            "intervention_sd"
+          ],
+          "field_count": 6,
+          "records": 1,
+          "share_of_type": 0.0064
+        },
+        {
+          "fields": [
+            "comparator_sd",
+            "intervention_sd"
+          ],
+          "field_count": 2,
+          "records": 1,
+          "share_of_type": 0.0064
+        },
+        {
+          "fields": [
+            "intervention_mean",
+            "intervention_sd"
+          ],
+          "field_count": 2,
+          "records": 1,
+          "share_of_type": 0.0064
+        },
+        {
+          "fields": [
+            "intervention_n"
+          ],
+          "field_count": 1,
+          "records": 1,
+          "share_of_type": 0.0064
+        }
+      ]
+    },
+    "binary": {
+      "records": 93,
+      "expected_fields": 372,
+      "exact_fields": 314,
+      "missing_fields": 34,
+      "wrong_fields": 24,
+      "all_exact_records": 69,
+      "missing_only_records": 10,
+      "wrong_only_records": 14,
+      "both_missing_and_wrong_records": 0,
+      "zero_exact_records": 7,
+      "missing_field_count_distribution": {
+        "2": 3,
+        "4": 7
+      },
+      "wrong_field_count_distribution": {
+        "1": 4,
+        "2": 10
+      },
+      "exact_field_count_distribution": {
+        "0": 7,
+        "2": 13,
+        "3": 4,
+        "4": 69
+      },
+      "missing_patterns": [
+        {
+          "fields": [
+            "comparator_events",
+            "comparator_n",
+            "intervention_events",
+            "intervention_n"
+          ],
+          "field_count": 4,
+          "records": 7,
+          "share_of_type": 0.0753
+        },
+        {
+          "fields": [
+            "comparator_n",
+            "intervention_n"
+          ],
+          "field_count": 2,
+          "records": 2,
+          "share_of_type": 0.0215
+        },
+        {
+          "fields": [
+            "comparator_events",
+            "intervention_events"
+          ],
+          "field_count": 2,
+          "records": 1,
+          "share_of_type": 0.0108
+        }
+      ],
+      "wrong_patterns": [
+        {
+          "fields": [
+            "comparator_events",
+            "intervention_events"
+          ],
+          "field_count": 2,
+          "records": 7,
+          "share_of_type": 0.0753
+        },
+        {
+          "fields": [
+            "comparator_n",
+            "intervention_n"
+          ],
+          "field_count": 2,
+          "records": 3,
+          "share_of_type": 0.0323
+        },
+        {
+          "fields": [
+            "comparator_events"
+          ],
+          "field_count": 1,
+          "records": 2,
+          "share_of_type": 0.0215
+        },
+        {
+          "fields": [
+            "intervention_events"
+          ],
+          "field_count": 1,
+          "records": 2,
+          "share_of_type": 0.0215
+        }
+      ]
+    }
+  },
+  "field_errors": {
+    "continuous": {
+      "intervention_n": {
+        "expected": 156,
+        "exact": 133,
+        "present": 145,
+        "missing": 11,
+        "wrong": 12,
+        "exact_rate": 0.8526,
+        "coverage": 0.9295,
+        "mae": 1.5517
+      },
+      "comparator_n": {
+        "expected": 156,
+        "exact": 120,
+        "present": 145,
+        "missing": 11,
+        "wrong": 25,
+        "exact_rate": 0.7692,
+        "coverage": 0.9295,
+        "mae": 3.0138
+      },
+      "intervention_mean": {
+        "expected": 156,
+        "exact": 110,
+        "present": 135,
+        "missing": 21,
+        "wrong": 25,
+        "exact_rate": 0.7051,
+        "coverage": 0.8654,
+        "mae": 2.4114
+      },
+      "comparator_mean": {
+        "expected": 156,
+        "exact": 105,
+        "present": 135,
+        "missing": 21,
+        "wrong": 30,
+        "exact_rate": 0.6731,
+        "coverage": 0.8654,
+        "mae": 2.5808
+      },
+      "intervention_sd": {
+        "expected": 156,
+        "exact": 106,
+        "present": 135,
+        "missing": 21,
+        "wrong": 29,
+        "exact_rate": 0.6795,
+        "coverage": 0.8654,
+        "mae": 0.604
+      },
+      "comparator_sd": {
+        "expected": 156,
+        "exact": 104,
+        "present": 135,
+        "missing": 21,
+        "wrong": 31,
+        "exact_rate": 0.6667,
+        "coverage": 0.8654,
+        "mae": 0.3642
+      }
+    },
+    "binary": {
+      "intervention_n": {
+        "expected": 93,
+        "exact": 81,
+        "present": 84,
+        "missing": 9,
+        "wrong": 3,
+        "exact_rate": 0.871,
+        "coverage": 0.9032,
+        "mae": 0.25
+      },
+      "comparator_n": {
+        "expected": 93,
+        "exact": 81,
+        "present": 84,
+        "missing": 9,
+        "wrong": 3,
+        "exact_rate": 0.871,
+        "coverage": 0.9032,
+        "mae": 0.1667
+      },
+      "intervention_events": {
+        "expected": 93,
+        "exact": 76,
+        "present": 85,
+        "missing": 8,
+        "wrong": 9,
+        "exact_rate": 0.8172,
+        "coverage": 0.914,
+        "mae": 1.8
+      },
+      "comparator_events": {
+        "expected": 93,
+        "exact": 76,
+        "present": 85,
+        "missing": 8,
+        "wrong": 9,
+        "exact_rate": 0.8172,
+        "coverage": 0.914,
+        "mae": 1.5647
+      }
+    }
+  },
+  "error_magnitudes": {
+    "continuous": {
+      "intervention_n": {
+        "wrong": 12,
+        "over": 3,
+        "under": 9,
+        "median_abs_diff": 1.5,
+        "p90_abs_diff": 49.0,
+        "max_abs_diff": 128.0,
+        "mean_abs_diff": 18.75,
+        "definition": "absolute Differenz genau 1, 2 oder >= 3",
+        "near_1": 6,
+        "near_2": 1,
+        "near_3": 5
+      },
+      "comparator_n": {
+        "wrong": 25,
+        "over": 10,
+        "under": 15,
+        "median_abs_diff": 2.0,
+        "p90_abs_diff": 17.0,
+        "max_abs_diff": 308.0,
+        "mean_abs_diff": 17.48,
+        "definition": "absolute Differenz genau 1, 2 oder >= 3",
+        "near_1": 7,
+        "near_2": 11,
+        "near_3": 7
+      },
+      "intervention_mean": {
+        "wrong": 25,
+        "over": 13,
+        "under": 12,
+        "median_abs_diff": 3.4,
+        "p90_abs_diff": 68.23,
+        "max_abs_diff": 81.18,
+        "mean_abs_diff": 13.0216,
+        "definition": "absolute Differenz <= 0.5, <= 1 oder <= 2",
+        "near_1": 4,
+        "near_2": 6,
+        "near_3": 7
+      },
+      "comparator_mean": {
+        "wrong": 30,
+        "over": 14,
+        "under": 16,
+        "median_abs_diff": 2.85,
+        "p90_abs_diff": 29.5,
+        "max_abs_diff": 91.08,
+        "mean_abs_diff": 11.6136,
+        "definition": "absolute Differenz <= 0.5, <= 1 oder <= 2",
+        "near_1": 8,
+        "near_2": 11,
+        "near_3": 13
+      },
+      "intervention_sd": {
+        "wrong": 29,
+        "over": 15,
+        "under": 14,
+        "median_abs_diff": 0.9,
+        "p90_abs_diff": 8.8,
+        "max_abs_diff": 19.3,
+        "mean_abs_diff": 2.8117,
+        "definition": "absolute Differenz <= 0.5, <= 1 oder <= 2",
+        "near_1": 10,
+        "near_2": 16,
+        "near_3": 20
+      },
+      "comparator_sd": {
+        "wrong": 31,
+        "over": 16,
+        "under": 15,
+        "median_abs_diff": 0.59,
+        "p90_abs_diff": 4.95,
+        "max_abs_diff": 7.43,
+        "mean_abs_diff": 1.586,
+        "definition": "absolute Differenz <= 0.5, <= 1 oder <= 2",
+        "near_1": 14,
+        "near_2": 20,
+        "near_3": 23
+      }
+    },
+    "binary": {
+      "intervention_n": {
+        "wrong": 3,
+        "over": 1,
+        "under": 2,
+        "median_abs_diff": 5.0,
+        "p90_abs_diff": 15.0,
+        "max_abs_diff": 15.0,
+        "mean_abs_diff": 7.0,
+        "definition": "absolute Differenz genau 1, 2 oder >= 3",
+        "near_1": 1,
+        "near_2": 0,
+        "near_3": 2
+      },
+      "comparator_n": {
+        "wrong": 3,
+        "over": 1,
+        "under": 2,
+        "median_abs_diff": 4.0,
+        "p90_abs_diff": 9.0,
+        "max_abs_diff": 9.0,
+        "mean_abs_diff": 4.6667,
+        "definition": "absolute Differenz genau 1, 2 oder >= 3",
+        "near_1": 1,
+        "near_2": 0,
+        "near_3": 2
+      },
+      "intervention_events": {
+        "wrong": 9,
+        "over": 7,
+        "under": 2,
+        "median_abs_diff": 6.0,
+        "p90_abs_diff": 56.0,
+        "max_abs_diff": 56.0,
+        "mean_abs_diff": 17.0,
+        "definition": "absolute Differenz genau 1, 2 oder >= 3",
+        "near_1": 0,
+        "near_2": 0,
+        "near_3": 9
+      },
+      "comparator_events": {
+        "wrong": 9,
+        "over": 5,
+        "under": 4,
+        "median_abs_diff": 4.0,
+        "p90_abs_diff": 54.0,
+        "max_abs_diff": 54.0,
+        "mean_abs_diff": 14.7778,
+        "definition": "absolute Differenz genau 1, 2 oder >= 3",
+        "near_1": 1,
+        "near_2": 1,
+        "near_3": 7
+      }
+    }
+  },
+  "audit_status": {
+    "corrected_with_source": {
+      "records": 1,
+      "all_exact": 0,
+      "missing_only": 0,
+      "wrong_only": 1
+    },
+    "verified_exact": {
+      "records": 215,
+      "all_exact": 125,
+      "missing_only": 30,
+      "wrong_only": 60
+    },
+    "verified_table": {
+      "records": 33,
+      "all_exact": 23,
+      "missing_only": 2,
+      "wrong_only": 8
+    }
+  },
+  "null_discipline": {
+    "correct": 684,
+    "expected": 684,
+    "rate": 1.0
+  },
+  "schema_error_records": 0,
+  "note": "Keine Testwerte und keine Record-IDs im Bericht. Die Analyse beschreibt nur das eingefrorene Ergebnis; der Prompt bleibt unveraendert und der Testsplit wird nicht zur Optimierung genutzt."
+}
