@@ -55,5 +55,12 @@ der publizierten Metaanalyse mehr.
 ## Empfehlung
 
 Option 1: eine vollständig offene Metaanalyse mit kleinem k wählen und
-die sechs bis acht Primärstudien vorab per PMC prüfen. Der CBT-I-Fall
-bleibt als vorbereiteter, aber zugangsblockierter Pilot dokumentiert.
+die sechs bis acht Primärstudien vorab per PMC prüfen.Der CBT-I-Fall bleibt als vorbereiteter, aber zugangsblockierter Pilot dokumentiert.
+
+## Ersatzkandidat
+
+Geprüft ist die Metaanalyse zu digitaler CBT-I bei Jugendlichen
+(`PMC8949345`, DOI `10.3390/jpm12030481`, k = 4). Alle vier Primärtexte
+sind frei erreichbar, aber nur zwei über PMC; zwei liegen in
+Universitätsrepositorien. Details:
+`docs/internal/meta_nachbau_kandidat_dcbti_20261111.md`.
