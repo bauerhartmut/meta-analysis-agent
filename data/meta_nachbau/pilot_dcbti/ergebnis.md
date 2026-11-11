@@ -1,5 +1,9 @@
 # Nachbau: Digitale CBT-I bei jungen Menschen (2026-11-11)
 
+Eine ausführliche Einordnung der Ergebnisse und der Rolle der
+B-Zweitannotation steht in
+`docs/internal/meta_nachbau_dcbti_erklaerung_20261111.md`.
+
 ## Zielwert der Publikation
 
 Subjektive Schlafqualität post-treatment, vier RCTs:
