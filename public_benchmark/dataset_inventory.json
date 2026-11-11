@@ -1,0 +1,187 @@
+{
+  "generated_at": "2026-11-11",
+  "yun2024": {
+    "source": "Yun et al. 2024",
+    "records": 699,
+    "articles": 120,
+    "records_by_split": {
+      "DEV": 43,
+      "TEST": 656
+    },
+    "outcome_types": {
+      "binary": 182,
+      "continuous": 517
+    },
+    "outcome_types_by_split": {
+      "DEV_binary": 11,
+      "DEV_continuous": 32,
+      "TEST_binary": 171,
+      "TEST_continuous": 485
+    },
+    "records_per_article": {
+      "min": 1,
+      "max": 29
+    },
+    "strict_complete": {
+      "total": 410,
+      "by_type": {
+        "binary": 149,
+        "continuous": 261
+      },
+      "by_split": {
+        "DEV": 27,
+        "TEST": 383
+      }
+    },
+    "is_data_complete_flag_true": 412,
+    "flag_vs_strict_difference": 2,
+    "field_nonempty": {
+      "intervention_group_size": 643,
+      "intervention_mean": 316,
+      "intervention_standard_deviation": 276,
+      "comparator_group_size": 643,
+      "comparator_mean": 310,
+      "comparator_standard_deviation": 275,
+      "intervention_events": 152,
+      "comparator_events": 158,
+      "notes": 516
+    },
+    "outcomes_with_time_marker_text": 73,
+    "table_flags": {
+      "is_relevant_data_in_table_true": 471,
+      "is_data_in_figure_graphics_true": 98,
+      "is_table_in_graphic_format_true": 105
+    },
+    "available_fields": [
+      "pmcid (Study ID)",
+      "intervention",
+      "comparator",
+      "outcome",
+      "outcome_type",
+      "intervention_events",
+      "intervention_group_size",
+      "comparator_events",
+      "comparator_group_size",
+      "intervention_mean",
+      "intervention_standard_deviation",
+      "comparator_mean",
+      "comparator_standard_deviation",
+      "notes (informal annotator note)",
+      "figure/table flags",
+      "split"
+    ],
+    "absent_fields": [
+      "separate timepoint field",
+      "source quotation / evidence span",
+      "structured rationale",
+      "annotator ID",
+      "individual (pre-adjudication) annotations"
+    ],
+    "known_issues": [
+      "Dataset has 517 continuous and 182 binary records; the paper reports 516/183.",
+      "412 records carry is_data_complete=TRUE, but only 410 satisfy all required fields; IDs 635/636 have no group sizes.",
+      "PMC2667135 (record 12) has intervention SD 23.34 in the reference, while the article table shows 12.34; the value was not corrected.",
+      "The paper reports 413 records (59.08%) with sufficient data; the released JSON yields 410 under a strict field rule and 412 under the released flag."
+    ]
+  },
+  "evidence_inference_v2": {
+    "source": "Evidence Inference 2.0",
+    "release": "v2.0 (official archive)",
+    "annotations": 24686,
+    "prompts": 12865,
+    "pmcids_annotated": 3346,
+    "pmcids_with_prompts": 3372,
+    "annotator_user_ids": {
+      "0": 12180,
+      "1": 4477,
+      "2": 1509,
+      "3": 4708,
+      "4": 355,
+      "5": 223,
+      "6": 615,
+      "7": 619
+    },
+    "labels_normalized": {
+      "no significant difference": 11129,
+      "significantly increased": 7630,
+      "significantly decreased": 5927
+    },
+    "label_normalization": {
+      "significantly increase": "significantly increased"
+    },
+    "valid_label": {
+      "True": 24321,
+      "False": 365
+    },
+    "valid_reasoning": {
+      "True": 24460,
+      "False": 226
+    },
+    "annotations_without_evidence_span": 924,
+    "fulltext_files": 4454,
+    "annotated_pmcids_without_fulltext": 0,
+    "prompts_with_multiple_user_ids": 10739,
+    "unanimous_share_of_multi_user_prompts": 0.9687,
+    "available_fields": [
+      "UserID",
+      "PromptID",
+      "PMCID (Study ID)",
+      "Outcome",
+      "Intervention",
+      "Comparator",
+      "Label (direction only)",
+      "Annotations (evidence quote)",
+      "Evidence Start/End",
+      "Valid Label / Valid Reasoning (verifier)"
+    ],
+    "absent_fields": [
+      "intervention N",
+      "comparator N",
+      "intervention mean / SD",
+      "comparator mean / SD",
+      "binary event counts",
+      "separate timepoint field",
+      "single adjudicated final label per prompt"
+    ],
+    "known_issues": [
+      "The official v2.0 archive contains 693 rows labelled 'significantly increase'; they were normalized to 'significantly increased' for counting only.",
+      "The repository snapshot (commit a661e8c) has a different annotations_merged.csv hash and 4,470 text files; the official archive has 4,454.",
+      "UserID is not accompanied by a documented role column; the process description distinguishes prompt generator, annotator and verifier, so the rows are not two equivalent blinded raters.",
+      "Some prompt/user pairs contain multiple evidence rows, including 1,027 rows with conflicting labels in the repository snapshot."
+    ]
+  },
+  "dta_cochrane": {
+    "source": "Norman, Leeflang, Neveol 2018 (Cochrane DTA)",
+    "reviews": 63,
+    "included_references": 1738,
+    "unique_study_ids": 1663,
+    "excluded_references": 6699,
+    "tests": 1354,
+    "findings_tests": 585,
+    "results": 6433,
+    "results_with_complete_2x2": 5848,
+    "primary_fulltexts_included": false,
+    "available_fields": [
+      "review_id",
+      "study_id",
+      "index test",
+      "target condition / reference standard",
+      "tp / fp / fn / tn",
+      "sensitivity / specificity",
+      "forest plot image"
+    ],
+    "absent_fields": [
+      "intervention mean / SD",
+      "comparator mean / SD",
+      "continuous outcome",
+      "primary-study full text",
+      "per-value source quotation"
+    ],
+    "known_issues": [
+      "1,738 included study-review entries correspond to 1,663 unique study_id values.",
+      "6,433 result elements exist, but only 5,848 contain a complete 2x2 table.",
+      "The archive contains review-level extracted data and forest plots, not the primary RCT full texts.",
+      "License is CC BY-NC 4.0; commercial use is excluded."
+    ]
+  }
+}

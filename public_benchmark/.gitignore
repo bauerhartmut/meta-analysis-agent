@@ -1,0 +1,3 @@
+# Fremd-Rohdaten bleiben lokal; Quellen werden über Commit-SHA und SHA-256 gepinnt.
+raw_data/
+__pycache__/

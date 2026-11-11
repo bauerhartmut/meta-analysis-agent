@@ -1,0 +1,97 @@
+{
+  "our_field": {
+    "study_id": {
+      "yun2024": "pmcid (prefixed PMC)",
+      "evidence_inference": "PMCID",
+      "dta": "review_id + study_id"
+    },
+    "intervention": {
+      "yun2024": "intervention",
+      "evidence_inference": "Intervention",
+      "dta": "index test (not a treatment comparison)"
+    },
+    "comparator": {
+      "yun2024": "comparator",
+      "evidence_inference": "Comparator",
+      "dta": "reference standard / comparison (not a treatment arm)"
+    },
+    "outcome": {
+      "yun2024": "outcome",
+      "evidence_inference": "Outcome",
+      "dta": "target condition / diagnostic accuracy"
+    },
+    "timepoint": {
+      "yun2024": null,
+      "evidence_inference": null,
+      "dta": null
+    },
+    "intervention_n": {
+      "yun2024": "intervention_group_size",
+      "evidence_inference": null,
+      "dta": "tp + fn (derived only)"
+    },
+    "comparator_n": {
+      "yun2024": "comparator_group_size",
+      "evidence_inference": null,
+      "dta": "fp + tn (derived only)"
+    },
+    "intervention_mean": {
+      "yun2024": "intervention_mean",
+      "evidence_inference": null,
+      "dta": null
+    },
+    "intervention_sd": {
+      "yun2024": "intervention_standard_deviation",
+      "evidence_inference": null,
+      "dta": null
+    },
+    "comparator_mean": {
+      "yun2024": "comparator_mean",
+      "evidence_inference": null,
+      "dta": null
+    },
+    "comparator_sd": {
+      "yun2024": "comparator_standard_deviation",
+      "evidence_inference": null,
+      "dta": null
+    },
+    "source_quote": {
+      "yun2024": null,
+      "evidence_inference": "Annotations + Evidence Start/End",
+      "dta": null
+    },
+    "rationale": {
+      "yun2024": "notes (informal, not adjudication rationale)",
+      "evidence_inference": "Annotations (evidence quote); verifier flags",
+      "dta": null
+    }
+  },
+  "coverage": {
+    "yun2024": {
+      "numeric_meta_analysis": "full for 410 strict-complete records",
+      "semantic_ico": "yes",
+      "timepoint": "no separate field",
+      "individual_annotations": "no"
+    },
+    "evidence_inference": {
+      "numeric_meta_analysis": "no",
+      "semantic_ico": "yes",
+      "timepoint": "no separate field",
+      "individual_annotations": "yes, with role caveat"
+    },
+    "dta": {
+      "numeric_meta_analysis": "no (diagnostic 2x2 only)",
+      "semantic_ico": "partial / different task",
+      "timepoint": "no",
+      "individual_annotations": "no (published Cochrane extraction)"
+    }
+  },
+  "transformation_rules": [
+    "Yun PMCID is prefixed with PMC to form study_id.",
+    "Empty Yun numeric cells become null, never zero.",
+    "Yun notes are stored as annotator_notes, not as a structured rationale.",
+    "Yun timepoint and source_quote are null because no such fields exist.",
+    "Yun split is lowercased in the projection.",
+    "Evidence Inference labels 'significantly increase' are normalized to 'significantly increased' only for counting."
+  ]
+}
