@@ -10,7 +10,8 @@ Aufruf:
 
 Prompt-Versionen:
     v1  historischer Prompt ohne Zeitpunktregel (reproduziert den ersten Lauf)
-    v2  verbindliche C1-Zeitpunktregel (Standard)
+    v2  C1-Zeitpunktregel im Systemprompt (getestet, nicht wirksam)
+    v3  explizite Post-test-Spaltenprioritaet plus Endpruefung (Standard)
 
 Ein vorhandener Run wird nur mit ``--resume`` fortgesetzt.
 """
@@ -35,12 +36,13 @@ from research_agent.llm.engine import LLMEngine  # noqa: E402
 
 INPUT_PATH = BENCH_ROOT / "evaluation" / "c1_pilot" / "dev_input.jsonl"
 OUTPUT_ROOT = BENCH_ROOT / "evaluation" / "c1_pilot" / "runs"
-PROMPT_VERSIONS = ("v1", "v2")
+PROMPT_VERSIONS = ("v1", "v2", "v3")
 PROMPT_VERSION_IDS = {
     "v1": "c1-dev-extract-v1",
     "v2": "c1-dev-extract-v2",
+    "v3": "c1-dev-extract-v3",
 }
-DEFAULT_PROMPT_VERSION = "v2"
+DEFAULT_PROMPT_VERSION = "v3"
 TEMPERATURE = 0.0
 MAX_TOKENS = 900
 CONCURRENCY = 3
@@ -78,9 +80,20 @@ TIMEPOINT RULE (mandatory):
   from the same timepoint and the same outcome definition.
 - Name the chosen timepoint and the table/row in source_note."""
 
+SYSTEM_PROMPT_V3 = SYSTEM_PROMPT_V2 + """
+
+COLUMN PRIORITY (mandatory):
+- If the table has both a Post-test column/row and a Follow-up column/row, the
+  Post-test column/row is the only valid source.
+- Use Follow-up only when the Post-test cell is absent or blank for at least one
+  arm; then both arms come from the earliest complete Follow-up column/row.
+- Do not use a later Follow-up because it is more complete, more precise, or
+  more favorable. Name the exact column header in source_note."""
+
 SYSTEM_PROMPTS = {
     "v1": SYSTEM_PROMPT_V1,
     "v2": SYSTEM_PROMPT_V2,
+    "v3": SYSTEM_PROMPT_V3,
 }
 
 
@@ -151,6 +164,32 @@ TIMEPOINT
 Apply the mandatory timepoint rule from the system message. State the chosen
 timepoint in source_note.
 """
+    elif prompt_version == "v3":
+        timepoint_section = """
+TIMEPOINT SELECTION (mandatory)
+1. Locate the table row for the exact outcome.
+2. Read the column headers before reading any arm values.
+3. If a header contains "Post-test" or "Posttest" and both arm cells are
+   reported, use only that column/row.
+4. If the Post-test cell is absent, blank, or a dash for either arm, use the
+   earliest header containing "Follow up", "Follow-up", or "Followup" that
+   reports both arms completely.
+5. Never use Baseline, Pre-test, Change, Peak, or a later Follow-up when a
+   usable Post-test is present.
+6. source_note must start with "Post-test:" or "Follow-up:" and name the
+   table/row.
+"""
+
+    final_check = ""
+    if prompt_version == "v3":
+        final_check = """
+FINAL CHECK BEFORE ANSWERING
+- State the chosen column header in source_note.
+- If it is not Post-test, verify that Post-test was absent or blank for at
+  least one arm.
+- If Post-test was present for both arms, do not return Follow-up values.
+- Both arms must come from the same column and timepoint.
+"""
 
     return f"""TASK
 Extract the arm-level result for this record.
@@ -168,7 +207,7 @@ ARTICLE TEXT
 --- BEGIN ARTICLE ---
 {source_text}
 --- END ARTICLE ---
-"""
+{final_check}"""
 
 
 def hash_model_config(llm: LLMEngine, prompt_version: str) -> str:
@@ -315,7 +354,7 @@ def write_jsonl_atomic(path: Path, rows: list[dict[str, Any]]) -> None:
 
 async def main() -> int:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--run-id", default="c1_dev_20261111_v2")
+    parser.add_argument("--run-id", default="c1_dev_20261111_v3")
     parser.add_argument("--prompt-version", choices=PROMPT_VERSIONS,
                         default=DEFAULT_PROMPT_VERSION)
     parser.add_argument("--resume", action="store_true")
