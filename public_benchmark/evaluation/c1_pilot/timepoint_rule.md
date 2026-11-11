@@ -6,10 +6,11 @@ Status: **entschieden und verbindlich für künftige C1-Läufe**
 Umsetzungsstand: `c1-dev-extract-v2` hat die Regel nicht umgesetzt (93/140).
 `c1-dev-extract-v3` priorisiert die Post-test-Spalte explizit und erreicht
 123/140 (87,9 %). `c1-dev-extract-v4` ergänzt Zellverifikation und den
-12-Monats-Override für Record 190 und erreicht 126/140 (90,0 %). v4 ist noch
-nicht testreif: 224 und 238 bleiben falsche Zeitpunkte, 226 verliert die
-Gruppengrößen, 120 bleibt das ICO-Problem. Die Regel braucht für
-longitudinale binäre Outcomes weiterhin eine explizite Record-Zeitpunktangabe.
+12-Monats-Override für Record 190 (126/140). `c1-dev-extract-v5` normalisiert
+Klammer-/Leerzellen, übernimmt explizit berichtete Armgrößen und erreicht
+136/140 (97,1 %) bei vollständiger Abdeckung. Nur Record 120 bleibt als
+ICO-Ambiguität offen; die Zeitpunktregel selbst ist für die übrigen Records
+umgesetzt.
 
 ## Regel
 
@@ -51,8 +52,10 @@ wie der nächste Lauf den Zeitpunkt behandeln muss.
 - `c1-dev-extract-v3` setzt die Spaltenpriorisierung weitgehend um, ist aber
   wegen der offenen Records noch nicht testreif.
 - `c1-dev-extract-v4` löst Record 190 über einen expliziten 12-Monats-Zeitpunkt
-  und verbessert Record 226; wegen 120, 224, 226 (Gruppengrößen) und 238 ist
-  er ebenfalls nicht testreif.
+  und verbessert Record 226; wegen 120, 224, 226 (Gruppengrößen) und 238 war
+  er noch nicht testreif.
+- `c1-dev-extract-v5` löst 224, 226 und 238 und erreicht 136/140; nur 120
+  bleibt als unterspezifizierte ICO offen.
 - Sie ist eine Benchmark-Entscheidung, keine klinische Empfehlung. Für eine
   spätere gepoolte Analyse kann ein studienübergreifend einheitlicher
   klinischer Zeitpunkt sinnvoller sein; dann muss die Referenz neu eingefroren
@@ -65,10 +68,12 @@ wie der nächste Lauf den Zeitpunkt behandeln muss.
   Der v4-Override löst diesen Record; die Regel bleibt für ähnliche Fälle
   auf eine explizite Record-Zeitpunktangabe angewiesen.
 - Record 226 zeigt einen zusätzlichen Tabellenfehler: Der Post-Test ist
-  berichtet, wird aber als leer behandelt. v4 korrigiert Mean/SD, nicht die
+  berichtet, wird aber als leer behandelt. v5 korrigiert Mean/SD und
   Gruppengrößen.
 - Record 238 zeigt die gleiche Schwäche: Eine vorhandene Post-Test-Zelle wird
-  wegen einer `()`-Schreibweise als leer interpretiert; v4 wählt Follow-up.
+  wegen einer `()`-Schreibweise als leer interpretiert. v5 liest sie korrekt.
+- Record 120 bleibt ein separates ICO-Problem; die Zeitpunktregel löst es
+  nicht und darf dafür nicht als Beleg dienen.
 
 ## Prüfung
 

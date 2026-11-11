@@ -3,7 +3,7 @@
 Stand: 2026-11-11
 
 Status: **Dev-Pilot gelaufen; 26/26 Records verarbeitet; Zeitpunktregel entschieden;
-Prompt v4 getestet: 126/140 exakt, aber noch nicht testreif; Testsplit unangetastet.**
+Prompt v5 getestet: 136/140 exakt, vollständige Abdeckung; Testsplit unangetastet.**
 Modell: `gwdg/qwen3.5-397b-a17b` über TUDaGPT, Temperatur 0. Der belastbare
 Vergleichspunkt ist `c1_dev_20261111` mit Prompt `c1-dev-extract-v1`.
 
@@ -84,6 +84,12 @@ Artefakte der Läufe:
   [`dev_evaluation.md`](runs/c1_dev_20261111_v4/dev_evaluation.md),
   [`run_manifest.json`](runs/c1_dev_20261111_v4/run_manifest.json),
   [`v4_result.md`](runs/c1_dev_20261111_v4/v4_result.md)
+- v5: [`runs/c1_dev_20261111_v5/dev_output.jsonl`](runs/c1_dev_20261111_v5/dev_output.jsonl),
+  [`dev_raw.jsonl`](runs/c1_dev_20261111_v5/dev_raw.jsonl),
+  [`dev_evaluation.json`](runs/c1_dev_20261111_v5/dev_evaluation.json),
+  [`dev_evaluation.md`](runs/c1_dev_20261111_v5/dev_evaluation.md),
+  [`run_manifest.json`](runs/c1_dev_20261111_v5/run_manifest.json),
+  [`v5_result.md`](runs/c1_dev_20261111_v5/v5_result.md)
 
 ## Prompt v2: Test ohne Verbesserung
 
@@ -123,9 +129,22 @@ Post-Test-Kontrollzelle fälschlich als leer liest. Records 120 und 224 bleiben
 falsch. Details:
 [`runs/c1_dev_20261111_v4/v4_result.md`](runs/c1_dev_20261111_v4/v4_result.md).
 
-Der Testsplit bleibt gesperrt. Vor einer Testfreigabe müssen Record 120, 224,
-226 und 238 geklärt und ein v5-Prompt auf Dev validiert werden; die
-Zeitpunktregel ist entschieden.
+## Prompt v5: Vollständige Abdeckung, ein offener Record
+
+Der fünfte Lauf `c1_dev_20261111_v5` mit `c1-dev-extract-v5` liefert
+**136/140 exakt (97,1 %)**, **140/140 abgedeckt**, 4 falsche und 0 fehlende
+Felder bei 0 Halluzinationen; 25/26 Records sind vollständig exakt.
+
+v5 korrigiert 224 (Post-Test), 226 (Gruppengrößen 35/35) und 238
+(`()69.89±1.59` als vorhandene Zelle); 190 bleibt korrekt. Der einzige
+verbleibende Fehler ist Record 120: Das Modell wählt die Rezidiv-Zeile
+`0/30 vs. 1/52`, die Referenz die DTPA-Subgruppe `8/20 vs. 13/44`. Die ICO
+ist unterspezifiziert. Details:
+[`runs/c1_dev_20261111_v5/v5_result.md`](runs/c1_dev_20261111_v5/v5_result.md).
+
+Der Testsplit bleibt gesperrt. Vor einer Testfreigabe muss Record 120
+präzisiert, ausgeschlossen oder vorab adjudiziert werden; v5 ist der erste
+Kandidat mit vollständiger Abdeckung.
 
 ## Eingefrorene Daten
 

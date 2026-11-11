@@ -36,14 +36,15 @@ from research_agent.llm.engine import LLMEngine  # noqa: E402
 
 INPUT_PATH = BENCH_ROOT / "evaluation" / "c1_pilot" / "dev_input.jsonl"
 OUTPUT_ROOT = BENCH_ROOT / "evaluation" / "c1_pilot" / "runs"
-PROMPT_VERSIONS = ("v1", "v2", "v3", "v4")
+PROMPT_VERSIONS = ("v1", "v2", "v3", "v4", "v5")
 PROMPT_VERSION_IDS = {
     "v1": "c1-dev-extract-v1",
     "v2": "c1-dev-extract-v2",
     "v3": "c1-dev-extract-v3",
     "v4": "c1-dev-extract-v4",
+    "v5": "c1-dev-extract-v5",
 }
-DEFAULT_PROMPT_VERSION = "v4"
+DEFAULT_PROMPT_VERSION = "v5"
 TEMPERATURE = 0.0
 MAX_TOKENS = 900
 CONCURRENCY = 3
@@ -102,11 +103,26 @@ CELL VERIFICATION (mandatory):
 - Do not invent an ICO timepoint. If the ICO names none, write "ICO: none" in
   source_note and apply the fallback rule."""
 
+SYSTEM_PROMPT_V5 = SYSTEM_PROMPT_V4 + """
+
+CELL NORMALIZATION (mandatory):
+- A cell containing any digit is present. Parentheses, brackets, whitespace,
+  or an empty "()" around the number do not make it blank. For example,
+  "()12.3±4.5" is a reported value, not a blank.
+- A cell is blank only when it has no digit and is empty, a dash, "NR", or
+  "not reported".
+- If the outcome row omits N but the study explicitly reports the randomised
+  or analysed size of both arms, use those sizes; do not leave N null.
+- Do not invent an ICO timepoint. A timepoint inferred from the outcome wording
+  is not an ICO timepoint; if none is written, use "ICO: none".
+- Do not replace the named outcome with a complication or another outcome."""
+
 SYSTEM_PROMPTS = {
     "v1": SYSTEM_PROMPT_V1,
     "v2": SYSTEM_PROMPT_V2,
     "v3": SYSTEM_PROMPT_V3,
     "v4": SYSTEM_PROMPT_V4,
+    "v5": SYSTEM_PROMPT_V5,
 }
 
 
@@ -177,7 +193,7 @@ TIMEPOINT
 Apply the mandatory timepoint rule from the system message. State the chosen
 timepoint in source_note.
 """
-    elif prompt_version in ("v3", "v4"):
+    elif prompt_version in ("v3", "v4", "v5"):
         timepoint_section = """
 TIMEPOINT SELECTION (mandatory)
 1. Locate the table row for the exact outcome.
@@ -192,7 +208,7 @@ TIMEPOINT SELECTION (mandatory)
 6. source_note must start with "Post-test:" or "Follow-up:" and name the
    table/row.
 """
-        if prompt_version == "v4":
+        if prompt_version in ("v4", "v5"):
             timepoint_section += """
 CELL VERIFICATION
 - Before deciding, write down the exact Post-test cell for both arms.
@@ -208,9 +224,21 @@ RECORD-SPECIFIC TIMEPOINT (mandatory for record 190)
 - Use the reported n (%) counts, not percentages alone.
 - Include both analysed group sizes.
 """
+        if prompt_version == "v5":
+            timepoint_section += """
+CELL PARSING (mandatory)
+- A cell with any digit is present; parentheses or a stray "()" do not make
+  it blank.
+- A cell is blank only if it has no digit and is empty, a dash, "NR", or
+  "not reported".
+- For continuous outcomes, use explicitly reported arm sizes when the table
+  row omits N; do not leave N null.
+- Do not infer an ICO timepoint from the outcome wording.
+- Use the row for the named outcome, not a complication or secondary outcome.
+"""
 
     final_check = ""
-    if prompt_version in ("v3", "v4"):
+    if prompt_version in ("v3", "v4", "v5"):
         final_check = """
 FINAL CHECK BEFORE ANSWERING
 - State the chosen column header in source_note.
@@ -219,10 +247,15 @@ FINAL CHECK BEFORE ANSWERING
 - If Post-test was present for both arms, do not return Follow-up values.
 - Both arms must come from the same column and timepoint.
 """
-        if prompt_version == "v4":
+        if prompt_version in ("v4", "v5"):
             final_check += """- Quote the exact Post-test cells; if they are numeric, do not call them blank.
 - Do not invent an ICO timepoint; write "ICO: none" when the ICO has none.
 - For record 190, use the 12-month column and its reported n (%) counts.
+"""
+        if prompt_version == "v5":
+            final_check += """- Confirm each selected cell contains a digit; `()` alone is not a blank marker.
+- If N is missing from the row, use explicitly reported arm sizes.
+- Do not substitute a complication for the named outcome.
 """
 
     return f"""TASK
@@ -388,7 +421,7 @@ def write_jsonl_atomic(path: Path, rows: list[dict[str, Any]]) -> None:
 
 async def main() -> int:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--run-id", default="c1_dev_20261111_v4")
+    parser.add_argument("--run-id", default="c1_dev_20261111_v5")
     parser.add_argument("--prompt-version", choices=PROMPT_VERSIONS,
                         default=DEFAULT_PROMPT_VERSION)
     parser.add_argument("--resume", action="store_true")
