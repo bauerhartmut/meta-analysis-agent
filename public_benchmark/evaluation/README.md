@@ -10,8 +10,14 @@ Auswertungsstruktur. Ein Lauf benötigt eine ausdrückliche Freigabe.
 - Entwicklungsanteil: 43 Records aus 10 Artikeln (`split=dev`).
 - Testanteil: 656 Records aus 110 Artikeln (`split=test`).
 - Numerisch streng vollständig: 410 Records (261 kontinuierlich, 149 binär).
+- Auditstand: 30 stratifizierte Records plus die Problemfälle 12, 635 und 636
+  wurden geprüft. 8/30 Records haben einen klaren Fehler; die 410 streng
+  vollständigen Records sind vor C zu auditieren und zu kuratieren
+  (`../validation/yun_audit_30.md`).
 
 Die Referenzannotation wird bis zum Abschluss der Extraktion zurückgehalten.
+`is_data_complete` wird nicht als verlässliches Einschlusskriterium
+übernommen.
 Der Testanteil darf **nicht** zur Prompt- oder Pipeline-Optimierung verwendet
 werden. Anpassungen sind ausschließlich auf `dev` zulässig.
 

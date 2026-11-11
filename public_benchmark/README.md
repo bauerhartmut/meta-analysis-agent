@@ -4,7 +4,7 @@ Stand: 2026-11-11
 
 Arbeitsbereich: `public_benchmark/`
 
-Status: **Recherche abgeschlossen; kein Modelllauf; keine Änderung an A oder B.**
+Status: **Recherche und Referenzaudit abgeschlossen; kein Modelllauf; keine Änderung an A oder B.**
 
 ## Kurzentscheidung
 
@@ -13,7 +13,9 @@ sind unterschiedlich gut geeignet:
 
 - **Yun et al. 2024** ist der einzige Kandidat mit echten Armwerten
   (N, Mean, SD, Ereigniszahlen) und damit der primäre Kandidat für ein
-  neues **Experiment C** zur numerischen Extraktion.
+  neues **Experiment C** zur numerischen Extraktion. Der Audit zeigt jedoch,
+  dass die Referenz vor C kuratiert werden muss; Yun ist noch kein
+  einsatzfähiger Goldstandard.
 - **Evidence Inference 2.0** ist wertvoll für die semantische Prüfung von
   Intervention, Comparator, Outcome und Evidenzstellen, liefert aber keine
   numerischen Metaanalyse-Werte.
@@ -22,7 +24,8 @@ sind unterschiedlich gut geeignet:
 
 A wurde nicht geöffnet. B ist weiterhin nicht zurückgeliefert; es gibt
 keinen B-Abgabe-Hash und keinen A/B-Vergleich. Der B-Watcher bleibt
-unverändert.
+unverändert. Der Yun-Referenzaudit ist abgeschlossen; er begründet keine
+Ablösung von B, sondern einen Kuratierungsschritt vor Experiment C.
 
 ## 1. Ausgangslage
 
@@ -120,8 +123,10 @@ in `validation/yun_sample_check.md`.
   Referenz. Der Wert wurde nicht korrigiert.
 - Zusätzlich: IDs 635/636 sind als vollständig geflaggt, obwohl N fehlt.
 
-Die Stichprobe ist klein, zeigt aber, dass die Referenz vor einem Benchmark-
-Einsatz auditiert werden muss.
+Diese fünf Fälle waren der Anlass für den größeren Audit in Abschnitt 3.7.
+Sie sind nicht die Entscheidungsgrundlage; die Prüfung von 30
+stratifizierten Records plus drei Problemfällen ersetzt diese kleine
+Stichprobe.
 
 ### 3.5 Technische Befunde
 
@@ -143,6 +148,42 @@ Repository und Annotationen: **Apache-2.0**. Die Artikelauszüge stammen aus
 PMC-Open-Access-Artikeln, sind aber nicht durch Apache-2.0 allein
 re-lizenziert. Für lokale Forschung unkritisch; für eine öffentliche
 Weitergabe der Texte ist die Einzellizenz jedes Artikels zu prüfen.
+
+### 3.7 Referenzaudit: 30 stratifizierte Records plus Problemfälle
+
+Geprüft wurden 15 kontinuierliche und 15 binäre Zufallsrecords (Seed
+`20261111`, je ein Record aus einem anderen Artikel) sowie die bewusst
+ausgewählten Problemfälle 12, 635 und 636. Die 30 Zufallsrecords umfassen
+104 nichtleere Referenzfelder.
+
+| Maß | Zähler / Nenner | Quote |
+|---|---:|---:|
+| Harte Zahlenfehler auf Feldebene | 4 / 104 | 3,8 % |
+| Nicht prüfbare Felder | 4 / 104 | 3,8 % |
+| Records mit strukturellem ICO-Fehler | 6 / 30 | 20,0 % |
+| Records mit klarem Fehler (Zahlen- oder Strukturfehler) | 8 / 30 | 26,7 % |
+| Records mit irgendeinem Befund (inkl. nicht prüfbar/leer) | 11 / 30 | 36,7 % |
+| Leere Referenzen trotz Werten im Text | 2 / 30 | 6,7 % |
+
+Die harten Zahlenfehler betreffen die Records 83 (falsche Kohorte) und 694
+(Median/IQR als Mean/SD). Vier Felder in Record 303 sind nur in Bildtabellen
+und daher nicht prüfbar. Sechs Records sind strukturell kein gültiger
+Interventions-Kontroll-Vergleich: 670, 268 (kombinierte Arme/Outcomes), 178
+(Ein-Arm-Vorher-Nachher), 62 (observational), 543 und 484 (Baseline).
+
+Die 30er-Stichprobe bestätigt die drei Problemfälle: Record 12 hat eine
+falsche Interventions-SD (23,34 statt 12,34), 635 und 636 haben korrekte
+Means/SDs, aber fehlende Gruppengrößen und trotzdem
+`is_data_complete=TRUE`. Die drei Fälle sind bewusst ausgewählt und nicht in
+die 30er-Quote eingerechnet.
+
+Die bisherige 5-%-Schwelle ist auf Feldebene mit 3,8 % knapp
+unterschritten, auf Recordebene mit 26,7 % aber deutlich überschritten. Für
+die Entscheidung ist die Recordebene maßgeblich, weil ein strukturell
+falscher ICO auch mit korrekten Einzelzahlen nicht als Effekt nutzbar ist.
+Vor Experiment C sind daher die 410 streng vollständigen Records zu
+auditieren und zu kuratieren. Details, Recordtabelle und 95-%-Intervalle:
+`validation/yun_audit_30.md`.
 
 ## 4. Evidence Inference 2.0
 
@@ -284,17 +325,23 @@ ist auf unser Ziel bezogen, nicht allgemein.
 | Kriterium | Yun 2024 | Evidence Inference | DTA |
 |---|---:|---:|---:|
 | Inhaltliche Übereinstimmung | 8 | 4 | 2 |
-| Qualität der Referenzannotation | 6 | 7 | 8 |
+| Qualität der Referenzannotation | 4 | 7 | 8 |
 | Verfügbarkeit der Volltexte | 7 | 8 | 1 |
 | Unabhängigkeit der Annotatoren | 5 | 6 | 3 |
 | Numerische Extraktion | 9 | 1 | 3 |
 | Reproduzierbarkeit | 8 | 8 | 7 |
-| **Gesamt für unser B** | **7,5** | **4,5** | **2,5** |
+| **Gesamt für unser B** | **6,5 (vorläufig)** | **4,5** | **2,5** |
+
+Die Gesamtnote ist eine qualitative Gewichtung für unser B-Ziel, kein
+arithmetisches Mittel der Kriterien.
 
 Einordnung:
 
-- Yun: bester numerischer Kandidat, aber konsolidierte Annotation und
-  einzelne Datenfehler. Für Experiment C geeignet, nicht als B-Ersatz.
+- Yun: einziger numerischer Kandidat, aber konsolidierte Annotation,
+  strukturelle ICO-Fehler und einzelne harte Datenfehler. Für Experiment C
+  erst nach Vollaudit und Kuratierung geeignet, nicht als B-Ersatz. Die
+  Abwertung von 7,5 auf 6,5 ist vorläufig und folgt aus der hohen
+  Record-Fehlerquote, nicht aus einem neuen Modelllauf.
 - Evidence Inference: gut für semantische ICO-/Evidenzprüfung, aber ohne
   N/Mean/SD. Als B-Ersatz ungeeignet.
 - DTA: hohe fachliche Qualität, aber falsche Aufgabe und keine
@@ -339,13 +386,16 @@ keine Kappa-Berechnung, bevor der B-Hash eingefroren ist.
 
 **C1 (primär, numerisch): Yun et al. 2024.**
 
+- Vor C: die 410 streng vollständigen Records vollständig auditieren und
+  kuratieren; `is_data_complete` nicht als Wahrheit übernehmen.
 - Originaltexte verwenden, Referenzannotation bis zum Abschluss der
   Extraktion zurückhalten.
 - Unser Schema auf Yun abbilden; alle Transformationen dokumentieren.
 - Dev-Split (43 Records) nur für Entwicklung/Prompt-Anpassung.
 - Test-Split (656 Records) einmalig und ohne Anpassung auswerten.
-- Alle 699 Records auswerten, aber 410 streng vollständige und 289
-  unvollständige getrennt berichten.
+- Nach der Kuratierung alle 699 Records auswerten, aber 410 streng
+  vollständige und 289 unvollständige getrennt berichten; strukturell nicht
+  estimierbare Records als eigene Kategorie führen.
 - Metriken: Precision/Recall/F1 auf ICO-Ebene; exakte Treffer und MAE je
   Feld; getrennte Fehlerklassen; keine erfundenen Werte.
 
@@ -364,20 +414,25 @@ keine Kappa-Berechnung, bevor der B-Hash eingefroren ist.
 
 **Kein Modelllauf in diesem Schritt.** Empfohlen:
 
-1. **Yun-Audit vor dem Benchmark:** 30 zufällig gezogene, stratifizierte
-   Records (15 kontinuierlich, 15 binär) plus die bekannten Problemfälle
-   (IDs 12, 635, 636) manuell gegen die Texte prüfen. Wenn die Fehlerquote
-   über 5 % liegt, alle 410 streng vollständigen Records auditieren.
-2. **Test einfrieren:** Nach dem Audit den Yun-Test-Split und die
+1. **Yun-Audit abgeschlossen:** 30 stratifizierte Records plus die
+   Problemfälle 12, 635 und 636 wurden geprüft. Ergebnis: 4/104 harte
+   Zahlenfehler (3,8 %), 6/30 strukturelle Fehler (20,0 %) und 8/30 Records
+   mit mindestens einem klaren Fehler (26,7 %). Details in
+   `validation/yun_audit_30.md`.
+2. **Vollaudit und Kuratierung:** Die 5-%-Schwelle ist auf Feldebene knapp
+   unterschritten, auf Recordebene deutlich überschritten. Daher alle 410
+   streng vollständigen Records auditieren und vor C kuratieren. Das ist der
+   nächste große Arbeitsblock.
+3. **Test einfrieren:** Nach dem Audit den Yun-Test-Split und die
    Referenzdatei hashen und als unveränderlich markieren.
-3. **C1-Pilot auf Dev:** Erst danach einen freigegebenen Dev-Lauf planen;
+4. **C1-Pilot auf Dev:** Erst danach einen freigegebenen Dev-Lauf planen;
    keine Testdaten zur Prompt-Optimierung.
-4. **B unverändert lassen:** Der B-Watcher wird nicht angefasst; vor einem
+5. **B unverändert lassen:** Der B-Watcher wird nicht angefasst; vor einem
    Eingriff Status prüfen, kein A öffnen, kein B-Hash erfinden.
 
-Der größte Hebel ist der Yun-Audit, weil die Stichprobe bereits einen
-Referenzfehler und zwei Flag-Probleme gezeigt hat. Ein Modelllauf vor diesem
-Audit würde eine möglicherweise fehlerhafte Referenz messen.
+Der größte Hebel ist jetzt die Kuratierung der Referenz. Ein Modelllauf auf
+den ungeprüften 410 Records würde einen Teil der sichtbaren Referenzfehler
+als Modellfehler messen.
 
 ## 11. Artefakte und Reproduzierbarkeit
 
@@ -390,6 +445,9 @@ Audit würde eine möglicherweise fehlerhafte Referenz messen.
 | `annotation_guidelines/` | Yun-Schema, Evidence-Rollen, DTA-Abgrenzung |
 | `processed_data/yun_ico_records.jsonl` | 699 verlustfreie Yun-Projektionen |
 | `validation/yun_sample_check.md` | Fünf-Record-Prüfung inkl. Fehler |
+| `validation/yun_audit_30.md` | Auditbericht: 30 stratifizierte Records plus Problemfälle |
+| `validation/yun_audit_results.json` | Recordbefunde, Status und Fehlerquoten |
+| `validation/yun_audit_sample.json` | Auswahl, Seed und Stratifizierung |
 | `validation/checksums.sha256` | SHA-256 für Archive und Schlüsseldateien |
 | `evaluation/README.md` | geplantes Experiment C, noch kein Lauf |
 | `scripts/build_inventory.py` | reproduzierbare Inventarerzeugung |
@@ -413,7 +471,8 @@ SHA-256 gepinnt:
 
 - Keine Rechtsberatung; die PMC-Einzellizenzen der Artikeltexte wurden
   nicht pro Artikel geprüft.
-- Kein vollständiges Audit aller 699 Yun-Records.
+- Kein vollständiges Audit aller 699 Yun-Records; geprüft wurden 30
+  stratifizierte Records plus die drei Problemfälle.
 - Keine Modellvorhersagen, keine Genauigkeitsmessung, kein Testlauf.
 - Keine unabhängige Zweitannotation und kein B-Rücklauf; A/B bleiben
   unverändert.
@@ -423,6 +482,7 @@ SHA-256 gepinnt:
 ## Entscheidungsregel
 
 Die Entscheidung, das bestehende B-Experiment zu ersetzen, wird **nicht**
-getroffen. Yun ist als zusätzliches Experiment C geeignet, sofern der
-Referenz-Audit die Datenqualität bestätigt. Evidence Inference ergänzt die
-semantische Prüfung. DTA bleibt eine optionale diagnostische Nebenprüfung.
+getroffen. Der Audit bestätigt die Datenqualität nicht vorbehaltlos: Yun
+bleibt ein zusätzliches Experiment C, aber erst nach Vollaudit und
+Kuratierung der Referenz. Evidence Inference ergänzt die semantische
+Prüfung. DTA bleibt eine optionale diagnostische Nebenprüfung.

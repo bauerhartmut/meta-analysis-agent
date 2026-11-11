@@ -66,9 +66,12 @@ keine Annotator-IDs und keine unabhängigen Einzelannotationen.
 
 ## Konsequenz für unser B-Experiment
 
-Yun ist als **numerischer Referenzbenchmark** geeignet, aber nicht als
-unabhängige menschliche Zweitannotation im Sinne unseres B-Designs. Aus Yun
-lässt sich keine Inter-Rater-Reliabilität berechnen. Die konsolidierte
-Referenz kann für Experiment C verwendet werden; die fehlenden Felder
-Zeitpunkt, Quellenstelle und individuelle Annotation müssen als
+Yun ist als **numerischer Referenzbenchmark** nur nach Audit und
+Kuratierung geeignet, aber nicht als unabhängige menschliche Zweitannotation
+im Sinne unseres B-Designs. Aus Yun lässt sich keine
+Inter-Rater-Reliabilität berechnen. Die konsolidierte Referenz kann für
+Experiment C verwendet werden, sofern die in
+`../validation/yun_audit_30.md` dokumentierten Fehler vorher kuratiert sind;
+`is_data_complete` ist kein verlässliches Einschlusskriterium. Die fehlenden
+Felder Zeitpunkt, Quellenstelle und individuelle Annotation müssen als
 Nichtverfügbarkeit ausgewiesen werden.

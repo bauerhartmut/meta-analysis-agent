@@ -35,7 +35,9 @@ nicht verändert.
 
 ## Konsequenz
 
-Vor Experiment C ist ein breiteres Audit der vollständigen Records nötig.
-Mindestens sollten alle 261 streng vollständigen kontinuierlichen Records
-oder eine vorab festgelegte Zufallsstichprobe geprüft werden. Die
-Testannotationen dürfen dabei nicht zur Prompt-Optimierung verwendet werden.
+Der breitere Audit ist inzwischen durchgeführt: 30 stratifizierte Records
+plus die Problemfälle 12, 635 und 636. Er zeigt 8/30 Records mit einem
+klaren Fehler; Details stehen in `yun_audit_30.md`. Vor Experiment C sind
+daher die 410 streng vollständigen Records zu auditieren und zu kuratieren.
+Die Testannotationen dürfen dabei nicht zur Prompt-Optimierung verwendet
+werden.

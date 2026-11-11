@@ -7,6 +7,14 @@
   DTA-Dateien sowie alle 120 Yun-Markdown- und 120 Yun-XML-Texte.
 - `yun_sample_check.md`: manuelle Prüfung von fünf Yun-Records gegen die
   mitgelieferten Texte.
+- `yun_audit_sample.json`: Auswahl der 15 kontinuierlichen und 15 binären
+  Records (Seed `20261111`) sowie die drei Problemfälle.
+- `yun_audit_results.json`: Recordbefunde, Feldzahlen, Status und Quoten des
+  Audits.
+- `yun_audit_30.md`: Auditbericht mit Methodik, Recordtabelle, Fehlerquoten,
+  Problemfällen und Empfehlung.
+- `yun_audit_cards.md`: lokales Arbeitsexemplar mit Artikelzitaten; wird
+  nicht versioniert.
 
 ## Prüfprinzip
 
@@ -21,9 +29,12 @@
 
 ## Grenzen
 
-- Kein vollständiges Audit aller 699 Yun-Records.
+- Kein vollständiges Audit aller 699 Yun-Records; geprüft wurden 30
+  stratifizierte Records plus die Problemfälle 12, 635 und 636.
+- Der Audit ist keine unabhängige Zweitannotation und keine
+  Modellgenauigkeitsmessung.
 - Keine Modellvorhersagen und keine Genauigkeitsmessung; dieser Schritt ist
-  reine Dateninventur.
+  reine Dateninventur und Referenzprüfung.
 - Keine Prüfung der individuellen PMC-Lizenz jedes Artikels. Die
   Yun-XML-Auszüge enthalten keine Lizenzmetadaten.
 - Keine unabhängige Zweitannotation und kein B-Rücklauf; A/B bleiben

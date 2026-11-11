@@ -1,0 +1,191 @@
+{
+  "seed": 20261111,
+  "method": "15 kontinuierliche und 15 binaere Records, je ein Record aus einem anderen Artikel; Problemfaelle 12,635,636 separat; Ausschluss der Problem-PMCIDs aus der Zufallsauswahl.",
+  "records": [
+    {
+      "id": 670,
+      "pmcid": 4987981,
+      "outcome_type": "continuous",
+      "stratum": "continuous"
+    },
+    {
+      "id": 528,
+      "pmcid": 4411165,
+      "outcome_type": "continuous",
+      "stratum": "continuous"
+    },
+    {
+      "id": 308,
+      "pmcid": 4541185,
+      "outcome_type": "continuous",
+      "stratum": "continuous"
+    },
+    {
+      "id": 390,
+      "pmcid": 3278655,
+      "outcome_type": "continuous",
+      "stratum": "continuous"
+    },
+    {
+      "id": 661,
+      "pmcid": 4458006,
+      "outcome_type": "continuous",
+      "stratum": "continuous"
+    },
+    {
+      "id": 125,
+      "pmcid": 4493951,
+      "outcome_type": "continuous",
+      "stratum": "continuous"
+    },
+    {
+      "id": 89,
+      "pmcid": 3912320,
+      "outcome_type": "continuous",
+      "stratum": "continuous"
+    },
+    {
+      "id": 83,
+      "pmcid": 3580751,
+      "outcome_type": "continuous",
+      "stratum": "continuous"
+    },
+    {
+      "id": 303,
+      "pmcid": 4357072,
+      "outcome_type": "continuous",
+      "stratum": "continuous"
+    },
+    {
+      "id": 374,
+      "pmcid": 1475568,
+      "outcome_type": "continuous",
+      "stratum": "continuous"
+    },
+    {
+      "id": 268,
+      "pmcid": 3214395,
+      "outcome_type": "continuous",
+      "stratum": "continuous"
+    },
+    {
+      "id": 164,
+      "pmcid": 5062234,
+      "outcome_type": "continuous",
+      "stratum": "continuous"
+    },
+    {
+      "id": 300,
+      "pmcid": 4355974,
+      "outcome_type": "continuous",
+      "stratum": "continuous"
+    },
+    {
+      "id": 156,
+      "pmcid": 5055753,
+      "outcome_type": "continuous",
+      "stratum": "continuous"
+    },
+    {
+      "id": 694,
+      "pmcid": 5712123,
+      "outcome_type": "continuous",
+      "stratum": "continuous"
+    },
+    {
+      "id": 178,
+      "pmcid": 5086025,
+      "outcome_type": "binary",
+      "stratum": "binary"
+    },
+    {
+      "id": 109,
+      "pmcid": 4188762,
+      "outcome_type": "binary",
+      "stratum": "binary"
+    },
+    {
+      "id": 62,
+      "pmcid": 3309311,
+      "outcome_type": "binary",
+      "stratum": "binary"
+    },
+    {
+      "id": 621,
+      "pmcid": 3493722,
+      "outcome_type": "binary",
+      "stratum": "binary"
+    },
+    {
+      "id": 516,
+      "pmcid": 4033571,
+      "outcome_type": "binary",
+      "stratum": "binary"
+    },
+    {
+      "id": 543,
+      "pmcid": 3508963,
+      "outcome_type": "binary",
+      "stratum": "binary"
+    },
+    {
+      "id": 10,
+      "pmcid": 2363753,
+      "outcome_type": "binary",
+      "stratum": "binary"
+    },
+    {
+      "id": 652,
+      "pmcid": 5976307,
+      "outcome_type": "binary",
+      "stratum": "binary"
+    },
+    {
+      "id": 261,
+      "pmcid": 5771543,
+      "outcome_type": "binary",
+      "stratum": "binary"
+    },
+    {
+      "id": 2,
+      "pmcid": 57750,
+      "outcome_type": "binary",
+      "stratum": "binary"
+    },
+    {
+      "id": 476,
+      "pmcid": 4144850,
+      "outcome_type": "binary",
+      "stratum": "binary"
+    },
+    {
+      "id": 547,
+      "pmcid": 3263860,
+      "outcome_type": "binary",
+      "stratum": "binary"
+    },
+    {
+      "id": 484,
+      "pmcid": 3343759,
+      "outcome_type": "binary",
+      "stratum": "binary"
+    },
+    {
+      "id": 253,
+      "pmcid": 5614421,
+      "outcome_type": "binary",
+      "stratum": "binary"
+    },
+    {
+      "id": 20,
+      "pmcid": 2972614,
+      "outcome_type": "binary",
+      "stratum": "binary"
+    }
+  ],
+  "problem_cases": [
+    12,
+    635,
+    636
+  ]
+}
