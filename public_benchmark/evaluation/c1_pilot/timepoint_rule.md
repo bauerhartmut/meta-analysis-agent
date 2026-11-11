@@ -72,8 +72,11 @@ wie der nächste Lauf den Zeitpunkt behandeln muss.
   Gruppengrößen.
 - Record 238 zeigt die gleiche Schwäche: Eine vorhandene Post-Test-Zelle wird
   wegen einer `()`-Schreibweise als leer interpretiert. v5 liest sie korrekt.
-- Record 120 bleibt ein separates ICO-Problem; die Zeitpunktregel löst es
-  nicht und darf dafür nicht als Beleg dienen.
+- Record 120 wurde am 2026-11-11 adjudiziert: Ziel ist der DTPA-Befund
+  „partial obstruction“ (20/44 DTPA-untersuchte Patienten), nicht die
+  Rezidiv-/Reoperationszeile. Die Zeitpunktregel löst diese
+  Outcome-Auswahl nicht; die Entscheidung steht in
+  [`adjudication_record_120.md`](adjudication_record_120.md).
 
 ## Prüfung
 

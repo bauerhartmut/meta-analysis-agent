@@ -3,7 +3,8 @@
 Stand: 2026-11-11
 
 Status: **Dev-Pilot gelaufen; 26/26 Records verarbeitet; Zeitpunktregel entschieden;
-Prompt v5 getestet: 136/140 exakt, vollständige Abdeckung; Testsplit unangetastet.**
+Prompt v5 getestet: 136/140 exakt, vollständige Abdeckung; Record 120 adjudiziert;
+Testsplit unangetastet.**
 Modell: `gwdg/qwen3.5-397b-a17b` über TUDaGPT, Temperatur 0. Der belastbare
 Vergleichspunkt ist `c1_dev_20261111` mit Prompt `c1-dev-extract-v1`.
 
@@ -142,9 +143,23 @@ verbleibende Fehler ist Record 120: Das Modell wählt die Rezidiv-Zeile
 ist unterspezifiziert. Details:
 [`runs/c1_dev_20261111_v5/v5_result.md`](runs/c1_dev_20261111_v5/v5_result.md).
 
-Der Testsplit bleibt gesperrt. Vor einer Testfreigabe muss Record 120
-präzisiert, ausgeschlossen oder vorab adjudiziert werden; v5 ist der erste
-Kandidat mit vollständiger Abdeckung.
+## Adjudikation Record 120
+
+Record 120 bleibt in C1. Das Ziel ist der **DTPA-Befund „partial obstruction“
+einen Monat nach Pyeloplastik**, Analysegruppe 20/44 DTPA-untersuchte
+Patienten; die Rezidiv-/Reoperationszeile 0/30 vs. 1/52 ist ein anderes
+Outcome. Die Referenz bleibt unverändert. Die 20/44 sind eine
+DTPA-untersuchte Untergruppe, nicht die randomisierten 30/52-Arme; das wird
+explizit als Subgruppen-Analyse geführt.
+
+Der v5-Lauf bleibt damit bei 136/140 exakt; die vier falschen Felder sind
+genau Record 120. Details:
+[`adjudication_record_120.md`](adjudication_record_120.md) und
+[`adjudications.json`](adjudications.json).
+
+Der Testsplit bleibt gesperrt. Vor einer Testfreigabe muss ein Prompt die
+DTPA-Zeile gegenüber der Reoperationszeile priorisieren und auf Dev validiert
+werden; v5 ist der erste Kandidat mit vollständiger Abdeckung.
 
 ## Eingefrorene Daten
 

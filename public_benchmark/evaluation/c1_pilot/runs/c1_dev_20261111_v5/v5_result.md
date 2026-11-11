@@ -31,8 +31,11 @@ Record 190 bleibt mit dem 12-Monats-Override korrekt.
 **Record 120, 4 falsch:** Das Modell wählt erneut die Rezidiv-Zeile
 `0/30 vs. 1/52`; die Referenz ist die DTPA-Subgruppe `8/20 vs. 13/44`.
 Die ICO „ureteropelvic junction obstruction“ legt weder Diagnostikweg noch
-Ergebniszeile fest. Das ist kein Zahlen- oder Zeitpunktfehler mehr, sondern
-eine unterspezifizierte ICO.
+Ergebniszeile fest. Der Record wurde am 2026-11-11 adjudiziert: Ziel ist der
+DTPA-Befund „partial obstruction“ (20/44 DTPA-untersuchte Patienten); die
+Rezidivzeile ist ein anderes Outcome. Die Referenz bleibt unverändert, v5
+bleibt bei 136/140. Details:
+[`../adjudication_record_120.md`](../adjudication_record_120.md).
 
 ## Bewertung
 
