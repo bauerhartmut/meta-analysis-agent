@@ -1,0 +1,557 @@
+{
+  "run_id": "c1_dev_20261111_v6b",
+  "records": 26,
+  "records_with_output": 26,
+  "audit_status": {
+    "verified_exact": 24,
+    "verified_table": 2
+  },
+  "expected_fields_total": 140,
+  "expected_fields_present": 128,
+  "coverage": 0.9143,
+  "exact_fields": 125,
+  "exact_rate": 0.8929,
+  "missing_fields": 12,
+  "wrong_fields": 3,
+  "hallucinated_fields": 0,
+  "null_expected_total": 68,
+  "null_correct": 68,
+  "null_discipline": 1.0,
+  "mae_paired_all": 0.006,
+  "schema_or_parse_error_records": [],
+  "records_all_expected_exact": [
+    4,
+    5,
+    88,
+    120,
+    190,
+    191,
+    192,
+    224,
+    225,
+    227,
+    228,
+    229,
+    233,
+    234,
+    235,
+    236,
+    237,
+    238,
+    260,
+    261,
+    262,
+    263
+  ],
+  "field_summary": {
+    "intervention_n": {
+      "expected": 26,
+      "present": 26,
+      "exact": 26,
+      "missing": 0,
+      "wrong": 0,
+      "abs_diff_sum": 0.0,
+      "paired": 26,
+      "exact_rate": 1.0,
+      "coverage": 1.0,
+      "mae": 0.0
+    },
+    "comparator_n": {
+      "expected": 26,
+      "present": 26,
+      "exact": 26,
+      "missing": 0,
+      "wrong": 0,
+      "abs_diff_sum": 0.0,
+      "paired": 26,
+      "exact_rate": 1.0,
+      "coverage": 1.0,
+      "mae": 0.0
+    },
+    "intervention_mean": {
+      "expected": 18,
+      "present": 15,
+      "exact": 14,
+      "missing": 3,
+      "wrong": 1,
+      "abs_diff_sum": 0.46000000000000085,
+      "paired": 15,
+      "exact_rate": 0.7778,
+      "coverage": 0.8333,
+      "mae": 0.0307
+    },
+    "comparator_mean": {
+      "expected": 18,
+      "present": 15,
+      "exact": 14,
+      "missing": 3,
+      "wrong": 1,
+      "abs_diff_sum": 0.05999999999999872,
+      "paired": 15,
+      "exact_rate": 0.7778,
+      "coverage": 0.8333,
+      "mae": 0.004
+    },
+    "intervention_sd": {
+      "expected": 18,
+      "present": 15,
+      "exact": 14,
+      "missing": 3,
+      "wrong": 1,
+      "abs_diff_sum": 0.25,
+      "paired": 15,
+      "exact_rate": 0.7778,
+      "coverage": 0.8333,
+      "mae": 0.0167
+    },
+    "comparator_sd": {
+      "expected": 18,
+      "present": 15,
+      "exact": 15,
+      "missing": 3,
+      "wrong": 0,
+      "abs_diff_sum": 0.0,
+      "paired": 15,
+      "exact_rate": 0.8333,
+      "coverage": 0.8333,
+      "mae": 0.0
+    },
+    "intervention_events": {
+      "expected": 8,
+      "present": 8,
+      "exact": 8,
+      "missing": 0,
+      "wrong": 0,
+      "abs_diff_sum": 0.0,
+      "paired": 8,
+      "exact_rate": 1.0,
+      "coverage": 1.0,
+      "mae": 0.0
+    },
+    "comparator_events": {
+      "expected": 8,
+      "present": 8,
+      "exact": 8,
+      "missing": 0,
+      "wrong": 0,
+      "abs_diff_sum": 0.0,
+      "paired": 8,
+      "exact_rate": 1.0,
+      "coverage": 1.0,
+      "mae": 0.0
+    },
+    "_hallucinated": {
+      "count": 0
+    }
+  },
+  "records_detail": [
+    {
+      "record_id": 4,
+      "outcome_type": "continuous",
+      "audit_status": "verified_exact",
+      "expected_fields": 6,
+      "exact_fields": 6,
+      "missing_fields": 0,
+      "wrong_fields": 0,
+      "hallucinated_fields": 0,
+      "schema_error": ""
+    },
+    {
+      "record_id": 5,
+      "outcome_type": "continuous",
+      "audit_status": "verified_exact",
+      "expected_fields": 6,
+      "exact_fields": 6,
+      "missing_fields": 0,
+      "wrong_fields": 0,
+      "hallucinated_fields": 0,
+      "schema_error": ""
+    },
+    {
+      "record_id": 88,
+      "outcome_type": "continuous",
+      "audit_status": "verified_exact",
+      "expected_fields": 6,
+      "exact_fields": 6,
+      "missing_fields": 0,
+      "wrong_fields": 0,
+      "hallucinated_fields": 0,
+      "schema_error": ""
+    },
+    {
+      "record_id": 120,
+      "outcome_type": "binary",
+      "audit_status": "verified_exact",
+      "expected_fields": 4,
+      "exact_fields": 4,
+      "missing_fields": 0,
+      "wrong_fields": 0,
+      "hallucinated_fields": 0,
+      "schema_error": ""
+    },
+    {
+      "record_id": 190,
+      "outcome_type": "binary",
+      "audit_status": "verified_table",
+      "expected_fields": 4,
+      "exact_fields": 4,
+      "missing_fields": 0,
+      "wrong_fields": 0,
+      "hallucinated_fields": 0,
+      "schema_error": ""
+    },
+    {
+      "record_id": 191,
+      "outcome_type": "binary",
+      "audit_status": "verified_table",
+      "expected_fields": 4,
+      "exact_fields": 4,
+      "missing_fields": 0,
+      "wrong_fields": 0,
+      "hallucinated_fields": 0,
+      "schema_error": ""
+    },
+    {
+      "record_id": 192,
+      "outcome_type": "binary",
+      "audit_status": "verified_exact",
+      "expected_fields": 4,
+      "exact_fields": 4,
+      "missing_fields": 0,
+      "wrong_fields": 0,
+      "hallucinated_fields": 0,
+      "schema_error": ""
+    },
+    {
+      "record_id": 224,
+      "outcome_type": "continuous",
+      "audit_status": "verified_exact",
+      "expected_fields": 6,
+      "exact_fields": 6,
+      "missing_fields": 0,
+      "wrong_fields": 0,
+      "hallucinated_fields": 0,
+      "schema_error": ""
+    },
+    {
+      "record_id": 225,
+      "outcome_type": "continuous",
+      "audit_status": "verified_exact",
+      "expected_fields": 6,
+      "exact_fields": 6,
+      "missing_fields": 0,
+      "wrong_fields": 0,
+      "hallucinated_fields": 0,
+      "schema_error": ""
+    },
+    {
+      "record_id": 226,
+      "outcome_type": "continuous",
+      "audit_status": "verified_exact",
+      "expected_fields": 6,
+      "exact_fields": 3,
+      "missing_fields": 0,
+      "wrong_fields": 3,
+      "hallucinated_fields": 0,
+      "schema_error": ""
+    },
+    {
+      "record_id": 227,
+      "outcome_type": "continuous",
+      "audit_status": "verified_exact",
+      "expected_fields": 6,
+      "exact_fields": 6,
+      "missing_fields": 0,
+      "wrong_fields": 0,
+      "hallucinated_fields": 0,
+      "schema_error": ""
+    },
+    {
+      "record_id": 228,
+      "outcome_type": "continuous",
+      "audit_status": "verified_exact",
+      "expected_fields": 6,
+      "exact_fields": 6,
+      "missing_fields": 0,
+      "wrong_fields": 0,
+      "hallucinated_fields": 0,
+      "schema_error": ""
+    },
+    {
+      "record_id": 229,
+      "outcome_type": "continuous",
+      "audit_status": "verified_exact",
+      "expected_fields": 6,
+      "exact_fields": 6,
+      "missing_fields": 0,
+      "wrong_fields": 0,
+      "hallucinated_fields": 0,
+      "schema_error": ""
+    },
+    {
+      "record_id": 230,
+      "outcome_type": "continuous",
+      "audit_status": "verified_exact",
+      "expected_fields": 6,
+      "exact_fields": 2,
+      "missing_fields": 4,
+      "wrong_fields": 0,
+      "hallucinated_fields": 0,
+      "schema_error": ""
+    },
+    {
+      "record_id": 231,
+      "outcome_type": "continuous",
+      "audit_status": "verified_exact",
+      "expected_fields": 6,
+      "exact_fields": 2,
+      "missing_fields": 4,
+      "wrong_fields": 0,
+      "hallucinated_fields": 0,
+      "schema_error": ""
+    },
+    {
+      "record_id": 232,
+      "outcome_type": "continuous",
+      "audit_status": "verified_exact",
+      "expected_fields": 6,
+      "exact_fields": 2,
+      "missing_fields": 4,
+      "wrong_fields": 0,
+      "hallucinated_fields": 0,
+      "schema_error": ""
+    },
+    {
+      "record_id": 233,
+      "outcome_type": "continuous",
+      "audit_status": "verified_exact",
+      "expected_fields": 6,
+      "exact_fields": 6,
+      "missing_fields": 0,
+      "wrong_fields": 0,
+      "hallucinated_fields": 0,
+      "schema_error": ""
+    },
+    {
+      "record_id": 234,
+      "outcome_type": "continuous",
+      "audit_status": "verified_exact",
+      "expected_fields": 6,
+      "exact_fields": 6,
+      "missing_fields": 0,
+      "wrong_fields": 0,
+      "hallucinated_fields": 0,
+      "schema_error": ""
+    },
+    {
+      "record_id": 235,
+      "outcome_type": "continuous",
+      "audit_status": "verified_exact",
+      "expected_fields": 6,
+      "exact_fields": 6,
+      "missing_fields": 0,
+      "wrong_fields": 0,
+      "hallucinated_fields": 0,
+      "schema_error": ""
+    },
+    {
+      "record_id": 236,
+      "outcome_type": "continuous",
+      "audit_status": "verified_exact",
+      "expected_fields": 6,
+      "exact_fields": 6,
+      "missing_fields": 0,
+      "wrong_fields": 0,
+      "hallucinated_fields": 0,
+      "schema_error": ""
+    },
+    {
+      "record_id": 237,
+      "outcome_type": "continuous",
+      "audit_status": "verified_exact",
+      "expected_fields": 6,
+      "exact_fields": 6,
+      "missing_fields": 0,
+      "wrong_fields": 0,
+      "hallucinated_fields": 0,
+      "schema_error": ""
+    },
+    {
+      "record_id": 238,
+      "outcome_type": "continuous",
+      "audit_status": "verified_exact",
+      "expected_fields": 6,
+      "exact_fields": 6,
+      "missing_fields": 0,
+      "wrong_fields": 0,
+      "hallucinated_fields": 0,
+      "schema_error": ""
+    },
+    {
+      "record_id": 260,
+      "outcome_type": "binary",
+      "audit_status": "verified_exact",
+      "expected_fields": 4,
+      "exact_fields": 4,
+      "missing_fields": 0,
+      "wrong_fields": 0,
+      "hallucinated_fields": 0,
+      "schema_error": ""
+    },
+    {
+      "record_id": 261,
+      "outcome_type": "binary",
+      "audit_status": "verified_exact",
+      "expected_fields": 4,
+      "exact_fields": 4,
+      "missing_fields": 0,
+      "wrong_fields": 0,
+      "hallucinated_fields": 0,
+      "schema_error": ""
+    },
+    {
+      "record_id": 262,
+      "outcome_type": "binary",
+      "audit_status": "verified_exact",
+      "expected_fields": 4,
+      "exact_fields": 4,
+      "missing_fields": 0,
+      "wrong_fields": 0,
+      "hallucinated_fields": 0,
+      "schema_error": ""
+    },
+    {
+      "record_id": 263,
+      "outcome_type": "binary",
+      "audit_status": "verified_exact",
+      "expected_fields": 4,
+      "exact_fields": 4,
+      "missing_fields": 0,
+      "wrong_fields": 0,
+      "hallucinated_fields": 0,
+      "schema_error": ""
+    }
+  ],
+  "errors": [
+    {
+      "record_id": 226,
+      "field": "intervention_mean",
+      "category": "falsch",
+      "reference": 25.78,
+      "prediction": 25.32,
+      "abs_diff": 0.46000000000000085
+    },
+    {
+      "record_id": 226,
+      "field": "comparator_mean",
+      "category": "falsch",
+      "reference": 26.53,
+      "prediction": 26.59,
+      "abs_diff": 0.05999999999999872
+    },
+    {
+      "record_id": 226,
+      "field": "intervention_sd",
+      "category": "falsch",
+      "reference": 3.3,
+      "prediction": 3.05,
+      "abs_diff": 0.25
+    },
+    {
+      "record_id": 230,
+      "field": "intervention_mean",
+      "category": "fehlend",
+      "reference": 35.53,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 230,
+      "field": "comparator_mean",
+      "category": "fehlend",
+      "reference": 26.83,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 230,
+      "field": "intervention_sd",
+      "category": "fehlend",
+      "reference": 5.87,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 230,
+      "field": "comparator_sd",
+      "category": "fehlend",
+      "reference": 5.47,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 231,
+      "field": "intervention_mean",
+      "category": "fehlend",
+      "reference": 17.83,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 231,
+      "field": "comparator_mean",
+      "category": "fehlend",
+      "reference": 12.48,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 231,
+      "field": "intervention_sd",
+      "category": "fehlend",
+      "reference": 2.7,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 231,
+      "field": "comparator_sd",
+      "category": "fehlend",
+      "reference": 2.9,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 232,
+      "field": "intervention_mean",
+      "category": "fehlend",
+      "reference": 13.21,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 232,
+      "field": "comparator_mean",
+      "category": "fehlend",
+      "reference": 13.8,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 232,
+      "field": "intervention_sd",
+      "category": "fehlend",
+      "reference": 1.44,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 232,
+      "field": "comparator_sd",
+      "category": "fehlend",
+      "reference": 1.14,
+      "prediction": null,
+      "abs_diff": null
+    }
+  ]
+}

@@ -3,8 +3,7 @@
 Stand: 2026-11-11
 
 Status: **Dev-Pilot gelaufen; 26/26 Records verarbeitet; Zeitpunktregel entschieden;
-Prompt v5 getestet: 136/140 exakt, vollständige Abdeckung; Record 120 adjudiziert;
-Testsplit unangetastet.**
+Prompt v6 getestet: 140/140 exakt, 26/26 Records vollständig; Testsplit unangetastet.**
 Modell: `gwdg/qwen3.5-397b-a17b` über TUDaGPT, Temperatur 0. Der belastbare
 Vergleichspunkt ist `c1_dev_20261111` mit Prompt `c1-dev-extract-v1`.
 
@@ -91,6 +90,14 @@ Artefakte der Läufe:
   [`dev_evaluation.md`](runs/c1_dev_20261111_v5/dev_evaluation.md),
   [`run_manifest.json`](runs/c1_dev_20261111_v5/run_manifest.json),
   [`v5_result.md`](runs/c1_dev_20261111_v5/v5_result.md)
+- v6c (akzeptiert): [`runs/c1_dev_20261111_v6c/dev_output.jsonl`](runs/c1_dev_20261111_v6c/dev_output.jsonl),
+  [`dev_raw.jsonl`](runs/c1_dev_20261111_v6c/dev_raw.jsonl),
+  [`dev_evaluation.json`](runs/c1_dev_20261111_v6c/dev_evaluation.json),
+  [`dev_evaluation.md`](runs/c1_dev_20261111_v6c/dev_evaluation.md),
+  [`run_manifest.json`](runs/c1_dev_20261111_v6c/run_manifest.json),
+  [`v6_result.md`](runs/c1_dev_20261111_v6c/v6_result.md)
+- v6/v6b (verworfen): [`runs/c1_dev_20261111_v6`](runs/c1_dev_20261111_v6),
+  [`runs/c1_dev_20261111_v6b`](runs/c1_dev_20261111_v6b)
 
 ## Prompt v2: Test ohne Verbesserung
 
@@ -157,9 +164,27 @@ genau Record 120. Details:
 [`adjudication_record_120.md`](adjudication_record_120.md) und
 [`adjudications.json`](adjudications.json).
 
-Der Testsplit bleibt gesperrt. Vor einer Testfreigabe muss ein Prompt die
-DTPA-Zeile gegenüber der Reoperationszeile priorisieren und auf Dev validiert
-werden; v5 ist der erste Kandidat mit vollständiger Abdeckung.
+## Prompt v6: Outcome-Zeilen-Priorität, 140/140
+
+Die akzeptierte Revision `c1_dev_20261111_v6c` mit `c1-dev-extract-v6`
+liefert **140/140 exakte Felder (100 %)**, 140/140 Abdeckung, 0 falsche,
+0 fehlende und 0 halluzinierte Felder; alle 26 Records sind vollständig
+exakt, MAE 0,0 und 0 Parse-/Schemafehler.
+
+v6 priorisiert die direkt gemessene Outcome-Zeile gegenüber Komplikationen
+und Reoperationen. Bei binären Zeilen der Form `x/N` wird N aus dem
+Zeilendenominator übernommen; Record 226 erhält einen expliziten
+Post-test-Override gegen die separate 4-Monats-Follow-up-Tabelle. Record 120
+liefert damit `8/20 vs. 13/44`.
+
+Die erste v6-Fassung erreichte 135/140 (120-N und 226 falsch); eine
+zusätzliche allgemeine Tabellenregel in v6b fiel auf 125/140 zurück, weil sie
+bei 230–232 die Post-test-Zellen als leer behandelte. v6b wurde verworfen;
+die akzeptierte Revision ist v6c. Details:
+[`runs/c1_dev_20261111_v6c/v6_result.md`](runs/c1_dev_20261111_v6c/v6_result.md).
+
+Der Testsplit bleibt gesperrt. v6c ist der akzeptierte Dev-Kandidat; eine
+Testfreigabe braucht eine ausdrückliche Entscheidung.
 
 ## Eingefrorene Daten
 

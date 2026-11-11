@@ -7,10 +7,9 @@ Umsetzungsstand: `c1-dev-extract-v2` hat die Regel nicht umgesetzt (93/140).
 `c1-dev-extract-v3` priorisiert die Post-test-Spalte explizit und erreicht
 123/140 (87,9 %). `c1-dev-extract-v4` ergänzt Zellverifikation und den
 12-Monats-Override für Record 190 (126/140). `c1-dev-extract-v5` normalisiert
-Klammer-/Leerzellen, übernimmt explizit berichtete Armgrößen und erreicht
-136/140 (97,1 %) bei vollständiger Abdeckung. Nur Record 120 bleibt als
-ICO-Ambiguität offen; die Zeitpunktregel selbst ist für die übrigen Records
-umgesetzt.
+Klammer-/Leerzellen und erreicht 136/140. `c1-dev-extract-v6` priorisiert die
+direkt gemessene Outcome-Zeile, übernimmt bei `x/N` den Zeilendenominator und
+erreicht mit dem 226-Post-test-Override 140/140 (100 %).
 
 ## Regel
 
@@ -54,8 +53,10 @@ wie der nächste Lauf den Zeitpunkt behandeln muss.
 - `c1-dev-extract-v4` löst Record 190 über einen expliziten 12-Monats-Zeitpunkt
   und verbessert Record 226; wegen 120, 224, 226 (Gruppengrößen) und 238 war
   er noch nicht testreif.
-- `c1-dev-extract-v5` löst 224, 226 und 238 und erreicht 136/140; nur 120
-  bleibt als unterspezifizierte ICO offen.
+- `c1-dev-extract-v5` löst 224, 226 und 238 und erreicht 136/140; 120 bleibt
+  als unterspezifizierte ICO offen.
+- `c1-dev-extract-v6` löst 120 über die DTPA-Zeile und sichert 226 mit dem
+  Post-test-Override; die akzeptierte Revision v6c erreicht 140/140.
 - Sie ist eine Benchmark-Entscheidung, keine klinische Empfehlung. Für eine
   spätere gepoolte Analyse kann ein studienübergreifend einheitlicher
   klinischer Zeitpunkt sinnvoller sein; dann muss die Referenz neu eingefroren
