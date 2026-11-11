@@ -101,5 +101,13 @@ publizierte Pool 0.83 [0.70; 0.99] mit I² 49,3 % ist aus den sechs
 Tabellenwerten nicht reproduzierbar; die Rechnung ergibt 0.828 [0.761;
 0.900] mit I² 0 %. Zusätzlich spricht die Tabelle bei Kenfield und Van
 Blarigan für dieselbe HPFS-Kohorte (je 4577), und McCullough ist im Zitat
-eine Brustkrebs-Arbeit, in der Tabelle aber als kolorektal geführt. Der
-Fall bleibt als Auditfall dokumentiert, nicht als sauberer Pilot.
+eine Brustkrebs-Arbeit, in der Tabelle aber als kolorektal geführt.Der Fall bleibt als Auditfall dokumentiert, nicht als sauberer Pilot.
+
+## Zugangsstatus (2026-11-11)
+
+Der CBT-I-Pilot ist **blockiert**: Nur Egbegi 2021 hat einen freien
+PMC-PDF-Zugang. Chan 2021 und de Bruin 2018 haben freie PDFs auf
+Verlags-/Repositoriumsseiten, aber nicht in PMC. Für Chan 2022,
+de Bruin 2015 und Tomfohr-Madsen 2020 wurde kein gesicherter freier
+PDF-Zugang gefunden. Details:
+`docs/internal/meta_nachbau_zugang_20261111.md`.
