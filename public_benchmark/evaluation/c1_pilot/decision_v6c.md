@@ -1,9 +1,9 @@
 # Entscheidungsvorlage: v6c für die Meta-Analyse?
 
 Stand: 2026-11-11
-Status: **Vorschlag, nicht freigegeben**
-Entscheidungseigentümer: offen
-Entscheidung: **offen**
+Status: **ENTSCHIEDEN (2026-11-11)**
+Entscheidungseigentümer: Nutzer
+Entscheidung: **Option C - neuer Kandidat auf unabhängigen Daten**
 
 ## 1. Entscheidungsfrage
 
@@ -17,10 +17,13 @@ statistische Pooling-Engine. Sie betrifft nur die Frage, ob die von v6c
 extrahierten Armwerte (N, Mean, SD, Ereigniszahlen) ohne vollständige
 menschliche Nachprüfung in eine Meta-Analyse übernommen werden dürfen.
 
-## 2. Kurzentscheidung
+## 2. Beschluss
 
-**Empfehlung: neuer Kandidat auf unabhängigen Daten. v6c reicht nicht für
-eine autonome oder ungeprüfte Meta-Analyse.**
+**Beschlossen: Option C - neuer Kandidat auf unabhängigen Daten. v6c reicht
+nicht für eine autonome oder ungeprüfte Meta-Analyse.**
+
+Die Gates G1–G5 sind als Projektstandard v1 festgelegt:
+[`c1_acceptance_gates_v1.md`](c1_acceptance_gates_v1.md).
 
 v6c ist technisch sauber und auf Dev perfekt, aber auf dem eingefrorenen
 Testlauf nur in **992/1308 Feldern (75,8 %)** exakt und in **148/249 Records
@@ -46,9 +49,9 @@ automatische Extraktion und keine Antwort auf die Frage, ob v6c
 | [`../../../METAANALYSE.md`](../../../METAANALYSE.md) | Anforderungen an numerische Extraktion und Pooling |
 | [`../../../ENTWICKLUNGSAUFTRAG_v2.md`](../../../ENTWICKLUNGSAUFTRAG_v2.md) | Abnahmekriterien; Zielwerte müssen benchmarkspezifisch festgelegt werden |
 
-Wichtig: In den Projektunterlagen ist **kein formaler C1-Schwellenwert**
-definiert. Die Gates in Abschnitt 5 sind daher ein Vorschlag und müssen vor
-einer Entscheidung bestätigt oder ersetzt werden.
+Zum Zeitpunkt der Testauswertung lag **kein formaler C1-Schwellenwert** vor.
+Mit dieser Entscheidung sind die Gates in Abschnitt 5 als Projektstandard v1
+festgelegt; sie gelten für den nächsten Kandidaten.
 
 ## 4. Was der Testlauf zeigt
 
@@ -114,10 +117,12 @@ Records aus 64 Artikeln; die 26 Dev-Records stammen aus 6 Artikeln. Die
 Records sind innerhalb der Artikel geclustert; die berichteten Quoten sind
 deskriptiv und keine unabhängigen Artikelstichproben.
 
-## 5. Vorgeschlagene Entscheidungsgates
+## 5. Beschlossene Entscheidungsgates
 
-Die folgenden Gates sind **Vorschläge**, keine bereits beschlossenen
-Projektstandards. Sie sind bewusst vor der Entscheidung offengelegt.
+Die folgenden Gates sind mit Option C als **Projektstandard v1** beschlossen.
+Sie gelten für den nächsten C1-Kandidaten und für jede autonome bzw.
+ungeprüfte Freigabe. Details und Prüfregeln:
+[`c1_acceptance_gates_v1.md`](c1_acceptance_gates_v1.md).
 
 | Gate | Vorschlag | v6c | Bewertung |
 |---|---|---|---|
@@ -130,11 +135,13 @@ Projektstandards. Sie sind bewusst vor der Entscheidung offengelegt.
 **Konsequenz:** v6c besteht nur das Integritätsgate. Die Entscheidung
 „ausreichend für autonome Meta-Analyse“ ist damit klar zu verneinen.
 
-Wenn der Entscheidungseigentümer andere Schwellen will, müssen sie vor einem
-neuen Lauf schriftlich festgelegt werden. Eine nachträgliche Lockerung nach
-Sicht der Ergebnisse wäre keine belastbare Abnahme.
+Die Gates sind bindend. Änderungen sind nur vor dem nächsten Lauf als neue
+Policy-Version zulässig; eine nachträgliche Lockerung nach Sicht der
+Ergebnisse wäre keine belastbare Abnahme.
 
 ## 6. Optionen
+
+**Gewählt: Option C - neuer Kandidat auf unabhängigen Daten.**
 
 ### Option A — v6c ungeprüft akzeptieren
 
@@ -161,7 +168,7 @@ Genauigkeitsfrage.
 
 ### Option C — neuer Kandidat auf unabhängigen Daten
 
-**Empfohlen.** Der neue Kandidat sollte:
+**Empfohlen.** Der neue Kandidat wird:
 
 - auf Dev oder einem neuen Entwicklungsanteil prompt- und pipelineseitig
   verbessert werden,
@@ -180,7 +187,7 @@ Problem ist die Generalisierung von v6c, nicht die Aufgabe. Ein Stopp wäre
 nur sinnvoll, wenn weder ein neuer unabhängiger Holdout noch eine
 assistierte Nutzung mit vollständiger Prüfung gewollt ist.
 
-## 7. Empfehlung
+## 7. Beschluss und Auflagen
 
 1. **v6c nicht als autonome Extraktion für die Meta-Analyse freigeben.**
 2. **Den 249er-Test nicht für die Entwicklung des nächsten Kandidaten
@@ -195,9 +202,9 @@ assistierte Nutzung mit vollständiger Prüfung gewollt ist.
 5. **Die Gates vor dem nächsten Lauf festschreiben** und danach nicht
    nachträglich ändern.
 
-## 8. Was die Empfehlung ändern würde
+## 8. Was den Beschluss ändern würde
 
-- Der Entscheidungseigentümer senkt den Scope ausdrücklich auf
+- Eine neue dokumentierte Entscheidung senkt den Scope ausdrücklich auf
   „Vorschlagsgenerator mit vollständiger menschlicher Prüfung“ und akzeptiert
   die 40,6 % fehlerhaften Records als Prüfaufwand.
 - Ein neuer, unabhängiger Holdout bestätigt die Gates aus Abschnitt 5.
@@ -220,14 +227,15 @@ assistierte Nutzung mit vollständiger Prüfung gewollt ist.
 
 ## 10. Nächste Schritte
 
-1. Diese Vorlage entscheiden und den Scope (autonom/assistiert) festhalten.
-2. Gates G1–G5 bestätigen oder durch dokumentierte Alternativen ersetzen.
-3. Unabhängigen Holdout beschaffen oder neu annotieren; 249er-Test nicht
+1. Gates v1 als verbindlichen Standard [verlinkt](c1_acceptance_gates_v1.md)
+   verwenden; keine Änderung nach Sicht neuer Ergebnisse.
+2. Unabhängigen Holdout beschaffen oder neu annotieren; 249er-Test nicht
    wiederverwenden.
-4. Neuen Kandidaten auf Dev/neuem Entwicklungsanteil entwickeln; keine
+3. Neuen Kandidaten auf Dev/neuem Entwicklungsanteil entwickeln; keine
    Testoptimierung.
-5. Genau einen freigegebenen Evaluationslauf auf dem neuen Holdout
-   durchführen; Ergebnis und Fehleranalyse wie bei v6c dokumentieren.
+4. Genau einen freigegebenen Evaluationslauf auf dem neuen Holdout
+   durchführen; G1–G5 vor dem Lauf einfrieren.
+5. Ergebnis, Fehleranalyse und Gate-Status wie bei v6c dokumentieren.
 
 **In diesem Schritt:** keine Prompt-Änderung, kein neuer Modelllauf, keine
 Freigabe für automatische Extraktion.
@@ -236,13 +244,10 @@ Freigabe für automatische Extraktion.
 
 | Feld | Eintrag |
 |---|---|
-| Entscheidung | offen |
-| Option | offen |
-| Begründung | offen |
-| Datum | offen |
-| Entscheidungseigentümer | offen |
-| Auflagen | offen |
-| Nächste Überprüfung | offen |
-
-**Empfohlene Eintragung:** Option C — neuer Kandidat auf unabhängigen Daten;
-v6c bis dahin nur assistiert mit vollständiger menschlicher Prüfung.
+| Entscheidung | **Option C angenommen** |
+| Option | neuer Kandidat auf unabhängigen Daten |
+| Begründung | 992/1308 exakt (75,8 %), 148/249 vollständig exakt (59,4 %); G2–G5 nicht bestanden |
+| Datum | 2026-11-11 |
+| Entscheidungseigentümer | Nutzer |
+| Auflagen | Gates v1; neuer unabhängiger Holdout; kein Test-Reuse; v6c nur assistiert mit 100 % Prüfung |
+| Nächste Überprüfung | nach Holdout-Manifest, vor dem nächsten Lauf |

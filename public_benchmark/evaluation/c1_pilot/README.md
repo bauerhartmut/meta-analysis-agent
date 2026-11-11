@@ -5,7 +5,8 @@ Stand: 2026-11-11
 Status: **Dev-Pilot gelaufen; 26/26 Records verarbeitet; Zeitpunktregel entschieden;
 Prompt v6 getestet: 140/140 exakt, 26/26 Records vollständig; Testprojektion
 erzeugt, unabhängig geprüft und Release-Manifest erstellt; Testlauf abgeschlossen:
-992/1308 exakt (75,8 %), 0 Parse-/Schemafehler, 0 Halluzinationen.**
+992/1308 exakt (75,8 %), 0 Parse-/Schemafehler, 0 Halluzinationen; Option C
+entschieden, Gates v1 festgelegt.**
 Modell: `gwdg/qwen3.5-397b-a17b` über TUDaGPT, Temperatur 0. Der belastbare
 Vergleichspunkt ist `c1_dev_20261111` mit Prompt `c1-dev-extract-v1`.
 
@@ -248,15 +249,15 @@ bei 684/684. Details:
 [`test_error_analysis.md`](runs_test/c1_test_20261111_v6c/test_error_analysis.md).
 Keine Prompt-Änderung, kein neuer Modelllauf.
 
-## Entscheidungsvorlage v6c
+## Entscheidung v6c
 
-Status: **Vorschlag, nicht freigegeben.** Die Vorlage
-[`decision_v6c.md`](decision_v6c.md) prüft, ob v6c für die Meta-Analyse
-ausreicht. Empfehlung: **neuer Kandidat auf unabhängigen Daten**; v6c nur
-assistiert mit vollständiger menschlicher Prüfung. Der 249er-Test wird nicht
-zur Entwicklung des nächsten Kandidaten wiederverwendet. Es gibt keinen
-formalen C1-Schwellenwert; die vorgeschlagenen Gates sind ausdrücklich als
-Vorschlag markiert. Kein neuer Modelllauf.
+Status: **ENTSCHIEDEN (2026-11-11).** Option C: **neuer Kandidat auf
+unabhängigen Daten**. v6c wird nicht für eine autonome bzw. ungeprüfte
+Meta-Analyse freigegeben; assistierte Nutzung nur mit 100 % menschlicher
+Prüfung. Die Gates G1–G5 sind als Projektstandard v1 festgelegt:
+[`c1_acceptance_gates_v1.md`](c1_acceptance_gates_v1.md). Der 249er-Test wird
+nicht zur Entwicklung des nächsten Kandidaten wiederverwendet. Kein neuer
+Modelllauf.
 
 ## Eingefrorene Daten
 

@@ -1,0 +1,96 @@
+{
+  "policy_id": "c1-acceptance-gates-v1",
+  "status": "adopted",
+  "adopted_at": "2026-11-11",
+  "decision": "option_c_new_candidate_independent_data",
+  "scope": "next_c1_candidate_autonomous_or_unverified_numeric_extraction",
+  "assisted_use_is_gate_pass": false,
+  "decision_rule": "all_gates_must_pass",
+  "no_post_hoc_relaxation": true,
+  "gates": {
+    "G1_integrity": {
+      "description": "Technisch vollstaendiger und strukturell verlaesslicher Lauf",
+      "checks": {
+        "records_with_output_equals_records": true,
+        "schema_or_parse_errors": 0,
+        "hallucinated_fields": 0,
+        "null_discipline": 1.0
+      }
+    },
+    "G2_record_completeness": {
+      "description": "Alle erwarteten Felder liegen fuer den Record vor",
+      "metric": "share_records_with_missing_fields_zero",
+      "minimum": 0.95
+    },
+    "G3_field_accuracy": {
+      "description": "Feldebene ist genau genug fuer das Pooling",
+      "checks": {
+        "overall_exact_rate_minimum": 0.95,
+        "per_critical_field_exact_rate_minimum": 0.95
+      },
+      "critical_fields": [
+        "intervention_n",
+        "comparator_n",
+        "intervention_mean",
+        "comparator_mean",
+        "intervention_sd",
+        "comparator_sd",
+        "intervention_events",
+        "comparator_events"
+      ]
+    },
+    "G4_record_accuracy": {
+      "description": "Records sind als Ganzes exakt",
+      "metric": "share_records_all_expected_fields_exact",
+      "minimum": 0.9
+    },
+    "G5_independent_validation": {
+      "description": "Neuer, vorab eingefrorener und unabhaengiger Holdout",
+      "required_holdout_manifest_fields": {
+        "independent_of_dev": true,
+        "excluded_consumed_test": true,
+        "articles_disjoint": true,
+        "pre_registered": true,
+        "prompt_frozen_before_run": true
+      },
+      "consumed_test_reuse_allowed": false,
+      "allowed_evaluation_runs": 1
+    }
+  },
+  "v6c_baseline": {
+    "status": "not_approved",
+    "G1": "passed",
+    "G2": {
+      "records_all_expected_present": 217,
+      "records": 249,
+      "share": 0.8715,
+      "passed": false
+    },
+    "G3": {
+      "exact_fields": 992,
+      "expected_fields": 1308,
+      "exact_rate": 0.7584,
+      "critical_field_exact_rate_min": 0.6667,
+      "critical_field_exact_rate_max": 0.871,
+      "passed": false
+    },
+    "G4": {
+      "records_all_expected_exact": 148,
+      "records": 249,
+      "share": 0.5944,
+      "passed": false
+    },
+    "G5": {
+      "independent_holdout": false,
+      "consumed_test_reused": false,
+      "passed": false
+    }
+  },
+  "test_policy": {
+    "consumed_test": "c1_test_20261111_v6c",
+    "consumed_test_reuse": "retrospective_diagnostics_only",
+    "development_data": "dev_or_new_development_partition",
+    "new_candidate_gate": "new_independent_holdout_required"
+  },
+  "source": "decision_v6c.md"
+}
