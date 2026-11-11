@@ -4,4 +4,5 @@ data/golden_effects/blind_b_20261110/SHA256SUMS.txt -text
 # C1-Freeze-Hashes werden ueber LF-Bytes berechnet.
 public_benchmark/processed_data/*.jsonl text eol=lf
 public_benchmark/evaluation/c1_pilot/*.jsonl text eol=lf
+public_benchmark/evaluation/c1_pilot/*.sha256 text eol=lf
 public_benchmark/validation/c1_freeze_manifest.json text eol=lf
