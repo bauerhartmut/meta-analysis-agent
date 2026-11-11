@@ -10,6 +10,11 @@ entschieden, Gates v1 festgelegt.**
 Modell: `gwdg/qwen3.5-397b-a17b` über TUDaGPT, Temperatur 0. Der belastbare
 Vergleichspunkt ist `c1_dev_20261111` mit Prompt `c1-dev-extract-v1`.
 
+## Tagesbericht
+
+Der vollständige Bericht zum 2026-11-11 steht in
+[`tagesbericht_20261111.md`](tagesbericht_20261111.md).
+
 ## Ergebnis
 
 | Kennzahl | Wert |
