@@ -1,0 +1,164 @@
+{
+  "case_id": "pilot_cbti_20261111",
+  "source_meta_analysis": {
+    "title": "The efficacy of cognitive behavioral therapy for insomnia in adolescents: a systematic review and meta-analysis of randomized controlled trials",
+    "authors": "Mei Z, Cai C, Luo S, Zhang Y, Lam C, Luo S",
+    "year": 2024,
+    "doi": "10.3389/fpubh.2024.1413694",
+    "pmcid": "PMC11613502",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11613502/",
+    "local_text": "data/bench/sol/fulltext/ceab2005d69c001877e3752b992e3cb8.txt",
+    "figure_post_treatment": "data/meta_nachbau/pilot_cbti/quellen/figur4.jpg"
+  },
+  "outcome": "Insomnie-Schweregrad, post-treatment",
+  "effect_measure": "SMD (negativ = Vorteil fuer CBT-I)",
+  "model": "Random-Effects, DerSimonian-Laird",
+  "k": 6,
+  "studies": [
+    {
+      "study_id": "chan_2022",
+      "citation": "Chan NY et al. Efficacy of email-delivered versus face-to-face group cognitive behavioral therapy for insomnia in youths: a randomized controlled trial. J Adolesc Health. 2022;70:763-73.",
+      "doi": "10.1016/j.jadohealth.2021.11.005",
+      "country_reported_in_table": "China",
+      "n_treatment": 45,
+      "mean_treatment": 9.00,
+      "sd_treatment": 4.50,
+      "n_control": 45,
+      "mean_control": 13.70,
+      "sd_control": 5.10,
+      "smd_published": -0.98,
+      "ci_low": -1.41,
+      "ci_high": -0.54
+    },
+    {
+      "study_id": "chan_2021",
+      "citation": "Chan NY et al. A prevention program for insomnia in at-risk adolescents: a randomized controlled study. Pediatrics. 2021;147:1-9.",
+      "doi": "10.1542/peds.2020-006833",
+      "country_reported_in_table": "China",
+      "n_treatment": 121,
+      "mean_treatment": 8.10,
+      "sd_treatment": 4.10,
+      "n_control": 121,
+      "mean_control": 8.80,
+      "sd_control": 4.25,
+      "smd_published": -0.17,
+      "ci_low": -0.42,
+      "ci_high": 0.08
+    },
+    {
+      "study_id": "de_bruin_2018",
+      "citation": "de Bruin EJ, Bogels SM, Oort FJ, Meijer AM. Improvements of adolescent psychopathology after insomnia treatment: results from a randomized controlled trial over 1 year. J Child Psychol Psychiatry. 2018;59:509-22.",
+      "doi": "10.1111/jcpp.12834",
+      "country_reported_in_table": "Netherlands",
+      "n_treatment": 38,
+      "mean_treatment": 3.01,
+      "sd_treatment": 0.59,
+      "n_control": 39,
+      "mean_control": 3.74,
+      "sd_control": 0.62,
+      "smd_published": -1.21,
+      "ci_low": -1.69,
+      "ci_high": -0.72
+    },
+    {
+      "study_id": "de_bruin_2015",
+      "citation": "de Bruin EJ, Dewald-Kaufmann JF, Oort FJ, Bogels SM, Meijer AM. Differential effects of online insomnia treatment on executive functions in adolescents. Sleep Med. 2015;16:510-20.",
+      "doi": "10.1016/j.sleep.2014.12.009",
+      "country_reported_in_table": "Netherlands",
+      "n_treatment": 18,
+      "mean_treatment": 2.88,
+      "sd_treatment": 0.71,
+      "n_control": 14,
+      "mean_control": 3.36,
+      "sd_control": 0.67,
+      "smd_published": -0.69,
+      "ci_low": -1.41,
+      "ci_high": 0.03
+    },
+    {
+      "study_id": "egbegi_2021",
+      "citation": "Egbegi DR, Bella-Awusah T, Omigbodun O, Ani C. A controlled trial of cognitive Behavioural therapy-based strategies for insomnia among in-school adolescents in southern Nigeria. Child Adolesc Psychiatry Ment Health. 2021;15:52.",
+      "doi": "10.1186/s13034-021-00406-1",
+      "country_reported_in_table": "UK (im Zitat: Nigeria)",
+      "n_treatment": 21,
+      "mean_treatment": 6.76,
+      "sd_treatment": 1.81,
+      "n_control": 16,
+      "mean_control": 11.29,
+      "sd_control": 2.10,
+      "smd_published": -2.34,
+      "ci_low": -3.18,
+      "ci_high": -1.50
+    },
+    {
+      "study_id": "tomfohr_madsen_2020",
+      "citation": "Tomfohr-Madsen L, Madsen JW, Bonneville D, Virani S, Plourde V, Barlow KM, et al. A pilot randomized controlled trial of cognitive-behavioral therapy for insomnia in adolescents with persistent postconcussion symptoms. J Head Trauma Rehabil. 2020;35:E103-12.",
+      "doi": "10.1097/htr.0000000000000504",
+      "country_reported_in_table": "Canada",
+      "n_treatment": 12,
+      "mean_treatment": 7.04,
+      "sd_treatment": 5.21,
+      "n_control": 12,
+      "mean_control": 13.87,
+      "sd_control": 4.98,
+      "smd_published": -1.34,
+      "ci_low": -2.23,
+      "ci_high": -0.45
+    }
+  ],
+  "excluded_from_primary_pool": [
+    {
+      "study_id": "clarke_2015",
+      "reason": "nicht im post-treatment Insomnie-Pool des Forest Plots"
+    },
+    {
+      "study_id": "goodhines_2022",
+      "reason": "nicht im post-treatment Insomnie-Pool des Forest Plots"
+    }
+  ],
+  "published_pooled": {
+    "smd": -1.06,
+    "ci_low": -1.65,
+    "ci_high": -0.47,
+    "k": 6,
+    "q": 39.01,
+    "df": 5,
+    "tau2": 0.45,
+    "i2_percent": 87.18
+  },
+  "recomputed_from_published_smd": {
+    "smd": -1.0635,
+    "ci_low": -1.6567,
+    "ci_high": -0.4704,
+    "k": 6,
+    "q": 39.3577,
+    "df": 5,
+    "tau2": 0.449820,
+    "i2_percent": 87.30,
+    "note": "SE aus den berichteten 95-%-KIs; Abweichung durch Rundung."
+  },
+  "recomputed_from_means_sd": {
+    "smd": -1.0404,
+    "ci_low": -1.6221,
+    "ci_high": -0.4587,
+    "k": 6,
+    "q": 37.7638,
+    "df": 5,
+    "tau2": 0.4300,
+    "i2_percent": 86.76,
+    "note": "Hedges-g-Korrektur aus N, Mittelwert und SD; naeher an der Extraktionsaufgabe."
+  },
+  "tolerances": {
+    "k_exact": 6,
+    "study_smd_abs": 0.10,
+    "pooled_smd_abs": 0.05,
+    "pooled_ci_abs": 0.05,
+    "i2_abs": 1.0,
+    "tau2_abs": 0.02
+  },
+  "direction": "negativ = Vorteil fuer CBT-I",
+  "known_issues": [
+    "Egbegi 2021 wird in der Tabelle als UK gefuehrt, das Zitat nennt Nigeria; fuer die Extraktion ist das Land nicht entscheidend.",
+    "Die Arbeit berichtet acht RCTs insgesamt, der post-treatment Insomnie-Pool enthaelt aber sechs Studien; Clarke 2015 und Goodhines 2022 gehoeren nicht dazu."
+  ]
+}
