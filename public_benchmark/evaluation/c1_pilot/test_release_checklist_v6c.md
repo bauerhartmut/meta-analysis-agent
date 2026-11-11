@@ -92,16 +92,17 @@ Der Testsplit wurde weiterhin nicht geöffnet.
   Input.
 - [x] Record-Overrides 190/226 nur bei `split="dev"`; im Test keine
   record-spezifischen Dev-Werte.
-- [x] Prompt-Version, Prompt-Hash, Modell, Temperatur, `max_tokens` und
-  Concurrency werden vor dem ersten Request im Manifest festgehalten.
+- [x] Prompt-Version, Prompt-Hash, Prompt-Modul-Hash, Modell, Temperatur,
+  `max_tokens` und Concurrency werden vor dem ersten Request im Manifest
+  festgehalten.
 - [x] Kein Resume mit geändertem Prompt. Der Runner prüft Input- und
   Runner-Hash sowie die Modellkonfiguration.
 - [ ] Abbruch bei Rate-Limit-/Providerfehlern dokumentieren; kein stiller
   Wechsel des Modells oder Backends.
 - [x] Modellausgabe nach Abschluss hashen und einfrieren, bevor die
   Testreferenz geladen wird.
-- [x] `evaluate_c1_test_pilot.py` prüft Output- und Input-Hash, bevor es die
-  getrennte Testreferenz lädt.
+- [x] `evaluate_c1_test_pilot.py` prüft Output-, Input- und Referenzhash,
+  bevor es die getrennte Testreferenz lädt.
 
 ## 6. Checkliste Lauf
 

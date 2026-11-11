@@ -25,6 +25,7 @@ PILOT_ROOT = BENCH_ROOT / "evaluation" / "c1_pilot"
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from c1_test_projection import validate_test_input  # noqa: E402
+import run_c1_dev_pilot as dev_runner  # noqa: E402
 from run_c1_dev_pilot import (  # noqa: E402
     CONCURRENCY,
     DEFAULT_PROMPT_VERSION,
@@ -87,6 +88,7 @@ async def main() -> int:
     raw_path = run_dir / "test_raw.jsonl"
     manifest_path = run_dir / "test_manifest.json"
     runner_sha = sha256_file(Path(__file__))
+    prompt_module_sha = sha256_file(Path(dev_runner.__file__))
 
     if run_dir.exists() and not args.resume:
         print(f"ABBRUCH: {run_dir} existiert bereits; nutze --resume")
@@ -103,6 +105,7 @@ async def main() -> int:
         for key, expected in (
             ("input_sha256", input_sha),
             ("runner_sha256", runner_sha),
+            ("prompt_module_sha256", prompt_module_sha),
             ("prompt_version", PROMPT_VERSION_IDS[args.prompt_version]),
             ("test_split_used", True),
             ("reference_loaded", False),
@@ -149,6 +152,7 @@ async def main() -> int:
         "input_records": len(records),
         "model_config_sha256": model_config,
         "runner_sha256": runner_sha,
+        "prompt_module_sha256": prompt_module_sha,
         "projection_manifest": str(
             TEST_PROJECTION_MANIFEST.relative_to(BENCH_ROOT)
         ).replace("\\", "/"),

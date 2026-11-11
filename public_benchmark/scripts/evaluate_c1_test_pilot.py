@@ -27,6 +27,7 @@ from run_c1_dev_pilot import load_jsonl, sha256_file  # noqa: E402
 
 TEST_INPUT_PATH = PILOT_ROOT / "test_locked" / "test_input.jsonl"
 TEST_REFERENCE_PATH = PILOT_ROOT / "test_locked" / "test_reference.jsonl"
+TEST_PROJECTION_MANIFEST = PILOT_ROOT / "test_locked" / "test_projection_manifest.json"
 TEST_OUTPUT_ROOT = PILOT_ROOT / "runs_test"
 EXPECTED_TEST_RECORDS = 249
 EXPECTED_TEST_FIELDS = 1308
@@ -57,8 +58,16 @@ def main() -> int:
             print(f"ABBRUCH: Test-Manifest weicht ab: {key}")
             return 2
 
-    if not TEST_REFERENCE_PATH.exists():
-        print(f"ABBRUCH: Test-Referenz fehlt: {TEST_REFERENCE_PATH}")
+    if not TEST_REFERENCE_PATH.exists() or not TEST_PROJECTION_MANIFEST.exists():
+        print(f"ABBRUCH: Test-Referenz oder Projektionsmanifest fehlt")
+        return 2
+
+    projection = json.loads(TEST_PROJECTION_MANIFEST.read_text(encoding="utf-8"))
+    if projection.get("input_sha256") != checks["input_sha256"]:
+        print("ABBRUCH: Test-Input-Hash weicht vom Projektionsmanifest ab.")
+        return 2
+    if projection.get("reference_sha256") != sha256_file(TEST_REFERENCE_PATH):
+        print("ABBRUCH: Test-Referenz-Hash weicht vom Projektionsmanifest ab.")
         return 2
 
     # Ab hier ist der Output eingefroren; erst jetzt wird die Referenz geladen.
