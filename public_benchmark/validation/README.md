@@ -13,6 +13,11 @@
   Audits.
 - `yun_audit_30.md`: Auditbericht mit Methodik, Recordtabelle, Fehlerquoten,
   Problemfällen und Empfehlung.
+- `yun_audit_410.md`: Vollaudit aller 410 streng vollständigen Records.
+- `yun_audit_410.jsonl`: kuratierte Referenz mit Auditstatus, Werten und
+  Korrektur; 275 von 410 Records sind für C1 nutzbar.
+- `yun_audit_410_summary.json`: Zählungen nach Status, Outcome-Typ und
+  Ausschlussgrund.
 - `yun_audit_cards.md`: lokales Arbeitsexemplar mit Artikelzitaten; wird
   nicht versioniert.
 
@@ -29,10 +34,12 @@
 
 ## Grenzen
 
-- Kein vollständiges Audit aller 699 Yun-Records; geprüft wurden 30
-  stratifizierte Records plus die Problemfälle 12, 635 und 636.
+- Kein vollständiges Audit aller 699 Yun-Records; die 410 streng
+  vollständigen Records wurden geprüft, nicht die 289 unvollständigen.
 - Der Audit ist keine unabhängige Zweitannotation und keine
   Modellgenauigkeitsmessung.
+- `verified_table` und die 78 nicht belegten Records sind keine vollständige
+  klinische Neuannotation; die Grenzen stehen in `yun_audit_410.md`.
 - Keine Modellvorhersagen und keine Genauigkeitsmessung; dieser Schritt ist
   reine Dateninventur und Referenzprüfung.
 - Keine Prüfung der individuellen PMC-Lizenz jedes Artikels. Die

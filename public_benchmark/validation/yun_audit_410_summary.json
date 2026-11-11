@@ -1,0 +1,48 @@
+{
+  "source": "Yun et al. 2024",
+  "source_commit": "1bc768d4d098c727c9866eeff909297c38a3e84c",
+  "strict_complete_records": 410,
+  "articles": 85,
+  "status_counts": {
+    "verified_exact": 239,
+    "unverifiable": 78,
+    "corrected_with_source": 1,
+    "verified_table": 35,
+    "structural_exclude": 57
+  },
+  "usable_for_c1": 275,
+  "not_usable": 135,
+  "by_type": {
+    "continuous": {
+      "verified_exact": 172,
+      "unverifiable": 53,
+      "corrected_with_source": 1,
+      "structural_exclude": 34,
+      "verified_table": 1
+    },
+    "binary": {
+      "unverifiable": 25,
+      "verified_table": 34,
+      "verified_exact": 67,
+      "structural_exclude": 23
+    }
+  },
+  "structural_reasons": {
+    "pre_post_or_baseline_comparator": 17,
+    "observational_no_randomization": 6,
+    "quasi_experimental_cohort_n": 1,
+    "pooled_analysis_not_single_rct": 6,
+    "single_arm_pre_post": 1,
+    "baseline_characteristic_not_outcome": 25,
+    "median_outcome_not_mean_sd": 1
+  },
+  "corrections": [
+    {
+      "field": "intervention_standard_deviation",
+      "original": 23.34,
+      "corrected": 12.34,
+      "source": "Table 1: Duration of treatment (days) mean (SD) 25.4 (12.34); 13.5 (9.49)."
+    }
+  ],
+  "unverifiable_with_missing_fields": 78
+}

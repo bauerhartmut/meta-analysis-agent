@@ -4,7 +4,7 @@ Stand: 2026-11-11
 
 Arbeitsbereich: `public_benchmark/`
 
-Status: **Recherche und Referenzaudit abgeschlossen; kein Modelllauf; keine Änderung an A oder B.**
+Status: **Recherche und Referenzaudit abgeschlossen; 410 Records auditiert; kein Modelllauf; keine Änderung an A oder B.**
 
 ## Kurzentscheidung
 
@@ -184,6 +184,20 @@ falscher ICO auch mit korrekten Einzelzahlen nicht als Effekt nutzbar ist.
 Vor Experiment C sind daher die 410 streng vollständigen Records zu
 auditieren und zu kuratieren. Details, Recordtabelle und 95-%-Intervalle:
 `validation/yun_audit_30.md`.
+
+### 3.8 Vollaudit der 410 streng vollständigen Records
+
+Der Vollaudit ist abgeschlossen. Von 410 Records sind **275 für C1 nutzbar**:
+239 exakt belegt, 35 über Tabellen-/Ergebniskontext belegt und einer mit
+Quelle korrigiert. **57 Records sind strukturell ausgeschlossen** (25
+Baseline, 17 Vorher-Nachher, 6 observational, 6 gepoolt, 1 Median, 1
+quasi-experimentell, 1 Ein-Arm). **78 Records sind numerisch nicht
+ausreichend belegt** und bleiben im Ledger, werden aber nicht für C1
+freigegeben.
+
+Die Korrektur betrifft Record 12: Interventions-SD `23,34` wird mit der
+Tabelle `12.34` auf `12,34` korrigiert; der Originalwert bleibt erhalten.
+Details: `validation/yun_audit_410.md`, `validation/yun_audit_410.jsonl`.
 
 ## 4. Evidence Inference 2.0
 
@@ -419,12 +433,13 @@ keine Kappa-Berechnung, bevor der B-Hash eingefroren ist.
    Zahlenfehler (3,8 %), 6/30 strukturelle Fehler (20,0 %) und 8/30 Records
    mit mindestens einem klaren Fehler (26,7 %). Details in
    `validation/yun_audit_30.md`.
-2. **Vollaudit und Kuratierung:** Die 5-%-Schwelle ist auf Feldebene knapp
-   unterschritten, auf Recordebene deutlich überschritten. Daher alle 410
-   streng vollständigen Records auditieren und vor C kuratieren. Das ist der
-   nächste große Arbeitsblock.
-3. **Test einfrieren:** Nach dem Audit den Yun-Test-Split und die
-   Referenzdatei hashen und als unveränderlich markieren.
+2. **Vollaudit und Kuratierung abgeschlossen:** 410 Records geprüft; 275
+   sind für C1 nutzbar, 57 strukturell ausgeschlossen und 78 nicht
+   ausreichend belegt. Die kuratierte Referenz steht in
+   `validation/yun_audit_410.jsonl`; die 135 nicht nutzbaren Records bleiben
+   im Ledger.
+3. **Test einfrieren:** Den kuratierten 275er-Datensatz und den Yun-Test-Split
+   hashen und als unveränderlich markieren.
 4. **C1-Pilot auf Dev:** Erst danach einen freigegebenen Dev-Lauf planen;
    keine Testdaten zur Prompt-Optimierung.
 5. **B unverändert lassen:** Der B-Watcher wird nicht angefasst; vor einem
@@ -448,6 +463,9 @@ als Modellfehler messen.
 | `validation/yun_audit_30.md` | Auditbericht: 30 stratifizierte Records plus Problemfälle |
 | `validation/yun_audit_results.json` | Recordbefunde, Status und Fehlerquoten |
 | `validation/yun_audit_sample.json` | Auswahl, Seed und Stratifizierung |
+| `validation/yun_audit_410.md` | Vollaudit der 410 streng vollständigen Records |
+| `validation/yun_audit_410.jsonl` | Kuratierte Referenz mit Auditstatus und Korrektur |
+| `validation/yun_audit_410_summary.json` | Statuszählungen des 410er-Audits |
 | `validation/checksums.sha256` | SHA-256 für Archive und Schlüsseldateien |
 | `evaluation/README.md` | geplantes Experiment C, noch kein Lauf |
 | `scripts/build_inventory.py` | reproduzierbare Inventarerzeugung |

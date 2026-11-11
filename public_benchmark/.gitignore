@@ -2,5 +2,6 @@
 raw_data/
 __pycache__/
 
-# Auditkarten enthalten Artikelzitate und bleiben lokales Arbeitsexemplar.
+# Auditkarten und Evidenzledger enthalten Artikelzitate und bleiben lokal.
 validation/yun_audit_cards.md
+validation/yun_audit_410_ledger.json
