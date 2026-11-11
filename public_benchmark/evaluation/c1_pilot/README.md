@@ -1,9 +1,58 @@
-# C1-Dev-Pilot: vorbereitet, nicht gestartet
+# C1-Dev-Pilot: Lauf und Auswertung
 
 Stand: 2026-11-11
 
-Status: **Pilot vorbereitet; kein Modelllauf; keine Netzwerkanfrage; keine
-Testdaten verwendet.**
+Status: **Dev-Pilot gelaufen; 26/26 Records verarbeitet; Testsplit unangetastet.**
+Modell: `gwdg/qwen3.5-397b-a17b` über TUDaGPT, Temperatur 0, Prompt
+`c1-dev-extract-v1`.
+
+## Ergebnis
+
+| Kennzahl | Wert |
+|---|---:|
+| Ausgabezeilen | 26/26 |
+| erwartete Felder | 140 |
+| Abdeckung | 136/140 (97,1 %) |
+| exakte Treffer | 93/140 (66,4 %) |
+| fehlend | 4 |
+| falsch | 43 |
+| halluziniert | 0 |
+| Null-Disziplin | 68/68 (100 %) |
+| MAE über gepaarte Felder | 4,7066 |
+| Records mit allen Feldern exakt | 14/26 |
+| Schema-/Parse-Fehler | 0 |
+
+Die 47 abweichenden Felder sind manuell geprüft:
+
+- **39 Felder in 10 Records** sind exakt die 4-Monats-Follow-up-Werte der
+  Quelle PMC5498715. Die Referenz verwendet dort den Post-Test; bei fehlendem
+  Post-Test verwendet sie den Follow-up. Der Zeitpunkt ist in der ICO nicht
+  festgelegt. Würde man den Follow-up akzeptieren, wären es 132/140 (94,3 %).
+- **4 Felder in Record 120** betreffen eine andere Ergebniszeile: Das Modell
+  wählt die Rezidiv-Rate 0/30 vs. 1/52, die Referenz die DTPA-Subgruppe
+  8/20 vs. 13/44. Die ICO ist unterspezifiziert.
+- **4 Felder in Record 190** bleiben `null`, obwohl Tabelle 2 die Counts für
+  den 12-Monats-Follow-up direkt als `52 (42)` und `51 (38)` und die
+  Gruppengrößen als 125/133 nennt. Das ist ein Tabellen-Extraktionsfehler des
+  Modells, kein Protokollkonflikt.
+
+Ohne die beiden Ambiguitätscluster bleiben 15 Records mit 76 erwarteten
+Feldern; dort sind 72/76 exakt. Die vier fehlenden Felder sind Record 190. Das
+ist eine deskriptive Sensitivität, keine Änderung des strengen Primärwerts.
+Details:
+[`runs/c1_dev_20261111/manual_review.md`](runs/c1_dev_20261111/manual_review.md).
+
+Artefakte des Laufs:
+
+- [`runs/c1_dev_20261111/dev_output.jsonl`](runs/c1_dev_20261111/dev_output.jsonl)
+- [`runs/c1_dev_20261111/dev_raw.jsonl`](runs/c1_dev_20261111/dev_raw.jsonl)
+- [`runs/c1_dev_20261111/dev_evaluation.json`](runs/c1_dev_20261111/dev_evaluation.json)
+- [`runs/c1_dev_20261111/dev_evaluation.md`](runs/c1_dev_20261111/dev_evaluation.md)
+- [`runs/c1_dev_20261111/run_manifest.json`](runs/c1_dev_20261111/run_manifest.json)
+
+Der Testsplit bleibt gesperrt. Vor einer Testfreigabe müssen die Zeitpunktregel
+und der Umgang mit unterspezifizierten ICOs entschieden sowie die
+Tabellenextraktion für Record 190 gezielt nachgebessert werden.
 
 ## Eingefrorene Daten
 
@@ -81,9 +130,11 @@ Regeln:
 - Alle Fehler werden mit Record-ID und Feld berichtet.
 - Der Testsplit bleibt unangetastet.
 
-## Nicht enthalten
+## Abgrenzung
 
-- Kein Modellaufruf.
-- Kein Prompt wurde gegen Testdaten optimiert.
-- Keine Aussage über die Leistungsfähigkeit des Research Agents.
-- Ein Lauf benötigt eine ausdrückliche Freigabe.
+- Der Testsplit wurde nicht gelesen und nicht zur Prompt-Optimierung genutzt.
+- Der Lauf ist kein A/B-Vergleich und keine Aussage über den Research Agent.
+- Die beiden Ambiguitätscluster und der Tabellenfehler in Record 190 werden
+  offengelegt, nicht nachträglich aus dem Primärergebnis entfernt.
+- Weitere Modellläufe auf Dev benötigen eine neue, begründete Freigabe; der
+  eingefrorene Prompt dieses Laufs bleibt unverändert.
