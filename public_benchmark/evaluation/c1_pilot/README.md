@@ -186,6 +186,14 @@ die akzeptierte Revision ist v6c. Details:
 Der Testsplit bleibt gesperrt. v6c ist der akzeptierte Dev-Kandidat; eine
 Testfreigabe braucht eine ausdrückliche Entscheidung.
 
+### Testfreigabe
+
+Status: **NO-GO**. Die Checkliste steht in
+[`test_release_checklist_v6c.md`](test_release_checklist_v6c.md). Offen sind
+insbesondere ein separater Test-Runner, die Trennung von Test-Input und
+Test-Referenz sowie die Begrenzung der Record-Overrides 190/226 auf
+`split="dev"`. Der Testsplit wurde nicht geöffnet.
+
 ## Eingefrorene Daten
 
 Der Pilot verwendet ausschließlich die 26 nutzbaren Dev-Records aus 6
