@@ -1,0 +1,6 @@
+quellen/
+seiten/
+volltexte/*
+!volltexte/README.md
+volltexte_txt/*
+!volltexte_txt/README.md

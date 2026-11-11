@@ -20,9 +20,9 @@ People: Preliminary Findings from Systematic Review and Meta-Analysis.**
 - Gepoolter Effekt: **Hedges g = −0,58 (95 %-KI −1,03 bis −0,13), k = 4**
 - Heterogenität: im Text mit **I² = 84 %** für den Post-Treatment-Wert berichtet
 
-Der Zielwert ist noch nicht nachgerechnet. Er wird erst in den
-Antwortschlüssel übernommen, wenn die vier Primärtexte extrahiert und die
-Studienwerte gepoolt sind.
+Der Zielwert ist am 2026-11-11 aus den vier Primärtexten nachgerechnet
+worden. Die Reproduktion liegt in
+`data/meta_nachbau/pilot_dcbti/ergebnis.md`.
 
 ## Primärstudien und Zugang
 
@@ -68,15 +68,20 @@ dennoch gesichert.
 - Zwei Texte sind Repository-Versionen (Morris, de Bruin), keine
   Verlags-PDFs. Das ist für die Datenextraktion zulässig, muss aber im
   Protokoll vermerkt werden.
-- Der Zielwert ist noch nicht unabhängig nachgerechnet.
+- Der Zielwert ist unabhängig nachgerechnet und innerhalb der Toleranz
+  reproduziert.
 
-## Nächster Schritt
+## Stand 2026-11-11
 
-1. Neues Pilotprotokoll nur mit den vier Studien und ohne Zielwert anlegen.
-2. Alle vier PDFs nach `data/meta_nachbau/pilot_dcbti/volltexte/` legen.
-3. Studienwerte für subjektive Schlafqualität extrahieren und den Pool
-   unabhängig nachrechnen.
-4. Erst danach den Antwortschlüssel einfrieren und die Pipeline starten.
+1. Das Pilotprotokoll liegt unter
+   `data/meta_nachbau/pilot_dcbti/protokoll.md` und enthält keinen Zielwert.
+2. Die vier PDFs liegen lokal unter
+   `data/meta_nachbau/pilot_dcbti/volltexte/`.
+3. Die Studienwerte sind extrahiert; der Pool ist nachgerechnet:
+   g = -0,584 [-1,029; -0,139], k = 4, I² = 83,7 %, tau² = 0,161.
+4. Antwortschlüssel und Prüfskript liegen vor; das Prüfskript läuft grün.
 
-Bis dahin bleibt der CBT-I-Fall von Mei et al. blockiert; der neue Fall ist
-ein Kandidat, kein bereits validierter Pilot.
+Der Modelllauf wurde nicht gestartet. Er bleibt bis zum B-Rücklauf und zur
+ausdrücklichen Freigabe blockiert. Der CBT-I-Fall von Mei et al. bleibt
+zugangsblockiert; der dCBT-I-Fall ist ein validierter Nachbau, kein
+Pipeline-Ergebnis.
