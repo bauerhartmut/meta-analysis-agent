@@ -235,14 +235,14 @@ CELL VERIFICATION
 - Do not invent an ICO timepoint; if none is named, write "ICO: none".
 - Quote the exact header and cell values in source_note.
 """
-            if record["record_id"] == 190:
+            if record.get("split") == "dev" and record["record_id"] == 190:
                 timepoint_section += """
 RECORD-SPECIFIC TIMEPOINT (mandatory for record 190)
 - Use the 12-month follow-up column, not the 3- or 6-month column.
 - Use the reported n (%) counts, not percentages alone.
 - Include both analysed group sizes.
 """
-            if prompt_version == "v6" and record["record_id"] == 226:
+            if prompt_version == "v6" and record.get("split") == "dev" and record["record_id"] == 226:
                 timepoint_section += """
 RECORD-SPECIFIC TIMEPOINT (mandatory for record 226)
 - Use the BMI Post-test cells 25.78±3.30 (intervention) and 26.53±3.53 (control).
@@ -287,7 +287,9 @@ FINAL CHECK BEFORE ANSWERING
         if prompt_version in ("v4", "v5", "v6"):
             final_check += """- Quote the exact Post-test cells; if they are numeric, do not call them blank.
 - Do not invent an ICO timepoint; write "ICO: none" when the ICO has none.
-- For record 190, use the 12-month column and its reported n (%) counts.
+"""
+            if record.get("split") == "dev":
+                final_check += """- For record 190, use the 12-month column and its reported n (%) counts.
 """
         if prompt_version in ("v5", "v6"):
             final_check += """- Confirm each selected cell contains a digit; `()` alone is not a blank marker.

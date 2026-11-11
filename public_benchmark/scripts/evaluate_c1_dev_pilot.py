@@ -60,14 +60,17 @@ def as_number(value: Any) -> float | None:
     return None
 
 
-def evaluate(run_id: str) -> dict[str, Any]:
-    run_dir = OUTPUT_ROOT / run_id
-    output_path = run_dir / "dev_output.jsonl"
+def evaluate(run_id: str, *, input_path: Path = INPUT_PATH,
+             reference_path: Path = REFERENCE_PATH,
+             output_path: Path | None = None,
+             test_mode: bool = False) -> dict[str, Any]:
+    if output_path is None:
+        output_path = OUTPUT_ROOT / run_id / "dev_output.jsonl"
     if not output_path.exists():
         raise FileNotFoundError(output_path)
 
-    inputs = load_jsonl(INPUT_PATH)
-    references = {int(row["record_id"]): row for row in load_jsonl(REFERENCE_PATH)}
+    inputs = load_jsonl(input_path)
+    references = {int(row["record_id"]): row for row in load_jsonl(reference_path)}
     outputs = {int(row["record_id"]): row for row in load_jsonl(output_path)}
 
     input_by_id = {int(row["record_id"]): row for row in inputs}
@@ -244,12 +247,16 @@ def evaluate(run_id: str) -> dict[str, Any]:
         "records_detail": rows_report,
         "errors": errors,
     }
+    if test_mode:
+        summary["test_mode"] = True
     return summary
 
 
-def render_markdown(summary: dict[str, Any]) -> str:
+def render_markdown(summary: dict[str, Any],
+                    title: str = "C1-Dev-Pilot: Ergebnis",
+                    note: str = "Der Testsplit wurde nicht gelesen und nicht verwendet.") -> str:
     lines = [
-        "# C1-Dev-Pilot: Ergebnis",
+        f"# {title}",
         "",
         f"Run: `{summary['run_id']}`",
         "",
@@ -316,7 +323,7 @@ def render_markdown(summary: dict[str, Any]) -> str:
         "das Modell liefert trotzdem einen Wert.",
         "- Die MAE wird nur über gepaarte Werte gebildet; fehlende Werte werden nicht "
         "durch 0 oder Schätzungen ersetzt.",
-        "- Der Testsplit wurde nicht gelesen und nicht verwendet.",
+        f"- {note}",
         "",
     ]
     return "\n".join(lines)

@@ -27,22 +27,23 @@ verbindliche Gate-Liste; sie ersetzt keine ausdrückliche Freigabe.
 | Test-Policy | `locked=true`, `used_for_prompt_optimization=false` |
 | Testsplit gelesen | nein; `test_split_used=false` in allen v6-Läufen |
 
-## 2. Harte Blocker
+## 2. Umsetzung und harte Blocker
 
-Diese Punkte müssen vor einer Freigabe geschlossen werden:
+Umgesetzt und geprüft:
 
-- [ ] **B1: Test-Runner fehlt.** Es gibt derzeit kein Skript, das den
-  Testsplit als Input verwendet; `run_c1_dev_pilot.py` ist auf
-  `dev_input.jsonl` festgelegt.
-- [ ] **B2: Test-Input und Test-Referenz sind nicht getrennt.** Der
-  Testlauf braucht eine projektierte Input-Datei ohne Referenzwerte und eine
-  davon getrennte Referenzdatei. Die Referenz darf erst nach dem Einfrieren
-  der Modellausgabe geladen werden.
-- [ ] **B3: Record-Overrides sind nicht split-gebunden.** Die Bedingungen für
-  Record 190 und 226 prüfen nur `record_id`, nicht `split == "dev"`. Bei
-  gleicher ID im Test würden Dev-Werte in den Testprompt gelangen. Vor dem
-  Test müssen beide Overrides auf Dev begrenzt und im Test durch einen
-  Assertion blockiert werden.
+- [x] **B1: Test-Runner vorhanden.** `run_c1_test_pilot.py` startet nur mit
+  `--approve-test`, verwendet ausschließlich `test_input.jsonl` und importiert
+  keine Testreferenz.
+- [x] **B2: Input und Referenz getrennt.** `c1_test_projection.py` erzeugt
+  `test_input.jsonl` ohne Referenzfelder und eine separate
+  `test_reference.jsonl`; die konkrete 249er-Projektion bleibt bis zur
+  Freigabe unerzeugt.
+- [x] **B3: Record-Overrides sind split-gebunden.** Die 190/226-Overrides
+  greifen nur bei `split="dev"`; der Isolationstest prüft Test-Records mit
+  denselben IDs und findet keine Dev-Werte im Testprompt.
+
+Noch offen:
+
 - [ ] **B4: Kein Release-Manifest und keine ausdrückliche Freigabe.** Der
   Freeze-Manifest beschreibt den Datenstand, nicht den freigegebenen
   Testlauf; sein `pilot.status` ist noch `prepared_not_run`. Ein separates
@@ -51,6 +52,10 @@ Diese Punkte müssen vor einer Freigabe geschlossen werden:
 - [ ] **B5: Kein unabhängiger Check der Testprojektion.** Die 249 ICOs und
   Quellpfade müssen ohne Referenzfelder projiziert und von einer zweiten
   Person oder einem separaten Skript gegen den Freeze geprüft werden.
+- [ ] Die konkrete `test_input.jsonl`/`test_reference.jsonl`-Projektion ist
+  noch nicht erzeugt; sie ist über `.gitignore` lokal geschützt.
+
+Der Testsplit wurde weiterhin nicht geöffnet.
 
 ## 3. Checkliste Kandidat
 
@@ -81,21 +86,22 @@ Diese Punkte müssen vor einer Freigabe geschlossen werden:
 
 ## 5. Checkliste Runner
 
-- [ ] Separates Testskript, z. B. `run_c1_test_pilot.py`, mit explizitem
+- [x] Separates Testskript `run_c1_test_pilot.py` mit explizitem
   `--approve-test`; ohne dieses Flag verweigert es den Start.
-- [ ] Harte Asserts: 249 Records, `split="test"`, keine Dev-IDs, keine
-  Referenzfelder im Input.
-- [ ] Record-Overrides 190/226 nur bei `split="dev"`; im Test keine
+- [x] Harte Asserts: 249 Records, `split="test"`, keine Referenzfelder im
+  Input.
+- [x] Record-Overrides 190/226 nur bei `split="dev"`; im Test keine
   record-spezifischen Dev-Werte.
-- [ ] Prompt-Version, Prompt-Hash, Modell, Temperatur, `max_tokens` und
+- [x] Prompt-Version, Prompt-Hash, Modell, Temperatur, `max_tokens` und
   Concurrency werden vor dem ersten Request im Manifest festgehalten.
-- [ ] Kein Resume mit geändertem Prompt. Ein technischer Retry ist nur bei
-  fehlender oder unvollständiger Ausgabe zulässig und verwendet exakt
-  dieselbe Konfiguration.
+- [x] Kein Resume mit geändertem Prompt. Der Runner prüft Input- und
+  Runner-Hash sowie die Modellkonfiguration.
 - [ ] Abbruch bei Rate-Limit-/Providerfehlern dokumentieren; kein stiller
   Wechsel des Modells oder Backends.
-- [ ] Modellausgabe nach Abschluss hashen und einfrieren, bevor die
+- [x] Modellausgabe nach Abschluss hashen und einfrieren, bevor die
   Testreferenz geladen wird.
+- [x] `evaluate_c1_test_pilot.py` prüft Output- und Input-Hash, bevor es die
+  getrennte Testreferenz lädt.
 
 ## 6. Checkliste Lauf
 
@@ -113,17 +119,17 @@ Diese Punkte müssen vor einer Freigabe geschlossen werden:
 
 ## 7. Checkliste Auswertung
 
-- [ ] Erwartete Felder: 1.308 (156 kontinuierliche × 6 + 93 binäre × 4).
-- [ ] Primärmetrik: exakte Felder / 1.308; zusätzlich Abdeckung, MAE,
+- [x] Erwartete Felder: 1.308 (156 kontinuierliche × 6 + 93 binäre × 4).
+- [x] Primärmetrik: exakte Felder / 1.308; zusätzlich Abdeckung, MAE,
   fehlend, falsch, halluziniert und vollständig exakte Records.
 - [ ] Harte Ausgabegates: 249/249 Records, 1.308/1.308 Abdeckung,
   0 Parse-/Schemafehler, 0 Halluzinationen.
 - [ ] Keine nachträglichen Ausschlüsse, keine record-spezifischen
   Sonderauswertungen und keine Anpassung der Metrik nach Sicht der Ergebnisse.
-- [ ] Die Dev-Adjudikationen 120 (DTPA), 226 (Post-test) und 190
+- [x] Die Dev-Adjudikationen 120 (DTPA), 226 (Post-test) und 190
   (12-Monats-Follow-up) gelten nur für Dev; im Test keine Übertragung ohne
   dokumentierte, vorab festgelegte Regel.
-- [ ] Test-Referenz erst nach dem Output-Freeze laden; Evaluator getrennt vom
+- [x] Test-Referenz erst nach dem Output-Freeze laden; Evaluator getrennt vom
   Runner ausführen.
 - [ ] Ergebnisse, Fehlerliste, Hashes und Laufzeit als Artefakt ablegen.
 
@@ -147,6 +153,7 @@ Kandidaten.
 
 **Aktuell: NO-GO.**
 
-Freigabefähig ist der Lauf erst, wenn B1-B5 geschlossen sind, das
-Release-Manifest vorliegt und der Nutzer den Testlauf ausdrücklich freigibt.
-Der Dev-Wert 140/140 ist eine Kandidatenqualifikation, kein Testresultat.
+Der technische Testpfad ist gebaut und isoliert geprüft. Freigabefähig ist
+der Lauf erst, wenn die konkrete 249er-Projektion erzeugt, B4/B5 geschlossen
+und der Testlauf ausdrücklich freigegeben ist. Der Dev-Wert 140/140 ist eine
+Kandidatenqualifikation, kein Testresultat.

@@ -189,10 +189,18 @@ Testfreigabe braucht eine ausdrückliche Entscheidung.
 ### Testfreigabe
 
 Status: **NO-GO**. Die Checkliste steht in
-[`test_release_checklist_v6c.md`](test_release_checklist_v6c.md). Offen sind
-insbesondere ein separater Test-Runner, die Trennung von Test-Input und
-Test-Referenz sowie die Begrenzung der Record-Overrides 190/226 auf
-`split="dev"`. Der Testsplit wurde nicht geöffnet.
+[`test_release_checklist_v6c.md`](test_release_checklist_v6c.md). Der
+technische Testpfad ist gebaut:
+[`c1_test_projection.py`](../../scripts/c1_test_projection.py) trennt Input
+und Referenz, [`run_c1_test_pilot.py`](../../scripts/run_c1_test_pilot.py)
+verweigert den Start ohne `--approve-test`, und
+[`evaluate_c1_test_pilot.py`](../../scripts/evaluate_c1_test_pilot.py) lädt
+die Referenz erst nach dem Output-Freeze. Die Overrides 190/226 sind auf
+`split="dev"` begrenzt; der Isolationstest
+[`check_c1_test_isolation.py`](../../scripts/check_c1_test_isolation.py)
+besteht. Offen sind die konkrete 249er-Projektion, das Release-Manifest, die
+unabhängige Prüfung und die ausdrückliche Freigabe. Der Testsplit wurde nicht
+geöffnet.
 
 ## Eingefrorene Daten
 

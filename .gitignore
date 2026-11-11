@@ -92,3 +92,6 @@ data/bench/sol2/testfall_pipeline/
 
 # Lokale Sicherungen geschuetzter Dateien
 local_patches/
+
+# C1-Testprojektionen aus dem gesperrten Testsplit (nur lokal)
+public_benchmark/evaluation/c1_pilot/test_locked/
