@@ -2,7 +2,7 @@
 
 Stand: 2026-11-11
 
-Status: **Dev-Pilot gelaufen; 26/26 Records verarbeitet; Testsplit unangetastet.**
+Status: **Dev-Pilot gelaufen; 26/26 Records verarbeitet; Zeitpunktregel entschieden; Testsplit unangetastet.**
 Modell: `gwdg/qwen3.5-397b-a17b` über TUDaGPT, Temperatur 0, Prompt
 `c1-dev-extract-v1`.
 
@@ -22,12 +22,28 @@ Modell: `gwdg/qwen3.5-397b-a17b` über TUDaGPT, Temperatur 0, Prompt
 | Records mit allen Feldern exakt | 14/26 |
 | Schema-/Parse-Fehler | 0 |
 
+## Zeitpunktregel
+
+Für C1 ist der Zeitpunkt ab jetzt verbindlich festgelegt:
+
+1. Ein in der ICO genannter Zeitpunkt gilt.
+2. Sonst gilt der unmittelbare Post-Test.
+3. Fehlt der Post-Test für einen Arm, gilt der früheste Follow-up, für den
+   beide Arme vollständig berichtet sind.
+4. Baseline, Change-Scores, Peakwerte und gemischte Zeitpunkte sind unzulässig.
+5. Die `source_note` nennt den Zeitpunkt und die Tabelle bzw. Zeile.
+
+Die vollständige Regel, Begründung und Grenzen stehen in
+[`timepoint_rule.md`](timepoint_rule.md). Sie ist eine
+Benchmark-Entscheidung, keine klinische Empfehlung. Der v1-Lauf bleibt als
+historischer Messpunkt unverändert.
+
 Die 47 abweichenden Felder sind manuell geprüft:
 
 - **39 Felder in 10 Records** sind exakt die 4-Monats-Follow-up-Werte der
-  Quelle PMC5498715. Die Referenz verwendet dort den Post-Test; bei fehlendem
-  Post-Test verwendet sie den Follow-up. Der Zeitpunkt ist in der ICO nicht
-  festgelegt. Würde man den Follow-up akzeptieren, wären es 132/140 (94,3 %).
+  Quelle PMC5498715. Die Referenz folgt der jetzt festgelegten Regel und
+  verwendet dort den Post-Test; bei fehlendem Post-Test verwendet sie den
+  Follow-up. Würde man den Follow-up akzeptieren, wären es 132/140 (94,3 %).
 - **4 Felder in Record 120** betreffen eine andere Ergebniszeile: Das Modell
   wählt die Rezidiv-Rate 0/30 vs. 1/52, die Referenz die DTPA-Subgruppe
   8/20 vs. 13/44. Die ICO ist unterspezifiziert.
@@ -50,9 +66,9 @@ Artefakte des Laufs:
 - [`runs/c1_dev_20261111/dev_evaluation.md`](runs/c1_dev_20261111/dev_evaluation.md)
 - [`runs/c1_dev_20261111/run_manifest.json`](runs/c1_dev_20261111/run_manifest.json)
 
-Der Testsplit bleibt gesperrt. Vor einer Testfreigabe müssen die Zeitpunktregel
-und der Umgang mit unterspezifizierten ICOs entschieden sowie die
-Tabellenextraktion für Record 190 gezielt nachgebessert werden.
+Der Testsplit bleibt gesperrt. Vor einer Testfreigabe müssen der Umgang mit
+unterspezifizierten ICOs geklärt und die Tabellenextraktion für Record 190
+gezielt nachgebessert werden; die Zeitpunktregel ist entschieden.
 
 ## Eingefrorene Daten
 
@@ -105,9 +121,14 @@ Regeln:
 
 - Keine Werte erfinden oder aus externem Wissen ergänzen.
 - Nicht berichtete Werte bleiben `null`.
-- Keine nachträgliche Zusammenführung getrennter Arme oder Outcomes.
+- Keine nachträgliche Zusammenführung getrennter Arme, Outcomes oder
+  Zeitpunkte.
+- Für den Zeitpunkt gilt die verbindliche
+  [C1-Zeitpunktregel](timepoint_rule.md): ICO-Zeitpunkt, sonst Post-Test,
+  sonst frühester vollständiger Follow-up; nie Baseline oder Change-Score.
 - `outcome_type` muss dem Eingabetyp entsprechen.
-- `source_note` ist ein kurzer Beleg, keine freie Begründung.
+- `source_note` ist ein kurzer Beleg mit Zeitpunkt und Tabellen-/Zeilenangabe,
+  keine freie Begründung.
 
 ## Ablauf
 
@@ -127,6 +148,8 @@ Regeln:
 - 26/26 Eingaben haben eine Ausgabezeile.
 - Kein Referenzwert aus `dev_reference.jsonl` ist in der Eingabe sichtbar.
 - Ausgabeschema vollständig; fehlende Werte sind `null`, nicht leer oder 0.
+- Der Zeitpunkt folgt der verbindlichen C1-Zeitpunktregel; die `source_note`
+  nennt ihn.
 - Alle Fehler werden mit Record-ID und Feld berichtet.
 - Der Testsplit bleibt unangetastet.
 
@@ -136,5 +159,8 @@ Regeln:
 - Der Lauf ist kein A/B-Vergleich und keine Aussage über den Research Agent.
 - Die beiden Ambiguitätscluster und der Tabellenfehler in Record 190 werden
   offengelegt, nicht nachträglich aus dem Primärergebnis entfernt.
+- Die Zeitpunktregel ist eine Benchmark-Entscheidung, keine klinische
+  Empfehlung; eine spätere gepoolte Analyse kann einen anderen, dann neu
+  einzufrierenden Zeitpunkt verlangen.
 - Weitere Modellläufe auf Dev benötigen eine neue, begründete Freigabe; der
   eingefrorene Prompt dieses Laufs bleibt unverändert.
