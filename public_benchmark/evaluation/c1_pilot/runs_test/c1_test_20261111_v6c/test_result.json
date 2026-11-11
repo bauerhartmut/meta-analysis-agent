@@ -1,0 +1,121 @@
+{
+  "result_version": 1,
+  "created_at": "2026-11-11T23:34:17",
+  "run_id": "c1_test_20261111_v6c",
+  "status": "completed",
+  "test_run_approved": true,
+  "approval_id": "c1-test-v6c-20261111",
+  "test_split_used": true,
+  "reference_loaded_by_runner": false,
+  "post_test_prompt_changes": false,
+  "aggregate": {
+    "records": 249,
+    "records_with_output": 249,
+    "expected_fields": 1308,
+    "expected_fields_present": 1168,
+    "coverage": 0.893,
+    "exact_fields": 992,
+    "exact_rate": 0.7584,
+    "missing_fields": 140,
+    "wrong_fields": 176,
+    "hallucinated_fields": 0,
+    "mae_paired_all": 1.5305,
+    "records_all_expected_exact": 148,
+    "parse_errors": 0
+  },
+  "field_summary": {
+    "intervention_n": {
+      "expected": 249,
+      "present": 229,
+      "exact": 214,
+      "missing": 20,
+      "wrong": 15,
+      "mae": 1.0742
+    },
+    "comparator_n": {
+      "expected": 249,
+      "present": 229,
+      "exact": 201,
+      "missing": 20,
+      "wrong": 28,
+      "mae": 1.9694
+    },
+    "intervention_mean": {
+      "expected": 156,
+      "present": 135,
+      "exact": 110,
+      "missing": 21,
+      "wrong": 25,
+      "mae": 2.4114
+    },
+    "comparator_mean": {
+      "expected": 156,
+      "present": 135,
+      "exact": 105,
+      "missing": 21,
+      "wrong": 30,
+      "mae": 2.5808
+    },
+    "intervention_sd": {
+      "expected": 156,
+      "present": 135,
+      "exact": 106,
+      "missing": 21,
+      "wrong": 29,
+      "mae": 0.604
+    },
+    "comparator_sd": {
+      "expected": 156,
+      "present": 135,
+      "exact": 104,
+      "missing": 21,
+      "wrong": 31,
+      "mae": 0.3642
+    },
+    "intervention_events": {
+      "expected": 93,
+      "present": 85,
+      "exact": 76,
+      "missing": 8,
+      "wrong": 9,
+      "mae": 1.8
+    },
+    "comparator_events": {
+      "expected": 93,
+      "present": 85,
+      "exact": 76,
+      "missing": 8,
+      "wrong": 9,
+      "mae": 1.5647
+    }
+  },
+  "by_type": {
+    "continuous": {
+      "records": 156,
+      "expected_fields": 936,
+      "exact_fields": 678,
+      "missing_fields": 106,
+      "wrong_fields": 152,
+      "records_all_exact": 79
+    },
+    "binary": {
+      "records": 93,
+      "expected_fields": 372,
+      "exact_fields": 314,
+      "missing_fields": 34,
+      "wrong_fields": 24,
+      "records_all_exact": 69
+    }
+  },
+  "hashes": {
+    "test_manifest_sha256": "3ff9ded4e8d6226203aa3bebc365e84bc5b786dba582c9875ec9f1fcfcf2307e",
+    "test_evaluation_sha256": "ab1e8cdf2a654d2887ad0b65a66ecbcc2583fdd1757db4c47d286c19e8704d27",
+    "test_output_sha256": "977493541634fa3ecb7d6794cf65839749848702a5c722d15d3e80b4b26cd9f9",
+    "test_raw_sha256": "91934b21b93d3d689952d1022a13eebded88f01a4a71822c39615f18216e4f05",
+    "test_input_sha256": "b8a2f3d17c2ee4a41473811ccb72632175f1d786b05b9e16e2d8c18d64204368",
+    "test_reference_sha256": "84b5c925340af82eb72717b36b2e4c5a2fa04760d6a6d01e63b742d0689e0629",
+    "release_manifest_sha256": "0068395e354b97b6ec4d7cc053ae481fe52fdfea8135a65cd89d6297f3ee2689",
+    "approval_sha256": "4c002a06f321ed7d25e606705e8541212c63e23920b83b3592849634e736c52f"
+  },
+  "note": "Ein einzelner freigegebener Testlauf; keine Prompt-Aenderung nach Testbeginn und keine Verwendung des Testergebnisses zur Prompt-Optimierung."
+}

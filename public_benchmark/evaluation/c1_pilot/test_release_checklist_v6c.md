@@ -2,11 +2,11 @@
 
 Stand: 2026-11-11
 Kandidat: `c1_dev_20261111_v6c`, Prompt `c1-dev-extract-v6`
-Status: **NO-GO - nicht freigegeben**
+Status: **TEST COMPLETED - Ergebnis dokumentiert**
 
-Der Kandidat ist auf Dev vollständig, aber der Testlauf ist noch nicht
-freigabefähig. Die Testdaten bleiben gesperrt. Diese Checkliste ist die
-verbindliche Gate-Liste; sie ersetzt keine ausdrückliche Freigabe.
+Der Kandidat ist auf Dev vollständig; der eine freigegebene Testlauf ist
+durchgeführt und ausgewertet. Das Ergebnis ist dokumentiert, nicht zur
+Prompt-Optimierung verwendet und wird nicht wiederholt.
 
 ## 1. Nachweis
 
@@ -46,6 +46,11 @@ Umgesetzt und geprüft:
 
 Abgeschlossen:
 
+- [x] **Ausdrückliche Testlauf-Freigabe.** [`test_approval_v6c.json`](test_approval_v6c.json)
+  autorisiert genau einen Lauf; `allowed_runs=1`, `test_run_approved=true`.
+- [x] **Testlauf durchgeführt.** 249/249 Records, 992/1308 exakt, 0
+  Parse-/Schemafehler, 0 Halluzinationen. Ergebnis:
+  [`runs_test/c1_test_20261111_v6c/test_result.md`](runs_test/c1_test_20261111_v6c/test_result.md).
 - [x] **B5: Unabhängiger Check bestanden.**
   `verify_c1_test_projection.py` prüft 26 Checks gegen den Freeze, darunter
   Quellzeilen, Referenzwerte, IDs, Schema, Typen, Quellpfade und
@@ -59,10 +64,8 @@ Abgeschlossen:
   [`release_v6c.sha256`](release_v6c.sha256). Das Manifest setzt
   `test_run_approved=false`.
 
-Noch offen:
-
-- [ ] **Ausdrückliche Testlauf-Freigabe.** Das Manifest autorisiert keinen
-  Lauf; der Start bleibt bis zu einer separaten Freigabe gesperrt.
+Der Testlauf ist abgeschlossen. Es gibt keinen offenen Freigabeschritt mehr;
+weitere Testläufe brauchen eine neue Freigabe und einen neuen Kandidaten.
 
 Der Testsplit wurde für die Projektion gelesen, aber nicht für
 Prompt-Optimierung oder einen Modelllauf verwendet.
@@ -116,25 +119,26 @@ Prompt-Optimierung oder einen Modelllauf verwendet.
 
 ## 6. Checkliste Lauf
 
-- [ ] Ausdrückliche Freigabe durch den Nutzer mit Datum und Umfang.
-- [ ] Ein primärer Testlauf über alle 249 Records; keine Vortests auf
+- [x] Ausdrückliche Freigabe durch den Nutzer mit Datum und Umfang.
+- [x] Ein primärer Testlauf über alle 249 Records; keine Vortests auf
   Testdaten.
-- [ ] Konfiguration wie v6c: Temperatur 0, `max_tokens=900`,
+- [x] Konfiguration wie v6c: Temperatur 0, `max_tokens=900`,
   `concurrency=3`.
-- [ ] Laufzeit und Requestzahl protokollieren. Die lineare Extrapolation aus
-  Dev (26 Records in 90 s) ergibt für 249 Records etwa 862 s bzw. 14,4 min;
-  das ist keine Garantie und keine Token-Kostenschätzung.
-- [ ] Ausgabe: 249 Zeilen, 249 eindeutige IDs, keine fehlenden Records.
-- [ ] Bei technischem Abbruch: gleiche Konfiguration, neuer Run-ID,
+- [x] Ausgabe: 249 Zeilen, 249 eindeutige IDs, keine fehlenden Records.
+- [x] Bei technischem Abbruch: gleiche Konfiguration, neuer Run-ID,
   dokumentierter Grund; keine inhaltliche Prompt-Änderung.
+- [x] Laufzeit: 11:12 (23:21:22 bis 23:32:34) für 249 Requests; die lineare
+  Extrapolation aus Dev ergab etwa 862 s bzw. 14,4 min und war nur eine
+  Schätzung, keine Garantie oder Token-Kostenschätzung.
 
 ## 7. Checkliste Auswertung
 
 - [x] Erwartete Felder: 1.308 (156 kontinuierliche × 6 + 93 binäre × 4).
 - [x] Primärmetrik: exakte Felder / 1.308; zusätzlich Abdeckung, MAE,
   fehlend, falsch, halluziniert und vollständig exakte Records.
-- [ ] Harte Ausgabegates: 249/249 Records, 1.308/1.308 Abdeckung,
-  0 Parse-/Schemafehler, 0 Halluzinationen.
+- [ ] Harte Ausgabegates: 249/249 Records und 0 Parse-/Schemafehler sind
+  erfüllt; die volle Abdeckung 1.308/1.308 ist **nicht** erreicht
+  (1.168/1.308, 89,3 %).
 - [ ] Keine nachträglichen Ausschlüsse, keine record-spezifischen
   Sonderauswertungen und keine Anpassung der Metrik nach Sicht der Ergebnisse.
 - [x] Die Dev-Adjudikationen 120 (DTPA), 226 (Post-test) und 190
@@ -162,9 +166,10 @@ Kandidaten.
 
 ## 9. Freigabeentscheidung
 
-**Aktuell: NO-GO.**
+**Testlauf abgeschlossen.**
 
-Der technische Testpfad ist gebaut, die 249er-Projektion erzeugt und
-unabhängig geprüft, das Release-Manifest liegt vor. Freigabefähig ist der
-Lauf jetzt nur noch durch die ausdrückliche Testlauf-Freigabe. Der Dev-Wert
-140/140 ist eine Kandidatenqualifikation, kein Testresultat.
+Der Testlauf ist abgeschlossen: **992/1308 exakt (75,8 %)**, 140 fehlend,
+176 falsch, 0 halluziniert, 0 Parse-/Schemafehler; 148/249 Records sind
+vollständig exakt. Das Ergebnis wird nicht zur Prompt-Optimierung verwendet
+und nicht wiederholt. Der Dev-Wert 140/140 bleibt eine
+Kandidatenqualifikation, kein Testresultat.

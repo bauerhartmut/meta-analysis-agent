@@ -4,7 +4,8 @@ Stand: 2026-11-11
 
 Status: **Dev-Pilot gelaufen; 26/26 Records verarbeitet; Zeitpunktregel entschieden;
 Prompt v6 getestet: 140/140 exakt, 26/26 Records vollständig; Testprojektion
-erzeugt, unabhängig geprüft und Release-Manifest erstellt; Testlauf gesperrt.**
+erzeugt, unabhängig geprüft und Release-Manifest erstellt; Testlauf abgeschlossen:
+992/1308 exakt (75,8 %), 0 Parse-/Schemafehler, 0 Halluzinationen.**
 Modell: `gwdg/qwen3.5-397b-a17b` über TUDaGPT, Temperatur 0. Der belastbare
 Vergleichspunkt ist `c1_dev_20261111` mit Prompt `c1-dev-extract-v1`.
 
@@ -189,7 +190,7 @@ Testfreigabe braucht eine ausdrückliche Entscheidung.
 
 ### Testfreigabe
 
-Status: **NO-GO**. Die Checkliste steht in
+Status: **TEST COMPLETED**. Die Checkliste steht in
 [`test_release_checklist_v6c.md`](test_release_checklist_v6c.md). Der
 technische Testpfad ist gebaut:
 [`c1_test_projection.py`](../../scripts/c1_test_projection.py) trennt Input
@@ -209,10 +210,30 @@ Referenz-SHA-256
 `84b5c925340af82eb72717b36b2e4c5a2fa04760d6a6d01e63b742d0689e0629`.
 Das Release-Manifest liegt unter [`release_v6c.json`](release_v6c.json)
 (SHA-256 `0068395e354b97b6ec4d7cc053ae481fe52fdfea8135a65cd89d6297f3ee2689`)
-und setzt `test_run_approved=false`. Offen ist nur die ausdrückliche
-Testlauf-Freigabe. Der Testsplit wurde für die Projektion gelesen, aber nicht
-für Prompt-Optimierung oder einen Modelllauf verwendet; der Testlauf bleibt
-gesperrt.
+und dokumentiert den **Pre-Run-Stand**. Der eine freigegebene Testlauf ist
+durchgeführt: **992/1308 exakt (75,8 %)**, 89,3 % Abdeckung, 140 fehlende,
+176 falsche, 0 halluzinierte Felder und 0 Parse-/Schemafehler. Ergebnis:
+[`runs_test/c1_test_20261111_v6c/test_result.md`](runs_test/c1_test_20261111_v6c/test_result.md).
+Der Testsplit wurde für die Projektion und diesen Lauf gelesen, aber nicht zur
+Prompt-Optimierung verwendet; nach Testbeginn wurde der Prompt nicht geändert.
+Der Lauf wird nicht wiederholt.
+
+## Testlauf v6c: 992/1308
+
+Der freigegebene Lauf `c1_test_20261111_v6c` ist abgeschlossen:
+**249/249 Records**, **992/1308 exakte Felder (75,8 %)**, 1.168/1.308
+abgedeckt (89,3 %), 140 fehlend, 176 falsch, 0 halluziniert, 0
+Parse-/Schemafehler, MAE 1,5305. 148/249 Records sind vollständig exakt.
+
+| Typ | Records | erwartet | exakt | fehlend | falsch | vollständig exakt |
+|---|---:|---:|---:|---:|---:|---:|
+| continuous | 156 | 936 | 678 | 106 | 152 | 79/156 |
+| binary | 93 | 372 | 314 | 34 | 24 | 69/93 |
+
+Die Testreferenz wurde erst nach dem Output-Freeze geladen
+(`reference_loaded=false` im Runner). Es gab keine Prompt-Änderung nach
+Testbeginn und keine Verwendung des Testergebnisses zur Prompt-Optimierung.
+Details: [`test_result.md`](runs_test/c1_test_20261111_v6c/test_result.md).
 
 ## Eingefrorene Daten
 
