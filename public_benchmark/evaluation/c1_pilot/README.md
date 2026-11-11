@@ -3,7 +3,7 @@
 Stand: 2026-11-11
 
 Status: **Dev-Pilot gelaufen; 26/26 Records verarbeitet; Zeitpunktregel entschieden;
-Prompt v3 getestet: 123/140 exakt, aber noch nicht testreif; Testsplit unangetastet.**
+Prompt v4 getestet: 126/140 exakt, aber noch nicht testreif; Testsplit unangetastet.**
 Modell: `gwdg/qwen3.5-397b-a17b` über TUDaGPT, Temperatur 0. Der belastbare
 Vergleichspunkt ist `c1_dev_20261111` mit Prompt `c1-dev-extract-v1`.
 
@@ -78,6 +78,12 @@ Artefakte der Läufe:
   [`dev_evaluation.md`](runs/c1_dev_20261111_v3/dev_evaluation.md),
   [`run_manifest.json`](runs/c1_dev_20261111_v3/run_manifest.json),
   [`v3_result.md`](runs/c1_dev_20261111_v3/v3_result.md)
+- v4: [`runs/c1_dev_20261111_v4/dev_output.jsonl`](runs/c1_dev_20261111_v4/dev_output.jsonl),
+  [`dev_raw.jsonl`](runs/c1_dev_20261111_v4/dev_raw.jsonl),
+  [`dev_evaluation.json`](runs/c1_dev_20261111_v4/dev_evaluation.json),
+  [`dev_evaluation.md`](runs/c1_dev_20261111_v4/dev_evaluation.md),
+  [`run_manifest.json`](runs/c1_dev_20261111_v4/run_manifest.json),
+  [`v4_result.md`](runs/c1_dev_20261111_v4/v4_result.md)
 
 ## Prompt v2: Test ohne Verbesserung
 
@@ -104,8 +110,21 @@ Monate, keine Counts). v3 ist der bisher beste Kandidat, aber keine
 Testgrundlage. Details:
 [`runs/c1_dev_20261111_v3/v3_result.md`](runs/c1_dev_20261111_v3/v3_result.md).
 
+## Prompt v4: Zellverifikation und 12-Monats-Override
+
+Der vierte Lauf `c1_dev_20261111_v4` mit `c1-dev-extract-v4` liefert
+**126/140 exakt (90,0 %)**, 12 falsche und 2 fehlende Felder bei 0
+Halluzinationen; 22/26 Records sind vollständig exakt.
+
+Record 190 ist jetzt vollständig korrekt (`52/125` vs. `51/133`, 12 Monate).
+Bei Record 226 stimmen Mean/SD, die Gruppengrößen fehlen jedoch weiterhin.
+Record 238 fällt neu auf Follow-up zurück, weil das Modell die vorhandene
+Post-Test-Kontrollzelle fälschlich als leer liest. Records 120 und 224 bleiben
+falsch. Details:
+[`runs/c1_dev_20261111_v4/v4_result.md`](runs/c1_dev_20261111_v4/v4_result.md).
+
 Der Testsplit bleibt gesperrt. Vor einer Testfreigabe müssen Record 120, 224,
-226 und 190 geklärt und ein v4-Prompt auf Dev validiert werden; die
+226 und 238 geklärt und ein v5-Prompt auf Dev validiert werden; die
 Zeitpunktregel ist entschieden.
 
 ## Eingefrorene Daten

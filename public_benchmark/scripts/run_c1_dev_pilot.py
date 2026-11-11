@@ -36,13 +36,14 @@ from research_agent.llm.engine import LLMEngine  # noqa: E402
 
 INPUT_PATH = BENCH_ROOT / "evaluation" / "c1_pilot" / "dev_input.jsonl"
 OUTPUT_ROOT = BENCH_ROOT / "evaluation" / "c1_pilot" / "runs"
-PROMPT_VERSIONS = ("v1", "v2", "v3")
+PROMPT_VERSIONS = ("v1", "v2", "v3", "v4")
 PROMPT_VERSION_IDS = {
     "v1": "c1-dev-extract-v1",
     "v2": "c1-dev-extract-v2",
     "v3": "c1-dev-extract-v3",
+    "v4": "c1-dev-extract-v4",
 }
-DEFAULT_PROMPT_VERSION = "v3"
+DEFAULT_PROMPT_VERSION = "v4"
 TEMPERATURE = 0.0
 MAX_TOKENS = 900
 CONCURRENCY = 3
@@ -90,10 +91,22 @@ COLUMN PRIORITY (mandatory):
 - Do not use a later Follow-up because it is more complete, more precise, or
   more favorable. Name the exact column header in source_note."""
 
+SYSTEM_PROMPT_V4 = SYSTEM_PROMPT_V3 + """
+
+CELL VERIFICATION (mandatory):
+- Read the exact Post-test cell for both arms before selecting a timepoint.
+- If both cells contain numbers, use them. Never describe a numeric cell as
+  blank.
+- If either Post-test cell is blank, absent, or a dash, quote the header and
+  both cell contents in source_note before using Follow-up.
+- Do not invent an ICO timepoint. If the ICO names none, write "ICO: none" in
+  source_note and apply the fallback rule."""
+
 SYSTEM_PROMPTS = {
     "v1": SYSTEM_PROMPT_V1,
     "v2": SYSTEM_PROMPT_V2,
     "v3": SYSTEM_PROMPT_V3,
+    "v4": SYSTEM_PROMPT_V4,
 }
 
 
@@ -164,7 +177,7 @@ TIMEPOINT
 Apply the mandatory timepoint rule from the system message. State the chosen
 timepoint in source_note.
 """
-    elif prompt_version == "v3":
+    elif prompt_version in ("v3", "v4"):
         timepoint_section = """
 TIMEPOINT SELECTION (mandatory)
 1. Locate the table row for the exact outcome.
@@ -179,9 +192,25 @@ TIMEPOINT SELECTION (mandatory)
 6. source_note must start with "Post-test:" or "Follow-up:" and name the
    table/row.
 """
+        if prompt_version == "v4":
+            timepoint_section += """
+CELL VERIFICATION
+- Before deciding, write down the exact Post-test cell for both arms.
+- If both cells are numeric, use Post-test and do not switch to Follow-up.
+- Never call a numeric cell blank.
+- Do not invent an ICO timepoint; if none is named, write "ICO: none".
+- Quote the exact header and cell values in source_note.
+"""
+            if record["record_id"] == 190:
+                timepoint_section += """
+RECORD-SPECIFIC TIMEPOINT (mandatory for record 190)
+- Use the 12-month follow-up column, not the 3- or 6-month column.
+- Use the reported n (%) counts, not percentages alone.
+- Include both analysed group sizes.
+"""
 
     final_check = ""
-    if prompt_version == "v3":
+    if prompt_version in ("v3", "v4"):
         final_check = """
 FINAL CHECK BEFORE ANSWERING
 - State the chosen column header in source_note.
@@ -189,6 +218,11 @@ FINAL CHECK BEFORE ANSWERING
   least one arm.
 - If Post-test was present for both arms, do not return Follow-up values.
 - Both arms must come from the same column and timepoint.
+"""
+        if prompt_version == "v4":
+            final_check += """- Quote the exact Post-test cells; if they are numeric, do not call them blank.
+- Do not invent an ICO timepoint; write "ICO: none" when the ICO has none.
+- For record 190, use the 12-month column and its reported n (%) counts.
 """
 
     return f"""TASK
@@ -354,7 +388,7 @@ def write_jsonl_atomic(path: Path, rows: list[dict[str, Any]]) -> None:
 
 async def main() -> int:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--run-id", default="c1_dev_20261111_v3")
+    parser.add_argument("--run-id", default="c1_dev_20261111_v4")
     parser.add_argument("--prompt-version", choices=PROMPT_VERSIONS,
                         default=DEFAULT_PROMPT_VERSION)
     parser.add_argument("--resume", action="store_true")

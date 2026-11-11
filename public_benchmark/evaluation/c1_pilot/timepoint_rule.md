@@ -5,10 +5,11 @@ Status: **entschieden und verbindlich für künftige C1-Läufe**
 
 Umsetzungsstand: `c1-dev-extract-v2` hat die Regel nicht umgesetzt (93/140).
 `c1-dev-extract-v3` priorisiert die Post-test-Spalte explizit und erreicht
-123/140 (87,9 %); 32 der 39 Zeitpunktfelder sind korrigiert. v3 ist noch nicht
-testreif: 224 und 226 bleiben Follow-up-Ausreißer, 190 wählt 3 statt 12
-Monate. Die Regel braucht für solche longitudinalen binären Outcomes eine
-explizite Record-Zeitpunktangabe.
+123/140 (87,9 %). `c1-dev-extract-v4` ergänzt Zellverifikation und den
+12-Monats-Override für Record 190 und erreicht 126/140 (90,0 %). v4 ist noch
+nicht testreif: 224 und 238 bleiben falsche Zeitpunkte, 226 verliert die
+Gruppengrößen, 120 bleibt das ICO-Problem. Die Regel braucht für
+longitudinale binäre Outcomes weiterhin eine explizite Record-Zeitpunktangabe.
 
 ## Regel
 
@@ -48,7 +49,10 @@ wie der nächste Lauf den Zeitpunkt behandeln muss.
 - `c1-dev-extract-v2` hat die Regel im Prompt codiert, aber im Dev-Test nicht
   umgesetzt; er ist nicht für eine Testfreigabe freigegeben.
 - `c1-dev-extract-v3` setzt die Spaltenpriorisierung weitgehend um, ist aber
-  wegen der vier offenen Records (120, 224, 226, 190) noch nicht testreif.
+  wegen der offenen Records noch nicht testreif.
+- `c1-dev-extract-v4` löst Record 190 über einen expliziten 12-Monats-Zeitpunkt
+  und verbessert Record 226; wegen 120, 224, 226 (Gruppengrößen) und 238 ist
+  er ebenfalls nicht testreif.
 - Sie ist eine Benchmark-Entscheidung, keine klinische Empfehlung. Für eine
   spätere gepoolte Analyse kann ein studienübergreifend einheitlicher
   klinischer Zeitpunkt sinnvoller sein; dann muss die Referenz neu eingefroren
@@ -58,9 +62,13 @@ wie der nächste Lauf den Zeitpunkt behandeln muss.
 - Record 120 bleibt ein separates ICO-Problem (DTPA-Subgruppe vs. Rezidiv).
 - Record 190 zeigt eine Grenze der Fallback-Regel: Die Referenz nutzt den
   12-Monats-Wert, die Regel würde den frühesten Follow-up (3 Monate) wählen.
-  Dieser Record braucht vor einer Testfreigabe einen expliziten Zeitpunkt.
+  Der v4-Override löst diesen Record; die Regel bleibt für ähnliche Fälle
+  auf eine explizite Record-Zeitpunktangabe angewiesen.
 - Record 226 zeigt einen zusätzlichen Tabellenfehler: Der Post-Test ist
-  berichtet, wird aber als leer behandelt.
+  berichtet, wird aber als leer behandelt. v4 korrigiert Mean/SD, nicht die
+  Gruppengrößen.
+- Record 238 zeigt die gleiche Schwäche: Eine vorhandene Post-Test-Zelle wird
+  wegen einer `()`-Schreibweise als leer interpretiert; v4 wählt Follow-up.
 
 ## Prüfung
 
