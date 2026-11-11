@@ -2,9 +2,10 @@
 
 Stand: 2026-11-11
 
-Status: **Dev-Pilot gelaufen; 26/26 Records verarbeitet; Zeitpunktregel entschieden; Testsplit unangetastet.**
-Modell: `gwdg/qwen3.5-397b-a17b` über TUDaGPT, Temperatur 0, Prompt
-`c1-dev-extract-v1`.
+Status: **Dev-Pilot gelaufen; 26/26 Records verarbeitet; Zeitpunktregel entschieden;
+Prompt v2 getestet, aber nicht wirksam; Testsplit unangetastet.**
+Modell: `gwdg/qwen3.5-397b-a17b` über TUDaGPT, Temperatur 0. Der belastbare
+Baseline-Lauf ist `c1_dev_20261111` mit Prompt `c1-dev-extract-v1`.
 
 ## Ergebnis
 
@@ -58,17 +59,36 @@ ist eine deskriptive Sensitivität, keine Änderung des strengen Primärwerts.
 Details:
 [`runs/c1_dev_20261111/manual_review.md`](runs/c1_dev_20261111/manual_review.md).
 
-Artefakte des Laufs:
+Artefakte der Läufe:
 
-- [`runs/c1_dev_20261111/dev_output.jsonl`](runs/c1_dev_20261111/dev_output.jsonl)
-- [`runs/c1_dev_20261111/dev_raw.jsonl`](runs/c1_dev_20261111/dev_raw.jsonl)
-- [`runs/c1_dev_20261111/dev_evaluation.json`](runs/c1_dev_20261111/dev_evaluation.json)
-- [`runs/c1_dev_20261111/dev_evaluation.md`](runs/c1_dev_20261111/dev_evaluation.md)
-- [`runs/c1_dev_20261111/run_manifest.json`](runs/c1_dev_20261111/run_manifest.json)
+- v1: [`runs/c1_dev_20261111/dev_output.jsonl`](runs/c1_dev_20261111/dev_output.jsonl),
+  [`dev_raw.jsonl`](runs/c1_dev_20261111/dev_raw.jsonl),
+  [`dev_evaluation.json`](runs/c1_dev_20261111/dev_evaluation.json),
+  [`dev_evaluation.md`](runs/c1_dev_20261111/dev_evaluation.md),
+  [`run_manifest.json`](runs/c1_dev_20261111/run_manifest.json)
+- v2: [`runs/c1_dev_20261111_v2/dev_output.jsonl`](runs/c1_dev_20261111_v2/dev_output.jsonl),
+  [`dev_raw.jsonl`](runs/c1_dev_20261111_v2/dev_raw.jsonl),
+  [`dev_evaluation.json`](runs/c1_dev_20261111_v2/dev_evaluation.json),
+  [`dev_evaluation.md`](runs/c1_dev_20261111_v2/dev_evaluation.md),
+  [`run_manifest.json`](runs/c1_dev_20261111_v2/run_manifest.json),
+  [`v2_result.md`](runs/c1_dev_20261111_v2/v2_result.md)
+
+## Prompt v2: Test ohne Verbesserung
+
+Der zweite Lauf `c1_dev_20261111_v2` mit `c1-dev-extract-v2` liefert
+**93/140 exakt (66,4 %)**, dieselben 43 falschen und 4 fehlenden Felder wie
+v1. Die MAE sinkt von 4,7066 auf 4,6404, weil Record 120 eine andere falsche
+Ergebniszeile wählt; das ist kein Qualitätsgewinn.
+
+Die Zeitpunktregel wird vom Modell nicht umgesetzt: Die 10 Records aus
+PMC5498715 verwenden weiterhin den 4-Monats-Follow-up, Record 190 bleibt
+`null`. v2 ist damit keine Grundlage für eine Testfreigabe. Details:
+[`runs/c1_dev_20261111_v2/v2_result.md`](runs/c1_dev_20261111_v2/v2_result.md).
 
 Der Testsplit bleibt gesperrt. Vor einer Testfreigabe müssen der Umgang mit
-unterspezifizierten ICOs geklärt und die Tabellenextraktion für Record 190
-gezielt nachgebessert werden; die Zeitpunktregel ist entschieden.
+unterspezifizierten ICOs geklärt, die Tabellenextraktion für Record 190
+nachgebessert und ein v3-Prompt auf Dev validiert werden; die Zeitpunktregel
+ist entschieden.
 
 ## Eingefrorene Daten
 

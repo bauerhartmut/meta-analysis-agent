@@ -1,0 +1,23 @@
+{
+  "run_id": "c1_dev_20261111_v2",
+  "prompt_version": "c1-dev-extract-v2",
+  "backend": "tudagpt",
+  "model": "gwdg/qwen3.5-397b-a17b",
+  "temperature": 0.0,
+  "max_tokens": 900,
+  "concurrency": 3,
+  "input_path": "evaluation/c1_pilot/dev_input.jsonl",
+  "input_sha256": "198fc2a20d6c98001defc10fb1b4d5758b5c6f5554d885c5785e44cbdaa18374",
+  "model_config_sha256": "61c64927b054b966fdca3c2839e0e5caa0f919b222ca2efff1a180e82c5083f6",
+  "created_at": "2026-11-11T22:27:03",
+  "reference_loaded": false,
+  "test_split_used": false,
+  "status": "completed",
+  "completed_at": "2026-11-11T22:28:02",
+  "completed_records": 26,
+  "parse_errors": 0,
+  "parse_error_record_ids": [],
+  "output_sha256": "77ae0aa661ea7d95c41008f894f7b40034e28978af2eed8a0920a710af6b4ca3",
+  "raw_sha256": "d7be651557e58c191dfa64ab2ba38e83c6465acb480d30534ed534f7f21318dd",
+  "prompt_sha256_all": "eb8d387efa8c13d7f6ac769e8587755cc0e66f525a08ea85d53bce0a17c13852"
+}

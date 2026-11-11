@@ -3,6 +3,11 @@
 Stand: 2026-11-11
 Status: **entschieden und verbindlich für künftige C1-Läufe**
 
+Umsetzungsstand: Der Prompt `c1-dev-extract-v2` wurde am 2026-11-11 auf den
+26 Dev-Records getestet. Das Modell hat die Regel nicht befolgt; die
+Trefferzahl blieb bei 93/140. v2 ist keine Testgrundlage. Ein v3-Prompt muss
+die Spaltenwahl expliziter machen und erneut auf Dev geprüft werden.
+
 ## Regel
 
 Für jeden Record und jedes Outcome gilt genau ein Zeitpunkt:
@@ -38,6 +43,8 @@ wie der nächste Lauf den Zeitpunkt behandeln muss.
 
 - Die Regel gilt ab dem nächsten C1-Prompt; der Lauf `c1_dev_20261111` mit
   `c1-dev-extract-v1` bleibt als historischer Messpunkt unverändert.
+- `c1-dev-extract-v2` hat die Regel im Prompt codiert, aber im Dev-Test nicht
+  umgesetzt; er ist nicht für eine Testfreigabe freigegeben.
 - Sie ist eine Benchmark-Entscheidung, keine klinische Empfehlung. Für eine
   spätere gepoolte Analyse kann ein studienübergreifend einheitlicher
   klinischer Zeitpunkt sinnvoller sein; dann muss die Referenz neu eingefroren
