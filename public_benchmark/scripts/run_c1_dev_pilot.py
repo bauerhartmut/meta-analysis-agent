@@ -8,6 +8,10 @@ Aufruf:
     PYTHONIOENCODING=utf-8 .venv/bin/python.exe \
         public_benchmark/scripts/run_c1_dev_pilot.py --run-id c1_dev_20261111
 
+Prompt-Versionen:
+    v1  historischer Prompt ohne Zeitpunktregel (reproduziert den ersten Lauf)
+    v2  verbindliche C1-Zeitpunktregel (Standard)
+
 Ein vorhandener Run wird nur mit ``--resume`` fortgesetzt.
 """
 
@@ -31,12 +35,17 @@ from research_agent.llm.engine import LLMEngine  # noqa: E402
 
 INPUT_PATH = BENCH_ROOT / "evaluation" / "c1_pilot" / "dev_input.jsonl"
 OUTPUT_ROOT = BENCH_ROOT / "evaluation" / "c1_pilot" / "runs"
-PROMPT_VERSION = "c1-dev-extract-v1"
+PROMPT_VERSIONS = ("v1", "v2")
+PROMPT_VERSION_IDS = {
+    "v1": "c1-dev-extract-v1",
+    "v2": "c1-dev-extract-v2",
+}
+DEFAULT_PROMPT_VERSION = "v2"
 TEMPERATURE = 0.0
 MAX_TOKENS = 900
 CONCURRENCY = 3
 
-SYSTEM_PROMPT = """You are a precise data extractor for a meta-analysis benchmark.
+SYSTEM_PROMPT_V1 = """You are a precise data extractor for a meta-analysis benchmark.
 
 Extract only the aggregate arm-level values that the supplied article reports
 for exactly the requested intervention, comparator and outcome.
@@ -56,6 +65,23 @@ Hard rules:
   words). It must not contain reasoning.
 - Return exactly one JSON object with every key below, using JSON null where a
   value is not reported. No markdown, no code fence, no additional prose."""
+
+SYSTEM_PROMPT_V2 = SYSTEM_PROMPT_V1 + """
+
+TIMEPOINT RULE (mandatory):
+- If the ICO names a timepoint, use that timepoint.
+- Otherwise use the immediate post-test: the first measurement after the
+  intervention that is not labelled as follow-up.
+- If the post-test is not reported for both arms, use the earliest follow-up
+  for which both arms are fully reported.
+- Never use baseline, change, peak, or mixed timepoints. Both arms must come
+  from the same timepoint and the same outcome definition.
+- Name the chosen timepoint and the table/row in source_note."""
+
+SYSTEM_PROMPTS = {
+    "v1": SYSTEM_PROMPT_V1,
+    "v2": SYSTEM_PROMPT_V2,
+}
 
 
 def sha256_text(text: str) -> str:
@@ -81,7 +107,10 @@ def resolve_source(path_text: str) -> Path:
     raise FileNotFoundError(path_text)
 
 
-def render_prompt(record: dict[str, Any], source_text: str) -> str:
+def render_prompt(record: dict[str, Any], source_text: str,
+                  prompt_version: str = DEFAULT_PROMPT_VERSION) -> str:
+    if prompt_version not in PROMPT_VERSIONS:
+        raise ValueError(f"Unbekannte Prompt-Version: {prompt_version}")
     ico = record["ico"]
     outcome_type = record["outcome_type"]
     if outcome_type == "continuous":
@@ -115,6 +144,14 @@ def render_prompt(record: dict[str, Any], source_text: str) -> str:
     else:
         raise ValueError(f"Unbekannter outcome_type: {outcome_type}")
 
+    timepoint_section = ""
+    if prompt_version == "v2":
+        timepoint_section = """
+TIMEPOINT
+Apply the mandatory timepoint rule from the system message. State the chosen
+timepoint in source_note.
+"""
+
     return f"""TASK
 Extract the arm-level result for this record.
 
@@ -123,7 +160,7 @@ outcome_type: {outcome_type}
 Intervention: {ico["intervention"]}
 Comparator: {ico["comparator"]}
 Outcome: {ico["outcome"]}
-
+{timepoint_section}
 Required JSON object (same keys, values filled or null):
 {json.dumps(schema, ensure_ascii=False, indent=2)}
 
@@ -134,11 +171,11 @@ ARTICLE TEXT
 """
 
 
-def hash_model_config(llm: LLMEngine) -> str:
+def hash_model_config(llm: LLMEngine, prompt_version: str) -> str:
     config = {
         "backend": getattr(llm, "_backend", ""),
         "model": getattr(llm, "_tudagpt_model", ""),
-        "prompt_version": PROMPT_VERSION,
+        "prompt_version": PROMPT_VERSION_IDS[prompt_version],
         "temperature": TEMPERATURE,
         "max_tokens": MAX_TOKENS,
     }
@@ -232,12 +269,13 @@ def normalize_row(record: dict[str, Any], parsed: dict[str, Any],
 
 
 async def run_one(record: dict[str, Any], llm: LLMEngine,
-                  semaphore: asyncio.Semaphore) -> dict[str, Any]:
+                  semaphore: asyncio.Semaphore,
+                  prompt_version: str) -> dict[str, Any]:
     source_path = resolve_source(record["source_text_path"])
     source_text = source_path.read_text(encoding="utf-8", errors="replace")
-    prompt = render_prompt(record, source_text)
+    prompt = render_prompt(record, source_text, prompt_version)
     messages = [
-        {"role": "system", "content": SYSTEM_PROMPT},
+        {"role": "system", "content": SYSTEM_PROMPTS[prompt_version]},
         {"role": "user", "content": prompt},
     ]
 
@@ -277,7 +315,9 @@ def write_jsonl_atomic(path: Path, rows: list[dict[str, Any]]) -> None:
 
 async def main() -> int:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--run-id", default="c1_dev_20261111")
+    parser.add_argument("--run-id", default="c1_dev_20261111_v2")
+    parser.add_argument("--prompt-version", choices=PROMPT_VERSIONS,
+                        default=DEFAULT_PROMPT_VERSION)
     parser.add_argument("--resume", action="store_true")
     args = parser.parse_args()
 
@@ -316,7 +356,7 @@ async def main() -> int:
     model = getattr(llm, "_tudagpt_model", "")
     manifest = {
         "run_id": args.run_id,
-        "prompt_version": PROMPT_VERSION,
+        "prompt_version": PROMPT_VERSION_IDS[args.prompt_version],
         "backend": getattr(llm, "_backend", ""),
         "model": model,
         "temperature": TEMPERATURE,
@@ -324,7 +364,7 @@ async def main() -> int:
         "concurrency": CONCURRENCY,
         "input_path": str(INPUT_PATH.relative_to(BENCH_ROOT)).replace("\\", "/"),
         "input_sha256": sha256_file(INPUT_PATH),
-        "model_config_sha256": hash_model_config(llm),
+        "model_config_sha256": hash_model_config(llm, args.prompt_version),
         "created_at": time.strftime("%Y-%m-%dT%H:%M:%S"),
         "reference_loaded": False,
         "test_split_used": False,
@@ -336,12 +376,16 @@ async def main() -> int:
     )
 
     semaphore = asyncio.Semaphore(CONCURRENCY)
-    print(f"Start: {len(pending)} offen, {len(completed)} erledigt, Modell {model}")
+    print(
+        f"Start: {len(pending)} offen, {len(completed)} erledigt, "
+        f"Prompt {PROMPT_VERSION_IDS[args.prompt_version]}, Modell {model}"
+    )
     try:
         for offset in range(0, len(pending), CONCURRENCY):
             batch = pending[offset:offset + CONCURRENCY]
             results = await asyncio.gather(
-                *(run_one(record, llm, semaphore) for record in batch)
+                *(run_one(record, llm, semaphore, args.prompt_version)
+                  for record in batch)
             )
             for result in results:
                 done_raw.append(result)
