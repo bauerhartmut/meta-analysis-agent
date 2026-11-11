@@ -26,6 +26,7 @@ verbindliche Gate-Liste; sie ersetzt keine ausdrückliche Freigabe.
 | Test 249 | 249 Records, 64 Artikel; SHA-256 `7eb1bc43b2ca044dea739c36f1a6c7f86fa577d4e25174d01ef8ebac8ce00da2` |
 | Test-Policy | `locked=true`, `used_for_prompt_optimization=false` |
 | Testsplit gelesen | für die Projektion ja, für keinen Modelllauf; `test_split_used=false` in allen v6-Läufen |
+| Release-Manifest | `release_v6c.json`, SHA-256 `0068395e354b97b6ec4d7cc053ae481fe52fdfea8135a65cd89d6297f3ee2689`; `test_run_approved=false` |
 
 ## 2. Umsetzung und harte Blocker
 
@@ -52,14 +53,16 @@ Abgeschlossen:
   [`test_projection_verification.md`](test_projection_verification.md).
 - [x] Die Projektion ist über `.gitignore` lokal geschützt und nicht
   versioniert.
+- [x] **B4: Release-Manifest vorhanden.** [`release_v6c.json`](release_v6c.json)
+  pinnt Kandidat, Freeze, Testprojektion, Runner-/Prompt-Hashes und den
+  Verifikationsbericht; der Sidecar-Hash steht in
+  [`release_v6c.sha256`](release_v6c.sha256). Das Manifest setzt
+  `test_run_approved=false`.
 
 Noch offen:
 
-- [ ] **B4: Kein Release-Manifest und keine ausdrückliche Testlauf-Freigabe.**
-  Der Freeze-Manifest beschreibt den Datenstand, nicht den freigegebenen
-  Testlauf; sein `pilot.status` ist noch `prepared_not_run`. Ein separates
-  Release-Manifest muss Kandidat, Hashes, Test-Input-Hash, Metriken und
-  Freigabezeitpunkt pinnen.
+- [ ] **Ausdrückliche Testlauf-Freigabe.** Das Manifest autorisiert keinen
+  Lauf; der Start bleibt bis zu einer separaten Freigabe gesperrt.
 
 Der Testsplit wurde für die Projektion gelesen, aber nicht für
 Prompt-Optimierung oder einen Modelllauf verwendet.
@@ -73,7 +76,7 @@ Prompt-Optimierung oder einen Modelllauf verwendet.
 - [x] v1-v5 erzeugen weiterhin ihre gespeicherten Prompt-Hashes.
 - [x] v6c-Run-Manifest und Rohdaten sind vorhanden.
 - [x] Der Testsplit wurde für v6c nicht gelesen.
-- [ ] Nach dem Release-Manifest darf der Runner nicht mehr geändert werden;
+- [x] Nach dem Release-Manifest darf der Runner nicht mehr geändert werden;
   jede Änderung erfordert einen neuen Kandidaten und einen neuen Dev-Lauf.
 
 ## 4. Checkliste Daten
@@ -162,6 +165,6 @@ Kandidaten.
 **Aktuell: NO-GO.**
 
 Der technische Testpfad ist gebaut, die 249er-Projektion erzeugt und
-unabhängig geprüft. Freigabefähig ist der Lauf erst, wenn B4 geschlossen und
-der Testlauf ausdrücklich freigegeben ist. Der Dev-Wert 140/140 ist eine
-Kandidatenqualifikation, kein Testresultat.
+unabhängig geprüft, das Release-Manifest liegt vor. Freigabefähig ist der
+Lauf jetzt nur noch durch die ausdrückliche Testlauf-Freigabe. Der Dev-Wert
+140/140 ist eine Kandidatenqualifikation, kein Testresultat.

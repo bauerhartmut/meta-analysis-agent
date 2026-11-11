@@ -1,0 +1,121 @@
+{
+  "release_version": 1,
+  "release_id": "c1-v6c-20261111",
+  "created_at": "2026-11-11T23:18:23",
+  "status": "candidate_locked_pending_test_approval",
+  "test_run_approved": false,
+  "test_run_started": false,
+  "code_commit": "3745c89b84c7aee708a6bf3cbb5aff5121115bf5",
+  "candidate": {
+    "run_id": "c1_dev_20261111_v6c",
+    "prompt_version": "c1-dev-extract-v6",
+    "model": "gwdg/qwen3.5-397b-a17b",
+    "temperature": 0.0,
+    "max_tokens": 900,
+    "concurrency": 3,
+    "prompt_sha256_all": "d0300215ff6bfd9dfbb81664f3cadaf19fa5bc3c019cce40db09c6e3524dca14",
+    "model_config_sha256": "75bb627f214ef6ace9714818ecc928ff4641fc130dc63c74c7d271da31145725",
+    "input_sha256": "198fc2a20d6c98001defc10fb1b4d5758b5c6f5554d885c5785e44cbdaa18374",
+    "output_sha256": "abe92e7ee4f452eaf7bcf16418968cf6b955b4d03ee78f19f643c5ac0cafd195",
+    "raw_sha256": "f90519b6ce66313b624d1a2e6d5ff17b32bbd7535a21df54ab45896f326c4683",
+    "dev_evaluation_sha256": "5b0e016668efe5f89b0b3121ea4e6f744879a45d0340db9ef673611486a8f230",
+    "dev_metrics": {
+      "records": 26,
+      "exact_fields": 140,
+      "expected_fields": 140,
+      "coverage": 1.0,
+      "wrong_fields": 0,
+      "missing_fields": 0,
+      "hallucinated_fields": 0,
+      "mae": 0.0
+    }
+  },
+  "data": {
+    "freeze_275": {
+      "path": "processed_data/yun_c1_frozen_275.jsonl",
+      "sha256": "567d54b81ca07163979684e43ab333a740812909614b7215c2de5edd200bf13c",
+      "records": 275
+    },
+    "test_249": {
+      "path": "processed_data/yun_c1_test_249.jsonl",
+      "sha256": "7eb1bc43b2ca044dea739c36f1a6c7f86fa577d4e25174d01ef8ebac8ce00da2",
+      "records": 249,
+      "articles": 64,
+      "by_type": {
+        "continuous": 156,
+        "binary": 93
+      }
+    },
+    "dev_input": {
+      "path": "evaluation/c1_pilot/dev_input.jsonl",
+      "sha256": "198fc2a20d6c98001defc10fb1b4d5758b5c6f5554d885c5785e44cbdaa18374"
+    },
+    "dev_reference": {
+      "path": "evaluation/c1_pilot/dev_reference.jsonl",
+      "sha256": "c28ce0cac6de793945498002fc1ffc4e5c6706909f58c658d5855a2d399d3934"
+    }
+  },
+  "test_projection": {
+    "input_path": "evaluation/c1_pilot/test_locked/test_input.jsonl",
+    "input_sha256": "b8a2f3d17c2ee4a41473811ccb72632175f1d786b05b9e16e2d8c18d64204368",
+    "reference_path": "evaluation/c1_pilot/test_locked/test_reference.jsonl",
+    "reference_sha256": "84b5c925340af82eb72717b36b2e4c5a2fa04760d6a6d01e63b742d0689e0629",
+    "records": 249,
+    "articles": 64,
+    "by_type": {
+      "continuous": 156,
+      "binary": 93
+    },
+    "expected_fields": 1308,
+    "verification_path": "evaluation/c1_pilot/test_projection_verification.json",
+    "verification_sha256": "0e7f1c5e841bd254447a7e32ce8ef7f6b2e8fce9bc594008a993e64d7e989142",
+    "verification_status": "passed",
+    "verification_checks": 26
+  },
+  "code": {
+    "prompt_and_dev_runner": {
+      "path": "scripts/run_c1_dev_pilot.py",
+      "sha256": "943e2e24e2c257fefb6ce5fba2f307a3bb87d619638e1e433d5cfcb34ba4d788"
+    },
+    "dev_evaluator": {
+      "path": "scripts/evaluate_c1_dev_pilot.py",
+      "sha256": "b68a52e6ba204d2bd84603fc9fbd0e5b460c17ed23f6b1048dd5283453d4079a"
+    },
+    "test_projection": {
+      "path": "scripts/c1_test_projection.py",
+      "sha256": "34c68b5a83305a18e3d35c419dd89304d56e63588579949e0efb5edf114854b4"
+    },
+    "test_runner": {
+      "path": "scripts/run_c1_test_pilot.py",
+      "sha256": "ba99aa424c65c9f03d305a2534e8daa178414dd76a6bb915782ccf83b4598dba"
+    },
+    "test_evaluator": {
+      "path": "scripts/evaluate_c1_test_pilot.py",
+      "sha256": "7b6a10080dce33ddd476e9ca8c4b9468d923f6c98278017bbf6fe3f3a1b4de78"
+    },
+    "test_projection_verifier": {
+      "path": "scripts/verify_c1_test_projection.py",
+      "sha256": "55cb1b902e554f453de9855f4983a186d3792e349d02c6f3fb326c19a119e003"
+    },
+    "test_isolation_check": {
+      "path": "scripts/check_c1_test_isolation.py",
+      "sha256": "e5cd297a1bf3a4f17a5f1c895a16206ff86d3c3ad30d526463dadb177be699f1"
+    }
+  },
+  "gates": {
+    "B1_test_runner": true,
+    "B2_test_input_separate_reference": true,
+    "B3_dev_only_overrides": true,
+    "B4_release_manifest": true,
+    "B5_projection_independently_verified": true,
+    "explicit_test_approval": false
+  },
+  "test_plan": {
+    "records": 249,
+    "expected_fields": 1308,
+    "primary_metric": "exact_fields / 1308",
+    "status": "not_started",
+    "approval_reference": null
+  },
+  "note": "Dieses Manifest autorisiert keinen Testlauf. Der Testlauf braucht eine separate ausdrueckliche Freigabe; die Testprojektion bleibt lokal und ist nicht versioniert."
+}

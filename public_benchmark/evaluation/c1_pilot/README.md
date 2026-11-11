@@ -4,7 +4,7 @@ Stand: 2026-11-11
 
 Status: **Dev-Pilot gelaufen; 26/26 Records verarbeitet; Zeitpunktregel entschieden;
 Prompt v6 getestet: 140/140 exakt, 26/26 Records vollständig; Testprojektion
-erzeugt und unabhängig geprüft; Testlauf gesperrt.**
+erzeugt, unabhängig geprüft und Release-Manifest erstellt; Testlauf gesperrt.**
 Modell: `gwdg/qwen3.5-397b-a17b` über TUDaGPT, Temperatur 0. Der belastbare
 Vergleichspunkt ist `c1_dev_20261111` mit Prompt `c1-dev-extract-v1`.
 
@@ -207,9 +207,12 @@ Die 249er-Projektion ist erzeugt und unabhängig geprüft:
 `b8a2f3d17c2ee4a41473811ccb72632175f1d786b05b9e16e2d8c18d64204368`,
 Referenz-SHA-256
 `84b5c925340af82eb72717b36b2e4c5a2fa04760d6a6d01e63b742d0689e0629`.
-Offen sind das Release-Manifest und die ausdrückliche Testlauf-Freigabe. Der
-Testsplit wurde für die Projektion gelesen, aber nicht für Prompt-Optimierung
-oder einen Modelllauf verwendet; der Testlauf bleibt gesperrt.
+Das Release-Manifest liegt unter [`release_v6c.json`](release_v6c.json)
+(SHA-256 `0068395e354b97b6ec4d7cc053ae481fe52fdfea8135a65cd89d6297f3ee2689`)
+und setzt `test_run_approved=false`. Offen ist nur die ausdrückliche
+Testlauf-Freigabe. Der Testsplit wurde für die Projektion gelesen, aber nicht
+für Prompt-Optimierung oder einen Modelllauf verwendet; der Testlauf bleibt
+gesperrt.
 
 ## Eingefrorene Daten
 
