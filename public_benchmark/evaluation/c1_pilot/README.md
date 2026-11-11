@@ -13,7 +13,9 @@ Vergleichspunkt ist `c1_dev_20261111` mit Prompt `c1-dev-extract-v1`.
 ## Tagesbericht
 
 Der vollständige Bericht zum 2026-11-11 steht in
-[`tagesbericht_20261111.md`](tagesbericht_20261111.md).
+[`tagesbericht_20261111.md`](tagesbericht_20261111.md). Abschluss und
+Aufgaben für den 2026-11-12:
+[`abschluss_20261111.md`](abschluss_20261111.md).
 
 ## Ergebnis
 
