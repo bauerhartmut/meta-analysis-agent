@@ -2,7 +2,7 @@
 
 Stand: 2026-11-11
 Kandidat: `c1_dev_20261111_v6c`, Prompt `c1-dev-extract-v6`
-Status: **TEST COMPLETED - Ergebnis dokumentiert**
+Status: **TEST COMPLETED - Entscheidungsvorlage offen**
 
 Der Kandidat ist auf Dev vollständig; der eine freigegebene Testlauf ist
 durchgeführt und ausgewertet. Das Ergebnis ist dokumentiert, nicht zur
@@ -176,3 +176,8 @@ Der Testlauf ist abgeschlossen: **992/1308 exakt (75,8 %)**, 140 fehlend,
 vollständig exakt. Das Ergebnis wird nicht zur Prompt-Optimierung verwendet
 und nicht wiederholt. Der Dev-Wert 140/140 bleibt eine
 Kandidatenqualifikation, kein Testresultat.
+
+Entscheidungsvorlage: [`decision_v6c.md`](decision_v6c.md). Empfehlung:
+neuer Kandidat auf unabhängigen Daten; v6c bis dahin nur assistiert mit
+vollständiger menschlicher Prüfung. Der 249er-Test wird nicht zur Entwicklung
+des nächsten Kandidaten wiederverwendet.

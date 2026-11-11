@@ -248,6 +248,16 @@ bei 684/684. Details:
 [`test_error_analysis.md`](runs_test/c1_test_20261111_v6c/test_error_analysis.md).
 Keine Prompt-Änderung, kein neuer Modelllauf.
 
+## Entscheidungsvorlage v6c
+
+Status: **Vorschlag, nicht freigegeben.** Die Vorlage
+[`decision_v6c.md`](decision_v6c.md) prüft, ob v6c für die Meta-Analyse
+ausreicht. Empfehlung: **neuer Kandidat auf unabhängigen Daten**; v6c nur
+assistiert mit vollständiger menschlicher Prüfung. Der 249er-Test wird nicht
+zur Entwicklung des nächsten Kandidaten wiederverwendet. Es gibt keinen
+formalen C1-Schwellenwert; die vorgeschlagenen Gates sind ausdrücklich als
+Vorschlag markiert. Kein neuer Modelllauf.
+
 ## Eingefrorene Daten
 
 Der Pilot verwendet ausschließlich die 26 nutzbaren Dev-Records aus 6
