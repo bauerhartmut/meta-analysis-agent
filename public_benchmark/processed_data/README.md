@@ -33,6 +33,16 @@ und keine Modellausgabe.
 - Der Datensatz zählt 517 kontinuierliche und 182 binäre Records; das Paper
   nennt 516/183.
 
+## Eingefrorener C1-Datensatz
+
+- `yun_c1_frozen_275.jsonl`: 275 nutzbare Records aus dem 410er-Audit.
+- `yun_c1_dev_26.jsonl`: 26 Dev-Records aus 6 Artikeln.
+- `yun_c1_test_249.jsonl`: 249 Test-Records aus 64 Artikeln; gesperrt.
+
+Die Dateien sind sortiert und über `validation/c1_freeze_manifest.json`
+mit SHA-256 gepinnt. Die Referenzwerte bleiben in den Testdateien erhalten;
+`evaluation/c1_pilot/dev_input.jsonl` enthält dagegen keine Referenzwerte.
+
 ## Evidence Inference und DTA
 
 Für Evidence Inference wird keine numerische Projektion erzeugt, weil N,

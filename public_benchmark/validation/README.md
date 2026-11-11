@@ -18,6 +18,8 @@
   Korrektur; 275 von 410 Records sind für C1 nutzbar.
 - `yun_audit_410_summary.json`: Zählungen nach Status, Outcome-Typ und
   Ausschlussgrund.
+- `c1_freeze_manifest.json`: SHA-256, Größen und Splitzahlen des
+  eingefrorenen 275er-C1-Datensatzes.
 - `yun_audit_cards.md`: lokales Arbeitsexemplar mit Artikelzitaten; wird
   nicht versioniert.
 

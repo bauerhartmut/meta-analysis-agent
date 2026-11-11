@@ -4,7 +4,7 @@ Stand: 2026-11-11
 
 Arbeitsbereich: `public_benchmark/`
 
-Status: **Recherche und Referenzaudit abgeschlossen; 410 Records auditiert; kein Modelllauf; keine Änderung an A oder B.**
+Status: **Recherche und Referenzaudit abgeschlossen; 275 C1-Records eingefroren; Dev-Pilot vorbereitet, nicht gestartet; kein Modelllauf; keine Änderung an A oder B.**
 
 ## Kurzentscheidung
 
@@ -198,6 +198,11 @@ freigegeben.
 Die Korrektur betrifft Record 12: Interventions-SD `23,34` wird mit der
 Tabelle `12.34` auf `12,34` korrigiert; der Originalwert bleibt erhalten.
 Details: `validation/yun_audit_410.md`, `validation/yun_audit_410.jsonl`.
+
+Die 275 nutzbaren Records sind eingefroren: 26 Dev-Records aus 6 Artikeln
+und 249 Test-Records aus 64 Artikeln. Der Testsplit ist gesperrt. SHA-256 und
+Dateigrößen stehen in `validation/c1_freeze_manifest.json`; der Dev-Pilot
+ist unter `evaluation/c1_pilot/` vorbereitet, aber nicht gestartet.
 
 ## 4. Evidence Inference 2.0
 
@@ -438,10 +443,12 @@ keine Kappa-Berechnung, bevor der B-Hash eingefroren ist.
    ausreichend belegt. Die kuratierte Referenz steht in
    `validation/yun_audit_410.jsonl`; die 135 nicht nutzbaren Records bleiben
    im Ledger.
-3. **Test einfrieren:** Den kuratierten 275er-Datensatz und den Yun-Test-Split
-   hashen und als unveränderlich markieren.
-4. **C1-Pilot auf Dev:** Erst danach einen freigegebenen Dev-Lauf planen;
-   keine Testdaten zur Prompt-Optimierung.
+3. **Freeze abgeschlossen:** Der 275er-Datensatz ist mit SHA-256 gepinnt
+   (`validation/c1_freeze_manifest.json`); 26 Dev- und 249 Test-Records sind
+   getrennt. Der Test bleibt gesperrt.
+4. **C1-Dev-Pilot vorbereitet:** Eingabe und Referenz für 26 Dev-Records
+   liegen unter `evaluation/c1_pilot/`. Ein Lauf benötigt eine ausdrückliche
+   Freigabe; keine Testdaten zur Prompt-Optimierung.
 5. **B unverändert lassen:** Der B-Watcher wird nicht angefasst; vor einem
    Eingriff Status prüfen, kein A öffnen, kein B-Hash erfinden.
 
@@ -466,6 +473,12 @@ als Modellfehler messen.
 | `validation/yun_audit_410.md` | Vollaudit der 410 streng vollständigen Records |
 | `validation/yun_audit_410.jsonl` | Kuratierte Referenz mit Auditstatus und Korrektur |
 | `validation/yun_audit_410_summary.json` | Statuszählungen des 410er-Audits |
+| `validation/c1_freeze_manifest.json` | SHA-256 und Splitzahlen des 275er-Freeze |
+| `processed_data/yun_c1_frozen_275.jsonl` | Eingefrorene C1-Referenz |
+| `processed_data/yun_c1_dev_26.jsonl` | 26 Dev-Records |
+| `processed_data/yun_c1_test_249.jsonl` | 249 gesperrte Test-Records |
+| `evaluation/c1_pilot/` | Dev-Eingabe, Referenz und Pilotprotokoll |
+| `scripts/build_c1_freeze.py` | reproduzierbarer Freeze-Generator |
 | `validation/checksums.sha256` | SHA-256 für Archive und Schlüsseldateien |
 | `evaluation/README.md` | geplantes Experiment C, noch kein Lauf |
 | `scripts/build_inventory.py` | reproduzierbare Inventarerzeugung |

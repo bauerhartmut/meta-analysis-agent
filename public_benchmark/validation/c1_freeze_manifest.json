@@ -1,0 +1,95 @@
+{
+  "freeze_version": 1,
+  "created_at": "2026-11-11",
+  "source": "Yun et al. 2024",
+  "source_commit": "1bc768d4d098c727c9866eeff909297c38a3e84c",
+  "audit_source": {
+    "path": "validation/yun_audit_410.jsonl",
+    "sha256": "67d4ec1ffe522fa97c7b7c186a8b4dcd82b0cb12dc0e25c134f1e4c728b9be0f",
+    "records": 410
+  },
+  "status": "frozen_pilot_prepared_not_started",
+  "counts": {
+    "records": 275,
+    "articles": 70,
+    "by_type": {
+      "continuous": 174,
+      "binary": 101
+    },
+    "by_status": {
+      "verified_exact": 239,
+      "corrected_with_source": 1,
+      "verified_table": 35
+    }
+  },
+  "splits": {
+    "dev": {
+      "records": 26,
+      "articles": 6,
+      "by_type": {
+        "continuous": 18,
+        "binary": 8
+      },
+      "by_status": {
+        "verified_exact": 24,
+        "verified_table": 2
+      }
+    },
+    "test": {
+      "records": 249,
+      "articles": 64,
+      "by_type": {
+        "continuous": 156,
+        "binary": 93
+      },
+      "by_status": {
+        "corrected_with_source": 1,
+        "verified_table": 33,
+        "verified_exact": 215
+      }
+    }
+  },
+  "files": {
+    "processed_data/yun_c1_frozen_275.jsonl": {
+      "sha256": "567d54b81ca07163979684e43ab333a740812909614b7215c2de5edd200bf13c",
+      "bytes": 276549,
+      "records": 275
+    },
+    "processed_data/yun_c1_dev_26.jsonl": {
+      "sha256": "e1b75d63059727047edf9387fc429be4622b44759248b2f74921760c1504c0d5",
+      "bytes": 26195,
+      "records": 26
+    },
+    "processed_data/yun_c1_test_249.jsonl": {
+      "sha256": "7eb1bc43b2ca044dea739c36f1a6c7f86fa577d4e25174d01ef8ebac8ce00da2",
+      "bytes": 250354,
+      "records": 249
+    },
+    "evaluation/c1_pilot/dev_input.jsonl": {
+      "sha256": "198fc2a20d6c98001defc10fb1b4d5758b5c6f5554d885c5785e44cbdaa18374",
+      "bytes": 10420,
+      "records": 26
+    },
+    "evaluation/c1_pilot/dev_reference.jsonl": {
+      "sha256": "c28ce0cac6de793945498002fc1ffc4e5c6706909f58c658d5855a2d399d3934",
+      "bytes": 15561,
+      "records": 26
+    }
+  },
+  "pilot": {
+    "status": "prepared_not_run",
+    "input": "evaluation/c1_pilot/dev_input.jsonl",
+    "reference": "evaluation/c1_pilot/dev_reference.jsonl",
+    "records": 26,
+    "articles": 6,
+    "model_run": false,
+    "network_run": false,
+    "approval_required": true
+  },
+  "test_policy": {
+    "path": "processed_data/yun_c1_test_249.jsonl",
+    "locked": true,
+    "used_for_prompt_optimization": false,
+    "usage": "Only after a frozen dev protocol and explicit test approval."
+  }
+}

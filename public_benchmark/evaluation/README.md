@@ -20,6 +20,22 @@ Die Referenzannotation wird bis zum Abschluss der Extraktion zurückgehalten.
 Der Testanteil darf **nicht** zur Prompt- oder Pipeline-Optimierung verwendet
 werden. Anpassungen sind ausschließlich auf `dev` zulässig.
 
+## Eingefrorener C1-Datensatz
+
+Der nutzbare Datensatz ist eingefroren:
+
+- 275 Records aus 70 Artikeln, davon 174 kontinuierlich und 101 binär.
+- 26 Dev-Records aus 6 Artikeln und 249 Test-Records aus 64 Artikeln.
+- `../processed_data/yun_c1_frozen_275.jsonl`
+- `../processed_data/yun_c1_dev_26.jsonl`
+- `../processed_data/yun_c1_test_249.jsonl` (gesperrt)
+- SHA-256 und Dateigrößen: `../validation/c1_freeze_manifest.json`
+- Dev-Pilot: `c1_pilot/README.md`, `c1_pilot/dev_input.jsonl`,
+  `c1_pilot/dev_reference.jsonl`
+
+Der Testsplit wird nicht zur Prompt-Optimierung verwendet. Der Dev-Pilot ist
+vorbereitet, aber nicht gestartet.
+
 ## Auswertungseinheit
 
 Ein Record ist ein ICO-Tripel. Für den Vergleich werden Study ID,
@@ -81,5 +97,6 @@ Für N, Mean, SD und Ereigniszahlen:
 
 - Keine Baseline, kein Prompt, kein Modellaufruf.
 - Keine Anpassung an Testdaten.
+- Der Dev-Pilot ist vorbereitet, aber nicht gestartet.
 - Keine Aussage über die Leistungsfähigkeit des Research Agents, solange
   kein freigegebener Lauf vorliegt.
