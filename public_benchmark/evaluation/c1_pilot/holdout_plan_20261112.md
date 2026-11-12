@@ -3,6 +3,8 @@
 Stand: 2026-11-12
 Status: **PARTIAL - 3/33 Records vollständig belegbar; kein belastbarer G5-Holdout**
 Entscheidung: **kein Modelllauf; 3-Record-Smoke-Test optional; externen Holdout beschaffen**
+P0-Beschaffung: **PMC Open Access Subset via Europe PMC; 30 Artikel / 100 Records**
+(siehe [`p0_external_holdout_20261112.md`](p0_external_holdout_20261112.md))
 
 ## 1. Ziel
 

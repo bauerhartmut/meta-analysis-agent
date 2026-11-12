@@ -288,6 +288,12 @@ Plan: [`holdout_plan_20261112.md`](holdout_plan_20261112.md), Schema:
 - [`next_candidate_plan.md`](next_candidate_plan.md): Dev-only-Plan mit
   Blockhypothesen, Messplan und Abbruchkriterien. P0 ist ein externer,
   artikeldisjunkter Holdout; es gibt noch keinen Modelllauf.
+- [`p0_external_holdout_20261112.md`](p0_external_holdout_20261112.md):
+  konkrete P0-Beschaffung aus der PMC Open Access Subset über Europe PMC;
+  Ziel 30 Artikel / 100 Records, Annotation durch `bauerhartmut`.
+- [`holdout_manifest_p0_20261112.json`](holdout_manifest_p0_20261112.json):
+  Draft-Manifest; noch ohne Artikel-IDs und Hashes, ausdrücklich nicht
+  G5-valid.
 - [`gate_report_v6c.json`](gate_report_v6c.json): maschinenlesbarer
   G1–G5-Report; v6c besteht nur G1.
 

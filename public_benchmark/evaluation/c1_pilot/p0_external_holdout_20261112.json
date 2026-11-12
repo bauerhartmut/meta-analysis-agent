@@ -1,0 +1,87 @@
+{
+  "p0_id": "p0_external_holdout_20261112",
+  "date": "2026-11-12",
+  "status": "ready_to_start",
+  "source": {
+    "name": "PMC Open Access Subset via Europe PMC REST API",
+    "search_endpoint": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+    "fulltext_endpoint": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC<ID>/fullTextXML",
+    "query": "(OPEN_ACCESS:Y) AND (HAS_FT:Y) AND (PUB_TYPE:\"Randomized Controlled Trial\") AND (LANG:\"eng\")",
+    "license_requirement": "Open Access; Volltext öffentlich abrufbar",
+    "exclusions": [
+      "Yun-699-Bestand",
+      "C1-Freeze (Dev + Test)",
+      "verbrauchter 249er-Test",
+      "bereits verwendete Holdout- und Smoke-Test-Artikel"
+    ]
+  },
+  "targets": {
+    "articles_minimum": 30,
+    "records_target": 100,
+    "records_per_article": "3-4",
+    "continuous_records_minimum": 40,
+    "binary_records_minimum": 40
+  },
+  "selection": {
+    "design": "parallel-group RCT with two relevant arms",
+    "eligible_outcomes": [
+      "continuous with N, mean and SD for both arms",
+      "binary with N and events for both arms"
+    ],
+    "excluded_outcomes": [
+      "median/range without mean/SD",
+      "CI/SE only",
+      "baseline or change-only",
+      "single-arm or pooled arms"
+    ],
+    "article_disjointness_check": "holdout_p0_20261112/article_disjoint_check.json",
+    "sample_unit": "article; records selected within eligible articles"
+  },
+  "annotation": {
+    "owner": "bauerhartmut",
+    "role": "Projektleitung; Primaerannotation und klinische Freigabe",
+    "technical_support": "Codebuff/Assistenz bei Screening und Formalpruefung; keine klinische Verantwortung",
+    "standard": "assisted_use_sop.md",
+    "human_review": "100% aller N-, Mean-, SD- und Event-Werte",
+    "second_review": "20% Stichprobe empfohlen; vor Manifest-Freeze dokumentieren",
+    "allowed_status": [
+      "verified_exact",
+      "verified_table",
+      "corrected_with_source"
+    ],
+    "unverifiable_records_allowed": false
+  },
+  "manifest": {
+    "path": "public_benchmark/evaluation/c1_pilot/holdout_manifest_p0_20261112.json",
+    "schema": "public_benchmark/evaluation/c1_pilot/holdout_manifest_schema.json",
+    "current_status": "draft",
+    "g5_ready": false,
+    "freeze_requires": [
+      "30 artikeldisjunkte RCTs",
+      "100 belegte Records",
+      "vollstaendige Artikel-IDs",
+      "Input- und Referenz-Hashes",
+      "Record-Statusverteilung",
+      "eingefrorene Prompt- und Modellkonfiguration",
+      "dokumentierte Annotation und Review"
+    ]
+  },
+  "artifacts": {
+    "candidates": "public_benchmark/evaluation/c1_pilot/holdout_p0_20261112/candidates.jsonl",
+    "disjointness": "public_benchmark/evaluation/c1_pilot/holdout_p0_20261112/article_disjoint_check.json",
+    "input": "public_benchmark/evaluation/c1_pilot/holdout_p0_20261112/input.jsonl",
+    "reference": "public_benchmark/evaluation/c1_pilot/holdout_p0_20261112/reference.jsonl",
+    "gate_report": "public_benchmark/evaluation/c1_pilot/gate_report_holdout_p0.json"
+  },
+  "stop_rules": [
+    "weniger als 30 artikeldisjunkte RCTs",
+    "weniger als 100 belegbare Records ohne vorab dokumentierte Erweiterung",
+    "unklare Artikeldisjunktheit",
+    "keine offenen Volltexte",
+    "Werte nur aus CI/SE/Median ableitbar",
+    "Zweitpruefung oder klinische Freigabe fehlt",
+    "Artikel-IDs oder Hashes fehlen im Manifest"
+  ],
+  "no_model_run": true,
+  "test_split_used": false
+}

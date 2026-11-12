@@ -139,6 +139,13 @@ annotieren; Artikel disjunkt zu Dev und zum verbrauchten Test; Manifest nach
 [`holdout_manifest_schema.json`](holdout_manifest_schema.json) einfrieren.
 Ohne P0 kein G5 und kein belastbarer Lauf.
 
+**Konkretisierung 2026-11-12:** Quelle ist die **PMC Open Access Subset**
+über die Europe PMC REST API; Ziel sind **30 Artikel** und **100 Records**.
+Primärannotation und klinische Freigabe: **bauerhartmut**. Draft-Manifest:
+[`holdout_manifest_p0_20261112.json`](holdout_manifest_p0_20261112.json);
+Details: [`p0_external_holdout_20261112.md`](p0_external_holdout_20261112.md).
+Das Draft-Manifest ist noch nicht G5-valid.
+
 ### P1 - Blockmechanik spezifizieren
 
 Allgemeine Regeln für vollständige Mean/SD- und Event-Blöcke formulieren;

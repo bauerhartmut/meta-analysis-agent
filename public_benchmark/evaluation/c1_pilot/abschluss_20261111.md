@@ -206,6 +206,11 @@ Dev-Metriken und Abbruchkriterien vorliegt; noch kein Modelllauf.
 eines externen Holdouts, danach folgen Dev-Experimente und genau ein
 Holdout-Lauf. Kein Modelllauf gestartet.
 
+**P0 konkretisiert 2026-11-12:** PMC Open Access Subset über Europe PMC,
+30 Artikel / 100 Records, Annotation durch `bauerhartmut`; Draft-Manifest
+[`holdout_manifest_p0_20261112.json`](holdout_manifest_p0_20261112.json),
+Details [`p0_external_holdout_20261112.md`](p0_external_holdout_20261112.md).
+
 ### P2 — B-Status prüfen
 
 **Ziel:** B-Watcher unverändert lassen und Status dokumentieren.
