@@ -1,6 +1,8 @@
 {
   "signoff_id": "p0_manual_signoff_v1",
-  "status": "pending_human_review",
+  "status": "complete_assisted_pending_human_review",
+  "reviewed": 65,
+  "assisted": 51,
   "records": 65,
   "counts": {
     "include_for_fulltext": 36,
@@ -291,10 +293,10 @@
       "priority": "mittel",
       "open_question": "Post hoc; OS-Ereignisse pro Arm und 4-Jahres-Daten pruefen.",
       "needs_fulltext": true,
-      "reviewer": "offen",
-      "review_date": "offen",
-      "final_decision": "offen",
-      "human_note": "",
+      "reviewer": "Codebuff assistiert",
+      "review_date": "2026-11-12",
+      "final_decision": "einschluss",
+      "human_note": "Post-hoc-Analyse eines RCT; Durvalumab vs. Placebo; OS; Volltext. Assistierte Entscheidung nach Delegation; keine menschliche Einzelpruefung.",
       "number": 15
     },
     {
@@ -310,10 +312,10 @@
       "priority": "mittel",
       "open_question": "Sekundaeranalyse; KCCQ-Armwerte/SD und mITT pruefen.",
       "needs_fulltext": true,
-      "reviewer": "offen",
-      "review_date": "offen",
-      "final_decision": "offen",
-      "human_note": "",
+      "reviewer": "Codebuff assistiert",
+      "review_date": "2026-11-12",
+      "final_decision": "einschluss",
+      "human_note": "Sekundaeranalyse eines placebo-kontrollierten RCT; Acoramidis vs. Placebo; KCCQ; Volltext. Assistierte Entscheidung nach Delegation; keine menschliche Einzelpruefung.",
       "number": 16
     },
     {
@@ -329,10 +331,10 @@
       "priority": "mittel",
       "open_question": "Post hoc; Leberfett-Armwerte/SD pruefen.",
       "needs_fulltext": true,
-      "reviewer": "offen",
-      "review_date": "offen",
-      "final_decision": "offen",
-      "human_note": "",
+      "reviewer": "Codebuff assistiert",
+      "review_date": "2026-11-12",
+      "final_decision": "einschluss",
+      "human_note": "Post-hoc-Analyse eines RCT; Tirzepatid vs. Insulin degludec; Leberfett; Volltext. Assistierte Entscheidung nach Delegation; keine menschliche Einzelpruefung.",
       "number": 17
     },
     {
@@ -348,10 +350,10 @@
       "priority": "mittel",
       "open_question": "Post hoc; Gewicht/Lipide als Armwerte/SD pruefen.",
       "needs_fulltext": true,
-      "reviewer": "offen",
-      "review_date": "offen",
-      "final_decision": "offen",
-      "human_note": "",
+      "reviewer": "Codebuff assistiert",
+      "review_date": "2026-11-12",
+      "final_decision": "einschluss",
+      "human_note": "Post-hoc-Analyse eines randomisierten 12-Monats-Vergleichs; PP6M vs. PP3M; Gewicht/Lipide; Volltext. Assistierte Entscheidung nach Delegation; keine menschliche Einzelpruefung.",
       "number": 18
     },
     {
@@ -367,10 +369,10 @@
       "priority": "mittel",
       "open_question": "Post hoc, per-protocol n=93; VAS-Armwerte/SD pruefen.",
       "needs_fulltext": true,
-      "reviewer": "offen",
-      "review_date": "offen",
-      "final_decision": "offen",
-      "human_note": "",
+      "reviewer": "Codebuff assistiert",
+      "review_date": "2026-11-12",
+      "final_decision": "einschluss",
+      "human_note": "Post-hoc-Sekundaeranalyse eines Sham-RCT; DTx vs. Sham; VAS-Schmerz; Volltext. Assistierte Entscheidung nach Delegation; keine menschliche Einzelpruefung.",
       "number": 19
     },
     {
@@ -386,10 +388,10 @@
       "priority": "mittel",
       "open_question": "Sekundaeranalyse; EPDS-Armwerte/SD und ITT-Imputation pruefen.",
       "needs_fulltext": true,
-      "reviewer": "offen",
-      "review_date": "offen",
-      "final_decision": "offen",
-      "human_note": "",
+      "reviewer": "Codebuff assistiert",
+      "review_date": "2026-11-12",
+      "final_decision": "einschluss",
+      "human_note": "Praeplanmaessige Sekundaeranalyse eines RCT; eMBI vs. TAU; EPDS kontinuierlich; Volltext. Assistierte Entscheidung nach Delegation; keine menschliche Einzelpruefung.",
       "number": 20
     },
     {
@@ -405,10 +407,10 @@
       "priority": "mittel",
       "open_question": "Sekundaeranalyse; GOS-E-Ereignisse pro Arm pruefen.",
       "needs_fulltext": true,
-      "reviewer": "offen",
-      "review_date": "offen",
-      "final_decision": "offen",
-      "human_note": "",
+      "reviewer": "Codebuff assistiert",
+      "review_date": "2026-11-12",
+      "final_decision": "einschluss",
+      "human_note": "Praeplanmaessige Sekundaeranalyse eines RCT; liberal vs. restriktiv; GOS-E binaer; Volltext. Assistierte Entscheidung nach Delegation; keine menschliche Einzelpruefung.",
       "number": 21
     },
     {
@@ -424,10 +426,10 @@
       "priority": "mittel",
       "open_question": "Subgruppen nach Verschluss; mRS-Ereignisse pro Arm pruefen.",
       "needs_fulltext": true,
-      "reviewer": "offen",
-      "review_date": "offen",
-      "final_decision": "offen",
-      "human_note": "",
+      "reviewer": "Codebuff assistiert",
+      "review_date": "2026-11-12",
+      "final_decision": "einschluss",
+      "human_note": "Sekundaeranalyse eines RCT; Tenecteplase vs. Standard; mRS binaer; Volltext. Assistierte Entscheidung nach Delegation; keine menschliche Einzelpruefung.",
       "number": 22
     },
     {
@@ -443,10 +445,10 @@
       "priority": "mittel",
       "open_question": "Post hoc; MINS-Ereignisse pro Arm und CAD-Strata pruefen.",
       "needs_fulltext": true,
-      "reviewer": "offen",
-      "review_date": "offen",
-      "final_decision": "offen",
-      "human_note": "",
+      "reviewer": "Codebuff assistiert",
+      "review_date": "2026-11-12",
+      "final_decision": "einschluss",
+      "human_note": "Post-hoc-Sekundaeranalyse eines RCT; Colchicin vs. Placebo; MINS binaer; Volltext. Assistierte Entscheidung nach Delegation; keine menschliche Einzelpruefung.",
       "number": 23
     },
     {
@@ -462,10 +464,10 @@
       "priority": "mittel",
       "open_question": "Interim n=73; ORR-Ereignisse pro Arm pruefen.",
       "needs_fulltext": true,
-      "reviewer": "offen",
-      "review_date": "offen",
-      "final_decision": "offen",
-      "human_note": "",
+      "reviewer": "Codebuff assistiert",
+      "review_date": "2026-11-12",
+      "final_decision": "einschluss",
+      "human_note": "Randomisierter 1:1-Interimsvergleich; zwei Arme; ORR binaer; Volltext. Assistierte Entscheidung nach Delegation; keine menschliche Einzelpruefung.",
       "number": 24
     },
     {
@@ -481,10 +483,10 @@
       "priority": "mittel",
       "open_question": "Post hoc; Veraenderungswerte mit SD und zwei Tropicamid-Arme pruefen.",
       "needs_fulltext": true,
-      "reviewer": "offen",
-      "review_date": "offen",
-      "final_decision": "offen",
-      "human_note": "",
+      "reviewer": "Codebuff assistiert",
+      "review_date": "2026-11-12",
+      "final_decision": "einschluss",
+      "human_note": "Post-hoc-Analyse eines RCT; 0.5% vs. 1% Tropicamid; Keratometrie mit SD; Volltext. Assistierte Entscheidung nach Delegation; keine menschliche Einzelpruefung.",
       "number": 25
     },
     {
@@ -500,10 +502,10 @@
       "priority": "mittel",
       "open_question": "Sekundaeranalyse; CR-Ereignisse pro Arm und CNS-Strata pruefen.",
       "needs_fulltext": true,
-      "reviewer": "offen",
-      "review_date": "offen",
-      "final_decision": "offen",
-      "human_note": "",
+      "reviewer": "Codebuff assistiert",
+      "review_date": "2026-11-12",
+      "final_decision": "einschluss",
+      "human_note": "Sekundaeranalyse eines RCT; Olanzapin vs. Placebo; CR binaer; Volltext. Assistierte Entscheidung nach Delegation; keine menschliche Einzelpruefung.",
       "number": 26
     },
     {
@@ -519,10 +521,10 @@
       "priority": "mittel",
       "open_question": "Langzeit-Follow-up; DFS/OS-Ereignisse pro Arm pruefen.",
       "needs_fulltext": true,
-      "reviewer": "offen",
-      "review_date": "offen",
-      "final_decision": "offen",
-      "human_note": "",
+      "reviewer": "Codebuff assistiert",
+      "review_date": "2026-11-12",
+      "final_decision": "einschluss",
+      "human_note": "Langzeit-Follow-up eines RCT; zwei Arme; DFS/OS; Volltext. Assistierte Entscheidung nach Delegation; keine menschliche Einzelpruefung.",
       "number": 27
     },
     {
@@ -538,10 +540,10 @@
       "priority": "mittel",
       "open_question": "Kleine Stichprobe; Complete-case/ITT-Armwerte pruefen.",
       "needs_fulltext": true,
-      "reviewer": "offen",
-      "review_date": "offen",
-      "final_decision": "offen",
-      "human_note": "",
+      "reviewer": "Codebuff assistiert",
+      "review_date": "2026-11-12",
+      "final_decision": "einschluss",
+      "human_note": "Sekundaeranalyse eines placebo-kontrollierten RCT; zwei Arme; metabolische Endpunkte; Volltext. Assistierte Entscheidung nach Delegation; keine menschliche Einzelpruefung.",
       "number": 28
     },
     {
@@ -557,10 +559,10 @@
       "priority": "mittel",
       "open_question": "Kleine Stichprobe; Blutdruck-Armwerte und Zeitpunkt pruefen.",
       "needs_fulltext": true,
-      "reviewer": "offen",
-      "review_date": "offen",
-      "final_decision": "offen",
-      "human_note": "",
+      "reviewer": "Codebuff assistiert",
+      "review_date": "2026-11-12",
+      "final_decision": "einschluss",
+      "human_note": "Sekundaeranalyse eines randomisierten Parallelgruppen-RCT; zwei Ballaststoffarme; Blutdruckwerte; Volltext. Assistierte Entscheidung nach Delegation; keine menschliche Einzelpruefung.",
       "number": 29
     },
     {
@@ -576,10 +578,10 @@
       "priority": "mittel",
       "open_question": "Sekundaeranalyse, n=32; Arm-N/Mean/SD und 3-Monats-Zeitpunkt pruefen.",
       "needs_fulltext": true,
-      "reviewer": "offen",
-      "review_date": "offen",
-      "final_decision": "offen",
-      "human_note": "",
+      "reviewer": "Codebuff assistiert",
+      "review_date": "2026-11-12",
+      "final_decision": "einschluss",
+      "human_note": "Sekundaeranalyse eines RCT; zwei Expansionsverfahren; Kiefer-/Atemwegsendpunkte; Volltext. Assistierte Entscheidung nach Delegation; keine menschliche Einzelpruefung.",
       "number": 30
     },
     {
@@ -595,10 +597,10 @@
       "priority": "mittel",
       "open_question": "Subgruppe <75/>=75; absolute Ereigniszahlen pro Arm und Interaktion pruefen.",
       "needs_fulltext": true,
-      "reviewer": "offen",
-      "review_date": "offen",
-      "final_decision": "offen",
-      "human_note": "",
+      "reviewer": "Codebuff assistiert",
+      "review_date": "2026-11-12",
+      "final_decision": "einschluss",
+      "human_note": "Zweiarmige randomisierte Deeskalation vs. Fortfuehrung; Alters-Subgruppenanalyse mit Ereignisraten; Armwerte im Volltext pruefen. Assistierte Entscheidung nach Delegation; keine menschliche Einzelpruefung.",
       "number": 31
     },
     {
@@ -614,10 +616,10 @@
       "priority": "mittel",
       "open_question": "Selbstberichtete binaere Outcomes; N/Ereignisse pro Arm pruefen.",
       "needs_fulltext": true,
-      "reviewer": "offen",
-      "review_date": "offen",
-      "final_decision": "offen",
-      "human_note": "",
+      "reviewer": "Codebuff assistiert",
+      "review_date": "2026-11-12",
+      "final_decision": "einschluss",
+      "human_note": "Sekundaeranalyse eines RCT; Exercise vs. Kontrolle; Gedaechtnis/ADL; Volltext. Assistierte Entscheidung nach Delegation; keine menschliche Einzelpruefung.",
       "number": 32
     },
     {
@@ -633,10 +635,10 @@
       "priority": "mittel",
       "open_question": "Sekundaeranalyse; mRS-Ereignisse pro Arm und Verschluss-Subgruppen pruefen.",
       "needs_fulltext": true,
-      "reviewer": "offen",
-      "review_date": "offen",
-      "final_decision": "offen",
-      "human_note": "",
+      "reviewer": "Codebuff assistiert",
+      "review_date": "2026-11-12",
+      "final_decision": "einschluss",
+      "human_note": "Praeplanmaessige Sekundaeranalyse eines RCT; IA-Tenecteplase vs. Standard; mRS binaer; Volltext. Assistierte Entscheidung nach Delegation; keine menschliche Einzelpruefung.",
       "number": 33
     },
     {
@@ -652,10 +654,10 @@
       "priority": "mittel",
       "open_question": "Primaer Interaktion; Arm-Mittelwerte/SD und Zeitpunkte pruefen.",
       "needs_fulltext": true,
-      "reviewer": "offen",
-      "review_date": "offen",
-      "final_decision": "offen",
-      "human_note": "",
+      "reviewer": "Codebuff assistiert",
+      "review_date": "2026-11-12",
+      "final_decision": "einschluss",
+      "human_note": "Randomisierter Zweiarm-Vergleich; POCUS-Endpunkte; Armwerte im Volltext. Assistierte Entscheidung nach Delegation; keine menschliche Einzelpruefung.",
       "number": 34
     },
     {
@@ -671,10 +673,10 @@
       "priority": "mittel",
       "open_question": "Kleine Stichprobe n=36; PROMIS-29 Armwerte/SD pruefen.",
       "needs_fulltext": true,
-      "reviewer": "offen",
-      "review_date": "offen",
-      "final_decision": "offen",
-      "human_note": "",
+      "reviewer": "Codebuff assistiert",
+      "review_date": "2026-11-12",
+      "final_decision": "einschluss",
+      "human_note": "Randomisierter 2:1-Placebo-Vergleich; zwei Arme; PROMIS-29; Volltext pruefen. Assistierte Entscheidung nach Delegation; keine menschliche Einzelpruefung.",
       "number": 35
     },
     {
@@ -690,10 +692,10 @@
       "priority": "niedrig",
       "open_question": "2:1-Design; binaere PN-Endpunkte und N pro Arm pruefen.",
       "needs_fulltext": true,
-      "reviewer": "offen",
-      "review_date": "offen",
-      "final_decision": "offen",
-      "human_note": "",
+      "reviewer": "Codebuff assistiert",
+      "review_date": "2026-11-12",
+      "final_decision": "einschluss",
+      "human_note": "Randomisierter 2:1-Vergleich; zwei Arme; binaerer PN-Endpunkt; Volltext. Assistierte Entscheidung nach Delegation; keine menschliche Einzelpruefung.",
       "number": 36
     },
     {
@@ -766,10 +768,10 @@
       "priority": "mittel",
       "open_question": "Produktivitaet/Kosten; klinische VMS-Armwerte pruefen.",
       "needs_fulltext": false,
-      "reviewer": "offen",
-      "review_date": "offen",
-      "final_decision": "offen",
-      "human_note": "",
+      "reviewer": "Codebuff assistiert",
+      "review_date": "2026-11-12",
+      "final_decision": "ausschluss",
+      "human_note": "Post-hoc-Arbeitsproduktivitaets-/Kostenanalyse; kein klinischer Armendpunkt. Assistierte Entscheidung nach Delegation; keine menschliche Einzelpruefung.",
       "number": 40
     },
     {
@@ -785,10 +787,10 @@
       "priority": "mittel",
       "open_question": "Drei Bedingungen; pruefen, ob PE+PLB vs. SERT als zwei Arme zulaessig waere (P0: nein).",
       "needs_fulltext": false,
-      "reviewer": "offen",
-      "review_date": "offen",
-      "final_decision": "offen",
-      "human_note": "",
+      "reviewer": "Codebuff assistiert",
+      "review_date": "2026-11-12",
+      "final_decision": "ausschluss",
+      "human_note": "Drei randomisierte Behandlungsbedingungen; kein Zweiarm-Vergleich. Assistierte Entscheidung nach Delegation; keine menschliche Einzelpruefung.",
       "number": 41
     },
     {
@@ -804,10 +806,10 @@
       "priority": "mittel",
       "open_question": "Praevalenz; Armvergleich unklar; GAP70+ Volltext pruefen.",
       "needs_fulltext": false,
-      "reviewer": "offen",
-      "review_date": "offen",
-      "final_decision": "offen",
-      "human_note": "",
+      "reviewer": "Codebuff assistiert",
+      "review_date": "2026-11-12",
+      "final_decision": "ausschluss",
+      "human_note": "Praevalenzanalyse ohne Armgegenueberstellung; kein Behandlungseffekt. Assistierte Entscheidung nach Delegation; keine menschliche Einzelpruefung.",
       "number": 42
     },
     {
@@ -823,10 +825,10 @@
       "priority": "mittel",
       "open_question": "Vergleich nach SSI-Status, nicht randomisierte Arme; klinische Armdaten pruefen.",
       "needs_fulltext": false,
-      "reviewer": "offen",
-      "review_date": "offen",
-      "final_decision": "offen",
-      "human_note": "",
+      "reviewer": "Codebuff assistiert",
+      "review_date": "2026-11-12",
+      "final_decision": "ausschluss",
+      "human_note": "Kosten-/QoL-Analyse nach SSI-Status; keine randomisierte Armgegenueberstellung. Assistierte Entscheidung nach Delegation; keine menschliche Einzelpruefung.",
       "number": 43
     },
     {
@@ -842,10 +844,10 @@
       "priority": "mittel",
       "open_question": "Primaer CEA; klinische PREVSAM-Armwerte im Volltext pruefen.",
       "needs_fulltext": false,
-      "reviewer": "offen",
-      "review_date": "offen",
-      "final_decision": "offen",
-      "human_note": "",
+      "reviewer": "Codebuff assistiert",
+      "review_date": "2026-11-12",
+      "final_decision": "ausschluss",
+      "human_note": "Kosteneffektivitaetsanalyse; keine extrahierbaren klinischen Armwerte als primaeres Ziel. Assistierte Entscheidung nach Delegation; keine menschliche Einzelpruefung.",
       "number": 44
     },
     {
@@ -861,10 +863,10 @@
       "priority": "mittel",
       "open_question": "EQ-VAS beider Arme gepoolt; kein Treatment-Effekt.",
       "needs_fulltext": false,
-      "reviewer": "offen",
-      "review_date": "offen",
-      "final_decision": "offen",
-      "human_note": "",
+      "reviewer": "Codebuff assistiert",
+      "review_date": "2026-11-12",
+      "final_decision": "ausschluss",
+      "human_note": "Gepoolte EQ-VAS-Daten beider Arme zur MID-Schaetzung; kein Behandlungseffekt. Assistierte Entscheidung nach Delegation; keine menschliche Einzelpruefung.",
       "number": 45
     },
     {
@@ -880,10 +882,10 @@
       "priority": "mittel",
       "open_question": "HTA; klinische RCT-Armwerte pruefen, falls berichtet.",
       "needs_fulltext": false,
-      "reviewer": "offen",
-      "review_date": "offen",
-      "final_decision": "offen",
-      "human_note": "",
+      "reviewer": "Codebuff assistiert",
+      "review_date": "2026-11-12",
+      "final_decision": "ausschluss",
+      "human_note": "HTA-/Kosteneffektivitaetsanalyse; keine geeigneten Armwerte. Assistierte Entscheidung nach Delegation; keine menschliche Einzelpruefung.",
       "number": 46
     },
     {
@@ -899,10 +901,10 @@
       "priority": "mittel",
       "open_question": "Gepoolt; pruefen, ob Einzelstudien-Armwerte im Volltext stehen.",
       "needs_fulltext": false,
-      "reviewer": "offen",
-      "review_date": "offen",
-      "final_decision": "offen",
-      "human_note": "",
+      "reviewer": "Codebuff assistiert",
+      "review_date": "2026-11-12",
+      "final_decision": "ausschluss",
+      "human_note": "Gepoolte Analyse dreier RCTs; keine eigenstaendigen Zweiarm-Armwerte. Assistierte Entscheidung nach Delegation; keine menschliche Einzelpruefung.",
       "number": 47
     },
     {
@@ -918,10 +920,10 @@
       "priority": "niedrig",
       "open_question": "Stratifiziert nach Vitamin-D-Status; kein Armvergleich.",
       "needs_fulltext": false,
-      "reviewer": "offen",
-      "review_date": "offen",
-      "final_decision": "offen",
-      "human_note": "",
+      "reviewer": "Codebuff assistiert",
+      "review_date": "2026-11-12",
+      "final_decision": "ausschluss",
+      "human_note": "Sekundaeranalyse stratifiziert nach Vitamin-D-Status; kein randomisierter Armvergleich. Assistierte Entscheidung nach Delegation; keine menschliche Einzelpruefung.",
       "number": 48
     },
     {
@@ -937,10 +939,10 @@
       "priority": "niedrig",
       "open_question": "Drei Arme; kein Zweiarm-Vergleich.",
       "needs_fulltext": false,
-      "reviewer": "offen",
-      "review_date": "offen",
-      "final_decision": "offen",
-      "human_note": "",
+      "reviewer": "Codebuff assistiert",
+      "review_date": "2026-11-12",
+      "final_decision": "ausschluss",
+      "human_note": "Drei Arme (Q2W, Q4W, Placebo); kein Zweiarm-Vergleich. Assistierte Entscheidung nach Delegation; keine menschliche Einzelpruefung.",
       "number": 49
     },
     {
@@ -956,10 +958,10 @@
       "priority": "niedrig",
       "open_question": "Querschnitt; kein randomisierter Vergleich.",
       "needs_fulltext": false,
-      "reviewer": "offen",
-      "review_date": "offen",
-      "final_decision": "offen",
-      "human_note": "",
+      "reviewer": "Codebuff assistiert",
+      "review_date": "2026-11-12",
+      "final_decision": "ausschluss",
+      "human_note": "Querschnittliche Post-hoc-Charakterisierung; kein randomisierter Vergleich. Assistierte Entscheidung nach Delegation; keine menschliche Einzelpruefung.",
       "number": 50
     },
     {
@@ -975,10 +977,10 @@
       "priority": "niedrig",
       "open_question": "Diagnostische Reanalyse; kein randomisierter Vergleich.",
       "needs_fulltext": false,
-      "reviewer": "offen",
-      "review_date": "offen",
-      "final_decision": "offen",
-      "human_note": "",
+      "reviewer": "Codebuff assistiert",
+      "review_date": "2026-11-12",
+      "final_decision": "ausschluss",
+      "human_note": "Diagnostische Reanalyse des Beobachtungsarms; kein randomisierter Vergleich. Assistierte Entscheidung nach Delegation; keine menschliche Einzelpruefung.",
       "number": 51
     },
     {
@@ -994,10 +996,10 @@
       "priority": "niedrig",
       "open_question": "Nur Experimentalarm; kein Kontrollarm.",
       "needs_fulltext": false,
-      "reviewer": "offen",
-      "review_date": "offen",
-      "final_decision": "offen",
-      "human_note": "",
+      "reviewer": "Codebuff assistiert",
+      "review_date": "2026-11-12",
+      "final_decision": "ausschluss",
+      "human_note": "Nur Experimentalarm der EMI-Studie; kein Kontrollarm. Assistierte Entscheidung nach Delegation; keine menschliche Einzelpruefung.",
       "number": 52
     },
     {
@@ -1013,10 +1015,10 @@
       "priority": "niedrig",
       "open_question": "Interrater; kein Armvergleich.",
       "needs_fulltext": false,
-      "reviewer": "offen",
-      "review_date": "offen",
-      "final_decision": "offen",
-      "human_note": "",
+      "reviewer": "Codebuff assistiert",
+      "review_date": "2026-11-12",
+      "final_decision": "ausschluss",
+      "human_note": "Interrater-Analyse ohne Armvergleich; kein Behandlungseffekt. Assistierte Entscheidung nach Delegation; keine menschliche Einzelpruefung.",
       "number": 53
     },
     {
@@ -1032,10 +1034,10 @@
       "priority": "niedrig",
       "open_question": "Paternale Assoziation; kein Interventionseffekt.",
       "needs_fulltext": false,
-      "reviewer": "offen",
-      "review_date": "offen",
-      "final_decision": "offen",
-      "human_note": "",
+      "reviewer": "Codebuff assistiert",
+      "review_date": "2026-11-12",
+      "final_decision": "ausschluss",
+      "human_note": "Assoziationsanalyse paternaler Faktoren; kein Interventionseffekt. Assistierte Entscheidung nach Delegation; keine menschliche Einzelpruefung.",
       "number": 54
     },
     {
@@ -1051,10 +1053,10 @@
       "priority": "niedrig",
       "open_question": "Drei Arme; kein Zweiarm-Vergleich.",
       "needs_fulltext": false,
-      "reviewer": "offen",
-      "review_date": "offen",
-      "final_decision": "offen",
-      "human_note": "",
+      "reviewer": "Codebuff assistiert",
+      "review_date": "2026-11-12",
+      "final_decision": "ausschluss",
+      "human_note": "Drei Arme (EXE, MOT, CON); kein Zweiarm-Vergleich. Assistierte Entscheidung nach Delegation; keine menschliche Einzelpruefung.",
       "number": 55
     },
     {
@@ -1070,10 +1072,10 @@
       "priority": "niedrig",
       "open_question": "Nur Interventionsarm; keine Kontrollgruppe.",
       "needs_fulltext": false,
-      "reviewer": "offen",
-      "review_date": "offen",
-      "final_decision": "offen",
-      "human_note": "",
+      "reviewer": "Codebuff assistiert",
+      "review_date": "2026-11-12",
+      "final_decision": "ausschluss",
+      "human_note": "Nur Interventionsarm; Engagementanalyse ohne Kontrollgruppe. Assistierte Entscheidung nach Delegation; keine menschliche Einzelpruefung.",
       "number": 56
     },
     {
@@ -1089,10 +1091,10 @@
       "priority": "niedrig",
       "open_question": "Beobachtungskohorten; kein randomisierter Armvergleich.",
       "needs_fulltext": false,
-      "reviewer": "offen",
-      "review_date": "offen",
-      "final_decision": "offen",
-      "human_note": "",
+      "reviewer": "Codebuff assistiert",
+      "review_date": "2026-11-12",
+      "final_decision": "ausschluss",
+      "human_note": "Post-hoc-Beobachtung von Screening-Kohorten; kein randomisierter Armvergleich. Assistierte Entscheidung nach Delegation; keine menschliche Einzelpruefung.",
       "number": 57
     },
     {
@@ -1108,10 +1110,10 @@
       "priority": "niedrig",
       "open_question": "Qualitativ; keine quantitativen Armwerte.",
       "needs_fulltext": false,
-      "reviewer": "offen",
-      "review_date": "offen",
-      "final_decision": "offen",
-      "human_note": "",
+      "reviewer": "Codebuff assistiert",
+      "review_date": "2026-11-12",
+      "final_decision": "ausschluss",
+      "human_note": "Qualitative Substichprobe; keine quantitativen Armwerte. Assistierte Entscheidung nach Delegation; keine menschliche Einzelpruefung.",
       "number": 58
     },
     {
@@ -1127,10 +1129,10 @@
       "priority": "niedrig",
       "open_question": "Biomarker-/Diagnostikstudie; kein Interventionseffekt.",
       "needs_fulltext": false,
-      "reviewer": "offen",
-      "review_date": "offen",
-      "final_decision": "offen",
-      "human_note": "",
+      "reviewer": "Codebuff assistiert",
+      "review_date": "2026-11-12",
+      "final_decision": "ausschluss",
+      "human_note": "Ancillary Biomarker-/Diagnostikstudie; kein randomisierter Interventionsvergleich. Assistierte Entscheidung nach Delegation; keine menschliche Einzelpruefung.",
       "number": 59
     },
     {
@@ -1146,10 +1148,10 @@
       "priority": "niedrig",
       "open_question": "Drei Arme; kein Zweiarm-Vergleich.",
       "needs_fulltext": false,
-      "reviewer": "offen",
-      "review_date": "offen",
-      "final_decision": "offen",
-      "human_note": "",
+      "reviewer": "Codebuff assistiert",
+      "review_date": "2026-11-12",
+      "final_decision": "ausschluss",
+      "human_note": "Drei Arme (904 nm, 650 nm, Sham); kein Zweiarm-Vergleich. Assistierte Entscheidung nach Delegation; keine menschliche Einzelpruefung.",
       "number": 60
     },
     {
@@ -1165,10 +1167,10 @@
       "priority": "niedrig",
       "open_question": "Vier Bedingungen; kein Zweiarm-Vergleich.",
       "needs_fulltext": false,
-      "reviewer": "offen",
-      "review_date": "offen",
-      "final_decision": "offen",
-      "human_note": "",
+      "reviewer": "Codebuff assistiert",
+      "review_date": "2026-11-12",
+      "final_decision": "ausschluss",
+      "human_note": "Vier Bedingungen (drei Meditationen, Internetkontrolle); kein Zweiarm-Vergleich. Assistierte Entscheidung nach Delegation; keine menschliche Einzelpruefung.",
       "number": 61
     },
     {
@@ -1184,10 +1186,10 @@
       "priority": "niedrig",
       "open_question": "Vier Arme; keine Zweiarm-Kontraste.",
       "needs_fulltext": false,
-      "reviewer": "offen",
-      "review_date": "offen",
-      "final_decision": "offen",
-      "human_note": "",
+      "reviewer": "Codebuff assistiert",
+      "review_date": "2026-11-12",
+      "final_decision": "ausschluss",
+      "human_note": "Vier Arme (drei Dosen plus Placebo); kein Zweiarm-Vergleich. Assistierte Entscheidung nach Delegation; keine menschliche Einzelpruefung.",
       "number": 62
     },
     {
@@ -1203,10 +1205,10 @@
       "priority": "niedrig",
       "open_question": "Drei Arme; pruefen, ob 7.2 mg vs. Placebo als zwei Arme zulaessig waere (P0: nein).",
       "needs_fulltext": false,
-      "reviewer": "offen",
-      "review_date": "offen",
-      "final_decision": "offen",
-      "human_note": "",
+      "reviewer": "Codebuff assistiert",
+      "review_date": "2026-11-12",
+      "final_decision": "ausschluss",
+      "human_note": "Drei Arme (7.2 mg, 2.4 mg, Placebo); kein Zweiarm-Vergleich. Assistierte Entscheidung nach Delegation; keine menschliche Einzelpruefung.",
       "number": 63
     },
     {
@@ -1222,10 +1224,10 @@
       "priority": "niedrig",
       "open_question": "Biomarker-Assoziation; kein randomisierter Vergleich.",
       "needs_fulltext": false,
-      "reviewer": "offen",
-      "review_date": "offen",
-      "final_decision": "offen",
-      "human_note": "",
+      "reviewer": "Codebuff assistiert",
+      "review_date": "2026-11-12",
+      "final_decision": "ausschluss",
+      "human_note": "Ancillary Biomarker-Assoziationsstudie; kein randomisierter Vergleich. Assistierte Entscheidung nach Delegation; keine menschliche Einzelpruefung.",
       "number": 64
     },
     {
@@ -1241,10 +1243,10 @@
       "priority": "niedrig",
       "open_question": "Assoziation; kein randomisierter Armvergleich.",
       "needs_fulltext": false,
-      "reviewer": "offen",
-      "review_date": "offen",
-      "final_decision": "offen",
-      "human_note": "",
+      "reviewer": "Codebuff assistiert",
+      "review_date": "2026-11-12",
+      "final_decision": "ausschluss",
+      "human_note": "Beobachtende Assoziationsanalyse der Anastomosenlage; kein randomisierter Vergleich. Assistierte Entscheidung nach Delegation; keine menschliche Einzelpruefung.",
       "number": 65
     }
   ]

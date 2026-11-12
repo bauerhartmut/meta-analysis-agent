@@ -71,12 +71,24 @@ def main() -> None:
             if final == "ausschluss" and row.get("decision") != "exclude":
                 errors.append(f"{number}: ausschluss contradicts preliminary decision")
     completed = sum((row.get("final_decision") or "offen") != "offen" for row in rows)
+    reviewer_counts = Counter(row.get("reviewer", "offen") for row in rows)
+    assisted = reviewer_counts.get("Codebuff assistiert", 0)
+    complete = completed == len(rows) and not errors
     summary = {
         "signoff_id": "p0_manual_signoff_v1",
-        "status": "complete" if completed == len(rows) and not errors else "pending",
+        "status": (
+            "complete_assisted_pending_human_review"
+            if complete and assisted
+            else "complete"
+            if complete
+            else "pending"
+        ),
         "records": len(rows),
         "completed": completed,
         "open": len(rows) - completed,
+        "assisted": assisted,
+        "human_review_complete": complete and assisted == 0,
+        "reviewer_counts": dict(reviewer_counts),
         "preliminary_counts": dict(Counter(row.get("decision", "") for row in rows)),
         "final_counts": dict(Counter(row.get("final_decision", "offen") for row in rows)),
         "errors": errors,

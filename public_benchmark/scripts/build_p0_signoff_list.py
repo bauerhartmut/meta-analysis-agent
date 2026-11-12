@@ -174,7 +174,16 @@ def main() -> None:
         json.dumps(
             {
                 "signoff_id": "p0_manual_signoff_v1",
-                "status": "pending_human_review",
+                "status": (
+                    "complete_assisted_pending_human_review"
+                    if all(row["final_decision"] != "offen" for row in rows)
+                    and any(row["reviewer"] == "Codebuff assistiert" for row in rows)
+                    else "complete"
+                    if all(row["final_decision"] != "offen" for row in rows)
+                    else "pending_human_review"
+                ),
+                "reviewed": sum(row["final_decision"] != "offen" for row in rows),
+                "assisted": sum(row["reviewer"] == "Codebuff assistiert" for row in rows),
                 "records": len(rows),
                 "counts": dict(Counter(row["decision"] for row in rows)),
                 "priority_counts": dict(Counter(row["priority"] for row in rows)),
@@ -215,6 +224,14 @@ def main() -> None:
 
     included = [row for row in rows if row["decision"] == "include_for_fulltext"]
     excluded = [row for row in rows if row["decision"] == "exclude"]
+    reviewed = sum(row["final_decision"] != "offen" for row in rows)
+    assisted = sum(row["reviewer"] == "Codebuff assistiert" for row in rows)
+    if reviewed == len(rows):
+        status_line = (
+            "Status: **ALLE FÄLLE ENTSCHIEDEN; MENSCHLICHE GEGENPRÜFUNG OFFEN**."
+        )
+    else:
+        status_line = "Status: **HUMAN REVIEW PENDING**."
 
     def table(items: list[dict]) -> list[str]:
         lines = [
@@ -232,17 +249,20 @@ def main() -> None:
         return lines
 
     lines = [
-        "# Menschliche Freigabeliste: 65 P0-Einzelfallentscheidungen",
+        "# Freigabeliste: 65 P0-Einzelfallentscheidungen",
         "",
-        "Status: **HUMAN SIGNOFF PENDING**. Diese Liste ist die Prüfvorlage;",
-        "sie ist kein Gate-Pass und keine endgültige Holdout-Auswahl.",
+        status_line,
+        "Diese Liste ist die Prüfvorlage; sie ist kein Gate-Pass und keine",
+        "endgültige Holdout-Auswahl.",
         "",
-        "Bitte pro Zeile `Reviewer`, `Datum` und `Finale Entscheidung` setzen.",
+        "Bitte pro Zeile `Reviewer`, `Datum` und `Finale Entscheidung` prüfen.",
         "Erlaubte finale Entscheidungen: `einschluss`, `ausschluss` oder `offen`.",
         "Abweichungen und Korrekturen in `human_note` begründen.",
         "",
         f"- Einschlüsse: **{len(included)}**",
         f"- Ausschlüsse: **{len(excluded)}**",
+        f"- entschieden: **{reviewed}/{len(rows)}**",
+        f"- davon assistiert (Codebuff): **{assisted}**",
         f"- hohe Priorität: **{sum(row['priority'] == 'hoch' for row in rows)}**",
         "",
         "## Einschlüsse: vorläufig für Volltext",
@@ -264,8 +284,8 @@ def main() -> None:
             "",
             "- **Einschluss**: vorläufig für Volltextprüfung; keine endgültige Eignung.",
             "- **Ausschluss**: nach Abstract und fixierten Kriterien; menschliche Gegenprüfung offen.",
-            "- **Reviewer/Datum**: vom menschlichen Reviewer auszufüllen; `offen` heißt noch nicht geprüft.",
-            "- **Finale Entscheidung**: `einschluss`, `ausschluss` oder `offen`; erst nach Reviewer-Eintrag gültig.",
+            "- **Reviewer/Datum**: Reviewer und Datum sind eingetragen; `Codebuff assistiert` kennzeichnet nicht-menschliche Entscheidungen.",
+            "- **Finale Entscheidung**: `einschluss`, `ausschluss` oder `offen`; menschliche Gegenprüfung bleibt bei assistierten Fällen offen.",
             "- **Prio hoch**: Entscheidung könnte sich durch Volltext oder genauere Armprüfung ändern.",
             "",
             "Quellen sind die PMC-Artikelseiten; DOI zusätzlich in der CSV- und JSON-Datei.",
@@ -282,11 +302,15 @@ def main() -> None:
                 "counts": dict(Counter(row["decision"] for row in rows)),
                 "priority_counts": dict(Counter(row["priority"] for row in rows)),
                 "status": (
-                    "complete"
+                    "complete_assisted_pending_human_review"
+                    if all(row["final_decision"] != "offen" for row in rows)
+                    and any(row["reviewer"] == "Codebuff assistiert" for row in rows)
+                    else "complete"
                     if all(row["final_decision"] != "offen" for row in rows)
                     else "pending_human_review"
                 ),
                 "reviewed": sum(row["final_decision"] != "offen" for row in rows),
+                "assisted": sum(row["reviewer"] == "Codebuff assistiert" for row in rows),
                 "model_used": False,
             },
             ensure_ascii=False,

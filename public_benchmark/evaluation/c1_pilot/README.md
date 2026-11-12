@@ -299,12 +299,12 @@ Plan: [`holdout_plan_20261112.md`](holdout_plan_20261112.md), Schema:
   Überschneidungen.
 - [`holdout_p0_20261112/screening_summary_v2.md`](holdout_p0_20261112/screening_summary_v2.md):
   Abstract-Screening v2: **181 ausgeschlossen, 415 vorläufig für Volltext**;
-  die 65 manuellen Fälle sind assistiert entschieden, menschliche Freigabe
-  ausstehend, kein Modelllauf.
+  die 65 manuellen Fälle sind entschieden: **14 von HB, 51 assistiert**;
+  menschliche Gegenprüfung der 51 assistierten Fälle ausstehend, kein Modelllauf.
 - [`holdout_p0_20261112/manual_review_signoff_v1.md`](holdout_p0_20261112/manual_review_signoff_v1.md):
   kompakte Freigabeliste für die 65 Einzelfälle mit Quelle, Entscheidung,
-  Priorität und offenem Prüfzweifel; Reviewer, Datum und finale Entscheidung
-  sind als offene Felder enthalten.
+  Priorität und Prüfzweifel; Reviewer, Datum und finale Entscheidung sind
+  dokumentiert, davon 51 assistiert.
 - [`holdout_p0_20261112/fulltext_extraction_template_v1.md`](holdout_p0_20261112/fulltext_extraction_template_v1.md):
   Volltext-Prüfvorlage für die 36 vorläufigen Einschlüsse mit Eignungscheck,
   Armdefinition und vier Outcome-Slots für N/Mean/SD/Events; keine Schätzung

@@ -79,9 +79,10 @@ und [`manual_review_signoff_v1.csv`](holdout_p0_20261112/manual_review_signoff_v
 Die 181 Ausschluesse setzen sich aus 152 Regelausschluessen und 29 manuellen
 Ausschluessen zusammen.
 
-Die 415 Volltextkandidaten sind **nicht** endgueltig eingeschlossen. Die
-Einzelfallprüfung war assistiert; die menschliche Freigabe steht fuer alle 65
-Faelle aus. Mehrfachgruende sind moeglich; die Regelzahlen
+Die 415 Volltextkandidaten sind **nicht** endgueltig eingeschlossen. Die 65
+Einzelfallentscheidungen sind eingetragen: **14 von HB**, **51 assistiert durch
+Codebuff**. Die menschliche Gegenpruefung der 51 assistierten Faelle steht aus.
+Mehrfachgruende sind moeglich; die Regelzahlen
 sind nicht additiv.
 
 ## 2. Auswahlkriterien
