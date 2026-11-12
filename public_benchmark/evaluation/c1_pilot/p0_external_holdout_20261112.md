@@ -222,6 +222,9 @@ Nachweis für eine Freigabe verwendet werden.
 | Volltext-Prüfvorlage | `public_benchmark/evaluation/c1_pilot/holdout_p0_20261112/fulltext_extraction_template_v1.md` |
 | Volltext-Extraktion CSV | `public_benchmark/evaluation/c1_pilot/holdout_p0_20261112/fulltext_extraction_template_v1.csv` |
 | Volltext-Extraktion JSON | `public_benchmark/evaluation/c1_pilot/holdout_p0_20261112/fulltext_extraction_template_v1.json` |
+| Volltext-Zugriffsplan | `public_benchmark/evaluation/c1_pilot/holdout_p0_20261112/fulltext_access_plan_v1.md` |
+| Zugriffsplan CSV | `public_benchmark/evaluation/c1_pilot/holdout_p0_20261112/fulltext_access_plan_v1.csv` |
+| Signoff-Validierung | `public_benchmark/evaluation/c1_pilot/holdout_p0_20261112/signoff_validation_v1.json` |
 | Manifest | `public_benchmark/evaluation/c1_pilot/holdout_manifest_p0_20261112.json` |
 | Gate-Report | `public_benchmark/evaluation/c1_pilot/gate_report_holdout_p0.json` |
 
