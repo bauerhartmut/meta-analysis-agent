@@ -4,6 +4,12 @@ Stand: 2026-11-11, Tagesabschluss
 Status: **C1-Testlauf abgeschlossen; Option C entschieden; Gates v1 aktiv**
 Nächster Arbeitstag: **2026-11-12**
 
+**Nachtrag 2026-11-12:** Der Holdout-Plan ist geprüft. Aus den vorhandenen
+C1-Daten ist **kein unabhängiger Holdout** verfügbar; alle 275 nutzbaren
+Records sind vergeben. Details:
+[`holdout_plan_20261112.md`](holdout_plan_20261112.md). Es gab keinen
+Modelllauf.
+
 ## 1. Status zum Tagesabschluss
 
 - Der freigegebene C1-Testlauf `c1_test_20261111_v6c` ist vollständig

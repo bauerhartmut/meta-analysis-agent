@@ -266,6 +266,16 @@ Prüfung. Die Gates G1–G5 sind als Projektstandard v1 festgelegt:
 nicht zur Entwicklung des nächsten Kandidaten wiederverwendet. Kein neuer
 Modelllauf.
 
+## Holdout-Plan
+
+Der Holdout ist mit den vorhandenen C1-Daten **nicht sofort baubar**: Alle
+275 nutzbaren Records sind an Dev/Test vergeben; außerhalb liegen nur
+unverifizierte, strukturell ausgeschlossene oder unvollständige Records.
+Der Plan steht in [`holdout_plan_20261112.md`](holdout_plan_20261112.md),
+das Manifest-Schema in
+[`holdout_manifest_schema.json`](holdout_manifest_schema.json).
+**Kein Modelllauf, solange G5 nicht erfüllt ist.**
+
 ## Eingefrorene Daten
 
 Der Pilot verwendet ausschließlich die 26 nutzbaren Dev-Records aus 6

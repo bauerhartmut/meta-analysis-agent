@@ -1,0 +1,156 @@
+{
+  "schema_id": "c1-holdout-manifest-schema",
+  "schema_version": 1,
+  "status": "template",
+  "policy_id": "c1-acceptance-gates-v1",
+  "purpose": "Dokumentiert einen neuen, unabhaengigen C1-Holdout vor dem Evaluationslauf.",
+  "required_fields": [
+    "holdout_id",
+    "status",
+    "source",
+    "created_at",
+    "record_count",
+    "article_count",
+    "article_ids",
+    "record_ids_sha256",
+    "input_path",
+    "reference_path",
+    "input_sha256",
+    "reference_sha256",
+    "prompt_sha256",
+    "model_config_sha256",
+    "gate_policy_sha256",
+    "independent_of_dev",
+    "excluded_consumed_test",
+    "articles_disjoint",
+    "pre_registered",
+    "prompt_frozen_before_run",
+    "source_verification",
+    "record_status_distribution",
+    "approval_id"
+  ],
+  "fields": {
+    "holdout_id": {
+      "type": "string",
+      "description": "Eindeutige Holdout-ID, z. B. c1_holdout_20261112"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["draft", "frozen", "evaluated"],
+      "description": "draft vor der Pruefung, frozen vor dem Lauf, evaluated nach dem Lauf"
+    },
+    "source": {
+      "type": "string",
+      "description": "Quelle und Version der Holdout-Records"
+    },
+    "created_at": {
+      "type": "string",
+      "description": "ISO-8601-Zeitpunkt der Manifest-Erstellung"
+    },
+    "record_count": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "article_count": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "article_ids": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "PMCIDs oder equivalente Artikel-IDs"
+    },
+    "record_ids_sha256": {
+      "type": "string",
+      "description": "SHA-256 der sortierten Holdout-Record-IDs"
+    },
+    "input_path": {
+      "type": "string"
+    },
+    "reference_path": {
+      "type": "string"
+    },
+    "input_sha256": {
+      "type": "string"
+    },
+    "reference_sha256": {
+      "type": "string"
+    },
+    "prompt_sha256": {
+      "type": "string"
+    },
+    "model_config_sha256": {
+      "type": "string"
+    },
+    "gate_policy_sha256": {
+      "type": "string"
+    },
+    "independent_of_dev": {
+      "type": "boolean",
+      "const": true
+    },
+    "excluded_consumed_test": {
+      "type": "boolean",
+      "const": true
+    },
+    "articles_disjoint": {
+      "type": "boolean",
+      "const": true
+    },
+    "pre_registered": {
+      "type": "boolean",
+      "const": true
+    },
+    "prompt_frozen_before_run": {
+      "type": "boolean",
+      "const": true
+    },
+    "source_verification": {
+      "type": "string",
+      "enum": ["verified_exact", "verified_table", "corrected_with_source"],
+      "description": "Nur verifizierte Records; keine unverifiable-Records"
+    },
+    "record_status_distribution": {
+      "type": "object",
+      "additionalProperties": {"type": "integer", "minimum": 0}
+    },
+    "approval_id": {
+      "type": "string"
+    }
+  },
+  "constraints": {
+    "consumed_test_id": "c1_test_20261111_v6c",
+    "consumed_test_reuse_allowed": false,
+    "dev_ids_must_be_excluded": true,
+    "test_ids_must_be_excluded": true,
+    "articles_must_be_disjoint_from_dev_and_test": true,
+    "unverifiable_records_allowed": false,
+    "prompt_changes_after_freeze_allowed": false,
+    "reference_must_not_be_in_input": true
+  },
+  "empty_example": {
+    "holdout_id": "c1_holdout_YYYYMMDD",
+    "status": "draft",
+    "source": "",
+    "created_at": "",
+    "record_count": 0,
+    "article_count": 0,
+    "article_ids": [],
+    "record_ids_sha256": "",
+    "input_path": "",
+    "reference_path": "",
+    "input_sha256": "",
+    "reference_sha256": "",
+    "prompt_sha256": "",
+    "model_config_sha256": "",
+    "gate_policy_sha256": "",
+    "independent_of_dev": true,
+    "excluded_consumed_test": true,
+    "articles_disjoint": true,
+    "pre_registered": true,
+    "prompt_frozen_before_run": true,
+    "source_verification": "verified_exact",
+    "record_status_distribution": {},
+    "approval_id": ""
+  }
+}
