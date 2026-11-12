@@ -1,0 +1,46 @@
+{
+  "frame_id": "p0_europepmc_202609",
+  "generated_at": "2026-11-12T09:03:39.199131+00:00",
+  "query": "(OPEN_ACCESS:Y) AND (HAS_FT:Y) AND (PUB_TYPE:\"Randomized Controlled Trial\") AND (LANG:\"eng\") AND (FIRST_PDATE:[2026-09-01 TO 2026-09-30])",
+  "source": "Europe PMC REST API / PMC Open Access Subset",
+  "search_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+  "page_size": 200,
+  "sort": "P_PDATE_D desc",
+  "hit_count": 596,
+  "returned_records": 596,
+  "unique_pmcid_articles": 596,
+  "records_without_pmcid": 0,
+  "known_article_sets": {
+    "yun": 120,
+    "freeze": 70,
+    "dev": 6,
+    "test": 64,
+    "union": 120
+  },
+  "overlap_with_known": {
+    "yun": 0,
+    "freeze": 0,
+    "dev": 0,
+    "test": 0
+  },
+  "overlap_articles": 0,
+  "article_disjoint_articles": 596,
+  "duplicate_pmcid_records": 0,
+  "abstract_coverage": 596,
+  "journal_coverage": 596,
+  "by_year": {
+    "2027": 1,
+    "2026": 595
+  },
+  "files": {
+    "all": "holdout_p0_20261112/candidates_all.jsonl",
+    "disjoint": "holdout_p0_20261112/candidates.jsonl",
+    "all_sha256": "e07eb6a9e6716d6c974acbb899b01079d22a87fa3a32ccdb4317d9c83b0f6b88",
+    "disjoint_sha256": "e07eb6a9e6716d6c974acbb899b01079d22a87fa3a32ccdb4317d9c83b0f6b88"
+  },
+  "limitations": [
+    "Nur Query-Label 'Randomized Controlled Trial'; kein Abstract- oder Volltextscreening.",
+    "Keine Prüfung auf Parallelgruppen, zwei Arme oder extrahierbare N/Mean/SD/Events.",
+    "Kein Modelllauf, kein Holdout-Freeze, keine Annotation."
+  ]
+}

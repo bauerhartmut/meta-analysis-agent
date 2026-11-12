@@ -1,0 +1,21 @@
+{
+  "frame_id": "p0_europepmc_202609",
+  "checked_at": "2026-11-12T09:03:39.199131+00:00",
+  "known_article_sets": {
+    "yun": 120,
+    "freeze": 70,
+    "dev": 6,
+    "test": 64,
+    "union": 120
+  },
+  "overlap_with_known": {
+    "yun": 0,
+    "freeze": 0,
+    "dev": 0,
+    "test": 0
+  },
+  "overlap_articles": 0,
+  "article_disjoint_articles": 596,
+  "candidate_file": "holdout_p0_20261112/candidates.jsonl",
+  "candidate_file_sha256": "e07eb6a9e6716d6c974acbb899b01079d22a87fa3a32ccdb4317d9c83b0f6b88"
+}

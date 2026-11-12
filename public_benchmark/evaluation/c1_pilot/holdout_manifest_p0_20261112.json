@@ -1,12 +1,17 @@
 {
   "holdout_id": "c1_holdout_p0_20261112",
   "status": "draft",
-  "source": "PMC Open Access Subset via Europe PMC REST API",
+  "source": "PMC Open Access Subset via Europe PMC REST API; frame FIRST_PDATE:[2026-09-01 TO 2026-09-30]",
   "created_at": "2026-11-12",
   "record_count": 0,
   "article_count": 0,
   "target_record_count": 100,
   "target_article_count": 30,
+  "candidate_pool_path": "public_benchmark/evaluation/c1_pilot/holdout_p0_20261112/candidates.jsonl",
+  "candidate_pool_sha256": "e07eb6a9e6716d6c974acbb899b01079d22a87fa3a32ccdb4317d9c83b0f6b88",
+  "candidate_pool_articles": 596,
+  "candidate_pool_disjoint_articles": 596,
+  "candidate_pool_screening_status": "not_started",
   "article_ids": [],
   "input_path": "public_benchmark/evaluation/c1_pilot/holdout_p0_20261112/input.jsonl",
   "reference_path": "public_benchmark/evaluation/c1_pilot/holdout_p0_20261112/reference.jsonl",
@@ -26,5 +31,5 @@
   "approval_id": "draft-owner-bauerhartmut-no-approval",
   "annotation_owner": "bauerhartmut",
   "g5_ready": false,
-  "notes": "Draft. No articles selected and no records annotated. Fields with false/empty/pending values are intentional and must be completed before freeze. This file is not a G5-valid holdout manifest."
+  "notes": "Draft. Candidate pool exported (596 article-disjoint query-labeled RCTs), but no articles selected and no records annotated. Fields with false/empty/pending values are intentional and must be completed before freeze. This file is not a G5-valid holdout manifest."
 }

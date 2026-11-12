@@ -1,7 +1,7 @@
 {
   "p0_id": "p0_external_holdout_20261112",
   "date": "2026-11-12",
-  "status": "ready_to_start",
+  "status": "query_executed_screening_pending",
   "source": {
     "name": "PMC Open Access Subset via Europe PMC REST API",
     "search_endpoint": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
@@ -21,6 +21,26 @@
     "records_per_article": "3-4",
     "continuous_records_minimum": 40,
     "binary_records_minimum": 40
+  },
+  "execution": {
+    "generated_at": "2026-11-12T09:03:39.199131+00:00",
+    "broad_hit_count": 109833,
+    "frame": "FIRST_PDATE:[2026-09-01 TO 2026-09-30]",
+    "hit_count": 596,
+    "returned_records": 596,
+    "unique_pmcid_articles": 596,
+    "records_without_pmcid": 0,
+    "overlap_with_known": 0,
+    "article_disjoint_articles": 596,
+    "duplicate_pmcid_records": 0,
+    "abstract_coverage": 596,
+    "journal_coverage": 596,
+    "screening_status": "not_started",
+    "model_run": false,
+    "candidates": "public_benchmark/evaluation/c1_pilot/holdout_p0_20261112/candidates.jsonl",
+    "candidates_sha256": "e07eb6a9e6716d6c974acbb899b01079d22a87fa3a32ccdb4317d9c83b0f6b88",
+    "summary": "public_benchmark/evaluation/c1_pilot/holdout_p0_20261112/candidate_summary.json",
+    "disjointness": "public_benchmark/evaluation/c1_pilot/holdout_p0_20261112/article_disjoint_check.json"
   },
   "selection": {
     "design": "parallel-group RCT with two relevant arms",

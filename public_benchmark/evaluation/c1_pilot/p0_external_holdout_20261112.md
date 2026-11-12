@@ -1,7 +1,7 @@
 # P0: Externer C1-Holdout - Beschaffungsplan
 
 Stand: 2026-11-12
-Status: **READY TO START - Draft, nicht eingefroren, nicht G5-valid**
+Status: **QUERY EXECUTED - 596 Kandidaten, Screening ausstehend; nicht eingefroren, nicht G5-valid**
 Ziel: 30 Artikel, 100 Records, artikeldisjunkt zu Dev und zum verbrauchten Test
 
 ## 1. Entscheidung
@@ -22,6 +22,35 @@ Ziel: 30 Artikel, 100 Records, artikeldisjunkt zu Dev und zum verbrauchten Test
 Die Quelle ist offen zugänglich und liefert strukturierte Volltexte. Sie ist
 nicht mit dem Yun-699-Bestand identisch; die Artikeldisjunktheit wird vor der
 Aufnahme explizit geprüft.
+
+### 1.1 Ausführung 2026-11-12
+
+Die breite P0-Query ergab **109.833** Treffer. Vor der Sichtung einzelner
+Treffer wurde der Export auf einen vollständig indexierten Monatsframe
+begrenzt: **Erstpublikation 2026-09-01 bis 2026-09-30**. Das ist eine
+dokumentierte Frame-Entscheidung, keine Auswahl nach Ergebnissen.
+
+| Kennzahl | Wert |
+|---|---:|
+| Treffer im Monatsframe | 596 |
+| Exportierte Records | 596 |
+| Eindeutige PMCIDs | 596 |
+| Ohne PMCID | 0 |
+| Mit Abstract | 596 |
+| Mit Journal | 596 |
+| Überschneidung Yun | 0 |
+| Überschneidung Freeze/Dev/Test | 0 |
+| **Artikeldisjunkt** | **596** |
+| Duplikate | 0 |
+
+Die 596 sind **Query-Label-RCTs** und noch keine endgültig geeigneten
+Holdout-Artikel. Abstract- und Volltextscreening auf Parallelgruppen,
+zwei Arme und extrahierbare N/Mean/SD/Events stehen noch aus.
+
+Artefakte:
+[`candidate_summary.md`](holdout_p0_20261112/candidate_summary.md),
+[`candidates.jsonl`](holdout_p0_20261112/candidates.jsonl),
+[`article_disjoint_check.json`](holdout_p0_20261112/article_disjoint_check.json).
 
 ## 2. Auswahlkriterien
 
@@ -60,10 +89,10 @@ AND (PUB_TYPE:"Randomized Controlled Trial")
 AND (LANG:"eng")
 ```
 
-Die Query wird vor der Auswahl dokumentiert. Weitere Filter (Publikationsjahr,
-Fachgebiet) dürfen nur vor der Sichtung der Ergebnisse festgelegt werden.
-Die Kandidaten werden nach Titel/Abstract gescreent; die endgültige Aufnahme
-erfolgt erst nach Volltextprüfung.
+Die Query wird vor der Auswahl dokumentiert. Für den ersten Export wurde der
+Frame auf September 2026 begrenzt, weil die ungefilterte Query 109.833
+Treffer liefert. Die Kandidaten werden nach Titel/Abstract gescreent; die
+endgültige Aufnahme erfolgt erst nach Volltextprüfung.
 
 ### 2.4 Artikeldisjunktheit
 
@@ -174,8 +203,9 @@ nachträglich aufgeweicht.
 
 ## 8. Nächster konkreter Schritt
 
-1. Europe-PMC-Query ausführen und Kandidatenliste exportieren.
-2. Abstract-Screening durchführen.
+1. **Erledigt:** Europe-PMC-Query ausgeführt; 596 artikeldisjunkte
+   Kandidaten exportiert.
+2. **Als Nächstes:** Abstract-Screening der 596 Kandidaten.
 3. 30 artikeldisjunkte RCTs auswählen.
 4. 100 Records nach C1-Regeln annotieren.
 5. Disjunktheit, Quellen und Werte prüfen.

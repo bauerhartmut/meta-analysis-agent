@@ -294,6 +294,9 @@ Plan: [`holdout_plan_20261112.md`](holdout_plan_20261112.md), Schema:
 - [`holdout_manifest_p0_20261112.json`](holdout_manifest_p0_20261112.json):
   Draft-Manifest; noch ohne Artikel-IDs und Hashes, ausdrücklich nicht
   G5-valid.
+- [`holdout_p0_20261112/candidate_summary.md`](holdout_p0_20261112/candidate_summary.md):
+  Query-Ergebnis September 2026: **596 artikeldisjunkte Kandidaten**, 0
+  Überschneidungen; Abstract-Screening noch offen, kein Modelllauf.
 - [`gate_report_v6c.json`](gate_report_v6c.json): maschinenlesbarer
   G1–G5-Report; v6c besteht nur G1.
 

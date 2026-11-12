@@ -211,6 +211,11 @@ Holdout-Lauf. Kein Modelllauf gestartet.
 [`holdout_manifest_p0_20261112.json`](holdout_manifest_p0_20261112.json),
 Details [`p0_external_holdout_20261112.md`](p0_external_holdout_20261112.md).
 
+**P0-Query ausgeführt 2026-11-12:** September-2026-Frame, **596
+artikeldisjunkte Kandidaten** (0 Überschneidungen mit Yun/Freeze/Dev/Test).
+Abstract-Screening ausstehend; kein Modelllauf. Siehe
+[`candidate_summary.md`](holdout_p0_20261112/candidate_summary.md).
+
 ### P2 — B-Status prüfen
 
 **Ziel:** B-Watcher unverändert lassen und Status dokumentieren.

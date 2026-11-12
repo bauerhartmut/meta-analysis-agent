@@ -144,7 +144,9 @@ Ohne P0 kein G5 und kein belastbarer Lauf.
 Primärannotation und klinische Freigabe: **bauerhartmut**. Draft-Manifest:
 [`holdout_manifest_p0_20261112.json`](holdout_manifest_p0_20261112.json);
 Details: [`p0_external_holdout_20261112.md`](p0_external_holdout_20261112.md).
-Das Draft-Manifest ist noch nicht G5-valid.
+Die Query wurde ausgeführt: **596 artikeldisjunkte Kandidaten** aus dem
+September-2026-Frame (0 Überschneidungen mit Yun/Freeze/Dev/Test). Das
+Abstract-Screening steht noch aus; das Draft-Manifest ist nicht G5-valid.
 
 ### P1 - Blockmechanik spezifizieren
 
