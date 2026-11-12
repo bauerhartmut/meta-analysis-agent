@@ -213,8 +213,9 @@ Details [`p0_external_holdout_20261112.md`](p0_external_holdout_20261112.md).
 
 **P0-Query ausgeführt 2026-11-12:** September-2026-Frame, **596
 artikeldisjunkte Kandidaten** (0 Überschneidungen mit Yun/Freeze/Dev/Test).
-Abstract-Screening ausstehend; kein Modelllauf. Siehe
-[`candidate_summary.md`](holdout_p0_20261112/candidate_summary.md).
+Abstract-Screening v1: **152 ausgeschlossen, 65 manuell, 379 vorläufig für
+Volltext**; kein Modelllauf. Siehe
+[`screening_summary_v1.md`](holdout_p0_20261112/screening_summary_v1.md).
 
 ### P2 — B-Status prüfen
 

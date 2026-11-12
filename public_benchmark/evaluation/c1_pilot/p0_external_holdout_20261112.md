@@ -1,7 +1,7 @@
 # P0: Externer C1-Holdout - Beschaffungsplan
 
 Stand: 2026-11-12
-Status: **QUERY EXECUTED - 596 Kandidaten, Screening ausstehend; nicht eingefroren, nicht G5-valid**
+Status: **ABSTRACT SCREENED - 152 ausgeschlossen, 65 manuell, 379 vorlaeufig fuer Volltext; nicht eingefroren, nicht G5-valid**
 Ziel: 30 Artikel, 100 Records, artikeldisjunkt zu Dev und zum verbrauchten Test
 
 ## 1. Entscheidung
@@ -44,13 +44,35 @@ dokumentierte Frame-Entscheidung, keine Auswahl nach Ergebnissen.
 | Duplikate | 0 |
 
 Die 596 sind **Query-Label-RCTs** und noch keine endgültig geeigneten
-Holdout-Artikel. Abstract- und Volltextscreening auf Parallelgruppen,
-zwei Arme und extrahierbare N/Mean/SD/Events stehen noch aus.
+Holdout-Artikel. Das Abstract-Screening ist abgeschlossen; Volltextscreening
+auf Parallelgruppen, zwei Arme und extrahierbare N/Mean/SD/Events steht aus.
 
 Artefakte:
 [`candidate_summary.md`](holdout_p0_20261112/candidate_summary.md),
 [`candidates.jsonl`](holdout_p0_20261112/candidates.jsonl),
 [`article_disjoint_check.json`](holdout_p0_20261112/article_disjoint_check.json).
+
+### 1.2 Abstract-Screening 2026-11-12
+
+Regelbasierte Erstprüfung der 596 Kandidaten nach
+[`screening_criteria_v1.json`](holdout_p0_20261112/screening_criteria_v1.json)
+(Kriterienversion 1.1). Kein Modellaufruf, keine Volltextprüfung.
+
+| Entscheidung | Anzahl |
+|---|---:|
+| Ausschluss | **152** |
+| Manuelle Prüfung | **65** |
+| Vorlaeufig fuer Volltext | **379** |
+| **Gesamt** | **596** |
+
+Jeder Ausschluss ist mit PMCID, Regel-ID, Begruendung und Textbeleg in
+[`screening_exclusions_v1.jsonl`](holdout_p0_20261112/screening_exclusions_v1.jsonl)
+dokumentiert. Alle Entscheidungen stehen in
+[`screening_decisions_v1.jsonl`](holdout_p0_20261112/screening_decisions_v1.jsonl).
+
+Die 379 Volltextkandidaten sind **nicht** endgueltig eingeschlossen. Die 65
+manuellen Faelle sind vor der Volltextauswahl zu adjudizieren. Mehrfachgruende
+sind moeglich; die Regelzahlen sind nicht additiv.
 
 ## 2. Auswahlkriterien
 
@@ -179,6 +201,9 @@ Nachweis für eine Freigabe verwendet werden.
 | Artefakt | Pfad |
 |---|---|
 | Screening-Liste | `public_benchmark/evaluation/c1_pilot/holdout_p0_20261112/candidates.jsonl` |
+| Screening-Kriterien | `public_benchmark/evaluation/c1_pilot/holdout_p0_20261112/screening_criteria_v1.json` |
+| Alle Screening-Entscheidungen | `public_benchmark/evaluation/c1_pilot/holdout_p0_20261112/screening_decisions_v1.jsonl` |
+| Ausschluesse mit Beleg | `public_benchmark/evaluation/c1_pilot/holdout_p0_20261112/screening_exclusions_v1.jsonl` |
 | Disjunktheitsprüfung | `public_benchmark/evaluation/c1_pilot/holdout_p0_20261112/article_disjoint_check.json` |
 | Holdout-Input | `public_benchmark/evaluation/c1_pilot/holdout_p0_20261112/input.jsonl` |
 | Holdout-Referenz | `public_benchmark/evaluation/c1_pilot/holdout_p0_20261112/reference.jsonl` |
@@ -205,8 +230,10 @@ nachträglich aufgeweicht.
 
 1. **Erledigt:** Europe-PMC-Query ausgeführt; 596 artikeldisjunkte
    Kandidaten exportiert.
-2. **Als Nächstes:** Abstract-Screening der 596 Kandidaten.
-3. 30 artikeldisjunkte RCTs auswählen.
+2. **Erledigt:** Abstract-Screening; 152 ausgeschlossen, 65 manuell,
+   379 vorlaeufig fuer Volltext.
+3. **Als Naechstes:** 65 manuelle Faelle adjudizieren; 379 Volltext-
+   kandidaten pruefen und 30 Artikel auswaehlen.
 4. 100 Records nach C1-Regeln annotieren.
 5. Disjunktheit, Quellen und Werte prüfen.
 6. Manifest befüllen, hashen und einfrieren.

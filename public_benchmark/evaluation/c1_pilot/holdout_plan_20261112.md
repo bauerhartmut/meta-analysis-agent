@@ -6,7 +6,8 @@ Entscheidung: **kein Modelllauf; 3-Record-Smoke-Test optional; externen Holdout 
 P0-Beschaffung: **PMC Open Access Subset via Europe PMC; 30 Artikel / 100 Records**
 (siehe [`p0_external_holdout_20261112.md`](p0_external_holdout_20261112.md))
 P0-Query 2026-11-12: **596 artikeldisjunkte Kandidaten** (September-2026-Frame,
-0 Überschneidungen); Abstract-Screening ausstehend.
+0 Überschneidungen). Abstract-Screening v1: **152 ausgeschlossen, 65 manuell,
+379 vorläufig für Volltext**; keine endgültige Eignung, kein Modelllauf.
 
 ## 1. Ziel
 

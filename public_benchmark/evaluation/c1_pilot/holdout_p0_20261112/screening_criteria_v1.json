@@ -1,0 +1,124 @@
+{
+  "criteria_id": "p0_abstract_screening_v1",
+  "version": 1.1,
+  "created_at": "2026-11-12",
+  "status": "fixed_before_final_screening",
+  "revision_note": "Scope-Auswertung und zu breite Tier-/Diagnostik-/PK-Regeln vor dem finalen Lauf korrigiert; eine erste Testausfuehrung wurde verworfen. E11 (Simulation) ergaenzt.",
+  "scope": "Titel und Abstract der 596 P0-Kandidaten",
+  "decision_labels": {
+    "exclude": "Klarer Ausschluss nach Design, Publikationstyp oder fehlenden Ergebnissen",
+    "manual_review": "Nicht eindeutig; menschliche Abstract-/Volltextprüfung erforderlich",
+    "include_for_fulltext": "Vorlaeufig fuer Volltextpruefung vorgesehen; keine endgueltige Eignung"
+  },
+  "priority": [
+    "exclude",
+    "manual_review",
+    "include_for_fulltext"
+  ],
+  "rules": [
+    {
+      "rule_id": "E01",
+      "decision": "exclude",
+      "scope": "title_abstract",
+      "label": "Studienprotokoll oder geplante Studie",
+      "pattern": "\\b(study|trial)\\s+protocol\\b|\\bprotocol\\s+(for|of)\\s+(a|an|the)?\\s*(randomi[sz]ed|study|trial)\\b|\\brationale and design\\b|\\bdesign and rationale\\b|\\bwill be randomi[sz]ed\\b|\\baim to recruit\\b"
+    },
+    {
+      "rule_id": "E02",
+      "decision": "exclude",
+      "scope": "title",
+      "label": "Review, Editorial, Kommentar oder Korrektur",
+      "pattern": "\\bsystematic review\\b|\\bmeta-analysis\\b|\\bscoping review\\b|\\bnarrative review\\b|\\beditorial\\b|\\bcommentary\\b|\\bletter to the editor\\b|\\bcorrection\\b|\\berratum\\b|\\bretraction\\b"
+    },
+    {
+      "rule_id": "E03",
+      "decision": "exclude",
+      "scope": "title_abstract",
+      "label": "Crossover-Design",
+      "pattern": "\\bcross-?over\\b"
+    },
+    {
+      "rule_id": "E04",
+      "decision": "exclude",
+      "scope": "title_abstract",
+      "label": "Cluster- oder Stepped-Wedge-Design",
+      "pattern": "\\bcluster[- ]randomi[sz](ed|ation)\\b|\\bstepped[- ]wedge\\b"
+    },
+    {
+      "rule_id": "E05",
+      "decision": "exclude",
+      "scope": "title_abstract",
+      "label": "Mehr als zwei Arme oder faktorielles Design",
+      "pattern": "\\bfactorial\\b|\\b[234]\\s*[x×]\\s*[234]\\b|\\b(three|four|multi)[- ]arm\\b|\\b(three|four) (parallel )?groups\\b"
+    },
+    {
+      "rule_id": "E06",
+      "decision": "exclude",
+      "scope": "title_abstract",
+      "label": "Einarmig oder unkontrolliert",
+      "pattern": "\\bsingle[- ]arm\\b|\\bone[- ]arm\\b|\\buncontrolled (study|trial|design|cohort)\\b|\\bopen-label extension\\b"
+    },
+    {
+      "rule_id": "E07",
+      "decision": "exclude",
+      "scope": "title_abstract",
+      "label": "Beobachtungsstudie oder nicht-interventionelle Anlage",
+      "pattern": "\\bobservational (study|cohort|analysis)\\b|\\bprospective cohort\\b|\\bretrospective cohort\\b|\\bcase-control study\\b|\\bcross-sectional study\\b|\\bqualitative study\\b|\\bsurvey study\\b"
+    },
+    {
+      "rule_id": "E08",
+      "decision": "exclude",
+      "scope": "title",
+      "label": "Tier-, In-vitro- oder Zellstudie",
+      "pattern": "\\bin vitro\\b|\\banimal model\\b|\\bmice\\b|\\brats?\\b|\\bcell culture\\b"
+    },
+    {
+      "rule_id": "E09",
+      "decision": "exclude",
+      "scope": "title",
+      "label": "Diagnostische Genauigkeitsstudie",
+      "pattern": "\\bdiagnostic accuracy\\b|\\bsensitivity and specificity\\b|\\bindex test\\b"
+    },
+    {
+      "rule_id": "E10",
+      "decision": "exclude",
+      "scope": "title",
+      "label": "Pharmakokinetik, Bioaequivalenz oder Dosis-Eskalation",
+      "pattern": "\\bpharmacokinetic(s)?\\b|\\bbioequivalence\\b|\\bdose[- ]escalation\\b|\\bphase i\\b"
+    },
+    {
+      "rule_id": "E11",
+      "decision": "exclude",
+      "scope": "title_abstract",
+      "label": "Simulationsstudie ohne klinische Patientenpopulation",
+      "pattern": "\\brandomi[sz]ed simulation\\b|\\bsimulation study\\b|\\bsimulated (primary care|consultations|participants)\\b"
+    },
+    {
+      "rule_id": "M01",
+      "decision": "manual_review",
+      "scope": "title_abstract",
+      "label": "Sekundaer-, Post-hoc- oder Substudienanalyse",
+      "pattern": "\\bsecondary analysis\\b|\\bpost[- ]hoc analysis\\b|\\bsubstudy\\b|\\bancillary study\\b|\\bpooled analysis\\b"
+    },
+    {
+      "rule_id": "M02",
+      "decision": "manual_review",
+      "scope": "title_abstract",
+      "label": "Interim-, laufende oder unvollstaendige Studie",
+      "pattern": "\\binterim analysis\\b|\\btrial in progress\\b|\\bongoing trial\\b"
+    },
+    {
+      "rule_id": "M03",
+      "decision": "manual_review",
+      "scope": "title_abstract",
+      "label": "Wirtschaftliche Evaluierung oder unklarer klinischer Endpunkt",
+      "pattern": "\\bcost-effectiveness analysis\\b|\\beconomic evaluation\\b|\\bcost-utility analysis\\b"
+    }
+  ],
+  "notes": [
+    "Die Regeln sind bewusst konservativ: Nur klare Ausschluesse werden automatisch ausgeschlossen.",
+    "Sekundaeranalysen und Interimsdaten werden manuell geprueft, weil sie eigene Armwerte berichten koennen.",
+    "include_for_fulltext ist keine endgueltige Eignung; Parallelgruppen, zwei Arme und extrahierbare N/Mean/SD/Events werden erst im Volltext geprueft.",
+    "Kein Modellaufruf; die Entscheidungen sind deterministisch aus Titel und Abstract abgeleitet."
+  ]
+}

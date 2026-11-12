@@ -11,7 +11,15 @@
   "candidate_pool_sha256": "e07eb6a9e6716d6c974acbb899b01079d22a87fa3a32ccdb4317d9c83b0f6b88",
   "candidate_pool_articles": 596,
   "candidate_pool_disjoint_articles": 596,
-  "candidate_pool_screening_status": "not_started",
+  "candidate_pool_screening_status": "abstract_screening_v1_complete_pending_manual_review",
+  "abstract_screening": {
+    "criteria_sha256": "4b40eb9acf02c6cc6c67316b91fcdeae7bbfba382cbf795af040f96491b17ed9",
+    "exclude": 152,
+    "manual_review": 65,
+    "include_for_fulltext": 379,
+    "decisions_file": "public_benchmark/evaluation/c1_pilot/holdout_p0_20261112/screening_decisions_v1.jsonl",
+    "exclusions_file": "public_benchmark/evaluation/c1_pilot/holdout_p0_20261112/screening_exclusions_v1.jsonl"
+  },
   "article_ids": [],
   "input_path": "public_benchmark/evaluation/c1_pilot/holdout_p0_20261112/input.jsonl",
   "reference_path": "public_benchmark/evaluation/c1_pilot/holdout_p0_20261112/reference.jsonl",
