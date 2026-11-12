@@ -1,7 +1,7 @@
 {
   "p0_id": "p0_external_holdout_20261112",
   "date": "2026-11-12",
-  "status": "abstract_screening_completed_pending_manual_review",
+  "status": "manual_review_completed_assisted_pending_human_signoff",
   "source": {
     "name": "PMC Open Access Subset via Europe PMC REST API",
     "search_endpoint": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
@@ -35,7 +35,7 @@
     "duplicate_pmcid_records": 0,
     "abstract_coverage": 596,
     "journal_coverage": 596,
-    "screening_status": "abstract_screening_v1_complete_pending_manual_review",
+    "screening_status": "manual_review_completed_assisted_pending_human_signoff",
     "model_run": false,
     "candidates": "public_benchmark/evaluation/c1_pilot/holdout_p0_20261112/candidates.jsonl",
     "candidates_sha256": "e07eb6a9e6716d6c974acbb899b01079d22a87fa3a32ccdb4317d9c83b0f6b88",
@@ -47,15 +47,20 @@
     "criteria_version": 1.1,
     "criteria_sha256": "4b40eb9acf02c6cc6c67316b91fcdeae7bbfba382cbf795af040f96491b17ed9",
     "decisions": 596,
-    "exclude": 152,
-    "manual_review": 65,
-    "include_for_fulltext": 379,
+    "exclude": 181,
+    "manual_review": 0,
+    "include_for_fulltext": 415,
+    "manual_cases": 65,
+    "manual_include": 36,
+    "manual_exclude": 29,
     "human_review": false,
+    "human_signoff": "pending",
     "model_used": false,
     "fulltext_screening": false,
-    "decisions_file": "public_benchmark/evaluation/c1_pilot/holdout_p0_20261112/screening_decisions_v1.jsonl",
+    "decisions_file": "public_benchmark/evaluation/c1_pilot/holdout_p0_20261112/screening_decisions_v2.jsonl",
     "exclusions_file": "public_benchmark/evaluation/c1_pilot/holdout_p0_20261112/screening_exclusions_v1.jsonl",
-    "summary": "public_benchmark/evaluation/c1_pilot/holdout_p0_20261112/screening_summary_v1.json"
+    "manual_decisions_file": "public_benchmark/evaluation/c1_pilot/holdout_p0_20261112/manual_review_decisions_v1.jsonl",
+    "summary": "public_benchmark/evaluation/c1_pilot/holdout_p0_20261112/screening_summary_v2.json"
   },
   "selection": {
     "design": "parallel-group RCT with two relevant arms",

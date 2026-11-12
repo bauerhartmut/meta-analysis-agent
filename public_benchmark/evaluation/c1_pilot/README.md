@@ -297,9 +297,10 @@ Plan: [`holdout_plan_20261112.md`](holdout_plan_20261112.md), Schema:
 - [`holdout_p0_20261112/candidate_summary.md`](holdout_p0_20261112/candidate_summary.md):
   Query-Ergebnis September 2026: **596 artikeldisjunkte Kandidaten**, 0
   Überschneidungen.
-- [`holdout_p0_20261112/screening_summary_v1.md`](holdout_p0_20261112/screening_summary_v1.md):
-  Abstract-Screening v1: **152 ausgeschlossen, 65 manuell, 379 vorläufig
-  für Volltext**; regelbasiert, kein Modelllauf.
+- [`holdout_p0_20261112/screening_summary_v2.md`](holdout_p0_20261112/screening_summary_v2.md):
+  Abstract-Screening v2: **181 ausgeschlossen, 415 vorläufig für Volltext**;
+  die 65 manuellen Fälle sind assistiert entschieden, menschliche Freigabe
+  ausstehend, kein Modelllauf.
 - [`gate_report_v6c.json`](gate_report_v6c.json): maschinenlesbarer
   G1–G5-Report; v6c besteht nur G1.
 

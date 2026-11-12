@@ -146,9 +146,11 @@ Primärannotation und klinische Freigabe: **bauerhartmut**. Draft-Manifest:
 Details: [`p0_external_holdout_20261112.md`](p0_external_holdout_20261112.md).
 Die Query wurde ausgeführt: **596 artikeldisjunkte Kandidaten** aus dem
 September-2026-Frame (0 Überschneidungen mit Yun/Freeze/Dev/Test). Das
-Abstract-Screening ist als regelbasierte Erstprüfung abgeschlossen:
-**152 ausgeschlossen, 65 manuell, 379 vorläufig für Volltext**. Die 379 sind
-keine endgültigen Einschlüsse; das Draft-Manifest ist nicht G5-valid.
+Abstract-Screening und assistierte Einzelfallprüfung sind abgeschlossen:
+**181 ausgeschlossen, 415 vorläufig für Volltext**. Die 65 manuellen Fälle
+sind entschieden (29 ausgeschlossen, 36 eingeschlossen), die menschliche
+Freigabe steht aus. Die 415 sind keine endgültigen Einschlüsse; das
+Draft-Manifest ist nicht G5-valid.
 
 ### P1 - Blockmechanik spezifizieren
 

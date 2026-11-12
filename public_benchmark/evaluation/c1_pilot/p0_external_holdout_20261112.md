@@ -1,7 +1,7 @@
 # P0: Externer C1-Holdout - Beschaffungsplan
 
 Stand: 2026-11-12
-Status: **ABSTRACT SCREENED - 152 ausgeschlossen, 65 manuell, 379 vorlaeufig fuer Volltext; nicht eingefroren, nicht G5-valid**
+Status: **MANUAL REVIEW COMPLETED (ASSISTED) - 181 ausgeschlossen, 415 vorlaeufig fuer Volltext; menschliche Freigabe offen, nicht G5-valid**
 Ziel: 30 Artikel, 100 Records, artikeldisjunkt zu Dev und zum verbrauchten Test
 
 ## 1. Entscheidung
@@ -60,19 +60,26 @@ Regelbasierte Erstprüfung der 596 Kandidaten nach
 
 | Entscheidung | Anzahl |
 |---|---:|
-| Ausschluss | **152** |
-| Manuelle Prüfung | **65** |
-| Vorlaeufig fuer Volltext | **379** |
+| Ausschluss | **181** |
+| Manuelle Prüfung | **0** |
+| Vorlaeufig fuer Volltext | **415** |
 | **Gesamt** | **596** |
 
-Jeder Ausschluss ist mit PMCID, Regel-ID, Begruendung und Textbeleg in
-[`screening_exclusions_v1.jsonl`](holdout_p0_20261112/screening_exclusions_v1.jsonl)
-dokumentiert. Alle Entscheidungen stehen in
-[`screening_decisions_v1.jsonl`](holdout_p0_20261112/screening_decisions_v1.jsonl).
+Von den 65 manuellen Faellen wurden **29 ausgeschlossen** und **36 vorlaeufig
+für Volltext eingeschlossen**. Jede Einzelfallentscheidung enthaelt PMC-URL,
+DOI, Titelbeleg und Begruendung in
+[`manual_review_decisions_v1.jsonl`](holdout_p0_20261112/manual_review_decisions_v1.jsonl).
+Die konsolidierte Entscheidung steht in
+[`screening_decisions_v2.jsonl`](holdout_p0_20261112/screening_decisions_v2.jsonl),
+die Zusammenfassung in
+[`screening_summary_v2.md`](holdout_p0_20261112/screening_summary_v2.md).
+Die 181 Ausschluesse setzen sich aus 152 Regelausschluessen und 29 manuellen
+Ausschluessen zusammen.
 
-Die 379 Volltextkandidaten sind **nicht** endgueltig eingeschlossen. Die 65
-manuellen Faelle sind vor der Volltextauswahl zu adjudizieren. Mehrfachgruende
-sind moeglich; die Regelzahlen sind nicht additiv.
+Die 415 Volltextkandidaten sind **nicht** endgueltig eingeschlossen. Die
+Einzelfallprüfung war assistiert; die menschliche Freigabe (`human_signoff`)
+steht fuer alle 65 Faelle aus. Mehrfachgruende sind moeglich; die Regelzahlen
+sind nicht additiv.
 
 ## 2. Auswahlkriterien
 
@@ -230,10 +237,11 @@ nachträglich aufgeweicht.
 
 1. **Erledigt:** Europe-PMC-Query ausgeführt; 596 artikeldisjunkte
    Kandidaten exportiert.
-2. **Erledigt:** Abstract-Screening; 152 ausgeschlossen, 65 manuell,
-   379 vorlaeufig fuer Volltext.
-3. **Als Naechstes:** 65 manuelle Faelle adjudizieren; 379 Volltext-
-   kandidaten pruefen und 30 Artikel auswaehlen.
+2. **Erledigt:** Abstract-Screening; 181 ausgeschlossen, 0 manuell offen,
+   415 vorlaeufig fuer Volltext (65 assistierte Einzelfallentscheidungen,
+   menschliche Freigabe ausstehend).
+3. **Als Naechstes:** menschliche Freigabe der 65 Einzelfallentscheidungen;
+   415 Volltextkandidaten pruefen und 30 Artikel auswaehlen.
 4. 100 Records nach C1-Regeln annotieren.
 5. Disjunktheit, Quellen und Werte prüfen.
 6. Manifest befüllen, hashen und einfrieren.

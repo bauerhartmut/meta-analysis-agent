@@ -1,0 +1,33 @@
+{
+  "screening_id": "p0_abstract_screening_v2",
+  "generated_at": "2026-11-12T09:27:23.281260+00:00",
+  "records": 596,
+  "counts": {
+    "exclude": 181,
+    "manual_review": 0,
+    "include_for_fulltext": 415
+  },
+  "manual_cases": 65,
+  "manual_include": 36,
+  "manual_exclude": 29,
+  "manual_reason_counts": {
+    "I01": 5,
+    "I02": 28,
+    "I03": 2,
+    "I04": 1,
+    "X01": 8,
+    "X02": 1,
+    "X03": 5,
+    "X04": 3,
+    "X05": 5,
+    "X06": 2,
+    "X07": 2,
+    "X08": 1,
+    "X09": 1,
+    "X10": 1
+  },
+  "human_review": false,
+  "human_signoff": "pending",
+  "model_used": false,
+  "fulltext_screening": false
+}
