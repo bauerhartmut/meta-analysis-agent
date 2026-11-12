@@ -1,6 +1,6 @@
 # Freigabeliste: 65 P0-Einzelfallentscheidungen
 
-Status: **ALLE FÄLLE ENTSCHIEDEN; 14 MENSCHLICH, 51 ASSISTIERT; MENSCHLICHE GEGENPRÜFUNG OFFEN**.
+Status: **ALLE FÄLLE ENTSCHIEDEN; 16 MENSCHLICH, 49 ASSISTIERT; MENSCHLICHE GEGENPRÜFUNG OFFEN**.
 Diese Liste ist die Prüfvorlage; sie ist kein Gate-Pass und keine
 endgültige Holdout-Auswahl.
 
@@ -11,8 +11,8 @@ Abweichungen und Korrekturen in `human_note` begründen.
 - Einschlüsse: **36**
 - Ausschlüsse: **29**
 - entschieden: **65/65**
-- davon menschlich: **14**
-- davon assistiert (Codebuff): **51**
+- davon menschlich: **16**
+- davon assistiert (Codebuff): **49**
 - hohe Priorität: **17**
 
 ## Einschlüsse: vorläufig für Volltext
@@ -60,8 +60,8 @@ Abweichungen und Korrekturen in `human_note` begründen.
 
 | Nr | Quelle / Kurztitel | Entscheidung | Offener Zweifel | Prio | Reviewer | Datum | Finale Entscheidung |
 |---:|---|---|---|---|---|---|---|
-| 37 | [PMC13545155](https://pmc.ncbi.nlm.nih.gov/articles/PMC13545155/)<br>`10.1111/jns.70167`<br>Impact of Baseline Polyneuropathy Severity on Eplontersen Effic... | Ausschluss | Historischer Placebo; kein paralleler Kontrollarm. | hoch | Codebuff assistiert | 2026-11-12 | ausschluss |
-| 38 | [PMC13599935](https://pmc.ncbi.nlm.nih.gov/articles/PMC13599935/)<br>`10.1136/bmjopen-2026-119120`<br>Effect of periprocedural antithrombotic medication on functiona... | Ausschluss | Mehrere Regime; pruefen, ob ein Zweiarm-Kontrast zulaessig ist (P0: nein). | hoch | Codebuff assistiert | 2026-11-12 | ausschluss |
+| 37 | [PMC13545155](https://pmc.ncbi.nlm.nih.gov/articles/PMC13545155/)<br>`10.1111/jns.70167`<br>Impact of Baseline Polyneuropathy Severity on Eplontersen Effic... | Ausschluss | Historischer Placebo; kein paralleler Kontrollarm. | hoch | HB | 2026-11-12 | ausschluss |
+| 38 | [PMC13599935](https://pmc.ncbi.nlm.nih.gov/articles/PMC13599935/)<br>`10.1136/bmjopen-2026-119120`<br>Effect of periprocedural antithrombotic medication on functiona... | Ausschluss | Mehrere Regime; pruefen, ob ein Zweiarm-Kontrast zulaessig ist (P0: nein). | hoch | HB | 2026-11-12 | ausschluss |
 | 39 | [PMC13690031](https://pmc.ncbi.nlm.nih.gov/articles/PMC13690031/)<br>`10.62675/2965-2774.20260279`<br>A secondary analysis of the SODa-BIC randomized clinical trial... | Ausschluss | Hierarchischer Score; pruefen, ob einfache binaere Komponenten extrahierbar sind. | hoch | Codebuff assistiert | 2026-11-12 | ausschluss |
 | 40 | [PMC13502374](https://pmc.ncbi.nlm.nih.gov/articles/PMC13502374/)<br>`10.1097/gme.0000000000002755`<br>Estimated impact of fezolinetant versus placebo on work product... | Ausschluss | Produktivitaet/Kosten; klinische VMS-Armwerte pruefen. | mittel | Codebuff assistiert | 2026-11-12 | ausschluss |
 | 41 | [PMC13600314](https://pmc.ncbi.nlm.nih.gov/articles/PMC13600314/)<br>`10.1080/20008066.2026.2727209`<br>PTSD treatment impacts on pain: secondary analysis of sertralin... | Ausschluss | Drei Bedingungen; pruefen, ob PE+PLB vs. SERT als zwei Arme zulaessig waere (P0: nein). | mittel | Codebuff assistiert | 2026-11-12 | ausschluss |

@@ -15,8 +15,8 @@
   "abstract_screening": {
     "status": "complete_assisted_pending_human_review",
     "human_review": "partial",
-    "human_reviewed": 14,
-    "assisted_reviewed": 51,
+    "human_reviewed": 16,
+    "assisted_reviewed": 49,
     "signoff_status": "complete_assisted_pending_human_review",
     "criteria_sha256": "4b40eb9acf02c6cc6c67316b91fcdeae7bbfba382cbf795af040f96491b17ed9",
     "exclude": 181,

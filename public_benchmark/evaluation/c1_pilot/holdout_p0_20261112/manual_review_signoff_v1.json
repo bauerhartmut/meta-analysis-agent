@@ -2,11 +2,11 @@
   "signoff_id": "p0_manual_signoff_v1",
   "status": "complete_assisted_pending_human_review",
   "human_review": "partial",
-  "human_reviewed": 14,
-  "assisted_reviewed": 51,
+  "human_reviewed": 16,
+  "assisted_reviewed": 49,
   "signoff_status": "complete_assisted_pending_human_review",
   "reviewed": 65,
-  "assisted": 51,
+  "assisted": 49,
   "records": 65,
   "counts": {
     "include_for_fulltext": 36,
@@ -715,10 +715,10 @@
       "priority": "hoch",
       "open_question": "Historischer Placebo; kein paralleler Kontrollarm.",
       "needs_fulltext": true,
-      "reviewer": "Codebuff assistiert",
+      "reviewer": "HB",
       "review_date": "2026-11-12",
       "final_decision": "ausschluss",
-      "human_note": "Historischer Placebo-Vergleich; kein paralleler randomisierter Kontrollarm. Assistierte Gegenprüfung 2026-11-12: Ausschluss bestätigt; menschliche Freigabe offen.",
+      "human_note": "Historischer Placebo-Vergleich; kein paralleler randomisierter Kontrollarm. Menschliche Bestätigung durch HB am 2026-11-12: Ausschluss bestätigt.",
       "number": 37
     },
     {
@@ -734,10 +734,10 @@
       "priority": "hoch",
       "open_question": "Mehrere Regime; pruefen, ob ein Zweiarm-Kontrast zulaessig ist (P0: nein).",
       "needs_fulltext": true,
-      "reviewer": "Codebuff assistiert",
+      "reviewer": "HB",
       "review_date": "2026-11-12",
       "final_decision": "ausschluss",
-      "human_note": "Mehrere Antithrombotika-Regime; kein zulaessiger Zweiarm-Kontrast. Assistierte Gegenprüfung 2026-11-12: Ausschluss bestätigt; menschliche Freigabe offen.",
+      "human_note": "Mehrere Antithrombotika-Regime; kein zulaessiger Zweiarm-Kontrast. Menschliche Bestätigung durch HB am 2026-11-12: Ausschluss bestätigt.",
       "number": 38
     },
     {
@@ -756,7 +756,7 @@
       "reviewer": "Codebuff assistiert",
       "review_date": "2026-11-12",
       "final_decision": "ausschluss",
-      "human_note": "Nur hierarchische Win-Ratio/DOOR; keine einfachen N/Mean/SD/Event-Armwerte. Assistierte Gegenprüfung 2026-11-12: Ausschluss bestätigt; menschliche Freigabe offen.",
+      "human_note": "Nur hierarchische Win-Ratio/DOOR; keine einfachen N/Mean/SD/Event-Armwerte. Assistierte Gegenprüfung 2026-11-12: Ausschluss bestätigt; menschliche Bestätigung ausstehend.",
       "number": 39
     },
     {

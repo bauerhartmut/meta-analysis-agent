@@ -1,18 +1,19 @@
-# Assistierte Gegenprüfung: drei Hochprioritäts-Ausschlüsse
+# Gegenprüfung: drei Hochprioritäts-Ausschlüsse
 
 Stand: 2026-11-12
 
 Geprüft wurden die drei assistierten Hochprioritäts-Ausschlüsse anhand von
 Titel und Abstract. Es gab keinen Volltextzugriff und keinen Netzabruf.
 
-| PMC | Vorläufig | Ergebnis | Korrektur | Begründung |
+| PMC | Vorläufig | Ergebnis | Menschliche Bestätigung | Begründung |
 |---|---|---|---|---|
-| [PMC13545155](https://pmc.ncbi.nlm.nih.gov/articles/PMC13545155/) | exclude | ausschluss | nein | Der Abstract nennt ausdruecklich einen historischen Placebo-Vergleich; es gibt keinen parallelen randomisierten Kontrollarm. X08 wird bestaetigt. |
-| [PMC13599935](https://pmc.ncbi.nlm.nih.gov/articles/PMC13599935/) | exclude | ausschluss | nein | Die Analyse vergleicht Aspirin, Heparin, beide Regime und keine AT; es gibt keinen zulaessigen randomisierten Zweiarm-Kontrast. X01 wird bestaetigt. |
-| [PMC13690031](https://pmc.ncbi.nlm.nih.gov/articles/PMC13690031/) | exclude | ausschluss | nein | Das berichtete Ergebnis ist eine hierarchische Win-Ratio/DOOR-Analyse ohne einfache N/Mean/SD/Event-Armwerte im Abstract. X09 wird bestaetigt; ohne Volltext keine weitergehende Armwertpruefung. |
+| [PMC13545155](https://pmc.ncbi.nlm.nih.gov/articles/PMC13545155/) | exclude | ausschluss | ja (HB) | Historischer Placebo-Vergleich; kein paralleler randomisierter Kontrollarm. Menschliche Bestätigung durch HB am 2026-11-12: Ausschluss bestätigt. |
+| [PMC13599935](https://pmc.ncbi.nlm.nih.gov/articles/PMC13599935/) | exclude | ausschluss | ja (HB) | Mehrere Antithrombotika-Regime; kein zulaessiger Zweiarm-Kontrast. Menschliche Bestätigung durch HB am 2026-11-12: Ausschluss bestätigt. |
+| [PMC13690031](https://pmc.ncbi.nlm.nih.gov/articles/PMC13690031/) | exclude | ausschluss | ausstehend | Nur hierarchische Win-Ratio/DOOR; keine einfachen N/Mean/SD/Event-Armwerte. Assistierte Gegenprüfung 2026-11-12: Ausschluss bestätigt; menschliche Bestätigung ausstehend. |
 
-**Ergebnis:** 3 von 3 Ausschlüssen bestätigt, 0 Korrekturen.
+**Ergebnis:** 2 von 3 Ausschlüssen menschlich bestätigt, 0 Korrekturen;
+PMC13690031 wartet noch auf die menschliche Bestätigung.
 
-Der Reviewer bleibt `Codebuff assistiert`; die menschliche Gegenprüfung und
-Freigabe der 51 assistierten Entscheidungen bleibt offen. Der Gegenprüfungs-
-vermerk ist in den drei Zeilen der Freigabeliste ergänzt.
+Damit verbleiben 49 assistierte Entscheidungen; die restlichen 48 werden
+nach Klärung des dritten Falls separat vorprüft. Die menschliche Freigabe
+bleibt für alle nicht bestätigten Fälle offen.
