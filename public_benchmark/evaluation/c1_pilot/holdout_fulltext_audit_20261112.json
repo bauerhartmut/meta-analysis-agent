@@ -1,0 +1,752 @@
+{
+  "audit_id": "holdout_fulltext_audit_20261112",
+  "date": "2026-11-12",
+  "status": "completed",
+  "scope": "33 unverifiable C1 records from 9 articles outside the frozen 275",
+  "sources": {
+    "plaintext": "public_benchmark/raw_data/evidence_inference/annotations/txt_files/PMC<ID>.txt",
+    "xml_tables": "public_benchmark/raw_data/yun_llm_meta_analysis/evaluation/data/abstract_and_results_xml_files/PMC<ID>.xml",
+    "audit": "public_benchmark/validation/yun_audit_410.jsonl",
+    "freeze": "public_benchmark/processed_data/yun_c1_frozen_275.jsonl"
+  },
+  "method": {
+    "number_match": "Exakter numerischer Treffer im Kontext von Arm, Outcome und Tabelle; Unicode-Minus normalisiert.",
+    "context_rule": "Ein Treffer zaehlt nur, wenn die Zeile den gesuchten Arm und das Outcome traegt; bloße Ziffernfolgen zaehlen nicht.",
+    "no_imputation": "Keine Schaetzung, keine CI-zu-SD-Umrechnung, keine Zusammenfuehrung getrennter Arme.",
+    "table_extraction": "table-wrap-Bloecke aus den Yun-XML-Dateien extrahiert und gegen die Plaintext-Dateien abgeglichen."
+  },
+  "summary": {
+    "records": 33,
+    "articles": 9,
+    "missing_fields": 69,
+    "fully_recoverable_records": 3,
+    "partially_recoverable_records": 4,
+    "not_recoverable_records": 26,
+    "recovered_fields": 13,
+    "unrecovered_fields": 56,
+    "fully_recoverable_articles": [
+      "PMC3654355"
+    ],
+    "partially_recoverable_articles": [
+      "PMC3136370"
+    ]
+  },
+  "candidate_holdout": {
+    "possible": true,
+    "assessment": "smoke_test_only",
+    "records": [
+      274,
+      275,
+      276
+    ],
+    "articles": [
+      "PMC3654355"
+    ],
+    "record_count": 3,
+    "outcome_types": {
+      "continuous": 3,
+      "binary": 0
+    },
+    "article_disjoint_from_frozen": true,
+    "g5_usable": false,
+    "reason": "Nur drei kontinuierliche Records aus einem Artikel; ein einzelner Fehler verschiebt jede Quote um 33 Prozentpunkte. Fuer G2-G4 nicht aussagekraeftig; kein G5-Holdout einfrieren."
+  },
+  "articles": [
+    {
+      "pmcid": "4319071",
+      "records": 6,
+      "fully_recoverable": 0,
+      "partially_recoverable": 0,
+      "not_recoverable": 6,
+      "missing_fields": 11,
+      "recovered_fields": 0,
+      "assessment": "Table-wraps 1-5 vorhanden; Tabelle 2 berichtet Mean (SE), nicht SD; uebrige Tabellen enthalten Modellkoeffizienten. Keine fehlenden SDs belegbar."
+    },
+    {
+      "pmcid": "5056957",
+      "records": 6,
+      "fully_recoverable": 0,
+      "partially_recoverable": 0,
+      "not_recoverable": 6,
+      "missing_fields": 10,
+      "recovered_fields": 0,
+      "assessment": "Table-wraps 1-2 vorhanden; Tabelle 2 berichtet Differenzen/95%-CI, keine Arm-SDs. Keine fehlenden SDs belegbar."
+    },
+    {
+      "pmcid": "5380326",
+      "records": 5,
+      "fully_recoverable": 0,
+      "partially_recoverable": 0,
+      "not_recoverable": 5,
+      "missing_fields": 10,
+      "recovered_fields": 0,
+      "assessment": "Table-wraps 1-3 vorhanden; Tabellen 2-3 berichten Mean (SE) bzw. Delta, keine SDs. Ein 551-Treffer ist nur die Ziffernfolge in 6,551.06 und kein SD-Wert."
+    },
+    {
+      "pmcid": "4357072",
+      "records": 4,
+      "fully_recoverable": 0,
+      "partially_recoverable": 0,
+      "not_recoverable": 4,
+      "missing_fields": 9,
+      "recovered_fields": 0,
+      "assessment": "Table-wraps 1-3 vorhanden, aber nur Tabellenueberschriften ohne Zeilen; keine Means, SDs oder Events belegbar."
+    },
+    {
+      "pmcid": "3136370",
+      "records": 4,
+      "fully_recoverable": 0,
+      "partially_recoverable": 4,
+      "not_recoverable": 0,
+      "missing_fields": 16,
+      "recovered_fields": 8,
+      "assessment": "Table-wrap 1 vorhanden; die Per-Protocol-Mittelwerte sind exakt belegt, die zugehoerigen SDs fehlen. Vier Records bleiben unvollstaendig."
+    },
+    {
+      "pmcid": "3654355",
+      "records": 3,
+      "fully_recoverable": 3,
+      "partially_recoverable": 0,
+      "not_recoverable": 0,
+      "missing_fields": 5,
+      "recovered_fields": 5,
+      "assessment": "Table-wrap 2 vorhanden; Body weight, Fat mass und Visceral fat area sind mit Mean und SD exakt belegt. Drei Records vollstaendig."
+    },
+    {
+      "pmcid": "1574360",
+      "records": 2,
+      "fully_recoverable": 0,
+      "partially_recoverable": 0,
+      "not_recoverable": 2,
+      "missing_fields": 4,
+      "recovered_fields": 0,
+      "assessment": "Table-wraps 1-3 vorhanden, aber nur Ueberschriften ohne Tabellenkoerper; Effekte nur als Differenz/CI, keine SDs. Keine fehlenden SDs belegbar."
+    },
+    {
+      "pmcid": "5079604",
+      "records": 2,
+      "fully_recoverable": 0,
+      "partially_recoverable": 0,
+      "not_recoverable": 2,
+      "missing_fields": 2,
+      "recovered_fields": 0,
+      "assessment": "Table-wrap 1 vorhanden; Metformin (n=17), Sitagliptin (n=16), Placebo (n=15) getrennt. Eine kombinierte 33er-Gruppe ist nicht direkt berichtet; 17+16 waere eine nachtraegliche Armzusammenfuehrung."
+    },
+    {
+      "pmcid": "2363753",
+      "records": 1,
+      "fully_recoverable": 0,
+      "partially_recoverable": 0,
+      "not_recoverable": 1,
+      "missing_fields": 2,
+      "recovered_fields": 0,
+      "assessment": "Kein table-wrap; nur 3.2k Zeichen Abstract/Results. Keine Gruppengroessen belegbar."
+    }
+  ],
+  "records": [
+    {
+      "record_id": 6,
+      "pmcid": "1574360",
+      "outcome_type": "continuous",
+      "ico_outcome": "The amount of saturated fat in the foods purchased",
+      "missing_fields": [
+        "intervention_standard_deviation",
+        "comparator_standard_deviation"
+      ],
+      "recovered_fields": [],
+      "unrecovered_fields": [
+        "intervention_standard_deviation",
+        "comparator_standard_deviation"
+      ],
+      "status": "not_recoverable",
+      "source_locator": "PMC1574360.xml / Evidence-Inference-Text",
+      "evidence_note": "Table-wraps 1-3 vorhanden, aber nur Ueberschriften ohne Tabellenkoerper; Effekte nur als Differenz/CI, keine SDs. Keine fehlenden SDs belegbar."
+    },
+    {
+      "record_id": 7,
+      "pmcid": "1574360",
+      "outcome_type": "continuous",
+      "ico_outcome": "the average cost of the food",
+      "missing_fields": [
+        "intervention_standard_deviation",
+        "comparator_standard_deviation"
+      ],
+      "recovered_fields": [],
+      "unrecovered_fields": [
+        "intervention_standard_deviation",
+        "comparator_standard_deviation"
+      ],
+      "status": "not_recoverable",
+      "source_locator": "PMC1574360.xml / Evidence-Inference-Text",
+      "evidence_note": "Table-wraps 1-3 vorhanden, aber nur Ueberschriften ohne Tabellenkoerper; Effekte nur als Differenz/CI, keine SDs. Keine fehlenden SDs belegbar."
+    },
+    {
+      "record_id": 10,
+      "pmcid": "2363753",
+      "outcome_type": "binary",
+      "ico_outcome": "Grade III/IV stomatitis",
+      "missing_fields": [
+        "intervention_group_size",
+        "comparator_group_size"
+      ],
+      "recovered_fields": [],
+      "unrecovered_fields": [
+        "intervention_group_size",
+        "comparator_group_size"
+      ],
+      "status": "not_recoverable",
+      "source_locator": "PMC2363753.xml / Evidence-Inference-Text",
+      "evidence_note": "Kein table-wrap; nur 3.2k Zeichen Abstract/Results. Keine Gruppengroessen belegbar."
+    },
+    {
+      "record_id": 110,
+      "pmcid": "4319071",
+      "outcome_type": "continuous",
+      "ico_outcome": "High-energy snack intake",
+      "missing_fields": [
+        "intervention_standard_deviation",
+        "comparator_standard_deviation"
+      ],
+      "recovered_fields": [],
+      "unrecovered_fields": [
+        "intervention_standard_deviation",
+        "comparator_standard_deviation"
+      ],
+      "status": "not_recoverable",
+      "source_locator": "PMC4319071.xml / Evidence-Inference-Text",
+      "evidence_note": "Table-wraps 1-5 vorhanden; Tabelle 2 berichtet Mean (SE), nicht SD; uebrige Tabellen enthalten Modellkoeffizienten. Keine fehlenden SDs belegbar."
+    },
+    {
+      "record_id": 111,
+      "pmcid": "4319071",
+      "outcome_type": "continuous",
+      "ico_outcome": "High-energy snack intake",
+      "missing_fields": [
+        "intervention_standard_deviation",
+        "comparator_standard_deviation"
+      ],
+      "recovered_fields": [],
+      "unrecovered_fields": [
+        "intervention_standard_deviation",
+        "comparator_standard_deviation"
+      ],
+      "status": "not_recoverable",
+      "source_locator": "PMC4319071.xml / Evidence-Inference-Text",
+      "evidence_note": "Table-wraps 1-5 vorhanden; Tabelle 2 berichtet Mean (SE), nicht SD; uebrige Tabellen enthalten Modellkoeffizienten. Keine fehlenden SDs belegbar."
+    },
+    {
+      "record_id": 112,
+      "pmcid": "4319071",
+      "outcome_type": "continuous",
+      "ico_outcome": "Vegetable intake",
+      "missing_fields": [
+        "intervention_standard_deviation",
+        "comparator_standard_deviation"
+      ],
+      "recovered_fields": [],
+      "unrecovered_fields": [
+        "intervention_standard_deviation",
+        "comparator_standard_deviation"
+      ],
+      "status": "not_recoverable",
+      "source_locator": "PMC4319071.xml / Evidence-Inference-Text",
+      "evidence_note": "Table-wraps 1-5 vorhanden; Tabelle 2 berichtet Mean (SE), nicht SD; uebrige Tabellen enthalten Modellkoeffizienten. Keine fehlenden SDs belegbar."
+    },
+    {
+      "record_id": 113,
+      "pmcid": "4319071",
+      "outcome_type": "continuous",
+      "ico_outcome": "Vegetable intake",
+      "missing_fields": [
+        "intervention_standard_deviation",
+        "comparator_standard_deviation"
+      ],
+      "recovered_fields": [],
+      "unrecovered_fields": [
+        "intervention_standard_deviation",
+        "comparator_standard_deviation"
+      ],
+      "status": "not_recoverable",
+      "source_locator": "PMC4319071.xml / Evidence-Inference-Text",
+      "evidence_note": "Table-wraps 1-5 vorhanden; Tabelle 2 berichtet Mean (SE), nicht SD; uebrige Tabellen enthalten Modellkoeffizienten. Keine fehlenden SDs belegbar."
+    },
+    {
+      "record_id": 114,
+      "pmcid": "4319071",
+      "outcome_type": "continuous",
+      "ico_outcome": "Fruit intake",
+      "missing_fields": [
+        "intervention_standard_deviation"
+      ],
+      "recovered_fields": [],
+      "unrecovered_fields": [
+        "intervention_standard_deviation"
+      ],
+      "status": "not_recoverable",
+      "source_locator": "PMC4319071.xml / Evidence-Inference-Text",
+      "evidence_note": "Table-wraps 1-5 vorhanden; Tabelle 2 berichtet Mean (SE), nicht SD; uebrige Tabellen enthalten Modellkoeffizienten. Keine fehlenden SDs belegbar."
+    },
+    {
+      "record_id": 115,
+      "pmcid": "4319071",
+      "outcome_type": "continuous",
+      "ico_outcome": "Fruit intake",
+      "missing_fields": [
+        "intervention_standard_deviation",
+        "comparator_standard_deviation"
+      ],
+      "recovered_fields": [],
+      "unrecovered_fields": [
+        "intervention_standard_deviation",
+        "comparator_standard_deviation"
+      ],
+      "status": "not_recoverable",
+      "source_locator": "PMC4319071.xml / Evidence-Inference-Text",
+      "evidence_note": "Table-wraps 1-5 vorhanden; Tabelle 2 berichtet Mean (SE), nicht SD; uebrige Tabellen enthalten Modellkoeffizienten. Keine fehlenden SDs belegbar."
+    },
+    {
+      "record_id": 158,
+      "pmcid": "5056957",
+      "outcome_type": "continuous",
+      "ico_outcome": "Weight reduction at 12 months",
+      "missing_fields": [
+        "intervention_standard_deviation",
+        "comparator_standard_deviation"
+      ],
+      "recovered_fields": [],
+      "unrecovered_fields": [
+        "intervention_standard_deviation",
+        "comparator_standard_deviation"
+      ],
+      "status": "not_recoverable",
+      "source_locator": "PMC5056957.xml / Evidence-Inference-Text",
+      "evidence_note": "Table-wraps 1-2 vorhanden; Tabelle 2 berichtet Differenzen/95%-CI, keine Arm-SDs. Keine fehlenden SDs belegbar."
+    },
+    {
+      "record_id": 159,
+      "pmcid": "5056957",
+      "outcome_type": "continuous",
+      "ico_outcome": "BMI reduction at 12 months",
+      "missing_fields": [
+        "intervention_standard_deviation",
+        "comparator_standard_deviation"
+      ],
+      "recovered_fields": [],
+      "unrecovered_fields": [
+        "intervention_standard_deviation",
+        "comparator_standard_deviation"
+      ],
+      "status": "not_recoverable",
+      "source_locator": "PMC5056957.xml / Evidence-Inference-Text",
+      "evidence_note": "Table-wraps 1-2 vorhanden; Tabelle 2 berichtet Differenzen/95%-CI, keine Arm-SDs. Keine fehlenden SDs belegbar."
+    },
+    {
+      "record_id": 160,
+      "pmcid": "5056957",
+      "outcome_type": "continuous",
+      "ico_outcome": "BMI z-score at 12months",
+      "missing_fields": [
+        "intervention_standard_deviation",
+        "comparator_standard_deviation"
+      ],
+      "recovered_fields": [],
+      "unrecovered_fields": [
+        "intervention_standard_deviation",
+        "comparator_standard_deviation"
+      ],
+      "status": "not_recoverable",
+      "source_locator": "PMC5056957.xml / Evidence-Inference-Text",
+      "evidence_note": "Table-wraps 1-2 vorhanden; Tabelle 2 berichtet Differenzen/95%-CI, keine Arm-SDs. Keine fehlenden SDs belegbar."
+    },
+    {
+      "record_id": 161,
+      "pmcid": "5056957",
+      "outcome_type": "continuous",
+      "ico_outcome": "Weight reduction at 24 months",
+      "missing_fields": [
+        "intervention_standard_deviation",
+        "comparator_standard_deviation"
+      ],
+      "recovered_fields": [],
+      "unrecovered_fields": [
+        "intervention_standard_deviation",
+        "comparator_standard_deviation"
+      ],
+      "status": "not_recoverable",
+      "source_locator": "PMC5056957.xml / Evidence-Inference-Text",
+      "evidence_note": "Table-wraps 1-2 vorhanden; Tabelle 2 berichtet Differenzen/95%-CI, keine Arm-SDs. Keine fehlenden SDs belegbar."
+    },
+    {
+      "record_id": 162,
+      "pmcid": "5056957",
+      "outcome_type": "continuous",
+      "ico_outcome": "BMI reduction at 24 months",
+      "missing_fields": [
+        "intervention_standard_deviation"
+      ],
+      "recovered_fields": [],
+      "unrecovered_fields": [
+        "intervention_standard_deviation"
+      ],
+      "status": "not_recoverable",
+      "source_locator": "PMC5056957.xml / Evidence-Inference-Text",
+      "evidence_note": "Table-wraps 1-2 vorhanden; Tabelle 2 berichtet Differenzen/95%-CI, keine Arm-SDs. Keine fehlenden SDs belegbar."
+    },
+    {
+      "record_id": 163,
+      "pmcid": "5056957",
+      "outcome_type": "continuous",
+      "ico_outcome": "BMI z-score at 24 months",
+      "missing_fields": [
+        "intervention_standard_deviation"
+      ],
+      "recovered_fields": [],
+      "unrecovered_fields": [
+        "intervention_standard_deviation"
+      ],
+      "status": "not_recoverable",
+      "source_locator": "PMC5056957.xml / Evidence-Inference-Text",
+      "evidence_note": "Table-wraps 1-2 vorhanden; Tabelle 2 berichtet Differenzen/95%-CI, keine Arm-SDs. Keine fehlenden SDs belegbar."
+    },
+    {
+      "record_id": 173,
+      "pmcid": "5079604",
+      "outcome_type": "binary",
+      "ico_outcome": "The 2-year failure rate",
+      "missing_fields": [
+        "intervention_group_size"
+      ],
+      "recovered_fields": [],
+      "unrecovered_fields": [
+        "intervention_group_size"
+      ],
+      "status": "not_recoverable",
+      "source_locator": "PMC5079604.xml, table-wrap 1, Spalten Metformin/Sitagliptin/Placebo",
+      "evidence_note": "Die 33 ist nicht direkt berichtet; sie waere nur 17+16 und damit eine Zusammenfuehrung getrennter Arme. Nicht als belegt akzeptiert."
+    },
+    {
+      "record_id": 174,
+      "pmcid": "5079604",
+      "outcome_type": "binary",
+      "ico_outcome": "The probability of relapse",
+      "missing_fields": [
+        "intervention_group_size"
+      ],
+      "recovered_fields": [],
+      "unrecovered_fields": [
+        "intervention_group_size"
+      ],
+      "status": "not_recoverable",
+      "source_locator": "PMC5079604.xml, table-wrap 1, Spalten Metformin/Sitagliptin/Placebo",
+      "evidence_note": "Die 33 ist nicht direkt berichtet; sie waere nur 17+16 und damit eine Zusammenfuehrung getrennter Arme. Nicht als belegt akzeptiert."
+    },
+    {
+      "record_id": 202,
+      "pmcid": "5380326",
+      "outcome_type": "continuous",
+      "ico_outcome": "Interferon gamma-induced protein 10",
+      "missing_fields": [
+        "intervention_standard_deviation",
+        "comparator_standard_deviation"
+      ],
+      "recovered_fields": [],
+      "unrecovered_fields": [
+        "intervention_standard_deviation",
+        "comparator_standard_deviation"
+      ],
+      "status": "not_recoverable",
+      "source_locator": "PMC5380326.xml, table-wraps 2-3",
+      "evidence_note": "Kein SD-Wert 448.47 oder 551; der 551-Treffer ist die Ziffernfolge in 6,551.06 (DPP IV), kein Comparator-SD."
+    },
+    {
+      "record_id": 203,
+      "pmcid": "5380326",
+      "outcome_type": "continuous",
+      "ico_outcome": "Vitamin D levels",
+      "missing_fields": [
+        "intervention_standard_deviation",
+        "comparator_standard_deviation"
+      ],
+      "recovered_fields": [],
+      "unrecovered_fields": [
+        "intervention_standard_deviation",
+        "comparator_standard_deviation"
+      ],
+      "status": "not_recoverable",
+      "source_locator": "PMC5380326.xml / Evidence-Inference-Text",
+      "evidence_note": "Table-wraps 1-3 vorhanden; Tabellen 2-3 berichten Mean (SE) bzw. Delta, keine SDs. Ein 551-Treffer ist nur die Ziffernfolge in 6,551.06 und kein SD-Wert."
+    },
+    {
+      "record_id": 205,
+      "pmcid": "5380326",
+      "outcome_type": "continuous",
+      "ico_outcome": "Interleukin 2",
+      "missing_fields": [
+        "intervention_standard_deviation",
+        "comparator_standard_deviation"
+      ],
+      "recovered_fields": [],
+      "unrecovered_fields": [
+        "intervention_standard_deviation",
+        "comparator_standard_deviation"
+      ],
+      "status": "not_recoverable",
+      "source_locator": "PMC5380326.xml / Evidence-Inference-Text",
+      "evidence_note": "Table-wraps 1-3 vorhanden; Tabellen 2-3 berichten Mean (SE) bzw. Delta, keine SDs. Ein 551-Treffer ist nur die Ziffernfolge in 6,551.06 und kein SD-Wert."
+    },
+    {
+      "record_id": 206,
+      "pmcid": "5380326",
+      "outcome_type": "continuous",
+      "ico_outcome": "Dipeptidyl peptidase-4",
+      "missing_fields": [
+        "intervention_standard_deviation",
+        "comparator_standard_deviation"
+      ],
+      "recovered_fields": [],
+      "unrecovered_fields": [
+        "intervention_standard_deviation",
+        "comparator_standard_deviation"
+      ],
+      "status": "not_recoverable",
+      "source_locator": "PMC5380326.xml / Evidence-Inference-Text",
+      "evidence_note": "Table-wraps 1-3 vorhanden; Tabellen 2-3 berichten Mean (SE) bzw. Delta, keine SDs. Ein 551-Treffer ist nur die Ziffernfolge in 6,551.06 und kein SD-Wert."
+    },
+    {
+      "record_id": 207,
+      "pmcid": "5380326",
+      "outcome_type": "continuous",
+      "ico_outcome": "Tumor necrosis factor alpha",
+      "missing_fields": [
+        "intervention_standard_deviation",
+        "comparator_standard_deviation"
+      ],
+      "recovered_fields": [],
+      "unrecovered_fields": [
+        "intervention_standard_deviation",
+        "comparator_standard_deviation"
+      ],
+      "status": "not_recoverable",
+      "source_locator": "PMC5380326.xml / Evidence-Inference-Text",
+      "evidence_note": "Table-wraps 1-3 vorhanden; Tabellen 2-3 berichten Mean (SE) bzw. Delta, keine SDs. Ein 551-Treffer ist nur die Ziffernfolge in 6,551.06 und kein SD-Wert."
+    },
+    {
+      "record_id": 274,
+      "pmcid": "3654355",
+      "outcome_type": "continuous",
+      "ico_outcome": "Body weight",
+      "missing_fields": [
+        "intervention_mean",
+        "comparator_mean"
+      ],
+      "recovered_fields": [
+        "intervention_mean",
+        "comparator_mean"
+      ],
+      "unrecovered_fields": [],
+      "status": "fully_recoverable",
+      "source_locator": "PMC3654355.xml, table-wrap 2, row \"Body weight (kg)\"",
+      "evidence_note": "Beide fehlenden Means exakt in der Zeile; SDs 6.1/2.8 und N 71/33 stehen ebenfalls dort."
+    },
+    {
+      "record_id": 275,
+      "pmcid": "3654355",
+      "outcome_type": "continuous",
+      "ico_outcome": "Fat mass",
+      "missing_fields": [
+        "intervention_mean",
+        "comparator_mean"
+      ],
+      "recovered_fields": [
+        "intervention_mean",
+        "comparator_mean"
+      ],
+      "unrecovered_fields": [],
+      "status": "fully_recoverable",
+      "source_locator": "PMC3654355.xml, table-wrap 2, row \"Fat mass (kg)\"",
+      "evidence_note": "Beide fehlenden Means exakt in der Zeile; SDs 5.3/5.0 und N 71/33 stehen ebenfalls dort."
+    },
+    {
+      "record_id": 276,
+      "pmcid": "3654355",
+      "outcome_type": "continuous",
+      "ico_outcome": "Visceral fat",
+      "missing_fields": [
+        "intervention_mean"
+      ],
+      "recovered_fields": [
+        "intervention_mean"
+      ],
+      "unrecovered_fields": [],
+      "status": "fully_recoverable",
+      "source_locator": "PMC3654355.xml, table-wrap 2, row \"Visceral fat area (cm2)\"",
+      "evidence_note": "Der fehlende Intervention-Mean ist exakt in der Zeile; Comparator-Mean 4.3, SD 31.6/22.7 und N 71/33 stehen dort."
+    },
+    {
+      "record_id": 302,
+      "pmcid": "4357072",
+      "outcome_type": "continuous",
+      "ico_outcome": "improvement in symptom scores",
+      "missing_fields": [
+        "intervention_mean",
+        "intervention_standard_deviation",
+        "comparator_mean",
+        "comparator_standard_deviation"
+      ],
+      "recovered_fields": [],
+      "unrecovered_fields": [
+        "intervention_mean",
+        "intervention_standard_deviation",
+        "comparator_mean",
+        "comparator_standard_deviation"
+      ],
+      "status": "not_recoverable",
+      "source_locator": "PMC4357072.xml / Evidence-Inference-Text",
+      "evidence_note": "Table-wraps 1-3 vorhanden, aber nur Tabellenueberschriften ohne Zeilen; keine Means, SDs oder Events belegbar."
+    },
+    {
+      "record_id": 303,
+      "pmcid": "4357072",
+      "outcome_type": "continuous",
+      "ico_outcome": "reduction in burning sensation",
+      "missing_fields": [
+        "intervention_standard_deviation",
+        "comparator_mean",
+        "comparator_standard_deviation"
+      ],
+      "recovered_fields": [],
+      "unrecovered_fields": [
+        "intervention_standard_deviation",
+        "comparator_mean",
+        "comparator_standard_deviation"
+      ],
+      "status": "not_recoverable",
+      "source_locator": "PMC4357072.xml / Evidence-Inference-Text",
+      "evidence_note": "Table-wraps 1-3 vorhanden, aber nur Tabellenueberschriften ohne Zeilen; keine Means, SDs oder Events belegbar."
+    },
+    {
+      "record_id": 304,
+      "pmcid": "4357072",
+      "outcome_type": "binary",
+      "ico_outcome": "reduction in erythematous area",
+      "missing_fields": [
+        "intervention_events"
+      ],
+      "recovered_fields": [],
+      "unrecovered_fields": [
+        "intervention_events"
+      ],
+      "status": "not_recoverable",
+      "source_locator": "PMC4357072.xml, table-wraps 1-3",
+      "evidence_note": "Keine Tabellenzeilen; der 14-Treffer im Plaintext ist eine Literaturreferenz, kein Event-Wert."
+    },
+    {
+      "record_id": 305,
+      "pmcid": "4357072",
+      "outcome_type": "binary",
+      "ico_outcome": "reappearance of erythematous areas after 2 months posttreatment",
+      "missing_fields": [
+        "comparator_events"
+      ],
+      "recovered_fields": [],
+      "unrecovered_fields": [
+        "comparator_events"
+      ],
+      "status": "not_recoverable",
+      "source_locator": "PMC4357072.xml, table-wraps 1-3",
+      "evidence_note": "Keine Tabellenzeilen; der 5-Treffer im Plaintext ist eine Literaturreferenz bzw. Baseline-Nennung, kein Event-Wert."
+    },
+    {
+      "record_id": 556,
+      "pmcid": "3136370",
+      "outcome_type": "continuous",
+      "ico_outcome": "Fibromyalgia Impact Questionnaire scores",
+      "missing_fields": [
+        "intervention_mean",
+        "intervention_standard_deviation",
+        "comparator_mean",
+        "comparator_standard_deviation"
+      ],
+      "recovered_fields": [
+        "intervention_mean",
+        "comparator_mean"
+      ],
+      "unrecovered_fields": [
+        "intervention_standard_deviation",
+        "comparator_standard_deviation"
+      ],
+      "status": "partially_recoverable",
+      "source_locator": "PMC3136370.xml, table-wrap 1, per-protocol, row \"Total FIQ scores\"",
+      "evidence_note": "Beide Means exakt belegt; beide SDs fehlen in Tabelle und Text."
+    },
+    {
+      "record_id": 557,
+      "pmcid": "3136370",
+      "outcome_type": "continuous",
+      "ico_outcome": "Fibromyalgia Impact Questionnaire scores",
+      "missing_fields": [
+        "intervention_mean",
+        "intervention_standard_deviation",
+        "comparator_mean",
+        "comparator_standard_deviation"
+      ],
+      "recovered_fields": [
+        "intervention_mean",
+        "comparator_mean"
+      ],
+      "unrecovered_fields": [
+        "intervention_standard_deviation",
+        "comparator_standard_deviation"
+      ],
+      "status": "partially_recoverable",
+      "source_locator": "PMC3136370.xml, table-wrap 1, per-protocol, row \"Total FIQ scores\"",
+      "evidence_note": "Beide Means exakt belegt; beide SDs fehlen in Tabelle und Text."
+    },
+    {
+      "record_id": 558,
+      "pmcid": "3136370",
+      "outcome_type": "continuous",
+      "ico_outcome": "Center for Epidemiologic Studies Depression Scale score",
+      "missing_fields": [
+        "intervention_mean",
+        "intervention_standard_deviation",
+        "comparator_mean",
+        "comparator_standard_deviation"
+      ],
+      "recovered_fields": [
+        "intervention_mean",
+        "comparator_mean"
+      ],
+      "unrecovered_fields": [
+        "intervention_standard_deviation",
+        "comparator_standard_deviation"
+      ],
+      "status": "partially_recoverable",
+      "source_locator": "PMC3136370.xml, table-wrap 1, per-protocol, row \"Total CES-D scores\"",
+      "evidence_note": "Beide Means exakt belegt; beide SDs fehlen in Tabelle und Text."
+    },
+    {
+      "record_id": 559,
+      "pmcid": "3136370",
+      "outcome_type": "continuous",
+      "ico_outcome": "Center for Epidemiologic Studies Depression Scale score",
+      "missing_fields": [
+        "intervention_mean",
+        "intervention_standard_deviation",
+        "comparator_mean",
+        "comparator_standard_deviation"
+      ],
+      "recovered_fields": [
+        "intervention_mean",
+        "comparator_mean"
+      ],
+      "unrecovered_fields": [
+        "intervention_standard_deviation",
+        "comparator_standard_deviation"
+      ],
+      "status": "partially_recoverable",
+      "source_locator": "PMC3136370.xml, table-wrap 1, per-protocol, row \"Total CES-D scores\"",
+      "evidence_note": "Beide Means exakt belegt; beide SDs fehlen in Tabelle und Text."
+    }
+  ]
+}

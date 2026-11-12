@@ -268,11 +268,15 @@ Modelllauf.
 
 ## Holdout-Plan
 
-Der Holdout ist mit den vorhandenen C1-Daten **nicht sofort baubar**: Alle
+Der Holdout ist mit den vorhandenen C1-Daten **nicht belastbar baubar**: Alle
 275 nutzbaren Records sind an Dev/Test vergeben; außerhalb liegen nur
 unverifizierte, strukturell ausgeschlossene oder unvollständige Records.
-Der Plan steht in [`holdout_plan_20261112.md`](holdout_plan_20261112.md),
-das Manifest-Schema in
+Die Volltextprüfung der 33 `unverifiable`-Records ergab **3 vollständig
+belegbar** (PMC3654355), **4 teilweise** (PMC3136370, SDs fehlen) und
+**26 nicht belegbar**. Der 3-Record-Kandidat ist nur ein Smoke-Test, kein
+G5-Holdout. Audit:
+[`holdout_fulltext_audit_20261112.md`](holdout_fulltext_audit_20261112.md),
+Plan: [`holdout_plan_20261112.md`](holdout_plan_20261112.md), Schema:
 [`holdout_manifest_schema.json`](holdout_manifest_schema.json).
 **Kein Modelllauf, solange G5 nicht erfüllt ist.**
 

@@ -1,8 +1,8 @@
 # C1-Holdout-Plan 2026-11-12
 
 Stand: 2026-11-12
-Status: **BLOCKED - kein unabhängiger Holdout aus den vorhandenen C1-Daten verfügbar**
-Entscheidung: **kein Modelllauf; zuerst Datenbeschaffung und Volltextprüfung**
+Status: **PARTIAL - 3/33 Records vollständig belegbar; kein belastbarer G5-Holdout**
+Entscheidung: **kein Modelllauf; 3-Record-Smoke-Test optional; externen Holdout beschaffen**
 
 ## 1. Ziel
 
@@ -39,12 +39,16 @@ ist ausgeschlossen, weil der Test verbraucht ist.
   artikeldisjunkt: PMC4319071 (6), PMC5056957 (6), PMC5380326 (5),
   PMC4357072 (4), PMC3136370 (4), PMC3654355 (3), PMC1574360 (2),
   PMC5079604 (2), PMC2363753 (1).
-- Die vorhandenen Quellen sind Yun-Abstract-/Results-Markdowns; die
-  Referenzwerte sind darin nicht belegbar. Die vier PDFs im Yun-Repo sind
-  Beispiel-Forest-Plots bzw. eine Fallstudie, keine Artikelvolltexte.
-- Eine Nutzung als Holdout ist erst nach externer Volltextbeschaffung und
-  erneuter klinischer Prüfung möglich. Der aktuelle Status bleibt
-  `unverifiable`.
+- Die neun Evidence-Inference-Volltexte und die XML-`table-wrap`-Blöcke
+  wurden am 2026-11-12 geprüft. Ergebnis: **3 Records vollständig belegbar**
+  (PMC3654355), **4 teilweise** (PMC3136370, Mittelwerte ja, SDs nein),
+  **26 nicht belegbar**.
+- Die vollständige Prüfung steht in
+  [`holdout_fulltext_audit_20261112.md`](holdout_fulltext_audit_20261112.md)
+  und [`holdout_fulltext_audit_20261112.json`](holdout_fulltext_audit_20261112.json).
+- Die 26 nicht belegbaren Records bleiben `unverifiable`; die vier
+  teilweise belegbaren Records bleiben unvollständig. Eine Nutzung als
+  belastbarer Holdout ist damit nicht möglich.
 
 ### 3.3 Strukturell ausgeschlossene Records
 
@@ -62,7 +66,19 @@ ist ausgeschlossen, weil der Test verbraucht ist.
 - Diese Records sind kein unabhängiger Holdout, solange die fehlenden Werte
   nicht belegt ergänzt und geprüft sind.
 
-### 3.5 Artikeldisjunktheit
+### 3.5 Volltextprüfung 2026-11-12
+
+- **3/33 Records vollständig belegbar:** Records 274–276 aus PMC3654355
+  (Body weight, Fat mass, Visceral fat area; Tabelle 2 mit Mean und SD).
+- **4/33 Records teilweise belegbar:** Records 556–559 aus PMC3136370;
+  die Per-Protocol-Mittelwerte sind belegt, die zugehörigen SDs fehlen.
+- **26/33 Records nicht belegbar:** fehlende Werte stehen nicht in den
+  verfügbaren Volltexten/XML-Tabellen; einzelne Zahlentreffer sind
+  Literaturzitate, andere Outcomes oder bloße Ziffernfolgen.
+- **69 fehlende Felder:** 13 belegt, 56 nicht belegt. Keine Schätzung,
+  keine CI-/SE-Umrechnung, keine Zusammenführung getrennter Arme.
+
+### 3.6 Artikeldisjunktheit
 
 - **50 Artikel** der 699er-Daten liegen außerhalb des Freeze.
 - **15** davon enthalten auditierte, aber nicht nutzbare Records
@@ -74,10 +90,13 @@ ist ausgeschlossen, weil der Test verbraucht ist.
 
 ## 4. Entscheidung
 
-**G5 ist mit den vorhandenen Daten nicht erfüllbar.** Es gibt keinen
-unabhängigen, bereits verifizierten Holdout. Deshalb:
+**G5 ist mit den vorhandenen Daten nicht erfüllt.** Es gibt keinen
+belastbaren, bereits verifizierten Holdout. Der einzige vollständige Kandidat
+umfasst **3 Records aus einem Artikel** (PMC3654355), alle kontinuierlich.
+Das ist ein möglicher Smoke-Test, aber kein belastbarer G5-Holdout. Deshalb:
 
 - **kein Modelllauf** auf einem provisorischen Holdout,
+- **kein Einfrieren** des 3-Record-Kandidaten als G5-Holdout,
 - **keine Wiederverwendung** der 249 Test-Records,
 - **keine Behandlung** von `unverifiable` als Wahrheit,
 - **keine autonome Freigabe** von v6c.
@@ -86,10 +105,10 @@ unabhängigen, bereits verifizierten Holdout. Deshalb:
 
 ### Option A - 33 unverifiable Records mit Volltexten prüfen
 
-**Möglich, aber nicht sofort.** Voraussetzung: 9 Artikelvolltexte beschaffen
-und die 33 Records klinisch gegen die Referenz prüfen. Erst danach kann aus
-ihnen ein kleiner Holdout werden. Die Stichprobe wäre klein und müsste vor
-dem Lauf als ausreichend oder nicht ausreichend bewertet werden.
+**Geprüft; Ergebnis unzureichend.** Die neun Volltexte/XML-Tabellen belegen
+nur 3 vollständige Records (PMC3654355) und 4 teilweise (PMC3136370). Der
+3-Record-Kandidat ist artikeldisjunkt, aber zu klein und nur kontinuierlich;
+er ist höchstens ein Smoke-Test, kein G5-Holdout.
 
 ### Option B - neuen externen Holdout beschaffen
 
@@ -110,8 +129,8 @@ Pooling; kein Gate-Pass und keine autonome Freigabe.
 ## 6. Empfehlung
 
 1. **Option B priorisieren:** neuen externen Holdout beschaffen.
-2. **Option A nur als Fallback:** 9 Volltexte beschaffen und die 33 Records
-   prüfen; erst bei verifizierten Werten als Holdout-Kandidaten führen.
+2. **Option A ist geprüft und als G5-Holdout verworfen:** nur 3 vollständige
+   Records aus einem Artikel; optional als `smoke_test_only` verwenden.
 3. **Kein Modelllauf**, solange kein Holdout-Manifest mit Hashes und
    Artikeldisjunktheit vorliegt.
 4. **Holdout-Manifest-Schema** aus
@@ -119,8 +138,8 @@ Pooling; kein Gate-Pass und keine autonome Freigabe.
 
 ## 7. Nächste Schritte
 
-1. Entscheiden, ob 9 Volltexte beschafft oder neue externe Daten annotiert
-   werden.
+1. **Neue externe Daten annotieren**; die 9 Volltexte sind geprüft, aber
+   nicht ausreichend.
 2. Holdout-Kandidaten artikeldisjunkt auswählen; keine 249/26-Records.
 3. Quellen und Werte prüfen; `unverifiable` nicht als verifiziert zählen.
 4. Input, Referenz, Prompt und Modellkonfiguration vor dem Lauf hashen.
@@ -130,6 +149,8 @@ Pooling; kein Gate-Pass und keine autonome Freigabe.
 
 ## 8. Artefakte
 
+- Volltext-Audit: [`holdout_fulltext_audit_20261112.md`](holdout_fulltext_audit_20261112.md)
+- Volltext-Audit JSON: [`holdout_fulltext_audit_20261112.json`](holdout_fulltext_audit_20261112.json)
 - Schema: [`holdout_manifest_schema.json`](holdout_manifest_schema.json)
 - Gates: [`c1_acceptance_gates_v1.md`](c1_acceptance_gates_v1.md)
 - Entscheidung: [`decision_v6c.md`](decision_v6c.md)

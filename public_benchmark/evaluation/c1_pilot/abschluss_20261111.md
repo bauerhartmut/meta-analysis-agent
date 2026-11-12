@@ -5,9 +5,14 @@ Status: **C1-Testlauf abgeschlossen; Option C entschieden; Gates v1 aktiv**
 Nächster Arbeitstag: **2026-11-12**
 
 **Nachtrag 2026-11-12:** Der Holdout-Plan ist geprüft. Aus den vorhandenen
-C1-Daten ist **kein unabhängiger Holdout** verfügbar; alle 275 nutzbaren
-Records sind vergeben. Details:
-[`holdout_plan_20261112.md`](holdout_plan_20261112.md). Es gab keinen
+C1-Daten ist **kein belastbarer unabhängiger Holdout** verfügbar; alle 275
+nutzbaren Records sind vergeben. Die neun Volltexte/XML-Tabellen der 33
+`unverifiable`-Records wurden geprüft: **3 vollständig belegbar**
+(PMC3654355), **4 teilweise** (PMC3136370, SDs fehlen), **26 nicht belegbar**.
+Der einzige vollständige Kandidat ist ein **3-Record-Smoke-Test**, kein
+G5-Holdout. Details:
+[`holdout_fulltext_audit_20261112.md`](holdout_fulltext_audit_20261112.md)
+und [`holdout_plan_20261112.md`](holdout_plan_20261112.md). Es gab keinen
 Modelllauf.
 
 ## 1. Status zum Tagesabschluss
@@ -92,7 +97,7 @@ Dokumente: [`decision_v6c.md`](decision_v6c.md) und
 
 | Risiko | Bedeutung | Status |
 |---|---|---|
-| Kein unabhängiger Holdout | G5 nicht erfüllbar; keine autonome Freigabe möglich | **offen** |
+| Kein belastbarer unabhängiger Holdout | G5 nicht erfüllt; 3-Record-Smoke-Test reicht nicht; keine autonome Freigabe möglich | **offen** |
 | 249er-Test verbraucht | Neue Auswertung darauf wäre kein unabhängiger Nachweis | **festgeschrieben** |
 | 40,6 % fehlerhafte Records | Assistierte Nutzung braucht 100 % Prüfung | **offen** |
 | Mean/SD-Blockfehler | Können gepoolte Effekte verzerren | **offen** |
