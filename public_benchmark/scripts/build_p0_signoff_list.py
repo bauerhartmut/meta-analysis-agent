@@ -16,6 +16,7 @@ ROOT = Path(__file__).resolve().parents[1]
 PILOT = ROOT / "evaluation" / "c1_pilot"
 OUT = PILOT / "holdout_p0_20261112"
 SOURCE = OUT / "manual_review_decisions_v1.jsonl"
+HUMAN_DECISIONS = OUT / "manual_review_signoff_decisions_v1.jsonl"
 MD = OUT / "manual_review_signoff_v1.md"
 CSV_PATH = OUT / "manual_review_signoff_v1.csv"
 JSON_PATH = OUT / "manual_review_signoff_v1.json"
@@ -114,6 +115,13 @@ def main() -> None:
             f"extra={sorted(set(QUESTIONS) - ids)}"
         )
 
+    human_decisions = {}
+    if HUMAN_DECISIONS.exists():
+        for line in HUMAN_DECISIONS.read_text(encoding="utf-8").splitlines():
+            if line.strip():
+                record = json.loads(line)
+                human_decisions[record["pmcid"]] = record
+
     rows = []
     for row in decisions:
         priority, question = QUESTIONS[row["pmcid"]]
@@ -138,6 +146,18 @@ def main() -> None:
                 "human_note": "",
             }
         )
+
+    known = {row["pmcid"] for row in rows}
+    unknown = sorted(set(human_decisions) - known)
+    if unknown:
+        raise SystemExit(f"human decisions for unknown PMCIDs: {unknown}")
+    for row in rows:
+        if row["pmcid"] in human_decisions:
+            decision = human_decisions[row["pmcid"]]
+            row["final_decision"] = decision["final_decision"]
+            row["reviewer"] = decision["reviewer"]
+            row["review_date"] = decision["review_date"]
+            row["human_note"] = decision["human_note"]
 
     order = {"hoch": 0, "mittel": 1, "niedrig": 2}
     rows.sort(
@@ -261,7 +281,12 @@ def main() -> None:
                 "records": len(rows),
                 "counts": dict(Counter(row["decision"] for row in rows)),
                 "priority_counts": dict(Counter(row["priority"] for row in rows)),
-                "status": "pending_human_review",
+                "status": (
+                    "complete"
+                    if all(row["final_decision"] != "offen" for row in rows)
+                    else "pending_human_review"
+                ),
+                "reviewed": sum(row["final_decision"] != "offen" for row in rows),
                 "model_used": False,
             },
             ensure_ascii=False,

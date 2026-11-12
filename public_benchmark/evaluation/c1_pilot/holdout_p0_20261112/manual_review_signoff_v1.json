@@ -25,10 +25,10 @@
       "priority": "hoch",
       "open_question": "Gepoolte zwei RCTs; Exazerbations-Ereignisse pro Arm pruefen.",
       "needs_fulltext": true,
-      "reviewer": "offen",
-      "review_date": "offen",
-      "final_decision": "offen",
-      "human_note": "",
+      "reviewer": "HB",
+      "review_date": "2026-11-12",
+      "final_decision": "einschluss",
+      "human_note": "Gepoolte zweiarmige RCT-Analyse; Exazerbationen als binaere Armwerte pruefen.",
       "number": 1
     },
     {
@@ -44,10 +44,10 @@
       "priority": "hoch",
       "open_question": "Sehr klein n=20; Striktur 2/10 vs. 7/10 und oekonomische Zusatzanalyse pruefen.",
       "needs_fulltext": true,
-      "reviewer": "offen",
-      "review_date": "offen",
-      "final_decision": "offen",
-      "human_note": "",
+      "reviewer": "HB",
+      "review_date": "2026-11-12",
+      "final_decision": "einschluss",
+      "human_note": "Randomisierter Zweiarm-Vergleich mit Strikturereignissen; kleine Stichprobe im Volltext pruefen.",
       "number": 2
     },
     {
@@ -63,10 +63,10 @@
       "priority": "hoch",
       "open_question": "Emotionsprozessmasse, keine klassischen Armwerte; Eignung pruefen.",
       "needs_fulltext": true,
-      "reviewer": "offen",
-      "review_date": "offen",
-      "final_decision": "offen",
-      "human_note": "",
+      "reviewer": "HB",
+      "review_date": "2026-11-12",
+      "final_decision": "einschluss",
+      "human_note": "Randomisierte GPM-vs-TAU-Sekundaeranalyse; Emotionsprozessmasse als kontinuierliche Armwerte pruefen.",
       "number": 3
     },
     {
@@ -82,10 +82,10 @@
       "priority": "hoch",
       "open_question": "Sekundaeranalyse; Immunmarker-Armwerte/SD und klinische Relevanz pruefen.",
       "needs_fulltext": true,
-      "reviewer": "offen",
-      "review_date": "offen",
-      "final_decision": "offen",
-      "human_note": "",
+      "reviewer": "HB",
+      "review_date": "2026-11-12",
+      "final_decision": "einschluss",
+      "human_note": "Randomisierte HIIT-vs-Usual-Care-Sekundaeranalyse; Immunmarker als kontinuierliche Armwerte pruefen.",
       "number": 4
     },
     {
@@ -101,10 +101,10 @@
       "priority": "hoch",
       "open_question": "Frueh beendet, n=43; PFS/OS und Zensierung pro Arm pruefen.",
       "needs_fulltext": true,
-      "reviewer": "offen",
-      "review_date": "offen",
-      "final_decision": "offen",
-      "human_note": "",
+      "reviewer": "HB",
+      "review_date": "2026-11-12",
+      "final_decision": "einschluss",
+      "human_note": "Randomisierter Zweiarm-Interimsvergleich mit PFS/OS als geeigneten Endpunkten; kleine Stichprobe und Zensierung im Volltext pruefen.",
       "number": 5
     },
     {
@@ -120,10 +120,10 @@
       "priority": "hoch",
       "open_question": "Blinding ist primaer; klinischer Schmerzendpunkt und Armwerte unklar.",
       "needs_fulltext": true,
-      "reviewer": "offen",
-      "review_date": "offen",
-      "final_decision": "offen",
-      "human_note": "",
+      "reviewer": "HB",
+      "review_date": "2026-11-12",
+      "final_decision": "einschluss",
+      "human_note": "Randomisierte Sham-kontrollierte Sekundaeranalyse; klinischen Schmerzendpunkt und Armwerte im Volltext pruefen.",
       "number": 6
     },
     {
@@ -139,10 +139,10 @@
       "priority": "hoch",
       "open_question": "Feasibility n=57; QoL/Angst-Armwerte/SD pruefen.",
       "needs_fulltext": true,
-      "reviewer": "offen",
-      "review_date": "offen",
-      "final_decision": "offen",
-      "human_note": "",
+      "reviewer": "HB",
+      "review_date": "2026-11-12",
+      "final_decision": "einschluss",
+      "human_note": "Randomisierte Zweiarm-Feasibility-Studie; QoL/Angst als kontinuierliche Armwerte pruefen; kleine Stichprobe.",
       "number": 7
     },
     {
@@ -158,10 +158,10 @@
       "priority": "hoch",
       "open_question": "Keine Placebo-Kontrolle; Arm-N/Mean/SD und Randomisierung pruefen.",
       "needs_fulltext": true,
-      "reviewer": "offen",
-      "review_date": "offen",
-      "final_decision": "offen",
-      "human_note": "",
+      "reviewer": "HB",
+      "review_date": "2026-11-12",
+      "final_decision": "einschluss",
+      "human_note": "Randomisierte Zweiarm-Studie; glykaemische/Redox-Armwerte pruefen; fehlende Placebo-Kontrolle im Volltext bewerten.",
       "number": 8
     },
     {
@@ -177,10 +177,10 @@
       "priority": "hoch",
       "open_question": "Sekundaeranalyse; Infektion/PICU-Ereignisse pro Arm und Adjustierung pruefen.",
       "needs_fulltext": true,
-      "reviewer": "offen",
-      "review_date": "offen",
-      "final_decision": "offen",
-      "human_note": "",
+      "reviewer": "HB",
+      "review_date": "2026-11-12",
+      "final_decision": "einschluss",
+      "human_note": "Sekundaeranalyse der PEPaNIC-RCT; Infektions-/PICU-Ereignisse pro Arm und Adjustierung pruefen.",
       "number": 9
     },
     {
@@ -196,10 +196,10 @@
       "priority": "hoch",
       "open_question": "Post hoc zwei RCTs; UTI-Ereignisse pro Arm pruefen.",
       "needs_fulltext": true,
-      "reviewer": "offen",
-      "review_date": "offen",
-      "final_decision": "offen",
-      "human_note": "",
+      "reviewer": "HB",
+      "review_date": "2026-11-12",
+      "final_decision": "einschluss",
+      "human_note": "Post-hoc-Analyse zweier placebo-kontrollierter RCTs; UTI-Ereignisse pro Arm pruefen.",
       "number": 10
     },
     {
@@ -215,10 +215,10 @@
       "priority": "hoch",
       "open_question": "Mechanismusanalyse; unklar, ob Symptomwerte pro Arm als N/Mean/SD berichtet sind.",
       "needs_fulltext": true,
-      "reviewer": "offen",
-      "review_date": "offen",
-      "final_decision": "offen",
-      "human_note": "",
+      "reviewer": "HB",
+      "review_date": "2026-11-12",
+      "final_decision": "einschluss",
+      "human_note": "Sekundaeranalyse eines RCT; Symptom-/Mechanismuswerte pro Arm und SD im Volltext pruefen.",
       "number": 11
     },
     {
@@ -234,10 +234,10 @@
       "priority": "hoch",
       "open_question": "Nur Praediktor-/Modulatoranalyse; SPPB-Armwerte und SD im Volltext pruefen.",
       "needs_fulltext": true,
-      "reviewer": "offen",
-      "review_date": "offen",
-      "final_decision": "offen",
-      "human_note": "",
+      "reviewer": "HB",
+      "review_date": "2026-11-12",
+      "final_decision": "einschluss",
+      "human_note": "Sekundaeranalyse eines RCT; SPPB-Armwerte und SD im Volltext pruefen.",
       "number": 12
     },
     {
@@ -253,10 +253,10 @@
       "priority": "hoch",
       "open_question": "Post hoc; N/Ereignisse fuer Haematomexpansion pro Arm pruefen.",
       "needs_fulltext": true,
-      "reviewer": "offen",
-      "review_date": "offen",
-      "final_decision": "offen",
-      "human_note": "",
+      "reviewer": "HB",
+      "review_date": "2026-11-12",
+      "final_decision": "einschluss",
+      "human_note": "Post-hoc-Analyse der ANNEXa-I-RCT; Haematomexpansion als binaeren Endpunkt pro Arm pruefen.",
       "number": 13
     },
     {
@@ -272,10 +272,10 @@
       "priority": "hoch",
       "open_question": "Kleine Tremor-Subgruppe, n=10/Gruppe; SD und Arm-N pruefen.",
       "needs_fulltext": true,
-      "reviewer": "offen",
-      "review_date": "offen",
-      "final_decision": "offen",
-      "human_note": "",
+      "reviewer": "HB",
+      "review_date": "2026-11-12",
+      "final_decision": "einschluss",
+      "human_note": "Post-hoc-Analyse eines placebo-kontrollierten RCT; kleine Tremor-Subgruppe, Arm-N und SD pruefen.",
       "number": 14
     },
     {
@@ -709,10 +709,10 @@
       "priority": "hoch",
       "open_question": "Historischer Placebo; kein paralleler Kontrollarm.",
       "needs_fulltext": true,
-      "reviewer": "offen",
-      "review_date": "offen",
-      "final_decision": "offen",
-      "human_note": "",
+      "reviewer": "Codebuff assistiert",
+      "review_date": "2026-11-12",
+      "final_decision": "ausschluss",
+      "human_note": "Historischer Placebo-Vergleich; kein paralleler randomisierter Kontrollarm. Assistierte Entscheidung nach Delegation, keine menschliche Einzelpruefung.",
       "number": 37
     },
     {
@@ -728,10 +728,10 @@
       "priority": "hoch",
       "open_question": "Mehrere Regime; pruefen, ob ein Zweiarm-Kontrast zulaessig ist (P0: nein).",
       "needs_fulltext": true,
-      "reviewer": "offen",
-      "review_date": "offen",
-      "final_decision": "offen",
-      "human_note": "",
+      "reviewer": "Codebuff assistiert",
+      "review_date": "2026-11-12",
+      "final_decision": "ausschluss",
+      "human_note": "Mehrere Antithrombotika-Regime; kein zulaessiger Zweiarm-Kontrast. Assistierte Entscheidung nach Delegation, keine menschliche Einzelpruefung.",
       "number": 38
     },
     {
@@ -747,10 +747,10 @@
       "priority": "hoch",
       "open_question": "Hierarchischer Score; pruefen, ob einfache binaere Komponenten extrahierbar sind.",
       "needs_fulltext": true,
-      "reviewer": "offen",
-      "review_date": "offen",
-      "final_decision": "offen",
-      "human_note": "",
+      "reviewer": "Codebuff assistiert",
+      "review_date": "2026-11-12",
+      "final_decision": "ausschluss",
+      "human_note": "Nur hierarchische Win-Ratio/DOOR; keine einfachen N/Mean/SD/Event-Armwerte. Assistierte Entscheidung nach Delegation, keine menschliche Einzelpruefung.",
       "number": 39
     },
     {

@@ -2,14 +2,16 @@
   "signoff_id": "p0_manual_signoff_v1",
   "status": "pending",
   "records": 65,
-  "completed": 0,
-  "open": 65,
+  "completed": 17,
+  "open": 48,
   "preliminary_counts": {
     "include_for_fulltext": 36,
     "exclude": 29
   },
   "final_counts": {
-    "offen": 65
+    "einschluss": 14,
+    "offen": 48,
+    "ausschluss": 3
   },
   "errors": [],
   "model_used": false
