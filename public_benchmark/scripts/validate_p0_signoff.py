@@ -73,16 +73,26 @@ def main() -> None:
     completed = sum((row.get("final_decision") or "offen") != "offen" for row in rows)
     reviewer_counts = Counter(row.get("reviewer", "offen") for row in rows)
     assisted = reviewer_counts.get("Codebuff assistiert", 0)
+    human_reviewed = sum(
+        (row.get("final_decision") or "offen") != "offen"
+        and row.get("reviewer") != "Codebuff assistiert"
+        for row in rows
+    )
     complete = completed == len(rows) and not errors
+    status = (
+        "complete_assisted_pending_human_review"
+        if complete and assisted
+        else "complete"
+        if complete
+        else "pending"
+    )
     summary = {
         "signoff_id": "p0_manual_signoff_v1",
-        "status": (
-            "complete_assisted_pending_human_review"
-            if complete and assisted
-            else "complete"
-            if complete
-            else "pending"
-        ),
+        "status": status,
+        "human_review": "partial" if human_reviewed and assisted else "complete" if complete else "pending",
+        "human_reviewed": human_reviewed,
+        "assisted_reviewed": assisted,
+        "signoff_status": status,
         "records": len(rows),
         "completed": completed,
         "open": len(rows) - completed,

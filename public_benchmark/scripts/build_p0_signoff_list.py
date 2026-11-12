@@ -170,20 +170,35 @@ def main() -> None:
     for number, row in enumerate(rows, 1):
         row["number"] = number
 
+    reviewed = sum(row["final_decision"] != "offen" for row in rows)
+    assisted = sum(row["reviewer"] == "Codebuff assistiert" for row in rows)
+    human_reviewed = reviewed - assisted
+    signoff_status = (
+        "complete_assisted_pending_human_review"
+        if reviewed == len(rows) and assisted
+        else "complete"
+        if reviewed == len(rows)
+        else "pending_human_review"
+    )
+    human_review = (
+        "partial"
+        if human_reviewed and assisted
+        else "complete"
+        if reviewed == len(rows)
+        else "pending"
+    )
+
     JSON_PATH.write_text(
         json.dumps(
             {
                 "signoff_id": "p0_manual_signoff_v1",
-                "status": (
-                    "complete_assisted_pending_human_review"
-                    if all(row["final_decision"] != "offen" for row in rows)
-                    and any(row["reviewer"] == "Codebuff assistiert" for row in rows)
-                    else "complete"
-                    if all(row["final_decision"] != "offen" for row in rows)
-                    else "pending_human_review"
-                ),
-                "reviewed": sum(row["final_decision"] != "offen" for row in rows),
-                "assisted": sum(row["reviewer"] == "Codebuff assistiert" for row in rows),
+                "status": signoff_status,
+                "human_review": human_review,
+                "human_reviewed": human_reviewed,
+                "assisted_reviewed": assisted,
+                "signoff_status": signoff_status,
+                "reviewed": reviewed,
+                "assisted": assisted,
                 "records": len(rows),
                 "counts": dict(Counter(row["decision"] for row in rows)),
                 "priority_counts": dict(Counter(row["priority"] for row in rows)),
@@ -228,7 +243,8 @@ def main() -> None:
     assisted = sum(row["reviewer"] == "Codebuff assistiert" for row in rows)
     if reviewed == len(rows):
         status_line = (
-            "Status: **ALLE FÄLLE ENTSCHIEDEN; MENSCHLICHE GEGENPRÜFUNG OFFEN**."
+            f"Status: **ALLE FÄLLE ENTSCHIEDEN; {reviewed - assisted} MENSCHLICH, "
+            f"{assisted} ASSISTIERT; MENSCHLICHE GEGENPRÜFUNG OFFEN**."
         )
     else:
         status_line = "Status: **HUMAN REVIEW PENDING**."
@@ -262,6 +278,7 @@ def main() -> None:
         f"- Einschlüsse: **{len(included)}**",
         f"- Ausschlüsse: **{len(excluded)}**",
         f"- entschieden: **{reviewed}/{len(rows)}**",
+        f"- davon menschlich: **{reviewed - assisted}**",
         f"- davon assistiert (Codebuff): **{assisted}**",
         f"- hohe Priorität: **{sum(row['priority'] == 'hoch' for row in rows)}**",
         "",
@@ -301,16 +318,13 @@ def main() -> None:
                 "records": len(rows),
                 "counts": dict(Counter(row["decision"] for row in rows)),
                 "priority_counts": dict(Counter(row["priority"] for row in rows)),
-                "status": (
-                    "complete_assisted_pending_human_review"
-                    if all(row["final_decision"] != "offen" for row in rows)
-                    and any(row["reviewer"] == "Codebuff assistiert" for row in rows)
-                    else "complete"
-                    if all(row["final_decision"] != "offen" for row in rows)
-                    else "pending_human_review"
-                ),
-                "reviewed": sum(row["final_decision"] != "offen" for row in rows),
-                "assisted": sum(row["reviewer"] == "Codebuff assistiert" for row in rows),
+                "status": signoff_status,
+                "human_review": human_review,
+                "human_reviewed": human_reviewed,
+                "assisted_reviewed": assisted,
+                "signoff_status": signoff_status,
+                "reviewed": reviewed,
+                "assisted": assisted,
                 "model_used": False,
             },
             ensure_ascii=False,

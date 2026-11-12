@@ -19,6 +19,7 @@ OUT = PILOT / "holdout_p0_20261112"
 QUEUE = OUT / "manual_review_queue_v1.jsonl"
 V1 = OUT / "screening_decisions_v1.jsonl"
 DECISIONS = OUT / "manual_review_decisions_v1.jsonl"
+SIGNOFF = OUT / "manual_review_signoff_decisions_v1.jsonl"
 V2 = OUT / "screening_decisions_v2.jsonl"
 SUMMARY_JSON = OUT / "screening_summary_v2.json"
 SUMMARY_MD = OUT / "screening_summary_v2.md"
@@ -173,6 +174,23 @@ def main() -> None:
         for row in v2:
             handle.write(json.dumps(row, ensure_ascii=False) + "\n")
 
+    signoff_rows = []
+    if SIGNOFF.exists():
+        signoff_rows = [
+            json.loads(line)
+            for line in SIGNOFF.read_text(encoding="utf-8").splitlines()
+            if line.strip()
+        ]
+    human_reviewed = sum(
+        row.get("reviewer") != "Codebuff assistiert" for row in signoff_rows
+    )
+    assisted_reviewed = sum(
+        row.get("reviewer") == "Codebuff assistiert" for row in signoff_rows
+    )
+    if not signoff_rows:
+        human_reviewed = 0
+        assisted_reviewed = len(reviewed)
+
     counts = Counter(row["decision"] for row in v2)
     manual_counts = Counter(row["reason_code"] for row in reviewed)
     summary = {
@@ -190,7 +208,11 @@ def main() -> None:
         ),
         "manual_exclude": sum(row["decision"] == "exclude" for row in reviewed),
         "manual_reason_counts": dict(sorted(manual_counts.items())),
-        "human_review": False,
+        "status": "complete_assisted_pending_human_review",
+        "human_review": "partial" if human_reviewed and assisted_reviewed else "pending",
+        "human_reviewed": human_reviewed,
+        "assisted_reviewed": assisted_reviewed,
+        "signoff_status": "complete_assisted_pending_human_review",
         "human_signoff": "pending",
         "model_used": False,
         "fulltext_screening": False,
@@ -202,8 +224,9 @@ def main() -> None:
     lines = [
         "# P0-Abstract-Screening v2",
         "",
-        "Die 65 manuellen Fälle wurden einzelfallgeprüft; die Entscheidungen sind",
-        "assistiert und noch nicht menschlich freigegeben.",
+        "Die 65 manuellen Fälle wurden einzelfallgeprüft und entschieden: "
+        f"**{human_reviewed} von HB**, **{assisted_reviewed} assistiert durch Codebuff**.",
+        "Die menschliche Gegenprüfung der assistierten Entscheidungen steht aus.",
         "",
         "| Entscheidung | Anzahl |",
         "|---|---:|",
@@ -220,8 +243,8 @@ def main() -> None:
         "Die konsolidierte Entscheidung steht in",
         "[`screening_decisions_v2.jsonl`](screening_decisions_v2.jsonl).",
         "",
-        "**Kein Modelllauf, keine Volltextprüfung.** Die menschliche Freigabe",
-        "(`human_signoff`) steht aus.",
+        "**Kein Modelllauf, keine Volltextprüfung.** Die menschliche Gegenprüfung der",
+        f"{assisted_reviewed} assistierten Entscheidungen steht aus.",
         "",
     ]
     SUMMARY_MD.write_text("\n".join(lines), encoding="utf-8")

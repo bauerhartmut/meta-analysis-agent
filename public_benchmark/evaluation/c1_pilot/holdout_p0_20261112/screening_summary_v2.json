@@ -1,6 +1,7 @@
 {
   "screening_id": "p0_abstract_screening_v2",
   "generated_at": "2026-11-12T09:27:23.281260+00:00",
+  "status": "complete_assisted_pending_human_review",
   "records": 596,
   "counts": {
     "exclude": 181,
@@ -26,7 +27,7 @@
     "X09": 1,
     "X10": 1
   },
-  "human_review": false,
+  "human_review": "partial",
   "human_reviewed": 14,
   "assisted_reviewed": 51,
   "signoff_status": "complete_assisted_pending_human_review",

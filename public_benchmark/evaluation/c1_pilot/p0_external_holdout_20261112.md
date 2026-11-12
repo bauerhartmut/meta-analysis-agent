@@ -1,7 +1,7 @@
 # P0: Externer C1-Holdout - Beschaffungsplan
 
 Stand: 2026-11-12
-Status: **MANUAL REVIEW COMPLETED (ASSISTED) - 181 ausgeschlossen, 415 vorlaeufig fuer Volltext; menschliche Freigabe offen, nicht G5-valid**
+Status: **MANUELLE PRUEFUNG ABGESCHLOSSEN (ASSISTIERT) - 14 menschlich, 51 assistiert; 181 ausgeschlossen, 415 vorlaeufig fuer Volltext; menschliche Gegenpruefung offen, nicht G5-valid**
 Ziel: 30 Artikel, 100 Records, artikeldisjunkt zu Dev und zum verbrauchten Test
 
 ## 1. Entscheidung

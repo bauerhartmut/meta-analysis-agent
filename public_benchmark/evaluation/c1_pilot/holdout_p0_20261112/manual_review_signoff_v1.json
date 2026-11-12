@@ -1,6 +1,10 @@
 {
   "signoff_id": "p0_manual_signoff_v1",
   "status": "complete_assisted_pending_human_review",
+  "human_review": "partial",
+  "human_reviewed": 14,
+  "assisted_reviewed": 51,
+  "signoff_status": "complete_assisted_pending_human_review",
   "reviewed": 65,
   "assisted": 51,
   "records": 65,

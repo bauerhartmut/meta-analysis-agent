@@ -1,6 +1,6 @@
 # Freigabeliste: 65 P0-Einzelfallentscheidungen
 
-Status: **ALLE FÄLLE ENTSCHIEDEN; MENSCHLICHE GEGENPRÜFUNG OFFEN**.
+Status: **ALLE FÄLLE ENTSCHIEDEN; 14 MENSCHLICH, 51 ASSISTIERT; MENSCHLICHE GEGENPRÜFUNG OFFEN**.
 Diese Liste ist die Prüfvorlage; sie ist kein Gate-Pass und keine
 endgültige Holdout-Auswahl.
 
@@ -11,6 +11,7 @@ Abweichungen und Korrekturen in `human_note` begründen.
 - Einschlüsse: **36**
 - Ausschlüsse: **29**
 - entschieden: **65/65**
+- davon menschlich: **14**
 - davon assistiert (Codebuff): **51**
 - hohe Priorität: **17**
 
