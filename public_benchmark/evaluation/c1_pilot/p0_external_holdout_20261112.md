@@ -73,6 +73,9 @@ Die konsolidierte Entscheidung steht in
 [`screening_decisions_v2.jsonl`](holdout_p0_20261112/screening_decisions_v2.jsonl),
 die Zusammenfassung in
 [`screening_summary_v2.md`](holdout_p0_20261112/screening_summary_v2.md).
+Die kompakte menschliche Prüfvorlage mit Quelle, Entscheidung und offenem
+Zweifel liegt als [`manual_review_signoff_v1.md`](holdout_p0_20261112/manual_review_signoff_v1.md)
+und [`manual_review_signoff_v1.csv`](holdout_p0_20261112/manual_review_signoff_v1.csv) vor.
 Die 181 Ausschluesse setzen sich aus 152 Regelausschluessen und 29 manuellen
 Ausschluessen zusammen.
 
