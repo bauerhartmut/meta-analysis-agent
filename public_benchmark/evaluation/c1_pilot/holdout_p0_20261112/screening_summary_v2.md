@@ -1,7 +1,7 @@
 # P0-Abstract-Screening v2
 
-Die 65 manuellen Fälle wurden einzelfallgeprüft und entschieden: **37 von HB**,
-**28 assistiert durch Codebuff**. Die menschliche Gegenprüfung der 28
+Die 65 manuellen Fälle wurden einzelfallgeprüft und entschieden: **47 von HB**,
+**18 assistiert durch Codebuff**. Die menschliche Gegenprüfung der 18
 assistierten Entscheidungen steht aus.
 
 | Entscheidung | Anzahl |
@@ -20,4 +20,4 @@ Die konsolidierte Entscheidung steht in
 [`screening_decisions_v2.jsonl`](screening_decisions_v2.jsonl).
 
 **Kein Modelllauf, keine Volltextprüfung.** Die menschliche Gegenprüfung der
-28 assistierten Entscheidungen steht aus.
+18 assistierten Entscheidungen steht aus.

@@ -1,6 +1,6 @@
 # Freigabeliste: 65 P0-Einzelfallentscheidungen
 
-Status: **ALLE FÄLLE ENTSCHIEDEN; 37 MENSCHLICH, 28 ASSISTIERT; MENSCHLICHE GEGENPRÜFUNG OFFEN**.
+Status: **ALLE FÄLLE ENTSCHIEDEN; 47 MENSCHLICH, 18 ASSISTIERT; MENSCHLICHE GEGENPRÜFUNG OFFEN**.
 Diese Liste ist die Prüfvorlage; sie ist kein Gate-Pass und keine
 endgültige Holdout-Auswahl.
 
@@ -11,8 +11,8 @@ Abweichungen und Korrekturen in `human_note` begründen.
 - Einschlüsse: **36**
 - Ausschlüsse: **29**
 - entschieden: **65/65**
-- davon menschlich: **37**
-- davon assistiert (Codebuff): **28**
+- davon menschlich: **47**
+- davon assistiert (Codebuff): **18**
 - hohe Priorität: **17**
 
 ## Einschlüsse: vorläufig für Volltext
@@ -39,12 +39,12 @@ Abweichungen und Korrekturen in `human_note` begründen.
 | 18 | [PMC13533545](https://pmc.ncbi.nlm.nih.gov/articles/PMC13533545/)<br>`10.1093/ijnp/pyag042`<br>Weight and metabolic changes in patients with schizophrenia tre... | Einschluss | Post hoc; Gewicht/Lipide als Armwerte/SD pruefen. | mittel | HB | 2026-11-12 | einschluss |
 | 19 | [PMC13541226](https://pmc.ncbi.nlm.nih.gov/articles/PMC13541226/)<br>`10.2196/104264`<br>Behavioral Modification as a Putative Mediator of Digital Thera... | Einschluss | Post hoc, per-protocol n=93; VAS-Armwerte/SD pruefen. | mittel | HB | 2026-11-12 | einschluss |
 | 20 | [PMC13542807](https://pmc.ncbi.nlm.nih.gov/articles/PMC13542807/)<br>`10.2196/93811`<br>Digital Mindfulness Intervention for Pregnant Women With Affect... | Einschluss | Sekundaeranalyse; EPDS-Armwerte/SD und ITT-Imputation pruefen. | mittel | HB | 2026-11-12 | einschluss |
-| 21 | [PMC13555364](https://pmc.ncbi.nlm.nih.gov/articles/PMC13555364/)<br>`10.1001/jamanetworkopen.2026.32555`<br>Restrictive vs Liberal Transfusion Strategy in Traumatic Brain... | Einschluss | Sekundaeranalyse; GOS-E-Ereignisse pro Arm pruefen. | mittel | Codebuff assistiert | 2026-11-12 | einschluss |
-| 22 | [PMC13573578](https://pmc.ncbi.nlm.nih.gov/articles/PMC13573578/)<br>`10.1093/esj/aakag111`<br>Tenecteplase versus standard care for minor ischaemic stroke ac... | Einschluss | Subgruppen nach Verschluss; mRS-Ereignisse pro Arm pruefen. | mittel | Codebuff assistiert | 2026-11-12 | einschluss |
-| 23 | [PMC13583845](https://pmc.ncbi.nlm.nih.gov/articles/PMC13583845/)<br>`10.1136/openhrt-2026-004172`<br>Colchicine to prevent cardiovascular events in thoracic surgery... | Einschluss | Post hoc; MINS-Ereignisse pro Arm und CAD-Strata pruefen. | mittel | Codebuff assistiert | 2026-11-12 | einschluss |
-| 24 | [PMC13586805](https://pmc.ncbi.nlm.nih.gov/articles/PMC13586805/)<br>`10.1158/2767-9764.crc-26-0488`<br>A Phase II Study of Berzosertib in Combination with Carboplatin... | Einschluss | Interim n=73; ORR-Ereignisse pro Arm pruefen. | mittel | Codebuff assistiert | 2026-11-12 | einschluss |
+| 21 | [PMC13555364](https://pmc.ncbi.nlm.nih.gov/articles/PMC13555364/)<br>`10.1001/jamanetworkopen.2026.32555`<br>Restrictive vs Liberal Transfusion Strategy in Traumatic Brain... | Einschluss | Sekundaeranalyse; GOS-E-Ereignisse pro Arm pruefen. | mittel | HB | 2026-11-12 | einschluss |
+| 22 | [PMC13573578](https://pmc.ncbi.nlm.nih.gov/articles/PMC13573578/)<br>`10.1093/esj/aakag111`<br>Tenecteplase versus standard care for minor ischaemic stroke ac... | Einschluss | Subgruppen nach Verschluss; mRS-Ereignisse pro Arm pruefen. | mittel | HB | 2026-11-12 | einschluss |
+| 23 | [PMC13583845](https://pmc.ncbi.nlm.nih.gov/articles/PMC13583845/)<br>`10.1136/openhrt-2026-004172`<br>Colchicine to prevent cardiovascular events in thoracic surgery... | Einschluss | Post hoc; MINS-Ereignisse pro Arm und CAD-Strata pruefen. | mittel | HB | 2026-11-12 | einschluss |
+| 24 | [PMC13586805](https://pmc.ncbi.nlm.nih.gov/articles/PMC13586805/)<br>`10.1158/2767-9764.crc-26-0488`<br>A Phase II Study of Berzosertib in Combination with Carboplatin... | Einschluss | Interim n=73; ORR-Ereignisse pro Arm pruefen. | mittel | HB | 2026-11-12 | einschluss |
 | 25 | [PMC13591858](https://pmc.ncbi.nlm.nih.gov/articles/PMC13591858/)<br>`10.1186/s12886-026-05351-1`<br>The effect of cycloplegia on corneal power and diameter measure... | Einschluss | Post hoc; Veraenderungswerte mit SD und zwei Tropicamid-Arme pruefen. | mittel | HB | 2026-11-12 | einschluss |
-| 26 | [PMC13599778](https://pmc.ncbi.nlm.nih.gov/articles/PMC13599778/)<br>`10.1093/oncolo/oyag351`<br>Central nervous system symptom burden and clinical implications... | Einschluss | Sekundaeranalyse; CR-Ereignisse pro Arm und CNS-Strata pruefen. | mittel | Codebuff assistiert | 2026-11-12 | einschluss |
+| 26 | [PMC13599778](https://pmc.ncbi.nlm.nih.gov/articles/PMC13599778/)<br>`10.1093/oncolo/oyag351`<br>Central nervous system symptom burden and clinical implications... | Einschluss | Sekundaeranalyse; CR-Ereignisse pro Arm und CNS-Strata pruefen. | mittel | HB | 2026-11-12 | einschluss |
 | 27 | [PMC13602066](https://pmc.ncbi.nlm.nih.gov/articles/PMC13602066/)<br>`10.1093/bjsopen/zrag043`<br>Effect of immunonutrition on postoperative infectious complicat... | Einschluss | Langzeit-Follow-up; DFS/OS-Ereignisse pro Arm pruefen. | mittel | HB | 2026-11-12 | einschluss |
 | 28 | [PMC13610117](https://pmc.ncbi.nlm.nih.gov/articles/PMC13610117/)<br>`10.3390/nu18183090`<br>More than Hormones? Metabolic Effects of Twelve-Week Probiotic... | Einschluss | Kleine Stichprobe; Complete-case/ITT-Armwerte pruefen. | mittel | Codebuff assistiert | 2026-11-12 | einschluss |
 | 29 | [PMC13610834](https://pmc.ncbi.nlm.nih.gov/articles/PMC13610834/)<br>`10.3390/nu18182945`<br>Dietary Fiber Supplementation Reduces Systolic Blood Pressure i... | Einschluss | Kleine Stichprobe; Blutdruck-Armwerte und Zeitpunkt pruefen. | mittel | Codebuff assistiert | 2026-11-12 | einschluss |
@@ -71,11 +71,11 @@ Abweichungen und Korrekturen in `human_note` begründen.
 | 45 | [PMC13629967](https://pmc.ncbi.nlm.nih.gov/articles/PMC13629967/)<br>`10.1136/bmjopen-2026-121051`<br>Within-person variability and the minimal important difference... | Ausschluss | EQ-VAS beider Arme gepoolt; kein Treatment-Effekt. | mittel | HB | 2026-11-12 | ausschluss |
 | 46 | [PMC13630015](https://pmc.ncbi.nlm.nih.gov/articles/PMC13630015/)<br>`10.1136/bmjopen-2026-117330`<br>TACE combined with apatinib versus TACE alone for unresectable... | Ausschluss | HTA; klinische RCT-Armwerte pruefen, falls berichtet. | mittel | HB | 2026-11-12 | ausschluss |
 | 47 | [PMC13714053](https://pmc.ncbi.nlm.nih.gov/articles/PMC13714053/)<br>`10.1007/s00125-026-06873-5`<br>Differential physical activity responses to diabetes risk reduc... | Ausschluss | Gepoolt; pruefen, ob Einzelstudien-Armwerte im Volltext stehen. | mittel | HB | 2026-11-12 | ausschluss |
-| 48 | [PMC13472644](https://pmc.ncbi.nlm.nih.gov/articles/PMC13472644/)<br>`10.1002/edm2.70258`<br>Vitamin D Deficiency During Pregnancy Is Associated With Greate... | Ausschluss | Stratifiziert nach Vitamin-D-Status; kein Armvergleich. | niedrig | Codebuff assistiert | 2026-11-12 | ausschluss |
-| 49 | [PMC13519342](https://pmc.ncbi.nlm.nih.gov/articles/PMC13519342/)<br>`10.1093/ajrccm/aamag226`<br>Astegolimab for chronic obstructive pulmonary disease with freq... | Ausschluss | Drei Arme; kein Zweiarm-Vergleich. | niedrig | Codebuff assistiert | 2026-11-12 | ausschluss |
-| 50 | [PMC13523073](https://pmc.ncbi.nlm.nih.gov/articles/PMC13523073/)<br>`10.1002/ueg2.70276`<br>Clinical and Psychosocial Characteristics of Adult Primary Care... | Ausschluss | Querschnitt; kein randomisierter Vergleich. | niedrig | Codebuff assistiert | 2026-11-12 | ausschluss |
-| 51 | [PMC13541895](https://pmc.ncbi.nlm.nih.gov/articles/PMC13541895/)<br>`10.1007/s00068-026-03326-x`<br>Repeated scoring with the adult appendicitis score improves the... | Ausschluss | Diagnostische Reanalyse; kein randomisierter Vergleich. | niedrig | Codebuff assistiert | 2026-11-12 | ausschluss |
-| 52 | [PMC13543658](https://pmc.ncbi.nlm.nih.gov/articles/PMC13543658/)<br>`10.2196/77150`<br>Proximal Effects of a Transdiagnostic, Ecological Momentary Int... | Ausschluss | Nur Experimentalarm; kein Kontrollarm. | niedrig | Codebuff assistiert | 2026-11-12 | ausschluss |
+| 48 | [PMC13472644](https://pmc.ncbi.nlm.nih.gov/articles/PMC13472644/)<br>`10.1002/edm2.70258`<br>Vitamin D Deficiency During Pregnancy Is Associated With Greate... | Ausschluss | Stratifiziert nach Vitamin-D-Status; kein Armvergleich. | niedrig | HB | 2026-11-12 | ausschluss |
+| 49 | [PMC13519342](https://pmc.ncbi.nlm.nih.gov/articles/PMC13519342/)<br>`10.1093/ajrccm/aamag226`<br>Astegolimab for chronic obstructive pulmonary disease with freq... | Ausschluss | Drei Arme; kein Zweiarm-Vergleich. | niedrig | HB | 2026-11-12 | ausschluss |
+| 50 | [PMC13523073](https://pmc.ncbi.nlm.nih.gov/articles/PMC13523073/)<br>`10.1002/ueg2.70276`<br>Clinical and Psychosocial Characteristics of Adult Primary Care... | Ausschluss | Querschnitt; kein randomisierter Vergleich. | niedrig | HB | 2026-11-12 | ausschluss |
+| 51 | [PMC13541895](https://pmc.ncbi.nlm.nih.gov/articles/PMC13541895/)<br>`10.1007/s00068-026-03326-x`<br>Repeated scoring with the adult appendicitis score improves the... | Ausschluss | Diagnostische Reanalyse; kein randomisierter Vergleich. | niedrig | HB | 2026-11-12 | ausschluss |
+| 52 | [PMC13543658](https://pmc.ncbi.nlm.nih.gov/articles/PMC13543658/)<br>`10.2196/77150`<br>Proximal Effects of a Transdiagnostic, Ecological Momentary Int... | Ausschluss | Nur Experimentalarm; kein Kontrollarm. | niedrig | HB | 2026-11-12 | ausschluss |
 | 53 | [PMC13550685](https://pmc.ncbi.nlm.nih.gov/articles/PMC13550685/)<br>`10.1093/neuonc/noag103`<br>Discrepancies in inter-rater agreement on resectability of recu... | Ausschluss | Interrater; kein Armvergleich. | niedrig | Codebuff assistiert | 2026-11-12 | ausschluss |
 | 54 | [PMC13562759](https://pmc.ncbi.nlm.nih.gov/articles/PMC13562759/)<br>`10.1111/ijpo.70149`<br>Associations Between Paternal Pre-Conceptional Body Mass Index... | Ausschluss | Paternale Assoziation; kein Interventionseffekt. | niedrig | Codebuff assistiert | 2026-11-12 | ausschluss |
 | 55 | [PMC13567134](https://pmc.ncbi.nlm.nih.gov/articles/PMC13567134/)<br>`10.3390/nu18172878`<br>Sulfur-Containing Amino Acid Plasma Concentrations in Pregnancy... | Ausschluss | Drei Arme; kein Zweiarm-Vergleich. | niedrig | Codebuff assistiert | 2026-11-12 | ausschluss |

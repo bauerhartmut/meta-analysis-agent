@@ -19,7 +19,7 @@ Volltext, kein Netzabruf. Es wurden keine Entscheidungen geändert.
 | 51 | PMC13541895 | ausschluss (X07) | Eighty-eight patients with early equivocal appendicitis participated in the observation arm of the DIAMOND trial. The data for these patients were reanalysed, and delta-AAS during the observation was calculated. | Nur Beobachtungsarm; diagnostische Reanalyse ohne randomisierten Vergleich. Ausschluss X07 bestaetigt. |
 | 52 | PMC13543658 | ausschluss (X06) | Data for our secondary analysis were derived from the experimental condition of the EMIcompass exploratory randomized controlled trial ... within-subject EMA data ... available in a small subsample of 37 participants. | Nur Experimentalarm; Within-Subject-Analyse ohne Zweiarm-Armwerte. Ausschluss X06 bestaetigt. |
 
-**Ergebnis:** 10 von 10 bestätigt, 0 Korrekturvorschläge.
+**Ergebnis:** 10 von 10 menschlich bestätigt, 0 Korrekturvorschläge.
 
-Der Reviewer bleibt `Codebuff assistiert`; die menschliche Freigabe dieser
-zehn Fälle steht aus. CSV und finale Entscheidungen sind unverändert.
+Reviewer ist **HB**, Datum 2026-11-12. Die finalen Entscheidungen sind
+unverändert; die Begründungen wurden in die CSV übernommen.

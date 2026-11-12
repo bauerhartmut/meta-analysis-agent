@@ -2,11 +2,11 @@
   "signoff_id": "p0_manual_signoff_v1",
   "status": "complete_assisted_pending_human_review",
   "human_review": "partial",
-  "human_reviewed": 37,
-  "assisted_reviewed": 28,
+  "human_reviewed": 47,
+  "assisted_reviewed": 18,
   "signoff_status": "complete_assisted_pending_human_review",
   "reviewed": 65,
-  "assisted": 28,
+  "assisted": 18,
   "human_review_complete": false,
   "records": 65,
   "counts": {
@@ -412,10 +412,10 @@
       "priority": "mittel",
       "open_question": "Sekundaeranalyse; GOS-E-Ereignisse pro Arm pruefen.",
       "needs_fulltext": true,
-      "reviewer": "Codebuff assistiert",
+      "reviewer": "HB",
       "review_date": "2026-11-12",
       "final_decision": "einschluss",
-      "human_note": "Praeplanmaessige Sekundaeranalyse eines RCT; liberal vs. restriktiv; GOS-E binaer; Volltext. Assistierte Entscheidung nach Delegation; keine menschliche Einzelpruefung.",
+      "human_note": "TRAIN-Sekundaeranalyse; liberal vs. restriktive Transfusion; 180-Tage-GOS-E 138/236 vs. 161/239. Menschliche Bestaetigung durch HB am 2026-11-12: Einschluss bestaetigt.",
       "number": 21
     },
     {
@@ -431,10 +431,10 @@
       "priority": "mittel",
       "open_question": "Subgruppen nach Verschluss; mRS-Ereignisse pro Arm pruefen.",
       "needs_fulltext": true,
-      "reviewer": "Codebuff assistiert",
+      "reviewer": "HB",
       "review_date": "2026-11-12",
       "final_decision": "einschluss",
-      "human_note": "Sekundaeranalyse eines RCT; Tenecteplase vs. Standard; mRS binaer; Volltext. Assistierte Entscheidung nach Delegation; keine menschliche Einzelpruefung.",
+      "human_note": "TEMPO-2-Sekundaeranalyse; Tenecteplase vs. Standard; 90-Tage-mRS; 218 Kontroll- vs. 216 Tenecteplase-Patienten. Menschliche Bestaetigung durch HB am 2026-11-12: Einschluss bestaetigt.",
       "number": 22
     },
     {
@@ -450,10 +450,10 @@
       "priority": "mittel",
       "open_question": "Post hoc; MINS-Ereignisse pro Arm und CAD-Strata pruefen.",
       "needs_fulltext": true,
-      "reviewer": "Codebuff assistiert",
+      "reviewer": "HB",
       "review_date": "2026-11-12",
       "final_decision": "einschluss",
-      "human_note": "Post-hoc-Sekundaeranalyse eines RCT; Colchicin vs. Placebo; MINS binaer; Volltext. Assistierte Entscheidung nach Delegation; keine menschliche Einzelpruefung.",
+      "human_note": "COP-AF-Sekundaeranalyse; Colchicin vs. Placebo; MINS als binaerer Endpunkt. Menschliche Bestaetigung durch HB am 2026-11-12: Einschluss bestaetigt.",
       "number": 23
     },
     {
@@ -469,10 +469,10 @@
       "priority": "mittel",
       "open_question": "Interim n=73; ORR-Ereignisse pro Arm pruefen.",
       "needs_fulltext": true,
-      "reviewer": "Codebuff assistiert",
+      "reviewer": "HB",
       "review_date": "2026-11-12",
       "final_decision": "einschluss",
-      "human_note": "Randomisierter 1:1-Interimsvergleich; zwei Arme; ORR binaer; Volltext. Assistierte Entscheidung nach Delegation; keine menschliche Einzelpruefung.",
+      "human_note": "Randomisiert 1:1; Berzosertib/Carboplatin vs. Docetaxel/Carboplatin; ORR 5/34 vs. 0/31. Menschliche Bestaetigung durch HB am 2026-11-12: Einschluss bestaetigt.",
       "number": 24
     },
     {
@@ -507,10 +507,10 @@
       "priority": "mittel",
       "open_question": "Sekundaeranalyse; CR-Ereignisse pro Arm und CNS-Strata pruefen.",
       "needs_fulltext": true,
-      "reviewer": "Codebuff assistiert",
+      "reviewer": "HB",
       "review_date": "2026-11-12",
       "final_decision": "einschluss",
-      "human_note": "Sekundaeranalyse eines RCT; Olanzapin vs. Placebo; CR binaer; Volltext. Assistierte Entscheidung nach Delegation; keine menschliche Einzelpruefung.",
+      "human_note": "JTOP-B-Sekundaeranalyse; Olanzapin vs. Placebo; complete response bei 480 Patientinnen. Menschliche Bestaetigung durch HB am 2026-11-12: Einschluss bestaetigt.",
       "number": 26
     },
     {
@@ -925,10 +925,10 @@
       "priority": "niedrig",
       "open_question": "Stratifiziert nach Vitamin-D-Status; kein Armvergleich.",
       "needs_fulltext": false,
-      "reviewer": "Codebuff assistiert",
+      "reviewer": "HB",
       "review_date": "2026-11-12",
       "final_decision": "ausschluss",
-      "human_note": "Sekundaeranalyse stratifiziert nach Vitamin-D-Status; kein randomisierter Armvergleich. Assistierte Entscheidung nach Delegation; keine menschliche Einzelpruefung.",
+      "human_note": "DALI-Sekundaeranalyse; Stratifizierung nach Vitamin-D-Status statt randomisiertem Armvergleich. Menschliche Bestaetigung durch HB am 2026-11-12: Ausschluss bestaetigt.",
       "number": 48
     },
     {
@@ -944,10 +944,10 @@
       "priority": "niedrig",
       "open_question": "Drei Arme; kein Zweiarm-Vergleich.",
       "needs_fulltext": false,
-      "reviewer": "Codebuff assistiert",
+      "reviewer": "HB",
       "review_date": "2026-11-12",
       "final_decision": "ausschluss",
-      "human_note": "Drei Arme (Q2W, Q4W, Placebo); kein Zweiarm-Vergleich. Assistierte Entscheidung nach Delegation; keine menschliche Einzelpruefung.",
+      "human_note": "ALIENTO/ARNASA gepoolt; drei Arme Q2W, Q4W und Placebo. Menschliche Bestaetigung durch HB am 2026-11-12: Ausschluss bestaetigt.",
       "number": 49
     },
     {
@@ -963,10 +963,10 @@
       "priority": "niedrig",
       "open_question": "Querschnitt; kein randomisierter Vergleich.",
       "needs_fulltext": false,
-      "reviewer": "Codebuff assistiert",
+      "reviewer": "HB",
       "review_date": "2026-11-12",
       "final_decision": "ausschluss",
-      "human_note": "Querschnittliche Post-hoc-Charakterisierung; kein randomisierter Vergleich. Assistierte Entscheidung nach Delegation; keine menschliche Einzelpruefung.",
+      "human_note": "DOMINO; querschnittliche Post-hoc-Charakterisierung ohne Armvergleich. Menschliche Bestaetigung durch HB am 2026-11-12: Ausschluss bestaetigt.",
       "number": 50
     },
     {
@@ -982,10 +982,10 @@
       "priority": "niedrig",
       "open_question": "Diagnostische Reanalyse; kein randomisierter Vergleich.",
       "needs_fulltext": false,
-      "reviewer": "Codebuff assistiert",
+      "reviewer": "HB",
       "review_date": "2026-11-12",
       "final_decision": "ausschluss",
-      "human_note": "Diagnostische Reanalyse des Beobachtungsarms; kein randomisierter Vergleich. Assistierte Entscheidung nach Delegation; keine menschliche Einzelpruefung.",
+      "human_note": "DIAMOND; nur Beobachtungsarm, diagnostische Reanalyse. Menschliche Bestaetigung durch HB am 2026-11-12: Ausschluss bestaetigt.",
       "number": 51
     },
     {
@@ -1001,10 +1001,10 @@
       "priority": "niedrig",
       "open_question": "Nur Experimentalarm; kein Kontrollarm.",
       "needs_fulltext": false,
-      "reviewer": "Codebuff assistiert",
+      "reviewer": "HB",
       "review_date": "2026-11-12",
       "final_decision": "ausschluss",
-      "human_note": "Nur Experimentalarm der EMI-Studie; kein Kontrollarm. Assistierte Entscheidung nach Delegation; keine menschliche Einzelpruefung.",
+      "human_note": "EMIcompass; nur Experimentalarm, Within-Subject-Analyse bei 37 Teilnehmenden. Menschliche Bestaetigung durch HB am 2026-11-12: Ausschluss bestaetigt.",
       "number": 52
     },
     {
