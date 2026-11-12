@@ -311,6 +311,9 @@ Plan: [`holdout_plan_20261112.md`](holdout_plan_20261112.md), Schema:
 - [`holdout_p0_20261112/manual_review_assisted_precheck_v1.md`](holdout_p0_20261112/manual_review_assisted_precheck_v1.md):
   assistierte Vorprüfung der restlichen 48 Fälle; 48/48 bestätigt, 0 Korrekturen,
   menschliche Freigabe weiterhin offen.
+- [`holdout_p0_20261112/manual_review_independent_spotcheck_v1.md`](holdout_p0_20261112/manual_review_independent_spotcheck_v1.md):
+  unabhängige Stichprobenprüfung von 10 der 48 Fälle mit konkreten
+  Abstract-Belegen; 10/10 bestätigt, 0 Korrekturvorschläge.
 - [`holdout_p0_20261112/fulltext_extraction_template_v1.md`](holdout_p0_20261112/fulltext_extraction_template_v1.md):
   Volltext-Prüfvorlage für die 36 vorläufigen Einschlüsse mit Eignungscheck,
   Armdefinition und vier Outcome-Slots für N/Mean/SD/Events; keine Schätzung
