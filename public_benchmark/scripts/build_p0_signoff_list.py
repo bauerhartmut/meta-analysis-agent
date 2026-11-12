@@ -135,7 +135,6 @@ def main() -> None:
                 "reviewer": "offen",
                 "review_date": "offen",
                 "final_decision": "offen",
-                "human_signoff": "offen",
                 "human_note": "",
             }
         )
@@ -155,7 +154,7 @@ def main() -> None:
         json.dumps(
             {
                 "signoff_id": "p0_manual_signoff_v1",
-                "status": "pending_human_signoff",
+                "status": "pending_human_review",
                 "records": len(rows),
                 "counts": dict(Counter(row["decision"] for row in rows)),
                 "priority_counts": dict(Counter(row["priority"] for row in rows)),
@@ -188,7 +187,6 @@ def main() -> None:
                 "reviewer",
                 "review_date",
                 "final_decision",
-                "human_signoff",
                 "human_note",
             ],
         )
@@ -263,7 +261,7 @@ def main() -> None:
                 "records": len(rows),
                 "counts": dict(Counter(row["decision"] for row in rows)),
                 "priority_counts": dict(Counter(row["priority"] for row in rows)),
-                "human_signoff": "pending",
+                "status": "pending_human_review",
                 "model_used": False,
             },
             ensure_ascii=False,

@@ -80,8 +80,8 @@ Die 181 Ausschluesse setzen sich aus 152 Regelausschluessen und 29 manuellen
 Ausschluessen zusammen.
 
 Die 415 Volltextkandidaten sind **nicht** endgueltig eingeschlossen. Die
-Einzelfallprüfung war assistiert; die menschliche Freigabe (`human_signoff`)
-steht fuer alle 65 Faelle aus. Mehrfachgruende sind moeglich; die Regelzahlen
+Einzelfallprüfung war assistiert; die menschliche Freigabe steht fuer alle 65
+Faelle aus. Mehrfachgruende sind moeglich; die Regelzahlen
 sind nicht additiv.
 
 ## 2. Auswahlkriterien

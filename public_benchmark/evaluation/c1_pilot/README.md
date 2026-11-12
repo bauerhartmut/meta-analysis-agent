@@ -310,8 +310,9 @@ Plan: [`holdout_plan_20261112.md`](holdout_plan_20261112.md), Schema:
   Armdefinition und vier Outcome-Slots für N/Mean/SD/Events; keine Schätzung
   oder Umrechnung.
 - [`holdout_p0_20261112/fulltext_access_plan_v1.md`](holdout_p0_20261112/fulltext_access_plan_v1.md):
-  lokale Zugriffsprüfung für die 36 Volltexte; alle Open Access/Europe PMC,
-  33 PDF-Flags, 0 lokal vorhanden, kein Abruf gestartet.
+  lokale Zugriffsprüfung für die 36 Volltexte gegen 1.291 `data/fulltext`-Texte,
+  101 Metadatensätze und 62 Inbox-Dateien; alle Open Access/Europe PMC,
+  33 PDF-Flags, 0 lokale Treffer, kein Abruf gestartet.
 - [`holdout_p0_20261112/signoff_validation_v1.json`](holdout_p0_20261112/signoff_validation_v1.json):
   Pflichtfeldprüfung der 65 Freigabezeilen; derzeit 0/65 abgeschlossen,
   65 offen, keine Feldfehler.

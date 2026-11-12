@@ -1,6 +1,6 @@
 {
   "signoff_id": "p0_manual_signoff_v1",
-  "status": "pending_human_signoff",
+  "status": "pending_human_review",
   "records": 65,
   "counts": {
     "include_for_fulltext": 36,
@@ -28,7 +28,6 @@
       "reviewer": "offen",
       "review_date": "offen",
       "final_decision": "offen",
-      "human_signoff": "offen",
       "human_note": "",
       "number": 1
     },
@@ -48,7 +47,6 @@
       "reviewer": "offen",
       "review_date": "offen",
       "final_decision": "offen",
-      "human_signoff": "offen",
       "human_note": "",
       "number": 2
     },
@@ -68,7 +66,6 @@
       "reviewer": "offen",
       "review_date": "offen",
       "final_decision": "offen",
-      "human_signoff": "offen",
       "human_note": "",
       "number": 3
     },
@@ -88,7 +85,6 @@
       "reviewer": "offen",
       "review_date": "offen",
       "final_decision": "offen",
-      "human_signoff": "offen",
       "human_note": "",
       "number": 4
     },
@@ -108,7 +104,6 @@
       "reviewer": "offen",
       "review_date": "offen",
       "final_decision": "offen",
-      "human_signoff": "offen",
       "human_note": "",
       "number": 5
     },
@@ -128,7 +123,6 @@
       "reviewer": "offen",
       "review_date": "offen",
       "final_decision": "offen",
-      "human_signoff": "offen",
       "human_note": "",
       "number": 6
     },
@@ -148,7 +142,6 @@
       "reviewer": "offen",
       "review_date": "offen",
       "final_decision": "offen",
-      "human_signoff": "offen",
       "human_note": "",
       "number": 7
     },
@@ -168,7 +161,6 @@
       "reviewer": "offen",
       "review_date": "offen",
       "final_decision": "offen",
-      "human_signoff": "offen",
       "human_note": "",
       "number": 8
     },
@@ -188,7 +180,6 @@
       "reviewer": "offen",
       "review_date": "offen",
       "final_decision": "offen",
-      "human_signoff": "offen",
       "human_note": "",
       "number": 9
     },
@@ -208,7 +199,6 @@
       "reviewer": "offen",
       "review_date": "offen",
       "final_decision": "offen",
-      "human_signoff": "offen",
       "human_note": "",
       "number": 10
     },
@@ -228,7 +218,6 @@
       "reviewer": "offen",
       "review_date": "offen",
       "final_decision": "offen",
-      "human_signoff": "offen",
       "human_note": "",
       "number": 11
     },
@@ -248,7 +237,6 @@
       "reviewer": "offen",
       "review_date": "offen",
       "final_decision": "offen",
-      "human_signoff": "offen",
       "human_note": "",
       "number": 12
     },
@@ -268,7 +256,6 @@
       "reviewer": "offen",
       "review_date": "offen",
       "final_decision": "offen",
-      "human_signoff": "offen",
       "human_note": "",
       "number": 13
     },
@@ -288,7 +275,6 @@
       "reviewer": "offen",
       "review_date": "offen",
       "final_decision": "offen",
-      "human_signoff": "offen",
       "human_note": "",
       "number": 14
     },
@@ -308,7 +294,6 @@
       "reviewer": "offen",
       "review_date": "offen",
       "final_decision": "offen",
-      "human_signoff": "offen",
       "human_note": "",
       "number": 15
     },
@@ -328,7 +313,6 @@
       "reviewer": "offen",
       "review_date": "offen",
       "final_decision": "offen",
-      "human_signoff": "offen",
       "human_note": "",
       "number": 16
     },
@@ -348,7 +332,6 @@
       "reviewer": "offen",
       "review_date": "offen",
       "final_decision": "offen",
-      "human_signoff": "offen",
       "human_note": "",
       "number": 17
     },
@@ -368,7 +351,6 @@
       "reviewer": "offen",
       "review_date": "offen",
       "final_decision": "offen",
-      "human_signoff": "offen",
       "human_note": "",
       "number": 18
     },
@@ -388,7 +370,6 @@
       "reviewer": "offen",
       "review_date": "offen",
       "final_decision": "offen",
-      "human_signoff": "offen",
       "human_note": "",
       "number": 19
     },
@@ -408,7 +389,6 @@
       "reviewer": "offen",
       "review_date": "offen",
       "final_decision": "offen",
-      "human_signoff": "offen",
       "human_note": "",
       "number": 20
     },
@@ -428,7 +408,6 @@
       "reviewer": "offen",
       "review_date": "offen",
       "final_decision": "offen",
-      "human_signoff": "offen",
       "human_note": "",
       "number": 21
     },
@@ -448,7 +427,6 @@
       "reviewer": "offen",
       "review_date": "offen",
       "final_decision": "offen",
-      "human_signoff": "offen",
       "human_note": "",
       "number": 22
     },
@@ -468,7 +446,6 @@
       "reviewer": "offen",
       "review_date": "offen",
       "final_decision": "offen",
-      "human_signoff": "offen",
       "human_note": "",
       "number": 23
     },
@@ -488,7 +465,6 @@
       "reviewer": "offen",
       "review_date": "offen",
       "final_decision": "offen",
-      "human_signoff": "offen",
       "human_note": "",
       "number": 24
     },
@@ -508,7 +484,6 @@
       "reviewer": "offen",
       "review_date": "offen",
       "final_decision": "offen",
-      "human_signoff": "offen",
       "human_note": "",
       "number": 25
     },
@@ -528,7 +503,6 @@
       "reviewer": "offen",
       "review_date": "offen",
       "final_decision": "offen",
-      "human_signoff": "offen",
       "human_note": "",
       "number": 26
     },
@@ -548,7 +522,6 @@
       "reviewer": "offen",
       "review_date": "offen",
       "final_decision": "offen",
-      "human_signoff": "offen",
       "human_note": "",
       "number": 27
     },
@@ -568,7 +541,6 @@
       "reviewer": "offen",
       "review_date": "offen",
       "final_decision": "offen",
-      "human_signoff": "offen",
       "human_note": "",
       "number": 28
     },
@@ -588,7 +560,6 @@
       "reviewer": "offen",
       "review_date": "offen",
       "final_decision": "offen",
-      "human_signoff": "offen",
       "human_note": "",
       "number": 29
     },
@@ -608,7 +579,6 @@
       "reviewer": "offen",
       "review_date": "offen",
       "final_decision": "offen",
-      "human_signoff": "offen",
       "human_note": "",
       "number": 30
     },
@@ -628,7 +598,6 @@
       "reviewer": "offen",
       "review_date": "offen",
       "final_decision": "offen",
-      "human_signoff": "offen",
       "human_note": "",
       "number": 31
     },
@@ -648,7 +617,6 @@
       "reviewer": "offen",
       "review_date": "offen",
       "final_decision": "offen",
-      "human_signoff": "offen",
       "human_note": "",
       "number": 32
     },
@@ -668,7 +636,6 @@
       "reviewer": "offen",
       "review_date": "offen",
       "final_decision": "offen",
-      "human_signoff": "offen",
       "human_note": "",
       "number": 33
     },
@@ -688,7 +655,6 @@
       "reviewer": "offen",
       "review_date": "offen",
       "final_decision": "offen",
-      "human_signoff": "offen",
       "human_note": "",
       "number": 34
     },
@@ -708,7 +674,6 @@
       "reviewer": "offen",
       "review_date": "offen",
       "final_decision": "offen",
-      "human_signoff": "offen",
       "human_note": "",
       "number": 35
     },
@@ -728,7 +693,6 @@
       "reviewer": "offen",
       "review_date": "offen",
       "final_decision": "offen",
-      "human_signoff": "offen",
       "human_note": "",
       "number": 36
     },
@@ -748,7 +712,6 @@
       "reviewer": "offen",
       "review_date": "offen",
       "final_decision": "offen",
-      "human_signoff": "offen",
       "human_note": "",
       "number": 37
     },
@@ -768,7 +731,6 @@
       "reviewer": "offen",
       "review_date": "offen",
       "final_decision": "offen",
-      "human_signoff": "offen",
       "human_note": "",
       "number": 38
     },
@@ -788,7 +750,6 @@
       "reviewer": "offen",
       "review_date": "offen",
       "final_decision": "offen",
-      "human_signoff": "offen",
       "human_note": "",
       "number": 39
     },
@@ -808,7 +769,6 @@
       "reviewer": "offen",
       "review_date": "offen",
       "final_decision": "offen",
-      "human_signoff": "offen",
       "human_note": "",
       "number": 40
     },
@@ -828,7 +788,6 @@
       "reviewer": "offen",
       "review_date": "offen",
       "final_decision": "offen",
-      "human_signoff": "offen",
       "human_note": "",
       "number": 41
     },
@@ -848,7 +807,6 @@
       "reviewer": "offen",
       "review_date": "offen",
       "final_decision": "offen",
-      "human_signoff": "offen",
       "human_note": "",
       "number": 42
     },
@@ -868,7 +826,6 @@
       "reviewer": "offen",
       "review_date": "offen",
       "final_decision": "offen",
-      "human_signoff": "offen",
       "human_note": "",
       "number": 43
     },
@@ -888,7 +845,6 @@
       "reviewer": "offen",
       "review_date": "offen",
       "final_decision": "offen",
-      "human_signoff": "offen",
       "human_note": "",
       "number": 44
     },
@@ -908,7 +864,6 @@
       "reviewer": "offen",
       "review_date": "offen",
       "final_decision": "offen",
-      "human_signoff": "offen",
       "human_note": "",
       "number": 45
     },
@@ -928,7 +883,6 @@
       "reviewer": "offen",
       "review_date": "offen",
       "final_decision": "offen",
-      "human_signoff": "offen",
       "human_note": "",
       "number": 46
     },
@@ -948,7 +902,6 @@
       "reviewer": "offen",
       "review_date": "offen",
       "final_decision": "offen",
-      "human_signoff": "offen",
       "human_note": "",
       "number": 47
     },
@@ -968,7 +921,6 @@
       "reviewer": "offen",
       "review_date": "offen",
       "final_decision": "offen",
-      "human_signoff": "offen",
       "human_note": "",
       "number": 48
     },
@@ -988,7 +940,6 @@
       "reviewer": "offen",
       "review_date": "offen",
       "final_decision": "offen",
-      "human_signoff": "offen",
       "human_note": "",
       "number": 49
     },
@@ -1008,7 +959,6 @@
       "reviewer": "offen",
       "review_date": "offen",
       "final_decision": "offen",
-      "human_signoff": "offen",
       "human_note": "",
       "number": 50
     },
@@ -1028,7 +978,6 @@
       "reviewer": "offen",
       "review_date": "offen",
       "final_decision": "offen",
-      "human_signoff": "offen",
       "human_note": "",
       "number": 51
     },
@@ -1048,7 +997,6 @@
       "reviewer": "offen",
       "review_date": "offen",
       "final_decision": "offen",
-      "human_signoff": "offen",
       "human_note": "",
       "number": 52
     },
@@ -1068,7 +1016,6 @@
       "reviewer": "offen",
       "review_date": "offen",
       "final_decision": "offen",
-      "human_signoff": "offen",
       "human_note": "",
       "number": 53
     },
@@ -1088,7 +1035,6 @@
       "reviewer": "offen",
       "review_date": "offen",
       "final_decision": "offen",
-      "human_signoff": "offen",
       "human_note": "",
       "number": 54
     },
@@ -1108,7 +1054,6 @@
       "reviewer": "offen",
       "review_date": "offen",
       "final_decision": "offen",
-      "human_signoff": "offen",
       "human_note": "",
       "number": 55
     },
@@ -1128,7 +1073,6 @@
       "reviewer": "offen",
       "review_date": "offen",
       "final_decision": "offen",
-      "human_signoff": "offen",
       "human_note": "",
       "number": 56
     },
@@ -1148,7 +1092,6 @@
       "reviewer": "offen",
       "review_date": "offen",
       "final_decision": "offen",
-      "human_signoff": "offen",
       "human_note": "",
       "number": 57
     },
@@ -1168,7 +1111,6 @@
       "reviewer": "offen",
       "review_date": "offen",
       "final_decision": "offen",
-      "human_signoff": "offen",
       "human_note": "",
       "number": 58
     },
@@ -1188,7 +1130,6 @@
       "reviewer": "offen",
       "review_date": "offen",
       "final_decision": "offen",
-      "human_signoff": "offen",
       "human_note": "",
       "number": 59
     },
@@ -1208,7 +1149,6 @@
       "reviewer": "offen",
       "review_date": "offen",
       "final_decision": "offen",
-      "human_signoff": "offen",
       "human_note": "",
       "number": 60
     },
@@ -1228,7 +1168,6 @@
       "reviewer": "offen",
       "review_date": "offen",
       "final_decision": "offen",
-      "human_signoff": "offen",
       "human_note": "",
       "number": 61
     },
@@ -1248,7 +1187,6 @@
       "reviewer": "offen",
       "review_date": "offen",
       "final_decision": "offen",
-      "human_signoff": "offen",
       "human_note": "",
       "number": 62
     },
@@ -1268,7 +1206,6 @@
       "reviewer": "offen",
       "review_date": "offen",
       "final_decision": "offen",
-      "human_signoff": "offen",
       "human_note": "",
       "number": 63
     },
@@ -1288,7 +1225,6 @@
       "reviewer": "offen",
       "review_date": "offen",
       "final_decision": "offen",
-      "human_signoff": "offen",
       "human_note": "",
       "number": 64
     },
@@ -1308,7 +1244,6 @@
       "reviewer": "offen",
       "review_date": "offen",
       "final_decision": "offen",
-      "human_signoff": "offen",
       "human_note": "",
       "number": 65
     }
