@@ -160,6 +160,10 @@ das G5 vollständig abbildet.
 **Fertig, wenn:** der Checker auf v6c das erwartete Ergebnis liefert und
 ohne Holdout-Manifest G5 sauber als „nicht bestanden“ meldet.
 
+**Status 2026-11-12:** Erledigt. `check_c1_gates.py` ist implementiert; der
+v6c-Report liegt unter [`gate_report_v6c.json`](gate_report_v6c.json).
+Ergebnis: **G1 pass; G2–G4 fail; G5 fail** (kein Holdout-Manifest).
+
 ### P1 — Assistierte Nutzung operationalisieren
 
 **Ziel:** Falls v6c interimistisch genutzt wird, Fehler nicht ins Pooling

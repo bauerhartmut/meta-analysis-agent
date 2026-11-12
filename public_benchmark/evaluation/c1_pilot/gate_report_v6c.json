@@ -1,0 +1,136 @@
+{
+  "policy_id": "c1-acceptance-gates-v1",
+  "policy_status": "adopted",
+  "evaluation_path": "public_benchmark/evaluation/c1_pilot/runs_test/c1_test_20261111_v6c/test_evaluation.json",
+  "gates_path": "public_benchmark/evaluation/c1_pilot/c1_acceptance_gates_v1.json",
+  "holdout_manifest_path": null,
+  "run_id": "c1_test_20261111_v6c",
+  "all_gates_pass": false,
+  "gates": {
+    "G1_integrity": {
+      "passed": true,
+      "checks": {
+        "records_with_output_equals_records": true,
+        "schema_or_parse_errors": true,
+        "hallucinated_fields": true,
+        "null_discipline": true
+      },
+      "metrics": {
+        "records": 249,
+        "records_with_output": 249,
+        "schema_or_parse_error_records": 0,
+        "hallucinated_fields": 0,
+        "null_discipline": 1.0,
+        "null_expected_total": 684,
+        "null_correct": 684
+      }
+    },
+    "G2_record_completeness": {
+      "passed": false,
+      "checks": {
+        "records_detail_count_equals_records": true,
+        "record_completeness_minimum": false
+      },
+      "metrics": {
+        "records_all_expected_present": 217,
+        "records": 249,
+        "share": 0.8715,
+        "minimum": 0.95
+      }
+    },
+    "G3_field_accuracy": {
+      "passed": false,
+      "checks": {
+        "overall_exact_rate_minimum": false,
+        "all_critical_fields_present": true,
+        "per_critical_field_exact_rate_minimum": false
+      },
+      "metrics": {
+        "exact_fields": 992,
+        "expected_fields": 1308,
+        "exact_rate": 0.7584,
+        "minimum": 0.95,
+        "critical_minimum": 0.95,
+        "critical_fields": {
+          "intervention_n": {
+            "exact_rate": 0.8594,
+            "expected": 249,
+            "exact": 214,
+            "passed": false
+          },
+          "comparator_n": {
+            "exact_rate": 0.8072,
+            "expected": 249,
+            "exact": 201,
+            "passed": false
+          },
+          "intervention_mean": {
+            "exact_rate": 0.7051,
+            "expected": 156,
+            "exact": 110,
+            "passed": false
+          },
+          "comparator_mean": {
+            "exact_rate": 0.6731,
+            "expected": 156,
+            "exact": 105,
+            "passed": false
+          },
+          "intervention_sd": {
+            "exact_rate": 0.6795,
+            "expected": 156,
+            "exact": 106,
+            "passed": false
+          },
+          "comparator_sd": {
+            "exact_rate": 0.6667,
+            "expected": 156,
+            "exact": 104,
+            "passed": false
+          },
+          "intervention_events": {
+            "exact_rate": 0.8172,
+            "expected": 93,
+            "exact": 76,
+            "passed": false
+          },
+          "comparator_events": {
+            "exact_rate": 0.8172,
+            "expected": 93,
+            "exact": 76,
+            "passed": false
+          }
+        },
+        "min_critical_exact_rate": 0.6667
+      }
+    },
+    "G4_record_accuracy": {
+      "passed": false,
+      "checks": {
+        "records_all_expected_exact_minimum": false
+      },
+      "metrics": {
+        "records_all_expected_exact": 148,
+        "records": 249,
+        "share": 0.5944,
+        "minimum": 0.9
+      }
+    },
+    "G5_independent_validation": {
+      "passed": false,
+      "checks": {
+        "holdout_manifest_present": false
+      },
+      "metrics": {
+        "reason": "no_holdout_manifest",
+        "required_holdout_manifest_fields": {
+          "independent_of_dev": true,
+          "excluded_consumed_test": true,
+          "articles_disjoint": true,
+          "pre_registered": true,
+          "prompt_frozen_before_run": true
+        }
+      }
+    }
+  }
+}
