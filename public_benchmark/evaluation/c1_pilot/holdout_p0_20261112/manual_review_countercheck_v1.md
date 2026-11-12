@@ -9,11 +9,10 @@ Titel und Abstract. Es gab keinen Volltextzugriff und keinen Netzabruf.
 |---|---|---|---|---|
 | [PMC13545155](https://pmc.ncbi.nlm.nih.gov/articles/PMC13545155/) | exclude | ausschluss | ja (HB) | Historischer Placebo-Vergleich; kein paralleler randomisierter Kontrollarm. Menschliche Bestätigung durch HB am 2026-11-12: Ausschluss bestätigt. |
 | [PMC13599935](https://pmc.ncbi.nlm.nih.gov/articles/PMC13599935/) | exclude | ausschluss | ja (HB) | Mehrere Antithrombotika-Regime; kein zulaessiger Zweiarm-Kontrast. Menschliche Bestätigung durch HB am 2026-11-12: Ausschluss bestätigt. |
-| [PMC13690031](https://pmc.ncbi.nlm.nih.gov/articles/PMC13690031/) | exclude | ausschluss | ausstehend | Nur hierarchische Win-Ratio/DOOR; keine einfachen N/Mean/SD/Event-Armwerte. Assistierte Gegenprüfung 2026-11-12: Ausschluss bestätigt; menschliche Bestätigung ausstehend. |
+| [PMC13690031](https://pmc.ncbi.nlm.nih.gov/articles/PMC13690031/) | exclude | ausschluss | ja (HB) | Nur hierarchische Win-Ratio/DOOR; keine einfachen N/Mean/SD/Event-Armwerte im Abstract. Menschliche Bestätigung durch HB am 2026-11-12: Ausschluss bestätigt; ohne Volltext keine Armwertpruefung. |
 
-**Ergebnis:** 2 von 3 Ausschlüssen menschlich bestätigt, 0 Korrekturen;
-PMC13690031 wartet noch auf die menschliche Bestätigung.
+**Ergebnis:** 3 von 3 Ausschlüssen menschlich bestätigt, 0 Korrekturen.
 
-Damit verbleiben 49 assistierte Entscheidungen; die restlichen 48 werden
-nach Klärung des dritten Falls separat vorprüft. Die menschliche Freigabe
-bleibt für alle nicht bestätigten Fälle offen.
+Damit verbleiben 48 assistierte Entscheidungen; diese wurden separat vorprüft
+(48/48 bestätigt, 0 Korrekturen). Die menschliche Freigabe dieser 48 Fälle
+bleibt offen.

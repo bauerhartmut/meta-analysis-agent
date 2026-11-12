@@ -3,9 +3,18 @@
   "date": "2026-11-12",
   "status": "complete_assisted_pending_human_review",
   "human_review": "partial",
-  "human_reviewed": 16,
-  "assisted_reviewed": 49,
+  "human_reviewed": 17,
+  "assisted_reviewed": 48,
   "signoff_status": "complete_assisted_pending_human_review",
+  "assisted_precheck": {
+    "reviewed": 48,
+    "confirmed": 48,
+    "corrections": 0,
+    "reviewer": "Codebuff assistiert",
+    "review_date": "2026-11-12",
+    "review_basis": "Titel und Abstract; kein Volltext, kein Netzabruf",
+    "human_review": false
+  },
   "status_fields": {
     "status": [
       "pending_human_review",
@@ -78,8 +87,8 @@
     "manual_include": 36,
     "manual_exclude": 29,
     "human_review": "partial",
-    "human_reviewed": 16,
-    "assisted_reviewed": 49,
+    "human_reviewed": 17,
+    "assisted_reviewed": 48,
     "signoff_status": "complete_assisted_pending_human_review",
     "human_signoff": "pending",
     "model_used": false,

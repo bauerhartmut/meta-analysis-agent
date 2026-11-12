@@ -2,11 +2,11 @@
   "signoff_id": "p0_manual_signoff_v1",
   "status": "complete_assisted_pending_human_review",
   "human_review": "partial",
-  "human_reviewed": 16,
-  "assisted_reviewed": 49,
+  "human_reviewed": 17,
+  "assisted_reviewed": 48,
   "signoff_status": "complete_assisted_pending_human_review",
   "reviewed": 65,
-  "assisted": 49,
+  "assisted": 48,
   "records": 65,
   "counts": {
     "include_for_fulltext": 36,
@@ -753,10 +753,10 @@
       "priority": "hoch",
       "open_question": "Hierarchischer Score; pruefen, ob einfache binaere Komponenten extrahierbar sind.",
       "needs_fulltext": true,
-      "reviewer": "Codebuff assistiert",
+      "reviewer": "HB",
       "review_date": "2026-11-12",
       "final_decision": "ausschluss",
-      "human_note": "Nur hierarchische Win-Ratio/DOOR; keine einfachen N/Mean/SD/Event-Armwerte. Assistierte Gegenprüfung 2026-11-12: Ausschluss bestätigt; menschliche Bestätigung ausstehend.",
+      "human_note": "Nur hierarchische Win-Ratio/DOOR; keine einfachen N/Mean/SD/Event-Armwerte im Abstract. Menschliche Bestätigung durch HB am 2026-11-12: Ausschluss bestätigt; ohne Volltext keine Armwertpruefung.",
       "number": 39
     },
     {
