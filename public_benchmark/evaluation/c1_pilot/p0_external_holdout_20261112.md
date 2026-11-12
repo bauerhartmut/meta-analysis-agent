@@ -217,6 +217,11 @@ Nachweis für eine Freigabe verwendet werden.
 | Disjunktheitsprüfung | `public_benchmark/evaluation/c1_pilot/holdout_p0_20261112/article_disjoint_check.json` |
 | Holdout-Input | `public_benchmark/evaluation/c1_pilot/holdout_p0_20261112/input.jsonl` |
 | Holdout-Referenz | `public_benchmark/evaluation/c1_pilot/holdout_p0_20261112/reference.jsonl` |
+| Menschliche Freigabeliste | `public_benchmark/evaluation/c1_pilot/holdout_p0_20261112/manual_review_signoff_v1.md` |
+| Freigabeliste CSV | `public_benchmark/evaluation/c1_pilot/holdout_p0_20261112/manual_review_signoff_v1.csv` |
+| Volltext-Prüfvorlage | `public_benchmark/evaluation/c1_pilot/holdout_p0_20261112/fulltext_extraction_template_v1.md` |
+| Volltext-Extraktion CSV | `public_benchmark/evaluation/c1_pilot/holdout_p0_20261112/fulltext_extraction_template_v1.csv` |
+| Volltext-Extraktion JSON | `public_benchmark/evaluation/c1_pilot/holdout_p0_20261112/fulltext_extraction_template_v1.json` |
 | Manifest | `public_benchmark/evaluation/c1_pilot/holdout_manifest_p0_20261112.json` |
 | Gate-Report | `public_benchmark/evaluation/c1_pilot/gate_report_holdout_p0.json` |
 

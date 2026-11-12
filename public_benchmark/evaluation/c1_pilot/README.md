@@ -303,7 +303,12 @@ Plan: [`holdout_plan_20261112.md`](holdout_plan_20261112.md), Schema:
   ausstehend, kein Modelllauf.
 - [`holdout_p0_20261112/manual_review_signoff_v1.md`](holdout_p0_20261112/manual_review_signoff_v1.md):
   kompakte Freigabeliste für die 65 Einzelfälle mit Quelle, Entscheidung,
-  Priorität und offenem Prüfzweifel; CSV-Version für die Bearbeitung.
+  Priorität und offenem Prüfzweifel; Reviewer, Datum und finale Entscheidung
+  sind als offene Felder enthalten.
+- [`holdout_p0_20261112/fulltext_extraction_template_v1.md`](holdout_p0_20261112/fulltext_extraction_template_v1.md):
+  Volltext-Prüfvorlage für die 36 vorläufigen Einschlüsse mit Eignungscheck,
+  Armdefinition und vier Outcome-Slots für N/Mean/SD/Events; keine Schätzung
+  oder Umrechnung.
 - [`gate_report_v6c.json`](gate_report_v6c.json): maschinenlesbarer
   G1–G5-Report; v6c besteht nur G1.
 

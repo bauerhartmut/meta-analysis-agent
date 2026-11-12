@@ -132,6 +132,9 @@ def main() -> None:
                 "open_question": question,
                 "needs_fulltext": row["decision"] == "include_for_fulltext"
                 or priority == "hoch",
+                "reviewer": "offen",
+                "review_date": "offen",
+                "final_decision": "offen",
                 "human_signoff": "offen",
                 "human_note": "",
             }
@@ -182,6 +185,9 @@ def main() -> None:
                 "priority",
                 "open_question",
                 "needs_fulltext",
+                "reviewer",
+                "review_date",
+                "final_decision",
                 "human_signoff",
                 "human_note",
             ],
@@ -194,16 +200,16 @@ def main() -> None:
 
     def table(items: list[dict]) -> list[str]:
         lines = [
-            "| Nr | Quelle | Kurztitel | Entscheidung | Offener Zweifel | Prio | Volltext | Freigabe |",
-            "|---:|---|---|---|---|---|---|:---:|",
+            "| Nr | Quelle / Kurztitel | Entscheidung | Offener Zweifel | Prio | Reviewer | Datum | Finale Entscheidung |",
+            "|---:|---|---|---|---|---|---|---|",
         ]
         for row in items:
             label = "Einschluss" if row["decision"] == "include_for_fulltext" else "Ausschluss"
-            fulltext = "ja" if row["needs_fulltext"] else "nein"
             lines.append(
                 f"| {row['number']} | [{row['pmcid']}]({row['source_url']})"
-                f"<br>`{row['doi']}` | {short_title(row['title'])} | {label} | "
-                f"{row['open_question']} | {row['priority']} | {fulltext} | [ ] |"
+                f"<br>`{row['doi']}`<br>{short_title(row['title'], 64)} | {label} | "
+                f"{row['open_question']} | {row['priority']} | {row['reviewer']} | "
+                f"{row['review_date']} | {row['final_decision']} |"
             )
         return lines
 
@@ -213,9 +219,9 @@ def main() -> None:
         "Status: **HUMAN SIGNOFF PENDING**. Diese Liste ist die Prüfvorlage;",
         "sie ist kein Gate-Pass und keine endgültige Holdout-Auswahl.",
         "",
-        "Bitte pro Zeile `[ ]` durch `[x]` ersetzen oder in der CSV-Spalte",
-        "`human_signoff` auf `ja`, `nein` oder `aendern` setzen. Abweichungen in",
-        "`human_note` begründen.",
+        "Bitte pro Zeile `Reviewer`, `Datum` und `Finale Entscheidung` setzen.",
+        "Erlaubte finale Entscheidungen: `einschluss`, `ausschluss` oder `offen`.",
+        "Abweichungen und Korrekturen in `human_note` begründen.",
         "",
         f"- Einschlüsse: **{len(included)}**",
         f"- Ausschlüsse: **{len(excluded)}**",
@@ -240,7 +246,8 @@ def main() -> None:
             "",
             "- **Einschluss**: vorläufig für Volltextprüfung; keine endgültige Eignung.",
             "- **Ausschluss**: nach Abstract und fixierten Kriterien; menschliche Gegenprüfung offen.",
-            "- **Volltext=ja**: Der offene Zweifel lässt sich nur oder vor allem im Volltext klären.",
+            "- **Reviewer/Datum**: vom menschlichen Reviewer auszufüllen; `offen` heißt noch nicht geprüft.",
+            "- **Finale Entscheidung**: `einschluss`, `ausschluss` oder `offen`; erst nach Reviewer-Eintrag gültig.",
             "- **Prio hoch**: Entscheidung könnte sich durch Volltext oder genauere Armprüfung ändern.",
             "",
             "Quellen sind die PMC-Artikelseiten; DOI zusätzlich in der CSV- und JSON-Datei.",
