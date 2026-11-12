@@ -314,8 +314,8 @@ Plan: [`holdout_plan_20261112.md`](holdout_plan_20261112.md), Schema:
   101 Metadatensätze und 62 Inbox-Dateien; alle Open Access/Europe PMC,
   33 PDF-Flags, 0 lokale Treffer, kein Abruf gestartet.
 - [`holdout_p0_20261112/signoff_validation_v1.json`](holdout_p0_20261112/signoff_validation_v1.json):
-  Pflichtfeldprüfung der 65 Freigabezeilen; derzeit 0/65 abgeschlossen,
-  65 offen, keine Feldfehler.
+  Pflichtfeldprüfung der 65 Freigabezeilen; 65/65 abgeschlossen, 0 offen,
+  14 menschlich und 51 assistiert, keine Feldfehler.
 - [`gate_report_v6c.json`](gate_report_v6c.json): maschinenlesbarer
   G1–G5-Report; v6c besteht nur G1.
 

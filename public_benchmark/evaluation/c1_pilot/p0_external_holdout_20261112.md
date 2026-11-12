@@ -4,6 +4,24 @@ Stand: 2026-11-12
 Status: **MANUELLE PRUEFUNG ABGESCHLOSSEN (ASSISTIERT) - 14 menschlich, 51 assistiert; 181 ausgeschlossen, 415 vorlaeufig fuer Volltext; menschliche Gegenpruefung offen, nicht G5-valid**
 Ziel: 30 Artikel, 100 Records, artikeldisjunkt zu Dev und zum verbrauchten Test
 
+### Statusfelder
+
+| Feld | Wertebereich | Aktuell |
+|---|---|---|
+| `status`, `signoff_status` | `pending_human_review`, `complete_assisted_pending_human_review`, `complete` | `complete_assisted_pending_human_review` |
+| `human_review` | `pending`, `partial`, `complete` | `partial` |
+| `human_reviewed` | Ganzzahl 0-65 | 14 |
+| `assisted_reviewed` | Ganzzahl 0-65 | 51 |
+
+`human_review: "partial"` heisst: menschliche und assistierte Entscheidungen
+gemischt; `complete` erst, wenn keine assistierte Entscheidung mehr vorliegt.
+`status`/`signoff_status` sind `pending_human_review`, solange Fälle offen sind,
+`complete_assisted_pending_human_review` nach vollständiger assistierter
+Entscheidung und `complete` erst ohne assistierte Entscheidung.
+Die zeilenweisen `human_review`-Werte in den Entscheidungs-JSONL bleiben
+boolesch. Die Volltextskripte lesen nur `signoff["rows"]`; der Validator liest
+die CSV. Kein Konsument erwartet einen booleschen Top-Level-Wert.
+
 ## 1. Entscheidung
 
 | Feld | Festlegung |

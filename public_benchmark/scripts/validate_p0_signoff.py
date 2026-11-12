@@ -84,7 +84,7 @@ def main() -> None:
         if complete and assisted
         else "complete"
         if complete
-        else "pending"
+        else "pending_human_review"
     )
     summary = {
         "signoff_id": "p0_manual_signoff_v1",

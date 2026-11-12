@@ -6,6 +6,25 @@
   "human_reviewed": 14,
   "assisted_reviewed": 51,
   "signoff_status": "complete_assisted_pending_human_review",
+  "status_fields": {
+    "status": [
+      "pending_human_review",
+      "complete_assisted_pending_human_review",
+      "complete"
+    ],
+    "signoff_status": [
+      "pending_human_review",
+      "complete_assisted_pending_human_review",
+      "complete"
+    ],
+    "human_review": [
+      "pending",
+      "partial",
+      "complete"
+    ],
+    "human_reviewed": "Ganzzahl 0..65",
+    "assisted_reviewed": "Ganzzahl 0..65"
+  },
   "source": {
     "name": "PMC Open Access Subset via Europe PMC REST API",
     "search_endpoint": "https://www.ebi.ac.uk/europepmc/webservices/rest/search",
