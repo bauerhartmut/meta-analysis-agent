@@ -280,6 +280,17 @@ Plan: [`holdout_plan_20261112.md`](holdout_plan_20261112.md), Schema:
 [`holdout_manifest_schema.json`](holdout_manifest_schema.json).
 **Kein Modelllauf, solange G5 nicht erfüllt ist.**
 
+## Assistierte Nutzung und nächster Kandidat
+
+- [`assisted_use_sop.md`](assisted_use_sop.md): verbindliche 100-%-Prüfung
+  für v6c und andere nicht freigegebene Kandidaten; kein automatisches
+  Pooling, keine Imputation, keine Aussage „validiert“.
+- [`next_candidate_plan.md`](next_candidate_plan.md): Dev-only-Plan mit
+  Blockhypothesen, Messplan und Abbruchkriterien. P0 ist ein externer,
+  artikeldisjunkter Holdout; es gibt noch keinen Modelllauf.
+- [`gate_report_v6c.json`](gate_report_v6c.json): maschinenlesbarer
+  G1–G5-Report; v6c besteht nur G1.
+
 ## Eingefrorene Daten
 
 Der Pilot verwendet ausschließlich die 26 nutzbaren Dev-Records aus 6

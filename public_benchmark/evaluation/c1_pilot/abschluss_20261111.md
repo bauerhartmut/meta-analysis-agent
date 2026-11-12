@@ -182,6 +182,10 @@ lassen.
 **Fertig, wenn:** die SOP als Checkliste vorliegt und der Unterschied zu
 einem Gate-Pass ausdrücklich benannt ist.
 
+**Status 2026-11-12:** Erledigt. Die SOP liegt unter
+[`assisted_use_sop.md`](assisted_use_sop.md); sie fordert 100 % menschliche
+Prüfung, dokumentierte Korrekturen und schließt automatisches Pooling aus.
+
 ### P2 — Nächsten Kandidaten vorbereiten
 
 **Ziel:** Entwicklungsarbeit ohne Testkontamination starten.
@@ -196,6 +200,11 @@ einem Gate-Pass ausdrücklich benannt ist.
 
 **Fertig, wenn:** ein kurzer `next_candidate_plan.md` mit Hypothesen,
 Dev-Metriken und Abbruchkriterien vorliegt; noch kein Modelllauf.
+
+**Status 2026-11-12:** Erledigt. Der Plan liegt unter
+[`next_candidate_plan.md`](next_candidate_plan.md); P0 ist die Beschaffung
+eines externen Holdouts, danach folgen Dev-Experimente und genau ein
+Holdout-Lauf. Kein Modelllauf gestartet.
 
 ### P2 — B-Status prüfen
 
