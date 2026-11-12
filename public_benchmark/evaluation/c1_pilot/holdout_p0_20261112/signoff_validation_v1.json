@@ -2,17 +2,17 @@
   "signoff_id": "p0_manual_signoff_v1",
   "status": "complete_assisted_pending_human_review",
   "human_review": "partial",
-  "human_reviewed": 17,
-  "assisted_reviewed": 48,
+  "human_reviewed": 27,
+  "assisted_reviewed": 38,
   "signoff_status": "complete_assisted_pending_human_review",
   "records": 65,
   "completed": 65,
   "open": 0,
-  "assisted": 48,
+  "assisted": 38,
   "human_review_complete": false,
   "reviewer_counts": {
-    "HB": 17,
-    "Codebuff assistiert": 48
+    "HB": 27,
+    "Codebuff assistiert": 38
   },
   "preliminary_counts": {
     "include_for_fulltext": 36,

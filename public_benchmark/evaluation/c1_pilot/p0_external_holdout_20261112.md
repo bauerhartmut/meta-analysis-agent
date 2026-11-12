@@ -1,7 +1,7 @@
 # P0: Externer C1-Holdout - Beschaffungsplan
 
 Stand: 2026-11-12
-Status: **MANUELLE PRUEFUNG ABGESCHLOSSEN (ASSISTIERT) - 17 menschlich, 48 assistiert; 181 ausgeschlossen, 415 vorlaeufig fuer Volltext; menschliche Gegenpruefung offen, nicht G5-valid**
+Status: **MANUELLE PRUEFUNG ABGESCHLOSSEN (ASSISTIERT) - 27 menschlich, 38 assistiert; 181 ausgeschlossen, 415 vorlaeufig fuer Volltext; menschliche Gegenpruefung offen, nicht G5-valid**
 Ziel: 30 Artikel, 100 Records, artikeldisjunkt zu Dev und zum verbrauchten Test
 
 ### Statusfelder
@@ -10,8 +10,8 @@ Ziel: 30 Artikel, 100 Records, artikeldisjunkt zu Dev und zum verbrauchten Test
 |---|---|---|
 | `status`, `signoff_status` | `pending_human_review`, `complete_assisted_pending_human_review`, `complete` | `complete_assisted_pending_human_review` |
 | `human_review` | `pending`, `partial`, `complete` | `partial` |
-| `human_reviewed` | Ganzzahl 0-65 | 17 |
-| `assisted_reviewed` | Ganzzahl 0-65 | 48 |
+| `human_reviewed` | Ganzzahl 0-65 | 27 |
+| `assisted_reviewed` | Ganzzahl 0-65 | 38 |
 
 `human_review: "partial"` heisst: menschliche und assistierte Entscheidungen
 gemischt; `complete` erst, wenn keine assistierte Entscheidung mehr vorliegt.
@@ -24,9 +24,9 @@ die CSV. Kein Konsument erwartet einen booleschen Top-Level-Wert.
 
 Die 48 verbleibenden assistierten Fälle wurden am 2026-11-12 anhand ihrer
 Abstracts vorprüft: **48/48 bestätigt, 0 Korrekturen**. Zehn dieser Fälle wurden
-unabhängig erneut geprüft: **10/10 bestätigt, 0 Korrekturvorschläge**; die
-Entscheidungen blieben unverändert. Die menschliche Freigabe der 48 Fälle bleibt
-offen.
+unabhängig erneut geprüft und **10/10 menschlich bestätigt**; die Entscheidungen
+blieben unverändert. Die menschliche Freigabe der 38 verbleibenden assistierten
+Fälle bleibt offen.
 
 ## 1. Entscheidung
 
@@ -104,8 +104,8 @@ Die 181 Ausschluesse setzen sich aus 152 Regelausschluessen und 29 manuellen
 Ausschluessen zusammen.
 
 Die 415 Volltextkandidaten sind **nicht** endgueltig eingeschlossen. Die 65
-Einzelfallentscheidungen sind eingetragen: **17 von HB**, **48 assistiert durch
-Codebuff**. Die menschliche Gegenpruefung der 48 assistierten Faelle steht aus.
+Einzelfallentscheidungen sind eingetragen: **27 von HB**, **38 assistiert durch
+Codebuff**. Die menschliche Gegenpruefung der 38 assistierten Faelle steht aus.
 Mehrfachgruende sind moeglich; die Regelzahlen
 sind nicht additiv.
 

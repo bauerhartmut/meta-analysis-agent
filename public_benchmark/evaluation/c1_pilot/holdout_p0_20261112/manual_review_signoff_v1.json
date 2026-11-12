@@ -2,11 +2,11 @@
   "signoff_id": "p0_manual_signoff_v1",
   "status": "complete_assisted_pending_human_review",
   "human_review": "partial",
-  "human_reviewed": 17,
-  "assisted_reviewed": 48,
+  "human_reviewed": 27,
+  "assisted_reviewed": 38,
   "signoff_status": "complete_assisted_pending_human_review",
   "reviewed": 65,
-  "assisted": 48,
+  "assisted": 38,
   "records": 65,
   "counts": {
     "include_for_fulltext": 36,
@@ -297,10 +297,10 @@
       "priority": "mittel",
       "open_question": "Post hoc; OS-Ereignisse pro Arm und 4-Jahres-Daten pruefen.",
       "needs_fulltext": true,
-      "reviewer": "Codebuff assistiert",
+      "reviewer": "HB",
       "review_date": "2026-11-12",
       "final_decision": "einschluss",
-      "human_note": "Post-hoc-Analyse eines RCT; Durvalumab vs. Placebo; OS; Volltext. Assistierte Entscheidung nach Delegation; keine menschliche Einzelpruefung.",
+      "human_note": "TOPAZ-1 randomisierter Zweiarmvergleich Durvalumab vs. Placebo; OS 13.0 vs. 11.4 Monate. Menschliche Bestätigung durch HB am 2026-11-12: Einschluss bestätigt.",
       "number": 15
     },
     {
@@ -487,10 +487,10 @@
       "priority": "mittel",
       "open_question": "Post hoc; Veraenderungswerte mit SD und zwei Tropicamid-Arme pruefen.",
       "needs_fulltext": true,
-      "reviewer": "Codebuff assistiert",
+      "reviewer": "HB",
       "review_date": "2026-11-12",
       "final_decision": "einschluss",
-      "human_note": "Post-hoc-Analyse eines RCT; 0.5% vs. 1% Tropicamid; Keratometrie mit SD; Volltext. Assistierte Entscheidung nach Delegation; keine menschliche Einzelpruefung.",
+      "human_note": "Randomisierte RCT; 0.5% (n=46) vs. 1% Tropicamid (n=42); Keratometrieaenderungen mit SD. Menschliche Bestätigung durch HB am 2026-11-12: Einschluss bestätigt.",
       "number": 25
     },
     {
@@ -525,10 +525,10 @@
       "priority": "mittel",
       "open_question": "Langzeit-Follow-up; DFS/OS-Ereignisse pro Arm pruefen.",
       "needs_fulltext": true,
-      "reviewer": "Codebuff assistiert",
+      "reviewer": "HB",
       "review_date": "2026-11-12",
       "final_decision": "einschluss",
-      "human_note": "Langzeit-Follow-up eines RCT; zwei Arme; DFS/OS; Volltext. Assistierte Entscheidung nach Delegation; keine menschliche Einzelpruefung.",
+      "human_note": "Randomisiert 1:1; Immunonutrition vs. normale Diaet; DFS/OS. Menschliche Bestätigung durch HB am 2026-11-12: Einschluss bestätigt.",
       "number": 27
     },
     {
@@ -601,10 +601,10 @@
       "priority": "mittel",
       "open_question": "Subgruppe <75/>=75; absolute Ereigniszahlen pro Arm und Interaktion pruefen.",
       "needs_fulltext": true,
-      "reviewer": "Codebuff assistiert",
+      "reviewer": "HB",
       "review_date": "2026-11-12",
       "final_decision": "einschluss",
-      "human_note": "Zweiarmige randomisierte Deeskalation vs. Fortfuehrung; Alters-Subgruppenanalyse mit Ereignisraten; Armwerte im Volltext pruefen. Assistierte Entscheidung nach Delegation; keine menschliche Einzelpruefung.",
+      "human_note": "TALOS-AMI randomisiert; Deeskalation vs. Fortfuehrung; zusammengesetzter klinischer Endpunkt. Menschliche Bestätigung durch HB am 2026-11-12: Einschluss bestätigt.",
       "number": 31
     },
     {
@@ -677,10 +677,10 @@
       "priority": "mittel",
       "open_question": "Kleine Stichprobe n=36; PROMIS-29 Armwerte/SD pruefen.",
       "needs_fulltext": true,
-      "reviewer": "Codebuff assistiert",
+      "reviewer": "HB",
       "review_date": "2026-11-12",
       "final_decision": "einschluss",
-      "human_note": "Randomisierter 2:1-Placebo-Vergleich; zwei Arme; PROMIS-29; Volltext pruefen. Assistierte Entscheidung nach Delegation; keine menschliche Einzelpruefung.",
+      "human_note": "2:1 randomisiert; AER002 vs. Placebo; PROMIS-29 PHSS; kleine Stichprobe. Menschliche Bestätigung durch HB am 2026-11-12: Einschluss bestätigt.",
       "number": 35
     },
     {
@@ -772,10 +772,10 @@
       "priority": "mittel",
       "open_question": "Produktivitaet/Kosten; klinische VMS-Armwerte pruefen.",
       "needs_fulltext": false,
-      "reviewer": "Codebuff assistiert",
+      "reviewer": "HB",
       "review_date": "2026-11-12",
       "final_decision": "ausschluss",
-      "human_note": "Post-hoc-Arbeitsproduktivitaets-/Kostenanalyse; kein klinischer Armendpunkt. Assistierte Entscheidung nach Delegation; keine menschliche Einzelpruefung.",
+      "human_note": "WPAI-Produktivitaet/Kosten; kein klinischer VMS-Armendpunkt. Menschliche Bestätigung durch HB am 2026-11-12: Ausschluss bestätigt.",
       "number": 40
     },
     {
@@ -810,10 +810,10 @@
       "priority": "mittel",
       "open_question": "Praevalenz; Armvergleich unklar; GAP70+ Volltext pruefen.",
       "needs_fulltext": false,
-      "reviewer": "Codebuff assistiert",
+      "reviewer": "HB",
       "review_date": "2026-11-12",
       "final_decision": "ausschluss",
-      "human_note": "Praevalenzanalyse ohne Armgegenueberstellung; kein Behandlungseffekt. Assistierte Entscheidung nach Delegation; keine menschliche Einzelpruefung.",
+      "human_note": "Praevalenz/Verlauf/Assoziation; kein randomisierter Behandlungseffekt. Menschliche Bestätigung durch HB am 2026-11-12: Ausschluss bestätigt.",
       "number": 42
     },
     {
@@ -848,10 +848,10 @@
       "priority": "mittel",
       "open_question": "Primaer CEA; klinische PREVSAM-Armwerte im Volltext pruefen.",
       "needs_fulltext": false,
-      "reviewer": "Codebuff assistiert",
+      "reviewer": "HB",
       "review_date": "2026-11-12",
       "final_decision": "ausschluss",
-      "human_note": "Kosteneffektivitaetsanalyse; keine extrahierbaren klinischen Armwerte als primaeres Ziel. Assistierte Entscheidung nach Delegation; keine menschliche Einzelpruefung.",
+      "human_note": "Kosteneffektivitaetsanalyse; keine klinischen Armwerte. Menschliche Bestätigung durch HB am 2026-11-12: Ausschluss bestätigt.",
       "number": 44
     },
     {
@@ -1152,10 +1152,10 @@
       "priority": "niedrig",
       "open_question": "Drei Arme; kein Zweiarm-Vergleich.",
       "needs_fulltext": false,
-      "reviewer": "Codebuff assistiert",
+      "reviewer": "HB",
       "review_date": "2026-11-12",
       "final_decision": "ausschluss",
-      "human_note": "Drei Arme (904 nm, 650 nm, Sham); kein Zweiarm-Vergleich. Assistierte Entscheidung nach Delegation; keine menschliche Einzelpruefung.",
+      "human_note": "Drei Arme (904 nm, 650 nm, Sham); kein Zweiarm-Kontrast. Menschliche Bestätigung durch HB am 2026-11-12: Ausschluss bestätigt.",
       "number": 60
     },
     {
@@ -1190,10 +1190,10 @@
       "priority": "niedrig",
       "open_question": "Vier Arme; keine Zweiarm-Kontraste.",
       "needs_fulltext": false,
-      "reviewer": "Codebuff assistiert",
+      "reviewer": "HB",
       "review_date": "2026-11-12",
       "final_decision": "ausschluss",
-      "human_note": "Vier Arme (drei Dosen plus Placebo); kein Zweiarm-Vergleich. Assistierte Entscheidung nach Delegation; keine menschliche Einzelpruefung.",
+      "human_note": "Vier Arme (5.5, 9, 17.2 mg Orforglipron, Placebo); kein Zweiarm-Kontrast. Menschliche Bestätigung durch HB am 2026-11-12: Ausschluss bestätigt.",
       "number": 62
     },
     {
