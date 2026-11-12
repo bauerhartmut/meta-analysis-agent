@@ -305,6 +305,9 @@ Plan: [`holdout_plan_20261112.md`](holdout_plan_20261112.md), Schema:
   kompakte Freigabeliste für die 65 Einzelfälle mit Quelle, Entscheidung,
   Priorität und Prüfzweifel; Reviewer, Datum und finale Entscheidung sind
   dokumentiert, davon 51 assistiert.
+- [`holdout_p0_20261112/manual_review_countercheck_v1.md`](holdout_p0_20261112/manual_review_countercheck_v1.md):
+  assistierte Gegenprüfung der drei Hochprioritäts-Ausschlüsse; 3/3 bestätigt,
+  0 Korrekturen, menschliche Freigabe weiterhin offen.
 - [`holdout_p0_20261112/fulltext_extraction_template_v1.md`](holdout_p0_20261112/fulltext_extraction_template_v1.md):
   Volltext-Prüfvorlage für die 36 vorläufigen Einschlüsse mit Eignungscheck,
   Armdefinition und vier Outcome-Slots für N/Mean/SD/Events; keine Schätzung
