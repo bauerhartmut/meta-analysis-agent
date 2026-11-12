@@ -1,0 +1,1290 @@
+{
+  "run_id": "c1_dev_20261112_glm_5_3",
+  "records": 26,
+  "records_with_output": 26,
+  "audit_status": {
+    "verified_exact": 24,
+    "verified_table": 2
+  },
+  "expected_fields_total": 140,
+  "expected_fields_present": 34,
+  "coverage": 0.2429,
+  "exact_fields": 34,
+  "exact_rate": 0.2429,
+  "missing_fields": 106,
+  "wrong_fields": 0,
+  "hallucinated_fields": 0,
+  "null_expected_total": 68,
+  "null_correct": 68,
+  "null_discipline": 1.0,
+  "mae_paired_all": 0.0,
+  "schema_or_parse_error_records": [
+    4,
+    5,
+    88,
+    120,
+    190,
+    191,
+    192,
+    224,
+    227,
+    228,
+    229,
+    230,
+    231,
+    232,
+    233,
+    235,
+    238,
+    260,
+    262,
+    263
+  ],
+  "records_all_expected_exact": [
+    225,
+    226,
+    234,
+    236,
+    237,
+    261
+  ],
+  "field_summary": {
+    "intervention_n": {
+      "expected": 26,
+      "present": 6,
+      "exact": 6,
+      "missing": 20,
+      "wrong": 0,
+      "abs_diff_sum": 0.0,
+      "paired": 6,
+      "exact_rate": 0.2308,
+      "coverage": 0.2308,
+      "mae": 0.0
+    },
+    "comparator_n": {
+      "expected": 26,
+      "present": 6,
+      "exact": 6,
+      "missing": 20,
+      "wrong": 0,
+      "abs_diff_sum": 0.0,
+      "paired": 6,
+      "exact_rate": 0.2308,
+      "coverage": 0.2308,
+      "mae": 0.0
+    },
+    "intervention_mean": {
+      "expected": 18,
+      "present": 5,
+      "exact": 5,
+      "missing": 13,
+      "wrong": 0,
+      "abs_diff_sum": 0.0,
+      "paired": 5,
+      "exact_rate": 0.2778,
+      "coverage": 0.2778,
+      "mae": 0.0
+    },
+    "comparator_mean": {
+      "expected": 18,
+      "present": 5,
+      "exact": 5,
+      "missing": 13,
+      "wrong": 0,
+      "abs_diff_sum": 0.0,
+      "paired": 5,
+      "exact_rate": 0.2778,
+      "coverage": 0.2778,
+      "mae": 0.0
+    },
+    "intervention_sd": {
+      "expected": 18,
+      "present": 5,
+      "exact": 5,
+      "missing": 13,
+      "wrong": 0,
+      "abs_diff_sum": 0.0,
+      "paired": 5,
+      "exact_rate": 0.2778,
+      "coverage": 0.2778,
+      "mae": 0.0
+    },
+    "comparator_sd": {
+      "expected": 18,
+      "present": 5,
+      "exact": 5,
+      "missing": 13,
+      "wrong": 0,
+      "abs_diff_sum": 0.0,
+      "paired": 5,
+      "exact_rate": 0.2778,
+      "coverage": 0.2778,
+      "mae": 0.0
+    },
+    "intervention_events": {
+      "expected": 8,
+      "present": 1,
+      "exact": 1,
+      "missing": 7,
+      "wrong": 0,
+      "abs_diff_sum": 0.0,
+      "paired": 1,
+      "exact_rate": 0.125,
+      "coverage": 0.125,
+      "mae": 0.0
+    },
+    "comparator_events": {
+      "expected": 8,
+      "present": 1,
+      "exact": 1,
+      "missing": 7,
+      "wrong": 0,
+      "abs_diff_sum": 0.0,
+      "paired": 1,
+      "exact_rate": 0.125,
+      "coverage": 0.125,
+      "mae": 0.0
+    },
+    "_hallucinated": {
+      "count": 0
+    }
+  },
+  "records_detail": [
+    {
+      "record_id": 4,
+      "outcome_type": "continuous",
+      "audit_status": "verified_exact",
+      "expected_fields": 6,
+      "exact_fields": 0,
+      "missing_fields": 6,
+      "wrong_fields": 0,
+      "hallucinated_fields": 0,
+      "schema_error": ""
+    },
+    {
+      "record_id": 5,
+      "outcome_type": "continuous",
+      "audit_status": "verified_exact",
+      "expected_fields": 6,
+      "exact_fields": 0,
+      "missing_fields": 6,
+      "wrong_fields": 0,
+      "hallucinated_fields": 0,
+      "schema_error": ""
+    },
+    {
+      "record_id": 88,
+      "outcome_type": "continuous",
+      "audit_status": "verified_exact",
+      "expected_fields": 6,
+      "exact_fields": 0,
+      "missing_fields": 6,
+      "wrong_fields": 0,
+      "hallucinated_fields": 0,
+      "schema_error": ""
+    },
+    {
+      "record_id": 120,
+      "outcome_type": "binary",
+      "audit_status": "verified_exact",
+      "expected_fields": 4,
+      "exact_fields": 0,
+      "missing_fields": 4,
+      "wrong_fields": 0,
+      "hallucinated_fields": 0,
+      "schema_error": ""
+    },
+    {
+      "record_id": 190,
+      "outcome_type": "binary",
+      "audit_status": "verified_table",
+      "expected_fields": 4,
+      "exact_fields": 0,
+      "missing_fields": 4,
+      "wrong_fields": 0,
+      "hallucinated_fields": 0,
+      "schema_error": ""
+    },
+    {
+      "record_id": 191,
+      "outcome_type": "binary",
+      "audit_status": "verified_table",
+      "expected_fields": 4,
+      "exact_fields": 0,
+      "missing_fields": 4,
+      "wrong_fields": 0,
+      "hallucinated_fields": 0,
+      "schema_error": ""
+    },
+    {
+      "record_id": 192,
+      "outcome_type": "binary",
+      "audit_status": "verified_exact",
+      "expected_fields": 4,
+      "exact_fields": 0,
+      "missing_fields": 4,
+      "wrong_fields": 0,
+      "hallucinated_fields": 0,
+      "schema_error": ""
+    },
+    {
+      "record_id": 224,
+      "outcome_type": "continuous",
+      "audit_status": "verified_exact",
+      "expected_fields": 6,
+      "exact_fields": 0,
+      "missing_fields": 6,
+      "wrong_fields": 0,
+      "hallucinated_fields": 0,
+      "schema_error": ""
+    },
+    {
+      "record_id": 225,
+      "outcome_type": "continuous",
+      "audit_status": "verified_exact",
+      "expected_fields": 6,
+      "exact_fields": 6,
+      "missing_fields": 0,
+      "wrong_fields": 0,
+      "hallucinated_fields": 0,
+      "schema_error": ""
+    },
+    {
+      "record_id": 226,
+      "outcome_type": "continuous",
+      "audit_status": "verified_exact",
+      "expected_fields": 6,
+      "exact_fields": 6,
+      "missing_fields": 0,
+      "wrong_fields": 0,
+      "hallucinated_fields": 0,
+      "schema_error": ""
+    },
+    {
+      "record_id": 227,
+      "outcome_type": "continuous",
+      "audit_status": "verified_exact",
+      "expected_fields": 6,
+      "exact_fields": 0,
+      "missing_fields": 6,
+      "wrong_fields": 0,
+      "hallucinated_fields": 0,
+      "schema_error": ""
+    },
+    {
+      "record_id": 228,
+      "outcome_type": "continuous",
+      "audit_status": "verified_exact",
+      "expected_fields": 6,
+      "exact_fields": 0,
+      "missing_fields": 6,
+      "wrong_fields": 0,
+      "hallucinated_fields": 0,
+      "schema_error": ""
+    },
+    {
+      "record_id": 229,
+      "outcome_type": "continuous",
+      "audit_status": "verified_exact",
+      "expected_fields": 6,
+      "exact_fields": 0,
+      "missing_fields": 6,
+      "wrong_fields": 0,
+      "hallucinated_fields": 0,
+      "schema_error": ""
+    },
+    {
+      "record_id": 230,
+      "outcome_type": "continuous",
+      "audit_status": "verified_exact",
+      "expected_fields": 6,
+      "exact_fields": 0,
+      "missing_fields": 6,
+      "wrong_fields": 0,
+      "hallucinated_fields": 0,
+      "schema_error": ""
+    },
+    {
+      "record_id": 231,
+      "outcome_type": "continuous",
+      "audit_status": "verified_exact",
+      "expected_fields": 6,
+      "exact_fields": 0,
+      "missing_fields": 6,
+      "wrong_fields": 0,
+      "hallucinated_fields": 0,
+      "schema_error": ""
+    },
+    {
+      "record_id": 232,
+      "outcome_type": "continuous",
+      "audit_status": "verified_exact",
+      "expected_fields": 6,
+      "exact_fields": 0,
+      "missing_fields": 6,
+      "wrong_fields": 0,
+      "hallucinated_fields": 0,
+      "schema_error": ""
+    },
+    {
+      "record_id": 233,
+      "outcome_type": "continuous",
+      "audit_status": "verified_exact",
+      "expected_fields": 6,
+      "exact_fields": 0,
+      "missing_fields": 6,
+      "wrong_fields": 0,
+      "hallucinated_fields": 0,
+      "schema_error": ""
+    },
+    {
+      "record_id": 234,
+      "outcome_type": "continuous",
+      "audit_status": "verified_exact",
+      "expected_fields": 6,
+      "exact_fields": 6,
+      "missing_fields": 0,
+      "wrong_fields": 0,
+      "hallucinated_fields": 0,
+      "schema_error": ""
+    },
+    {
+      "record_id": 235,
+      "outcome_type": "continuous",
+      "audit_status": "verified_exact",
+      "expected_fields": 6,
+      "exact_fields": 0,
+      "missing_fields": 6,
+      "wrong_fields": 0,
+      "hallucinated_fields": 0,
+      "schema_error": ""
+    },
+    {
+      "record_id": 236,
+      "outcome_type": "continuous",
+      "audit_status": "verified_exact",
+      "expected_fields": 6,
+      "exact_fields": 6,
+      "missing_fields": 0,
+      "wrong_fields": 0,
+      "hallucinated_fields": 0,
+      "schema_error": ""
+    },
+    {
+      "record_id": 237,
+      "outcome_type": "continuous",
+      "audit_status": "verified_exact",
+      "expected_fields": 6,
+      "exact_fields": 6,
+      "missing_fields": 0,
+      "wrong_fields": 0,
+      "hallucinated_fields": 0,
+      "schema_error": ""
+    },
+    {
+      "record_id": 238,
+      "outcome_type": "continuous",
+      "audit_status": "verified_exact",
+      "expected_fields": 6,
+      "exact_fields": 0,
+      "missing_fields": 6,
+      "wrong_fields": 0,
+      "hallucinated_fields": 0,
+      "schema_error": ""
+    },
+    {
+      "record_id": 260,
+      "outcome_type": "binary",
+      "audit_status": "verified_exact",
+      "expected_fields": 4,
+      "exact_fields": 0,
+      "missing_fields": 4,
+      "wrong_fields": 0,
+      "hallucinated_fields": 0,
+      "schema_error": ""
+    },
+    {
+      "record_id": 261,
+      "outcome_type": "binary",
+      "audit_status": "verified_exact",
+      "expected_fields": 4,
+      "exact_fields": 4,
+      "missing_fields": 0,
+      "wrong_fields": 0,
+      "hallucinated_fields": 0,
+      "schema_error": ""
+    },
+    {
+      "record_id": 262,
+      "outcome_type": "binary",
+      "audit_status": "verified_exact",
+      "expected_fields": 4,
+      "exact_fields": 0,
+      "missing_fields": 4,
+      "wrong_fields": 0,
+      "hallucinated_fields": 0,
+      "schema_error": ""
+    },
+    {
+      "record_id": 263,
+      "outcome_type": "binary",
+      "audit_status": "verified_exact",
+      "expected_fields": 4,
+      "exact_fields": 0,
+      "missing_fields": 4,
+      "wrong_fields": 0,
+      "hallucinated_fields": 0,
+      "schema_error": ""
+    }
+  ],
+  "errors": [
+    {
+      "record_id": 4,
+      "field": "intervention_n",
+      "category": "fehlend",
+      "reference": 30.0,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 4,
+      "field": "comparator_n",
+      "category": "fehlend",
+      "reference": 30.0,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 4,
+      "field": "intervention_mean",
+      "category": "fehlend",
+      "reference": 47.5,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 4,
+      "field": "comparator_mean",
+      "category": "fehlend",
+      "reference": 26.5,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 4,
+      "field": "intervention_sd",
+      "category": "fehlend",
+      "reference": 38.9,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 4,
+      "field": "comparator_sd",
+      "category": "fehlend",
+      "reference": 27.4,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 5,
+      "field": "intervention_n",
+      "category": "fehlend",
+      "reference": 30.0,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 5,
+      "field": "comparator_n",
+      "category": "fehlend",
+      "reference": 30.0,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 5,
+      "field": "intervention_mean",
+      "category": "fehlend",
+      "reference": 3.59,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 5,
+      "field": "comparator_mean",
+      "category": "fehlend",
+      "reference": 2.19,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 5,
+      "field": "intervention_sd",
+      "category": "fehlend",
+      "reference": 2.35,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 5,
+      "field": "comparator_sd",
+      "category": "fehlend",
+      "reference": 1.63,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 88,
+      "field": "intervention_n",
+      "category": "fehlend",
+      "reference": 19.0,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 88,
+      "field": "comparator_n",
+      "category": "fehlend",
+      "reference": 23.0,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 88,
+      "field": "intervention_mean",
+      "category": "fehlend",
+      "reference": 117.63,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 88,
+      "field": "comparator_mean",
+      "category": "fehlend",
+      "reference": 158.52,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 88,
+      "field": "intervention_sd",
+      "category": "fehlend",
+      "reference": 19.01,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 88,
+      "field": "comparator_sd",
+      "category": "fehlend",
+      "reference": 23.19,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 120,
+      "field": "intervention_n",
+      "category": "fehlend",
+      "reference": 20.0,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 120,
+      "field": "comparator_n",
+      "category": "fehlend",
+      "reference": 44.0,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 120,
+      "field": "intervention_events",
+      "category": "fehlend",
+      "reference": 8.0,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 120,
+      "field": "comparator_events",
+      "category": "fehlend",
+      "reference": 13.0,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 190,
+      "field": "intervention_n",
+      "category": "fehlend",
+      "reference": 125.0,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 190,
+      "field": "comparator_n",
+      "category": "fehlend",
+      "reference": 133.0,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 190,
+      "field": "intervention_events",
+      "category": "fehlend",
+      "reference": 52.0,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 190,
+      "field": "comparator_events",
+      "category": "fehlend",
+      "reference": 51.0,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 191,
+      "field": "intervention_n",
+      "category": "fehlend",
+      "reference": 125.0,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 191,
+      "field": "comparator_n",
+      "category": "fehlend",
+      "reference": 133.0,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 191,
+      "field": "intervention_events",
+      "category": "fehlend",
+      "reference": 49.0,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 191,
+      "field": "comparator_events",
+      "category": "fehlend",
+      "reference": 64.0,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 192,
+      "field": "intervention_n",
+      "category": "fehlend",
+      "reference": 125.0,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 192,
+      "field": "comparator_n",
+      "category": "fehlend",
+      "reference": 133.0,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 192,
+      "field": "intervention_events",
+      "category": "fehlend",
+      "reference": 86.0,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 192,
+      "field": "comparator_events",
+      "category": "fehlend",
+      "reference": 78.0,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 224,
+      "field": "intervention_n",
+      "category": "fehlend",
+      "reference": 35.0,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 224,
+      "field": "comparator_n",
+      "category": "fehlend",
+      "reference": 35.0,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 224,
+      "field": "intervention_mean",
+      "category": "fehlend",
+      "reference": 0.3,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 224,
+      "field": "comparator_mean",
+      "category": "fehlend",
+      "reference": 0.38,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 224,
+      "field": "intervention_sd",
+      "category": "fehlend",
+      "reference": 0.79,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 224,
+      "field": "comparator_sd",
+      "category": "fehlend",
+      "reference": 0.98,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 227,
+      "field": "intervention_n",
+      "category": "fehlend",
+      "reference": 35.0,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 227,
+      "field": "comparator_n",
+      "category": "fehlend",
+      "reference": 35.0,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 227,
+      "field": "intervention_mean",
+      "category": "fehlend",
+      "reference": 5.28,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 227,
+      "field": "comparator_mean",
+      "category": "fehlend",
+      "reference": 5.75,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 227,
+      "field": "intervention_sd",
+      "category": "fehlend",
+      "reference": 2.34,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 227,
+      "field": "comparator_sd",
+      "category": "fehlend",
+      "reference": 2.34,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 228,
+      "field": "intervention_n",
+      "category": "fehlend",
+      "reference": 35.0,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 228,
+      "field": "comparator_n",
+      "category": "fehlend",
+      "reference": 35.0,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 228,
+      "field": "intervention_mean",
+      "category": "fehlend",
+      "reference": 13.21,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 228,
+      "field": "comparator_mean",
+      "category": "fehlend",
+      "reference": 13.8,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 228,
+      "field": "intervention_sd",
+      "category": "fehlend",
+      "reference": 1.44,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 228,
+      "field": "comparator_sd",
+      "category": "fehlend",
+      "reference": 1.14,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 229,
+      "field": "intervention_n",
+      "category": "fehlend",
+      "reference": 35.0,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 229,
+      "field": "comparator_n",
+      "category": "fehlend",
+      "reference": 35.0,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 229,
+      "field": "intervention_mean",
+      "category": "fehlend",
+      "reference": 487.33,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 229,
+      "field": "comparator_mean",
+      "category": "fehlend",
+      "reference": 453.57,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 229,
+      "field": "intervention_sd",
+      "category": "fehlend",
+      "reference": 111.47,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 229,
+      "field": "comparator_sd",
+      "category": "fehlend",
+      "reference": 60.87,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 230,
+      "field": "intervention_n",
+      "category": "fehlend",
+      "reference": 35.0,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 230,
+      "field": "comparator_n",
+      "category": "fehlend",
+      "reference": 35.0,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 230,
+      "field": "intervention_mean",
+      "category": "fehlend",
+      "reference": 35.53,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 230,
+      "field": "comparator_mean",
+      "category": "fehlend",
+      "reference": 26.83,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 230,
+      "field": "intervention_sd",
+      "category": "fehlend",
+      "reference": 5.87,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 230,
+      "field": "comparator_sd",
+      "category": "fehlend",
+      "reference": 5.47,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 231,
+      "field": "intervention_n",
+      "category": "fehlend",
+      "reference": 35.0,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 231,
+      "field": "comparator_n",
+      "category": "fehlend",
+      "reference": 35.0,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 231,
+      "field": "intervention_mean",
+      "category": "fehlend",
+      "reference": 17.83,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 231,
+      "field": "comparator_mean",
+      "category": "fehlend",
+      "reference": 12.48,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 231,
+      "field": "intervention_sd",
+      "category": "fehlend",
+      "reference": 2.7,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 231,
+      "field": "comparator_sd",
+      "category": "fehlend",
+      "reference": 2.9,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 232,
+      "field": "intervention_n",
+      "category": "fehlend",
+      "reference": 35.0,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 232,
+      "field": "comparator_n",
+      "category": "fehlend",
+      "reference": 35.0,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 232,
+      "field": "intervention_mean",
+      "category": "fehlend",
+      "reference": 13.21,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 232,
+      "field": "comparator_mean",
+      "category": "fehlend",
+      "reference": 13.8,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 232,
+      "field": "intervention_sd",
+      "category": "fehlend",
+      "reference": 1.44,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 232,
+      "field": "comparator_sd",
+      "category": "fehlend",
+      "reference": 1.14,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 233,
+      "field": "intervention_n",
+      "category": "fehlend",
+      "reference": 35.0,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 233,
+      "field": "comparator_n",
+      "category": "fehlend",
+      "reference": 35.0,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 233,
+      "field": "intervention_mean",
+      "category": "fehlend",
+      "reference": 39.1,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 233,
+      "field": "comparator_mean",
+      "category": "fehlend",
+      "reference": 37.99,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 233,
+      "field": "intervention_sd",
+      "category": "fehlend",
+      "reference": 2.76,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 233,
+      "field": "comparator_sd",
+      "category": "fehlend",
+      "reference": 2.14,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 235,
+      "field": "intervention_n",
+      "category": "fehlend",
+      "reference": 35.0,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 235,
+      "field": "comparator_n",
+      "category": "fehlend",
+      "reference": 35.0,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 235,
+      "field": "intervention_mean",
+      "category": "fehlend",
+      "reference": 13.6,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 235,
+      "field": "comparator_mean",
+      "category": "fehlend",
+      "reference": 14.71,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 235,
+      "field": "intervention_sd",
+      "category": "fehlend",
+      "reference": 3.05,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 235,
+      "field": "comparator_sd",
+      "category": "fehlend",
+      "reference": 3.87,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 238,
+      "field": "intervention_n",
+      "category": "fehlend",
+      "reference": 35.0,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 238,
+      "field": "comparator_n",
+      "category": "fehlend",
+      "reference": 35.0,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 238,
+      "field": "intervention_mean",
+      "category": "fehlend",
+      "reference": 80.5,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 238,
+      "field": "comparator_mean",
+      "category": "fehlend",
+      "reference": 69.89,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 238,
+      "field": "intervention_sd",
+      "category": "fehlend",
+      "reference": 9.97,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 238,
+      "field": "comparator_sd",
+      "category": "fehlend",
+      "reference": 1.59,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 260,
+      "field": "intervention_n",
+      "category": "fehlend",
+      "reference": 101.0,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 260,
+      "field": "comparator_n",
+      "category": "fehlend",
+      "reference": 99.0,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 260,
+      "field": "intervention_events",
+      "category": "fehlend",
+      "reference": 79.0,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 260,
+      "field": "comparator_events",
+      "category": "fehlend",
+      "reference": 62.0,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 262,
+      "field": "intervention_n",
+      "category": "fehlend",
+      "reference": 115.0,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 262,
+      "field": "comparator_n",
+      "category": "fehlend",
+      "reference": 112.0,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 262,
+      "field": "intervention_events",
+      "category": "fehlend",
+      "reference": 69.0,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 262,
+      "field": "comparator_events",
+      "category": "fehlend",
+      "reference": 79.0,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 263,
+      "field": "intervention_n",
+      "category": "fehlend",
+      "reference": 112.0,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 263,
+      "field": "comparator_n",
+      "category": "fehlend",
+      "reference": 112.0,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 263,
+      "field": "intervention_events",
+      "category": "fehlend",
+      "reference": 72.0,
+      "prediction": null,
+      "abs_diff": null
+    },
+    {
+      "record_id": 263,
+      "field": "comparator_events",
+      "category": "fehlend",
+      "reference": 79.0,
+      "prediction": null,
+      "abs_diff": null
+    }
+  ]
+}
