@@ -2,11 +2,12 @@
   "signoff_id": "p0_manual_signoff_v1",
   "status": "complete_assisted_pending_human_review",
   "human_review": "partial",
-  "human_reviewed": 27,
-  "assisted_reviewed": 38,
+  "human_reviewed": 37,
+  "assisted_reviewed": 28,
   "signoff_status": "complete_assisted_pending_human_review",
   "reviewed": 65,
-  "assisted": 38,
+  "assisted": 28,
+  "human_review_complete": false,
   "records": 65,
   "counts": {
     "include_for_fulltext": 36,
@@ -316,10 +317,10 @@
       "priority": "mittel",
       "open_question": "Sekundaeranalyse; KCCQ-Armwerte/SD und mITT pruefen.",
       "needs_fulltext": true,
-      "reviewer": "Codebuff assistiert",
+      "reviewer": "HB",
       "review_date": "2026-11-12",
       "final_decision": "einschluss",
-      "human_note": "Sekundaeranalyse eines placebo-kontrollierten RCT; Acoramidis vs. Placebo; KCCQ; Volltext. Assistierte Entscheidung nach Delegation; keine menschliche Einzelpruefung.",
+      "human_note": "ATTRibute-CM placebokontrollierte Phase-3-RCT; Acoramidis vs. Placebo; KCCQ-OS LSM-Differenz 9.9. Menschliche Bestaetigung durch HB am 2026-11-12: Einschluss bestaetigt.",
       "number": 16
     },
     {
@@ -335,10 +336,10 @@
       "priority": "mittel",
       "open_question": "Post hoc; Leberfett-Armwerte/SD pruefen.",
       "needs_fulltext": true,
-      "reviewer": "Codebuff assistiert",
+      "reviewer": "HB",
       "review_date": "2026-11-12",
       "final_decision": "einschluss",
-      "human_note": "Post-hoc-Analyse eines RCT; Tirzepatid vs. Insulin degludec; Leberfett; Volltext. Assistierte Entscheidung nach Delegation; keine menschliche Einzelpruefung.",
+      "human_note": "SURPASS-3 MRI; Tirzepatid vs. Insulin degludec; Leberfett nach 52 Wochen. Menschliche Bestaetigung durch HB am 2026-11-12: Einschluss bestaetigt.",
       "number": 17
     },
     {
@@ -354,10 +355,10 @@
       "priority": "mittel",
       "open_question": "Post hoc; Gewicht/Lipide als Armwerte/SD pruefen.",
       "needs_fulltext": true,
-      "reviewer": "Codebuff assistiert",
+      "reviewer": "HB",
       "review_date": "2026-11-12",
       "final_decision": "einschluss",
-      "human_note": "Post-hoc-Analyse eines randomisierten 12-Monats-Vergleichs; PP6M vs. PP3M; Gewicht/Lipide; Volltext. Assistierte Entscheidung nach Delegation; keine menschliche Einzelpruefung.",
+      "human_note": "12-monatige doppelblinde RCT; PP6M vs. PP3M; Gewicht und Lipide. Menschliche Bestaetigung durch HB am 2026-11-12: Einschluss bestaetigt.",
       "number": 18
     },
     {
@@ -373,10 +374,10 @@
       "priority": "mittel",
       "open_question": "Post hoc, per-protocol n=93; VAS-Armwerte/SD pruefen.",
       "needs_fulltext": true,
-      "reviewer": "Codebuff assistiert",
+      "reviewer": "HB",
       "review_date": "2026-11-12",
       "final_decision": "einschluss",
-      "human_note": "Post-hoc-Sekundaeranalyse eines Sham-RCT; DTx vs. Sham; VAS-Schmerz; Volltext. Assistierte Entscheidung nach Delegation; keine menschliche Einzelpruefung.",
+      "human_note": "Multizentrische doppelblinde sham-kontrollierte RCT; DTx vs. Sham; VAS-Schmerz. Menschliche Bestaetigung durch HB am 2026-11-12: Einschluss bestaetigt.",
       "number": 19
     },
     {
@@ -392,10 +393,10 @@
       "priority": "mittel",
       "open_question": "Sekundaeranalyse; EPDS-Armwerte/SD und ITT-Imputation pruefen.",
       "needs_fulltext": true,
-      "reviewer": "Codebuff assistiert",
+      "reviewer": "HB",
       "review_date": "2026-11-12",
       "final_decision": "einschluss",
-      "human_note": "Praeplanmaessige Sekundaeranalyse eines RCT; eMBI vs. TAU; EPDS kontinuierlich; Volltext. Assistierte Entscheidung nach Delegation; keine menschliche Einzelpruefung.",
+      "human_note": "Randomisiert 1:1; eMBI vs. TAU; EPDS, ITT. Menschliche Bestaetigung durch HB am 2026-11-12: Einschluss bestaetigt.",
       "number": 20
     },
     {
@@ -791,10 +792,10 @@
       "priority": "mittel",
       "open_question": "Drei Bedingungen; pruefen, ob PE+PLB vs. SERT als zwei Arme zulaessig waere (P0: nein).",
       "needs_fulltext": false,
-      "reviewer": "Codebuff assistiert",
+      "reviewer": "HB",
       "review_date": "2026-11-12",
       "final_decision": "ausschluss",
-      "human_note": "Drei randomisierte Behandlungsbedingungen; kein Zweiarm-Vergleich. Assistierte Entscheidung nach Delegation; keine menschliche Einzelpruefung.",
+      "human_note": "Drei randomisierte Behandlungsbedingungen; kein Zweiarm-Kontrast. Menschliche Bestaetigung durch HB am 2026-11-12: Ausschluss bestaetigt.",
       "number": 41
     },
     {
@@ -829,10 +830,10 @@
       "priority": "mittel",
       "open_question": "Vergleich nach SSI-Status, nicht randomisierte Arme; klinische Armdaten pruefen.",
       "needs_fulltext": false,
-      "reviewer": "Codebuff assistiert",
+      "reviewer": "HB",
       "review_date": "2026-11-12",
       "final_decision": "ausschluss",
-      "human_note": "Kosten-/QoL-Analyse nach SSI-Status; keine randomisierte Armgegenueberstellung. Assistierte Entscheidung nach Delegation; keine menschliche Einzelpruefung.",
+      "human_note": "Kosten/QALYs nach SSI-Status, nicht nach randomisierten Armen; primaer gesundheitsoekonomisch. Menschliche Bestaetigung durch HB am 2026-11-12: Ausschluss bestaetigt.",
       "number": 43
     },
     {
@@ -867,10 +868,10 @@
       "priority": "mittel",
       "open_question": "EQ-VAS beider Arme gepoolt; kein Treatment-Effekt.",
       "needs_fulltext": false,
-      "reviewer": "Codebuff assistiert",
+      "reviewer": "HB",
       "review_date": "2026-11-12",
       "final_decision": "ausschluss",
-      "human_note": "Gepoolte EQ-VAS-Daten beider Arme zur MID-Schaetzung; kein Behandlungseffekt. Assistierte Entscheidung nach Delegation; keine menschliche Einzelpruefung.",
+      "human_note": "Gepoolte EQ-VAS-Daten beider Arme; MID-Schaetzung; kein Behandlungseffekt. Menschliche Bestaetigung durch HB am 2026-11-12: Ausschluss bestaetigt.",
       "number": 45
     },
     {
@@ -886,10 +887,10 @@
       "priority": "mittel",
       "open_question": "HTA; klinische RCT-Armwerte pruefen, falls berichtet.",
       "needs_fulltext": false,
-      "reviewer": "Codebuff assistiert",
+      "reviewer": "HB",
       "review_date": "2026-11-12",
       "final_decision": "ausschluss",
-      "human_note": "HTA-/Kosteneffektivitaetsanalyse; keine geeigneten Armwerte. Assistierte Entscheidung nach Delegation; keine menschliche Einzelpruefung.",
+      "human_note": "HTA/Kosteneffektivitaet; mediane PFS/OS, keine geeigneten Armwerte. Menschliche Bestaetigung durch HB am 2026-11-12: Ausschluss bestaetigt.",
       "number": 46
     },
     {
@@ -905,10 +906,10 @@
       "priority": "mittel",
       "open_question": "Gepoolt; pruefen, ob Einzelstudien-Armwerte im Volltext stehen.",
       "needs_fulltext": false,
-      "reviewer": "Codebuff assistiert",
+      "reviewer": "HB",
       "review_date": "2026-11-12",
       "final_decision": "ausschluss",
-      "human_note": "Gepoolte Analyse dreier RCTs; keine eigenstaendigen Zweiarm-Armwerte. Assistierte Entscheidung nach Delegation; keine menschliche Einzelpruefung.",
+      "human_note": "Gepoolte Analyse dreier RCTs; keine eigenstaendigen Zweiarm-Armwerte. Menschliche Bestaetigung durch HB am 2026-11-12: Ausschluss bestaetigt.",
       "number": 47
     },
     {

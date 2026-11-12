@@ -28,10 +28,11 @@
     "X10": 1
   },
   "human_review": "partial",
-  "human_reviewed": 27,
-  "assisted_reviewed": 38,
+  "human_reviewed": 37,
+  "assisted_reviewed": 28,
   "signoff_status": "complete_assisted_pending_human_review",
   "human_signoff": "pending",
   "model_used": false,
-  "fulltext_screening": false
+  "fulltext_screening": false,
+  "human_review_complete": false
 }

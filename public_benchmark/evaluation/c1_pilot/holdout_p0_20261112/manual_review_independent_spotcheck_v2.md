@@ -1,4 +1,4 @@
-# Unabhängige Stichprobenprüfung, zweite Runde: 10 der 38 assistierten Fälle
+# Unabhängige Stichprobenprüfung, zweite Runde: 10 zuvor assistierte Fälle
 
 Stand: 2026-11-12
 
@@ -19,8 +19,7 @@ Volltext, kein Netzabruf. Es wurden keine Entscheidungen geändert.
 | 46 | PMC13630015 | ausschluss (X04) | An HTA incorporating evidence from a randomised controlled trial ... The primary economic outcome was the incremental cost-effectiveness ratio (ICER) per quality-adjusted life year (QALY) gained ... median progression-free survival (PFS) and overall survival (OS). | HTA/Kosteneffektivitätsanalyse; berichtet mediane PFS/OS, keine N/Mean/SD- oder Ereignis-Armwerte. Ausschluss X04 bestätigt. |
 | 47 | PMC13714053 | ausschluss (X02) | Pooled data from three randomised controlled trials were used (n=2150) ... Change in physical activity and glucose levels were stratified by the presence of impaired fasting glucose (IFG) and/or impaired glucose tolerance (IGT). | Gepoolte Analyse dreier RCTs; keine eigenständigen Zweiarm-Armwerte. Ausschluss X02 bestätigt. |
 
-**Ergebnis:** 10 von 10 bestätigt, 0 Korrekturvorschläge.
+**Ergebnis:** 10 von 10 menschlich bestätigt, 0 Korrekturvorschläge.
 
-Der Reviewer bleibt `Codebuff assistiert`; die menschliche Freigabe dieser
-zehn Fälle bleibt offen. Die CSV und alle finalen Entscheidungen sind
-unverändert.
+Reviewer ist **HB**, Datum 2026-11-12. Die finalen Entscheidungen sind
+unverändert; die Begründungen wurden in die CSV übernommen.

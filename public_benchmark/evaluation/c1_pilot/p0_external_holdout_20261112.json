@@ -3,16 +3,18 @@
   "date": "2026-11-12",
   "status": "complete_assisted_pending_human_review",
   "human_review": "partial",
-  "human_reviewed": 27,
-  "assisted_reviewed": 38,
+  "human_reviewed": 37,
+  "assisted_reviewed": 28,
   "signoff_status": "complete_assisted_pending_human_review",
   "independent_spotcheck_v2": {
     "reviewed": 10,
     "confirmed": 10,
     "corrections": 0,
-    "reviewer": "Codebuff assistiert",
+    "reviewer": "HB",
     "review_date": "2026-11-12",
-    "review_basis": "Titel und Abstract; kein Volltext, kein Netzabruf"
+    "review_basis": "Titel und Abstract; kein Volltext, kein Netzabruf",
+    "human_confirmed": 10,
+    "human_review": true
   },
   "independent_spotcheck": {
     "reviewed": 10,
@@ -27,8 +29,8 @@
     "reviewed": 48,
     "confirmed": 48,
     "corrections": 0,
-    "human_confirmed_later": 10,
-    "still_assisted": 38,
+    "human_confirmed_later": 20,
+    "still_assisted": 28,
     "reviewer": "Codebuff assistiert",
     "review_date": "2026-11-12",
     "review_basis": "Titel und Abstract; kein Volltext, kein Netzabruf",
@@ -106,8 +108,8 @@
     "manual_include": 36,
     "manual_exclude": 29,
     "human_review": "partial",
-    "human_reviewed": 27,
-    "assisted_reviewed": 38,
+    "human_reviewed": 37,
+    "assisted_reviewed": 28,
     "signoff_status": "complete_assisted_pending_human_review",
     "human_signoff": "pending",
     "model_used": false,
@@ -115,7 +117,8 @@
     "decisions_file": "public_benchmark/evaluation/c1_pilot/holdout_p0_20261112/screening_decisions_v2.jsonl",
     "exclusions_file": "public_benchmark/evaluation/c1_pilot/holdout_p0_20261112/screening_exclusions_v1.jsonl",
     "manual_decisions_file": "public_benchmark/evaluation/c1_pilot/holdout_p0_20261112/manual_review_decisions_v1.jsonl",
-    "summary": "public_benchmark/evaluation/c1_pilot/holdout_p0_20261112/screening_summary_v2.json"
+    "summary": "public_benchmark/evaluation/c1_pilot/holdout_p0_20261112/screening_summary_v2.json",
+    "human_review_complete": false
   },
   "selection": {
     "design": "parallel-group RCT with two relevant arms",
@@ -178,5 +181,6 @@
     "Artikel-IDs oder Hashes fehlen im Manifest"
   ],
   "no_model_run": true,
-  "test_split_used": false
+  "test_split_used": false,
+  "human_review_complete": false
 }

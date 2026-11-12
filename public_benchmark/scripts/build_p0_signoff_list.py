@@ -199,6 +199,7 @@ def main() -> None:
                 "signoff_status": signoff_status,
                 "reviewed": reviewed,
                 "assisted": assisted,
+                "human_review_complete": not bool(assisted),
                 "records": len(rows),
                 "counts": dict(Counter(row["decision"] for row in rows)),
                 "priority_counts": dict(Counter(row["priority"] for row in rows)),

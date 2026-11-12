@@ -1,6 +1,6 @@
 # Freigabeliste: 65 P0-Einzelfallentscheidungen
 
-Status: **ALLE FÄLLE ENTSCHIEDEN; 27 MENSCHLICH, 38 ASSISTIERT; MENSCHLICHE GEGENPRÜFUNG OFFEN**.
+Status: **ALLE FÄLLE ENTSCHIEDEN; 37 MENSCHLICH, 28 ASSISTIERT; MENSCHLICHE GEGENPRÜFUNG OFFEN**.
 Diese Liste ist die Prüfvorlage; sie ist kein Gate-Pass und keine
 endgültige Holdout-Auswahl.
 
@@ -11,8 +11,8 @@ Abweichungen und Korrekturen in `human_note` begründen.
 - Einschlüsse: **36**
 - Ausschlüsse: **29**
 - entschieden: **65/65**
-- davon menschlich: **27**
-- davon assistiert (Codebuff): **38**
+- davon menschlich: **37**
+- davon assistiert (Codebuff): **28**
 - hohe Priorität: **17**
 
 ## Einschlüsse: vorläufig für Volltext
@@ -34,11 +34,11 @@ Abweichungen und Korrekturen in `human_note` begründen.
 | 13 | [PMC13688066](https://pmc.ncbi.nlm.nih.gov/articles/PMC13688066/)<br>`10.1002/ana.78347`<br>Non-contrast CT Markers of Hematoma Expansion and Andexanet Res... | Einschluss | Post hoc; N/Ereignisse fuer Haematomexpansion pro Arm pruefen. | hoch | HB | 2026-11-12 | einschluss |
 | 14 | [PMC13743599](https://pmc.ncbi.nlm.nih.gov/articles/PMC13743599/)<br>`10.1007/s00702-026-03225-w`<br>Sublingual apomorphine for Parkinsonian tremor: a post-hoc anal... | Einschluss | Kleine Tremor-Subgruppe, n=10/Gruppe; SD und Arm-N pruefen. | hoch | HB | 2026-11-12 | einschluss |
 | 15 | [PMC13352180](https://pmc.ncbi.nlm.nih.gov/articles/PMC13352180/)<br>`10.1001/jamaoncol.2026.2204`<br>Durvalumab Plus Chemotherapy for Advanced Biliary Tract Cancer:... | Einschluss | Post hoc; OS-Ereignisse pro Arm und 4-Jahres-Daten pruefen. | mittel | HB | 2026-11-12 | einschluss |
-| 16 | [PMC13420175](https://pmc.ncbi.nlm.nih.gov/articles/PMC13420175/)<br>`10.1001/jamacardio.2026.2413`<br>Effect of Acoramidis on Heart Failure-Related Health Status: A... | Einschluss | Sekundaeranalyse; KCCQ-Armwerte/SD und mITT pruefen. | mittel | Codebuff assistiert | 2026-11-12 | einschluss |
-| 17 | [PMC13458421](https://pmc.ncbi.nlm.nih.gov/articles/PMC13458421/)<br>`10.1111/liv.70837`<br>Liver Fat Changes in Patients With Type 2 Diabetes by Presence... | Einschluss | Post hoc; Leberfett-Armwerte/SD pruefen. | mittel | Codebuff assistiert | 2026-11-12 | einschluss |
-| 18 | [PMC13533545](https://pmc.ncbi.nlm.nih.gov/articles/PMC13533545/)<br>`10.1093/ijnp/pyag042`<br>Weight and metabolic changes in patients with schizophrenia tre... | Einschluss | Post hoc; Gewicht/Lipide als Armwerte/SD pruefen. | mittel | Codebuff assistiert | 2026-11-12 | einschluss |
-| 19 | [PMC13541226](https://pmc.ncbi.nlm.nih.gov/articles/PMC13541226/)<br>`10.2196/104264`<br>Behavioral Modification as a Putative Mediator of Digital Thera... | Einschluss | Post hoc, per-protocol n=93; VAS-Armwerte/SD pruefen. | mittel | Codebuff assistiert | 2026-11-12 | einschluss |
-| 20 | [PMC13542807](https://pmc.ncbi.nlm.nih.gov/articles/PMC13542807/)<br>`10.2196/93811`<br>Digital Mindfulness Intervention for Pregnant Women With Affect... | Einschluss | Sekundaeranalyse; EPDS-Armwerte/SD und ITT-Imputation pruefen. | mittel | Codebuff assistiert | 2026-11-12 | einschluss |
+| 16 | [PMC13420175](https://pmc.ncbi.nlm.nih.gov/articles/PMC13420175/)<br>`10.1001/jamacardio.2026.2413`<br>Effect of Acoramidis on Heart Failure-Related Health Status: A... | Einschluss | Sekundaeranalyse; KCCQ-Armwerte/SD und mITT pruefen. | mittel | HB | 2026-11-12 | einschluss |
+| 17 | [PMC13458421](https://pmc.ncbi.nlm.nih.gov/articles/PMC13458421/)<br>`10.1111/liv.70837`<br>Liver Fat Changes in Patients With Type 2 Diabetes by Presence... | Einschluss | Post hoc; Leberfett-Armwerte/SD pruefen. | mittel | HB | 2026-11-12 | einschluss |
+| 18 | [PMC13533545](https://pmc.ncbi.nlm.nih.gov/articles/PMC13533545/)<br>`10.1093/ijnp/pyag042`<br>Weight and metabolic changes in patients with schizophrenia tre... | Einschluss | Post hoc; Gewicht/Lipide als Armwerte/SD pruefen. | mittel | HB | 2026-11-12 | einschluss |
+| 19 | [PMC13541226](https://pmc.ncbi.nlm.nih.gov/articles/PMC13541226/)<br>`10.2196/104264`<br>Behavioral Modification as a Putative Mediator of Digital Thera... | Einschluss | Post hoc, per-protocol n=93; VAS-Armwerte/SD pruefen. | mittel | HB | 2026-11-12 | einschluss |
+| 20 | [PMC13542807](https://pmc.ncbi.nlm.nih.gov/articles/PMC13542807/)<br>`10.2196/93811`<br>Digital Mindfulness Intervention for Pregnant Women With Affect... | Einschluss | Sekundaeranalyse; EPDS-Armwerte/SD und ITT-Imputation pruefen. | mittel | HB | 2026-11-12 | einschluss |
 | 21 | [PMC13555364](https://pmc.ncbi.nlm.nih.gov/articles/PMC13555364/)<br>`10.1001/jamanetworkopen.2026.32555`<br>Restrictive vs Liberal Transfusion Strategy in Traumatic Brain... | Einschluss | Sekundaeranalyse; GOS-E-Ereignisse pro Arm pruefen. | mittel | Codebuff assistiert | 2026-11-12 | einschluss |
 | 22 | [PMC13573578](https://pmc.ncbi.nlm.nih.gov/articles/PMC13573578/)<br>`10.1093/esj/aakag111`<br>Tenecteplase versus standard care for minor ischaemic stroke ac... | Einschluss | Subgruppen nach Verschluss; mRS-Ereignisse pro Arm pruefen. | mittel | Codebuff assistiert | 2026-11-12 | einschluss |
 | 23 | [PMC13583845](https://pmc.ncbi.nlm.nih.gov/articles/PMC13583845/)<br>`10.1136/openhrt-2026-004172`<br>Colchicine to prevent cardiovascular events in thoracic surgery... | Einschluss | Post hoc; MINS-Ereignisse pro Arm und CAD-Strata pruefen. | mittel | Codebuff assistiert | 2026-11-12 | einschluss |
@@ -64,13 +64,13 @@ Abweichungen und Korrekturen in `human_note` begründen.
 | 38 | [PMC13599935](https://pmc.ncbi.nlm.nih.gov/articles/PMC13599935/)<br>`10.1136/bmjopen-2026-119120`<br>Effect of periprocedural antithrombotic medication on functiona... | Ausschluss | Mehrere Regime; pruefen, ob ein Zweiarm-Kontrast zulaessig ist (P0: nein). | hoch | HB | 2026-11-12 | ausschluss |
 | 39 | [PMC13690031](https://pmc.ncbi.nlm.nih.gov/articles/PMC13690031/)<br>`10.62675/2965-2774.20260279`<br>A secondary analysis of the SODa-BIC randomized clinical trial... | Ausschluss | Hierarchischer Score; pruefen, ob einfache binaere Komponenten extrahierbar sind. | hoch | HB | 2026-11-12 | ausschluss |
 | 40 | [PMC13502374](https://pmc.ncbi.nlm.nih.gov/articles/PMC13502374/)<br>`10.1097/gme.0000000000002755`<br>Estimated impact of fezolinetant versus placebo on work product... | Ausschluss | Produktivitaet/Kosten; klinische VMS-Armwerte pruefen. | mittel | HB | 2026-11-12 | ausschluss |
-| 41 | [PMC13600314](https://pmc.ncbi.nlm.nih.gov/articles/PMC13600314/)<br>`10.1080/20008066.2026.2727209`<br>PTSD treatment impacts on pain: secondary analysis of sertralin... | Ausschluss | Drei Bedingungen; pruefen, ob PE+PLB vs. SERT als zwei Arme zulaessig waere (P0: nein). | mittel | Codebuff assistiert | 2026-11-12 | ausschluss |
+| 41 | [PMC13600314](https://pmc.ncbi.nlm.nih.gov/articles/PMC13600314/)<br>`10.1080/20008066.2026.2727209`<br>PTSD treatment impacts on pain: secondary analysis of sertralin... | Ausschluss | Drei Bedingungen; pruefen, ob PE+PLB vs. SERT als zwei Arme zulaessig waere (P0: nein). | mittel | HB | 2026-11-12 | ausschluss |
 | 42 | [PMC13600430](https://pmc.ncbi.nlm.nih.gov/articles/PMC13600430/)<br>`10.1093/jncics/pkag086`<br>Prevalence of patient-reported and clinician-graded cognitive s... | Ausschluss | Praevalenz; Armvergleich unklar; GAP70+ Volltext pruefen. | mittel | HB | 2026-11-12 | ausschluss |
-| 43 | [PMC13621077](https://pmc.ncbi.nlm.nih.gov/articles/PMC13621077/)<br>`10.1093/bjsopen/zrag111`<br>Costs and health burden of surgical site infections and anastom... | Ausschluss | Vergleich nach SSI-Status, nicht randomisierte Arme; klinische Armdaten pruefen. | mittel | Codebuff assistiert | 2026-11-12 | ausschluss |
+| 43 | [PMC13621077](https://pmc.ncbi.nlm.nih.gov/articles/PMC13621077/)<br>`10.1093/bjsopen/zrag111`<br>Costs and health burden of surgical site infections and anastom... | Ausschluss | Vergleich nach SSI-Status, nicht randomisierte Arme; klinische Armdaten pruefen. | mittel | HB | 2026-11-12 | ausschluss |
 | 44 | [PMC13621585](https://pmc.ncbi.nlm.nih.gov/articles/PMC13621585/)<br>`10.1186/s12913-026-15652-2`<br>Prevention of sickness absence through early identification and... | Ausschluss | Primaer CEA; klinische PREVSAM-Armwerte im Volltext pruefen. | mittel | HB | 2026-11-12 | ausschluss |
-| 45 | [PMC13629967](https://pmc.ncbi.nlm.nih.gov/articles/PMC13629967/)<br>`10.1136/bmjopen-2026-121051`<br>Within-person variability and the minimal important difference... | Ausschluss | EQ-VAS beider Arme gepoolt; kein Treatment-Effekt. | mittel | Codebuff assistiert | 2026-11-12 | ausschluss |
-| 46 | [PMC13630015](https://pmc.ncbi.nlm.nih.gov/articles/PMC13630015/)<br>`10.1136/bmjopen-2026-117330`<br>TACE combined with apatinib versus TACE alone for unresectable... | Ausschluss | HTA; klinische RCT-Armwerte pruefen, falls berichtet. | mittel | Codebuff assistiert | 2026-11-12 | ausschluss |
-| 47 | [PMC13714053](https://pmc.ncbi.nlm.nih.gov/articles/PMC13714053/)<br>`10.1007/s00125-026-06873-5`<br>Differential physical activity responses to diabetes risk reduc... | Ausschluss | Gepoolt; pruefen, ob Einzelstudien-Armwerte im Volltext stehen. | mittel | Codebuff assistiert | 2026-11-12 | ausschluss |
+| 45 | [PMC13629967](https://pmc.ncbi.nlm.nih.gov/articles/PMC13629967/)<br>`10.1136/bmjopen-2026-121051`<br>Within-person variability and the minimal important difference... | Ausschluss | EQ-VAS beider Arme gepoolt; kein Treatment-Effekt. | mittel | HB | 2026-11-12 | ausschluss |
+| 46 | [PMC13630015](https://pmc.ncbi.nlm.nih.gov/articles/PMC13630015/)<br>`10.1136/bmjopen-2026-117330`<br>TACE combined with apatinib versus TACE alone for unresectable... | Ausschluss | HTA; klinische RCT-Armwerte pruefen, falls berichtet. | mittel | HB | 2026-11-12 | ausschluss |
+| 47 | [PMC13714053](https://pmc.ncbi.nlm.nih.gov/articles/PMC13714053/)<br>`10.1007/s00125-026-06873-5`<br>Differential physical activity responses to diabetes risk reduc... | Ausschluss | Gepoolt; pruefen, ob Einzelstudien-Armwerte im Volltext stehen. | mittel | HB | 2026-11-12 | ausschluss |
 | 48 | [PMC13472644](https://pmc.ncbi.nlm.nih.gov/articles/PMC13472644/)<br>`10.1002/edm2.70258`<br>Vitamin D Deficiency During Pregnancy Is Associated With Greate... | Ausschluss | Stratifiziert nach Vitamin-D-Status; kein Armvergleich. | niedrig | Codebuff assistiert | 2026-11-12 | ausschluss |
 | 49 | [PMC13519342](https://pmc.ncbi.nlm.nih.gov/articles/PMC13519342/)<br>`10.1093/ajrccm/aamag226`<br>Astegolimab for chronic obstructive pulmonary disease with freq... | Ausschluss | Drei Arme; kein Zweiarm-Vergleich. | niedrig | Codebuff assistiert | 2026-11-12 | ausschluss |
 | 50 | [PMC13523073](https://pmc.ncbi.nlm.nih.gov/articles/PMC13523073/)<br>`10.1002/ueg2.70276`<br>Clinical and Psychosocial Characteristics of Adult Primary Care... | Ausschluss | Querschnitt; kein randomisierter Vergleich. | niedrig | Codebuff assistiert | 2026-11-12 | ausschluss |

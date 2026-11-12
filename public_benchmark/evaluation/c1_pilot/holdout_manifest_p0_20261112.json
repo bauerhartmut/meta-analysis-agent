@@ -15,8 +15,8 @@
   "abstract_screening": {
     "status": "complete_assisted_pending_human_review",
     "human_review": "partial",
-    "human_reviewed": 27,
-    "assisted_reviewed": 38,
+    "human_reviewed": 37,
+    "assisted_reviewed": 28,
     "signoff_status": "complete_assisted_pending_human_review",
     "criteria_sha256": "4b40eb9acf02c6cc6c67316b91fcdeae7bbfba382cbf795af040f96491b17ed9",
     "exclude": 181,
@@ -28,7 +28,8 @@
     "human_signoff": "pending",
     "decisions_file": "public_benchmark/evaluation/c1_pilot/holdout_p0_20261112/screening_decisions_v2.jsonl",
     "manual_decisions_file": "public_benchmark/evaluation/c1_pilot/holdout_p0_20261112/manual_review_decisions_v1.jsonl",
-    "exclusions_file": "public_benchmark/evaluation/c1_pilot/holdout_p0_20261112/screening_exclusions_v1.jsonl"
+    "exclusions_file": "public_benchmark/evaluation/c1_pilot/holdout_p0_20261112/screening_exclusions_v1.jsonl",
+    "human_review_complete": false
   },
   "article_ids": [],
   "input_path": "public_benchmark/evaluation/c1_pilot/holdout_p0_20261112/input.jsonl",
