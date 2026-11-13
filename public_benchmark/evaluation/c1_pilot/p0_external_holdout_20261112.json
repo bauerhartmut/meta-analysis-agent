@@ -6,6 +6,15 @@
   "human_reviewed": 57,
   "assisted_reviewed": 8,
   "signoff_status": "complete_assisted_pending_human_review",
+  "independent_spotcheck_v5": {
+    "reviewed": 8,
+    "confirmed": 8,
+    "corrections": 0,
+    "reviewer": "Codebuff assistiert",
+    "review_date": "2026-11-12",
+    "review_basis": "Titel und Abstract; kein Volltext, kein Netzabruf",
+    "human_review": false
+  },
   "independent_spotcheck_v4": {
     "reviewed": 10,
     "confirmed": 10,
