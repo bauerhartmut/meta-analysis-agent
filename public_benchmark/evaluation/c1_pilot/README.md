@@ -352,6 +352,12 @@ Plan: [`holdout_plan_20261112.md`](holdout_plan_20261112.md), Schema:
   Outcome-Slots; 8 unabhängig verwendbar, 6 überlappend (3 aus `PMC13519320`,
   3 aus `PMC13590641`), 22 leer oder nicht verwendbar; 14 formal verwendbar,
   keine finale Entscheidung.
+- [`holdout_p0_20261112/fulltext_review_batch2_audit_v1.md`](holdout_p0_20261112/fulltext_review_batch2_audit_v1.md):
+  unabhängiges Audit der Batch-2-Zähler, Quellen und Überlappungen; 36/36
+  Quellen vorhanden, 0 Abweichungen, keine Outcome-Werte verändert.
+- [`holdout_p0_20261112/fulltext_review_batch2_human_checklist_v1.md`](holdout_p0_20261112/fulltext_review_batch2_human_checklist_v1.md):
+  menschliche Prüfcheckliste für alle 36 Slots mit Artikel- und Slotkontrollen;
+  keine finalen Entscheidungen vorausgefüllt.
 - [`holdout_p0_20261112/fulltext_access_plan_v1.md`](holdout_p0_20261112/fulltext_access_plan_v1.md):
   lokale Zugriffsprüfung für die 36 Volltexte gegen 1.291 `data/fulltext`-Texte,
   101 Metadatensätze und 62 Inbox-Dateien; alle Open Access/Europe PMC,

@@ -292,6 +292,11 @@
     "json_path": "public_benchmark/evaluation/c1_pilot/holdout_p0_20261112/fulltext_review_batch2_v1.json",
     "csv_path": "public_benchmark/evaluation/c1_pilot/holdout_p0_20261112/fulltext_review_batch2_v1.csv",
     "md_path": "public_benchmark/evaluation/c1_pilot/holdout_p0_20261112/fulltext_review_batch2_v1.md",
+    "audit_path": "public_benchmark/evaluation/c1_pilot/holdout_p0_20261112/fulltext_review_batch2_audit_v1.md",
+    "human_checklist_path": "public_benchmark/evaluation/c1_pilot/holdout_p0_20261112/fulltext_review_batch2_human_checklist_v1.md",
+    "audit_status": "complete_no_value_changes",
+    "audit_issues": 0,
+    "human_checklist_status": "open",
     "independent_usable_outcomes": 8,
     "overlapping_usable_outcomes": 6,
     "usable_outcomes_including_overlapping": 14

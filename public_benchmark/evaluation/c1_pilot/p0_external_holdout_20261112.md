@@ -160,6 +160,11 @@ Details:
 [`fulltext_review_batch2_v1.md`](holdout_p0_20261112/fulltext_review_batch2_v1.md),
 [`fulltext_review_batch2_v1.csv`](holdout_p0_20261112/fulltext_review_batch2_v1.csv),
 [`fulltext_review_batch2_v1.json`](holdout_p0_20261112/fulltext_review_batch2_v1.json).
+Das unabhängige Audit bestätigt **36/36 Quellen**, **0 Zähler- oder
+Überlappungsabweichungen** und **keine geänderten Outcome-Werte**; die
+menschliche Prüfung ist in einer separaten 36-Slot-Checkliste vorbereitet:
+[`fulltext_review_batch2_audit_v1.md`](holdout_p0_20261112/fulltext_review_batch2_audit_v1.md),
+[`fulltext_review_batch2_human_checklist_v1.md`](holdout_p0_20261112/fulltext_review_batch2_human_checklist_v1.md).
 
 ## 2. Auswahlkriterien
 
