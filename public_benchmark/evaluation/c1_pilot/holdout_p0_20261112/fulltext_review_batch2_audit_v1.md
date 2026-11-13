@@ -25,14 +25,15 @@ Unabhängigkeitsklassen verändert.
 
 - **36/36** Slots haben einen Quelleintrag.
 - **17** Results-Textzitate wurden exakt im normalisierten XML gefunden.
-- **19** Tabellenverweise: Caption, Zeilenlabel und strukturierte Werte wurden ausschließlich in der jeweils referenzierten Tabellenzeile geprüft; **18/18** Tabellen-Outcomes bestanden die Quellenprüfung: 12/16 Einzelzeilen zeilenexakt, 4/16 Einzelzeilen mit armweisem N im Tabellen-Header zulässig und 2/2 Kosten-Outcomes mit getrennten Interventions-/Kontrollzeilen bestanden. Der ICER-Slot ist ein Tabellenverweis ohne eigene Zeilenwerte.
-- **4/4** armweise N-Werte im Header von Tabelle 3 (`PMC13590641`) sind als zulässige Nennerquelle geprüft und in [`fulltext_review_batch2_pmc13590641_n_source_v1.md`](fulltext_review_batch2_pmc13590641_n_source_v1.md) dokumentiert.
+- **19** Tabellenverweise: Caption und ggf. konkrete Arm-Header-Zellen wurden in der referenzierten Tabelle geprüft; Zeilenlabel und strukturierte Werte ausschließlich in der jeweils referenzierten Zeile; **18/18** Tabellen-Outcomes bestanden die Quellenprüfung: 12/16 Einzelzeilen zeilenexakt, 4/16 Einzelzeilen mit N in der jeweiligen konkreten Arm-Header-Zelle zulässig und 2/2 Kosten-Outcomes mit getrennten Interventions-/Kontrollzeilen bestanden. Der ICER-Slot ist ein Tabellenverweis ohne eigene Zeilenwerte.
+- **4/4** N-Werte in den konkreten Arm-Header-Zellen von Tabelle 3 (`PMC13590641`, Control `N = 19`, Experiment `N = 24`) sind als zulässige Nennerquelle geprüft und in [`fulltext_review_batch2_pmc13590641_n_source_v1.md`](fulltext_review_batch2_pmc13590641_n_source_v1.md) dokumentiert.
 - **20/20** Outcomes mit strukturierten Zahlen enthalten diese Zahlen im Quelleintrag.
 
 Hinweis: Tabellenquellen sind keine zusammenhängenden Fließtextsätze. Die
-Quellenprüfung vergleicht deshalb Caption, Zeilenlabel und strukturierte
-Werte ausschließlich in der referenzierten Tabellenzeile; sie
-ersetzt nicht die menschliche Sichtprüfung der Tabelle.
+Quellenprüfung prüft die Caption und ggf. konkrete Arm-Header-Zellen in
+der referenzierten Tabelle; Zeilenlabel und strukturierte Werte
+ausschließlich in der referenzierten Zeile. Sie ersetzt nicht die
+menschliche Sichtprüfung der Tabelle.
 
 ## Überlappungen
 

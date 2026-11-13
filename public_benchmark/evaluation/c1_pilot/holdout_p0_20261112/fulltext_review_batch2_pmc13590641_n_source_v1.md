@@ -19,6 +19,15 @@ Die Nenner sind damit unmittelbar über den jeweiligen Armspalten ausgewiesen
 und den Armen eindeutig zugeordnet. Es handelt sich nicht um einen Treffer
 irgendwo in der Tabelle oder in einem anderen Dokumentteil.
 
+## Generatorprüfung
+
+Der Audit-Generator prüft für diese Ausnahme nicht mehr nur das Vorkommen der
+Zahl irgendwo im Tabellentext. Er liest die konkrete Headerzeile, ordnet die
+Zelle mit `Control group` dem Kontrollarm und die Zelle mit `Experiment group`
+dem Interventionsarm zu und verlangt `N = 19` beziehungsweise `N = 24` genau in
+diesen beiden Zellen. Zusätzlich muss die Caption von Tabelle 3 exakt passen.
+Ein N-Wert an anderer Stelle derselben Tabelle erfüllt die Ausnahme nicht.
+
 ## Slotprüfung
 
 | Slot | Outcome | Interventionszeile | Kontrollzeile | N Intervention | N Kontrolle | Header-N zulässig |

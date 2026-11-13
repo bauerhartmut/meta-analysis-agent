@@ -162,8 +162,9 @@ Details:
 [`fulltext_review_batch2_v1.json`](holdout_p0_20261112/fulltext_review_batch2_v1.json).
 Das unabhängige Audit bestätigt **36/36 Quellen**, **0 Zähler- oder
 Überlappungsabweichungen** und **keine geänderten Outcome-Werte**. Vier
-AE-Outcomes aus `PMC13590641` beziehen ihren Nenner aus dem armweisen Header
-von Tabelle 3; diese Header-Nenner sind als zulässige Quelle dokumentiert. Die
+AE-Outcomes aus `PMC13590641` beziehen ihren Nenner aus den konkreten
+Arm-Header-Zellen von Tabelle 3; diese N-Werte sind als zulässige Quelle
+dokumentiert. Die
 menschliche Prüfung ist in einer separaten 36-Slot-Checkliste vorbereitet:
 [`fulltext_review_batch2_audit_v1.md`](holdout_p0_20261112/fulltext_review_batch2_audit_v1.md),
 [`fulltext_review_batch2_human_checklist_v1.md`](holdout_p0_20261112/fulltext_review_batch2_human_checklist_v1.md),

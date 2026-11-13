@@ -354,12 +354,13 @@ Plan: [`holdout_plan_20261112.md`](holdout_plan_20261112.md), Schema:
   keine finale Entscheidung.
 - [`holdout_p0_20261112/fulltext_review_batch2_audit_v1.md`](holdout_p0_20261112/fulltext_review_batch2_audit_v1.md):
   unabhängiges Audit der Batch-2-Zähler, Quellen und Überlappungen; 36/36
-  Quellen vorhanden, 4 Arm-Header-Nenner als zulässige Quelle dokumentiert,
-  0 Zähler- oder Überlappungsabweichungen, keine Outcome-Werte verändert.
+  Quellen vorhanden, 4 N-Werte in konkreten Arm-Header-Zellen als zulässige
+  Quelle dokumentiert, 0 Zähler- oder Überlappungsabweichungen, keine
+  Outcome-Werte verändert.
 - [`holdout_p0_20261112/fulltext_review_batch2_pmc13590641_n_source_v1.md`](holdout_p0_20261112/fulltext_review_batch2_pmc13590641_n_source_v1.md):
-  Quellenprüfung der vier `PMC13590641`-Slots gegen Tabelle 3; die armweisen
-  N-Werte `(N = 24)` und `(N = 19)` aus dem Header sind als zulässige Quelle
-  dokumentiert, keine Outcome-Werte verändert.
+  Quellenprüfung der vier `PMC13590641`-Slots gegen Tabelle 3; die N-Werte
+  `(N = 24)` und `(N = 19)` in den konkreten Arm-Header-Zellen sind als
+  zulässige Quelle dokumentiert, keine Outcome-Werte verändert.
 - [`holdout_p0_20261112/fulltext_review_batch2_human_checklist_v1.md`](holdout_p0_20261112/fulltext_review_batch2_human_checklist_v1.md):
   menschliche Prüfcheckliste für alle 36 Slots mit Artikel- und Slotkontrollen;
   keine finalen Entscheidungen vorausgefüllt.

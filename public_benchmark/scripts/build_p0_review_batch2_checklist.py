@@ -114,6 +114,34 @@ def extract_table_rows(table_wrap: ET.Element) -> list[str]:
     return rows
 
 
+def extract_arm_header_cells(table_wrap: ET.Element) -> dict[str, str]:
+    """Return the concrete control/intervention header cells of the table."""
+    for element in table_wrap.iter():
+        if local_name(element.tag) != "tr":
+            continue
+        cells = [
+            element_text(child)
+            for child in element
+            if local_name(child.tag) in {"th", "td"}
+        ]
+        control = next(
+            (cell for cell in cells if "control group" in normalize(cell)),
+            None,
+        )
+        intervention = next(
+            (cell for cell in cells if "experiment group" in normalize(cell)),
+            None,
+        )
+        if control is not None and intervention is not None:
+            return {"control": control, "intervention": intervention}
+    return {}
+
+
+def header_cell_n(cell: str) -> str | None:
+    match = re.search(r"\(\s*N\s*=\s*([0-9]+)\s*\)", cell, re.IGNORECASE)
+    return match.group(1) if match else None
+
+
 def row_contains(row: str, label: str, values: list[str]) -> bool:
     if normalize(label) not in normalize(row):
         return False
@@ -248,17 +276,22 @@ def main() -> None:
                             row_contains(item, row["row_label"], event_values)
                             for item in xml_rows
                         )
-                        totals_in_table = all(
-                            normalize_number(value) in normalize_number(table_raw)
-                            for value in (
-                                str(outcome["intervention"].get("total")),
-                                str(outcome["control"].get("total")),
-                            )
+                        header_cells = extract_arm_header_cells(table_wrap)
+                        totals_in_arm_headers = (
+                            bool(header_cells)
+                            and header_cell_n(header_cells["intervention"])
+                            == str(outcome["intervention"].get("total"))
+                            and header_cell_n(header_cells["control"])
+                            == str(outcome["control"].get("total"))
                         )
-                        header_only = events_in_row and totals_in_table
+                        header_only = (
+                            caption_ok
+                            and events_in_row
+                            and totals_in_arm_headers
+                        )
                     if header_only:
                         source_flags[f"{pmcid}:{outcome['slot']}"] = (
-                            "N im Arm-Header zulässig; Zeile/Header dokumentiert"
+                            "N in konkreter Arm-Header-Zelle zulässig; Zeile/Header dokumentiert"
                         )
                         header_only_slots.append(f"{pmcid}:{outcome['slot']}")
                         table_rows += 1
@@ -369,25 +402,27 @@ def main() -> None:
         "",
         f"- **{source_present}/36** Slots haben einen Quelleintrag.",
         f"- **{text_exact}** Results-Textzitate wurden exakt im normalisierten XML gefunden.",
-        f"- **{table_refs}** Tabellenverweise: Caption, Zeilenlabel und strukturierte Werte wurden ausschließlich in der jeweils referenzierten Tabellenzeile geprüft; "
+        f"- **{table_refs}** Tabellenverweise: Caption und ggf. konkrete Arm-Header-Zellen wurden in der referenzierten Tabelle geprüft; Zeilenlabel und strukturierte Werte ausschließlich in der jeweils referenzierten Zeile; "
         f"**{table_rows}/18** Tabellen-Outcomes bestanden die Quellenprüfung: "
         f"{table_rows - table_paired_rows - len(header_only_slots)}/{table_single_rows} "
         f"Einzelzeilen zeilenexakt, {len(header_only_slots)}/{table_single_rows} "
-        "Einzelzeilen mit armweisem N im Tabellen-Header zulässig und "
+        "Einzelzeilen mit N in der jeweiligen konkreten Arm-Header-Zelle zulässig und "
         f"{table_paired_rows}/{table_paired_rows} Kosten-Outcomes mit getrennten "
         "Interventions-/Kontrollzeilen bestanden. Der ICER-Slot ist ein "
         "Tabellenverweis ohne eigene Zeilenwerte.",
-        "- **4/4** armweise N-Werte im Header von Tabelle 3 (`PMC13590641`) sind "
-        "als zulässige Nennerquelle geprüft und in "
+        "- **4/4** N-Werte in den konkreten Arm-Header-Zellen von Tabelle 3 "
+        "(`PMC13590641`, Control `N = 19`, Experiment `N = 24`) sind als "
+        "zulässige Nennerquelle geprüft und in "
         "[`fulltext_review_batch2_pmc13590641_n_source_v1.md`]"
         "(fulltext_review_batch2_pmc13590641_n_source_v1.md) dokumentiert.",
         f"- **{values_in_quote}/{structured_value_sets}** Outcomes mit strukturierten Zahlen "
         "enthalten diese Zahlen im Quelleintrag.",
         "",
         "Hinweis: Tabellenquellen sind keine zusammenhängenden Fließtextsätze. Die",
-        "Quellenprüfung vergleicht deshalb Caption, Zeilenlabel und strukturierte",
-        "Werte ausschließlich in der referenzierten Tabellenzeile; sie",
-        "ersetzt nicht die menschliche Sichtprüfung der Tabelle.",
+        "Quellenprüfung prüft die Caption und ggf. konkrete Arm-Header-Zellen in",
+        "der referenzierten Tabelle; Zeilenlabel und strukturierte Werte",
+        "ausschließlich in der referenzierten Zeile. Sie ersetzt nicht die",
+        "menschliche Sichtprüfung der Tabelle.",
         "",
         "## Überlappungen",
         "",
@@ -467,7 +502,7 @@ def main() -> None:
         "- [ ] Zähler 8 unabhängig / 6 überlappend / 22 nicht verwendbar bestätigt",
         "- [ ] 14 formal verwendbar bestätigt",
         "- [ ] 36/36 Quellen geprüft",
-        "- [ ] 4 Arm-Header-Nenner als zulässige Quelle dokumentiert",
+        "- [ ] 4 N-Werte in konkreten Arm-Header-Zellen als zulässige Quelle dokumentiert",
         "- [ ] 6 überlappende Slots bestätigt",
         "- [ ] keine Outcome-Werte verändert",
         "- [ ] finale Entscheidungen nur im dafür vorgesehenen Dokument gesetzt",
