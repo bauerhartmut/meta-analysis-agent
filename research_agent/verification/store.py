@@ -37,6 +37,30 @@ def _hash_event(event: Dict[str, Any]) -> str:
     return hashlib.sha256(_canonical(body).encode("utf-8")).hexdigest()
 
 
+def _has_value(value: Any) -> bool:
+    """A zero is a valid value; an absent or blank value is not."""
+    if value is None:
+        return False
+    if isinstance(value, str) and not value.strip():
+        return False
+    return True
+
+
+def _review_evidence(record: Dict[str, Any], field: str,
+                     evidence_id: str) -> Optional[Dict[str, Any]]:
+    """Return only evidence that is stored and belongs to this field."""
+    key = str(evidence_id or "").strip()
+    if not key:
+        return None
+    evidence = (record.get("evidence") or {}).get(key)
+    if not evidence:
+        return None
+    declared = str(evidence.get("field") or "")
+    if declared and declared != field:
+        return None
+    return evidence
+
+
 class VerificationStore:
     """In-memory state plus a hash-chained JSON journal."""
 
@@ -299,6 +323,7 @@ class VerificationStore:
             return
         if field not in record.get("fields", {}):
             raise ValueError(f"Feld nicht im Record: {field}")
+        entry = record["fields"][field]
         if action == "unclear":
             new_status = "unresolved"
         elif action == "not_reported":
@@ -306,14 +331,22 @@ class VerificationStore:
             reported = False
             if not note.strip():
                 raise ValueError("'nicht berichtet' braucht eine dokumentierte Begruendung.")
-        elif action == "correct":
-            if value in (None, ""):
-                raise ValueError("Korrektur ohne Wert.")
-            new_status = "verified" if evidence_id else "unresolved"
-        elif action == "confirm":
-            value = record["fields"][field].get("final_value")
-            if value is None:
-                value = record["fields"][field].get("value_a")
+        elif action in {"confirm", "correct"}:
+            if action == "confirm":
+                value = entry.get("final_value")
+                if value is None:
+                    value = entry.get("value_a")
+            candidate_evidence = evidence_id or entry.get("evidence_id") or ""
+            valid_evidence = _review_evidence(record, field, candidate_evidence)
+            # An approval is only possible with a present value and a stored
+            # evidence row for this field.  Missing either one leaves the
+            # field open and is recorded as an unresolved decision.
+            if not _has_value(value) or valid_evidence is None:
+                new_status = "unresolved"
+                evidence_id = ""
+            else:
+                new_status = "verified"
+                evidence_id = str(candidate_evidence).strip()
         self._append("decision_recorded", record_id, {
             "field": field, "action": action, "new_value": value,
             "new_status": new_status, "reported": reported, "reviewer": reviewer,

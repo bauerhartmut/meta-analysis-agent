@@ -13,7 +13,9 @@ from research_agent.verification.schema import (
     compare_values, transition_field, transition_record,
 )
 from research_agent.verification.store import VerificationStore
-from research_agent.verification.workflow import invalidate_on_source_change
+from research_agent.verification.workflow import (
+    finalize_after_review, invalidate_on_source_change,
+)
 
 
 def _verified_state(record_id="r1"):
@@ -43,6 +45,23 @@ def _evidence(**overrides):
     }
     base.update(overrides)
     return base
+
+
+def _review_store(tmp_path, field="intervention_mean", comparison="match",
+                  value_a=1.0, value_b=1.0):
+    store = VerificationStore(str(tmp_path / "audit.json"))
+    store.register_record("r1", {
+        "document_hash": "x", "outcome_type": "continuous",
+        "required_fields": [field],
+    })
+    store.record_comparison("r1", {
+        "field": field, "value_a": value_a, "value_b": value_b,
+        "comparison": comparison, "rule": "test",
+        "field_status": "cross_checked",
+    })
+    store.set_status("r1", "cross_checked", "test")
+    store.set_status("r1", "pending_review", "test")
+    return store
 
 
 def test_missing_evidence_is_never_a_match():
@@ -134,6 +153,11 @@ def test_decision_preserves_old_value_and_invalidation_drops_approval(tmp_path):
         "field": "intervention_mean", "value_a": 1.0, "value_b": 1.0,
         "comparison": "mismatch", "rule": "test", "field_status": "unresolved",
     })
+    store.add_evidence("r1", [{
+        "evidence_id": "ev:1", "field": "intervention_mean",
+        "table_id": "md:1", "row_label": "Posttreatment",
+        "column_label": "Intervention", "raw_cell": "2.0 (0.5)",
+    }])
     store.set_status("r1", "cross_checked", "test")
     store.set_status("r1", "pending_review", "test")
     store.apply_decision("r1", "intervention_mean", "correct", value=2.0,
@@ -174,3 +198,66 @@ def test_review_requires_reviewer_and_reason_for_not_reported(tmp_path):
     with pytest.raises(ValueError):
         store.apply_decision("r1", "intervention_sd", "not_reported",
                              reviewer="A", note="")
+
+
+def test_confirm_without_evidence_leaves_field_open(tmp_path):
+    store = _review_store(tmp_path)
+    store.apply_decision("r1", "intervention_mean", "confirm",
+                         reviewer="Pruefer A")
+    record = store.record("r1")
+    field = record["fields"]["intervention_mean"]
+    assert field["status"] == "unresolved"
+    assert field["final_value"] == 1.0
+    assert record["status"] == "pending_review"
+    assert record["decisions"][-1]["action"] == "confirm"
+
+
+def test_confirm_both_missing_leaves_field_open(tmp_path):
+    store = _review_store(tmp_path, comparison="both_missing",
+                          value_a=None, value_b=None)
+    store.add_evidence("r1", [{
+        "evidence_id": "ev:both-missing", "field": "intervention_mean",
+        "table_id": "md:1", "row_label": "Posttreatment",
+        "column_label": "Intervention", "raw_cell": "-",
+    }])
+    store.apply_decision("r1", "intervention_mean", "confirm",
+                         reviewer="Pruefer A", evidence_id="ev:both-missing")
+    field = store.record("r1")["fields"]["intervention_mean"]
+    assert field["status"] == "unresolved"
+    assert field["final_value"] is None
+    assert field["evidence_id"] == ""
+
+
+def test_correct_without_value_leaves_field_open(tmp_path):
+    store = _review_store(tmp_path)
+    store.add_evidence("r1", [{
+        "evidence_id": "ev:value", "field": "intervention_mean",
+        "table_id": "md:1", "row_label": "Posttreatment",
+        "column_label": "Intervention", "raw_cell": "2.0 (0.5)",
+    }])
+    store.apply_decision("r1", "intervention_mean", "correct", value=None,
+                         reviewer="Pruefer A", evidence_id="ev:value")
+    field = store.record("r1")["fields"]["intervention_mean"]
+    assert field["status"] == "unresolved"
+    assert field["final_value"] is None
+
+
+def test_confirm_with_stored_evidence_can_verify(tmp_path):
+    store = _review_store(tmp_path)
+    store.add_evidence("r1", [{
+        "evidence_id": "ev:value", "field": "intervention_mean",
+        "table_id": "md:1", "row_label": "Posttreatment",
+        "column_label": "Intervention", "raw_cell": "1.0 (0.5)",
+    }])
+    store.apply_decision("r1", "intervention_mean", "confirm",
+                         reviewer="Pruefer A", evidence_id="ev:value")
+    assert finalize_after_review(store, "r1", "Pruefer A") == "verified"
+    assert store.record("r1")["status"] == "verified"
+
+
+def test_correction_with_unknown_evidence_stays_open(tmp_path):
+    store = _review_store(tmp_path)
+    store.apply_decision("r1", "intervention_mean", "correct", value=2.0,
+                         reviewer="Pruefer A", evidence_id="ev:not-stored")
+    field = store.record("r1")["fields"]["intervention_mean"]
+    assert field["status"] == "unresolved"
