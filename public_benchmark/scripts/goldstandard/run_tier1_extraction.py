@@ -43,9 +43,9 @@ sys.path.insert(0, str(REPO))
 from research_agent.config import get_config  # noqa: E402
 
 MODELS = {
-    "qwen": {"id": "gwdg/qwen3.5-397b-a17b", "max_tokens": 12000},
+    "qwen": {"id": "gwdg/qwen3.5-397b-a17b", "max_tokens": 16000},
     "deepseek": {"id": "gwdg/deepseek-v4.1-flash-1017", "max_tokens": 8000},
-    "glm": {"id": "gwdg/glm-5.3", "max_tokens": 12000},
+    "glm": {"id": "gwdg/glm-5.3", "max_tokens": 24000},
 }
 
 SYSTEM = (
@@ -86,7 +86,7 @@ def build_prompt(record: dict[str, Any], text: str, limit: int = 45000) -> str:
 
 
 def call(
-    model: dict[str, Any], prompt: str, key: str, base: str, attempts: int = 4
+    model: dict[str, Any], prompt: str, key: str, base: str, attempts: int = 5
 ) -> dict[str, Any]:
     last: dict[str, Any] | None = None
     for attempt in range(1, attempts + 1):
@@ -95,7 +95,7 @@ def call(
         if status == 200 and last.get("content"):
             return last
         if status in (429, 500, 502, 503, 504) and attempt < attempts:
-            wait = 5 * attempt + random.uniform(0, 3)
+            wait = 20 * attempt + random.uniform(0, 5)
             print(f"  {model['id']} {status}, warte {wait:.1f}s (Versuch {attempt})", flush=True)
             time.sleep(wait)
             continue

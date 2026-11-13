@@ -270,7 +270,12 @@ def main() -> int:
     for line in args.predictions.read_text(encoding="utf-8").splitlines():
         if line.strip():
             entries.append(json.loads(line))
-    predictions = {(row["record_id"], row["model"]): row for row in entries}
+    predictions: dict[tuple[str, str], dict[str, Any]] = {}
+    for row in entries:
+        key = (row["record_id"], row["model"])
+        previous = predictions.get(key)
+        if previous is None or (not previous.get("rows") and row.get("rows")):
+            predictions[key] = row
     models = sorted({row["model"] for row in entries})
 
     if args.common:

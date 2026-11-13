@@ -1,19 +1,19 @@
 {
   "run_id": "tier1_20261113",
-  "started": "2026-11-13T16:01:49+00:00",
-  "finished": "2026-11-13T16:02:33+00:00",
+  "started": "2026-11-13T20:34:13+00:00",
+  "finished": "2026-11-13T20:35:47+00:00",
   "dataset": "glass_trialreviewbench",
   "models": {
-    "glm": {
-      "id": "gwdg/glm-5.3",
-      "max_tokens": 12000
+    "qwen": {
+      "id": "gwdg/qwen3.5-397b-a17b",
+      "max_tokens": 16000
     }
   },
-  "jobs": 5,
+  "jobs": 54,
   "tally": {
-    "ok": 0,
+    "ok": 1,
     "leer": 0,
-    "fehler": 5
+    "fehler": 0
   },
   "predictions": "predictions.jsonl"
 }
