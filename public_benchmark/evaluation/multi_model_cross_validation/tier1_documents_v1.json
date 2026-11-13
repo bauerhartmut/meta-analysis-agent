@@ -1,0 +1,1477 @@
+{
+  "created": "2026-11-13",
+  "source": "Europe PMC REST, resultType=lite",
+  "records": 185,
+  "unique_studies": 63,
+  "status_counts": {
+    "abstract_only": 103,
+    "full_text_available": 75,
+    "not_found": 7
+  },
+  "by_dataset": {
+    "eururology": {
+      "abstract_only": 77,
+      "full_text_available": 20,
+      "not_found": 7
+    },
+    "glass_trialreviewbench": {
+      "abstract_only": 26,
+      "full_text_available": 55,
+      "not_found": 0
+    }
+  },
+  "details": [
+    {
+      "record_id": "eu::1eb46ef580acfc1b",
+      "status": "abstract_only",
+      "pmid": "19035858",
+      "pmcid": "",
+      "is_open_access": "N",
+      "title": "The efficacy and safety of degarelix: a 12-month, comparative, randomized, open-label, parallel-grou"
+    },
+    {
+      "record_id": "eu::6bf1880d089ca1a9",
+      "status": "abstract_only",
+      "pmid": "23258223",
+      "pmcid": "",
+      "is_open_access": "N",
+      "title": "Degarelix versus goserelin (+ antiandrogen flare protection) in the relief of lower urinary tract sy"
+    },
+    {
+      "record_id": "eu::73765b2110640b75",
+      "status": "abstract_only",
+      "pmid": "22500884",
+      "pmcid": "",
+      "is_open_access": "N",
+      "title": "Androgen deprivation therapy for volume reduction, lower urinary tract symptom relief and quality of"
+    },
+    {
+      "record_id": "eu::7fcf8b26558d0f42",
+      "status": "abstract_only",
+      "pmid": "23257248",
+      "pmcid": "",
+      "is_open_access": "N",
+      "title": "Neoadjuvant androgen deprivation therapy for prostate volume reduction, lower urinary tract symptom "
+    },
+    {
+      "record_id": "eu::a60bb100d52cef8e",
+      "status": "not_found"
+    },
+    {
+      "record_id": "eu::feebc9fa345144e9",
+      "status": "full_text_available",
+      "pmid": "29624800",
+      "pmcid": "PMC5989846",
+      "is_open_access": "Y",
+      "title": "Efficacy and safety of 3-month dosing regimen of degarelix in Japanese subjects with prostate cancer"
+    },
+    {
+      "record_id": "eu::863485cb326c59ed",
+      "status": "abstract_only",
+      "pmid": "19035858",
+      "pmcid": "",
+      "is_open_access": "N",
+      "title": "The efficacy and safety of degarelix: a 12-month, comparative, randomized, open-label, parallel-grou"
+    },
+    {
+      "record_id": "eu::bbca5c076c0f694a",
+      "status": "abstract_only",
+      "pmid": "23258223",
+      "pmcid": "",
+      "is_open_access": "N",
+      "title": "Degarelix versus goserelin (+ antiandrogen flare protection) in the relief of lower urinary tract sy"
+    },
+    {
+      "record_id": "eu::e9d707f0577a785f",
+      "status": "abstract_only",
+      "pmid": "23257248",
+      "pmcid": "",
+      "is_open_access": "N",
+      "title": "Neoadjuvant androgen deprivation therapy for prostate volume reduction, lower urinary tract symptom "
+    },
+    {
+      "record_id": "eu::e29ce8796338ee18",
+      "status": "abstract_only",
+      "pmid": "22500884",
+      "pmcid": "",
+      "is_open_access": "N",
+      "title": "Androgen deprivation therapy for volume reduction, lower urinary tract symptom relief and quality of"
+    },
+    {
+      "record_id": "eu::3362ac9b77bca5ca",
+      "status": "not_found"
+    },
+    {
+      "record_id": "eu::810038cf7b863f71",
+      "status": "full_text_available",
+      "pmid": "29624800",
+      "pmcid": "PMC5989846",
+      "is_open_access": "Y",
+      "title": "Efficacy and safety of 3-month dosing regimen of degarelix in Japanese subjects with prostate cancer"
+    },
+    {
+      "record_id": "eu::62ba90500e29066d",
+      "status": "abstract_only",
+      "pmid": "19035858",
+      "pmcid": "",
+      "is_open_access": "N",
+      "title": "The efficacy and safety of degarelix: a 12-month, comparative, randomized, open-label, parallel-grou"
+    },
+    {
+      "record_id": "eu::6aec1d5b1a74b1c9",
+      "status": "abstract_only",
+      "pmid": "23258223",
+      "pmcid": "",
+      "is_open_access": "N",
+      "title": "Degarelix versus goserelin (+ antiandrogen flare protection) in the relief of lower urinary tract sy"
+    },
+    {
+      "record_id": "eu::f2e80ff0943069a2",
+      "status": "abstract_only",
+      "pmid": "22500884",
+      "pmcid": "",
+      "is_open_access": "N",
+      "title": "Androgen deprivation therapy for volume reduction, lower urinary tract symptom relief and quality of"
+    },
+    {
+      "record_id": "eu::b2741befea2925ff",
+      "status": "abstract_only",
+      "pmid": "23257248",
+      "pmcid": "",
+      "is_open_access": "N",
+      "title": "Neoadjuvant androgen deprivation therapy for prostate volume reduction, lower urinary tract symptom "
+    },
+    {
+      "record_id": "eu::ede2f036e0e19490",
+      "status": "not_found"
+    },
+    {
+      "record_id": "eu::6ef0c7c553c29e04",
+      "status": "full_text_available",
+      "pmid": "29624800",
+      "pmcid": "PMC5989846",
+      "is_open_access": "Y",
+      "title": "Efficacy and safety of 3-month dosing regimen of degarelix in Japanese subjects with prostate cancer"
+    },
+    {
+      "record_id": "eu::6f2139edfa9b35e6",
+      "status": "abstract_only",
+      "pmid": "19035858",
+      "pmcid": "",
+      "is_open_access": "N",
+      "title": "The efficacy and safety of degarelix: a 12-month, comparative, randomized, open-label, parallel-grou"
+    },
+    {
+      "record_id": "eu::6908cbf8c4caa5d5",
+      "status": "abstract_only",
+      "pmid": "22500884",
+      "pmcid": "",
+      "is_open_access": "N",
+      "title": "Androgen deprivation therapy for volume reduction, lower urinary tract symptom relief and quality of"
+    },
+    {
+      "record_id": "eu::2133e84c7253f926",
+      "status": "abstract_only",
+      "pmid": "23258223",
+      "pmcid": "",
+      "is_open_access": "N",
+      "title": "Degarelix versus goserelin (+ antiandrogen flare protection) in the relief of lower urinary tract sy"
+    },
+    {
+      "record_id": "eu::81d9151c8cf814ce",
+      "status": "abstract_only",
+      "pmid": "23257248",
+      "pmcid": "",
+      "is_open_access": "N",
+      "title": "Neoadjuvant androgen deprivation therapy for prostate volume reduction, lower urinary tract symptom "
+    },
+    {
+      "record_id": "eu::01053e85567e6049",
+      "status": "not_found"
+    },
+    {
+      "record_id": "eu::0b9480b862265b78",
+      "status": "full_text_available",
+      "pmid": "29624800",
+      "pmcid": "PMC5989846",
+      "is_open_access": "Y",
+      "title": "Efficacy and safety of 3-month dosing regimen of degarelix in Japanese subjects with prostate cancer"
+    },
+    {
+      "record_id": "eu::588c97c0ef1fd15f",
+      "status": "abstract_only",
+      "pmid": "19035858",
+      "pmcid": "",
+      "is_open_access": "N",
+      "title": "The efficacy and safety of degarelix: a 12-month, comparative, randomized, open-label, parallel-grou"
+    },
+    {
+      "record_id": "eu::5b598e43c0e459f6",
+      "status": "abstract_only",
+      "pmid": "22500884",
+      "pmcid": "",
+      "is_open_access": "N",
+      "title": "Androgen deprivation therapy for volume reduction, lower urinary tract symptom relief and quality of"
+    },
+    {
+      "record_id": "eu::03a541745f422780",
+      "status": "abstract_only",
+      "pmid": "23258223",
+      "pmcid": "",
+      "is_open_access": "N",
+      "title": "Degarelix versus goserelin (+ antiandrogen flare protection) in the relief of lower urinary tract sy"
+    },
+    {
+      "record_id": "eu::22d88512e66a6624",
+      "status": "abstract_only",
+      "pmid": "23257248",
+      "pmcid": "",
+      "is_open_access": "N",
+      "title": "Neoadjuvant androgen deprivation therapy for prostate volume reduction, lower urinary tract symptom "
+    },
+    {
+      "record_id": "eu::a7a7b2bf5ba51e2a",
+      "status": "not_found"
+    },
+    {
+      "record_id": "eu::02cda5bbff8e4b5c",
+      "status": "full_text_available",
+      "pmid": "29624800",
+      "pmcid": "PMC5989846",
+      "is_open_access": "Y",
+      "title": "Efficacy and safety of 3-month dosing regimen of degarelix in Japanese subjects with prostate cancer"
+    },
+    {
+      "record_id": "eu::e437cbe5b2717668",
+      "status": "abstract_only",
+      "pmid": "19035858",
+      "pmcid": "",
+      "is_open_access": "N",
+      "title": "The efficacy and safety of degarelix: a 12-month, comparative, randomized, open-label, parallel-grou"
+    },
+    {
+      "record_id": "eu::cad1e0363ed81cde",
+      "status": "abstract_only",
+      "pmid": "22500884",
+      "pmcid": "",
+      "is_open_access": "N",
+      "title": "Androgen deprivation therapy for volume reduction, lower urinary tract symptom relief and quality of"
+    },
+    {
+      "record_id": "eu::7a440d84c34b0b8f",
+      "status": "not_found"
+    },
+    {
+      "record_id": "eu::94a9c8835237dc6c",
+      "status": "full_text_available",
+      "pmid": "29624800",
+      "pmcid": "PMC5989846",
+      "is_open_access": "Y",
+      "title": "Efficacy and safety of 3-month dosing regimen of degarelix in Japanese subjects with prostate cancer"
+    },
+    {
+      "record_id": "eu::0ee652c4eeb99d02",
+      "status": "abstract_only",
+      "pmid": "19035858",
+      "pmcid": "",
+      "is_open_access": "N",
+      "title": "The efficacy and safety of degarelix: a 12-month, comparative, randomized, open-label, parallel-grou"
+    },
+    {
+      "record_id": "eu::d8b0f6457135c2f1",
+      "status": "abstract_only",
+      "pmid": "22500884",
+      "pmcid": "",
+      "is_open_access": "N",
+      "title": "Androgen deprivation therapy for volume reduction, lower urinary tract symptom relief and quality of"
+    },
+    {
+      "record_id": "eu::9ca051730460878f",
+      "status": "not_found"
+    },
+    {
+      "record_id": "eu::268f3a30b19f733b",
+      "status": "abstract_only",
+      "pmid": "31188734",
+      "pmcid": "",
+      "is_open_access": "N",
+      "title": "Cardiovascular Morbidity in a Randomized Trial Comparing GnRH Agonist and GnRH Antagonist among Pati"
+    },
+    {
+      "record_id": "eu::beff35720b057e7b",
+      "status": "abstract_only",
+      "pmid": "19035858",
+      "pmcid": "",
+      "is_open_access": "N",
+      "title": "The efficacy and safety of degarelix: a 12-month, comparative, randomized, open-label, parallel-grou"
+    },
+    {
+      "record_id": "eu::df3696373a9b0b4e",
+      "status": "full_text_available",
+      "pmid": "29624800",
+      "pmcid": "PMC5989846",
+      "is_open_access": "Y",
+      "title": "Efficacy and safety of 3-month dosing regimen of degarelix in Japanese subjects with prostate cancer"
+    },
+    {
+      "record_id": "eu::83960fd59a84f700",
+      "status": "full_text_available",
+      "pmid": "29624800",
+      "pmcid": "PMC5989846",
+      "is_open_access": "Y",
+      "title": "Efficacy and safety of 3-month dosing regimen of degarelix in Japanese subjects with prostate cancer"
+    },
+    {
+      "record_id": "eu::1ff023e036f2f6a1",
+      "status": "abstract_only",
+      "pmid": "25496767",
+      "pmcid": "PMC4424172",
+      "is_open_access": "N",
+      "title": "Comparing Open Radical Cystectomy and Robot-assisted Laparoscopic Radical Cystectomy: A Randomized C"
+    },
+    {
+      "record_id": "eu::28e288d582e51b06",
+      "status": "abstract_only",
+      "pmid": "19853987",
+      "pmcid": "",
+      "is_open_access": "N",
+      "title": "Prospective randomized controlled trial of robotic versus open radical cystectomy for bladder cancer"
+    },
+    {
+      "record_id": "eu::ad32b9e1424545e2",
+      "status": "abstract_only",
+      "pmid": "23017529",
+      "pmcid": "",
+      "is_open_access": "N",
+      "title": "Perioperative outcomes and oncologic efficacy from a pilot prospective randomized clinical trial of "
+    },
+    {
+      "record_id": "eu::ed3b151619fd151d",
+      "status": "abstract_only",
+      "pmid": "29976469",
+      "pmcid": "",
+      "is_open_access": "N",
+      "title": "Robot-assisted radical cystectomy versus open radical cystectomy in patients with bladder cancer (RA"
+    },
+    {
+      "record_id": "eu::3e0dd474dbf714ef",
+      "status": "abstract_only",
+      "pmid": "35569079",
+      "pmcid": "PMC9109000",
+      "is_open_access": "N",
+      "title": "Effect of Robot-Assisted Radical Cystectomy With Intracorporeal Urinary Diversion vs Open Radical Cy"
+    },
+    {
+      "record_id": "eu::254c05194e3e59ab",
+      "status": "abstract_only",
+      "pmid": "26272237",
+      "pmcid": "",
+      "is_open_access": "N",
+      "title": "A Single-centre Early Phase Randomised Controlled Three-arm Trial of Open, Robotic, and Laparoscopic"
+    },
+    {
+      "record_id": "eu::8aa8e794884a2472",
+      "status": "abstract_only",
+      "pmid": "34657367",
+      "pmcid": "",
+      "is_open_access": "N",
+      "title": "Open vs robot-assisted radical cystectomy (BORARC): a double-blinded, randomised feasibility study."
+    },
+    {
+      "record_id": "eu::fadb0df62897e636",
+      "status": "full_text_available",
+      "pmid": "34986007",
+      "pmcid": "PMC12721634",
+      "is_open_access": "Y",
+      "title": "Open Radical Cystectomy versus Robot-Assisted Radical Cystectomy with Intracorporeal Urinary Diversi"
+    },
+    {
+      "record_id": "eu::a4aa7973b9d38fc2",
+      "status": "abstract_only",
+      "pmid": "26272237",
+      "pmcid": "",
+      "is_open_access": "N",
+      "title": "A Single-centre Early Phase Randomised Controlled Three-arm Trial of Open, Robotic, and Laparoscopic"
+    },
+    {
+      "record_id": "eu::5b4c579d11179468",
+      "status": "abstract_only",
+      "pmid": "34657367",
+      "pmcid": "",
+      "is_open_access": "N",
+      "title": "Open vs robot-assisted radical cystectomy (BORARC): a double-blinded, randomised feasibility study."
+    },
+    {
+      "record_id": "eu::71a07fbf7e4f5db5",
+      "status": "full_text_available",
+      "pmid": "34986007",
+      "pmcid": "PMC12721634",
+      "is_open_access": "Y",
+      "title": "Open Radical Cystectomy versus Robot-Assisted Radical Cystectomy with Intracorporeal Urinary Diversi"
+    },
+    {
+      "record_id": "eu::9a89d7db9549e30e",
+      "status": "abstract_only",
+      "pmid": "19853987",
+      "pmcid": "",
+      "is_open_access": "N",
+      "title": "Prospective randomized controlled trial of robotic versus open radical cystectomy for bladder cancer"
+    },
+    {
+      "record_id": "eu::a93dfcbb132f2b09",
+      "status": "abstract_only",
+      "pmid": "25496767",
+      "pmcid": "PMC4424172",
+      "is_open_access": "N",
+      "title": "Comparing Open Radical Cystectomy and Robot-assisted Laparoscopic Radical Cystectomy: A Randomized C"
+    },
+    {
+      "record_id": "eu::975e31b7121b5502",
+      "status": "abstract_only",
+      "pmid": "35569079",
+      "pmcid": "PMC9109000",
+      "is_open_access": "N",
+      "title": "Effect of Robot-Assisted Radical Cystectomy With Intracorporeal Urinary Diversion vs Open Radical Cy"
+    },
+    {
+      "record_id": "eu::8108a2255444a02e",
+      "status": "abstract_only",
+      "pmid": "26272237",
+      "pmcid": "",
+      "is_open_access": "N",
+      "title": "A Single-centre Early Phase Randomised Controlled Three-arm Trial of Open, Robotic, and Laparoscopic"
+    },
+    {
+      "record_id": "eu::3512414b09ceb0f8",
+      "status": "abstract_only",
+      "pmid": "34657367",
+      "pmcid": "",
+      "is_open_access": "N",
+      "title": "Open vs robot-assisted radical cystectomy (BORARC): a double-blinded, randomised feasibility study."
+    },
+    {
+      "record_id": "eu::6ebf38ebba7c8a3d",
+      "status": "full_text_available",
+      "pmid": "34986007",
+      "pmcid": "PMC12721634",
+      "is_open_access": "Y",
+      "title": "Open Radical Cystectomy versus Robot-Assisted Radical Cystectomy with Intracorporeal Urinary Diversi"
+    },
+    {
+      "record_id": "eu::fa541fae3b7a8d8e",
+      "status": "abstract_only",
+      "pmid": "19853987",
+      "pmcid": "",
+      "is_open_access": "N",
+      "title": "Prospective randomized controlled trial of robotic versus open radical cystectomy for bladder cancer"
+    },
+    {
+      "record_id": "eu::62eb8bb1a8ea926f",
+      "status": "abstract_only",
+      "pmid": "23017529",
+      "pmcid": "",
+      "is_open_access": "N",
+      "title": "Perioperative outcomes and oncologic efficacy from a pilot prospective randomized clinical trial of "
+    },
+    {
+      "record_id": "eu::8624081d6c6def67",
+      "status": "abstract_only",
+      "pmid": "29976469",
+      "pmcid": "",
+      "is_open_access": "N",
+      "title": "Robot-assisted radical cystectomy versus open radical cystectomy in patients with bladder cancer (RA"
+    },
+    {
+      "record_id": "eu::57f6977eaf3746e5",
+      "status": "full_text_available",
+      "pmid": "34986007",
+      "pmcid": "PMC12721634",
+      "is_open_access": "Y",
+      "title": "Open Radical Cystectomy versus Robot-Assisted Radical Cystectomy with Intracorporeal Urinary Diversi"
+    },
+    {
+      "record_id": "eu::bf88bb87d946e21c",
+      "status": "abstract_only",
+      "pmid": "23017529",
+      "pmcid": "",
+      "is_open_access": "N",
+      "title": "Perioperative outcomes and oncologic efficacy from a pilot prospective randomized clinical trial of "
+    },
+    {
+      "record_id": "eu::ae8ceb7125f9d066",
+      "status": "abstract_only",
+      "pmid": "29976469",
+      "pmcid": "",
+      "is_open_access": "N",
+      "title": "Robot-assisted radical cystectomy versus open radical cystectomy in patients with bladder cancer (RA"
+    },
+    {
+      "record_id": "eu::7ded13e398181266",
+      "status": "abstract_only",
+      "pmid": "25496767",
+      "pmcid": "PMC4424172",
+      "is_open_access": "N",
+      "title": "Comparing Open Radical Cystectomy and Robot-assisted Laparoscopic Radical Cystectomy: A Randomized C"
+    },
+    {
+      "record_id": "eu::51b4e2338169e252",
+      "status": "abstract_only",
+      "pmid": "35569079",
+      "pmcid": "PMC9109000",
+      "is_open_access": "N",
+      "title": "Effect of Robot-Assisted Radical Cystectomy With Intracorporeal Urinary Diversion vs Open Radical Cy"
+    },
+    {
+      "record_id": "eu::43a447e60b5cf672",
+      "status": "abstract_only",
+      "pmid": "26272237",
+      "pmcid": "",
+      "is_open_access": "N",
+      "title": "A Single-centre Early Phase Randomised Controlled Three-arm Trial of Open, Robotic, and Laparoscopic"
+    },
+    {
+      "record_id": "eu::00087024faf9757b",
+      "status": "abstract_only",
+      "pmid": "34657367",
+      "pmcid": "",
+      "is_open_access": "N",
+      "title": "Open vs robot-assisted radical cystectomy (BORARC): a double-blinded, randomised feasibility study."
+    },
+    {
+      "record_id": "eu::02e631f79d53a266",
+      "status": "full_text_available",
+      "pmid": "34986007",
+      "pmcid": "PMC12721634",
+      "is_open_access": "Y",
+      "title": "Open Radical Cystectomy versus Robot-Assisted Radical Cystectomy with Intracorporeal Urinary Diversi"
+    },
+    {
+      "record_id": "eu::b1a2a671669a1909",
+      "status": "abstract_only",
+      "pmid": "19853987",
+      "pmcid": "",
+      "is_open_access": "N",
+      "title": "Prospective randomized controlled trial of robotic versus open radical cystectomy for bladder cancer"
+    },
+    {
+      "record_id": "eu::6d5a01ac29d059df",
+      "status": "abstract_only",
+      "pmid": "23017529",
+      "pmcid": "",
+      "is_open_access": "N",
+      "title": "Perioperative outcomes and oncologic efficacy from a pilot prospective randomized clinical trial of "
+    },
+    {
+      "record_id": "eu::a6944478b0397adc",
+      "status": "abstract_only",
+      "pmid": "29976469",
+      "pmcid": "",
+      "is_open_access": "N",
+      "title": "Robot-assisted radical cystectomy versus open radical cystectomy in patients with bladder cancer (RA"
+    },
+    {
+      "record_id": "eu::536ecc557c6913c6",
+      "status": "abstract_only",
+      "pmid": "25496767",
+      "pmcid": "PMC4424172",
+      "is_open_access": "N",
+      "title": "Comparing Open Radical Cystectomy and Robot-assisted Laparoscopic Radical Cystectomy: A Randomized C"
+    },
+    {
+      "record_id": "eu::76a09d1896625a9f",
+      "status": "abstract_only",
+      "pmid": "35569079",
+      "pmcid": "PMC9109000",
+      "is_open_access": "N",
+      "title": "Effect of Robot-Assisted Radical Cystectomy With Intracorporeal Urinary Diversion vs Open Radical Cy"
+    },
+    {
+      "record_id": "eu::bd49daae9522d59e",
+      "status": "full_text_available",
+      "pmid": "34986007",
+      "pmcid": "PMC12721634",
+      "is_open_access": "Y",
+      "title": "Open Radical Cystectomy versus Robot-Assisted Radical Cystectomy with Intracorporeal Urinary Diversi"
+    },
+    {
+      "record_id": "eu::4368630323898514",
+      "status": "abstract_only",
+      "pmid": "19853987",
+      "pmcid": "",
+      "is_open_access": "N",
+      "title": "Prospective randomized controlled trial of robotic versus open radical cystectomy for bladder cancer"
+    },
+    {
+      "record_id": "eu::cc8a8b92aa3f7ece",
+      "status": "abstract_only",
+      "pmid": "23017529",
+      "pmcid": "",
+      "is_open_access": "N",
+      "title": "Perioperative outcomes and oncologic efficacy from a pilot prospective randomized clinical trial of "
+    },
+    {
+      "record_id": "eu::ca16e11df071d8c2",
+      "status": "abstract_only",
+      "pmid": "29976469",
+      "pmcid": "",
+      "is_open_access": "N",
+      "title": "Robot-assisted radical cystectomy versus open radical cystectomy in patients with bladder cancer (RA"
+    },
+    {
+      "record_id": "eu::6bdf572e615ec324",
+      "status": "abstract_only",
+      "pmid": "35590011",
+      "pmcid": "",
+      "is_open_access": "N",
+      "title": "Quality of life and secondary outcomes for open versus robot-assisted radical cystectomy: a double-b"
+    },
+    {
+      "record_id": "eu::17f98343bce60ba5",
+      "status": "abstract_only",
+      "pmid": "25496767",
+      "pmcid": "PMC4424172",
+      "is_open_access": "N",
+      "title": "Comparing Open Radical Cystectomy and Robot-assisted Laparoscopic Radical Cystectomy: A Randomized C"
+    },
+    {
+      "record_id": "eu::faada3424f23b718",
+      "status": "full_text_available",
+      "pmid": "34986007",
+      "pmcid": "PMC12721634",
+      "is_open_access": "Y",
+      "title": "Open Radical Cystectomy versus Robot-Assisted Radical Cystectomy with Intracorporeal Urinary Diversi"
+    },
+    {
+      "record_id": "eu::24e659557b3d0a38",
+      "status": "abstract_only",
+      "pmid": "24862633",
+      "pmcid": "",
+      "is_open_access": "N",
+      "title": "Health-related quality of life from a prospective randomised clinical trial of robot-assisted laparo"
+    },
+    {
+      "record_id": "eu::67c619c0a8f8a663",
+      "status": "abstract_only",
+      "pmid": "29976469",
+      "pmcid": "",
+      "is_open_access": "N",
+      "title": "Robot-assisted radical cystectomy versus open radical cystectomy in patients with bladder cancer (RA"
+    },
+    {
+      "record_id": "eu::be460133ea6ea5ed",
+      "status": "abstract_only",
+      "pmid": "35590011",
+      "pmcid": "",
+      "is_open_access": "N",
+      "title": "Quality of life and secondary outcomes for open versus robot-assisted radical cystectomy: a double-b"
+    },
+    {
+      "record_id": "eu::220d4eda06db1465",
+      "status": "abstract_only",
+      "pmid": "25496767",
+      "pmcid": "PMC4424172",
+      "is_open_access": "N",
+      "title": "Comparing Open Radical Cystectomy and Robot-assisted Laparoscopic Radical Cystectomy: A Randomized C"
+    },
+    {
+      "record_id": "eu::53cf6220e7cc3000",
+      "status": "full_text_available",
+      "pmid": "34986007",
+      "pmcid": "PMC12721634",
+      "is_open_access": "Y",
+      "title": "Open Radical Cystectomy versus Robot-Assisted Radical Cystectomy with Intracorporeal Urinary Diversi"
+    },
+    {
+      "record_id": "eu::a243de4d78fb2c02",
+      "status": "abstract_only",
+      "pmid": "35590011",
+      "pmcid": "",
+      "is_open_access": "N",
+      "title": "Quality of life and secondary outcomes for open versus robot-assisted radical cystectomy: a double-b"
+    },
+    {
+      "record_id": "eu::16256ea97ee080cc",
+      "status": "abstract_only",
+      "pmid": "25496767",
+      "pmcid": "PMC4424172",
+      "is_open_access": "N",
+      "title": "Comparing Open Radical Cystectomy and Robot-assisted Laparoscopic Radical Cystectomy: A Randomized C"
+    },
+    {
+      "record_id": "eu::e0c93dbf4071dc55",
+      "status": "full_text_available",
+      "pmid": "34986007",
+      "pmcid": "PMC12721634",
+      "is_open_access": "Y",
+      "title": "Open Radical Cystectomy versus Robot-Assisted Radical Cystectomy with Intracorporeal Urinary Diversi"
+    },
+    {
+      "record_id": "eu::b7dda53bd7097f9a",
+      "status": "abstract_only",
+      "pmid": "24862633",
+      "pmcid": "",
+      "is_open_access": "N",
+      "title": "Health-related quality of life from a prospective randomised clinical trial of robot-assisted laparo"
+    },
+    {
+      "record_id": "eu::dbaea1d544d83f3f",
+      "status": "abstract_only",
+      "pmid": "29976469",
+      "pmcid": "",
+      "is_open_access": "N",
+      "title": "Robot-assisted radical cystectomy versus open radical cystectomy in patients with bladder cancer (RA"
+    },
+    {
+      "record_id": "eu::f0219ae59253b41c",
+      "status": "abstract_only",
+      "pmid": "25496767",
+      "pmcid": "PMC4424172",
+      "is_open_access": "N",
+      "title": "Comparing Open Radical Cystectomy and Robot-assisted Laparoscopic Radical Cystectomy: A Randomized C"
+    },
+    {
+      "record_id": "eu::48084de9ad2a1e23",
+      "status": "full_text_available",
+      "pmid": "34986007",
+      "pmcid": "PMC12721634",
+      "is_open_access": "Y",
+      "title": "Open Radical Cystectomy versus Robot-Assisted Radical Cystectomy with Intracorporeal Urinary Diversi"
+    },
+    {
+      "record_id": "eu::ac587af158fa1863",
+      "status": "abstract_only",
+      "pmid": "24862633",
+      "pmcid": "",
+      "is_open_access": "N",
+      "title": "Health-related quality of life from a prospective randomised clinical trial of robot-assisted laparo"
+    },
+    {
+      "record_id": "eu::979ea38ef691911f",
+      "status": "abstract_only",
+      "pmid": "29976469",
+      "pmcid": "",
+      "is_open_access": "N",
+      "title": "Robot-assisted radical cystectomy versus open radical cystectomy in patients with bladder cancer (RA"
+    },
+    {
+      "record_id": "eu::269b14d62273fba7",
+      "status": "abstract_only",
+      "pmid": "35590011",
+      "pmcid": "",
+      "is_open_access": "N",
+      "title": "Quality of life and secondary outcomes for open versus robot-assisted radical cystectomy: a double-b"
+    },
+    {
+      "record_id": "eu::5d4b4f2db688e5fc",
+      "status": "abstract_only",
+      "pmid": "25496767",
+      "pmcid": "PMC4424172",
+      "is_open_access": "N",
+      "title": "Comparing Open Radical Cystectomy and Robot-assisted Laparoscopic Radical Cystectomy: A Randomized C"
+    },
+    {
+      "record_id": "eu::06dd23c302de22c5",
+      "status": "full_text_available",
+      "pmid": "34986007",
+      "pmcid": "PMC12721634",
+      "is_open_access": "Y",
+      "title": "Open Radical Cystectomy versus Robot-Assisted Radical Cystectomy with Intracorporeal Urinary Diversi"
+    },
+    {
+      "record_id": "eu::7ab81c47e9078a07",
+      "status": "abstract_only",
+      "pmid": "35590011",
+      "pmcid": "",
+      "is_open_access": "N",
+      "title": "Quality of life and secondary outcomes for open versus robot-assisted radical cystectomy: a double-b"
+    },
+    {
+      "record_id": "eu::75fd5bda4e6d4b37",
+      "status": "abstract_only",
+      "pmid": "25496767",
+      "pmcid": "PMC4424172",
+      "is_open_access": "N",
+      "title": "Comparing Open Radical Cystectomy and Robot-assisted Laparoscopic Radical Cystectomy: A Randomized C"
+    },
+    {
+      "record_id": "eu::bdef4ddf897a8c18",
+      "status": "full_text_available",
+      "pmid": "34986007",
+      "pmcid": "PMC12721634",
+      "is_open_access": "Y",
+      "title": "Open Radical Cystectomy versus Robot-Assisted Radical Cystectomy with Intracorporeal Urinary Diversi"
+    },
+    {
+      "record_id": "eu::15a03285b034b80d",
+      "status": "abstract_only",
+      "pmid": "24862633",
+      "pmcid": "",
+      "is_open_access": "N",
+      "title": "Health-related quality of life from a prospective randomised clinical trial of robot-assisted laparo"
+    },
+    {
+      "record_id": "eu::90f78bd9ed11bf4d",
+      "status": "abstract_only",
+      "pmid": "29976469",
+      "pmcid": "",
+      "is_open_access": "N",
+      "title": "Robot-assisted radical cystectomy versus open radical cystectomy in patients with bladder cancer (RA"
+    },
+    {
+      "record_id": "eu::156965e63bdae31f",
+      "status": "abstract_only",
+      "pmid": "35590011",
+      "pmcid": "",
+      "is_open_access": "N",
+      "title": "Quality of life and secondary outcomes for open versus robot-assisted radical cystectomy: a double-b"
+    },
+    {
+      "record_id": "glass::trialreviewbench:results:32306958:overall-survival:0001",
+      "status": "abstract_only",
+      "pmid": "26446948",
+      "pmcid": "PMC4755809",
+      "is_open_access": "N",
+      "title": "Nivolumab in Resected and Unresectable Metastatic Melanoma: Characteristics of Immune-Related Advers"
+    },
+    {
+      "record_id": "glass::trialreviewbench:results:32306958:overall-survival:0002",
+      "status": "full_text_available",
+      "pmid": "30311424",
+      "pmcid": "PMC6247050",
+      "is_open_access": "Y",
+      "title": "Safety of combined PD-1 pathway inhibition and radiation therapy for non-small-cell lung cancer: A m"
+    },
+    {
+      "record_id": "glass::trialreviewbench:results:32306958:overall-survival:0003",
+      "status": "full_text_available",
+      "pmid": "30197259",
+      "pmcid": "PMC7193681",
+      "is_open_access": "Y",
+      "title": "Incidence, Risk Factors, and Effect on Survival of Immune-related Adverse Events in Patients With No"
+    },
+    {
+      "record_id": "glass::trialreviewbench:results:32306958:overall-survival:0004",
+      "status": "abstract_only",
+      "pmid": "29382669",
+      "pmcid": "PMC6066474",
+      "is_open_access": "N",
+      "title": "Treatment-Related Adverse Events Predict Improved Clinical Outcome in NSCLC Patients on KEYNOTE-001 "
+    },
+    {
+      "record_id": "glass::trialreviewbench:results:32306958:overall-survival:0005",
+      "status": "full_text_available",
+      "pmid": "30911841",
+      "pmcid": "PMC6527531",
+      "is_open_access": "Y",
+      "title": "Comprehensive analysis of the characteristics and treatment outcomes of patients with non-small cell"
+    },
+    {
+      "record_id": "glass::trialreviewbench:results:32306958:overall-survival:0006",
+      "status": "full_text_available",
+      "pmid": "30944023",
+      "pmcid": "PMC6448290",
+      "is_open_access": "Y",
+      "title": "Real-world efficacy and safety of nivolumab in previously-treated metastatic renal cell carcinoma, a"
+    },
+    {
+      "record_id": "glass::trialreviewbench:results:32306958:overall-survival:0007",
+      "status": "full_text_available",
+      "pmid": "31086392",
+      "pmcid": "PMC6516638",
+      "is_open_access": "Y",
+      "title": "Incidence, features, and prognosis of immune-related adverse events involving the thyroid gland indu"
+    },
+    {
+      "record_id": "glass::trialreviewbench:results:32306958:progression-free-survival:0001",
+      "status": "abstract_only",
+      "pmid": "26222619",
+      "pmcid": "PMC5061067",
+      "is_open_access": "N",
+      "title": "Pembrolizumab Cutaneous Adverse Events and Their Association With Disease Progression."
+    },
+    {
+      "record_id": "glass::trialreviewbench:results:32306958:progression-free-survival:0002",
+      "status": "full_text_available",
+      "pmid": "30311424",
+      "pmcid": "PMC6247050",
+      "is_open_access": "Y",
+      "title": "Safety of combined PD-1 pathway inhibition and radiation therapy for non-small-cell lung cancer: A m"
+    },
+    {
+      "record_id": "glass::trialreviewbench:results:32306958:progression-free-survival:0003",
+      "status": "abstract_only",
+      "pmid": "29382669",
+      "pmcid": "PMC6066474",
+      "is_open_access": "N",
+      "title": "Treatment-Related Adverse Events Predict Improved Clinical Outcome in NSCLC Patients on KEYNOTE-001 "
+    },
+    {
+      "record_id": "glass::trialreviewbench:results:32306958:progression-free-survival:0004",
+      "status": "full_text_available",
+      "pmid": "31086392",
+      "pmcid": "PMC6516638",
+      "is_open_access": "Y",
+      "title": "Incidence, features, and prognosis of immune-related adverse events involving the thyroid gland indu"
+    },
+    {
+      "record_id": "glass::trialreviewbench:results:32539858:overall-survival:0001",
+      "status": "abstract_only",
+      "pmid": "29470805",
+      "pmcid": "PMC5994186",
+      "is_open_access": "N",
+      "title": "Adjuvant versus neoadjuvant chemotherapy in triple-negative breast cancer patients with BRCA mutatio"
+    },
+    {
+      "record_id": "glass::trialreviewbench:results:32539858:overall-survival:0002",
+      "status": "abstract_only",
+      "pmid": "21725686",
+      "pmcid": "PMC3892697",
+      "is_open_access": "N",
+      "title": "Neoadjuvant chemotherapy is associated with improved survival compared with adjuvant chemotherapy in"
+    },
+    {
+      "record_id": "glass::trialreviewbench:results:32539858:overall-survival:0003",
+      "status": "full_text_available",
+      "pmid": "30290661",
+      "pmcid": "PMC6200491",
+      "is_open_access": "Y",
+      "title": "Retrospective analysis of concurrent docetaxel and epirubicin neoadjuvant versus adjuvant chemothera"
+    },
+    {
+      "record_id": "glass::trialreviewbench:results:32539858:overall-survival:0004",
+      "status": "full_text_available",
+      "pmid": "29348858",
+      "pmcid": "PMC5762543",
+      "is_open_access": "Y",
+      "title": "The survival benefit of neoadjuvant chemotherapy and pCR among patients with advanced stage triple n"
+    },
+    {
+      "record_id": "glass::trialreviewbench:results:32539858:overall-survival:0005",
+      "status": "full_text_available",
+      "pmid": "31536530",
+      "pmcid": "PMC6752843",
+      "is_open_access": "Y",
+      "title": "Clinical outcomes with neoadjuvant versus adjuvant chemotherapy for triple negative breast cancer: A"
+    },
+    {
+      "record_id": "glass::trialreviewbench:results:33586699:overall-survival:0001",
+      "status": "full_text_available",
+      "pmid": "30627554",
+      "pmcid": "PMC6304638",
+      "is_open_access": "Y",
+      "title": "Effect of Neoadjuvant Hormone Therapy on Resection Margin and Survival Prognoses in Locally Advanced"
+    },
+    {
+      "record_id": "glass::trialreviewbench:results:33586699:biochemical-progression-free-su:0001",
+      "status": "full_text_available",
+      "pmid": "30627554",
+      "pmcid": "PMC6304638",
+      "is_open_access": "Y",
+      "title": "Effect of Neoadjuvant Hormone Therapy on Resection Margin and Survival Prognoses in Locally Advanced"
+    },
+    {
+      "record_id": "glass::trialreviewbench:results:33586699:biochemical-progression-free-su:0002",
+      "status": "full_text_available",
+      "pmid": "24401540",
+      "pmcid": "PMC3904455",
+      "is_open_access": "Y",
+      "title": "Combined brachytherapy and external beam radiotherapy without adjuvant androgen deprivation therapy "
+    },
+    {
+      "record_id": "glass::trialreviewbench:results:33586699:biochemical-progression-free-su:0003",
+      "status": "full_text_available",
+      "pmid": "19859572",
+      "pmcid": "PMC2765690",
+      "is_open_access": "Y",
+      "title": "Benefit of whole pelvic radiotherapy combined with neoadjuvant androgen deprivation for the high-ris"
+    },
+    {
+      "record_id": "glass::trialreviewbench:results:33586699:biochemical-progression-free-su:0004",
+      "status": "full_text_available",
+      "pmid": "25568853",
+      "pmcid": "PMC4282999",
+      "is_open_access": "Y",
+      "title": "Is neoadjuvant androgen deprivation therapy beneficial in prostate cancer treated with definitive ra"
+    },
+    {
+      "record_id": "glass::trialreviewbench:results:33586699:positive-surgical-margin-status:0001",
+      "status": "full_text_available",
+      "pmid": "31190986",
+      "pmcid": "PMC6522651",
+      "is_open_access": "Y",
+      "title": "Short-term benefit of neoadjuvant hormone therapy in patients with localized high-risk or limited pr"
+    },
+    {
+      "record_id": "glass::trialreviewbench:results:33586699:positive-surgical-margin-status:0002",
+      "status": "full_text_available",
+      "pmid": "30627554",
+      "pmcid": "PMC6304638",
+      "is_open_access": "Y",
+      "title": "Effect of Neoadjuvant Hormone Therapy on Resection Margin and Survival Prognoses in Locally Advanced"
+    },
+    {
+      "record_id": "glass::trialreviewbench:results:34167181:complete-ablation-rates:0001",
+      "status": "abstract_only",
+      "pmid": "29203394",
+      "pmcid": "PMC5803367",
+      "is_open_access": "N",
+      "title": "Percutaneous Microwave versus Radiofrequency Ablation of Colorectal Liver Metastases: Ablation with "
+    },
+    {
+      "record_id": "glass::trialreviewbench:results:34167181:complete-ablation-rates:0002",
+      "status": "full_text_available",
+      "pmid": "28103953",
+      "pmcid": "PMC5244542",
+      "is_open_access": "Y",
+      "title": "Microwave ablation is as effective as radiofrequency ablation for very-early-stage hepatocellular ca"
+    },
+    {
+      "record_id": "glass::trialreviewbench:results:34167181:complete-ablation-rates:0003",
+      "status": "full_text_available",
+      "pmid": "24146824",
+      "pmcid": "PMC3798302",
+      "is_open_access": "Y",
+      "title": "Therapeutic efficacy of percutaneous radiofrequency ablation versus microwave ablation for hepatocel"
+    },
+    {
+      "record_id": "glass::trialreviewbench:results:34167181:intrahepatic-distant-recurrenc:0001",
+      "status": "full_text_available",
+      "pmid": "28103953",
+      "pmcid": "PMC5244542",
+      "is_open_access": "Y",
+      "title": "Microwave ablation is as effective as radiofrequency ablation for very-early-stage hepatocellular ca"
+    },
+    {
+      "record_id": "glass::trialreviewbench:results:34167181:intrahepatic-distant-recurrenc:0002",
+      "status": "full_text_available",
+      "pmid": "24146824",
+      "pmcid": "PMC3798302",
+      "is_open_access": "Y",
+      "title": "Therapeutic efficacy of percutaneous radiofrequency ablation versus microwave ablation for hepatocel"
+    },
+    {
+      "record_id": "glass::trialreviewbench:results:34167181:local-tumor-progression:0001",
+      "status": "abstract_only",
+      "pmid": "29203394",
+      "pmcid": "PMC5803367",
+      "is_open_access": "N",
+      "title": "Percutaneous Microwave versus Radiofrequency Ablation of Colorectal Liver Metastases: Ablation with "
+    },
+    {
+      "record_id": "glass::trialreviewbench:results:34167181:local-tumor-progression:0002",
+      "status": "full_text_available",
+      "pmid": "28103953",
+      "pmcid": "PMC5244542",
+      "is_open_access": "Y",
+      "title": "Microwave ablation is as effective as radiofrequency ablation for very-early-stage hepatocellular ca"
+    },
+    {
+      "record_id": "glass::trialreviewbench:results:34167181:local-tumor-progression:0003",
+      "status": "full_text_available",
+      "pmid": "27387188",
+      "pmcid": "PMC5009157",
+      "is_open_access": "Y",
+      "title": "MWA Versus RFA for Perivascular and Peribiliary CRLM: A Retrospective Patient- and Lesion-Based Anal"
+    },
+    {
+      "record_id": "glass::trialreviewbench:results:34167181:local-tumor-progression:0004",
+      "status": "abstract_only",
+      "pmid": "27017124",
+      "pmcid": "PMC4842085",
+      "is_open_access": "N",
+      "title": "Microwave versus Radiofrequency Ablation Treatment for Hepatocellular Carcinoma: A Comparison of Eff"
+    },
+    {
+      "record_id": "glass::trialreviewbench:results:34167181:local-tumor-progression:0005",
+      "status": "full_text_available",
+      "pmid": "24146824",
+      "pmcid": "PMC3798302",
+      "is_open_access": "Y",
+      "title": "Therapeutic efficacy of percutaneous radiofrequency ablation versus microwave ablation for hepatocel"
+    },
+    {
+      "record_id": "glass::trialreviewbench:results:34761879:overall-survival:0001",
+      "status": "full_text_available",
+      "pmid": "31016870",
+      "pmcid": "PMC6558592",
+      "is_open_access": "Y",
+      "title": "Combination chemotherapy plus dasatinib leads to comparable overall survival and relapse-free surviv"
+    },
+    {
+      "record_id": "glass::trialreviewbench:results:34761879:overall-survival:0002",
+      "status": "abstract_only",
+      "pmid": "26308885",
+      "pmcid": "PMC4666803",
+      "is_open_access": "N",
+      "title": "Long-term follow-up of a phase 2 study of chemotherapy plus dasatinib for the initial treatment of p"
+    },
+    {
+      "record_id": "glass::trialreviewbench:results:34761879:relapse-free-survival:0001",
+      "status": "full_text_available",
+      "pmid": "31016870",
+      "pmcid": "PMC6558592",
+      "is_open_access": "Y",
+      "title": "Combination chemotherapy plus dasatinib leads to comparable overall survival and relapse-free surviv"
+    },
+    {
+      "record_id": "glass::trialreviewbench:results:34761879:relapse-free-survival:0002",
+      "status": "full_text_available",
+      "pmid": "29694642",
+      "pmcid": "PMC6097750",
+      "is_open_access": "Y",
+      "title": "Final analysis of the JALSG Ph+ALL202 study: tyrosine kinase inhibitor-combined chemotherapy for Ph+"
+    },
+    {
+      "record_id": "glass::trialreviewbench:results:34761879:relapse-free-survival:0003",
+      "status": "abstract_only",
+      "pmid": "29046900",
+      "pmcid": "PMC5642915",
+      "is_open_access": "N",
+      "title": "US Intergroup Study of Chemotherapy Plus Dasatinib and Allogeneic Stem Cell Transplant in Philadelph"
+    },
+    {
+      "record_id": "glass::trialreviewbench:results:34761879:non-relapse-mortality:0001",
+      "status": "full_text_available",
+      "pmid": "29694642",
+      "pmcid": "PMC6097750",
+      "is_open_access": "Y",
+      "title": "Final analysis of the JALSG Ph+ALL202 study: tyrosine kinase inhibitor-combined chemotherapy for Ph+"
+    },
+    {
+      "record_id": "glass::trialreviewbench:results:34761879:non-relapse-mortality:0002",
+      "status": "abstract_only",
+      "pmid": "30501869",
+      "pmcid": "PMC10020885",
+      "is_open_access": "N",
+      "title": "Combination of hyper-CVAD with ponatinib as first-line therapy for patients with Philadelphia chromo"
+    },
+    {
+      "record_id": "glass::trialreviewbench:results:34761879:non-relapse-mortality:0003",
+      "status": "abstract_only",
+      "pmid": "26308885",
+      "pmcid": "PMC4666803",
+      "is_open_access": "N",
+      "title": "Long-term follow-up of a phase 2 study of chemotherapy plus dasatinib for the initial treatment of p"
+    },
+    {
+      "record_id": "glass::trialreviewbench:results:34820879:objective-response-rate:0001",
+      "status": "full_text_available",
+      "pmid": "32647540",
+      "pmcid": "PMC7325548",
+      "is_open_access": "Y",
+      "title": "Clinical outcomes of patients with <i>HER2</i>-mutant advanced lung cancer: chemotherapies <i>versus"
+    },
+    {
+      "record_id": "glass::trialreviewbench:results:34820879:objective-response-rate:0002",
+      "status": "full_text_available",
+      "pmid": "30061586",
+      "pmcid": "PMC6162232",
+      "is_open_access": "Y",
+      "title": "Trastuzumab and paclitaxel in patients with EGFR mutated NSCLC that express HER2 after progression o"
+    },
+    {
+      "record_id": "glass::trialreviewbench:results:34820879:objective-response-rate:0003",
+      "status": "abstract_only",
+      "pmid": "32213540",
+      "pmcid": "PMC8292921",
+      "is_open_access": "N",
+      "title": "Targeting HER2 with Trastuzumab Deruxtecan: A Dose-Expansion, Phase I Study in Multiple Advanced Sol"
+    },
+    {
+      "record_id": "glass::trialreviewbench:results:34820879:objective-response-rate:0004",
+      "status": "abstract_only",
+      "pmid": "29686424",
+      "pmcid": "PMC5964608",
+      "is_open_access": "N",
+      "title": "Mechanisms and clinical activity of an EGFR and HER2 exon 20-selective kinase inhibitor in non-small"
+    },
+    {
+      "record_id": "glass::trialreviewbench:results:34820879:objective-response-rate:0005",
+      "status": "abstract_only",
+      "pmid": "31588020",
+      "pmcid": "PMC6944069",
+      "is_open_access": "N",
+      "title": "Pan-Cancer Landscape and Analysis of ERBB2 Mutations Identifies Poziotinib as a Clinically Active In"
+    },
+    {
+      "record_id": "glass::trialreviewbench:results:34820879:objective-response-rate:0006",
+      "status": "full_text_available",
+      "pmid": "30425522",
+      "pmcid": "PMC6205822",
+      "is_open_access": "Y",
+      "title": "Clinical characterization of <i>ERBB2</i> exon 20 insertions and heterogeneity of outcomes respondin"
+    },
+    {
+      "record_id": "glass::trialreviewbench:results:34820879:objective-response-rate:0007",
+      "status": "abstract_only",
+      "pmid": "30685684",
+      "pmcid": "PMC6426688",
+      "is_open_access": "N",
+      "title": "Afatinib in patients with metastatic or recurrent HER2-mutant lung cancers: a retrospective internat"
+    },
+    {
+      "record_id": "glass::trialreviewbench:results:34820879:disease-control-rate:0001",
+      "status": "full_text_available",
+      "pmid": "32647540",
+      "pmcid": "PMC7325548",
+      "is_open_access": "Y",
+      "title": "Clinical outcomes of patients with <i>HER2</i>-mutant advanced lung cancer: chemotherapies <i>versus"
+    },
+    {
+      "record_id": "glass::trialreviewbench:results:34820879:disease-control-rate:0002",
+      "status": "full_text_available",
+      "pmid": "30061586",
+      "pmcid": "PMC6162232",
+      "is_open_access": "Y",
+      "title": "Trastuzumab and paclitaxel in patients with EGFR mutated NSCLC that express HER2 after progression o"
+    },
+    {
+      "record_id": "glass::trialreviewbench:results:34820879:disease-control-rate:0003",
+      "status": "abstract_only",
+      "pmid": "32213540",
+      "pmcid": "PMC8292921",
+      "is_open_access": "N",
+      "title": "Targeting HER2 with Trastuzumab Deruxtecan: A Dose-Expansion, Phase I Study in Multiple Advanced Sol"
+    },
+    {
+      "record_id": "glass::trialreviewbench:results:34820879:disease-control-rate:0004",
+      "status": "full_text_available",
+      "pmid": "27825109",
+      "pmcid": "PMC5363651",
+      "is_open_access": "Y",
+      "title": "HER2 mutations in Chinese patients with non-small cell lung cancer."
+    },
+    {
+      "record_id": "glass::trialreviewbench:results:34820879:disease-control-rate:0005",
+      "status": "abstract_only",
+      "pmid": "30685684",
+      "pmcid": "PMC6426688",
+      "is_open_access": "N",
+      "title": "Afatinib in patients with metastatic or recurrent HER2-mutant lung cancers: a retrospective internat"
+    },
+    {
+      "record_id": "glass::trialreviewbench:results:34820879:disease-control-rate:0006",
+      "status": "full_text_available",
+      "pmid": "30425522",
+      "pmcid": "PMC6205822",
+      "is_open_access": "Y",
+      "title": "Clinical characterization of <i>ERBB2</i> exon 20 insertions and heterogeneity of outcomes respondin"
+    },
+    {
+      "record_id": "glass::trialreviewbench:results:34820879:disease-control-rate:0007",
+      "status": "abstract_only",
+      "pmid": "29686424",
+      "pmcid": "PMC5964608",
+      "is_open_access": "N",
+      "title": "Mechanisms and clinical activity of an EGFR and HER2 exon 20-selective kinase inhibitor in non-small"
+    },
+    {
+      "record_id": "glass::trialreviewbench:results:34820879:disease-control-rate:0008",
+      "status": "abstract_only",
+      "pmid": "31588020",
+      "pmcid": "PMC6944069",
+      "is_open_access": "N",
+      "title": "Pan-Cancer Landscape and Analysis of ERBB2 Mutations Identifies Poziotinib as a Clinically Active In"
+    },
+    {
+      "record_id": "glass::trialreviewbench:results:36748348:grade-iii-iv-aes:0001",
+      "status": "full_text_available",
+      "pmid": "27690294",
+      "pmcid": "PMC5351686",
+      "is_open_access": "Y",
+      "title": "Phase III randomized trial of autologous cytokine-induced killer cell immunotherapy for newly diagno"
+    },
+    {
+      "record_id": "glass::trialreviewbench:results:36748348:grade-iii-iv-aes:0002",
+      "status": "abstract_only",
+      "pmid": "31320597",
+      "pmcid": "PMC8132111",
+      "is_open_access": "N",
+      "title": "A Randomized Double-Blind Placebo-Controlled Phase II Trial of Dendritic Cell Vaccine ICT-107 in New"
+    },
+    {
+      "record_id": "glass::trialreviewbench:results:36748348:overall-survival:0001",
+      "status": "full_text_available",
+      "pmid": "27690294",
+      "pmcid": "PMC5351686",
+      "is_open_access": "Y",
+      "title": "Phase III randomized trial of autologous cytokine-induced killer cell immunotherapy for newly diagno"
+    },
+    {
+      "record_id": "glass::trialreviewbench:results:36748348:progression-free-survival:0001",
+      "status": "full_text_available",
+      "pmid": "27690294",
+      "pmcid": "PMC5351686",
+      "is_open_access": "Y",
+      "title": "Phase III randomized trial of autologous cytokine-induced killer cell immunotherapy for newly diagno"
+    },
+    {
+      "record_id": "glass::trialreviewbench:results:36748348:progression-free-survival:0002",
+      "status": "abstract_only",
+      "pmid": "31320597",
+      "pmcid": "PMC8132111",
+      "is_open_access": "N",
+      "title": "A Randomized Double-Blind Placebo-Controlled Phase II Trial of Dendritic Cell Vaccine ICT-107 in New"
+    },
+    {
+      "record_id": "glass::trialreviewbench:results:37066936:acute-gi-toxicity:0001",
+      "status": "full_text_available",
+      "pmid": "30479615",
+      "pmcid": "PMC6251450",
+      "is_open_access": "Y",
+      "title": "Acute and late toxicities in localized prostate cancer patients treated with low-dose <sup>125</sup>"
+    },
+    {
+      "record_id": "glass::trialreviewbench:results:37066936:acute-gi-toxicity:0002",
+      "status": "full_text_available",
+      "pmid": "23363647",
+      "pmcid": "PMC3570431",
+      "is_open_access": "Y",
+      "title": "Periodical assessment of genitourinary and gastrointestinal toxicity in patients who underwent prost"
+    },
+    {
+      "record_id": "glass::trialreviewbench:results:37066936:late-gi-toxicity:0001",
+      "status": "full_text_available",
+      "pmid": "30479615",
+      "pmcid": "PMC6251450",
+      "is_open_access": "Y",
+      "title": "Acute and late toxicities in localized prostate cancer patients treated with low-dose <sup>125</sup>"
+    },
+    {
+      "record_id": "glass::trialreviewbench:results:37066936:late-gi-toxicity:0002",
+      "status": "full_text_available",
+      "pmid": "23363647",
+      "pmcid": "PMC3570431",
+      "is_open_access": "Y",
+      "title": "Periodical assessment of genitourinary and gastrointestinal toxicity in patients who underwent prost"
+    },
+    {
+      "record_id": "glass::trialreviewbench:results:37066936:late-gi-toxicity:0003",
+      "status": "full_text_available",
+      "pmid": "32642874",
+      "pmcid": "PMC7840646",
+      "is_open_access": "Y",
+      "title": "Treatment of low-risk prostate cancer: a retrospective study with 477 patients comparing external be"
+    },
+    {
+      "record_id": "glass::trialreviewbench:results:37066936:late-gi-toxicity:0004",
+      "status": "full_text_available",
+      "pmid": "28992050",
+      "pmcid": "PMC5737336",
+      "is_open_access": "Y",
+      "title": "Clinical outcomes of 125I brachytherapy with and without external-beam radiation therapy for localiz"
+    },
+    {
+      "record_id": "glass::trialreviewbench:results:37066936:acute-gu-toxicity:0001",
+      "status": "full_text_available",
+      "pmid": "30479615",
+      "pmcid": "PMC6251450",
+      "is_open_access": "Y",
+      "title": "Acute and late toxicities in localized prostate cancer patients treated with low-dose <sup>125</sup>"
+    },
+    {
+      "record_id": "glass::trialreviewbench:results:37066936:acute-gu-toxicity:0002",
+      "status": "full_text_available",
+      "pmid": "23363647",
+      "pmcid": "PMC3570431",
+      "is_open_access": "Y",
+      "title": "Periodical assessment of genitourinary and gastrointestinal toxicity in patients who underwent prost"
+    },
+    {
+      "record_id": "glass::trialreviewbench:results:37066936:late-gu-toxicity:0001",
+      "status": "full_text_available",
+      "pmid": "30479615",
+      "pmcid": "PMC6251450",
+      "is_open_access": "Y",
+      "title": "Acute and late toxicities in localized prostate cancer patients treated with low-dose <sup>125</sup>"
+    },
+    {
+      "record_id": "glass::trialreviewbench:results:37066936:late-gu-toxicity:0002",
+      "status": "full_text_available",
+      "pmid": "23363647",
+      "pmcid": "PMC3570431",
+      "is_open_access": "Y",
+      "title": "Periodical assessment of genitourinary and gastrointestinal toxicity in patients who underwent prost"
+    },
+    {
+      "record_id": "glass::trialreviewbench:results:37066936:late-gu-toxicity:0003",
+      "status": "full_text_available",
+      "pmid": "32642874",
+      "pmcid": "PMC7840646",
+      "is_open_access": "Y",
+      "title": "Treatment of low-risk prostate cancer: a retrospective study with 477 patients comparing external be"
+    },
+    {
+      "record_id": "glass::trialreviewbench:results:37168849:complete-remission:0001",
+      "status": "abstract_only",
+      "pmid": "30396908",
+      "pmcid": "PMC7814996",
+      "is_open_access": "N",
+      "title": "Phase I Trial of Autologous CAR T Cells Targeting NKG2D Ligands in Patients with AML/MDS and Multipl"
+    },
+    {
+      "record_id": "glass::trialreviewbench:results:37168849:complete-remission:0002",
+      "status": "full_text_available",
+      "pmid": "31850234",
+      "pmcid": "PMC6901822",
+      "is_open_access": "Y",
+      "title": "Donor-Derived CD123-Targeted CAR T Cell Serves as a RIC Regimen for Haploidentical Transplantation i"
+    },
+    {
+      "record_id": "glass::trialreviewbench:results:37168849:complete-remission:0003",
+      "status": "full_text_available",
+      "pmid": "34034795",
+      "pmcid": "PMC8152118",
+      "is_open_access": "Y",
+      "title": "CD38-directed CAR-T cell therapy: a novel immunotherapy strategy for relapsed acute myeloid leukemia"
+    },
+    {
+      "record_id": "glass::trialreviewbench:results:37168849:overall-response-rate:0001",
+      "status": "abstract_only",
+      "pmid": "30396908",
+      "pmcid": "PMC7814996",
+      "is_open_access": "N",
+      "title": "Phase I Trial of Autologous CAR T Cells Targeting NKG2D Ligands in Patients with AML/MDS and Multipl"
+    },
+    {
+      "record_id": "glass::trialreviewbench:results:37168849:overall-response-rate:0002",
+      "status": "full_text_available",
+      "pmid": "31850234",
+      "pmcid": "PMC6901822",
+      "is_open_access": "Y",
+      "title": "Donor-Derived CD123-Targeted CAR T Cell Serves as a RIC Regimen for Haploidentical Transplantation i"
+    },
+    {
+      "record_id": "glass::trialreviewbench:results:37168849:overall-response-rate:0003",
+      "status": "full_text_available",
+      "pmid": "34034795",
+      "pmcid": "PMC8152118",
+      "is_open_access": "Y",
+      "title": "CD38-directed CAR-T cell therapy: a novel immunotherapy strategy for relapsed acute myeloid leukemia"
+    },
+    {
+      "record_id": "glass::trialreviewbench:results:37168849:crs-event:0001",
+      "status": "abstract_only",
+      "pmid": "30396908",
+      "pmcid": "PMC7814996",
+      "is_open_access": "N",
+      "title": "Phase I Trial of Autologous CAR T Cells Targeting NKG2D Ligands in Patients with AML/MDS and Multipl"
+    },
+    {
+      "record_id": "glass::trialreviewbench:results:37168849:crs-event:0002",
+      "status": "full_text_available",
+      "pmid": "31850234",
+      "pmcid": "PMC6901822",
+      "is_open_access": "Y",
+      "title": "Donor-Derived CD123-Targeted CAR T Cell Serves as a RIC Regimen for Haploidentical Transplantation i"
+    },
+    {
+      "record_id": "glass::trialreviewbench:results:37168849:crs-event:0003",
+      "status": "full_text_available",
+      "pmid": "34034795",
+      "pmcid": "PMC8152118",
+      "is_open_access": "Y",
+      "title": "CD38-directed CAR-T cell therapy: a novel immunotherapy strategy for relapsed acute myeloid leukemia"
+    }
+  ]
+}

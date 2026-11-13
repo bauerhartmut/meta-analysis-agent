@@ -1,0 +1,27 @@
+{
+  "set_id": "tier1_validation_set_v1",
+  "created": "2026-11-13",
+  "purpose": "externe Validierung der numerischen Extraktion ohne neue Annotation",
+  "records": 185,
+  "records_by_dataset": {
+    "eururology": 104,
+    "glass_trialreviewbench": 81
+  },
+  "cells": 744,
+  "cells_by_dataset": {
+    "eururology": 486,
+    "glass_trialreviewbench": 258
+  },
+  "clusters": {
+    "eururology_trials": 20,
+    "glass_publications": 45
+  },
+  "records_without_cells": 0,
+  "records_without_arm": 81,
+  "set_sha256": "bb3393647257f5e5e27cecb24ab40e4a3fbf385af3d04ac074b57a6fccf533a1",
+  "sources": {
+    "eururology": "goldstandard_datasets/eururology_v1/records.jsonl",
+    "glass_trialreviewbench": "goldstandard_datasets/glass_v1/original/trialreviewbench-study-results-v1.0.0.jsonl.gz"
+  },
+  "note": "GLASS-Zellen haben keinen Armbezug; dort wird nur Label und Wert bewertet."
+}
