@@ -1,0 +1,176 @@
+from __future__ import annotations
+
+import json
+from pathlib import Path
+
+import pytest
+
+from research_agent.meta.verified_pool import (
+    UnverifiedRecordError, build_verified_analysis, gate_rows,
+)
+from research_agent.verification.compare import comparison_entry, evidence_supports
+from research_agent.verification.schema import (
+    compare_values, transition_field, transition_record,
+)
+from research_agent.verification.store import VerificationStore
+from research_agent.verification.workflow import invalidate_on_source_change
+
+
+def _verified_state(record_id="r1"):
+    return {
+        "records": {
+            record_id: {
+                "record_id": record_id,
+                "status": "verified",
+                "required_fields": ["intervention_n", "comparator_n"],
+                "fields": {
+                    "intervention_n": {"status": "verified"},
+                    "comparator_n": {"status": "verified"},
+                },
+            }
+        }
+    }
+
+
+def _evidence(**overrides):
+    base = {
+        "evidence_id": "ev:1",
+        "table_id": "md:1",
+        "row_label": "Posttreatment VAS",
+        "column_label": "Group I",
+        "raw_cell": "3.76 (1.45)",
+        "line_start": 4,
+    }
+    base.update(overrides)
+    return base
+
+
+def test_missing_evidence_is_never_a_match():
+    entry = comparison_entry("intervention_mean", 3.76, 3.76, None)
+    assert entry["comparison"] == "evidence_missing"
+    assert entry["field_status"] == "unresolved"
+
+
+def test_exact_cell_supports_value_in_context():
+    assert evidence_supports(_evidence(), "intervention_mean", 3.76)
+    assert not evidence_supports(_evidence(row_label="Baseline VAS"),
+                                 "intervention_mean", 3.76)
+    assert not evidence_supports(_evidence(column_label=""),
+                                 "intervention_mean", 3.76)
+
+
+def test_rounding_tolerance_is_explicit_and_narrow():
+    assert compare_values("intervention_mean", 0.333, 0.33)[0] == "numeric_match"
+    assert compare_values("intervention_mean", 0.333, 0.34)[0] == "mismatch"
+    assert compare_values("intervention_n", 103.0, 103)[0] == "match"
+
+
+def test_invalid_status_transitions_raise():
+    with pytest.raises(ValueError):
+        transition_record("rejected", "verified")
+    with pytest.raises(ValueError):
+        transition_field("extracted", "verified")
+
+
+def test_gate_refuses_unverified_without_silent_filtering():
+    state = _verified_state()
+    state["records"]["r1"]["status"] = "pending_review"
+    with pytest.raises(UnverifiedRecordError):
+        gate_rows([{"verification_record_id": "r1", "label": "A"}], state)
+
+
+def test_gate_accepts_verified_and_refuses_unknown():
+    state = _verified_state()
+    accepted, refused = gate_rows(
+        [{"verification_record_id": "r1", "label": "A"},
+         {"verification_record_id": "missing", "label": "B"}],
+        state, allow_unverified=True,
+    )
+    assert [row["label"] for row in accepted] == ["A"]
+    assert refused[0]["status"] == "missing"
+
+
+def test_gate_does_not_infer_from_generic_record_id():
+    with pytest.raises(UnverifiedRecordError):
+        gate_rows([{"record_id": "r1", "label": "A"}], _verified_state())
+
+
+def test_verified_analysis_receives_only_gated_rows(monkeypatch):
+    captured = {}
+    def fake_build(rows, outcomes=None, targets=None):
+        captured["rows"] = list(rows)
+        return {"groups": {}, "excluded": [], "off_target": [],
+                "usable": len(captured["rows"]), "total": len(captured["rows"])}
+    monkeypatch.setattr("research_agent.meta.pooling.build_analysis", fake_build)
+    analysis = build_verified_analysis(
+        [{"verification_record_id": "r1", "label": "A"}],
+        _verified_state(),
+    )
+    assert captured["rows"] == [{"verification_record_id": "r1", "label": "A"}]
+    assert analysis["verification_gate"]["verified_rows"] == 1
+
+
+def test_verified_analysis_refuses_before_pooling(monkeypatch):
+    called = {"value": False}
+    def fake_build(rows, outcomes=None, targets=None):
+        called["value"] = True
+        return {}
+    monkeypatch.setattr("research_agent.meta.pooling.build_analysis", fake_build)
+    with pytest.raises(UnverifiedRecordError):
+        build_verified_analysis(
+            [{"verification_record_id": "missing", "label": "B"}],
+            _verified_state(),
+        )
+    assert called["value"] is False
+
+
+def test_decision_preserves_old_value_and_invalidation_drops_approval(tmp_path):
+    store = VerificationStore(str(tmp_path / "audit.json"))
+    store.register_record("r1", {
+        "document_hash": "old", "outcome_type": "continuous",
+        "required_fields": ["intervention_mean"],
+    })
+    store.record_comparison("r1", {
+        "field": "intervention_mean", "value_a": 1.0, "value_b": 1.0,
+        "comparison": "mismatch", "rule": "test", "field_status": "unresolved",
+    })
+    store.set_status("r1", "cross_checked", "test")
+    store.set_status("r1", "pending_review", "test")
+    store.apply_decision("r1", "intervention_mean", "correct", value=2.0,
+                         reviewer="Pruefer A", note="Quelle", evidence_id="ev:1")
+    record = store.record("r1")
+    assert record["fields"]["intervention_mean"]["final_value"] == 2.0
+    decision = record["decisions"][-1]
+    assert decision["old"]["final_value"] == 1.0
+    store.set_status("r1", "verified", "test", basis="human_review")
+    assert invalidate_on_source_change(store, "r1", "new") is True
+    assert store.record("r1")["status"] == "pending_review"
+    assert store.record("r1")["fields"]["intervention_mean"]["status"] == "cross_checked"
+
+
+def test_audit_chain_detects_tampering(tmp_path):
+    path = tmp_path / "audit.json"
+    store = VerificationStore(str(path))
+    store.register_record("r1", {"document_hash": "x", "outcome_type": "binary",
+                                 "required_fields": []})
+    store.set_status("r1", "cross_checked", "x")
+    payload = json.loads(path.read_text(encoding="utf-8"))
+    payload["events"][0]["payload"]["document_hash"] = "manipulated"
+    path.write_text(json.dumps(payload), encoding="utf-8")
+    with pytest.raises(ValueError):
+        VerificationStore(str(path))
+
+
+def test_review_requires_reviewer_and_reason_for_not_reported(tmp_path):
+    store = VerificationStore(str(tmp_path / "audit.json"))
+    store.register_record("r1", {"document_hash": "x", "outcome_type": "continuous",
+                                 "required_fields": ["intervention_sd"]})
+    store.record_comparison("r1", {
+        "field": "intervention_sd", "value_a": 1.0, "value_b": 1.0,
+        "comparison": "mismatch", "rule": "test", "field_status": "unresolved",
+    })
+    with pytest.raises(ValueError):
+        store.apply_decision("r1", "intervention_sd", "confirm", reviewer="")
+    with pytest.raises(ValueError):
+        store.apply_decision("r1", "intervention_sd", "not_reported",
+                             reviewer="A", note="")

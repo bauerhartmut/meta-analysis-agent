@@ -1,0 +1,12 @@
+{
+  "records": 20,
+  "verified": 9,
+  "pending_review": 11,
+  "rejected": 0,
+  "human_reviewed": 0,
+  "required_fields": 104,
+  "verified_fields": 56,
+  "mismatch_fields": 16,
+  "evidence_missing_fields": 4,
+  "automatic_rate": 0.45
+}
