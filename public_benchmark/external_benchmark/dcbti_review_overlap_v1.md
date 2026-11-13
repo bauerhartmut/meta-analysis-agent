@@ -1,6 +1,6 @@
 # dCBT-I-Studienabgleich mit Hwang 2025 und Lee 2023
 
-Stand: 2026-11-13T12:45:03Z
+Stand: 2026-11-13T12:51:33Z
 
 ## Befund zur Datenbasis
 

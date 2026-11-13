@@ -150,11 +150,12 @@ def test_missing_marker_is_not_treated_as_post_treatment() -> None:
     assert comparison["match"] is None
 
 
-def test_median_and_pm_values_are_not_timepoints() -> None:
+def test_median_and_pm_values_are_uncertain_not_unparsed() -> None:
     parsed = match.parse_timepoints("follow-up (median 5.8 ± 2.5 years)")
     assert parsed["follow_up_weeks"] == []
     assert parsed["weeks"] == []
-    assert parsed["status"] == "unparsed"
+    assert parsed["uncertain_weeks"] == [130.35]
+    assert parsed["status"] == "uncertain"
 
     mixed = match.parse_timepoints(
         "Post 10 weeks; follow-up median 5.8 ± 2.5 years"
@@ -162,23 +163,40 @@ def test_median_and_pm_values_are_not_timepoints() -> None:
     assert mixed["post_treatment_weeks"] == [10.0]
     assert mixed["follow_up_weeks"] == []
     assert mixed["weeks"] == [10.0]
+    assert mixed["uncertain_weeks"] == [130.35]
+    assert mixed["status"] == "parsed"
 
     median_only = match.parse_timepoints(
         "10 weeks post-treatment, median follow-up 5.8 years"
     )
     assert median_only["post_treatment_weeks"] == [10.0]
     assert median_only["follow_up_weeks"] == []
+    assert median_only["uncertain_weeks"] == [302.41]
 
     with_period = match.parse_timepoints(
         "Post 10 weeks. Follow-up median 5.8 ± 2.5 years"
     )
     assert with_period["post_treatment_weeks"] == [10.0]
     assert with_period["follow_up_weeks"] == []
+    assert with_period["uncertain_weeks"] == [130.35]
 
     comparison = match.compare_timepoints(
         "10 weeks post-treatment", "follow-up (median 5.8 ± 2.5 years)"
     )
     assert comparison["match"] is None
+    assert "unsichere" in comparison["reason"]
+
+
+def test_pm_keeps_central_post_value_and_drops_dispersion() -> None:
+    parsed = match.parse_timepoints("Post 10 weeks ± 2 weeks")
+    assert parsed["post_treatment_weeks"] == [10.0]
+    assert parsed["uncertain_weeks"] == [2.0]
+    assert parsed["status"] == "parsed"
+
+    suffixed = match.parse_timepoints("10 weeks post-treatment ± 2 weeks")
+    assert suffixed["post_treatment_weeks"] == [10.0]
+    assert suffixed["uncertain_weeks"] == [2.0]
+    assert suffixed["status"] == "parsed"
 
 
 def test_suffix_follow_up_is_not_counted_as_post_treatment() -> None:

@@ -306,9 +306,10 @@ WEEK_NUMBER = r"(\d+(?:[.,]\d+)?)"
 MARKER_CONNECTOR = re.compile(r"^[\s,;:()\[\]\-–—/]*$")
 CLAUSE_BOUNDARY = re.compile(r"[,;\n]|\band\b|\bund\b|\bthen\b", re.IGNORECASE)
 PHRASE_BOUNDARY = re.compile(r"[;,()\n]|(?<!\d)\.(?!\d)")
-# Median- und Streuungsangaben sind keine festen Zeitpunkte. "±" und
-# "median" werden deshalb konservativ aus der Wochenberechnung entfernt.
-UNCERTAIN_TIME = re.compile(r"(median|\bmittelwert\b|±|\+/-)", re.IGNORECASE)
+# Median-Angaben sind keine festen Zeitpunkte. Bei "10 weeks ± 2 weeks" ist
+# dagegen 10 der Zentralwert und nur die Streuung nach dem ± unsicher.
+UNCERTAIN_MEDIAN = re.compile(r"(median|\bmittelwert\b)", re.IGNORECASE)
+UNCERTAIN_DISPERSION = re.compile(r"(±|\+/-)")
 
 
 def _week_occurrences(text: str) -> list[tuple[float, int, int]]:
@@ -346,17 +347,31 @@ def _clause_end(text: str, start: int) -> int:
     return match.start() if match else len(text)
 
 
-def _phrase_around(text: str, start: int, end: int) -> str:
+def _phrase_bounds(text: str, start: int, end: int) -> tuple[int, int]:
     left = 0
     for match in PHRASE_BOUNDARY.finditer(text, 0, start):
         left = match.end()
     right_match = PHRASE_BOUNDARY.search(text, end)
     right = right_match.start() if right_match else len(text)
+    return left, right
+
+
+def _phrase_around(text: str, start: int, end: int) -> str:
+    left, right = _phrase_bounds(text, start, end)
     return text[left:right]
 
 
 def _is_uncertain(text: str, start: int, end: int) -> bool:
-    return bool(UNCERTAIN_TIME.search(_phrase_around(text, start, end)))
+    left, right = _phrase_bounds(text, start, end)
+    phrase = text[left:right]
+    if UNCERTAIN_MEDIAN.search(phrase):
+        return True
+    # Nur die Zahl nach dem ± ist die Streuung. Der Zentralwert davor bleibt
+    # ein gueltiger Zeitpunkt, z. B. 10 in "Post 10 weeks ± 2 weeks".
+    for match in UNCERTAIN_DISPERSION.finditer(phrase):
+        if start >= left + match.end():
+            return True
+    return False
 
 
 def _weeks_in_text(text: str) -> list[float]:
@@ -387,7 +402,8 @@ def parse_timepoints(text: str | None) -> dict[str, Any]:
     if not text:
         return {
             "raw": text, "weeks": [], "post_treatment_weeks": [],
-            "follow_up_weeks": [], "other_weeks": [], "status": "missing",
+            "follow_up_weeks": [], "other_weeks": [],
+            "uncertain_weeks": [], "status": "missing",
             "ambiguous_post_treatment": False,
         }
     normalized = str(text).lower().replace("–", "-").replace("—", "-")
@@ -398,6 +414,7 @@ def parse_timepoints(text: str | None) -> dict[str, Any]:
     post: list[float] = []
     follow: list[float] = []
     other: list[float] = []
+    uncertain: list[float] = []
 
     def assign(weeks: list[float], kind: str) -> None:
         if kind == "post_treatment":
@@ -409,6 +426,7 @@ def parse_timepoints(text: str | None) -> dict[str, Any]:
 
     for value, start, end in _week_occurrences(normalized):
         if _is_uncertain(normalized, start, end):
+            uncertain.append(value)
             continue
         previous = None
         following = None
@@ -443,19 +461,23 @@ def parse_timepoints(text: str | None) -> dict[str, Any]:
     post = sorted(set(post))
     follow = sorted(set(follow))
     other = sorted(set(other))
+    uncertain_weeks = sorted(set(uncertain))
     all_weeks = sorted(set(post) | set(follow) | set(other))
-    if not markers:
+    if all_weeks:
         # Ohne Marker ist der Zeitpunkt nicht als Post-Treatment belegt.
-        # Die Zahlen bleiben als "other" sichtbar, zaehlen aber nicht als Treffer.
-        status = "no_marker" if all_weeks else "unparsed"
+        status = "parsed" if markers else "no_marker"
+    elif uncertain_weeks:
+        # Nur Median-/±-Angaben: sichtbar, aber kein belastbarer Zeitpunkt.
+        status = "uncertain"
     else:
-        status = "parsed" if all_weeks else "unparsed"
+        status = "unparsed"
     return {
         "raw": text,
         "weeks": all_weeks,
         "post_treatment_weeks": post,
         "follow_up_weeks": follow,
         "other_weeks": other,
+        "uncertain_weeks": uncertain_weeks,
         "status": status,
         "ambiguous_post_treatment": len(post) > 1,
     }
@@ -478,9 +500,18 @@ def compare_timepoints(
         "reason": "",
     }
     if not ours["post_treatment_weeks"] or not review["post_treatment_weeks"]:
-        result["reason"] = (
-            "kein Post-Treatment-Zeitpunkt in beiden Angaben; "
-            "Follow-up-Werte zaehlen nicht"
+        if ours["uncertain_weeks"] or review["uncertain_weeks"]:
+            result["reason"] = (
+                "nur unsichere Median- oder Plus-Minus-Zeitangabe; "
+                "kein belastbarer Post-Treatment-Zeitpunkt"
+            )
+        else:
+            result["reason"] = (
+                "kein Post-Treatment-Zeitpunkt in beiden Angaben; "
+                "Follow-up-Werte zaehlen nicht"
+            )
+        result["uncertain_weeks"] = sorted(
+            set(ours["uncertain_weeks"]) | set(review["uncertain_weeks"])
         )
         return result
     comparisons = [
@@ -636,7 +667,7 @@ def build_result() -> dict[str, Any]:
             )
         exclusion_reasons[study_id] = reasons
     return {
-        "version": 5,
+        "version": 6,
         "created_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "scope": (
             "Abgleich projektinterner CBT-I-Primaerschstudien mit den "

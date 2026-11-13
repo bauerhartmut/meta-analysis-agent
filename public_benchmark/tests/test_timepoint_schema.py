@@ -44,16 +44,19 @@ def test_schema_exposes_structured_timepoint_segments() -> None:
         "post_treatment_weeks",
         "follow_up_weeks",
         "other_weeks",
+        "uncertain_weeks",
         "ambiguous_post_treatment",
     }
+    assert "uncertain" in segments["properties"]["status"]["enum"]
 
 
-def test_segmentation_drops_median_pm_values() -> None:
+def test_segmentation_marks_median_pm_values_uncertain() -> None:
     effect = _effect()
     effect["time_point"] = "follow-up (median 5.8 ± 2.5 years)"
     segments = schema.segment_effect(effect)["time_point_segments"]
-    assert segments["status"] == "unparsed"
+    assert segments["status"] == "uncertain"
     assert segments["follow_up_weeks"] == []
+    assert segments["uncertain_weeks"] == [130.35]
 
 
 def test_segmentation_preserves_outcome_values(tmp_path: Path) -> None:
@@ -82,6 +85,7 @@ def test_segmentation_preserves_outcome_values(tmp_path: Path) -> None:
         "post_treatment_weeks": [10.0],
         "follow_up_weeks": [],
         "other_weeks": [],
+        "uncertain_weeks": [],
         "ambiguous_post_treatment": False,
         "raw": "10 weeks post-treatment",
     }

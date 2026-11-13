@@ -33,6 +33,7 @@ def segment_effect(effect: dict[str, Any]) -> dict[str, Any]:
         "post_treatment_weeks": parsed["post_treatment_weeks"],
         "follow_up_weeks": parsed["follow_up_weeks"],
         "other_weeks": parsed["other_weeks"],
+        "uncertain_weeks": parsed["uncertain_weeks"],
         "ambiguous_post_treatment": parsed["ambiguous_post_treatment"],
         "raw": parsed["raw"],
     }
