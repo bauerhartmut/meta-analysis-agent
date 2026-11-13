@@ -325,8 +325,10 @@ def main() -> None:
         "scope": "Fünf hohe Prioritäten: PMC13591290, PMC13590555, PMC13587833, PMC13635505, PMC13624796",
         "articles": len(TARGETS),
         "outcome_slots": 20,
-        "usable_outcomes": 0,
+        "independent_usable_outcomes": 0,
+        "overlapping_usable_outcomes": 0,
         "not_usable_or_absent": 0,
+        "usable_outcomes_including_overlapping": 0,
         "final_decisions_made": False,
         "human_confirmation_required": True,
         "model_used": False,
@@ -385,7 +387,18 @@ def main() -> None:
             item["source_quote"] = source_quote
             outcomes.append(item)
             usable = bool(outcome["usable"])
-            payload["usable_outcomes" if usable else "not_usable_or_absent"] += 1
+            if usable and pmcid == "PMC13624796":
+                independence = "overlapping_subgroup"
+                payload["overlapping_usable_outcomes"] += 1
+            elif usable:
+                independence = "independent"
+                payload["independent_usable_outcomes"] += 1
+            else:
+                independence = "not_usable"
+                payload["not_usable_or_absent"] += 1
+            if usable:
+                payload["usable_outcomes_including_overlapping"] += 1
+            item["outcome_independence"] = independence
             csv_rows.append(
                 {
                     "pmcid": pmcid,
@@ -407,6 +420,7 @@ def main() -> None:
                     "control_events": outcome["control"].get("events", ""),
                     "control_total": outcome["control"].get("total", ""),
                     "usable": usable,
+                    "outcome_independence": independence,
                     "note": outcome["note"],
                     "source_quote": source_quote,
                 }
@@ -421,6 +435,17 @@ def main() -> None:
                 "assisted_eligibility": meta["assisted_eligibility"],
                 "eligibility_reason": meta["eligibility_reason"],
                 "risk_notes": meta["risk_notes"],
+                "outcome_counts": {
+                    "independent_usable": sum(
+                        1 for o in outcomes if o["outcome_independence"] == "independent"
+                    ),
+                    "overlapping_usable": sum(
+                        1 for o in outcomes if o["outcome_independence"] == "overlapping_subgroup"
+                    ),
+                    "not_usable": sum(
+                        1 for o in outcomes if o["outcome_independence"] == "not_usable"
+                    ),
+                },
                 "human_review": {
                     "reviewer": "offen",
                     "review_date": "offen",
@@ -460,19 +485,24 @@ def main() -> None:
         "",
         "## Übersicht",
         "",
-        "| PMC | Design | Arm-N | Assistierte Eignung | Verwendbar |",
-        "|---|---|---|---|---:|",
+        "| PMC | Design | Arm-N | Assistierte Eignung | Verwendbar | Unabhängig | Überlappend |",
+        "|---|---|---|---|---:|---:|---:|",
     ]
     for record in payload["records"]:
-        usable = sum(1 for outcome in record["outcomes"] if outcome["usable"])
+        counts = record["outcome_counts"]
+        usable = counts["independent_usable"] + counts["overlapping_usable"]
         lines.append(
             f"| [{record['pmcid']}](https://pmc.ncbi.nlm.nih.gov/articles/{record['pmcid']}/) | "
-            f"{record['design']} | {format_arm_n(record['arm_n'])} | {record['assisted_eligibility']} | {usable}/4 |"
+            f"{record['design']} | {format_arm_n(record['arm_n'])} | {record['assisted_eligibility']} | "
+            f"{usable}/4 | {counts['independent_usable']}/4 | {counts['overlapping_usable']}/4 |"
         )
     lines += [
         "",
-        f"Verwendbare Outcomes: **{payload['usable_outcomes']}/20**; "
+        f"Unabhängig verwendbar: **{payload['independent_usable_outcomes']}/20**; "
+        f"überlappend, nicht unabhängig: **{payload['overlapping_usable_outcomes']}/20**; "
         f"nicht verwendbar oder nicht berichtet: **{payload['not_usable_or_absent']}/20**.",
+        f"Formal verwendbar einschließlich überlappender Subgruppen: "
+        f"**{payload['usable_outcomes_including_overlapping']}/20**.",
         "",
     ]
     for record in payload["records"]:
@@ -486,8 +516,8 @@ def main() -> None:
             f"- Begründung: {record['eligibility_reason']}",
             f"- Risiken/Hinweise: {', '.join(record['risk_notes'])}",
             "",
-            "| Slot | Outcome | Typ | Intervention | Kontrolle | Verwendbar | Quelle |",
-            "|---:|---|---|---|---|---|---|",
+            "| Slot | Outcome | Typ | Intervention | Kontrolle | Verwendbar | Unabhängigkeit | Quelle |",
+            "|---:|---|---|---|---|---|---|---|",
         ]
         for outcome in record["outcomes"]:
             inter = outcome["intervention"]
@@ -503,7 +533,7 @@ def main() -> None:
                 cval = "-"
             lines.append(
                 f"| {outcome['slot']} | {outcome['outcome']} | {outcome['type']} | {ival} | {cval} | "
-                f"{'ja' if outcome['usable'] else 'nein'} | {outcome['note']} |"
+                f"{'ja' if outcome['usable'] else 'nein'} | {outcome['outcome_independence']} | {outcome['note']} |"
             )
         lines += ["", "### Quellen", ""]
         for outcome in record["outcomes"]:
@@ -516,12 +546,11 @@ def main() -> None:
     lines += [
         "## Konsequenz",
         "",
-        "Nur `PMC13590555` liefert vier direkt verwendbare kontinuierliche Outcomes.",
-        "`PMC13587833` liefert drei verwendbare Outcomes, `PMC13635505` nur ein",
-        "binäres Outcome. `PMC13591290` enthält klinische Werte nur stratifiziert",
-        "nach Blinding-Status; `PMC13624796` ist eine gepoolte Analyse zweier RCTs",
-        "mit überlappenden Subgruppen. Diese beiden Fälle sind ohne menschliche",
-        "Entscheidung nicht als unabhängige RCT-Datensätze zu übernehmen.",
+        "Acht Outcomes sind unabhängig verwendbar: vier aus `PMC13590555`, drei",
+        "aus `PMC13587833` und eines aus `PMC13635505`. `PMC13591290` enthält",
+        "klinische Werte nur stratifiziert nach Blinding-Status. `PMC13624796` liefert",
+        "vier formal verwendbare, aber überlappende Subgruppen aus einer gepoolten",
+        "Analyse zweier RCTs; sie zählen nicht als vier unabhängige Outcomes.",
         "",
         "Kein Modelllauf, kein Netzabruf, keine finale Auswahl.",
         "",
@@ -531,7 +560,8 @@ def main() -> None:
         json.dumps(
             {
                 "articles": len(TARGETS),
-                "usable_outcomes": payload["usable_outcomes"],
+                "independent_usable_outcomes": payload["independent_usable_outcomes"],
+                "overlapping_usable_outcomes": payload["overlapping_usable_outcomes"],
                 "not_usable_or_absent": payload["not_usable_or_absent"],
                 "final_decisions_made": False,
             },

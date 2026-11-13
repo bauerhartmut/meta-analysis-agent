@@ -268,7 +268,6 @@
     "status": "assisted_batch_ready_for_human_confirmation",
     "articles": 5,
     "outcome_slots": 20,
-    "usable_outcomes": 12,
     "not_usable_or_absent": 8,
     "final_decisions_made": false,
     "human_confirmation_required": true,
@@ -276,6 +275,9 @@
     "network_used": false,
     "json_path": "public_benchmark/evaluation/c1_pilot/holdout_p0_20261112/fulltext_review_batch1_v1.json",
     "csv_path": "public_benchmark/evaluation/c1_pilot/holdout_p0_20261112/fulltext_review_batch1_v1.csv",
-    "md_path": "public_benchmark/evaluation/c1_pilot/holdout_p0_20261112/fulltext_review_batch1_v1.md"
+    "md_path": "public_benchmark/evaluation/c1_pilot/holdout_p0_20261112/fulltext_review_batch1_v1.md",
+    "independent_usable_outcomes": 8,
+    "overlapping_usable_outcomes": 4,
+    "usable_outcomes_including_overlapping": 12
   }
 }

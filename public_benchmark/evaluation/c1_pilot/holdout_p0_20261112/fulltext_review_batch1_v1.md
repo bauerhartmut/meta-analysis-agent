@@ -9,15 +9,16 @@ transkribiert; nicht verwendbare oder fehlende Outcomes bleiben leer.
 
 ## Übersicht
 
-| PMC | Design | Arm-N | Assistierte Eignung | Verwendbar |
-|---|---|---|---|---:|
-| [PMC13591290](https://pmc.ncbi.nlm.nih.gov/articles/PMC13591290/) | Sekundäranalyse eines zweiarmigen, placebokontrollierten RCT; 102 randomisiert, 98 analysiert | Intervention 49 / Kontrolle 49 / randomisiert 102 / analysiert 98 | uncertain_no_overall_outcome_table | 0/4 |
-| [PMC13590555](https://pmc.ncbi.nlm.nih.gov/articles/PMC13590555/) | Sekundäranalyse des ERASE-RCT; zwei Arme, 1:1 randomisiert; 26 HIIT und 26 Usual Care randomisiert | Intervention 26 / Kontrolle 26 / randomisiert 52 / analysiert 24/25 für die ausgewählten Blutbild-Outcomes | likely_eligible | 4/4 |
-| [PMC13587833](https://pmc.ncbi.nlm.nih.gov/articles/PMC13587833/) | Sekundäranalyse eines RCT; GPM vs. TAU; 50 Klienten, 27 GPM und 23 TAU; 29 gesunde Kontrollen nicht Teil des randomisierten Vergleichs | Intervention 27 / Kontrolle 23 / randomisiert 50 / analysiert 50 | likely_eligible_three_outcomes | 3/4 |
-| [PMC13635505](https://pmc.ncbi.nlm.nih.gov/articles/PMC13635505/) | Sekundäranalyse eines zweiarmigen RCT; Intervention 150, Kontrolle 153; funktionale Response als binäres Outcome | Intervention 150 / Kontrolle 153 / randomisiert 303 / analysiert 303 | eligible_with_single_binary_outcome | 1/4 |
-| [PMC13624796](https://pmc.ncbi.nlm.nih.gov/articles/PMC13624796/) | Post-hoc-Analyse gepoolter Individualdaten aus CANVAS und CREDENCE; zwei RCTs, Canagliflozin vs. Placebo; 3602 Placebo und 5012 Canagliflozin | Intervention 5012 / Kontrolle 3602 / randomisiert 8614 / analysiert 8614 / Trials 2 | uncertain_pooled_two_trials | 4/4 |
+| PMC | Design | Arm-N | Assistierte Eignung | Verwendbar | Unabhängig | Überlappend |
+|---|---|---|---|---:|---:|---:|
+| [PMC13591290](https://pmc.ncbi.nlm.nih.gov/articles/PMC13591290/) | Sekundäranalyse eines zweiarmigen, placebokontrollierten RCT; 102 randomisiert, 98 analysiert | Intervention 49 / Kontrolle 49 / randomisiert 102 / analysiert 98 | uncertain_no_overall_outcome_table | 0/4 | 0/4 | 0/4 |
+| [PMC13590555](https://pmc.ncbi.nlm.nih.gov/articles/PMC13590555/) | Sekundäranalyse des ERASE-RCT; zwei Arme, 1:1 randomisiert; 26 HIIT und 26 Usual Care randomisiert | Intervention 26 / Kontrolle 26 / randomisiert 52 / analysiert 24/25 für die ausgewählten Blutbild-Outcomes | likely_eligible | 4/4 | 4/4 | 0/4 |
+| [PMC13587833](https://pmc.ncbi.nlm.nih.gov/articles/PMC13587833/) | Sekundäranalyse eines RCT; GPM vs. TAU; 50 Klienten, 27 GPM und 23 TAU; 29 gesunde Kontrollen nicht Teil des randomisierten Vergleichs | Intervention 27 / Kontrolle 23 / randomisiert 50 / analysiert 50 | likely_eligible_three_outcomes | 3/4 | 3/4 | 0/4 |
+| [PMC13635505](https://pmc.ncbi.nlm.nih.gov/articles/PMC13635505/) | Sekundäranalyse eines zweiarmigen RCT; Intervention 150, Kontrolle 153; funktionale Response als binäres Outcome | Intervention 150 / Kontrolle 153 / randomisiert 303 / analysiert 303 | eligible_with_single_binary_outcome | 1/4 | 1/4 | 0/4 |
+| [PMC13624796](https://pmc.ncbi.nlm.nih.gov/articles/PMC13624796/) | Post-hoc-Analyse gepoolter Individualdaten aus CANVAS und CREDENCE; zwei RCTs, Canagliflozin vs. Placebo; 3602 Placebo und 5012 Canagliflozin | Intervention 5012 / Kontrolle 3602 / randomisiert 8614 / analysiert 8614 / Trials 2 | uncertain_pooled_two_trials | 4/4 | 0/4 | 4/4 |
 
-Verwendbare Outcomes: **12/20**; nicht verwendbar oder nicht berichtet: **8/20**.
+Unabhängig verwendbar: **8/20**; überlappend, nicht unabhängig: **4/20**; nicht verwendbar oder nicht berichtet: **8/20**.
+Formal verwendbar einschließlich überlappender Subgruppen: **12/20**.
 
 ## PMC13591290 — Blinding in a placebo-controlled manual-therapy RCT
 
@@ -28,12 +29,12 @@ Verwendbare Outcomes: **12/20**; nicht verwendbar oder nicht berichtet: **8/20**
 - Begründung: Zwei parallele Arme und Arm-N sind berichtet, aber die klinischen Outcomes liegen nur stratifiziert nach Blinding-Status vor; kein Gesamtkontrast der randomisierten Arme in der Tabelle.
 - Risiken/Hinweise: secondary analysis, klinische Outcomes nur nach Blinding-Status stratifiziert
 
-| Slot | Outcome | Typ | Intervention | Kontrolle | Verwendbar | Quelle |
-|---:|---|---|---|---|---|---|
-| 1 | Pain intensity at 4 weeks, blinded participants | continuous | n=11, 19.5 (11.3) | n=35, 22.5 (21.1) | nein | Stratifizierte Blinding-Untergruppe, kein randomisierter Gesamtarm-Vergleich. |
-| 2 | Pain intensity at 4 weeks, unblinded participants | continuous | n=38, 15.5 (14.7) | n=14, 42.4 (23.8) | nein | Stratifizierte Blinding-Untergruppe, kein randomisierter Gesamtarm-Vergleich. |
-| 3 | Unique participants with adverse events, blinded participants | binary | 9/11 | 32/35 | nein | Stratifizierte Blinding-Untergruppe; keine armübergreifende Ereignisrate. |
-| 4 | Unique participants with adverse events, unblinded participants | binary | 28/38 | 10/14 | nein | Stratifizierte Blinding-Untergruppe; keine armübergreifende Ereignisrate. |
+| Slot | Outcome | Typ | Intervention | Kontrolle | Verwendbar | Unabhängigkeit | Quelle |
+|---:|---|---|---|---|---|---|---|
+| 1 | Pain intensity at 4 weeks, blinded participants | continuous | n=11, 19.5 (11.3) | n=35, 22.5 (21.1) | nein | not_usable | Stratifizierte Blinding-Untergruppe, kein randomisierter Gesamtarm-Vergleich. |
+| 2 | Pain intensity at 4 weeks, unblinded participants | continuous | n=38, 15.5 (14.7) | n=14, 42.4 (23.8) | nein | not_usable | Stratifizierte Blinding-Untergruppe, kein randomisierter Gesamtarm-Vergleich. |
+| 3 | Unique participants with adverse events, blinded participants | binary | 9/11 | 32/35 | nein | not_usable | Stratifizierte Blinding-Untergruppe; keine armübergreifende Ereignisrate. |
+| 4 | Unique participants with adverse events, unblinded participants | binary | 28/38 | 10/14 | nein | not_usable | Stratifizierte Blinding-Untergruppe; keine armübergreifende Ereignisrate. |
 
 ### Quellen
 
@@ -61,12 +62,12 @@ Verwendbare Outcomes: **12/20**; nicht verwendbar oder nicht berichtet: **8/20**
 - Begründung: Zwei parallele Arme, Randomisierung 1:1, berichtete Arm-N und vier kontinuierliche Outcomes mit N/Mean/SD zu Baseline und Postintervention.
 - Risiken/Hinweise: secondary analysis
 
-| Slot | Outcome | Typ | Intervention | Kontrolle | Verwendbar | Quelle |
-|---:|---|---|---|---|---|---|
-| 1 | White blood cell count (10^9/L), postintervention | continuous | n=24, 6.33 (1.32) | n=25, 5.78 (1.17) | ja | Postintervention; Baselinewerte in derselben Tabelle. |
-| 2 | Neutrophils (10^9/L), postintervention | continuous | n=24, 3.75 (1.01) | n=25, 3.23 (0.82) | ja | Postintervention; Baselinewerte in derselben Tabelle. |
-| 3 | Lymphocytes (10^9/L), postintervention | continuous | n=24, 1.61 (0.57) | n=25, 1.67 (0.64) | ja | Postintervention; Baselinewerte in derselben Tabelle. |
-| 4 | Monocytes (10^9/L), postintervention | continuous | n=24, 0.67 (0.29) | n=25, 0.58 (0.29) | ja | Postintervention; Baselinewerte in derselben Tabelle. |
+| Slot | Outcome | Typ | Intervention | Kontrolle | Verwendbar | Unabhängigkeit | Quelle |
+|---:|---|---|---|---|---|---|---|
+| 1 | White blood cell count (10^9/L), postintervention | continuous | n=24, 6.33 (1.32) | n=25, 5.78 (1.17) | ja | independent | Postintervention; Baselinewerte in derselben Tabelle. |
+| 2 | Neutrophils (10^9/L), postintervention | continuous | n=24, 3.75 (1.01) | n=25, 3.23 (0.82) | ja | independent | Postintervention; Baselinewerte in derselben Tabelle. |
+| 3 | Lymphocytes (10^9/L), postintervention | continuous | n=24, 1.61 (0.57) | n=25, 1.67 (0.64) | ja | independent | Postintervention; Baselinewerte in derselben Tabelle. |
+| 4 | Monocytes (10^9/L), postintervention | continuous | n=24, 0.67 (0.29) | n=25, 0.58 (0.29) | ja | independent | Postintervention; Baselinewerte in derselben Tabelle. |
 
 ### Quellen
 
@@ -94,12 +95,12 @@ Verwendbare Outcomes: **12/20**; nicht verwendbar oder nicht berichtet: **8/20**
 - Begründung: Zwei randomisierte Klientenarme, Arm-N und drei auswertbare Outcomes zu Time 2; ein viertes unabhängiges Outcome ist in den Tabellen nicht berichtet.
 - Risiken/Hinweise: secondary analysis, kleine Stichprobe, nur drei unabhängige Outcomes
 
-| Slot | Outcome | Typ | Intervention | Kontrolle | Verwendbar | Quelle |
-|---:|---|---|---|---|---|---|
-| 1 | Self-contempt intensity at Time 2 | continuous | n=27, 3.81 (0.92) | n=23, 4.22 (0.67) | ja | Time 2; Time 1 ist Baseline und nicht als unabhängiges Outcome ausgewählt. |
-| 2 | Presence of self-compassion at Time 2 | binary | 14/27 | 0/23 | ja | Tabellenwerte sind Anzahlen; keine Prozentrekonstruktion. |
-| 3 | Presence of assertive anger at Time 2 | binary | 19/27 | 2/23 | ja | Tabellenwerte sind Anzahlen; keine Prozentrekonstruktion. |
-| 4 | Fourth independent outcome | not_available | - | - | nein | Kein viertes unabhängiges Outcome in den Tabellen; State Self-Esteem wird nur im Text erwähnt, ohne armweise Werte. |
+| Slot | Outcome | Typ | Intervention | Kontrolle | Verwendbar | Unabhängigkeit | Quelle |
+|---:|---|---|---|---|---|---|---|
+| 1 | Self-contempt intensity at Time 2 | continuous | n=27, 3.81 (0.92) | n=23, 4.22 (0.67) | ja | independent | Time 2; Time 1 ist Baseline und nicht als unabhängiges Outcome ausgewählt. |
+| 2 | Presence of self-compassion at Time 2 | binary | 14/27 | 0/23 | ja | independent | Tabellenwerte sind Anzahlen; keine Prozentrekonstruktion. |
+| 3 | Presence of assertive anger at Time 2 | binary | 19/27 | 2/23 | ja | independent | Tabellenwerte sind Anzahlen; keine Prozentrekonstruktion. |
+| 4 | Fourth independent outcome | not_available | - | - | nein | not_usable | Kein viertes unabhängiges Outcome in den Tabellen; State Self-Esteem wird nur im Text erwähnt, ohne armweise Werte. |
 
 ### Quellen
 
@@ -127,12 +128,12 @@ Verwendbare Outcomes: **12/20**; nicht verwendbar oder nicht berichtet: **8/20**
 - Begründung: Zwei parallele Arme und ein berichtetes binäres Outcome mit Events/Total; die weiteren funktionalen Werte liegen nur als Median/IQR oder Regressionsmodelle vor.
 - Risiken/Hinweise: secondary analysis, nur ein auswertbares binäres Outcome, kontinuierliche SPPB-Werte nicht als Mean/SD berichtet
 
-| Slot | Outcome | Typ | Intervention | Kontrolle | Verwendbar | Quelle |
-|---:|---|---|---|---|---|---|
-| 1 | Functional response (SPPB increase >= 1 point), discharge | binary | 128/150 | 57/153 | ja | Events/Total aus Tabelle; 85.3% und 37.3% nicht als Ereigniszahlen rekonstruiert. |
-| 2 | SPPB change, continuous | not_available | - | - | nein | Kein armweiser Mean/SD für SPPB zu Entlassung berichtet; Baseline nur Median/IQR. |
-| 3 | Total cholesterol, continuous | not_available | - | - | nein | Baseline-Prädiktor, kein Behandlungsoutcome; nur Median/IQR und Regressions-OR. |
-| 4 | Additional functional outcome | not_available | - | - | nein | Kein weiteres armweises Outcome mit N/Mean/SD oder Events/Total in den Tabellen. |
+| Slot | Outcome | Typ | Intervention | Kontrolle | Verwendbar | Unabhängigkeit | Quelle |
+|---:|---|---|---|---|---|---|---|
+| 1 | Functional response (SPPB increase >= 1 point), discharge | binary | 128/150 | 57/153 | ja | independent | Events/Total aus Tabelle; 85.3% und 37.3% nicht als Ereigniszahlen rekonstruiert. |
+| 2 | SPPB change, continuous | not_available | - | - | nein | not_usable | Kein armweiser Mean/SD für SPPB zu Entlassung berichtet; Baseline nur Median/IQR. |
+| 3 | Total cholesterol, continuous | not_available | - | - | nein | not_usable | Baseline-Prädiktor, kein Behandlungsoutcome; nur Median/IQR und Regressions-OR. |
+| 4 | Additional functional outcome | not_available | - | - | nein | not_usable | Kein weiteres armweises Outcome mit N/Mean/SD oder Events/Total in den Tabellen. |
 
 ### Quellen
 
@@ -160,12 +161,12 @@ Verwendbare Outcomes: **12/20**; nicht verwendbar oder nicht berichtet: **8/20**
 - Begründung: Zwei parallele Arme mit Ereigniszahlen, aber die Analyse poolt zwei separate RCTs und mehrere Subgruppen; kein einzelner RCT und keine unabhängigen vier Outcomes.
 - Risiken/Hinweise: post hoc, pooled analysis of two RCTs, subgroup overlap, UTI data truncated in CANVAS
 
-| Slot | Outcome | Typ | Intervention | Kontrolle | Verwendbar | Quelle |
-|---:|---|---|---|---|---|---|
-| 1 | First UTI, whole population | binary | 550/5012 | 353/3602 | ja | Gepoolte RCT-Population; Ereignisse/Total, keine Unabhängigkeit zwischen den Subgruppen. |
-| 2 | First UTI, LE normal | binary | 420/4522 | 237/3171 | ja | LE-Subgruppe; überlappt mit Slot 1 und ist kein unabhängiges Outcome. |
-| 3 | First UTI, LE abnormal | binary | 130/490 | 116/431 | ja | LE-Subgruppe; überlappt mit Slot 1 und ist kein unabhängiges Outcome. |
-| 4 | First UTI, NIT abnormal | binary | 45/173 | 34/129 | ja | NIT-Subgruppe; überlappt mit Slot 1 und ist kein unabhängiges Outcome. |
+| Slot | Outcome | Typ | Intervention | Kontrolle | Verwendbar | Unabhängigkeit | Quelle |
+|---:|---|---|---|---|---|---|---|
+| 1 | First UTI, whole population | binary | 550/5012 | 353/3602 | ja | overlapping_subgroup | Gepoolte RCT-Population; Ereignisse/Total, keine Unabhängigkeit zwischen den Subgruppen. |
+| 2 | First UTI, LE normal | binary | 420/4522 | 237/3171 | ja | overlapping_subgroup | LE-Subgruppe; überlappt mit Slot 1 und ist kein unabhängiges Outcome. |
+| 3 | First UTI, LE abnormal | binary | 130/490 | 116/431 | ja | overlapping_subgroup | LE-Subgruppe; überlappt mit Slot 1 und ist kein unabhängiges Outcome. |
+| 4 | First UTI, NIT abnormal | binary | 45/173 | 34/129 | ja | overlapping_subgroup | NIT-Subgruppe; überlappt mit Slot 1 und ist kein unabhängiges Outcome. |
 
 ### Quellen
 
@@ -186,11 +187,10 @@ Verwendbare Outcomes: **12/20**; nicht verwendbar oder nicht berichtet: **8/20**
 
 ## Konsequenz
 
-Nur `PMC13590555` liefert vier direkt verwendbare kontinuierliche Outcomes.
-`PMC13587833` liefert drei verwendbare Outcomes, `PMC13635505` nur ein
-binäres Outcome. `PMC13591290` enthält klinische Werte nur stratifiziert
-nach Blinding-Status; `PMC13624796` ist eine gepoolte Analyse zweier RCTs
-mit überlappenden Subgruppen. Diese beiden Fälle sind ohne menschliche
-Entscheidung nicht als unabhängige RCT-Datensätze zu übernehmen.
+Acht Outcomes sind unabhängig verwendbar: vier aus `PMC13590555`, drei
+aus `PMC13587833` und eines aus `PMC13635505`. `PMC13591290` enthält
+klinische Werte nur stratifiziert nach Blinding-Status. `PMC13624796` liefert
+vier formal verwendbare, aber überlappende Subgruppen aus einer gepoolten
+Analyse zweier RCTs; sie zählen nicht als vier unabhängige Outcomes.
 
 Kein Modelllauf, kein Netzabruf, keine finale Auswahl.

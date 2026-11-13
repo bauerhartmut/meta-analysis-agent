@@ -344,12 +344,14 @@ Plan: [`holdout_plan_20261112.md`](holdout_plan_20261112.md), Schema:
   Entscheidungen, kein Modell.
 - [`holdout_p0_20261112/fulltext_review_batch1_v1.md`](holdout_p0_20261112/fulltext_review_batch1_v1.md):
   erste assistierte Volltextprüfung von fünf hohen Prioritäten mit Arm-N,
-  Eignungsvorbehalt und 20 Outcome-Slots; 12 verwendbar, 8 leer oder nicht
-  verwendbar, keine finale Entscheidung.
+  Eignungsvorbehalt und 20 Outcome-Slots; 8 unabhängig verwendbar, 4 überlappend
+  aus `PMC13624796`, 8 leer oder nicht verwendbar; 12 formal verwendbar, keine
+  finale Entscheidung.
 - [`holdout_p0_20261112/fulltext_access_plan_v1.md`](holdout_p0_20261112/fulltext_access_plan_v1.md):
   lokale Zugriffsprüfung für die 36 Volltexte gegen 1.291 `data/fulltext`-Texte,
   101 Metadatensätze und 62 Inbox-Dateien; alle Open Access/Europe PMC,
-  33 PDF-Flags, 0 lokale Treffer, kein Abruf gestartet.
+  33 PDF-Flags, vor dem Abruf 0 lokale Treffer; 30/30 Shortlist-XML abgerufen,
+  sechs Reservefälle und PDFs nicht abgerufen.
 - [`holdout_p0_20261112/signoff_validation_v1.json`](holdout_p0_20261112/signoff_validation_v1.json):
   Pflichtfeldprüfung der 65 Freigabezeilen; 65/65 abgeschlossen, 0 offen,
   65 menschlich und 0 assistiert, keine Feldfehler.
