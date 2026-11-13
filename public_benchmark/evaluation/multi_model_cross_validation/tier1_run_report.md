@@ -22,6 +22,29 @@ ist kein Unterschied zwischen den Modellen nachweisbar.** Das ist kein
 Gleichstandsnachweis: die kleinste nachweisbare Differenz liegt bei dieser
 Größe im Bereich von 9 bis 10 Prozentpunkten.
 
+## Zusatzmodell Qwen3-30B
+
+Nachgereicht wurde `gwdg/qwen3-30b-a3b-instruct-2507` (30B MoE, 3B aktiv,
+`max_tokens` 8000). Der Lauf brauchte 74 Sekunden: 54 Aufrufe, 54 × HTTP 200,
+kein leerer und kein fehlerhafter Aufruf, Median 0,8 s je Record bei drei
+Threads.
+
+| Kennzahl | Qwen3-30B | Spanne der drei großen Modelle |
+|---|---:|---|
+| Recall | 0,566 | 0,571-0,604 |
+| Precision | 0,426 | 0,358-0,510 |
+| F1 | 0,486 | 0,450-0,539 |
+| exakte Records | 7 / 54 | 8-9 / 54 |
+| Zeilen zugeordnet | 0,778 | 0,815-0,852 |
+| Genauigkeit in gefundener Zeile | 0,744 | 0,844-0,897 |
+| Zusatzzellen | 113 | 88-179 |
+
+Das Modell findet die Goldzeile ähnlich oft wie die großen Modelle, füllt sie
+also seltener korrekt und ordnet seltener zu. Der Unterschied ist bei 54 Records
+nicht signifikant, die Richtung ist über alle Kennzahlen gleich. Bemerkenswert
+ist das Tempo: 54 Records in 74 Sekunden gegenüber rund 25 Minuten bei den
+großen Modellen, bei vergleichbarem Recall.
+
 ## Was die Zahlen sagen
 
 - Alle drei Modelle finden rund 57-60 Prozent der Goldzellen; 40 Prozent fehlen

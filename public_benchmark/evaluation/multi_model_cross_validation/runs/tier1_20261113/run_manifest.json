@@ -1,17 +1,17 @@
 {
   "run_id": "tier1_20261113",
-  "started": "2026-11-13T20:34:13+00:00",
-  "finished": "2026-11-13T20:35:47+00:00",
+  "started": "2026-11-13T23:42:41+00:00",
+  "finished": "2026-11-13T23:43:55+00:00",
   "dataset": "glass_trialreviewbench",
   "models": {
-    "qwen": {
-      "id": "gwdg/qwen3.5-397b-a17b",
-      "max_tokens": 16000
+    "qwen30": {
+      "id": "gwdg/qwen3-30b-a3b-instruct-2507",
+      "max_tokens": 8000
     }
   },
   "jobs": 54,
   "tally": {
-    "ok": 1,
+    "ok": 54,
     "leer": 0,
     "fehler": 0
   },

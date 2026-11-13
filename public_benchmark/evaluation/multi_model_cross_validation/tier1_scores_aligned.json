@@ -110,6 +110,42 @@
         "record_exact": 9,
         "record_exact_rate": 0.1667
       }
+    },
+    "qwen30": {
+      "records": 54,
+      "answered": 54,
+      "gold_cells": 182,
+      "predicted_cells": 242,
+      "matched_cells": 103,
+      "recall": 0.5659,
+      "gold_cells_answered": 182,
+      "recall_answered": 0.5659,
+      "precision": 0.4256,
+      "f1": 0.4858,
+      "record_exact": 7,
+      "record_exact_rate": 0.1296,
+      "failed_calls": 0,
+      "bootstrap_recall": {
+        "rounds": 1000,
+        "clusters": 28,
+        "lower": 0.4765,
+        "upper": 0.6524
+      },
+      "aligned": {
+        "records": 54,
+        "records_with_alignment": 42,
+        "alignment_rate": 0.7778,
+        "gold_cells": 182,
+        "matched_cells": 96,
+        "wrong_cells": 33,
+        "missing_cells": 53,
+        "extra_cells": 113,
+        "recall": 0.5275,
+        "precision": 0.3967,
+        "conditional_accuracy": 0.7442,
+        "record_exact": 7,
+        "record_exact_rate": 0.1296
+      }
     }
   }
 }

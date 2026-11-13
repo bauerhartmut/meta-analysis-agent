@@ -1,4 +1,4 @@
-# Ergebnisse: drei Sprachmodelle bei der numerischen Extraktion
+# Ergebnisse: vier Sprachmodelle bei der numerischen Extraktion
 
 Stand: 2026-11-13
 Zusammenfassung aller Befunde aus Vorbereitung, Extraktionslauf, Bewertung und
@@ -7,7 +7,7 @@ Werte sind geschätzt; Schätzungen sind als solche markiert.
 
 ## 1. Frage und Aufbau
 
-Untersucht wurde, wie zuverlässig drei Sprachmodelle numerische Ergebnisse aus
+Untersucht wurde, wie zuverlässig vier Sprachmodelle numerische Ergebnisse aus
 randomisierten Studien extrahieren und ob sie sich unterscheiden:
 
 | Modell | Kennung | Tokenbudget |
@@ -15,6 +15,7 @@ randomisierten Studien extrahieren und ob sie sich unterscheiden:
 | Qwen 3.5 397B | `gwdg/qwen3.5-397b-a17b` | 16.000 |
 | DeepSeek V4.1 Flash | `gwdg/deepseek-v4.1-flash-1017` | 8.000 |
 | GLM 5.3 | `gwdg/glm-5.3` | 24.000 |
+| Qwen3-30B (A3B Instruct 2507) | `gwdg/qwen3-30b-a3b-instruct-2507` | 8.000 |
 
 Als Goldstandard dient ein öffentlicher Datensatz, keine eigene Annotation.
 Temperatur 0, ein Prompt, keine Nachbearbeitung, kein Few-Shot.
@@ -48,15 +49,18 @@ PICO-Corpus mit Yun, G5 oder der eigenen Auswahl (DOI- und PMID-Vergleich,
 
 ## 3. Lauf
 
-- 232 protokollierte Aufrufe insgesamt (inklusive Wiederholungen).
-- HTTP-Status: 217 × 200, 6 × 429, 5 × 503, 4 × Timeout/Verbindungsfehler.
+- 286 protokollierte Aufrufe insgesamt (inklusive Wiederholungen).
+- HTTP-Status: 271 × 200, 6 × 429, 5 × 503, 4 × Timeout/Verbindungsfehler.
 - 52 Antworten mit HTTP 200 und leerem Inhalt, alle mit
   `finish_reason: length` — das Reasoning hatte das Tokenbudget verbraucht.
-- `finish_reason`: 165 × `stop`, 52 × `length`, 15 × leer (Fehler).
+- `finish_reason`: 219 × `stop`, 52 × `length`, 15 × leer (Fehler).
 - Median der Laufzeit 10,5 s über alle Aufrufe (die leeren Antworten sind
   schneller, deshalb liegt der Median unter der echten Extraktionszeit von
   etwa 45-90 s).
-- Endergebnis: **54 von 54 Records von allen drei Modellen beantwortet**.
+- Endergebnis: **54 von 54 Records von allen vier Modellen beantwortet**.
+- Das Zusatzmodell Qwen3-30B lief in 74 Sekunden durch: 54 Aufrufe, 54 ×
+  HTTP 200, kein leerer und kein fehlerhafter Aufruf, Median 0,8 s je Record
+  bei drei parallelen Threads (das Modell hat 3B aktive Parameter).
 
 Rohdaten: `runs/tier1_20261113/predictions.jsonl`.
 
@@ -64,11 +68,12 @@ Rohdaten: `runs/tier1_20261113/predictions.jsonl`.
 
 Auswertung über alle Zellen (Multiset), gemeinsame Teilmenge aller Modelle:
 
-| Modell | Recall | 95 %-Bootstrap | Precision | exakte Records | gelieferte Zellen |
-|---|---:|---|---:|---:|---:|
-| GLM 5.3 | 0,604 | 0,485-0,724 | 0,358 | 9 / 54 | 110 |
-| DeepSeek V4.1 Flash | 0,577 | 0,469-0,681 | 0,383 | 8 / 54 | 105 |
-| Qwen 3.5 397B | 0,571 | 0,471-0,670 | 0,510 | 9 / 54 | 104 |
+| Modell | Recall | 95 %-Bootstrap | Precision | F1 | exakte Records | Trefferzellen |
+|---|---:|---|---:|---:|---:|---:|
+| GLM 5.3 | 0,604 | 0,485-0,724 | 0,358 | 0,450 | 9 / 54 | 110 |
+| DeepSeek V4.1 Flash | 0,577 | 0,469-0,681 | 0,383 | 0,461 | 8 / 54 | 105 |
+| Qwen 3.5 397B | 0,571 | 0,471-0,670 | 0,510 | 0,539 | 9 / 54 | 104 |
+| Qwen3-30B | 0,566 | 0,477-0,652 | 0,426 | 0,486 | 7 / 54 | 103 |
 
 Bootstrap: 1000 Runden, Seed 20261113, Clusterung nach Publikation.
 
@@ -91,6 +96,7 @@ Effektgröße, dann weitere numerische Zellen) und trennt danach:
 | GLM 5.3 | 0,852 | 0,593 | 0,352 | 0,844 | 179 |
 | DeepSeek V4.1 Flash | 0,852 | 0,566 | 0,376 | 0,851 | 153 |
 | Qwen 3.5 397B | 0,815 | 0,571 | 0,510 | 0,897 | 88 |
+| Qwen3-30B | 0,778 | 0,528 | 0,397 | 0,744 | 113 |
 
 Lesart:
 
@@ -107,6 +113,14 @@ Lesart:
 Einschränkung: Der Anker ist die Goldzahl selbst, deshalb sind Recall und
 Precision leicht zugunsten des Modells verzerrt. Belastbar ist vor allem die
 Genauigkeit der übrigen Zellen einer gefundenen Zeile.
+
+**Das kleinere Modell im Vergleich.** Qwen3-30B erreicht beim Recall Anschluss
+(0,566 gegen 0,571 bis 0,604), liegt bei Precision und F1 im Mittelfeld, aber
+in der Genauigkeit gefundener Zeilen deutlich niedriger (0,744 gegen 0,844 bis
+0,897). Es findet die Zeile also ähnlich oft, füllt sie aber häufiger falsch.
+Auch die Zuordnungsrate ist mit 0,778 die niedrigste. Der Abstand zu Qwen 3.5
+397B ist bei 54 Records nicht signifikant, die Richtung ist aber über alle
+drei Kennzahlen gleich.
 
 ## 6. Zwischenstand auf 41 Records (überholt)
 
@@ -207,7 +221,8 @@ Tests: `public_benchmark/tests/test_tier1_validation.py`,
    84-90 Prozent der Zellen.
 3. Ein Modellunterschied ist mit dieser Stichprobe nicht belegbar. Qwen liefert
    die saubersten Zeilen, GLM die meisten Treffer, DeepSeek liegt dazwischen —
-   alle Differenzen innerhalb der Unsicherheit.
+   alle Differenzen innerhalb der Unsicherheit. Das kleinere Qwen3-30B hält
+   beim Recall mit, füllt gefundene Zeilen aber seltener korrekt.
 4. Der größte Einzelfehler war technisch, nicht methodisch: zu kleines
    Tokenbudget. Mit 24000 Tokens lief GLM fehlerfrei.
 5. Für eine belastbare Rangfolge fehlen Records und Cluster, nicht Rechenzeit.
