@@ -34,6 +34,38 @@ Differenz liegt bei dieser Größe im Bereich von 10 Prozentpunkten.
 - GLM hat den höchsten Recall und die niedrigste Precision, Qwen die höchste
   Precision. Beides liegt innerhalb der Unsicherheit.
 
+## Auswertung mit Zeilenzuordnung (`--aligned`)
+
+Die Modelle benennen ihre Zeilen anders als der Goldstandard (statt der Studie
+nennt Qwen zum Beispiel "EBRT before vs during/after nivolumab"). Eine
+Zuordnung über den Studiennnamen gelingt deshalb nicht. Der Auswerter ordnet
+daher über die übereinstimmende Zahl zu (Anker: Effektgröße, dann weitere
+numerische Zellen) und bewertet danach alle Zellen der zugeordneten Zeile.
+
+| Modell | Zeilen zugeordnet | Recall | Precision | Genauigkeit in zugeordneten Zeilen | exakte Records | Zusatzzellen |
+|---|---:|---:|---:|---:|---:|---:|
+| GLM 5.3 | 0,878 | 0,636 | 0,462 | 0,859 | 8 / 41 | 91 |
+| Qwen 3.5 397B | 0,854 | 0,615 | 0,667 | 0,917 | 9 / 41 | 36 |
+| DeepSeek V4.1 Flash | 0,854 | 0,601 | 0,538 | 0,878 | 8 / 41 | 62 |
+
+Was das zeigt:
+
+- Rund 86-88 Prozent der Goldzeilen werden überhaupt gefunden; 12-14 Prozent
+  fehlen vollständig.
+- Wenn die Zeile gefunden ist, stimmen 86-92 Prozent ihrer Zellen. Der Fehler
+  liegt also weniger in falschen Zahlen als im Finden der richtigen Zeile.
+- Die Precision bleibt mit 0,46-0,67 deutlich unter der Genauigkeit in
+  zugeordneten Zeilen, weil die Modelle zusätzliche Zeilen liefern, die zu
+  keiner Goldzeile gehören (36-91 Zellen). Das ist kein Bewertungsartefakt,
+  sondern echte Überextraktion gegenüber der Goldgranularität.
+- Im Vergleich zur Multiset-Auswertung: Recall 0,601-0,636 statt 0,615-0,650,
+  Precision nahezu unverändert. Die Zeilenzuordnung verschiebt die Zahlen nur
+  leicht; der früher vermutete reine Artefakt-Effekt war es nicht.
+
+Einschränkung: Der Anker ist die Goldzahl selbst. Recall und Precision sind
+deshalb leicht zugunsten des Modells verzerrt; belastbar ist vor allem die
+Genauigkeit der übrigen Zellen einer gefundenen Zeile.
+
 ## Abdeckung und Ausfälle
 
 | Modell | beantwortet | fehlend |
