@@ -1,0 +1,479 @@
+{
+  "dataset_id": "crossval_exploration_v1",
+  "created": "2026-11-13",
+  "status": "draft_pending_annotation",
+  "model_used": false,
+  "purpose": "unabhaengiger Explorationsdatensatz fuer die Multi-Model-Cross-Validation",
+  "article_counts": {
+    "primary": 25,
+    "reserve": 10
+  },
+  "target_records": [
+    60,
+    80
+  ],
+  "records": null,
+  "record_count_note": "wird nach der Referenzannotation gesetzt, nicht geschaetzt",
+  "reference": {
+    "path": null,
+    "sha256": null,
+    "status": "pending",
+    "annotators": [],
+    "independent_second_annotator": null
+  },
+  "schema": {
+    "path": "schema_v1.json",
+    "sha256": "84d5960625fc9f8966c811f94c29e0d49f137d348a2caa70421472e537fe84ee"
+  },
+  "prompt": {
+    "path": null,
+    "sha256": null,
+    "status": "not_created",
+    "note": "Prompt fuer Arm-Extraktion nach schema_v1 ist noch nicht eingefroren"
+  },
+  "models": {
+    "qwen": {
+      "id": "gwdg/qwen3.5-397b-a17b",
+      "role": "arm_a_and_adjudicator"
+    },
+    "deepseek": {
+      "id": "gwdg/deepseek-v4.1-flash-1017",
+      "role": "arm_b"
+    },
+    "glm": {
+      "id": "gwdg/glm-5.3",
+      "role": "arm_c",
+      "status": "usable_with_larger_max_tokens",
+      "required_max_tokens": 8000
+    }
+  },
+  "disjointness": {
+    "g5_shortlist": [
+      "PMC13352180",
+      "PMC13420175",
+      "PMC13519320",
+      "PMC13541226",
+      "PMC13542807",
+      "PMC13555364",
+      "PMC13573578",
+      "PMC13574397",
+      "PMC13583845",
+      "PMC13587833",
+      "PMC13590555",
+      "PMC13590641",
+      "PMC13591290",
+      "PMC13591858",
+      "PMC13596784",
+      "PMC13599778",
+      "PMC13602066",
+      "PMC13610117",
+      "PMC13610533",
+      "PMC13610834",
+      "PMC13613700",
+      "PMC13624796",
+      "PMC13626740",
+      "PMC13629817",
+      "PMC13630044",
+      "PMC13635505",
+      "PMC13688066",
+      "PMC13706700",
+      "PMC13720204",
+      "PMC13743599"
+    ],
+    "g5_overlap": [],
+    "yun_articles": 70,
+    "yun_overlap": [],
+    "verified": true
+  },
+  "freeze": {
+    "frozen": false,
+    "reason": "Referenzannotation und Prompt fehlen; kein Freeze vor deren Abschluss"
+  },
+  "articles": [
+    {
+      "position": 1,
+      "role": "primary",
+      "pmcid": "PMC13533546",
+      "doi": "10.1093/ijnp/pyag041",
+      "reserved_for": "crossval_exploration",
+      "source_document": "data/fulltext_inbox/crossval_v1/PMC13533546.xml",
+      "input_sha256": "2cd903bc06e0bdc97dcd8f88e7c1e4fc34695cb8e97eeaa0d0279956ad915f5f",
+      "file_sha256_now": "2cd903bc06e0bdc97dcd8f88e7c1e4fc34695cb8e97eeaa0d0279956ad915f5f",
+      "eligibility": "ineligible"
+    },
+    {
+      "position": 2,
+      "role": "primary",
+      "pmcid": "PMC13587535",
+      "doi": "10.1080/07853890.2026.2732292",
+      "reserved_for": "crossval_exploration",
+      "source_document": "data/fulltext_inbox/crossval_v1/PMC13587535.xml",
+      "input_sha256": "feb5596d655b175b2fb68b0e1861bd11ff22269fe438547c12de0b1abcd1540e",
+      "file_sha256_now": "feb5596d655b175b2fb68b0e1861bd11ff22269fe438547c12de0b1abcd1540e",
+      "eligibility": "manual_review_required"
+    },
+    {
+      "position": 3,
+      "role": "primary",
+      "pmcid": "PMC13554527",
+      "doi": "10.1177/03000605261464292",
+      "reserved_for": "crossval_exploration",
+      "source_document": "data/fulltext_inbox/crossval_v1/PMC13554527.xml",
+      "input_sha256": "8f2f8356d667ce7fd2a66acea1d76305ca168256eb41df3df81a78ed399938ba",
+      "file_sha256_now": "8f2f8356d667ce7fd2a66acea1d76305ca168256eb41df3df81a78ed399938ba",
+      "eligibility": "eligible_confirmed"
+    },
+    {
+      "position": 4,
+      "role": "primary",
+      "pmcid": "PMC13581780",
+      "doi": "10.3389/fpubh.2026.1855870",
+      "reserved_for": "crossval_exploration",
+      "source_document": "data/fulltext_inbox/crossval_v1/PMC13581780.xml",
+      "input_sha256": "5a213f54b6b8b476a13deb97a316e62987486ff89d8785a957c10916cacc9bb5",
+      "file_sha256_now": "5a213f54b6b8b476a13deb97a316e62987486ff89d8785a957c10916cacc9bb5",
+      "eligibility": "ineligible"
+    },
+    {
+      "position": 5,
+      "role": "primary",
+      "pmcid": "PMC13544601",
+      "doi": "10.1113/ep093960",
+      "reserved_for": "crossval_exploration",
+      "source_document": "data/fulltext_inbox/crossval_v1/PMC13544601.xml",
+      "input_sha256": "e5630572e8e6857ffc11712c39f92b20ec338d736f2a43487dfd2bd26a073b2b",
+      "file_sha256_now": "e5630572e8e6857ffc11712c39f92b20ec338d736f2a43487dfd2bd26a073b2b",
+      "eligibility": "manual_review_required"
+    },
+    {
+      "position": 6,
+      "role": "primary",
+      "pmcid": "PMC13613989",
+      "doi": "10.1002/pon.70616",
+      "reserved_for": "crossval_exploration",
+      "source_document": "data/fulltext_inbox/crossval_v1/PMC13613989.xml",
+      "input_sha256": "ff99f0040db5108911a273a6d012fe6765d15b00a5c3a113f884819b0b90ea3c",
+      "file_sha256_now": "ff99f0040db5108911a273a6d012fe6765d15b00a5c3a113f884819b0b90ea3c",
+      "eligibility": "ineligible"
+    },
+    {
+      "position": 7,
+      "role": "primary",
+      "pmcid": "PMC13493211",
+      "doi": "10.2337/db26-0293",
+      "reserved_for": "crossval_exploration",
+      "source_document": "data/fulltext_inbox/crossval_v1/PMC13493211.xml",
+      "input_sha256": "953835b52ab4849d3880f515d1ea4c267a7b51516202d32b1efd92749933b913",
+      "file_sha256_now": "953835b52ab4849d3880f515d1ea4c267a7b51516202d32b1efd92749933b913",
+      "eligibility": "manual_review_required"
+    },
+    {
+      "position": 8,
+      "role": "primary",
+      "pmcid": "PMC13583812",
+      "doi": "10.1136/bmjopen-2026-120406",
+      "reserved_for": "crossval_exploration",
+      "source_document": "data/fulltext_inbox/crossval_v1/PMC13583812.xml",
+      "input_sha256": "d6e5ef875810ad0ca4013dface48d3d7710268c53fb52b90bb277a7b40be70e5",
+      "file_sha256_now": "d6e5ef875810ad0ca4013dface48d3d7710268c53fb52b90bb277a7b40be70e5",
+      "eligibility": "ineligible"
+    },
+    {
+      "position": 9,
+      "role": "primary",
+      "pmcid": "PMC13682724",
+      "doi": "10.1200/jco-25-01967",
+      "reserved_for": "crossval_exploration",
+      "source_document": "data/fulltext_inbox/crossval_v1/PMC13682724.xml",
+      "input_sha256": "76a78da221a1317ef70178e3fc19ed5f6b830ab27422365485ac6cf9c58d7f6b",
+      "file_sha256_now": "76a78da221a1317ef70178e3fc19ed5f6b830ab27422365485ac6cf9c58d7f6b",
+      "eligibility": "ineligible"
+    },
+    {
+      "position": 10,
+      "role": "primary",
+      "pmcid": "PMC13575558",
+      "doi": "10.1158/1078-0432.ccr-26-0805",
+      "reserved_for": "crossval_exploration",
+      "source_document": "data/fulltext_inbox/crossval_v1/PMC13575558.xml",
+      "input_sha256": "9fda5640ef993d9b79e946e89c26a8650bd9aeea91053da003926f6c6a8c081c",
+      "file_sha256_now": "9fda5640ef993d9b79e946e89c26a8650bd9aeea91053da003926f6c6a8c081c",
+      "eligibility": "manual_review_required"
+    },
+    {
+      "position": 11,
+      "role": "primary",
+      "pmcid": "PMC13568562",
+      "doi": "10.1080/19490976.2026.2728351",
+      "reserved_for": "crossval_exploration",
+      "source_document": "data/fulltext_inbox/crossval_v1/PMC13568562.xml",
+      "input_sha256": "9198c13b5604adb399da9147a6e410993dd4beeadaa8227fa8b4403172eb9ebd",
+      "file_sha256_now": "9198c13b5604adb399da9147a6e410993dd4beeadaa8227fa8b4403172eb9ebd",
+      "eligibility": "ineligible"
+    },
+    {
+      "position": 12,
+      "role": "primary",
+      "pmcid": "PMC13539392",
+      "doi": "10.1001/jamanetworkopen.2026.31628",
+      "reserved_for": "crossval_exploration",
+      "source_document": "data/fulltext_inbox/crossval_v1/PMC13539392.xml",
+      "input_sha256": "0c7a3f2dab886056c990beac0cdf06c352d42702fd9b199b0a6a5bee2e58643f",
+      "file_sha256_now": "0c7a3f2dab886056c990beac0cdf06c352d42702fd9b199b0a6a5bee2e58643f",
+      "eligibility": "eligible_uncertain"
+    },
+    {
+      "position": 13,
+      "role": "primary",
+      "pmcid": "PMC13599780",
+      "doi": "10.1093/rheumatology/keag420",
+      "reserved_for": "crossval_exploration",
+      "source_document": "data/fulltext_inbox/crossval_v1/PMC13599780.xml",
+      "input_sha256": "97fb50e7f12a0fe3bc271981d72789e45fd8473aedfeaf52b2c6a95f23c9c8cd",
+      "file_sha256_now": "97fb50e7f12a0fe3bc271981d72789e45fd8473aedfeaf52b2c6a95f23c9c8cd",
+      "eligibility": "manual_review_required"
+    },
+    {
+      "position": 14,
+      "role": "primary",
+      "pmcid": "PMC13683044",
+      "doi": "10.1038/s41562-026-02568-4",
+      "reserved_for": "crossval_exploration",
+      "source_document": "data/fulltext_inbox/crossval_v1/PMC13683044.xml",
+      "input_sha256": "bfcdee2ac2051406068f2a67b047cca56a1a275f95f6b89d0877fe5ae2477927",
+      "file_sha256_now": "bfcdee2ac2051406068f2a67b047cca56a1a275f95f6b89d0877fe5ae2477927",
+      "eligibility": "ineligible"
+    },
+    {
+      "position": 15,
+      "role": "primary",
+      "pmcid": "PMC13597907",
+      "doi": "10.3389/fpubh.2026.1904708",
+      "reserved_for": "crossval_exploration",
+      "source_document": "data/fulltext_inbox/crossval_v1/PMC13597907.xml",
+      "input_sha256": "a965577a9c7f833c3ae99fa1638b6d7618f9b606028c565b0e24e1236d4677db",
+      "file_sha256_now": "a965577a9c7f833c3ae99fa1638b6d7618f9b606028c565b0e24e1236d4677db",
+      "eligibility": "eligible_uncertain"
+    },
+    {
+      "position": 16,
+      "role": "primary",
+      "pmcid": "PMC13591874",
+      "doi": "10.1186/s12903-026-09810-5",
+      "reserved_for": "crossval_exploration",
+      "source_document": "data/fulltext_inbox/crossval_v1/PMC13591874.xml",
+      "input_sha256": "2757e9526991bf9a1796afcc4a0d875d16940d3165f23416ad344a7966ca821b",
+      "file_sha256_now": "2757e9526991bf9a1796afcc4a0d875d16940d3165f23416ad344a7966ca821b",
+      "eligibility": "manual_review_required"
+    },
+    {
+      "position": 17,
+      "role": "primary",
+      "pmcid": "PMC13553157",
+      "doi": "10.1111/nicc.70603",
+      "reserved_for": "crossval_exploration",
+      "source_document": "data/fulltext_inbox/crossval_v1/PMC13553157.xml",
+      "input_sha256": "80daca9e225147e56707c01fabdede390ef81ae2454ca2ca5b7c076fe7d9f1d7",
+      "file_sha256_now": "80daca9e225147e56707c01fabdede390ef81ae2454ca2ca5b7c076fe7d9f1d7",
+      "eligibility": "ineligible"
+    },
+    {
+      "position": 18,
+      "role": "primary",
+      "pmcid": "PMC13587653",
+      "doi": "10.1002/ejp.70384",
+      "reserved_for": "crossval_exploration",
+      "source_document": "data/fulltext_inbox/crossval_v1/PMC13587653.xml",
+      "input_sha256": "246e1d6754b480572c480cd5e0244a7df3a55607818a977358b1bf8240917fd5",
+      "file_sha256_now": "246e1d6754b480572c480cd5e0244a7df3a55607818a977358b1bf8240917fd5",
+      "eligibility": "ineligible"
+    },
+    {
+      "position": 19,
+      "role": "primary",
+      "pmcid": "PMC13724892",
+      "doi": "10.1177/03000605261477885",
+      "reserved_for": "crossval_exploration",
+      "source_document": "data/fulltext_inbox/crossval_v1/PMC13724892.xml",
+      "input_sha256": "81dc3bf767b0009da656dc154e668edeb570abdce3a08ffc07197c5ec7364480",
+      "file_sha256_now": "81dc3bf767b0009da656dc154e668edeb570abdce3a08ffc07197c5ec7364480",
+      "eligibility": "eligible_uncertain"
+    },
+    {
+      "position": 20,
+      "role": "primary",
+      "pmcid": "PMC13610706",
+      "doi": "10.3390/nu18182970",
+      "reserved_for": "crossval_exploration",
+      "source_document": "data/fulltext_inbox/crossval_v1/PMC13610706.xml",
+      "input_sha256": "0ff716e1746a24f9148c258b256bcb92c14d554b281c7fb7f07ca6ee6fce49d2",
+      "file_sha256_now": "0ff716e1746a24f9148c258b256bcb92c14d554b281c7fb7f07ca6ee6fce49d2",
+      "eligibility": "manual_review_required"
+    },
+    {
+      "position": 21,
+      "role": "primary",
+      "pmcid": "PMC13645219",
+      "doi": "10.1371/journal.pntd.0014783",
+      "reserved_for": "crossval_exploration",
+      "source_document": "data/fulltext_inbox/crossval_v1/PMC13645219.xml",
+      "input_sha256": "1fc5215888869439fa0445c07a7edea7d51d0a2bc7951bbe6a7bc67733531df6",
+      "file_sha256_now": "1fc5215888869439fa0445c07a7edea7d51d0a2bc7951bbe6a7bc67733531df6",
+      "eligibility": "manual_review_required"
+    },
+    {
+      "position": 22,
+      "role": "primary",
+      "pmcid": "PMC13556510",
+      "doi": "10.1093/jjco/hyag090",
+      "reserved_for": "crossval_exploration",
+      "source_document": "data/fulltext_inbox/crossval_v1/PMC13556510.xml",
+      "input_sha256": "9496dc6030e2bb8ed33bb4c7b74638b13a904e2efe8704a8aebb772cc4617078",
+      "file_sha256_now": "9496dc6030e2bb8ed33bb4c7b74638b13a904e2efe8704a8aebb772cc4617078",
+      "eligibility": "manual_review_required"
+    },
+    {
+      "position": 23,
+      "role": "primary",
+      "pmcid": "PMC13632637",
+      "doi": "10.2147/dddt.s624552",
+      "reserved_for": "crossval_exploration",
+      "source_document": "data/fulltext_inbox/crossval_v1/PMC13632637.xml",
+      "input_sha256": "5521cf241632cb0c6f2a62fc1329fa4d2e2827aaf366f3dd64f7f1d00f141909",
+      "file_sha256_now": "5521cf241632cb0c6f2a62fc1329fa4d2e2827aaf366f3dd64f7f1d00f141909",
+      "eligibility": "manual_review_required"
+    },
+    {
+      "position": 24,
+      "role": "primary",
+      "pmcid": "PMC13729219",
+      "doi": "10.1128/spectrum.01608-26",
+      "reserved_for": "crossval_exploration",
+      "source_document": "data/fulltext_inbox/crossval_v1/PMC13729219.xml",
+      "input_sha256": "df925e30b114ca9d00288167de058af84ab3724d88658bc68ac9d17df9f24028",
+      "file_sha256_now": "df925e30b114ca9d00288167de058af84ab3724d88658bc68ac9d17df9f24028",
+      "eligibility": "ineligible"
+    },
+    {
+      "position": 25,
+      "role": "primary",
+      "pmcid": "PMC13601125",
+      "doi": "10.1007/s00420-026-02229-z",
+      "reserved_for": "crossval_exploration",
+      "source_document": "data/fulltext_inbox/crossval_v1/PMC13601125.xml",
+      "input_sha256": "434ac5bb0bcd877bbfb6b2c8e096d139a237188c3addf12303ac476828ece90c",
+      "file_sha256_now": "434ac5bb0bcd877bbfb6b2c8e096d139a237188c3addf12303ac476828ece90c",
+      "eligibility": "ineligible"
+    },
+    {
+      "position": 26,
+      "role": "reserve",
+      "pmcid": "PMC13560212",
+      "doi": "10.1186/s12913-026-15555-2",
+      "reserved_for": "crossval_exploration",
+      "source_document": "data/fulltext_inbox/crossval_v1/PMC13560212.xml",
+      "input_sha256": "ad2bf3973eb3e6a50c3af24f6e9578f33ffdedcaeed4f006446fa7ad12c89c8f",
+      "file_sha256_now": "ad2bf3973eb3e6a50c3af24f6e9578f33ffdedcaeed4f006446fa7ad12c89c8f",
+      "eligibility": "not_reviewed"
+    },
+    {
+      "position": 27,
+      "role": "reserve",
+      "pmcid": "PMC13624021",
+      "doi": "10.1007/s00431-026-07427-y",
+      "reserved_for": "crossval_exploration",
+      "source_document": "data/fulltext_inbox/crossval_v1/PMC13624021.xml",
+      "input_sha256": "19eb1bae7813b37e30c3a8463f5434bf9deaca947199661be2cc6692578b55e2",
+      "file_sha256_now": "19eb1bae7813b37e30c3a8463f5434bf9deaca947199661be2cc6692578b55e2",
+      "eligibility": "not_reviewed"
+    },
+    {
+      "position": 28,
+      "role": "reserve",
+      "pmcid": "PMC13610065",
+      "doi": "10.3390/nu18183022",
+      "reserved_for": "crossval_exploration",
+      "source_document": "data/fulltext_inbox/crossval_v1/PMC13610065.xml",
+      "input_sha256": "88bdacf1d326177959072161fb2268b8eb1c24dac2cee21aa41b564157143efa",
+      "file_sha256_now": "88bdacf1d326177959072161fb2268b8eb1c24dac2cee21aa41b564157143efa",
+      "eligibility": "not_reviewed"
+    },
+    {
+      "position": 29,
+      "role": "reserve",
+      "pmcid": "PMC13593208",
+      "doi": "10.1093/eurheartj/ehag206",
+      "reserved_for": "crossval_exploration",
+      "source_document": "data/fulltext_inbox/crossval_v1/PMC13593208.xml",
+      "input_sha256": "48befcb1f84c3db4f439356a1f37be314e59b21e581278eb610ae50ee35016b0",
+      "file_sha256_now": "48befcb1f84c3db4f439356a1f37be314e59b21e581278eb610ae50ee35016b0",
+      "eligibility": "not_reviewed"
+    },
+    {
+      "position": 30,
+      "role": "reserve",
+      "pmcid": "PMC13577647",
+      "doi": "10.1051/ject/2026006",
+      "reserved_for": "crossval_exploration",
+      "source_document": "data/fulltext_inbox/crossval_v1/PMC13577647.xml",
+      "input_sha256": "412dbf3854dda04763ec9c9e13d34f56e701fd5ac1a266e16b6ac97cf7eacef2",
+      "file_sha256_now": "412dbf3854dda04763ec9c9e13d34f56e701fd5ac1a266e16b6ac97cf7eacef2",
+      "eligibility": "not_reviewed"
+    },
+    {
+      "position": 31,
+      "role": "reserve",
+      "pmcid": "PMC13632614",
+      "doi": "10.2147/cia.s634303",
+      "reserved_for": "crossval_exploration",
+      "source_document": "data/fulltext_inbox/crossval_v1/PMC13632614.xml",
+      "input_sha256": "20c05b7acb7edb3227c74134edafd78e773c420513c284fa9cfec4f06bf44e4d",
+      "file_sha256_now": "20c05b7acb7edb3227c74134edafd78e773c420513c284fa9cfec4f06bf44e4d",
+      "eligibility": "not_reviewed"
+    },
+    {
+      "position": 32,
+      "role": "reserve",
+      "pmcid": "PMC13607715",
+      "doi": "10.3390/ijms27188376",
+      "reserved_for": "crossval_exploration",
+      "source_document": "data/fulltext_inbox/crossval_v1/PMC13607715.xml",
+      "input_sha256": "d287c7c0f8fcaedcfa8a2f3bcc48463306bff6d6165ac400c615e78c2998de9d",
+      "file_sha256_now": "d287c7c0f8fcaedcfa8a2f3bcc48463306bff6d6165ac400c615e78c2998de9d",
+      "eligibility": "not_reviewed"
+    },
+    {
+      "position": 33,
+      "role": "reserve",
+      "pmcid": "PMC13609332",
+      "doi": "10.3390/medicina62091747",
+      "reserved_for": "crossval_exploration",
+      "source_document": "data/fulltext_inbox/crossval_v1/PMC13609332.xml",
+      "input_sha256": "5f17a102ce0cf25f789459571158bc97d67adbec02d32dc7e34eaf29f3f06b27",
+      "file_sha256_now": "5f17a102ce0cf25f789459571158bc97d67adbec02d32dc7e34eaf29f3f06b27",
+      "eligibility": "not_reviewed"
+    },
+    {
+      "position": 34,
+      "role": "reserve",
+      "pmcid": "PMC13535982",
+      "doi": "10.1002/clc.70464",
+      "reserved_for": "crossval_exploration",
+      "source_document": "data/fulltext_inbox/crossval_v1/PMC13535982.xml",
+      "input_sha256": "056821158624660beee5f25a7fcdc9930e8d83387943bec57963c04ae34e1ddc",
+      "file_sha256_now": "056821158624660beee5f25a7fcdc9930e8d83387943bec57963c04ae34e1ddc",
+      "eligibility": "not_reviewed"
+    },
+    {
+      "position": 35,
+      "role": "reserve",
+      "pmcid": "PMC13578717",
+      "doi": "10.1038/s41598-026-69567-3",
+      "reserved_for": "crossval_exploration",
+      "source_document": "data/fulltext_inbox/crossval_v1/PMC13578717.xml",
+      "input_sha256": "5bdbf0fb703ca58b0eee5c7e0142b6f8cc457f86782868e1507914ffea17a7c5",
+      "file_sha256_now": "5bdbf0fb703ca58b0eee5c7e0142b6f8cc457f86782868e1507914ffea17a7c5",
+      "eligibility": "not_reviewed"
+    }
+  ]
+}

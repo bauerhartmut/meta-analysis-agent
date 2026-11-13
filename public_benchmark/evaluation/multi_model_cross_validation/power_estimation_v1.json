@@ -1,0 +1,1054 @@
+{
+  "estimation_id": "crossval_power_v1",
+  "created": "2026-11-13",
+  "method": "gepaarter McNemar-Test, Normalapproximation, Design-Effekt aus Artikel-Clustering",
+  "assumptions": {
+    "alpha": 0.05,
+    "power": 0.8,
+    "articles": 25,
+    "records_options": [
+      60,
+      80,
+      100,
+      120
+    ],
+    "fields_per_record_options": [
+      4,
+      6,
+      8
+    ],
+    "icc_options": [
+      0.1,
+      0.2,
+      0.3
+    ],
+    "discordance_options": [
+      0.15,
+      0.25
+    ]
+  },
+  "rows": [
+    {
+      "records": 60,
+      "fields_per_record": 4,
+      "fields_total": 240,
+      "records_per_article": 2.4,
+      "icc": 0.1,
+      "design_effect": 1.14,
+      "effective_fields": 210.5,
+      "discordance": 0.15,
+      "mdd_pp": 7.44
+    },
+    {
+      "records": 60,
+      "fields_per_record": 4,
+      "fields_total": 240,
+      "records_per_article": 2.4,
+      "icc": 0.1,
+      "design_effect": 1.14,
+      "effective_fields": 210.5,
+      "discordance": 0.25,
+      "mdd_pp": 9.6
+    },
+    {
+      "records": 60,
+      "fields_per_record": 4,
+      "fields_total": 240,
+      "records_per_article": 2.4,
+      "icc": 0.2,
+      "design_effect": 1.28,
+      "effective_fields": 187.5,
+      "discordance": 0.15,
+      "mdd_pp": 7.87
+    },
+    {
+      "records": 60,
+      "fields_per_record": 4,
+      "fields_total": 240,
+      "records_per_article": 2.4,
+      "icc": 0.2,
+      "design_effect": 1.28,
+      "effective_fields": 187.5,
+      "discordance": 0.25,
+      "mdd_pp": 10.17
+    },
+    {
+      "records": 60,
+      "fields_per_record": 4,
+      "fields_total": 240,
+      "records_per_article": 2.4,
+      "icc": 0.3,
+      "design_effect": 1.42,
+      "effective_fields": 169.0,
+      "discordance": 0.15,
+      "mdd_pp": 8.29
+    },
+    {
+      "records": 60,
+      "fields_per_record": 4,
+      "fields_total": 240,
+      "records_per_article": 2.4,
+      "icc": 0.3,
+      "design_effect": 1.42,
+      "effective_fields": 169.0,
+      "discordance": 0.25,
+      "mdd_pp": 10.7
+    },
+    {
+      "records": 60,
+      "fields_per_record": 6,
+      "fields_total": 360,
+      "records_per_article": 2.4,
+      "icc": 0.1,
+      "design_effect": 1.14,
+      "effective_fields": 315.8,
+      "discordance": 0.15,
+      "mdd_pp": 6.08
+    },
+    {
+      "records": 60,
+      "fields_per_record": 6,
+      "fields_total": 360,
+      "records_per_article": 2.4,
+      "icc": 0.1,
+      "design_effect": 1.14,
+      "effective_fields": 315.8,
+      "discordance": 0.25,
+      "mdd_pp": 7.85
+    },
+    {
+      "records": 60,
+      "fields_per_record": 6,
+      "fields_total": 360,
+      "records_per_article": 2.4,
+      "icc": 0.2,
+      "design_effect": 1.28,
+      "effective_fields": 281.2,
+      "discordance": 0.15,
+      "mdd_pp": 6.44
+    },
+    {
+      "records": 60,
+      "fields_per_record": 6,
+      "fields_total": 360,
+      "records_per_article": 2.4,
+      "icc": 0.2,
+      "design_effect": 1.28,
+      "effective_fields": 281.2,
+      "discordance": 0.25,
+      "mdd_pp": 8.32
+    },
+    {
+      "records": 60,
+      "fields_per_record": 6,
+      "fields_total": 360,
+      "records_per_article": 2.4,
+      "icc": 0.3,
+      "design_effect": 1.42,
+      "effective_fields": 253.5,
+      "discordance": 0.15,
+      "mdd_pp": 6.78
+    },
+    {
+      "records": 60,
+      "fields_per_record": 6,
+      "fields_total": 360,
+      "records_per_article": 2.4,
+      "icc": 0.3,
+      "design_effect": 1.42,
+      "effective_fields": 253.5,
+      "discordance": 0.25,
+      "mdd_pp": 8.76
+    },
+    {
+      "records": 60,
+      "fields_per_record": 8,
+      "fields_total": 480,
+      "records_per_article": 2.4,
+      "icc": 0.1,
+      "design_effect": 1.14,
+      "effective_fields": 421.1,
+      "discordance": 0.15,
+      "mdd_pp": 5.27
+    },
+    {
+      "records": 60,
+      "fields_per_record": 8,
+      "fields_total": 480,
+      "records_per_article": 2.4,
+      "icc": 0.1,
+      "design_effect": 1.14,
+      "effective_fields": 421.1,
+      "discordance": 0.25,
+      "mdd_pp": 6.81
+    },
+    {
+      "records": 60,
+      "fields_per_record": 8,
+      "fields_total": 480,
+      "records_per_article": 2.4,
+      "icc": 0.2,
+      "design_effect": 1.28,
+      "effective_fields": 375.0,
+      "discordance": 0.15,
+      "mdd_pp": 5.59
+    },
+    {
+      "records": 60,
+      "fields_per_record": 8,
+      "fields_total": 480,
+      "records_per_article": 2.4,
+      "icc": 0.2,
+      "design_effect": 1.28,
+      "effective_fields": 375.0,
+      "discordance": 0.25,
+      "mdd_pp": 7.21
+    },
+    {
+      "records": 60,
+      "fields_per_record": 8,
+      "fields_total": 480,
+      "records_per_article": 2.4,
+      "icc": 0.3,
+      "design_effect": 1.42,
+      "effective_fields": 338.0,
+      "discordance": 0.15,
+      "mdd_pp": 5.88
+    },
+    {
+      "records": 60,
+      "fields_per_record": 8,
+      "fields_total": 480,
+      "records_per_article": 2.4,
+      "icc": 0.3,
+      "design_effect": 1.42,
+      "effective_fields": 338.0,
+      "discordance": 0.25,
+      "mdd_pp": 7.59
+    },
+    {
+      "records": 80,
+      "fields_per_record": 4,
+      "fields_total": 320,
+      "records_per_article": 3.2,
+      "icc": 0.1,
+      "design_effect": 1.22,
+      "effective_fields": 262.3,
+      "discordance": 0.15,
+      "mdd_pp": 6.67
+    },
+    {
+      "records": 80,
+      "fields_per_record": 4,
+      "fields_total": 320,
+      "records_per_article": 3.2,
+      "icc": 0.1,
+      "design_effect": 1.22,
+      "effective_fields": 262.3,
+      "discordance": 0.25,
+      "mdd_pp": 8.61
+    },
+    {
+      "records": 80,
+      "fields_per_record": 4,
+      "fields_total": 320,
+      "records_per_article": 3.2,
+      "icc": 0.2,
+      "design_effect": 1.44,
+      "effective_fields": 222.2,
+      "discordance": 0.15,
+      "mdd_pp": 7.24
+    },
+    {
+      "records": 80,
+      "fields_per_record": 4,
+      "fields_total": 320,
+      "records_per_article": 3.2,
+      "icc": 0.2,
+      "design_effect": 1.44,
+      "effective_fields": 222.2,
+      "discordance": 0.25,
+      "mdd_pp": 9.35
+    },
+    {
+      "records": 80,
+      "fields_per_record": 4,
+      "fields_total": 320,
+      "records_per_article": 3.2,
+      "icc": 0.3,
+      "design_effect": 1.66,
+      "effective_fields": 192.8,
+      "discordance": 0.15,
+      "mdd_pp": 7.77
+    },
+    {
+      "records": 80,
+      "fields_per_record": 4,
+      "fields_total": 320,
+      "records_per_article": 3.2,
+      "icc": 0.3,
+      "design_effect": 1.66,
+      "effective_fields": 192.8,
+      "discordance": 0.25,
+      "mdd_pp": 10.03
+    },
+    {
+      "records": 80,
+      "fields_per_record": 6,
+      "fields_total": 480,
+      "records_per_article": 3.2,
+      "icc": 0.1,
+      "design_effect": 1.22,
+      "effective_fields": 393.4,
+      "discordance": 0.15,
+      "mdd_pp": 5.45
+    },
+    {
+      "records": 80,
+      "fields_per_record": 6,
+      "fields_total": 480,
+      "records_per_article": 3.2,
+      "icc": 0.1,
+      "design_effect": 1.22,
+      "effective_fields": 393.4,
+      "discordance": 0.25,
+      "mdd_pp": 7.04
+    },
+    {
+      "records": 80,
+      "fields_per_record": 6,
+      "fields_total": 480,
+      "records_per_article": 3.2,
+      "icc": 0.2,
+      "design_effect": 1.44,
+      "effective_fields": 333.3,
+      "discordance": 0.15,
+      "mdd_pp": 5.92
+    },
+    {
+      "records": 80,
+      "fields_per_record": 6,
+      "fields_total": 480,
+      "records_per_article": 3.2,
+      "icc": 0.2,
+      "design_effect": 1.44,
+      "effective_fields": 333.3,
+      "discordance": 0.25,
+      "mdd_pp": 7.65
+    },
+    {
+      "records": 80,
+      "fields_per_record": 6,
+      "fields_total": 480,
+      "records_per_article": 3.2,
+      "icc": 0.3,
+      "design_effect": 1.66,
+      "effective_fields": 289.2,
+      "discordance": 0.15,
+      "mdd_pp": 6.35
+    },
+    {
+      "records": 80,
+      "fields_per_record": 6,
+      "fields_total": 480,
+      "records_per_article": 3.2,
+      "icc": 0.3,
+      "design_effect": 1.66,
+      "effective_fields": 289.2,
+      "discordance": 0.25,
+      "mdd_pp": 8.2
+    },
+    {
+      "records": 80,
+      "fields_per_record": 8,
+      "fields_total": 640,
+      "records_per_article": 3.2,
+      "icc": 0.1,
+      "design_effect": 1.22,
+      "effective_fields": 524.6,
+      "discordance": 0.15,
+      "mdd_pp": 4.73
+    },
+    {
+      "records": 80,
+      "fields_per_record": 8,
+      "fields_total": 640,
+      "records_per_article": 3.2,
+      "icc": 0.1,
+      "design_effect": 1.22,
+      "effective_fields": 524.6,
+      "discordance": 0.25,
+      "mdd_pp": 6.1
+    },
+    {
+      "records": 80,
+      "fields_per_record": 8,
+      "fields_total": 640,
+      "records_per_article": 3.2,
+      "icc": 0.2,
+      "design_effect": 1.44,
+      "effective_fields": 444.4,
+      "discordance": 0.15,
+      "mdd_pp": 5.13
+    },
+    {
+      "records": 80,
+      "fields_per_record": 8,
+      "fields_total": 640,
+      "records_per_article": 3.2,
+      "icc": 0.2,
+      "design_effect": 1.44,
+      "effective_fields": 444.4,
+      "discordance": 0.25,
+      "mdd_pp": 6.63
+    },
+    {
+      "records": 80,
+      "fields_per_record": 8,
+      "fields_total": 640,
+      "records_per_article": 3.2,
+      "icc": 0.3,
+      "design_effect": 1.66,
+      "effective_fields": 385.5,
+      "discordance": 0.15,
+      "mdd_pp": 5.51
+    },
+    {
+      "records": 80,
+      "fields_per_record": 8,
+      "fields_total": 640,
+      "records_per_article": 3.2,
+      "icc": 0.3,
+      "design_effect": 1.66,
+      "effective_fields": 385.5,
+      "discordance": 0.25,
+      "mdd_pp": 7.11
+    },
+    {
+      "records": 100,
+      "fields_per_record": 4,
+      "fields_total": 400,
+      "records_per_article": 4.0,
+      "icc": 0.1,
+      "design_effect": 1.3,
+      "effective_fields": 307.7,
+      "discordance": 0.15,
+      "mdd_pp": 6.16
+    },
+    {
+      "records": 100,
+      "fields_per_record": 4,
+      "fields_total": 400,
+      "records_per_article": 4.0,
+      "icc": 0.1,
+      "design_effect": 1.3,
+      "effective_fields": 307.7,
+      "discordance": 0.25,
+      "mdd_pp": 7.96
+    },
+    {
+      "records": 100,
+      "fields_per_record": 4,
+      "fields_total": 400,
+      "records_per_article": 4.0,
+      "icc": 0.2,
+      "design_effect": 1.6,
+      "effective_fields": 250.0,
+      "discordance": 0.15,
+      "mdd_pp": 6.83
+    },
+    {
+      "records": 100,
+      "fields_per_record": 4,
+      "fields_total": 400,
+      "records_per_article": 4.0,
+      "icc": 0.2,
+      "design_effect": 1.6,
+      "effective_fields": 250.0,
+      "discordance": 0.25,
+      "mdd_pp": 8.82
+    },
+    {
+      "records": 100,
+      "fields_per_record": 4,
+      "fields_total": 400,
+      "records_per_article": 4.0,
+      "icc": 0.3,
+      "design_effect": 1.9,
+      "effective_fields": 210.5,
+      "discordance": 0.15,
+      "mdd_pp": 7.44
+    },
+    {
+      "records": 100,
+      "fields_per_record": 4,
+      "fields_total": 400,
+      "records_per_article": 4.0,
+      "icc": 0.3,
+      "design_effect": 1.9,
+      "effective_fields": 210.5,
+      "discordance": 0.25,
+      "mdd_pp": 9.6
+    },
+    {
+      "records": 100,
+      "fields_per_record": 6,
+      "fields_total": 600,
+      "records_per_article": 4.0,
+      "icc": 0.1,
+      "design_effect": 1.3,
+      "effective_fields": 461.5,
+      "discordance": 0.15,
+      "mdd_pp": 5.04
+    },
+    {
+      "records": 100,
+      "fields_per_record": 6,
+      "fields_total": 600,
+      "records_per_article": 4.0,
+      "icc": 0.1,
+      "design_effect": 1.3,
+      "effective_fields": 461.5,
+      "discordance": 0.25,
+      "mdd_pp": 6.5
+    },
+    {
+      "records": 100,
+      "fields_per_record": 6,
+      "fields_total": 600,
+      "records_per_article": 4.0,
+      "icc": 0.2,
+      "design_effect": 1.6,
+      "effective_fields": 375.0,
+      "discordance": 0.15,
+      "mdd_pp": 5.59
+    },
+    {
+      "records": 100,
+      "fields_per_record": 6,
+      "fields_total": 600,
+      "records_per_article": 4.0,
+      "icc": 0.2,
+      "design_effect": 1.6,
+      "effective_fields": 375.0,
+      "discordance": 0.25,
+      "mdd_pp": 7.21
+    },
+    {
+      "records": 100,
+      "fields_per_record": 6,
+      "fields_total": 600,
+      "records_per_article": 4.0,
+      "icc": 0.3,
+      "design_effect": 1.9,
+      "effective_fields": 315.8,
+      "discordance": 0.15,
+      "mdd_pp": 6.08
+    },
+    {
+      "records": 100,
+      "fields_per_record": 6,
+      "fields_total": 600,
+      "records_per_article": 4.0,
+      "icc": 0.3,
+      "design_effect": 1.9,
+      "effective_fields": 315.8,
+      "discordance": 0.25,
+      "mdd_pp": 7.85
+    },
+    {
+      "records": 100,
+      "fields_per_record": 8,
+      "fields_total": 800,
+      "records_per_article": 4.0,
+      "icc": 0.1,
+      "design_effect": 1.3,
+      "effective_fields": 615.4,
+      "discordance": 0.15,
+      "mdd_pp": 4.37
+    },
+    {
+      "records": 100,
+      "fields_per_record": 8,
+      "fields_total": 800,
+      "records_per_article": 4.0,
+      "icc": 0.1,
+      "design_effect": 1.3,
+      "effective_fields": 615.4,
+      "discordance": 0.25,
+      "mdd_pp": 5.64
+    },
+    {
+      "records": 100,
+      "fields_per_record": 8,
+      "fields_total": 800,
+      "records_per_article": 4.0,
+      "icc": 0.2,
+      "design_effect": 1.6,
+      "effective_fields": 500.0,
+      "discordance": 0.15,
+      "mdd_pp": 4.84
+    },
+    {
+      "records": 100,
+      "fields_per_record": 8,
+      "fields_total": 800,
+      "records_per_article": 4.0,
+      "icc": 0.2,
+      "design_effect": 1.6,
+      "effective_fields": 500.0,
+      "discordance": 0.25,
+      "mdd_pp": 6.25
+    },
+    {
+      "records": 100,
+      "fields_per_record": 8,
+      "fields_total": 800,
+      "records_per_article": 4.0,
+      "icc": 0.3,
+      "design_effect": 1.9,
+      "effective_fields": 421.1,
+      "discordance": 0.15,
+      "mdd_pp": 5.27
+    },
+    {
+      "records": 100,
+      "fields_per_record": 8,
+      "fields_total": 800,
+      "records_per_article": 4.0,
+      "icc": 0.3,
+      "design_effect": 1.9,
+      "effective_fields": 421.1,
+      "discordance": 0.25,
+      "mdd_pp": 6.81
+    },
+    {
+      "records": 120,
+      "fields_per_record": 4,
+      "fields_total": 480,
+      "records_per_article": 4.8,
+      "icc": 0.1,
+      "design_effect": 1.38,
+      "effective_fields": 347.8,
+      "discordance": 0.15,
+      "mdd_pp": 5.8
+    },
+    {
+      "records": 120,
+      "fields_per_record": 4,
+      "fields_total": 480,
+      "records_per_article": 4.8,
+      "icc": 0.1,
+      "design_effect": 1.38,
+      "effective_fields": 347.8,
+      "discordance": 0.25,
+      "mdd_pp": 7.49
+    },
+    {
+      "records": 120,
+      "fields_per_record": 4,
+      "fields_total": 480,
+      "records_per_article": 4.8,
+      "icc": 0.2,
+      "design_effect": 1.76,
+      "effective_fields": 272.7,
+      "discordance": 0.15,
+      "mdd_pp": 6.54
+    },
+    {
+      "records": 120,
+      "fields_per_record": 4,
+      "fields_total": 480,
+      "records_per_article": 4.8,
+      "icc": 0.2,
+      "design_effect": 1.76,
+      "effective_fields": 272.7,
+      "discordance": 0.25,
+      "mdd_pp": 8.45
+    },
+    {
+      "records": 120,
+      "fields_per_record": 4,
+      "fields_total": 480,
+      "records_per_article": 4.8,
+      "icc": 0.3,
+      "design_effect": 2.14,
+      "effective_fields": 224.3,
+      "discordance": 0.15,
+      "mdd_pp": 7.21
+    },
+    {
+      "records": 120,
+      "fields_per_record": 4,
+      "fields_total": 480,
+      "records_per_article": 4.8,
+      "icc": 0.3,
+      "design_effect": 2.14,
+      "effective_fields": 224.3,
+      "discordance": 0.25,
+      "mdd_pp": 9.3
+    },
+    {
+      "records": 120,
+      "fields_per_record": 6,
+      "fields_total": 720,
+      "records_per_article": 4.8,
+      "icc": 0.1,
+      "design_effect": 1.38,
+      "effective_fields": 521.7,
+      "discordance": 0.15,
+      "mdd_pp": 4.74
+    },
+    {
+      "records": 120,
+      "fields_per_record": 6,
+      "fields_total": 720,
+      "records_per_article": 4.8,
+      "icc": 0.1,
+      "design_effect": 1.38,
+      "effective_fields": 521.7,
+      "discordance": 0.25,
+      "mdd_pp": 6.12
+    },
+    {
+      "records": 120,
+      "fields_per_record": 6,
+      "fields_total": 720,
+      "records_per_article": 4.8,
+      "icc": 0.2,
+      "design_effect": 1.76,
+      "effective_fields": 409.1,
+      "discordance": 0.15,
+      "mdd_pp": 5.35
+    },
+    {
+      "records": 120,
+      "fields_per_record": 6,
+      "fields_total": 720,
+      "records_per_article": 4.8,
+      "icc": 0.2,
+      "design_effect": 1.76,
+      "effective_fields": 409.1,
+      "discordance": 0.25,
+      "mdd_pp": 6.91
+    },
+    {
+      "records": 120,
+      "fields_per_record": 6,
+      "fields_total": 720,
+      "records_per_article": 4.8,
+      "icc": 0.3,
+      "design_effect": 2.14,
+      "effective_fields": 336.4,
+      "discordance": 0.15,
+      "mdd_pp": 5.89
+    },
+    {
+      "records": 120,
+      "fields_per_record": 6,
+      "fields_total": 720,
+      "records_per_article": 4.8,
+      "icc": 0.3,
+      "design_effect": 2.14,
+      "effective_fields": 336.4,
+      "discordance": 0.25,
+      "mdd_pp": 7.61
+    },
+    {
+      "records": 120,
+      "fields_per_record": 8,
+      "fields_total": 960,
+      "records_per_article": 4.8,
+      "icc": 0.1,
+      "design_effect": 1.38,
+      "effective_fields": 695.7,
+      "discordance": 0.15,
+      "mdd_pp": 4.11
+    },
+    {
+      "records": 120,
+      "fields_per_record": 8,
+      "fields_total": 960,
+      "records_per_article": 4.8,
+      "icc": 0.1,
+      "design_effect": 1.38,
+      "effective_fields": 695.7,
+      "discordance": 0.25,
+      "mdd_pp": 5.3
+    },
+    {
+      "records": 120,
+      "fields_per_record": 8,
+      "fields_total": 960,
+      "records_per_article": 4.8,
+      "icc": 0.2,
+      "design_effect": 1.76,
+      "effective_fields": 545.5,
+      "discordance": 0.15,
+      "mdd_pp": 4.64
+    },
+    {
+      "records": 120,
+      "fields_per_record": 8,
+      "fields_total": 960,
+      "records_per_article": 4.8,
+      "icc": 0.2,
+      "design_effect": 1.76,
+      "effective_fields": 545.5,
+      "discordance": 0.25,
+      "mdd_pp": 5.98
+    },
+    {
+      "records": 120,
+      "fields_per_record": 8,
+      "fields_total": 960,
+      "records_per_article": 4.8,
+      "icc": 0.3,
+      "design_effect": 2.14,
+      "effective_fields": 448.6,
+      "discordance": 0.15,
+      "mdd_pp": 5.11
+    },
+    {
+      "records": 120,
+      "fields_per_record": 8,
+      "fields_total": 960,
+      "records_per_article": 4.8,
+      "icc": 0.3,
+      "design_effect": 2.14,
+      "effective_fields": 448.6,
+      "discordance": 0.25,
+      "mdd_pp": 6.6
+    }
+  ],
+  "required_fields": [
+    {
+      "records": 60,
+      "fields_per_record": 4,
+      "fields_total": 240,
+      "icc": 0.1,
+      "fields_needed_for_5pp": 893,
+      "enough": false
+    },
+    {
+      "records": 60,
+      "fields_per_record": 4,
+      "fields_total": 240,
+      "icc": 0.2,
+      "fields_needed_for_5pp": 1002,
+      "enough": false
+    },
+    {
+      "records": 60,
+      "fields_per_record": 4,
+      "fields_total": 240,
+      "icc": 0.3,
+      "fields_needed_for_5pp": 1112,
+      "enough": false
+    },
+    {
+      "records": 60,
+      "fields_per_record": 6,
+      "fields_total": 360,
+      "icc": 0.1,
+      "fields_needed_for_5pp": 893,
+      "enough": false
+    },
+    {
+      "records": 60,
+      "fields_per_record": 6,
+      "fields_total": 360,
+      "icc": 0.2,
+      "fields_needed_for_5pp": 1002,
+      "enough": false
+    },
+    {
+      "records": 60,
+      "fields_per_record": 6,
+      "fields_total": 360,
+      "icc": 0.3,
+      "fields_needed_for_5pp": 1112,
+      "enough": false
+    },
+    {
+      "records": 60,
+      "fields_per_record": 8,
+      "fields_total": 480,
+      "icc": 0.1,
+      "fields_needed_for_5pp": 893,
+      "enough": false
+    },
+    {
+      "records": 60,
+      "fields_per_record": 8,
+      "fields_total": 480,
+      "icc": 0.2,
+      "fields_needed_for_5pp": 1002,
+      "enough": false
+    },
+    {
+      "records": 60,
+      "fields_per_record": 8,
+      "fields_total": 480,
+      "icc": 0.3,
+      "fields_needed_for_5pp": 1112,
+      "enough": false
+    },
+    {
+      "records": 80,
+      "fields_per_record": 4,
+      "fields_total": 320,
+      "icc": 0.1,
+      "fields_needed_for_5pp": 955,
+      "enough": false
+    },
+    {
+      "records": 80,
+      "fields_per_record": 4,
+      "fields_total": 320,
+      "icc": 0.2,
+      "fields_needed_for_5pp": 1127,
+      "enough": false
+    },
+    {
+      "records": 80,
+      "fields_per_record": 4,
+      "fields_total": 320,
+      "icc": 0.3,
+      "fields_needed_for_5pp": 1299,
+      "enough": false
+    },
+    {
+      "records": 80,
+      "fields_per_record": 6,
+      "fields_total": 480,
+      "icc": 0.1,
+      "fields_needed_for_5pp": 955,
+      "enough": false
+    },
+    {
+      "records": 80,
+      "fields_per_record": 6,
+      "fields_total": 480,
+      "icc": 0.2,
+      "fields_needed_for_5pp": 1127,
+      "enough": false
+    },
+    {
+      "records": 80,
+      "fields_per_record": 6,
+      "fields_total": 480,
+      "icc": 0.3,
+      "fields_needed_for_5pp": 1299,
+      "enough": false
+    },
+    {
+      "records": 80,
+      "fields_per_record": 8,
+      "fields_total": 640,
+      "icc": 0.1,
+      "fields_needed_for_5pp": 955,
+      "enough": false
+    },
+    {
+      "records": 80,
+      "fields_per_record": 8,
+      "fields_total": 640,
+      "icc": 0.2,
+      "fields_needed_for_5pp": 1127,
+      "enough": false
+    },
+    {
+      "records": 80,
+      "fields_per_record": 8,
+      "fields_total": 640,
+      "icc": 0.3,
+      "fields_needed_for_5pp": 1299,
+      "enough": false
+    },
+    {
+      "records": 100,
+      "fields_per_record": 4,
+      "fields_total": 400,
+      "icc": 0.1,
+      "fields_needed_for_5pp": 1018,
+      "enough": false
+    },
+    {
+      "records": 100,
+      "fields_per_record": 4,
+      "fields_total": 400,
+      "icc": 0.2,
+      "fields_needed_for_5pp": 1253,
+      "enough": false
+    },
+    {
+      "records": 100,
+      "fields_per_record": 4,
+      "fields_total": 400,
+      "icc": 0.3,
+      "fields_needed_for_5pp": 1487,
+      "enough": false
+    },
+    {
+      "records": 100,
+      "fields_per_record": 6,
+      "fields_total": 600,
+      "icc": 0.1,
+      "fields_needed_for_5pp": 1018,
+      "enough": false
+    },
+    {
+      "records": 100,
+      "fields_per_record": 6,
+      "fields_total": 600,
+      "icc": 0.2,
+      "fields_needed_for_5pp": 1253,
+      "enough": false
+    },
+    {
+      "records": 100,
+      "fields_per_record": 6,
+      "fields_total": 600,
+      "icc": 0.3,
+      "fields_needed_for_5pp": 1487,
+      "enough": false
+    },
+    {
+      "records": 100,
+      "fields_per_record": 8,
+      "fields_total": 800,
+      "icc": 0.1,
+      "fields_needed_for_5pp": 1018,
+      "enough": false
+    },
+    {
+      "records": 100,
+      "fields_per_record": 8,
+      "fields_total": 800,
+      "icc": 0.2,
+      "fields_needed_for_5pp": 1253,
+      "enough": false
+    },
+    {
+      "records": 100,
+      "fields_per_record": 8,
+      "fields_total": 800,
+      "icc": 0.3,
+      "fields_needed_for_5pp": 1487,
+      "enough": false
+    }
+  ],
+  "verdict": {
+    "mdd_range_pp_at_60_records_6_fields": [
+      7.85,
+      8.76
+    ],
+    "note": "Die Spanne zeigt die Abhaengigkeit von ICC und Diskordanz. Eine Differenz unterhalb der MDD ist mit dieser Stichprobe nicht entscheidbar; ein nicht signifikantes Ergebnis ist kein Gleichstandsbeweis.",
+    "fields_for_5pp_at_60_records": [
+      893,
+      1002,
+      1112
+    ]
+  }
+}

@@ -1,0 +1,523 @@
+{
+  "review_id": "crossval_eligibility_v1",
+  "created": "2026-11-13",
+  "scope": "10 Reserveartikel der Auswahl v2",
+  "model_used": false,
+  "network_used": false,
+  "method": {
+    "tables": "research_agent.research.jats_tables.parse_jats",
+    "continuous": "arms_from_row auf JATS-Kopf und -Zeile: zwei Arme mit Mittelwert, Streuung und n",
+    "binary": "zwei Zellen der Form x/N oder x (y %) in einer Outcome-Zeile",
+    "baseline_exclusion": "Tabellen mit baseline/characteristic/demographic im Label oder Caption und Demografiezeilen werden nicht als Outcome gewertet",
+    "timepoint": "Label, Caption oder Spaltenkopf mit Tag/Woche/Monat/Follow-up",
+    "manual_review_required": "drei oder mehr Arme im Kopf oder drei oder mehr Zeitpunktangaben"
+  },
+  "counts": {
+    "ineligible": 4,
+    "eligible_uncertain": 3,
+    "manual_review_required": 2,
+    "eligible_confirmed": 1
+  },
+  "articles": [
+    {
+      "pmcid": "PMC13560212",
+      "available": true,
+      "tables": 6,
+      "outcome_tables": 6,
+      "baseline_tables_skipped": 0,
+      "continuous_rows": 0,
+      "binary_rows": 0,
+      "direct_effect_rows": 0,
+      "vertical_arm_rows": 0,
+      "evidence": [],
+      "timepoints": [
+        "12 months",
+        "3 months",
+        "follow-up"
+      ],
+      "supplement_needed": true,
+      "arms_in_header": 0,
+      "classification": "ineligible",
+      "reason": "keine Outcome-Tabelle mit zwei Armwerten oder zwei Ereignispaaren",
+      "n_per_arm": null,
+      "text_candidates": 0
+    },
+    {
+      "pmcid": "PMC13624021",
+      "available": true,
+      "tables": 4,
+      "outcome_tables": 3,
+      "baseline_tables_skipped": 1,
+      "continuous_rows": 0,
+      "binary_rows": 2,
+      "direct_effect_rows": 9,
+      "vertical_arm_rows": 0,
+      "evidence": [
+        {
+          "kind": "binary",
+          "table": "Table 2",
+          "row": "≥ 2",
+          "cells": [
+            "23 (11.2)",
+            "17 (8.9)"
+          ],
+          "reason_if_no_arm": "kein Mittelwert mit eindeutiger Streuung in zwei Spalten"
+        },
+        {
+          "kind": "binary",
+          "table": "Table 2",
+          "row": "Intravenous dextrose therapy",
+          "cells": [
+            "10 (4.9)",
+            "17(8.7)"
+          ],
+          "reason_if_no_arm": "kein Mittelwert mit eindeutiger Streuung in zwei Spalten"
+        }
+      ],
+      "timepoints": [],
+      "supplement_needed": true,
+      "arms_in_header": 2,
+      "classification": "eligible_uncertain",
+      "reason": "Armwerte vorhanden, aber kein Zeitpunkt in Label oder Spaltenkopf",
+      "n_per_arm": [
+        205,
+        195
+      ],
+      "text_candidates": 0
+    },
+    {
+      "pmcid": "PMC13610065",
+      "available": true,
+      "tables": 3,
+      "outcome_tables": 2,
+      "baseline_tables_skipped": 1,
+      "continuous_rows": 0,
+      "binary_rows": 0,
+      "direct_effect_rows": 0,
+      "vertical_arm_rows": 0,
+      "evidence": [],
+      "timepoints": [],
+      "supplement_needed": true,
+      "arms_in_header": 0,
+      "classification": "ineligible",
+      "reason": "keine Outcome-Tabelle mit zwei Armwerten oder zwei Ereignispaaren",
+      "n_per_arm": null,
+      "text_candidates": 0
+    },
+    {
+      "pmcid": "PMC13593208",
+      "available": true,
+      "tables": 3,
+      "outcome_tables": 2,
+      "baseline_tables_skipped": 1,
+      "continuous_rows": 10,
+      "binary_rows": 0,
+      "direct_effect_rows": 0,
+      "vertical_arm_rows": 0,
+      "evidence": [
+        {
+          "kind": "continuous",
+          "table": "Table 3",
+          "row": "Baseline",
+          "cells": [
+            "51.77 ± 13.44",
+            "48.57–54.98",
+            "52.68 ± 12.99",
+            "49.41–55.95"
+          ],
+          "arms": [
+            {
+              "label": "MRCT Mean ± SD",
+              "n": 76,
+              "mean": 51.77,
+              "sd": 13.44
+            },
+            {
+              "label": "AVNA Mean ± SD",
+              "n": 67,
+              "mean": 52.68,
+              "sd": 12.99
+            }
+          ]
+        },
+        {
+          "kind": "continuous",
+          "table": "Table 3",
+          "row": "6 months",
+          "cells": [
+            "54.09 ± 16.24",
+            "50.13–58.05",
+            "55.80 ± 13.58",
+            "52.29–59.31"
+          ],
+          "arms": [
+            {
+              "label": "MRCT Mean ± SD",
+              "n": 76,
+              "mean": 54.09,
+              "sd": 16.24
+            },
+            {
+              "label": "AVNA Mean ± SD",
+              "n": 67,
+              "mean": 55.8,
+              "sd": 13.58
+            }
+          ]
+        },
+        {
+          "kind": "continuous",
+          "table": "Table 3",
+          "row": "12 months",
+          "cells": [
+            "52.09 ± 14.84",
+            "48.41–55.77",
+            "53.26 ± 13.89",
+            "49.58–56.95"
+          ],
+          "arms": [
+            {
+              "label": "MRCT Mean ± SD",
+              "n": 76,
+              "mean": 52.09,
+              "sd": 14.84
+            },
+            {
+              "label": "AVNA Mean ± SD",
+              "n": 67,
+              "mean": 53.26,
+              "sd": 13.89
+            }
+          ]
+        },
+        {
+          "kind": "continuous",
+          "table": "Table 3",
+          "row": "18 months",
+          "cells": [
+            "52.90 ± 14.62",
+            "49.09–56.71",
+            "54.10 ± 14.74",
+            "49.91–58.29"
+          ],
+          "arms": [
+            {
+              "label": "MRCT Mean ± SD",
+              "n": 76,
+              "mean": 52.9,
+              "sd": 14.62
+            },
+            {
+              "label": "AVNA Mean ± SD",
+              "n": 67,
+              "mean": 54.1,
+              "sd": 14.74
+            }
+          ]
+        }
+      ],
+      "timepoints": [
+        "12 months",
+        "18 months",
+        "24 months",
+        "6 months",
+        "baseline"
+      ],
+      "supplement_needed": true,
+      "arms_in_header": 0,
+      "classification": "manual_review_required",
+      "reason": "Mehrarm- oder Mehrzeitpunkt-Struktur: 0 Arme im Kopf, 5 Zeitpunktangaben",
+      "n_per_arm": [
+        76,
+        67
+      ],
+      "text_candidates": 0
+    },
+    {
+      "pmcid": "PMC13577647",
+      "available": true,
+      "tables": 5,
+      "outcome_tables": 4,
+      "baseline_tables_skipped": 1,
+      "continuous_rows": 8,
+      "binary_rows": 23,
+      "direct_effect_rows": 0,
+      "vertical_arm_rows": 0,
+      "evidence": [
+        {
+          "kind": "binary",
+          "table": "Table 2",
+          "row": "35–45",
+          "cells": [
+            "11 (36.6%)",
+            "9 (30.0%)"
+          ],
+          "reason_if_no_arm": "kein Mittelwert mit eindeutiger Streuung in zwei Spalten"
+        },
+        {
+          "kind": "binary",
+          "table": "Table 2",
+          "row": "50",
+          "cells": [
+            "13 (30.0%)",
+            "8 (26.7%)"
+          ],
+          "reason_if_no_arm": "kein Mittelwert mit eindeutiger Streuung in zwei Spalten"
+        },
+        {
+          "kind": "binary",
+          "table": "Table 2",
+          "row": "55–60",
+          "cells": [
+            "10 (33.3%)",
+            "13 (43.3%)"
+          ],
+          "reason_if_no_arm": "kein Mittelwert mit eindeutiger Streuung in zwei Spalten"
+        },
+        {
+          "kind": "binary",
+          "table": "Table 2",
+          "row": "35–45",
+          "cells": [
+            "10 (33.3%)",
+            "3 (10.0%)"
+          ],
+          "reason_if_no_arm": "kein Mittelwert mit eindeutiger Streuung in zwei Spalten"
+        }
+      ],
+      "timepoints": [],
+      "supplement_needed": false,
+      "arms_in_header": 2,
+      "classification": "eligible_uncertain",
+      "reason": "Armwerte vorhanden, aber kein Zeitpunkt in Label oder Spaltenkopf",
+      "n_per_arm": [
+        30,
+        30
+      ],
+      "text_candidates": 0
+    },
+    {
+      "pmcid": "PMC13632614",
+      "available": true,
+      "tables": 2,
+      "outcome_tables": 1,
+      "baseline_tables_skipped": 1,
+      "continuous_rows": 0,
+      "binary_rows": 7,
+      "direct_effect_rows": 0,
+      "vertical_arm_rows": 0,
+      "evidence": [
+        {
+          "kind": "binary",
+          "table": "Table 2",
+          "row": "mRS 0–2 at 90 days, n (%) c",
+          "cells": [
+            "40 (18.9)",
+            "2 (3.4)"
+          ],
+          "reason_if_no_arm": "nicht genau zwei Spalten mit Mittelwert und Streuung"
+        },
+        {
+          "kind": "binary",
+          "table": "Table 2",
+          "row": "mRS 0–3 at 90 days, n (%) c",
+          "cells": [
+            "52 (25.0)",
+            "3 (5.2)"
+          ],
+          "reason_if_no_arm": "nicht genau zwei Spalten mit Mittelwert und Streuung"
+        },
+        {
+          "kind": "binary",
+          "table": "Table 2",
+          "row": "mRS 0–4 at 90 days, n (%) c",
+          "cells": [
+            "83 (39.2)",
+            "7 (12.1)"
+          ],
+          "reason_if_no_arm": "nicht genau zwei Spalten mit Mittelwert und Streuung"
+        },
+        {
+          "kind": "binary",
+          "table": "Table 2",
+          "row": "Pneumonia, n (%) c",
+          "cells": [
+            "160 (75.5)",
+            "48 (82.8)"
+          ],
+          "reason_if_no_arm": "nicht genau zwei Spalten mit Mittelwert und Streuung"
+        }
+      ],
+      "timepoints": [
+        "48 hours",
+        "baseline"
+      ],
+      "supplement_needed": false,
+      "arms_in_header": 2,
+      "classification": "eligible_confirmed",
+      "reason": "0 kontinuierliche und 7 binaere Outcome-Zeilen mit Armwerten; Zeitpunkt ableitbar",
+      "n_per_arm": [
+        212,
+        58
+      ],
+      "text_candidates": 0
+    },
+    {
+      "pmcid": "PMC13607715",
+      "available": true,
+      "tables": 3,
+      "outcome_tables": 3,
+      "baseline_tables_skipped": 0,
+      "continuous_rows": 0,
+      "binary_rows": 0,
+      "direct_effect_rows": 0,
+      "vertical_arm_rows": 0,
+      "evidence": [],
+      "timepoints": [],
+      "supplement_needed": false,
+      "arms_in_header": 0,
+      "classification": "ineligible",
+      "reason": "keine Outcome-Tabelle mit zwei Armwerten oder zwei Ereignispaaren",
+      "n_per_arm": null,
+      "text_candidates": 0
+    },
+    {
+      "pmcid": "PMC13609332",
+      "available": true,
+      "tables": 4,
+      "outcome_tables": 2,
+      "baseline_tables_skipped": 2,
+      "continuous_rows": 0,
+      "binary_rows": 3,
+      "direct_effect_rows": 0,
+      "vertical_arm_rows": 0,
+      "evidence": [
+        {
+          "kind": "binary",
+          "table": "Table 3",
+          "row": "1",
+          "cells": [
+            "186 (91.2)",
+            "94 (92.2)",
+            "92 (90.2)"
+          ],
+          "reason_if_no_arm": "Median/IQR statt Mittelwert mit SD/SE/CI (kein SMD)"
+        },
+        {
+          "kind": "binary",
+          "table": "Table 3",
+          "row": "2",
+          "cells": [
+            "15 (7.3)",
+            "6 (5.9)",
+            "9 (8.8)"
+          ],
+          "reason_if_no_arm": "Median/IQR statt Mittelwert mit SD/SE/CI (kein SMD)"
+        },
+        {
+          "kind": "binary",
+          "table": "Table 3",
+          "row": "≥3",
+          "cells": [
+            "3 (1.5)",
+            "2 (2.0)",
+            "1 (1.0)"
+          ],
+          "reason_if_no_arm": "Median/IQR statt Mittelwert mit SD/SE/CI (kein SMD)"
+        }
+      ],
+      "timepoints": [],
+      "supplement_needed": true,
+      "arms_in_header": 3,
+      "classification": "manual_review_required",
+      "reason": "Mehrarm- oder Mehrzeitpunkt-Struktur: 3 Arme im Kopf, 0 Zeitpunktangaben",
+      "n_per_arm": null,
+      "text_candidates": 0
+    },
+    {
+      "pmcid": "PMC13535982",
+      "available": true,
+      "tables": 3,
+      "outcome_tables": 2,
+      "baseline_tables_skipped": 1,
+      "continuous_rows": 0,
+      "binary_rows": 8,
+      "direct_effect_rows": 0,
+      "vertical_arm_rows": 0,
+      "evidence": [
+        {
+          "kind": "binary",
+          "table": "Table 3",
+          "row": "MACE",
+          "cells": [
+            "8 (12.7)",
+            "5 (8.3)"
+          ],
+          "reason_if_no_arm": "kein Mittelwert mit eindeutiger Streuung in zwei Spalten"
+        },
+        {
+          "kind": "binary",
+          "table": "Table 3",
+          "row": "All‐cause death",
+          "cells": [
+            "0 (0.0)",
+            "1 (1.7)"
+          ],
+          "reason_if_no_arm": "kein Mittelwert mit eindeutiger Streuung in zwei Spalten"
+        },
+        {
+          "kind": "binary",
+          "table": "Table 3",
+          "row": "Reinfarction",
+          "cells": [
+            "1 (1.6)",
+            "0 (0.0)"
+          ],
+          "reason_if_no_arm": "kein Mittelwert mit eindeutiger Streuung in zwei Spalten"
+        },
+        {
+          "kind": "binary",
+          "table": "Table 3",
+          "row": "Unplanned TVR",
+          "cells": [
+            "0 (0.0)",
+            "2 (3.3)"
+          ],
+          "reason_if_no_arm": "kein Mittelwert mit eindeutiger Streuung in zwei Spalten"
+        }
+      ],
+      "timepoints": [],
+      "supplement_needed": true,
+      "arms_in_header": 2,
+      "classification": "eligible_uncertain",
+      "reason": "Armwerte vorhanden, aber kein Zeitpunkt in Label oder Spaltenkopf",
+      "n_per_arm": [
+        63,
+        60
+      ],
+      "text_candidates": 0
+    },
+    {
+      "pmcid": "PMC13578717",
+      "available": true,
+      "tables": 2,
+      "outcome_tables": 1,
+      "baseline_tables_skipped": 1,
+      "continuous_rows": 0,
+      "binary_rows": 0,
+      "direct_effect_rows": 0,
+      "vertical_arm_rows": 0,
+      "evidence": [],
+      "timepoints": [],
+      "supplement_needed": true,
+      "arms_in_header": 0,
+      "classification": "ineligible",
+      "reason": "keine Outcome-Tabelle mit zwei Armwerten oder zwei Ereignispaaren",
+      "n_per_arm": [
+        4,
+        4
+      ],
+      "text_candidates": 0
+    }
+  ]
+}

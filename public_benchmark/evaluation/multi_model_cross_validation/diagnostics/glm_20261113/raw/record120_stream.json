@@ -1,0 +1,21 @@
+{
+  "case": "record120_stream",
+  "record_id": 120,
+  "request": {
+    "model": "gwdg/glm-5.3",
+    "temperature": 0.0,
+    "max_tokens": 900,
+    "stream": true,
+    "reasoning_effort": "none"
+  },
+  "prompt_chars": 10140,
+  "response": {
+    "http_status": 200,
+    "content_type": "text/event-stream; charset=utf-8",
+    "elapsed_s": 3.76,
+    "streamed_text": "<think>Let me analyze this task carefully.\n\nThe record asks for:\n- record_id: 120\n- outcome_type: binary\n- Intervention: internal drainage group (with stent, n = 30)\n- Comparator: stentless cases (without stent, n = 52)\n- Outcome: ureteropelvic junction obstruction\n\nLooking at Table 2 \"Comparing Postoperative Course Between Patients who Underwent Pyeloplasty With or Without Internal Drainage\":\n\nRows:\n- Drain removal: In 48 hours, After 2 days\n- Mean hospital stay, d\n- Urine analysis: Hematuria (19/27 vs 32/32), Pyuria (12/27 vs 20/32)\n- Post-operative IVP (one month later): Extravasation (2 (6.7) vs 8 (15.3)), Delayed secretion (19 (63.3) vs 25 (48.1)), Visible ureter (18 (60) vs 41 (78.8))\n- DTPA scan: Partial obstruction (8/20 vs 13/44)\n- Urinary symptoms (24 (80) vs 2 (3.8))\n- Urinoma (0 (0) vs 1 (1.9))\n- Recurrence of stenosis: reoperation (0 (0) vs 1 (1.9))\n- Stent remnants (2 (6.7) vs 0 (0))\n- Flank pain at voiding (10 (33.3) vs 0 (0))\n\nThe outcome is \"ureteropelvic junction obstruction\" (UPJO). The study is about UPJO repair. The outcome rows that directly measure obstruction:\n\n1. \"Partial obstruction\" under DTPA scan: 8/20 (stent group) vs 13/44 (stent free group)\n2. \"Delayed secretion\" under Post-operative IVP — this is a measure of obstruction indirectly\n3. \"Recurrence of stenosis\" — this is a stenosis measure, with reoperation\n\nThe most direct measure of obstruction is \"Partial obstruction\" from the DTPA scan. The DTPA scan row reports 8/20 for the stent group and 13/44 for the stent-free group.\n\nWait, but the footnote says \"DTPA scan was done in 20 patients of stent group and 32 cases of stent free group.\" But the table shows 13/44 for the stent-free group. Hmm, there's a discrepancy: the footnote says 32 cases of stent free group, but the table shows 13/44. Let me re-read.\n\n\"^d^DTPA scan was done in 20 patients of stent group and 32 cases of stent free group.\"\n\nBut the table shows \"Partial obstruction 8/20 13/44\". So the denominator for the stent-free group is 44 in the table, but the footnote says 32. This is a discrepancy in the article. According to the rules: \"When the selected row reports events as x/N, use that denominator N for the arm.\" So I should use the row's denominator: 20 for intervention and 44 for comparator.\n\nHmm, but wait. The rule says \"For binary x/N rows, copy N from the row denominator, not the overall arm.\" So intervention_n = 20, comparator_n = 44, intervention_events = 8, comparator_events = 13.\n\nBut hold on — is \"Partial obstruction\" the right row for \"ureteropelvic junction obstruction\"? The outcome is UPJO. The study is about UPJO repair. The outcome \"ureteropelvic junction obstruction\" — the direct measurement of obstruction would be \"Partial obstruction\" on DTPA scan. Alternatively, \"Delayed secretion\" on IVP could indicate obstruction. Or \"Recurrence of stenosis\" (reoperation).\n\nThe rules say: \"If the ICO names a condition but no specific endpoint, prefer a diagnostic, patency, or obstruction measurement over a complication, adverse event, or secondary procedure.\"\n\nSo \"Partial obstruction\" (DTPA scan) is the most direct obstruction measurement. The DTPA scan is a diagnostic test for obstruction.\n\nAlternatively, \"Delayed secretion\" on IVP is also a diagnostic measure. But \"Partial",
+    "stream_finish_reason": "length",
+    "body": null,
+    "error": ""
+  }
+}

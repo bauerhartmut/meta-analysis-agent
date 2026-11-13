@@ -1,0 +1,124 @@
+{
+  "schema_id": "crossval-annotation/1",
+  "version": "1.0",
+  "created": "2026-11-13",
+  "purpose": "Armweise numerische Extraktion mit Quellenprovenienz je Zahl, damit ein Modellfehler von einem Zuordnungsfehler unterscheidbar ist.",
+  "document_required": ["study", "arms", "outcomes", "timepoints", "values", "source_document"],
+  "study_required": ["study_id", "source_document", "design", "pmcid"],
+  "arm_required": ["arm_id", "label", "role", "n"],
+  "outcome_required": ["outcome_id", "label", "type"],
+  "timepoint_required": ["timepoint_id", "label", "relative_to"],
+  "value_required": [
+    "value",
+    "unit",
+    "source_document",
+    "page",
+    "table_or_section",
+    "source_context",
+    "source_cell_or_location",
+    "arm_id",
+    "outcome_id",
+    "timepoint_id",
+    "assignment_confidence",
+    "verification_status",
+    "uncertainty_note"
+  ],
+  "value_types": {
+    "value": "number",
+    "unit": "string",
+    "source_document": "string",
+    "page": "string",
+    "table_or_section": "string",
+    "source_context": "string",
+    "source_cell_or_location": "string",
+    "arm_id": "string",
+    "outcome_id": "string",
+    "timepoint_id": "string",
+    "assignment_confidence": "string",
+    "verification_status": "string",
+    "uncertainty_note": "string"
+  },
+  "enums": {
+    "arm_role": ["intervention", "control", "third_arm", "unclear"],
+    "outcome_type": ["continuous", "binary"],
+    "assignment_confidence": ["high", "medium", "low"],
+    "verification_status": [
+      "verbatim",
+      "parsed_from_cell",
+      "derived_from_ci",
+      "disputed",
+      "insufficient_evidence",
+      "adjudicated"
+    ],
+    "relative_to": ["baseline", "post_test", "follow_up", "mid_treatment", "unclear"]
+  },
+  "conflict_categories": {
+    "C1": "unanimity - alle Modelle liefern denselben Wert",
+    "C2": "two_vs_one - zwei Modelle gleich, eines weicht ab",
+    "C3": "three_way - drei verschiedene Werte",
+    "C4": "missing_value - mindestens ein Modell liefert keinen Wert",
+    "C5": "source_conflict - gleicher Wert, verschiedene Quelle oder Tabelle",
+    "C6": "structural_conflict - Zahl gleich, Zuordnung zu Arm, Outcome oder Zeitpunkt verschieden"
+  },
+  "rules": [
+    "Jede Zahl braucht genau eine Arm-, Outcome- und Zeitpunkt-Referenz; die IDs muessen im Dokument aufgeloest werden.",
+    "Fehlende Werte werden nicht geschaetzt, nicht als 0 geschrieben und nicht durch Mehrheitsentscheidung ersetzt.",
+    "assignment_confidence 'low' oder verification_status ungleich 'verbatim' verlangt eine uncertainty_note.",
+    "Seite und Tabelle/Abschnitt sind Pflicht; 'unbekannt' ist als Wert zulaessig, aber dann ist verification_status 'insufficient_evidence'.",
+    "Adjudizierte Werte bleiben als eigener Datensatz gefuehrt und ueberschreiben nie die Modellausgabe."
+  ],
+  "example": {
+    "source_document": "crossval_v1/PMC0000000.xml",
+    "study": {
+      "study_id": "PMC0000000",
+      "source_document": "crossval_v1/PMC0000000.xml",
+      "design": "parallel_rct",
+      "pmcid": "PMC0000000"
+    },
+    "arms": [
+      {
+        "arm_id": "arm_1",
+        "label": "Intervention",
+        "role": "intervention",
+        "n": null
+      },
+      {
+        "arm_id": "arm_2",
+        "label": "Control",
+        "role": "control",
+        "n": null
+      }
+    ],
+    "outcomes": [
+      {
+        "outcome_id": "out_1",
+        "label": "Beispieloutcome",
+        "type": "continuous"
+      }
+    ],
+    "timepoints": [
+      {
+        "timepoint_id": "tp_1",
+        "label": "post test",
+        "relative_to": "post_test"
+      }
+    ],
+    "values": [
+      {
+        "value": null,
+        "unit": "score points",
+        "source_document": "crossval_v1/PMC0000000.xml",
+        "page": "unbekannt",
+        "table_or_section": "Table 2",
+        "source_context": "Beispielzeile aus Table 2",
+        "source_cell_or_location": "row 3, column 2",
+        "arm_id": "arm_1",
+        "outcome_id": "out_1",
+        "timepoint_id": "tp_1",
+        "assignment_confidence": "low",
+        "verification_status": "insufficient_evidence",
+        "uncertainty_note": "Platzhalter ohne Quelle; kein extrahierter Wert."
+      }
+    ]
+  }
+}
