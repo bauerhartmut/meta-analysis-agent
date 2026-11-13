@@ -20,6 +20,7 @@ from .schema import (
     FIELD_STATUSES, RECORD_STATUSES, SCHEMA_VERSION, can_transition_field,
     can_transition_record, transition_field, transition_record,
 )
+from .review import evidence_for_value, has_value
 
 AUDIT_VERSION = "verification-audit/1"
 
@@ -35,30 +36,6 @@ def _canonical(value: Any) -> str:
 def _hash_event(event: Dict[str, Any]) -> str:
     body = {key: value for key, value in event.items() if key != "hash"}
     return hashlib.sha256(_canonical(body).encode("utf-8")).hexdigest()
-
-
-def _has_value(value: Any) -> bool:
-    """A zero is a valid value; an absent or blank value is not."""
-    if value is None:
-        return False
-    if isinstance(value, str) and not value.strip():
-        return False
-    return True
-
-
-def _review_evidence(record: Dict[str, Any], field: str,
-                     evidence_id: str) -> Optional[Dict[str, Any]]:
-    """Return only evidence that is stored and belongs to this field."""
-    key = str(evidence_id or "").strip()
-    if not key:
-        return None
-    evidence = (record.get("evidence") or {}).get(key)
-    if not evidence:
-        return None
-    declared = str(evidence.get("field") or "")
-    if declared and declared != field:
-        return None
-    return evidence
 
 
 class VerificationStore:
@@ -337,11 +314,12 @@ class VerificationStore:
                 if value is None:
                     value = entry.get("value_a")
             candidate_evidence = evidence_id or entry.get("evidence_id") or ""
-            valid_evidence = _review_evidence(record, field, candidate_evidence)
+            valid_evidence = evidence_for_value(
+                record, field, value, candidate_evidence)
             # An approval is only possible with a present value and a stored
             # evidence row for this field.  Missing either one leaves the
             # field open and is recorded as an unresolved decision.
-            if not _has_value(value) or valid_evidence is None:
+            if not has_value(value) or valid_evidence is None:
                 new_status = "unresolved"
                 evidence_id = ""
             else:

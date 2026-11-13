@@ -26,8 +26,24 @@ def _verified_state(record_id="r1"):
                 "status": "verified",
                 "required_fields": ["intervention_n", "comparator_n"],
                 "fields": {
-                    "intervention_n": {"status": "verified"},
-                    "comparator_n": {"status": "verified"},
+                    "intervention_n": {
+                        "status": "verified", "reported": True,
+                        "final_value": 10, "evidence_id": "ev:n1",
+                    },
+                    "comparator_n": {
+                        "status": "verified", "reported": True,
+                        "final_value": 20, "evidence_id": "ev:n2",
+                    },
+                },
+                "evidence": {
+                    "ev:n1": {
+                        "field": "intervention_n", "row_label": "Arm A",
+                        "column_label": "N", "raw_cell": "10",
+                    },
+                    "ev:n2": {
+                        "field": "comparator_n", "row_label": "Arm B",
+                        "column_label": "N", "raw_cell": "20",
+                    },
                 },
             }
         }
@@ -112,6 +128,20 @@ def test_gate_accepts_verified_and_refuses_unknown():
 def test_gate_does_not_infer_from_generic_record_id():
     with pytest.raises(UnverifiedRecordError):
         gate_rows([{"record_id": "r1", "label": "A"}], _verified_state())
+
+
+def test_gate_rechecks_value_and_evidence_not_only_status():
+    state = _verified_state()
+    state["records"]["r1"]["fields"]["intervention_n"].pop("final_value")
+    with pytest.raises(UnverifiedRecordError):
+        gate_rows([{"verification_record_id": "r1", "label": "A"}], state)
+
+
+def test_gate_rejects_evidence_that_does_not_support_value():
+    state = _verified_state()
+    state["records"]["r1"]["evidence"]["ev:n1"]["raw_cell"] = "99"
+    with pytest.raises(UnverifiedRecordError):
+        gate_rows([{"verification_record_id": "r1", "label": "A"}], state)
 
 
 def test_verified_analysis_receives_only_gated_rows(monkeypatch):
@@ -261,3 +291,33 @@ def test_correction_with_unknown_evidence_stays_open(tmp_path):
                          reviewer="Pruefer A", evidence_id="ev:not-stored")
     field = store.record("r1")["fields"]["intervention_mean"]
     assert field["status"] == "unresolved"
+
+
+def test_correction_with_unrelated_evidence_stays_open(tmp_path):
+    store = _review_store(tmp_path)
+    store.add_evidence("r1", [{
+        "evidence_id": "ev:wrong-value", "field": "intervention_mean",
+        "table_id": "md:1", "row_label": "Posttreatment",
+        "column_label": "Intervention", "raw_cell": "9.9 (0.5)",
+    }])
+    store.apply_decision("r1", "intervention_mean", "correct", value=2.0,
+                         reviewer="Pruefer A", evidence_id="ev:wrong-value")
+    field = store.record("r1")["fields"]["intervention_mean"]
+    assert field["status"] == "unresolved"
+
+
+def test_finalize_keeps_unresolved_context_field_open(tmp_path):
+    store = _review_store(tmp_path)
+    store.record_comparison("r1", {
+        "field": "outcome", "value_a": "Pain", "value_b": "Pain",
+        "comparison": "mismatch", "rule": "test",
+        "field_status": "unresolved",
+    })
+    store.add_evidence("r1", [{
+        "evidence_id": "ev:value", "field": "intervention_mean",
+        "table_id": "md:1", "row_label": "Posttreatment",
+        "column_label": "Intervention", "raw_cell": "1.0 (0.5)",
+    }])
+    store.apply_decision("r1", "intervention_mean", "confirm",
+                         reviewer="Pruefer A", evidence_id="ev:value")
+    assert finalize_after_review(store, "r1", "Pruefer A") == "pending_review"

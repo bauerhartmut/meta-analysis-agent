@@ -10,6 +10,7 @@ from __future__ import annotations
 from typing import Any, Dict, Iterable, List, Optional, Sequence, Tuple
 
 from . import pooling
+from ..verification.review import field_is_verified
 
 
 class UnverifiedRecordError(ValueError):
@@ -23,10 +24,8 @@ def _status_for(state: Dict[str, Any], record_id: str) -> Tuple[str, str]:
     status = str(record.get("status") or "")
     if status != "verified":
         return status or "unverified", str(record.get("status_reason") or "nicht verifiziert")
-    open_fields = [
-        name for name in (record.get("required_fields") or [])
-        if str((record.get("fields") or {}).get(name, {}).get("status")) != "verified"
-    ]
+    open_fields = [name for name in (record.get("required_fields") or [])
+                   if not field_is_verified(record, name)]
     if open_fields:
         return "pending_review", "offene Pflichtfelder: " + ", ".join(open_fields)
     return "verified", ""

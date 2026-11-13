@@ -9,6 +9,7 @@ from typing import Any, Dict, Iterable, List, Optional, Sequence
 
 from .compare import compare_record
 from .plausibility import check_fields, hard_errors
+from .review import field_is_verified
 from .schema import (
     FIELD_STATUSES, fields_for_record, normalise_text, parse_number,
     required_fields,
@@ -157,27 +158,13 @@ def finalize_after_review(store: VerificationStore, record_id: str,
     required = list(record.get("required_fields")
                     or required_fields(record.get("outcome_type") or "continuous"))
     fields = record.get("fields") or {}
-    evidence = record.get("evidence") or {}
+    review_fields = list(required)
+    for optional in ("outcome", "time_point"):
+        if optional in fields and optional not in review_fields:
+            review_fields.append(optional)
 
-    def field_is_verified(name: str) -> bool:
-        entry = fields.get(name) or {}
-        if str(entry.get("status")) != "verified":
-            return False
-        # "not reported" is a documented exception, not an approval of a
-        # numeric value.
-        if entry.get("reported") is False:
-            return True
-        value = entry.get("final_value")
-        if value is None or (isinstance(value, str) and not value.strip()):
-            return False
-        evidence_id = str(entry.get("evidence_id") or "").strip()
-        item = evidence.get(evidence_id)
-        if not item:
-            return False
-        declared = str(item.get("field") or "")
-        return not declared or declared == name
-
-    open_fields = [name for name in required if not field_is_verified(name)]
+    open_fields = [name for name in review_fields
+                   if not field_is_verified(record, name)]
     if open_fields:
         if record.get("status") != "pending_review":
             store.set_status(record_id, "pending_review",
