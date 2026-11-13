@@ -25,8 +25,10 @@ die CSV. Kein Konsument erwartet einen booleschen Top-Level-Wert.
 Die 48 verbleibenden assistierten Fälle wurden am 2026-11-12 anhand ihrer
 Abstracts vorprüft: **48/48 bestätigt, 0 Korrekturen**. Dreißig dieser Fälle
 wurden in drei unabhängigen Runden erneut geprüft und **30/30 menschlich
-bestätigt**; die Entscheidungen blieben unverändert. Die menschliche Freigabe
-der 18 verbleibenden assistierten Fälle bleibt offen.
+bestätigt**. Eine vierte Runde von zehn weiteren Fällen ergab **10/10
+Bestätigungen und 0 Korrekturvorschläge**; ihre menschliche Freigabe steht aus.
+Die Entscheidungen blieben unverändert. Die menschliche Freigabe der 18
+verbleibenden assistierten Fälle bleibt offen.
 
 ## 1. Entscheidung
 
