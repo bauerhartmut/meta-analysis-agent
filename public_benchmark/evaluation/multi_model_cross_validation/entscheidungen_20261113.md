@@ -111,10 +111,10 @@ Artikeln verloren geht. Skripte:
 ### Ergebnis
 
 - 35 Artikel aus v1 plus 15 Ersatzartikel aus dem gerankten Pool abgerufen:
-  **50/50 XML**, zusammen rund 5,5 MB.
+  **50/50 XML**, zusammen 6,13 MB.
 - 49 geeignet, 1 ausgeschlossen (`PMC13682720`, keine Armwerte).
-- **0 Trial-Dubletten** in der Auswahl. 36 der 50 Artikel fuehren eine
-  Register-ID, alle eindeutig; Akronyme im Titel sind selten (2 Faelle).
+- **0 Trial-Dubletten** in der Auswahl. 35 der 50 Artikel fuehren eine
+  Register-ID, alle eindeutig; 3 weitere tragen nur ein Titel-Akronym.
 - Auswahl v2: **25 primaer + 10 Reserve**, alle mit Volltext und Hash.
 
 ### Fallmix der Primaerauswahl
