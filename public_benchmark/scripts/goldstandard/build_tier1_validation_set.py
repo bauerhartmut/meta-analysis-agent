@@ -99,6 +99,7 @@ def glass_records() -> list[dict[str, Any]]:
                     "study_ref": ",".join(row["input"].get("study_pmids", [])),
                     "outcome_label": row["review_context"].get("outcome", ""),
                     "outcome_type": "mixed",
+                    "requested_fields": row["input"].get("requested_fields", []),
                     "cells": cells,
                     "provenance": {
                         "source_document": "GLASS v1.0.0 trialreviewbench-study-results",
