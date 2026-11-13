@@ -1,17 +1,17 @@
 # P0: Externer C1-Holdout - Beschaffungsplan
 
 Stand: 2026-11-12
-Status: **MANUELLE PRUEFUNG ABGESCHLOSSEN (ASSISTIERT) - 57 menschlich, 8 assistiert; 181 ausgeschlossen, 415 vorlaeufig fuer Volltext; menschliche Gegenpruefung offen, nicht G5-valid**
+Status: **MANUELLE PRUEFUNG ABGESCHLOSSEN (MENSCHLICH BESTAETIGT) - 65 menschlich, 0 assistiert; 181 ausgeschlossen, 415 vorlaeufig fuer Volltext; menschliche Gegenpruefung abgeschlossen, nicht G5-valid**
 Ziel: 30 Artikel, 100 Records, artikeldisjunkt zu Dev und zum verbrauchten Test
 
 ### Statusfelder
 
 | Feld | Wertebereich | Aktuell |
 |---|---|---|
-| `status`, `signoff_status` | `pending_human_review`, `complete_assisted_pending_human_review`, `complete` | `complete_assisted_pending_human_review` |
-| `human_review` | `pending`, `partial`, `complete` | `partial` |
-| `human_reviewed` | Ganzzahl 0-65 | 57 |
-| `assisted_reviewed` | Ganzzahl 0-65 | 8 |
+| `status`, `signoff_status` | `pending_human_review`, `complete_assisted_pending_human_review`, `complete` | `complete` |
+| `human_review` | `pending`, `partial`, `complete` | `complete` |
+| `human_reviewed` | Ganzzahl 0-65 | 65 |
+| `assisted_reviewed` | Ganzzahl 0-65 | 0 |
 
 `human_review: "partial"` heisst: menschliche und assistierte Entscheidungen
 gemischt; `complete` erst, wenn keine assistierte Entscheidung mehr vorliegt.
@@ -22,13 +22,10 @@ Die zeilenweisen `human_review`-Werte in den Entscheidungs-JSONL bleiben
 boolesch. Die Volltextskripte lesen nur `signoff["rows"]`; der Validator liest
 die CSV. Kein Konsument erwartet einen booleschen Top-Level-Wert.
 
-Die 48 verbleibenden assistierten Fälle wurden am 2026-11-12 anhand ihrer
-Abstracts vorprüft: **48/48 bestätigt, 0 Korrekturen**. Vierzig dieser Fälle
-wurden in vier unabhängigen Runden erneut geprüft und **40/40 menschlich
-bestätigt**. Eine fünfte Runde umfasst die letzten acht Fälle: **8/8 bestätigt,
-0 Korrekturvorschläge**; ihre menschliche Freigabe steht aus. Die Entscheidungen
-blieben unverändert. Die menschliche Freigabe der 8 verbleibenden assistierten
-Fälle bleibt offen.
+Die 48 zuvor assistierten Fälle wurden am 2026-11-12 anhand ihrer
+Abstracts vorprüft: **48/48 bestätigt, 0 Korrekturen**. Alle 48 wurden in fünf
+unabhängigen Runden erneut geprüft und **48/48 menschlich bestätigt**; die
+Entscheidungen blieben unverändert. Es verbleiben keine assistierten Fälle.
 
 ## 1. Entscheidung
 
@@ -106,8 +103,8 @@ Die 181 Ausschluesse setzen sich aus 152 Regelausschluessen und 29 manuellen
 Ausschluessen zusammen.
 
 Die 415 Volltextkandidaten sind **nicht** endgueltig eingeschlossen. Die 65
-Einzelfallentscheidungen sind eingetragen: **57 von HB**, **8 assistiert durch
-Codebuff**. Die menschliche Gegenpruefung der 8 assistierten Faelle steht aus.
+Einzelfallentscheidungen sind eingetragen: **65 von HB**, **0 assistiert durch
+Codebuff**. Die menschliche Gegenpruefung ist abgeschlossen.
 Mehrfachgruende sind moeglich; die Regelzahlen
 sind nicht additiv.
 
@@ -276,10 +273,9 @@ nachträglich aufgeweicht.
 1. **Erledigt:** Europe-PMC-Query ausgeführt; 596 artikeldisjunkte
    Kandidaten exportiert.
 2. **Erledigt:** Abstract-Screening; 181 ausgeschlossen, 0 manuell offen,
-   415 vorlaeufig fuer Volltext (65 assistierte Einzelfallentscheidungen,
-   menschliche Freigabe ausstehend).
-3. **Als Naechstes:** menschliche Freigabe der 65 Einzelfallentscheidungen;
-   415 Volltextkandidaten pruefen und 30 Artikel auswaehlen.
+   415 vorlaeufig fuer Volltext (65 Einzelfallentscheidungen, alle menschlich
+   freigegeben).
+3. **Als Naechstes:** 415 Volltextkandidaten pruefen und 30 Artikel auswaehlen.
 4. 100 Records nach C1-Regeln annotieren.
 5. Disjunktheit, Quellen und Werte prüfen.
 6. Manifest befüllen, hashen und einfrieren.

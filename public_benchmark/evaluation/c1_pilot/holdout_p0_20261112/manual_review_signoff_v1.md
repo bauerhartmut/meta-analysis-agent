@@ -1,6 +1,6 @@
 # Freigabeliste: 65 P0-Einzelfallentscheidungen
 
-Status: **ALLE FÄLLE ENTSCHIEDEN; 57 MENSCHLICH, 8 ASSISTIERT; MENSCHLICHE GEGENPRÜFUNG OFFEN**.
+Status: **ALLE FÄLLE ENTSCHIEDEN; 65 MENSCHLICH, 0 ASSISTIERT; MENSCHLICHE FREIGABE ABGESCHLOSSEN**.
 Diese Liste ist die Prüfvorlage; sie ist kein Gate-Pass und keine
 endgültige Holdout-Auswahl.
 
@@ -11,8 +11,8 @@ Abweichungen und Korrekturen in `human_note` begründen.
 - Einschlüsse: **36**
 - Ausschlüsse: **29**
 - entschieden: **65/65**
-- davon menschlich: **57**
-- davon assistiert (Codebuff): **8**
+- davon menschlich: **65**
+- davon assistiert (Codebuff): **0**
 - hohe Priorität: **17**
 
 ## Einschlüsse: vorläufig für Volltext
@@ -52,9 +52,9 @@ Abweichungen und Korrekturen in `human_note` begründen.
 | 31 | [PMC13629817](https://pmc.ncbi.nlm.nih.gov/articles/PMC13629817/)<br>`10.1080/07853890.2026.2726716`<br>Age and antiplatelet de-escalation after myocardial infarction... | Einschluss | Subgruppe <75/>=75; absolute Ereigniszahlen pro Arm und Interaktion pruefen. | mittel | HB | 2026-11-12 | einschluss |
 | 32 | [PMC13630044](https://pmc.ncbi.nlm.nih.gov/articles/PMC13630044/)<br>`10.1136/bmjopen-2026-120096`<br>Effect of exercise on memory function and daily activities afte... | Einschluss | Selbstberichtete binaere Outcomes; N/Ereignisse pro Arm pruefen. | mittel | HB | 2026-11-12 | einschluss |
 | 33 | [PMC13638319](https://pmc.ncbi.nlm.nih.gov/articles/PMC13638319/)<br>`10.1136/jnis-2025-024129`<br>Occlusion site and outcomes in intra-arterial tenecteplase afte... | Einschluss | Sekundaeranalyse; mRS-Ereignisse pro Arm und Verschluss-Subgruppen pruefen. | mittel | HB | 2026-11-12 | einschluss |
-| 34 | [PMC13706700](https://pmc.ncbi.nlm.nih.gov/articles/PMC13706700/)<br>`10.3390/medicina62101829`<br>Point-of-Care Ultrasound of Upper Airway Changes During Cardiop... | Einschluss | Primaer Interaktion; Arm-Mittelwerte/SD und Zeitpunkte pruefen. | mittel | Codebuff assistiert | 2026-11-12 | einschluss |
+| 34 | [PMC13706700](https://pmc.ncbi.nlm.nih.gov/articles/PMC13706700/)<br>`10.3390/medicina62101829`<br>Point-of-Care Ultrasound of Upper Airway Changes During Cardiop... | Einschluss | Primaer Interaktion; Arm-Mittelwerte/SD und Zeitpunkte pruefen. | mittel | HB | 2026-11-12 | einschluss |
 | 35 | [PMC13720204](https://pmc.ncbi.nlm.nih.gov/articles/PMC13720204/)<br>`10.1038/s41467-026-77925-y`<br>SARS-CoV-2-specific monoclonal antibody AER002 in Long COVID: a... | Einschluss | Kleine Stichprobe n=36; PROMIS-29 Armwerte/SD pruefen. | mittel | HB | 2026-11-12 | einschluss |
-| 36 | [PMC13689703](https://pmc.ncbi.nlm.nih.gov/articles/PMC13689703/)<br>`10.1093/bjsopen/zrag158`<br>Chyme reinfusion using The Insides® System to reduce parenteral... | Einschluss | 2:1-Design; binaere PN-Endpunkte und N pro Arm pruefen. | niedrig | Codebuff assistiert | 2026-11-12 | einschluss |
+| 36 | [PMC13689703](https://pmc.ncbi.nlm.nih.gov/articles/PMC13689703/)<br>`10.1093/bjsopen/zrag158`<br>Chyme reinfusion using The Insides® System to reduce parenteral... | Einschluss | 2:1-Design; binaere PN-Endpunkte und N pro Arm pruefen. | niedrig | HB | 2026-11-12 | einschluss |
 
 ## Ausschlüsse: bestätigen oder korrigieren
 
@@ -81,21 +81,21 @@ Abweichungen und Korrekturen in `human_note` begründen.
 | 55 | [PMC13567134](https://pmc.ncbi.nlm.nih.gov/articles/PMC13567134/)<br>`10.3390/nu18172878`<br>Sulfur-Containing Amino Acid Plasma Concentrations in Pregnancy... | Ausschluss | Drei Arme; kein Zweiarm-Vergleich. | niedrig | HB | 2026-11-12 | ausschluss |
 | 56 | [PMC13583526](https://pmc.ncbi.nlm.nih.gov/articles/PMC13583526/)<br>`10.2196/92981`<br>User Engagement and Feature Preferences in an AI-Powered mHealt... | Ausschluss | Nur Interventionsarm; keine Kontrollgruppe. | niedrig | HB | 2026-11-12 | ausschluss |
 | 57 | [PMC13595287](https://pmc.ncbi.nlm.nih.gov/articles/PMC13595287/)<br>`10.1093/europace/euag250`<br>Incident heart failure in patients with screening-detected atri... | Ausschluss | Beobachtungskohorten; kein randomisierter Armvergleich. | niedrig | HB | 2026-11-12 | ausschluss |
-| 58 | [PMC13595337](https://pmc.ncbi.nlm.nih.gov/articles/PMC13595337/)<br>`10.1093/eurjcn/zvag092`<br>Patient-reported barriers to dietary adherence in heart failure... | Ausschluss | Qualitativ; keine quantitativen Armwerte. | niedrig | Codebuff assistiert | 2026-11-12 | ausschluss |
-| 59 | [PMC13606361](https://pmc.ncbi.nlm.nih.gov/articles/PMC13606361/)<br>`10.3390/genes17091145`<br>Evaluation of Candidate Urinary microRNAs in Upper Tract Urothe... | Ausschluss | Biomarker-/Diagnostikstudie; kein Interventionseffekt. | niedrig | Codebuff assistiert | 2026-11-12 | ausschluss |
+| 58 | [PMC13595337](https://pmc.ncbi.nlm.nih.gov/articles/PMC13595337/)<br>`10.1093/eurjcn/zvag092`<br>Patient-reported barriers to dietary adherence in heart failure... | Ausschluss | Qualitativ; keine quantitativen Armwerte. | niedrig | HB | 2026-11-12 | ausschluss |
+| 59 | [PMC13606361](https://pmc.ncbi.nlm.nih.gov/articles/PMC13606361/)<br>`10.3390/genes17091145`<br>Evaluation of Candidate Urinary microRNAs in Upper Tract Urothe... | Ausschluss | Biomarker-/Diagnostikstudie; kein Interventionseffekt. | niedrig | HB | 2026-11-12 | ausschluss |
 | 60 | [PMC13612665](https://pmc.ncbi.nlm.nih.gov/articles/PMC13612665/)<br>`10.1007/s10103-026-05045-6`<br>Effectiveness of a novel low-level laser therapy protocol in ma... | Ausschluss | Drei Arme; kein Zweiarm-Vergleich. | niedrig | HB | 2026-11-12 | ausschluss |
-| 61 | [PMC13693860](https://pmc.ncbi.nlm.nih.gov/articles/PMC13693860/)<br>`10.2196/95628`<br>Adverse Experiences in Brief Meditation Practices: Randomized C... | Ausschluss | Vier Bedingungen; kein Zweiarm-Vergleich. | niedrig | Codebuff assistiert | 2026-11-12 | ausschluss |
+| 61 | [PMC13693860](https://pmc.ncbi.nlm.nih.gov/articles/PMC13693860/)<br>`10.2196/95628`<br>Adverse Experiences in Brief Meditation Practices: Randomized C... | Ausschluss | Vier Bedingungen; kein Zweiarm-Vergleich. | niedrig | HB | 2026-11-12 | ausschluss |
 | 62 | [PMC13730976](https://pmc.ncbi.nlm.nih.gov/articles/PMC13730976/)<br>`10.1111/dom.71322`<br>Predicting the Long-Term Risk of Type 2 Diabetes and Cardiovasc... | Ausschluss | Vier Arme; keine Zweiarm-Kontraste. | niedrig | HB | 2026-11-12 | ausschluss |
-| 63 | [PMC13731004](https://pmc.ncbi.nlm.nih.gov/articles/PMC13731004/)<br>`10.1111/dom.71323`<br>Effect of Semaglutide on Thigh Skeletal Muscle Volume, Fat Infi... | Ausschluss | Drei Arme; pruefen, ob 7.2 mg vs. Placebo als zwei Arme zulaessig waere (P0: nein). | niedrig | Codebuff assistiert | 2026-11-12 | ausschluss |
-| 64 | [PMC13744974](https://pmc.ncbi.nlm.nih.gov/articles/PMC13744974/)<br>`10.1161/jaha.125.048033`<br>Plasma Cluster of Differentiation 147 and Cognitive Impairment... | Ausschluss | Biomarker-Assoziation; kein randomisierter Vergleich. | niedrig | Codebuff assistiert | 2026-11-12 | ausschluss |
-| 65 | [PMC13745009](https://pmc.ncbi.nlm.nih.gov/articles/PMC13745009/)<br>`10.1161/jaha.126.051333`<br>Impact of Left Internal Mammary Artery-to-Left Anterior Descend... | Ausschluss | Assoziation; kein randomisierter Armvergleich. | niedrig | Codebuff assistiert | 2026-11-12 | ausschluss |
+| 63 | [PMC13731004](https://pmc.ncbi.nlm.nih.gov/articles/PMC13731004/)<br>`10.1111/dom.71323`<br>Effect of Semaglutide on Thigh Skeletal Muscle Volume, Fat Infi... | Ausschluss | Drei Arme; pruefen, ob 7.2 mg vs. Placebo als zwei Arme zulaessig waere (P0: nein). | niedrig | HB | 2026-11-12 | ausschluss |
+| 64 | [PMC13744974](https://pmc.ncbi.nlm.nih.gov/articles/PMC13744974/)<br>`10.1161/jaha.125.048033`<br>Plasma Cluster of Differentiation 147 and Cognitive Impairment... | Ausschluss | Biomarker-Assoziation; kein randomisierter Vergleich. | niedrig | HB | 2026-11-12 | ausschluss |
+| 65 | [PMC13745009](https://pmc.ncbi.nlm.nih.gov/articles/PMC13745009/)<br>`10.1161/jaha.126.051333`<br>Impact of Left Internal Mammary Artery-to-Left Anterior Descend... | Ausschluss | Assoziation; kein randomisierter Armvergleich. | niedrig | HB | 2026-11-12 | ausschluss |
 
 ## Legende
 
 - **Einschluss**: vorläufig für Volltextprüfung; keine endgültige Eignung.
-- **Ausschluss**: nach Abstract und fixierten Kriterien; menschliche Gegenprüfung offen.
-- **Reviewer/Datum**: Reviewer und Datum sind eingetragen; `Codebuff assistiert` kennzeichnet nicht-menschliche Entscheidungen.
-- **Finale Entscheidung**: `einschluss`, `ausschluss` oder `offen`; menschliche Gegenprüfung bleibt bei assistierten Fällen offen.
+- **Ausschluss**: nach Abstract und fixierten Kriterien; menschlich bestätigt.
+- **Reviewer/Datum**: Reviewer und Datum sind eingetragen; alle Fälle sind menschlich freigegeben.
+- **Finale Entscheidung**: `einschluss`, `ausschluss` oder `offen`; die menschliche Freigabe ist abgeschlossen.
 - **Prio hoch**: Entscheidung könnte sich durch Volltext oder genauere Armprüfung ändern.
 
 Quellen sind die PMC-Artikelseiten; DOI zusätzlich in der CSV- und JSON-Datei.

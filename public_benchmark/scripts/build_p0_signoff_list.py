@@ -200,6 +200,7 @@ def main() -> None:
                 "reviewed": reviewed,
                 "assisted": assisted,
                 "human_review_complete": not bool(assisted),
+                "human_signoff": "complete" if not assisted else "pending",
                 "records": len(rows),
                 "counts": dict(Counter(row["decision"] for row in rows)),
                 "priority_counts": dict(Counter(row["priority"] for row in rows)),
@@ -242,10 +243,15 @@ def main() -> None:
     excluded = [row for row in rows if row["decision"] == "exclude"]
     reviewed = sum(row["final_decision"] != "offen" for row in rows)
     assisted = sum(row["reviewer"] == "Codebuff assistiert" for row in rows)
-    if reviewed == len(rows):
+    if reviewed == len(rows) and assisted:
         status_line = (
             f"Status: **ALLE FÄLLE ENTSCHIEDEN; {reviewed - assisted} MENSCHLICH, "
             f"{assisted} ASSISTIERT; MENSCHLICHE GEGENPRÜFUNG OFFEN**."
+        )
+    elif reviewed == len(rows):
+        status_line = (
+            f"Status: **ALLE FÄLLE ENTSCHIEDEN; {reviewed} MENSCHLICH, "
+            "0 ASSISTIERT; MENSCHLICHE FREIGABE ABGESCHLOSSEN**."
         )
     else:
         status_line = "Status: **HUMAN REVIEW PENDING**."
@@ -301,9 +307,9 @@ def main() -> None:
             "## Legende",
             "",
             "- **Einschluss**: vorläufig für Volltextprüfung; keine endgültige Eignung.",
-            "- **Ausschluss**: nach Abstract und fixierten Kriterien; menschliche Gegenprüfung offen.",
-            "- **Reviewer/Datum**: Reviewer und Datum sind eingetragen; `Codebuff assistiert` kennzeichnet nicht-menschliche Entscheidungen.",
-            "- **Finale Entscheidung**: `einschluss`, `ausschluss` oder `offen`; menschliche Gegenprüfung bleibt bei assistierten Fällen offen.",
+            "- **Ausschluss**: nach Abstract und fixierten Kriterien; menschlich bestätigt." if not assisted else "- **Ausschluss**: nach Abstract und fixierten Kriterien; menschliche Gegenprüfung offen.",
+            "- **Reviewer/Datum**: Reviewer und Datum sind eingetragen; alle Fälle sind menschlich freigegeben." if not assisted else "- **Reviewer/Datum**: Reviewer und Datum sind eingetragen; `Codebuff assistiert` kennzeichnet nicht-menschliche Entscheidungen.",
+            "- **Finale Entscheidung**: `einschluss`, `ausschluss` oder `offen`; die menschliche Freigabe ist abgeschlossen." if not assisted else "- **Finale Entscheidung**: `einschluss`, `ausschluss` oder `offen`; menschliche Gegenprüfung bleibt bei assistierten Fällen offen.",
             "- **Prio hoch**: Entscheidung könnte sich durch Volltext oder genauere Armprüfung ändern.",
             "",
             "Quellen sind die PMC-Artikelseiten; DOI zusätzlich in der CSV- und JSON-Datei.",

@@ -98,6 +98,7 @@ def main() -> None:
         "open": len(rows) - completed,
         "assisted": assisted,
         "human_review_complete": complete and assisted == 0,
+        "human_signoff": "complete" if complete and assisted == 0 else "pending",
         "reviewer_counts": dict(reviewer_counts),
         "preliminary_counts": dict(Counter(row.get("decision", "") for row in rows)),
         "final_counts": dict(Counter(row.get("final_decision", "offen") for row in rows)),

@@ -299,18 +299,18 @@ Plan: [`holdout_plan_20261112.md`](holdout_plan_20261112.md), Schema:
   Überschneidungen.
 - [`holdout_p0_20261112/screening_summary_v2.md`](holdout_p0_20261112/screening_summary_v2.md):
   Abstract-Screening v2: **181 ausgeschlossen, 415 vorläufig für Volltext**;
-  die 65 manuellen Fälle sind entschieden: **57 von HB, 8 assistiert**;
-  menschliche Gegenprüfung der 8 assistierten Fälle ausstehend, kein Modelllauf.
+  die 65 manuellen Fälle sind entschieden: **65 von HB, 0 assistiert**;
+  menschliche Freigabe abgeschlossen, kein Modelllauf.
 - [`holdout_p0_20261112/manual_review_signoff_v1.md`](holdout_p0_20261112/manual_review_signoff_v1.md):
   kompakte Freigabeliste für die 65 Einzelfälle mit Quelle, Entscheidung,
   Priorität und Prüfzweifel; Reviewer, Datum und finale Entscheidung sind
-  dokumentiert, davon 8 assistiert.
+  dokumentiert, alle 65 menschlich freigegeben.
 - [`holdout_p0_20261112/manual_review_countercheck_v1.md`](holdout_p0_20261112/manual_review_countercheck_v1.md):
   Gegenprüfung der drei Hochprioritäts-Ausschlüsse; 3/3 menschlich bestätigt,
-  0 Korrekturen, menschliche Freigabe der übrigen 8 Fälle offen.
+  0 Korrekturen, keine assistierten Fälle mehr offen.
 - [`holdout_p0_20261112/manual_review_assisted_precheck_v1.md`](holdout_p0_20261112/manual_review_assisted_precheck_v1.md):
   assistierte Vorprüfung der restlichen 48 Fälle; 48/48 bestätigt, 0 Korrekturen;
-  40 davon inzwischen menschlich bestätigt, 8 weiterhin offen.
+  alle 48 inzwischen menschlich bestätigt.
 - [`holdout_p0_20261112/manual_review_independent_spotcheck_v1.md`](holdout_p0_20261112/manual_review_independent_spotcheck_v1.md):
   unabhängige Stichprobenprüfung von 10 der 48 Fälle mit konkreten
   Abstract-Belegen; 10/10 menschlich bestätigt, 0 Korrekturvorschläge.
@@ -324,8 +324,8 @@ Plan: [`holdout_plan_20261112.md`](holdout_plan_20261112.md), Schema:
   vierte unabhängige Runde von 10 weiteren assistierten Fällen; 10/10 menschlich
   bestätigt, 0 Korrekturvorschläge, Entscheidungen unverändert.
 - [`holdout_p0_20261112/manual_review_independent_spotcheck_v5.md`](holdout_p0_20261112/manual_review_independent_spotcheck_v5.md):
-  fünfte Runde mit den letzten 8 assistierten Fällen; 8/8 bestätigt,
-  0 Korrekturvorschläge, menschliche Freigabe offen.
+  fünfte Runde mit den letzten 8 zuvor assistierten Fällen; 8/8 menschlich bestätigt,
+  0 Korrekturvorschläge, Entscheidungen unverändert.
 - [`holdout_p0_20261112/fulltext_extraction_template_v1.md`](holdout_p0_20261112/fulltext_extraction_template_v1.md):
   Volltext-Prüfvorlage für die 36 vorläufigen Einschlüsse mit Eignungscheck,
   Armdefinition und vier Outcome-Slots für N/Mean/SD/Events; keine Schätzung
@@ -336,7 +336,7 @@ Plan: [`holdout_plan_20261112.md`](holdout_plan_20261112.md), Schema:
   33 PDF-Flags, 0 lokale Treffer, kein Abruf gestartet.
 - [`holdout_p0_20261112/signoff_validation_v1.json`](holdout_p0_20261112/signoff_validation_v1.json):
   Pflichtfeldprüfung der 65 Freigabezeilen; 65/65 abgeschlossen, 0 offen,
-  57 menschlich und 8 assistiert, keine Feldfehler.
+  65 menschlich und 0 assistiert, keine Feldfehler.
 - [`gate_report_v6c.json`](gate_report_v6c.json): maschinenlesbarer
   G1–G5-Report; v6c besteht nur G1.
 

@@ -2,7 +2,7 @@
 
 Stand: 2026-11-12
 
-Geprüft wurden die 48 verbleibenden assistierten Entscheidungen anhand von
+Geprüft wurden die 48 zuvor assistierten Entscheidungen anhand von
 Titel und Abstract. Es gab keinen Volltextzugriff und keinen Netzabruf.
 
 | Kennzahl | Wert |
@@ -73,7 +73,6 @@ Titel und Abstract. Es gab keinen Volltextzugriff und keinen Netzabruf.
 
 **Ergebnis:** 48 von 48 bestätigt, 0 Korrekturen.
 
-Vierzig dieser Fälle wurden am 2026-11-12 nachträglich durch HB menschlich
-bestätigt; die aktuelle CSV ist maßgeblich. Für die verbleibenden 8 Fälle
-bleibt der Reviewer `Codebuff assistiert` und die menschliche Freigabe offen.
+Alle 48 Fälle wurden am 2026-11-12 nachträglich durch HB menschlich bestätigt;
+die aktuelle CSV ist maßgeblich. Es verbleiben keine assistierten Fälle.
 Es wurden keine finalen Entscheidungen geändert.

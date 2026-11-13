@@ -1,13 +1,14 @@
 {
   "signoff_id": "p0_manual_signoff_v1",
-  "status": "complete_assisted_pending_human_review",
-  "human_review": "partial",
-  "human_reviewed": 57,
-  "assisted_reviewed": 8,
-  "signoff_status": "complete_assisted_pending_human_review",
+  "status": "complete",
+  "human_review": "complete",
+  "human_reviewed": 65,
+  "assisted_reviewed": 0,
+  "signoff_status": "complete",
   "reviewed": 65,
-  "assisted": 8,
-  "human_review_complete": false,
+  "assisted": 0,
+  "human_review_complete": true,
+  "human_signoff": "complete",
   "records": 65,
   "counts": {
     "include_for_fulltext": 36,
@@ -659,10 +660,10 @@
       "priority": "mittel",
       "open_question": "Primaer Interaktion; Arm-Mittelwerte/SD und Zeitpunkte pruefen.",
       "needs_fulltext": true,
-      "reviewer": "Codebuff assistiert",
+      "reviewer": "HB",
       "review_date": "2026-11-12",
       "final_decision": "einschluss",
-      "human_note": "Randomisierter Zweiarm-Vergleich; POCUS-Endpunkte; Armwerte im Volltext. Assistierte Entscheidung nach Delegation; keine menschliche Einzelpruefung.",
+      "human_note": "76 Patienten, 1:1 randomisiert; ETT-Cuff 0 vs. 20-30 cmH2O; POCUS-LPW. Menschliche Bestaetigung durch HB am 2026-11-12: Einschluss bestaetigt.",
       "number": 34
     },
     {
@@ -697,10 +698,10 @@
       "priority": "niedrig",
       "open_question": "2:1-Design; binaere PN-Endpunkte und N pro Arm pruefen.",
       "needs_fulltext": true,
-      "reviewer": "Codebuff assistiert",
+      "reviewer": "HB",
       "review_date": "2026-11-12",
       "final_decision": "einschluss",
-      "human_note": "Randomisierter 2:1-Vergleich; zwei Arme; binaerer PN-Endpunkt; Volltext. Assistierte Entscheidung nach Delegation; keine menschliche Einzelpruefung.",
+      "human_note": "REINFUSE; 2:1 randomisiert; Chyme-Reinfusion vs. Standard; 8/26 vs. 0 mit PN-Reduktion. Menschliche Bestaetigung durch HB am 2026-11-12: Einschluss bestaetigt.",
       "number": 36
     },
     {
@@ -1115,10 +1116,10 @@
       "priority": "niedrig",
       "open_question": "Qualitativ; keine quantitativen Armwerte.",
       "needs_fulltext": false,
-      "reviewer": "Codebuff assistiert",
+      "reviewer": "HB",
       "review_date": "2026-11-12",
       "final_decision": "ausschluss",
-      "human_note": "Qualitative Substichprobe; keine quantitativen Armwerte. Assistierte Entscheidung nach Delegation; keine menschliche Einzelpruefung.",
+      "human_note": "Qualitative Pro-HEART-Substudie mit 24 Interviews; keine quantitativen Armwerte. Menschliche Bestaetigung durch HB am 2026-11-12: Ausschluss bestaetigt.",
       "number": 58
     },
     {
@@ -1134,10 +1135,10 @@
       "priority": "niedrig",
       "open_question": "Biomarker-/Diagnostikstudie; kein Interventionseffekt.",
       "needs_fulltext": false,
-      "reviewer": "Codebuff assistiert",
+      "reviewer": "HB",
       "review_date": "2026-11-12",
       "final_decision": "ausschluss",
-      "human_note": "Ancillary Biomarker-/Diagnostikstudie; kein randomisierter Interventionsvergleich. Assistierte Entscheidung nach Delegation; keine menschliche Einzelpruefung.",
+      "human_note": "Diagnostische miRNA-Studie; UTUC vs. gesunde Kontrollen; kein randomisierter Interventionseffekt. Menschliche Bestaetigung durch HB am 2026-11-12: Ausschluss bestaetigt.",
       "number": 59
     },
     {
@@ -1172,10 +1173,10 @@
       "priority": "niedrig",
       "open_question": "Vier Bedingungen; kein Zweiarm-Vergleich.",
       "needs_fulltext": false,
-      "reviewer": "Codebuff assistiert",
+      "reviewer": "HB",
       "review_date": "2026-11-12",
       "final_decision": "ausschluss",
-      "human_note": "Vier Bedingungen (drei Meditationen, Internetkontrolle); kein Zweiarm-Vergleich. Assistierte Entscheidung nach Delegation; keine menschliche Einzelpruefung.",
+      "human_note": "Vier Bedingungen; drei Meditationen plus Internetkontrolle; kein einzelner Zweiarm-Kontrast. Menschliche Bestaetigung durch HB am 2026-11-12: Ausschluss bestaetigt.",
       "number": 61
     },
     {
@@ -1210,10 +1211,10 @@
       "priority": "niedrig",
       "open_question": "Drei Arme; pruefen, ob 7.2 mg vs. Placebo als zwei Arme zulaessig waere (P0: nein).",
       "needs_fulltext": false,
-      "reviewer": "Codebuff assistiert",
+      "reviewer": "HB",
       "review_date": "2026-11-12",
       "final_decision": "ausschluss",
-      "human_note": "Drei Arme (7.2 mg, 2.4 mg, Placebo); kein Zweiarm-Vergleich. Assistierte Entscheidung nach Delegation; keine menschliche Einzelpruefung.",
+      "human_note": "STEP UP; drei Arme mit 7.2 mg, 2.4 mg und Placebo. Menschliche Bestaetigung durch HB am 2026-11-12: Ausschluss bestaetigt.",
       "number": 63
     },
     {
@@ -1229,10 +1230,10 @@
       "priority": "niedrig",
       "open_question": "Biomarker-Assoziation; kein randomisierter Vergleich.",
       "needs_fulltext": false,
-      "reviewer": "Codebuff assistiert",
+      "reviewer": "HB",
       "review_date": "2026-11-12",
       "final_decision": "ausschluss",
-      "human_note": "Ancillary Biomarker-Assoziationsstudie; kein randomisierter Vergleich. Assistierte Entscheidung nach Delegation; keine menschliche Einzelpruefung.",
+      "human_note": "CATIS; CD147-Assoziation mit PSCI ohne randomisierten Armvergleich. Menschliche Bestaetigung durch HB am 2026-11-12: Ausschluss bestaetigt.",
       "number": 64
     },
     {
@@ -1248,10 +1249,10 @@
       "priority": "niedrig",
       "open_question": "Assoziation; kein randomisierter Armvergleich.",
       "needs_fulltext": false,
-      "reviewer": "Codebuff assistiert",
+      "reviewer": "HB",
       "review_date": "2026-11-12",
       "final_decision": "ausschluss",
-      "human_note": "Beobachtende Assoziationsanalyse der Anastomosenlage; kein randomisierter Vergleich. Assistierte Entscheidung nach Delegation; keine menschliche Einzelpruefung.",
+      "human_note": "PATENCY; beobachtende Analyse der Anastomosenlage ohne randomisierten Armvergleich. Menschliche Bestaetigung durch HB am 2026-11-12: Ausschluss bestaetigt.",
       "number": 65
     }
   ]

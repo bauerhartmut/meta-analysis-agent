@@ -1,18 +1,18 @@
 {
   "signoff_id": "p0_manual_signoff_v1",
-  "status": "complete_assisted_pending_human_review",
-  "human_review": "partial",
-  "human_reviewed": 57,
-  "assisted_reviewed": 8,
-  "signoff_status": "complete_assisted_pending_human_review",
+  "status": "complete",
+  "human_review": "complete",
+  "human_reviewed": 65,
+  "assisted_reviewed": 0,
+  "signoff_status": "complete",
   "records": 65,
   "completed": 65,
   "open": 0,
-  "assisted": 8,
-  "human_review_complete": false,
+  "assisted": 0,
+  "human_review_complete": true,
+  "human_signoff": "complete",
   "reviewer_counts": {
-    "HB": 57,
-    "Codebuff assistiert": 8
+    "HB": 65
   },
   "preliminary_counts": {
     "include_for_fulltext": 36,

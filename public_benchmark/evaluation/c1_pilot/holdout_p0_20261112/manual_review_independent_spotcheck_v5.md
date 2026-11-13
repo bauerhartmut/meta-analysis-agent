@@ -1,4 +1,4 @@
-# Unabhängige Stichprobenprüfung, fünfte Runde: die letzten 8 assistierten Fälle
+# Unabhängige Stichprobenprüfung, fünfte Runde: die letzten 8 zuvor assistierten Fälle
 
 Stand: 2026-11-12
 
@@ -17,7 +17,7 @@ Entscheidungen geändert.
 | 64 | PMC13744974 | ausschluss (X03) | preplanned ancillary study of CATIS ... 612 patients with ischemic stroke ... plasma CD147 levels ... PSCI ... elevated plasma CD147 levels were significantly associated with higher odds of PSCI. | Beobachtende Biomarker-Assoziation ohne randomisierten Armvergleich. Ausschluss X03 bestaetigt. |
 | 65 | PMC13745009 | ausschluss (X03) | secondary analysis of the PATENCY trial data set ... 1597 patients ... relative anastomotic site ... distal anastomosis ... associated with a significantly lower 3-year LIMA occlusion rate. | Beobachtende Analyse der Anastomosenlage ohne randomisierten Armvergleich. Ausschluss X03 bestaetigt. |
 
-**Ergebnis:** 8 von 8 bestätigt, 0 Korrekturvorschläge.
+**Ergebnis:** 8 von 8 menschlich bestätigt, 0 Korrekturvorschläge.
 
-Der Reviewer bleibt `Codebuff assistiert`; die menschliche Freigabe dieser
-acht Fälle steht aus. CSV und finale Entscheidungen sind unverändert.
+Reviewer ist **HB**, Datum 2026-11-12. Die finalen Entscheidungen sind
+unverändert; die Begründungen wurden in die CSV übernommen.

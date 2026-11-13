@@ -1,7 +1,7 @@
 {
   "screening_id": "p0_abstract_screening_v2",
   "generated_at": "2026-11-12T09:27:23.281260+00:00",
-  "status": "complete_assisted_pending_human_review",
+  "status": "complete",
   "records": 596,
   "counts": {
     "exclude": 181,
@@ -27,12 +27,12 @@
     "X09": 1,
     "X10": 1
   },
-  "human_review": "partial",
-  "human_reviewed": 57,
-  "assisted_reviewed": 8,
-  "signoff_status": "complete_assisted_pending_human_review",
-  "human_signoff": "pending",
+  "human_review": "complete",
+  "human_reviewed": 65,
+  "assisted_reviewed": 0,
+  "signoff_status": "complete",
+  "human_signoff": "complete",
   "model_used": false,
   "fulltext_screening": false,
-  "human_review_complete": false
+  "human_review_complete": true
 }

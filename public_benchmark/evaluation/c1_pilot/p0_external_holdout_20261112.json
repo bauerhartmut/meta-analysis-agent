@@ -1,19 +1,20 @@
 {
   "p0_id": "p0_external_holdout_20261112",
   "date": "2026-11-12",
-  "status": "complete_assisted_pending_human_review",
-  "human_review": "partial",
-  "human_reviewed": 57,
-  "assisted_reviewed": 8,
-  "signoff_status": "complete_assisted_pending_human_review",
+  "status": "complete",
+  "human_review": "complete",
+  "human_reviewed": 65,
+  "assisted_reviewed": 0,
+  "signoff_status": "complete",
   "independent_spotcheck_v5": {
     "reviewed": 8,
     "confirmed": 8,
     "corrections": 0,
-    "reviewer": "Codebuff assistiert",
+    "reviewer": "HB",
     "review_date": "2026-11-12",
     "review_basis": "Titel und Abstract; kein Volltext, kein Netzabruf",
-    "human_review": false
+    "human_review": true,
+    "human_confirmed": 8
   },
   "independent_spotcheck_v4": {
     "reviewed": 10,
@@ -58,12 +59,12 @@
     "reviewed": 48,
     "confirmed": 48,
     "corrections": 0,
-    "human_confirmed_later": 40,
-    "still_assisted": 8,
+    "human_confirmed_later": 48,
+    "still_assisted": 0,
     "reviewer": "Codebuff assistiert",
     "review_date": "2026-11-12",
     "review_basis": "Titel und Abstract; kein Volltext, kein Netzabruf",
-    "human_review": false
+    "human_review": true
   },
   "status_fields": {
     "status": [
@@ -125,7 +126,7 @@
     "disjointness": "public_benchmark/evaluation/c1_pilot/holdout_p0_20261112/article_disjoint_check.json"
   },
   "abstract_screening": {
-    "status": "complete_assisted_pending_human_review",
+    "status": "complete",
     "criteria": "public_benchmark/evaluation/c1_pilot/holdout_p0_20261112/screening_criteria_v1.json",
     "criteria_version": 1.1,
     "criteria_sha256": "4b40eb9acf02c6cc6c67316b91fcdeae7bbfba382cbf795af040f96491b17ed9",
@@ -136,18 +137,18 @@
     "manual_cases": 65,
     "manual_include": 36,
     "manual_exclude": 29,
-    "human_review": "partial",
-    "human_reviewed": 57,
-    "assisted_reviewed": 8,
-    "signoff_status": "complete_assisted_pending_human_review",
-    "human_signoff": "pending",
+    "human_review": "complete",
+    "human_reviewed": 65,
+    "assisted_reviewed": 0,
+    "signoff_status": "complete",
+    "human_signoff": "complete",
     "model_used": false,
     "fulltext_screening": false,
     "decisions_file": "public_benchmark/evaluation/c1_pilot/holdout_p0_20261112/screening_decisions_v2.jsonl",
     "exclusions_file": "public_benchmark/evaluation/c1_pilot/holdout_p0_20261112/screening_exclusions_v1.jsonl",
     "manual_decisions_file": "public_benchmark/evaluation/c1_pilot/holdout_p0_20261112/manual_review_decisions_v1.jsonl",
     "summary": "public_benchmark/evaluation/c1_pilot/holdout_p0_20261112/screening_summary_v2.json",
-    "human_review_complete": false
+    "human_review_complete": true
   },
   "selection": {
     "design": "parallel-group RCT with two relevant arms",
@@ -211,5 +212,6 @@
   ],
   "no_model_run": true,
   "test_split_used": false,
-  "human_review_complete": false
+  "human_review_complete": true,
+  "human_signoff": "complete"
 }
