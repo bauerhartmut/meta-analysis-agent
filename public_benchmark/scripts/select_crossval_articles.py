@@ -39,6 +39,7 @@ CANDIDATES_PATH = P0_DIR / "candidates.jsonl"
 SHORTLIST_PATH = P0_DIR / "fulltext_retrieval_manifest_v1.json"
 OUT_JSON = OUT_DIR / "candidate_shortlist_v1.json"
 OUT_MD = OUT_DIR / "candidate_shortlist_v1.md"
+OUT_POOL = OUT_DIR / "candidate_pool_v1.json"
 
 SALT = "crossval-20261113-v1"
 REQUIRED_PUB_TYPE = "Randomized Controlled Trial"
@@ -154,6 +155,23 @@ def build() -> dict[str, Any]:
 
     primary = [row for row in rows if row["role"] == "primary"]
     reserve = [row for row in rows if row["role"] == "reserve"]
+    # Der volle gerankte Pool bleibt nachvollziehbar, damit Ersatzartikel nach
+    # derselben Regel nachgezogen werden koennen (kein neuer Zufall, keine
+    # neue Handauswahl).
+    ranked_pool = [
+        {
+            "position": index,
+            "pmcid": row["pmcid"],
+            "doi": row.get("doi") or "",
+            "title": row.get("title") or "",
+            "journal": row.get("journal") or "",
+            "pub_year": row.get("pub_year") or "",
+            "rank_sha256": rank_key(row["pmcid"]),
+            "pub_types": candidates.get(row["pmcid"], {}).get("pub_types") or [],
+            "reserved_for": "crossval_exploration",
+        }
+        for index, row in enumerate(pool, start=1)
+    ]
 
     checks = {
         "primary_count_ok": len(primary) == PRIMARY_COUNT,
@@ -212,6 +230,7 @@ def build() -> dict[str, Any]:
         },
         "checks": checks,
         "articles": rows,
+        "_ranked_pool": ranked_pool,
     }
 
 
@@ -300,7 +319,24 @@ def main() -> int:
         print(f"ABBRUCH: Grundlage fehlt: {DECISIONS_PATH} / {SHORTLIST_PATH}")
         return 2
     payload = build()
+    ranked_pool = payload.pop("_ranked_pool", [])
     OUT_DIR.mkdir(parents=True, exist_ok=True)
+    OUT_POOL.write_text(
+        json.dumps(
+            {
+                "dataset": "crossval_exploration",
+                "version": "1.0",
+                "created": payload["created"],
+                "salt": SALT,
+                "count": len(ranked_pool),
+                "articles": ranked_pool,
+            },
+            ensure_ascii=False,
+            indent=2,
+        )
+        + "\n",
+        encoding="utf-8",
+    )
     OUT_JSON.write_text(
         json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
     )

@@ -84,3 +84,60 @@ Schritt 2 und 3 sind unabhängig und laufen parallel: Annotation organisieren
 Vorabkenntnis entsteht) und den GLM-Diagnoseaufruf mit den in F3 genannten
 Feldern durchführen. Danach kann das Schema (Schritt 4) gebaut werden, weil
 erst dann feststeht, ob drei Modelle antreten.
+
+## 6. Schritt 1b: Fallmix, Volltextverfuegbarkeit, Dubletten
+
+Vorgezogene Pruefung der Auswahl, damit keine Annotationszeit auf untauglichen
+Artikeln verloren geht. Skripte:
+`public_benchmark/scripts/fetch_crossval_fulltext.py` und
+`public_benchmark/scripts/profile_crossval_articles.py`; Test:
+`public_benchmark/tests/test_crossval_case_mix.py` (8 Tests, gruen).
+
+### Erweiterte Kriterien
+
+1. **Volltext abgerufen.** Europe-PMC-XML, SHA-256 im Manifest. Kein
+   PDF-Fallback, kein Modell.
+2. **Kein Review-/Summary-Titel.** Reine Zusammenfassungen und Korrekturen
+   liefern keine eigenen Armwerte.
+3. **Armwert-Signal.** Entweder eine Tabelle mit Mittelwert und Streuung
+   beziehungsweise Ereigniszellen und mindestens sechs Zahlenzellen, oder
+   mindestens zwei Zahlensignale im Fliesstext. Artikel ohne beides werden
+   ausgeschlossen (`no_arm_data`).
+4. **Keine Trial-Dublette.** Gleiche Register-ID (NCT, ISRCTN, ChiCTR, DRKS,
+   CTRI, UMIN, ACTRN, EudraCT, IRCT, jRCT, TCTR) oder gleiches Trial-Akronym
+   im Titel. Der hoeher gerankte Artikel bleibt, der spaetere wird
+   ausgeschlossen (`duplicate_trial`).
+
+### Ergebnis
+
+- 35 Artikel aus v1 plus 15 Ersatzartikel aus dem gerankten Pool abgerufen:
+  **50/50 XML**, zusammen rund 5,5 MB.
+- 49 geeignet, 1 ausgeschlossen (`PMC13682720`, keine Armwerte).
+- **0 Trial-Dubletten** in der Auswahl. 36 der 50 Artikel fuehren eine
+  Register-ID, alle eindeutig; Akronyme im Titel sind selten (2 Faelle).
+- Auswahl v2: **25 primaer + 10 Reserve**, alle mit Volltext und Hash.
+
+### Fallmix der Primaerauswahl
+
+| Merkmal | Artikel |
+|---|---:|
+| kontinuierliches Tabellensignal | 15 |
+| binaeres Tabellensignal | 14 |
+| beide Signale | 9 |
+| Mehrarm-Hinweis | 4 |
+| Pilot/Feasibility | 10 |
+| sekundaere Analyse | 3 |
+| mit Supplement | 16 |
+| Tabellen gesamt | 88 |
+
+### Grenzen
+
+- Die Eignung ist ein Tabellen- und Textsignal, keine bestaetigte
+  Extraktion. Die Volltextpruefung vor der Annotation bleibt der letzte
+  Schritt.
+- **Kein Crossover-Artikel in der Primaerauswahl** (1 in der Reserve), 10 von
+  25 sind Pilot/Feasibility. Das ist eine Eigenschaft dieser Stichprobe, keine
+  Zielverfehlung: die Kriterien verlangen Vielfalt, keine Quote.
+- Dubletten werden nur ueber Register-IDs und Titel-Akronyme erkannt. Ein
+  Zweitartikel desselben Trials ohne beides bleibt unentdeckt; das ist der
+  verbleibende, nicht messbare Rest.
