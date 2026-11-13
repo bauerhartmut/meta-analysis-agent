@@ -24,11 +24,11 @@ gleicher Modellleistung. Die Adjudikation ist nie Ground Truth.
 |---:|---|---|
 | 1 | Datensatz auswählen, G5-Disjunktheit prüfen | **erledigt** (Abschnitt 3) |
 | 2 | Referenzannotatoren organisieren | offen - organisatorisch, nicht im Repo lösbar |
-| 3 | GLM diagnostisch testen | offen - ein Aufruf, braucht die Freigabe aus F3 |
-| 4 | Schema und Quellenbelege implementieren | offen |
-| 5 | Adjudikationsverfahren festlegen | entschieden (F5), Umsetzung offen |
-| 6 | Power-Abschätzung | offen |
-| 7 | `dataset_manifest.json` | offen - braucht Recordzahl aus der Volltextprüfung |
+| 3 | GLM diagnostisch testen | **erledigt** - verwendbar ab `max_tokens` 8000 |
+| 4 | Schema und Quellenbelege implementieren | **erledigt** - `schema_v1.json` mit 10 Tests |
+| 5 | Adjudikationsverfahren festlegen | **umgesetzt** - verblindeter Batch und Auswertung mit 3 Tests |
+| 6 | Power-Abschätzung | **erledigt** - MDD 7,9-8,8 pp bei 60 Records |
+| 7 | `dataset_manifest.json` | **Entwurf erstellt** - Disjunktheit geprüft, Referenz offen |
 | 8 | `reference.jsonl` annotieren und einfrieren | offen |
 | 9 | Prompts und Schema einfrieren | offen |
 | 10 | `freeze.json` | offen |
