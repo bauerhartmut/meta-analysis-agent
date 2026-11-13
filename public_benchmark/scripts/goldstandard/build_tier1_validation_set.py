@@ -77,7 +77,9 @@ def glass_records() -> list[dict[str, Any]]:
                 continue
             row = json.loads(line)
             cells = []
+            gold_rows = []
             for index, target in enumerate(row["target"].get("rows", [])):
+                gold_rows.append({"row_index": index, "fields": dict(target)})
                 for key, value in target.items():
                     if not isinstance(value, (int, float)) or isinstance(value, bool):
                         continue
@@ -100,6 +102,8 @@ def glass_records() -> list[dict[str, Any]]:
                     "outcome_label": row["review_context"].get("outcome", ""),
                     "outcome_type": "mixed",
                     "requested_fields": row["input"].get("requested_fields", []),
+                    "rows": gold_rows,
+                    "source_rows": row["target"].get("source_rows", []),
                     "cells": cells,
                     "provenance": {
                         "source_document": "GLASS v1.0.0 trialreviewbench-study-results",

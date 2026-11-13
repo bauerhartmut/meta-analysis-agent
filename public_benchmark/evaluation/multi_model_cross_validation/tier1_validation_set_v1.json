@@ -18,7 +18,7 @@
   },
   "records_without_cells": 0,
   "records_without_arm": 81,
-  "set_sha256": "92305e6702bb66172ab144250653e8dd3ef87cde6a3c620287f470586bf52928",
+  "set_sha256": "c08c4bdfe3a1c1916ecf3908705fb33b523c7cd708db4bf04e35d40b493f8775",
   "sources": {
     "eururology": "goldstandard_datasets/eururology_v1/records.jsonl",
     "glass_trialreviewbench": "goldstandard_datasets/glass_v1/original/trialreviewbench-study-results-v1.0.0.jsonl.gz"

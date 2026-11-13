@@ -13,8 +13,10 @@ Ausgabe: ``tier1_scores.json`` und eine Tabelle auf der Konsole.
 from __future__ import annotations
 
 import argparse
+import difflib
 import json
 import random
+import re
 from collections import Counter, defaultdict
 from pathlib import Path
 from typing import Any
@@ -89,6 +91,137 @@ def score(records: list[dict[str, Any]], predictions: dict[tuple[str, str], dict
     return per_record
 
 
+IDENT_KEYS = ("study", "name")
+
+
+def _norm(text: str) -> str:
+    return " ".join(re.sub(r"[^a-z0-9 ]", " ", str(text).lower()).split())
+
+
+def _identifier(row: dict[str, Any]) -> str:
+    for key, value in row.items():
+        if key.lower() in IDENT_KEYS and isinstance(value, str) and value.strip():
+            return _norm(value)
+    return ""
+
+
+def _similar(left: str, right: str) -> float:
+    if not left or not right:
+        return 0.0
+    if left == right:
+        return 1.0
+    left_tokens, right_tokens = set(left.split()), set(right.split())
+    if left_tokens and right_tokens:
+        overlap = len(left_tokens & right_tokens) / len(left_tokens | right_tokens)
+        if overlap >= 0.6:
+            return overlap
+    return difflib.SequenceMatcher(None, left, right).ratio()
+
+
+def _numeric(row: dict[str, Any]) -> dict[str, float]:
+    values = {}
+    for key, value in row.items():
+        if isinstance(value, bool) or value is None:
+            continue
+        try:
+            values[key] = float(str(value).replace(",", "."))
+        except (TypeError, ValueError):
+            continue
+    return values
+
+
+EFFECT_KEYS = ("HR", "OR", "RR", "CR", "DCR", "ORR", "ODDS_RATIO", "ODDS RATIO", "RISK_RATIO")
+
+
+def _best_match(gold_rows: list[dict[str, Any]], pred_rows: list[dict[str, Any]]) -> dict[int, int]:
+    """Ordnet Goldzeilen den Vorhersagezeilen zu.
+
+    Anker ist die Uebereinstimmung numerischer Zellen, weil die Modelle die
+    Zeilen anders benennen als der Goldstandard. Effektgroessen zaehlen doppelt,
+    ein aehnlicher Studienname gibt einen kleinen Zusatzpunkt. Ohne mindestens
+    eine uebereinstimmende Zahl gibt es keine Zuordnung.
+    """
+    pairs: dict[int, int] = {}
+    used: set[int] = set()
+    for index, gold in enumerate(gold_rows):
+        gold_values = _numeric(gold)
+        target = _identifier(gold)
+        scored = []
+        for position, pred in enumerate(pred_rows):
+            if position in used:
+                continue
+            pred_values = _numeric(pred)
+            shared = [key for key in gold_values if key in pred_values and close(pred_values[key], gold_values[key])]
+            if not shared:
+                continue
+            score = len(shared) + sum(1 for key in shared if key.upper() in EFFECT_KEYS)
+            score += 0.5 * _similar(target, _identifier(pred)) if target else 0.0
+            scored.append((score, position))
+        scored.sort(reverse=True)
+        if scored:
+            pairs[index] = scored[0][1]
+            used.add(scored[0][1])
+    return pairs
+
+
+def score_aligned(records, predictions, model: str) -> dict[str, Any]:
+    hits = wrong = missing = extra = 0
+    records_total = records_matched = records_exact = 0
+    for record in records:
+        entry = predictions.get((record["record_id"], model))
+        gold_rows = [row.get("fields", row) for row in record.get("rows") or []]
+        if not gold_rows:
+            continue
+        records_total += 1
+        pred_rows = entry.get("rows") or [] if entry else []
+        pairs = _best_match(gold_rows, pred_rows) if pred_rows else {}
+        if pairs:
+            records_matched += 1
+        record_ok = bool(pairs) and len(pairs) == len(gold_rows)
+        for index, gold in enumerate(gold_rows):
+            gold_values = _numeric(gold)
+            position = pairs.get(index)
+            if position is None:
+                missing += len(gold_values)
+                record_ok = False
+                continue
+            pred_values = _numeric(pred_rows[position])
+            for key, value in gold_values.items():
+                if key in pred_values:
+                    if close(pred_values[key], value):
+                        hits += 1
+                    else:
+                        wrong += 1
+                        record_ok = False
+                else:
+                    missing += 1
+                    record_ok = False
+            extra += sum(1 for key in pred_values if key not in gold_values)
+        paired = set(pairs.values())
+        for position, pred in enumerate(pred_rows):
+            if position not in paired:
+                extra += len(_numeric(pred))
+                record_ok = False
+        if record_ok:
+            records_exact += 1
+    gold_total = hits + wrong + missing
+    return {
+        "records": records_total,
+        "records_with_alignment": records_matched,
+        "alignment_rate": round(records_matched / records_total, 4) if records_total else None,
+        "gold_cells": gold_total,
+        "matched_cells": hits,
+        "wrong_cells": wrong,
+        "missing_cells": missing,
+        "extra_cells": extra,
+        "recall": round(hits / gold_total, 4) if gold_total else None,
+        "precision": round(hits / (hits + wrong + extra), 4) if (hits + wrong + extra) else None,
+        "conditional_accuracy": round(hits / (hits + wrong), 4) if (hits + wrong) else None,
+        "record_exact": records_exact,
+        "record_exact_rate": round(records_exact / records_total, 4) if records_total else None,
+    }
+
+
 def bootstrap(per_record: dict[str, dict[str, Any]], rounds: int, seed: int = 20261113) -> dict[str, float]:
     clusters: dict[str, list[dict[str, Any]]] = defaultdict(list)
     for row in per_record.values():
@@ -117,6 +250,11 @@ def main() -> int:
     parser.add_argument("--predictions", type=Path, default=RUN)
     parser.add_argument("--out", type=Path, default=OUT)
     parser.add_argument("--bootstrap", type=int, default=1000)
+    parser.add_argument(
+        "--aligned",
+        action="store_true",
+        help="zusaetzlich zeilenweise Auswertung mit Studiennamen-Abgleich",
+    )
     parser.add_argument(
         "--common",
         action="store_true",
@@ -181,6 +319,8 @@ def main() -> int:
             "failed_calls": len(errors),
             "bootstrap_recall": bootstrap(per_record, args.bootstrap) if args.bootstrap else None,
         }
+        if args.aligned:
+            payload["models"][model]["aligned"] = score_aligned(records, predictions, model)
 
     args.out.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f"{'Modell':10} {'Records':>8} {'beantw.':>8} {'Recall':>8} {'Prec':>8} {'Zellen':>7} {'exakt':>6}")
