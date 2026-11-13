@@ -1,0 +1,253 @@
+{
+  "review_id": "public_goldstandard_dataset_review_v1",
+  "created": "2026-11-13",
+  "question": "Koennen wir die Cross-Validation mit bereits existierenden Goldstandard-Daten durchfuehren, ohne neue menschliche Annotationen zu organisieren?",
+  "answer": "nein_fuer_das_geplante_design_ja_fuer_eine_externe_validierung",
+  "answer_detail": "Kein oeffentlich verfuegbarer Datensatz deckt die fuenf Provenienzfelder aus schema_v1 (page, table_or_section, source_cell_or_location, source_context, timepoint_id) ab. Numerische Armwerte mit menschlicher Annotation existieren (Yun, European-Urology-Teilmenge, GLASS), aber ohne Belegstelle im Dokument. Fuer eine vorgeschaltete externe Validierung der Zahlen- und Armgenauigkeit reichen die vorhandenen Daten.",
+  "criteria": [
+    "menschliche_annotation",
+    "unabhaengige_pruefung_dokumentiert",
+    "originalpublikation_identifizierbar",
+    "numerische_armwerte",
+    "mittelwert_sd_gruppengroesse",
+    "ereigniszahlen_gruppengroesse",
+    "intervention_kontrolle_zugeordnet",
+    "outcome_zeitpunkt_zugeordnet",
+    "quellenfundstelle_provenienz",
+    "lizenz_oeffentlich",
+    "ueberschneidung_ausgeschlossen"
+  ],
+  "datasets": [
+    {
+      "id": "yun2024",
+      "name": "Yun et al. 2024, Numerical Results from RCTs",
+      "url": "https://github.com/hyesunyun/llm-meta-analysis",
+      "role": "referenz_fuer_schema_und_umfang",
+      "articles": 120,
+      "records": 699,
+      "local_subset": {"articles": 70, "records": 550},
+      "scores": {
+        "menschliche_annotation": "yes",
+        "unabhaengige_pruefung_dokumentiert": "partial",
+        "originalpublikation_identifizierbar": "yes",
+        "numerische_armwerte": "yes",
+        "mittelwert_sd_gruppengroesse": "yes",
+        "ereigniszahlen_gruppengroesse": "yes",
+        "intervention_kontrolle_zugeordnet": "yes",
+        "outcome_zeitpunkt_zugeordnet": "partial",
+        "quellenfundstelle_provenienz": "no",
+        "lizenz_oeffentlich": "yes",
+        "ueberschneidung_ausgeschlossen": "not_applicable"
+      },
+      "verdict": "usable_with_limitations",
+      "used_before": true,
+      "note": "Bereits im Projekt verwendet, daher nicht als unabhaengiger Testdatensatz einsetzbar. Abstrakt plus Results-Abschnitt, keine Seiten- oder Tabellenangabe, keine Zeitpunkte."
+    },
+    {
+      "id": "eururology_osf_8fzps",
+      "name": "Yisha et al. 2026, European-Urology-Goldstandard (OSF 8fzps)",
+      "url": "https://osf.io/8fzps/",
+      "publication": "BMC Med Res Methodol 2026;26:33, doi 10.1186/s12874-025-02729-5",
+      "articles": 20,
+      "records": 104,
+      "records_binary": 41,
+      "records_continuous": 63,
+      "scores": {
+        "menschliche_annotation": "yes",
+        "unabhaengige_pruefung_dokumentiert": "partial",
+        "originalpublikation_identifizierbar": "yes",
+        "numerische_armwerte": "yes",
+        "mittelwert_sd_gruppengroesse": "yes",
+        "ereigniszahlen_gruppengroesse": "yes",
+        "intervention_kontrolle_zugeordnet": "yes",
+        "outcome_zeitpunkt_zugeordnet": "partial",
+        "quellenfundstelle_provenienz": "no",
+        "lizenz_oeffentlich": "partial",
+        "ueberschneidung_ausgeschlossen": "yes"
+      },
+      "verdict": "usable_with_limitations",
+      "note": "Veroeffentlicht sind nur die in die gepoolten Analysen eingegangenen Trials (20 statt der im Artikel genannten 105), ohne Seiten-, Tabellen- oder Zellangabe, ohne Zeitpunkt und ohne Lizenz. 36 Zeilen ohne jeden Goldwert, 4 gepoolte Zeilen entfernt."
+    },
+    {
+      "id": "pico_corpus",
+      "name": "PICO-Corpus (Mutinda et al., WIESP 2022)",
+      "url": "https://github.com/sociocom/PICO-Corpus",
+      "articles": 1011,
+      "records": 5024,
+      "scores": {
+        "menschliche_annotation": "yes",
+        "unabhaengige_pruefung_dokumentiert": "partial",
+        "originalpublikation_identifizierbar": "yes",
+        "numerische_armwerte": "yes",
+        "mittelwert_sd_gruppengroesse": "partial",
+        "ereigniszahlen_gruppengroesse": "partial",
+        "intervention_kontrolle_zugeordnet": "yes",
+        "outcome_zeitpunkt_zugeordnet": "no",
+        "quellenfundstelle_provenienz": "partial",
+        "lizenz_oeffentlich": "partial",
+        "ueberschneidung_ausgeschlossen": "yes"
+      },
+      "verdict": "usable_with_limitations",
+      "note": "Nur Abstrakts, keine Relation zwischen Zahl und Outcome, keine Zeitpunkte, kein Lizenztext. Numerische Spans mit Armbezug (iv/cv) und Statistiktyp sind vorhanden; 217 Zahlen liegen als Wort vor."
+    },
+    {
+      "id": "glass_trialreviewbench_results",
+      "name": "GLASS Data Extraction Benchmark v1.0.0, TrialReviewBench study results",
+      "url": "https://github.com/InvestmentMDideas/GLASS-Data-Extraction-Benchmark/releases/tag/v1.0.0",
+      "articles": 45,
+      "records": 81,
+      "scores": {
+        "menschliche_annotation": "yes",
+        "unabhaengige_pruefung_dokumentiert": "unknown",
+        "originalpublikation_identifizierbar": "yes",
+        "numerische_armwerte": "yes",
+        "mittelwert_sd_gruppengroesse": "partial",
+        "ereigniszahlen_gruppengroesse": "yes",
+        "intervention_kontrolle_zugeordnet": "partial",
+        "outcome_zeitpunkt_zugeordnet": "partial",
+        "quellenfundstelle_provenienz": "partial",
+        "lizenz_oeffentlich": "partial",
+        "ueberschneidung_ausgeschlossen": "yes"
+      },
+      "verdict": "usable_with_limitations",
+      "note": "81 Ergebniszeilen aus 45 Publikationen, Felder heterogen (Events/Total/n, HR, sample). Quelltexte werden nicht mitgeliefert, Lizenz nur fuer die Labels (MIT), Artikelrechte bleiben bei den Verlagen, NonCommercial-Anteile im Gesamtpaket."
+    },
+    {
+      "id": "evidenceoutcomes",
+      "name": "EvidenceOutcomes (Zhou et al. 2025)",
+      "url": "https://github.com/ebmlab/EvidenceOutcomes",
+      "articles": 640,
+      "records": 0,
+      "scores": {
+        "menschliche_annotation": "yes",
+        "unabhaengige_pruefung_dokumentiert": "yes",
+        "originalpublikation_identifizierbar": "yes",
+        "numerische_armwerte": "no",
+        "mittelwert_sd_gruppengroesse": "no",
+        "ereigniszahlen_gruppengroesse": "no",
+        "intervention_kontrolle_zugeordnet": "no",
+        "outcome_zeitpunkt_zugeordnet": "no",
+        "quellenfundstelle_provenienz": "partial",
+        "lizenz_oeffentlich": "yes",
+        "ueberschneidung_ausgeschlossen": "unknown"
+      },
+      "verdict": "unsuitable",
+      "note": "Outcome-Spans in Abstrakts, keine Zahlen. Als Negativkontrolle fuer Outcome-Erkennung brauchbar, nicht fuer numerische Ground Truth."
+    },
+    {
+      "id": "ebm_nlp",
+      "name": "EBM-NLP (Nye et al. 2018)",
+      "url": "https://github.com/bepnye/EBM-NLP",
+      "articles": 4993,
+      "records": 0,
+      "scores": {
+        "menschliche_annotation": "yes",
+        "unabhaengige_pruefung_dokumentiert": "partial",
+        "originalpublikation_identifizierbar": "yes",
+        "numerische_armwerte": "no",
+        "mittelwert_sd_gruppengroesse": "no",
+        "ereigniszahlen_gruppengroesse": "no",
+        "intervention_kontrolle_zugeordnet": "partial",
+        "outcome_zeitpunkt_zugeordnet": "no",
+        "quellenfundstelle_provenienz": "partial",
+        "lizenz_oeffentlich": "yes",
+        "ueberschneidung_ausgeschlossen": "no"
+      },
+      "verdict": "unsuitable",
+      "note": "PICO-Spans ohne Zahlen. Ausserdem ist EvidenceOutcomes teilweise aus EBM-NLP abgeleitet, eine Doppelverwendung waere keine unabhaengige Stichprobe."
+    },
+    {
+      "id": "kataoka2026_automating_de",
+      "name": "Kataoka et al. 2026, Automating data extraction (RSM)",
+      "url": "https://github.com/Tomo-for-lab/automating-DE",
+      "publication": "Research Synthesis Methods, doi 10.1017/rsm.2025.10030",
+      "articles": 290,
+      "records": 0,
+      "scores": {
+        "menschliche_annotation": "yes",
+        "unabhaengige_pruefung_dokumentiert": "yes",
+        "originalpublikation_identifizierbar": "yes",
+        "numerische_armwerte": "unknown",
+        "mittelwert_sd_gruppengroesse": "unknown",
+        "ereigniszahlen_gruppengroesse": "unknown",
+        "intervention_kontrolle_zugeordnet": "unknown",
+        "outcome_zeitpunkt_zugeordnet": "unknown",
+        "quellenfundstelle_provenienz": "partial",
+        "lizenz_oeffentlich": "unknown",
+        "ueberschneidung_ausgeschlossen": "unknown"
+      },
+      "verdict": "unsuitable",
+      "note": "Der Artikel nennt den Datensatz als offen verfuegbar, das Repository enthaelt aber nur 20 Dateien (Notebooks, requirement.txt, README) und keine Referenzdaten. Ohne Anfrage an die Autoren nicht nutzbar."
+    },
+    {
+      "id": "good_enough_benchmark",
+      "name": "What level of automation is good enough? (2026)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13311339",
+      "articles": 58,
+      "records": 0,
+      "scores": {
+        "menschliche_annotation": "yes",
+        "unabhaengige_pruefung_dokumentiert": "yes",
+        "originalpublikation_identifizierbar": "yes",
+        "numerische_armwerte": "unknown",
+        "mittelwert_sd_gruppengroesse": "unknown",
+        "ereigniszahlen_gruppengroesse": "unknown",
+        "intervention_kontrolle_zugeordnet": "unknown",
+        "outcome_zeitpunkt_zugeordnet": "partial",
+        "quellenfundstelle_provenienz": "partial",
+        "lizenz_oeffentlich": "no",
+        "ueberschneidung_ausgeschlossen": "unknown"
+      },
+      "verdict": "unsuitable",
+      "note": "Daten nur beim korrespondierenden Autor auf Anfrage. Kein Download, keine Lizenz fuer die Daten."
+    },
+    {
+      "id": "srdr_plus",
+      "name": "SRDR+ (AHRQ)",
+      "url": "https://srdrplus.ahrq.gov/",
+      "articles": 19898,
+      "records": 0,
+      "scores": {
+        "menschliche_annotation": "yes",
+        "unabhaengige_pruefung_dokumentiert": "partial",
+        "originalpublikation_identifizierbar": "yes",
+        "numerische_armwerte": "partial",
+        "mittelwert_sd_gruppengroesse": "partial",
+        "ereigniszahlen_gruppengroesse": "partial",
+        "intervention_kontrolle_zugeordnet": "partial",
+        "outcome_zeitpunkt_zugeordnet": "partial",
+        "quellenfundstelle_provenienz": "no",
+        "lizenz_oeffentlich": "no",
+        "ueberschneidung_ausgeschlossen": "unknown"
+      },
+      "verdict": "unsuitable",
+      "note": "Das Repositorium ist geschlossen; die Domain leitet auf eine Abschiedsseite um (HTTP 301/202 am 13.11.2026). Die 225 oeffentlichen Reviews mit rund 20.000 Studien sind nicht mehr abrufbar."
+    }
+  ],
+  "integrated": {
+    "eururology_osf_8fzps": {
+      "adapter": "public_benchmark/scripts/goldstandard/adapter_eururology.py",
+      "output": "goldstandard_datasets/eururology_v1/records.jsonl",
+      "records": 104,
+      "archive": "goldstandard_datasets/eururology_v1/original/"
+    },
+    "pico_corpus": {
+      "adapter": "public_benchmark/scripts/goldstandard/adapter_pico_corpus.py",
+      "output": "goldstandard_datasets/pico_corpus_v1/records.jsonl",
+      "records": 5024
+    }
+  },
+  "missing_for_schema_v1": {
+    "all_datasets": ["page", "table_or_section", "source_cell_or_location", "source_context", "timepoint_id"],
+    "eururology": ["timepoint", "belegstelle", "lizenz", "vollstaendige 105 Trials"],
+    "pico_corpus": ["outcome_id-Verknuepfung", "timepoint", "Volltext"],
+    "glass": ["Quelltexte", "einheitliches Feldmodell", "mean/SD"],
+    "yun": ["belegstelle", "timepoint"]
+  },
+  "overlap_report": "dataset_overlap_report.json",
+  "recommendation": {
+    "tier1_external_validation": "European-Urology-Teilmenge (104 Records, 20 Trials) plus GLASS (81 Records, 45 Publikationen) als externe Validierung ohne neue Annotation",
+    "tier2_reference": "25 Artikel weiterhin menschlich annotieren, weil nur so die Provenienzfelder aus schema_v1 belegt werden koennen",
+    "power_note": "185 externe Records liegen oberhalb der 100er-Zeile der Power-Rechnung, die MDD waere kleiner als 6,5 Prozentpunkte; ein genauer Wert wurde nicht neu gerechnet"
+  }
+}
