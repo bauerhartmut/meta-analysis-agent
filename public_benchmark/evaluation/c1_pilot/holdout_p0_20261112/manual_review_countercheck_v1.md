@@ -14,5 +14,5 @@ Titel und Abstract. Es gab keinen Volltextzugriff und keinen Netzabruf.
 **Ergebnis:** 3 von 3 Ausschlüssen menschlich bestätigt, 0 Korrekturen.
 
 Damit verbleiben 48 assistierte Entscheidungen; diese wurden separat vorprüft
-(48/48 bestätigt, 0 Korrekturen). Dreißig davon wurden am 2026-11-12 menschlich
-bestätigt; die menschliche Freigabe der übrigen 18 Fälle bleibt offen.
+(48/48 bestätigt, 0 Korrekturen). Vierzig davon wurden am 2026-11-12 menschlich
+bestätigt; die menschliche Freigabe der übrigen 8 Fälle bleibt offen.

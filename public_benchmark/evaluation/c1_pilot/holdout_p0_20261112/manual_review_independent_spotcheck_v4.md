@@ -19,7 +19,7 @@ Volltext, kein Netzabruf. Es wurden keine Entscheidungen geändert.
 | 56 | PMC13583526 | ausschluss (X06) | post hoc secondary analysis of a randomized controlled trial ... Data from 151 participants ... who were assigned to an AI-based diabetes prevention program (Sweetch) ... Engagement ... was analyzed. | Nur Interventionsarm; Engagementanalyse ohne Kontrollarm. Ausschluss X06 bestaetigt. |
 | 57 | PMC13595287 | ausschluss (X03) | post hoc analysis included participants without prior heart failure from the STROKESTOP and STROKESTOP II randomized screening studies ... Incident heart failure diagnoses ... Screening-detected atrial fibrillation was associated with ... | Beobachtende Gruppen nach Screening-detektiertem Vorhofflimmern; kein randomisierter Armvergleich. Ausschluss X03 bestaetigt. |
 
-**Ergebnis:** 10 von 10 bestätigt, 0 Korrekturvorschläge.
+**Ergebnis:** 10 von 10 menschlich bestätigt, 0 Korrekturvorschläge.
 
-Der Reviewer bleibt `Codebuff assistiert`; die menschliche Freigabe dieser
-zehn Fälle steht aus. CSV und finale Entscheidungen sind unverändert.
+Reviewer ist **HB**, Datum 2026-11-12. Die finalen Entscheidungen sind
+unverändert; die Begründungen wurden in die CSV übernommen.

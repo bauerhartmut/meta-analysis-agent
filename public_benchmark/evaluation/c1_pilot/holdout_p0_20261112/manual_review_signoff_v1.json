@@ -2,11 +2,11 @@
   "signoff_id": "p0_manual_signoff_v1",
   "status": "complete_assisted_pending_human_review",
   "human_review": "partial",
-  "human_reviewed": 47,
-  "assisted_reviewed": 18,
+  "human_reviewed": 57,
+  "assisted_reviewed": 8,
   "signoff_status": "complete_assisted_pending_human_review",
   "reviewed": 65,
-  "assisted": 18,
+  "assisted": 8,
   "human_review_complete": false,
   "records": 65,
   "counts": {
@@ -545,10 +545,10 @@
       "priority": "mittel",
       "open_question": "Kleine Stichprobe; Complete-case/ITT-Armwerte pruefen.",
       "needs_fulltext": true,
-      "reviewer": "Codebuff assistiert",
+      "reviewer": "HB",
       "review_date": "2026-11-12",
       "final_decision": "einschluss",
-      "human_note": "Sekundaeranalyse eines placebo-kontrollierten RCT; zwei Arme; metabolische Endpunkte; Volltext. Assistierte Entscheidung nach Delegation; keine menschliche Einzelpruefung.",
+      "human_note": "12-Wochen-RCT; Probiotikum vs. Placebo bei PCOS; HOMA-IR und Lipide. Menschliche Bestaetigung durch HB am 2026-11-12: Einschluss bestaetigt.",
       "number": 28
     },
     {
@@ -564,10 +564,10 @@
       "priority": "mittel",
       "open_question": "Kleine Stichprobe; Blutdruck-Armwerte und Zeitpunkt pruefen.",
       "needs_fulltext": true,
-      "reviewer": "Codebuff assistiert",
+      "reviewer": "HB",
       "review_date": "2026-11-12",
       "final_decision": "einschluss",
-      "human_note": "Sekundaeranalyse eines randomisierten Parallelgruppen-RCT; zwei Ballaststoffarme; Blutdruckwerte; Volltext. Assistierte Entscheidung nach Delegation; keine menschliche Einzelpruefung.",
+      "human_note": "Randomisierte Doppelblindstudie; SDF n=19 vs. IDF n=16; systolischer Blutdruck. Menschliche Bestaetigung durch HB am 2026-11-12: Einschluss bestaetigt.",
       "number": 29
     },
     {
@@ -583,10 +583,10 @@
       "priority": "mittel",
       "open_question": "Sekundaeranalyse, n=32; Arm-N/Mean/SD und 3-Monats-Zeitpunkt pruefen.",
       "needs_fulltext": true,
-      "reviewer": "Codebuff assistiert",
+      "reviewer": "HB",
       "review_date": "2026-11-12",
       "final_decision": "einschluss",
-      "human_note": "Sekundaeranalyse eines RCT; zwei Expansionsverfahren; Kiefer-/Atemwegsendpunkte; Volltext. Assistierte Entscheidung nach Delegation; keine menschliche Einzelpruefung.",
+      "human_note": "RCT-Sekundaeranalyse; TB-RPE n=13 vs. TBB-MARPE n=19; Skelett- und Atemwegsendpunkte. Menschliche Bestaetigung durch HB am 2026-11-12: Einschluss bestaetigt.",
       "number": 30
     },
     {
@@ -621,10 +621,10 @@
       "priority": "mittel",
       "open_question": "Selbstberichtete binaere Outcomes; N/Ereignisse pro Arm pruefen.",
       "needs_fulltext": true,
-      "reviewer": "Codebuff assistiert",
+      "reviewer": "HB",
       "review_date": "2026-11-12",
       "final_decision": "einschluss",
-      "human_note": "Sekundaeranalyse eines RCT; Exercise vs. Kontrolle; Gedaechtnis/ADL; Volltext. Assistierte Entscheidung nach Delegation; keine menschliche Einzelpruefung.",
+      "human_note": "PHYSSURG-C; 1:1 randomisiert; Bewegung vs. Kontrolle; Gedaechtnis und Alltagsaktivitaeten. Menschliche Bestaetigung durch HB am 2026-11-12: Einschluss bestaetigt.",
       "number": 32
     },
     {
@@ -640,10 +640,10 @@
       "priority": "mittel",
       "open_question": "Sekundaeranalyse; mRS-Ereignisse pro Arm und Verschluss-Subgruppen pruefen.",
       "needs_fulltext": true,
-      "reviewer": "Codebuff assistiert",
+      "reviewer": "HB",
       "review_date": "2026-11-12",
       "final_decision": "einschluss",
-      "human_note": "Praeplanmaessige Sekundaeranalyse eines RCT; IA-Tenecteplase vs. Standard; mRS binaer; Volltext. Assistierte Entscheidung nach Delegation; keine menschliche Einzelpruefung.",
+      "human_note": "ANGEL-TNK; 1:1 randomisiert; IA-Tenecteplase vs. Standard; 90-Tage-mRS. Menschliche Bestaetigung durch HB am 2026-11-12: Einschluss bestaetigt.",
       "number": 33
     },
     {
@@ -1020,10 +1020,10 @@
       "priority": "niedrig",
       "open_question": "Interrater; kein Armvergleich.",
       "needs_fulltext": false,
-      "reviewer": "Codebuff assistiert",
+      "reviewer": "HB",
       "review_date": "2026-11-12",
       "final_decision": "ausschluss",
-      "human_note": "Interrater-Analyse ohne Armvergleich; kein Behandlungseffekt. Assistierte Entscheidung nach Delegation; keine menschliche Einzelpruefung.",
+      "human_note": "DIRECTOR; Interrater-Resektabilitaet ohne randomisierten Armvergleich. Menschliche Bestaetigung durch HB am 2026-11-12: Ausschluss bestaetigt.",
       "number": 53
     },
     {
@@ -1039,10 +1039,10 @@
       "priority": "niedrig",
       "open_question": "Paternale Assoziation; kein Interventionseffekt.",
       "needs_fulltext": false,
-      "reviewer": "Codebuff assistiert",
+      "reviewer": "HB",
       "review_date": "2026-11-12",
       "final_decision": "ausschluss",
-      "human_note": "Assoziationsanalyse paternaler Faktoren; kein Interventionseffekt. Assistierte Entscheidung nach Delegation; keine menschliche Einzelpruefung.",
+      "human_note": "Paternale Assoziationsanalyse ohne randomisierten Armvergleich. Menschliche Bestaetigung durch HB am 2026-11-12: Ausschluss bestaetigt.",
       "number": 54
     },
     {
@@ -1058,10 +1058,10 @@
       "priority": "niedrig",
       "open_question": "Drei Arme; kein Zweiarm-Vergleich.",
       "needs_fulltext": false,
-      "reviewer": "Codebuff assistiert",
+      "reviewer": "HB",
       "review_date": "2026-11-12",
       "final_decision": "ausschluss",
-      "human_note": "Drei Arme (EXE, MOT, CON); kein Zweiarm-Vergleich. Assistierte Entscheidung nach Delegation; keine menschliche Einzelpruefung.",
+      "human_note": "FitMum; drei Arme EXE, MOT, CON. Menschliche Bestaetigung durch HB am 2026-11-12: Ausschluss bestaetigt.",
       "number": 55
     },
     {
@@ -1077,10 +1077,10 @@
       "priority": "niedrig",
       "open_question": "Nur Interventionsarm; keine Kontrollgruppe.",
       "needs_fulltext": false,
-      "reviewer": "Codebuff assistiert",
+      "reviewer": "HB",
       "review_date": "2026-11-12",
       "final_decision": "ausschluss",
-      "human_note": "Nur Interventionsarm; Engagementanalyse ohne Kontrollgruppe. Assistierte Entscheidung nach Delegation; keine menschliche Einzelpruefung.",
+      "human_note": "Nur Interventionsarm; Engagementanalyse ohne Kontrollgruppe. Menschliche Bestaetigung durch HB am 2026-11-12: Ausschluss bestaetigt.",
       "number": 56
     },
     {
@@ -1096,10 +1096,10 @@
       "priority": "niedrig",
       "open_question": "Beobachtungskohorten; kein randomisierter Armvergleich.",
       "needs_fulltext": false,
-      "reviewer": "Codebuff assistiert",
+      "reviewer": "HB",
       "review_date": "2026-11-12",
       "final_decision": "ausschluss",
-      "human_note": "Post-hoc-Beobachtung von Screening-Kohorten; kein randomisierter Armvergleich. Assistierte Entscheidung nach Delegation; keine menschliche Einzelpruefung.",
+      "human_note": "STROKESTOP; beobachtende Gruppen nach Screening-AF; kein randomisierter Armvergleich. Menschliche Bestaetigung durch HB am 2026-11-12: Ausschluss bestaetigt.",
       "number": 57
     },
     {

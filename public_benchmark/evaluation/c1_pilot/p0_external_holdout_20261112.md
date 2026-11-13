@@ -1,7 +1,7 @@
 # P0: Externer C1-Holdout - Beschaffungsplan
 
 Stand: 2026-11-12
-Status: **MANUELLE PRUEFUNG ABGESCHLOSSEN (ASSISTIERT) - 47 menschlich, 18 assistiert; 181 ausgeschlossen, 415 vorlaeufig fuer Volltext; menschliche Gegenpruefung offen, nicht G5-valid**
+Status: **MANUELLE PRUEFUNG ABGESCHLOSSEN (ASSISTIERT) - 57 menschlich, 8 assistiert; 181 ausgeschlossen, 415 vorlaeufig fuer Volltext; menschliche Gegenpruefung offen, nicht G5-valid**
 Ziel: 30 Artikel, 100 Records, artikeldisjunkt zu Dev und zum verbrauchten Test
 
 ### Statusfelder
@@ -10,8 +10,8 @@ Ziel: 30 Artikel, 100 Records, artikeldisjunkt zu Dev und zum verbrauchten Test
 |---|---|---|
 | `status`, `signoff_status` | `pending_human_review`, `complete_assisted_pending_human_review`, `complete` | `complete_assisted_pending_human_review` |
 | `human_review` | `pending`, `partial`, `complete` | `partial` |
-| `human_reviewed` | Ganzzahl 0-65 | 47 |
-| `assisted_reviewed` | Ganzzahl 0-65 | 18 |
+| `human_reviewed` | Ganzzahl 0-65 | 57 |
+| `assisted_reviewed` | Ganzzahl 0-65 | 8 |
 
 `human_review: "partial"` heisst: menschliche und assistierte Entscheidungen
 gemischt; `complete` erst, wenn keine assistierte Entscheidung mehr vorliegt.
@@ -23,12 +23,10 @@ boolesch. Die Volltextskripte lesen nur `signoff["rows"]`; der Validator liest
 die CSV. Kein Konsument erwartet einen booleschen Top-Level-Wert.
 
 Die 48 verbleibenden assistierten Fälle wurden am 2026-11-12 anhand ihrer
-Abstracts vorprüft: **48/48 bestätigt, 0 Korrekturen**. Dreißig dieser Fälle
-wurden in drei unabhängigen Runden erneut geprüft und **30/30 menschlich
-bestätigt**. Eine vierte Runde von zehn weiteren Fällen ergab **10/10
-Bestätigungen und 0 Korrekturvorschläge**; ihre menschliche Freigabe steht aus.
-Die Entscheidungen blieben unverändert. Die menschliche Freigabe der 18
-verbleibenden assistierten Fälle bleibt offen.
+Abstracts vorprüft: **48/48 bestätigt, 0 Korrekturen**. Vierzig dieser Fälle
+wurden in vier unabhängigen Runden erneut geprüft und **40/40 menschlich
+bestätigt**; die Entscheidungen blieben unverändert. Die menschliche Freigabe
+der 8 verbleibenden assistierten Fälle bleibt offen.
 
 ## 1. Entscheidung
 
@@ -106,8 +104,8 @@ Die 181 Ausschluesse setzen sich aus 152 Regelausschluessen und 29 manuellen
 Ausschluessen zusammen.
 
 Die 415 Volltextkandidaten sind **nicht** endgueltig eingeschlossen. Die 65
-Einzelfallentscheidungen sind eingetragen: **47 von HB**, **18 assistiert durch
-Codebuff**. Die menschliche Gegenpruefung der 18 assistierten Faelle steht aus.
+Einzelfallentscheidungen sind eingetragen: **57 von HB**, **8 assistiert durch
+Codebuff**. Die menschliche Gegenpruefung der 8 assistierten Faelle steht aus.
 Mehrfachgruende sind moeglich; die Regelzahlen
 sind nicht additiv.
 

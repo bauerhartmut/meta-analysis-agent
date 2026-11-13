@@ -28,8 +28,8 @@
     "X10": 1
   },
   "human_review": "partial",
-  "human_reviewed": 47,
-  "assisted_reviewed": 18,
+  "human_reviewed": 57,
+  "assisted_reviewed": 8,
   "signoff_status": "complete_assisted_pending_human_review",
   "human_signoff": "pending",
   "model_used": false,

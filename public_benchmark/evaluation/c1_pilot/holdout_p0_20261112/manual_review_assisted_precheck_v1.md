@@ -73,7 +73,7 @@ Titel und Abstract. Es gab keinen Volltextzugriff und keinen Netzabruf.
 
 **Ergebnis:** 48 von 48 bestätigt, 0 Korrekturen.
 
-Dreißig dieser Fälle wurden am 2026-11-12 nachträglich durch HB menschlich
-bestätigt; die aktuelle CSV ist maßgeblich. Für die verbleibenden 18 Fälle
+Vierzig dieser Fälle wurden am 2026-11-12 nachträglich durch HB menschlich
+bestätigt; die aktuelle CSV ist maßgeblich. Für die verbleibenden 8 Fälle
 bleibt der Reviewer `Codebuff assistiert` und die menschliche Freigabe offen.
 Es wurden keine finalen Entscheidungen geändert.
