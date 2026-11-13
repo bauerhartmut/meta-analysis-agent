@@ -119,7 +119,7 @@ def table_info(table_wrap: ET.Element) -> dict:
                 "row_index": index,
                 "row_label": row["cells"][0],
                 "values": values,
-                "row_text": " | ".join(row["cells"]),
+                "row_text": " | ".join(row["cells"]).rstrip(),
             }
         )
     return {
@@ -283,11 +283,11 @@ def main() -> None:
                         "priority": row["manual_priority"],
                         "table_label": table["label"],
                         "table_caption": table["caption"],
-                        "arm_headers": " || ".join(table["arm_headers"]),
+                        "arm_headers": " || ".join(table["arm_headers"]).rstrip(),
                         "row_index": table_row["row_index"],
                         "row_label": table_row["row_label"],
-                        "values": " || ".join(table_row["values"]),
-                        "row_text": table_row["row_text"],
+                        "values": " || ".join(table_row["values"]).rstrip(),
+                        "row_text": table_row["row_text"].rstrip(),
                     }
                 )
 
