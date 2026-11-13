@@ -200,6 +200,8 @@ append-only ergänzt; das Skript verändert keine Werte oder Status.
 - Gate: keine unverifizierte Zeile erreicht `build_analysis`
 - Gate prüft Wert und Evidenz erneut, nicht nur den Feldstatus
 - Abschlussprüfung bezieht offene Outcome-/Zeitpunktfelder ein
+- POST mit ausgewählter Evidenz verifiziert ein Feld, aber keinen Record mit
+  weiteren offenen Pflichtfeldern
 
 ## 12. Bewusste Nicht-Ziele
 

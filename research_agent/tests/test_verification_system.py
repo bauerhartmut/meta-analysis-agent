@@ -1,7 +1,11 @@
 from __future__ import annotations
 
 import json
+import threading
+from http.client import HTTPConnection
+from http.server import ThreadingHTTPServer
 from pathlib import Path
+from urllib.parse import urlencode
 
 import pytest
 
@@ -13,7 +17,7 @@ from research_agent.verification.schema import (
     compare_values, transition_field, transition_record,
 )
 from research_agent.verification.store import VerificationStore
-from research_agent.verification.review_server import render
+from research_agent.verification.review_server import ReviewHandler, render
 from research_agent.verification.workflow import (
     finalize_after_review, invalidate_on_source_change,
 )
@@ -348,6 +352,76 @@ def test_review_server_lists_all_evidence_for_selection(tmp_path):
     assert '<select name="evidence_id">' in page
     assert 'ev:source-a' in page and 'ev:source-b' in page
     assert 'evidence_id" value="ev:' not in page
+
+
+def test_posted_evidence_selection_does_not_auto_verify_record(tmp_path):
+    path = tmp_path / "audit.json"
+    store = VerificationStore(str(path))
+    store.register_record("r1", {
+        "document_hash": "x", "outcome_type": "continuous",
+        "required_fields": ["intervention_mean", "comparator_mean"],
+    })
+    store.record_comparison("r1", {
+        "field": "intervention_mean", "value_a": 1.0, "value_b": 1.0,
+        "comparison": "match", "rule": "test",
+        "field_status": "cross_checked",
+    })
+    store.record_comparison("r1", {
+        "field": "comparator_mean", "value_a": 2.0, "value_b": 9.0,
+        "comparison": "mismatch", "rule": "test",
+        "field_status": "unresolved",
+    })
+    store.add_evidence("r1", [{
+        "evidence_id": "ev:wrong", "field": "intervention_mean",
+        "table_id": "md:1", "row_label": "Posttreatment",
+        "column_label": "Intervention", "raw_cell": "9.9 (0.5)",
+    }, {
+        "evidence_id": "ev:selected", "field": "intervention_mean",
+        "table_id": "md:2", "row_label": "Posttreatment",
+        "column_label": "Intervention", "raw_cell": "1.0 (0.5)",
+    }])
+    store.set_status("r1", "cross_checked", "test")
+    store.set_status("r1", "pending_review", "test")
+
+    previous_store = getattr(ReviewHandler, "store", None)
+    ReviewHandler.store = store
+    server = ThreadingHTTPServer(("127.0.0.1", 0), ReviewHandler)
+    thread = threading.Thread(target=server.serve_forever, daemon=True)
+    thread.start()
+    connection = HTTPConnection("127.0.0.1", server.server_address[1], timeout=5)
+    try:
+        body = urlencode({
+            "record_id": "r1", "field": "intervention_mean",
+            "action": "confirm", "reviewer": "Pruefer POST",
+            "evidence_id": "ev:selected", "value": "", "note": "",
+        })
+        connection.request("POST", "/decision", body=body, headers={
+            "Content-Type": "application/x-www-form-urlencoded",
+            "Content-Length": str(len(body)),
+        })
+        response = connection.getresponse()
+        assert response.status == 303
+        response.read()
+    finally:
+        connection.close()
+        if previous_store is None:
+            del ReviewHandler.store
+        else:
+            ReviewHandler.store = previous_store
+        server.shutdown()
+        server.server_close()
+        thread.join(timeout=5)
+
+    reloaded = VerificationStore(str(path))
+    record = reloaded.record("r1")
+    field = record["fields"]["intervention_mean"]
+    assert field["status"] == "verified"
+    assert field["evidence_id"] == "ev:selected"
+    assert record["decisions"][-1]["evidence_id"] == "ev:selected"
+    # The other required field is still unresolved, so the record must stay
+    # open after the single evidence-backed POST.
+    assert record["fields"]["comparator_mean"]["status"] == "unresolved"
+    assert record["status"] == "pending_review"
 
 
 def test_adding_evidence_does_not_change_values_or_status(tmp_path):
