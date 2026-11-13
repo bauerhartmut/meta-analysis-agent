@@ -292,27 +292,58 @@ def _to_weeks(number: str, unit: str) -> float:
 TIMEPOINT_MARKER = re.compile(
     r"(post[\s-]?treatment|post[\s-]?intervention|"
     r"end of treatment|after treatment|nachbehandlung|behandlungsende|"
-    r"follow[\s-]?up|katamnese|baseline|mid[\s-]?treatment|mid|post\b)",
+    r"follow[\s-]?up|katamnese|baseline|mid[\s-]?treatment|mid\b|post\b)",
     re.IGNORECASE,
 )
 
 
-def _weeks_in_text(text: str) -> list[float]:
-    unit = (
-        r"(tag(?:e|en)?|day(?:s)?|woche(?:n)?|week(?:s)?|"
-        r"monat(?:e|en)?|month(?:s)?|jahr(?:e|en)?|year(?:s)?)"
-    )
-    number = r"(\d+(?:[.,]\d+)?)"
-    weeks: list[float] = []
-    for match in re.finditer(rf"{number}\s*-\s*{number}\s*{unit}", text):
-        weeks.append(_to_weeks(match.group(1), match.group(3)))
-        weeks.append(_to_weeks(match.group(2), match.group(3)))
-    for match in re.finditer(rf"{number}\s*{unit}|{unit}\s*{number}", text):
+WEEK_UNIT = (
+    r"(tag(?:e|en)?|day(?:s)?|woche(?:n)?|week(?:s)?|"
+    r"monat(?:e|en)?|month(?:s)?|jahr(?:e|en)?|year(?:s)?)"
+)
+WEEK_NUMBER = r"(\d+(?:[.,]\d+)?)"
+# Nur diese Zeichen duerfen zwischen Zahl und nachgestelltem Marker stehen.
+MARKER_CONNECTOR = re.compile(r"^[\s,;:()\[\]\-–—/]*$")
+CLAUSE_BOUNDARY = re.compile(r"[,;.\n]|\band\b|\bund\b|\bthen\b", re.IGNORECASE)
+
+
+def _week_occurrences(text: str) -> list[tuple[float, int, int]]:
+    """Liefert (Wochenwert, Zahlstart, Phrasenende) je Zeitangabe.
+
+    Das Phrasenende umfasst die Einheit ("12 weeks"), damit ein direkt
+    folgender Marker als nachgestellt erkannt werden kann.
+    """
+    occurrences: list[tuple[float, int, int]] = []
+    for match in re.finditer(
+        rf"{WEEK_NUMBER}\s*-\s*{WEEK_NUMBER}\s*{WEEK_UNIT}", text
+    ):
+        occurrences.append(
+            (_to_weeks(match.group(1), match.group(3)), match.start(1), match.end())
+        )
+        occurrences.append(
+            (_to_weeks(match.group(2), match.group(3)), match.start(2), match.end())
+        )
+    for match in re.finditer(rf"{WEEK_NUMBER}\s*{WEEK_UNIT}|{WEEK_UNIT}\s*{WEEK_NUMBER}", text):
         if match.group(1):
-            weeks.append(_to_weeks(match.group(1), match.group(2)))
+            value = _to_weeks(match.group(1), match.group(2))
+            start = match.start(1)
         else:
-            weeks.append(_to_weeks(match.group(4), match.group(3)))
-    return sorted({round(value, 2) for value in weeks})
+            value = _to_weeks(match.group(4), match.group(3))
+            start = match.start(4)
+        occurrences.append((value, start, match.end()))
+    return sorted(
+        {(round(value, 2), start, end) for value, start, end in occurrences},
+        key=lambda item: (item[1], item[0]),
+    )
+
+
+def _weeks_in_text(text: str) -> list[float]:
+    return sorted({value for value, _, _ in _week_occurrences(text)})
+
+
+def _clause_end(text: str, start: int) -> int:
+    match = CLAUSE_BOUNDARY.search(text, start)
+    return match.start() if match else len(text)
 
 
 def _marker_kind(marker: str) -> str:
@@ -334,6 +365,7 @@ def parse_timepoints(text: str | None) -> dict[str, Any]:
         return {
             "raw": text, "weeks": [], "post_treatment_weeks": [],
             "follow_up_weeks": [], "other_weeks": [], "status": "missing",
+            "ambiguous_post_treatment": False,
         }
     normalized = str(text).lower().replace("–", "-").replace("—", "-")
     markers = [
@@ -352,30 +384,53 @@ def parse_timepoints(text: str | None) -> dict[str, Any]:
         else:
             other.extend(weeks)
 
-    if not markers:
-        other.extend(_weeks_in_text(normalized))
-    else:
-        # Zahlen vor dem ersten Marker gehoeren zu dessen Zeitpunkt,
-        # z. B. "10 weeks post-treatment" oder "6 months follow-up".
-        assign(_weeks_in_text(normalized[:markers[0][0]]), markers[0][2])
-        for index, (_, end, kind) in enumerate(markers):
-            next_start = (
-                markers[index + 1][0] if index + 1 < len(markers)
-                else len(normalized)
-            )
-            assign(_weeks_in_text(normalized[end:next_start]), kind)
+    for value, start, end in _week_occurrences(normalized):
+        previous = None
+        following = None
+        for marker_start, marker_end, marker_kind in markers:
+            if marker_end <= start:
+                previous = (marker_start, marker_end, marker_kind)
+            elif marker_start >= end and following is None:
+                following = (marker_start, marker_end, marker_kind)
+        kind = "other"
+        if following:
+            gap = normalized[end:following[0]]
+            # Nachgestellter Marker ("12 weeks follow-up") nur, wenn die Zahl
+            # direkt davor steht und hinter dem Marker keine weitere Zahl folgt.
+            suffix = bool(MARKER_CONNECTOR.fullmatch(gap))
+            if suffix:
+                after = normalized[
+                    following[1]:_clause_end(normalized, following[1])
+                ]
+                suffix = not _weeks_in_text(after)
+            if suffix:
+                kind = following[2]
+            elif previous:
+                kind = previous[2]
+            else:
+                kind = following[2]
+        elif previous:
+            kind = previous[2]
+        assign([value], kind)
 
     post = sorted(set(post))
     follow = sorted(set(follow))
     other = sorted(set(other))
     all_weeks = sorted(set(post) | set(follow) | set(other))
+    if not markers:
+        # Ohne Marker ist der Zeitpunkt nicht als Post-Treatment belegt.
+        # Die Zahlen bleiben als "other" sichtbar, zaehlen aber nicht als Treffer.
+        status = "no_marker" if all_weeks else "unparsed"
+    else:
+        status = "parsed" if all_weeks else "unparsed"
     return {
         "raw": text,
         "weeks": all_weeks,
         "post_treatment_weeks": post,
         "follow_up_weeks": follow,
         "other_weeks": other,
-        "status": "parsed" if all_weeks else "unparsed",
+        "status": status,
+        "ambiguous_post_treatment": len(post) > 1,
     }
 
 
@@ -401,13 +456,19 @@ def compare_timepoints(
             "Follow-up-Werte zaehlen nicht"
         )
         return result
-    differences = [
-        abs(our - rev)
+    comparisons = [
+        (abs(our - rev), our, rev)
         for our in ours["post_treatment_weeks"]
         for rev in review["post_treatment_weeks"]
     ]
-    result["difference_weeks"] = round(min(differences), 2)
-    result["match"] = min(differences) <= tolerance_weeks
+    best_difference, best_our, best_review = min(comparisons)
+    result["difference_weeks"] = round(best_difference, 2)
+    result["matched_post_weeks"] = {"our": best_our, "review": best_review}
+    result["ambiguous_post_treatment"] = {
+        "our": ours["ambiguous_post_treatment"],
+        "review": review["ambiguous_post_treatment"],
+    }
+    result["match"] = best_difference <= tolerance_weeks
     result["reason"] = (
         "innerhalb der Wochentoleranz"
         if result["match"] else "ausserhalb der Wochentoleranz"
@@ -548,7 +609,7 @@ def build_result() -> dict[str, Any]:
             )
         exclusion_reasons[study_id] = reasons
     return {
-        "version": 3,
+        "version": 4,
         "created_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "scope": (
             "Abgleich projektinterner CBT-I-Primaerschstudien mit den "

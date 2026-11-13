@@ -123,6 +123,44 @@ def test_follow_up_only_is_not_comparable() -> None:
     assert comparison["match"] is None
 
 
+def test_mid_treatment_is_separate_from_post_treatment() -> None:
+    parsed = match.parse_timepoints("Mid 4 weeks Post 8 weeks")
+    assert parsed["other_weeks"] == [4.0]
+    assert parsed["post_treatment_weeks"] == [8.0]
+    assert parsed["status"] == "parsed"
+
+
+def test_multiple_post_treatment_values_are_flagged() -> None:
+    parsed = match.parse_timepoints("Post 6 weeks and post 10 weeks")
+    assert parsed["post_treatment_weeks"] == [6.0, 10.0]
+    assert parsed["ambiguous_post_treatment"] is True
+    comparison = match.compare_timepoints(
+        "10 weeks post-treatment", "Post 6 weeks and post 10 weeks"
+    )
+    assert comparison["match"] is True
+    assert comparison["matched_post_weeks"] == {"our": 10.0, "review": 10.0}
+
+
+def test_missing_marker_is_not_treated_as_post_treatment() -> None:
+    parsed = match.parse_timepoints("10 weeks")
+    assert parsed["status"] == "no_marker"
+    assert parsed["post_treatment_weeks"] == []
+    assert parsed["other_weeks"] == [10.0]
+    comparison = match.compare_timepoints("10 weeks post-treatment", "10 weeks")
+    assert comparison["match"] is None
+
+
+def test_suffix_follow_up_is_not_counted_as_post_treatment() -> None:
+    for text, expected_post in (
+        ("6 weeks post-treatment, 12 weeks follow-up", [6.0]),
+        ("Post 6 weeks, 12 weeks follow-up", [6.0]),
+        ("10 weeks post-treatment and 12 weeks follow-up", [10.0]),
+    ):
+        parsed = match.parse_timepoints(text)
+        assert parsed["post_treatment_weeks"] == expected_post
+        assert parsed["follow_up_weeks"] == [12.0]
+
+
 def test_freeman_uses_structured_timepoint_comparison() -> None:
     overlap = match.build_overlap(study("freeman_2017"), match.REVIEWS["lee2023"])
     comparison = overlap["timepoint_comparison"]

@@ -1,6 +1,6 @@
 {
-  "version": 3,
-  "created_at": "2026-11-13T12:31:02Z",
+  "version": 4,
+  "created_at": "2026-11-13T12:38:52Z",
   "scope": "Abgleich projektinterner CBT-I-Primaerschstudien mit den Studienlisten von Hwang 2025 und Lee 2023; keine Aenderung von Outcome-Werten, kein Modelllauf.",
   "project_30_documents": {
     "path": "data/golden_effects/documents.json",
@@ -218,7 +218,8 @@
           ],
           "follow_up_weeks": [],
           "other_weeks": [],
-          "status": "parsed"
+          "status": "parsed",
+          "ambiguous_post_treatment": false
         },
         "review": {
           "raw": "10 Wochen post-treatment",
@@ -230,12 +231,21 @@
           ],
           "follow_up_weeks": [],
           "other_weeks": [],
-          "status": "parsed"
+          "status": "parsed",
+          "ambiguous_post_treatment": false
         },
         "tolerance_weeks": 0.5,
         "match": true,
         "difference_weeks": 0.0,
         "reason": "innerhalb der Wochentoleranz",
+        "matched_post_weeks": {
+          "our": 10.0,
+          "review": 10.0
+        },
+        "ambiguous_post_treatment": {
+          "our": false,
+          "review": false
+        },
         "ignored_follow_up_weeks": []
       },
       "timepoint_match": true,

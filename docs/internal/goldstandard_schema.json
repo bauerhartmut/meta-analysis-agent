@@ -84,6 +84,34 @@
         "n": {"type": ["integer", "null"], "minimum": 1},
         "adjusted": {"type": ["boolean", "null"]},
         "time_point": {"type": ["string", "null"]},
+        "time_point_segments": {
+          "type": ["object", "null"],
+          "description": "Abgeleitete Segmentierung von time_point. time_point bleibt die annotierte Quelle; die Segmentierung ersetzt ihn nicht und aendert keine Outcome-Werte. Nur post_treatment_weeks darf als Post-Treatment-Treffer gelten. Erzeugt mit public_benchmark/scripts/segment_timepoint_schema.py.",
+          "additionalProperties": false,
+          "required": ["status", "post_treatment_weeks", "follow_up_weeks",
+                       "other_weeks", "ambiguous_post_treatment"],
+          "properties": {
+            "status": {
+              "enum": ["parsed", "no_marker", "unparsed", "missing"],
+              "description": "no_marker = Zeitangabe ohne Post-/Follow-up-Marker; zaehlt nicht als Post-Treatment."
+            },
+            "post_treatment_weeks": {
+              "type": "array",
+              "items": {"type": "number", "minimum": 0}
+            },
+            "follow_up_weeks": {
+              "type": "array",
+              "items": {"type": "number", "minimum": 0}
+            },
+            "other_weeks": {
+              "type": "array",
+              "items": {"type": "number", "minimum": 0},
+              "description": "Mid-Treatment, Baseline oder Zeitangaben ohne Marker."
+            },
+            "ambiguous_post_treatment": {"type": "boolean"},
+            "raw": {"type": ["string", "null"]}
+          }
+        },
         "population": {"type": ["string", "null"]},
         "design_verbatim": {"type": "string", "minLength": 3},
         "quote": {

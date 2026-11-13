@@ -488,7 +488,13 @@ als Modellfehler messen.
 | `external_benchmark/external_benchmark_results_v1.md` | Benchmark-Bericht mit Fehleranalyse |
 | `external_benchmark/external_benchmark_errors_v1.csv` | Einzelabweichungen je Feld |
 | `scripts/run_external_benchmark.py` | reproduzierbarer externer Benchmark |
+| `external_benchmark/dcbti_review_overlap_v1.md` | Abgleich der 9 CBT-I-Studien mit Hwang 2025 und Lee 2023 |
+| `external_benchmark/dcbti_review_overlap_v1.json` | maschinenlesbarer Review-Abgleich inkl. Zeitpunktsegmenten |
+| `scripts/match_dcbti_review_studies.py` | Abgleich und Zeitpunktparser (Post-Treatment, Follow-up, Mid) |
+| `scripts/segment_timepoint_schema.py` | ergänzt `time_point_segments` in einer Kopie der Goldstandard-Datei |
 | `tests/test_external_benchmark.py` | Tests für Normalisierung, Metriken und Kategorien |
+| `tests/test_dcbti_review_overlap.py` | Tests für Review-Abgleich und Zeitpunktsegmentierung |
+| `tests/test_timepoint_schema.py` | Tests für Schemafeld und unveränderte Outcome-Werte |
 
 Reproduktion:
 
