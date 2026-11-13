@@ -1,0 +1,704 @@
+{
+  "dataset": "crossval_exploration",
+  "version": "1.0",
+  "created": "2026-11-13",
+  "status": "selected_pending_fulltext_check",
+  "model_used": false,
+  "network_used": false,
+  "salt": "crossval-20261113-v1",
+  "primary_count": 25,
+  "reserve_count": 10,
+  "target_records": [
+    60,
+    80
+  ],
+  "inclusion_criteria": [
+    "decision == include_for_fulltext aus dem Abstract-Screening",
+    "pub_types enthaelt Randomized Controlled Trial",
+    "Titel ist keine Zusammenfassung, Korrektur, Ruecknahme, Kommentar oder Protokoll",
+    "artikeldisjunkt zu G5 und zu Yun (Freeze, Dev, Test)",
+    "Volltextpruefung bestaetigt mindestens einen Vergleich mit Armwerten"
+  ],
+  "target_records_note": "60-80 Armwert-Records aus 25 Artikeln; die tatsaechliche Recordzahl wird nach der Volltextpruefung festgestellt, nicht geschaetzt.",
+  "source": {
+    "decisions": "evaluation/c1_pilot/holdout_p0_20261112/screening_decisions_v2.jsonl",
+    "g5_shortlist": "evaluation/c1_pilot/holdout_p0_20261112/fulltext_retrieval_manifest_v1.json",
+    "g5_policy": "G5 = 30 abgerufene Shortlist-Artikel plus 36 menschlich bestaetigte Einschluesse; Reserve der G5-Auswahl bleibt ausserhalb dieses Experiments, damit G5 nie auf einen hier vergebenen Artikel zurueckgreifen muss."
+  },
+  "checks": {
+    "primary_count_ok": true,
+    "reserve_count_ok": true,
+    "unique_pmcids": true,
+    "g5_overlap": [],
+    "yun_overlap": [],
+    "g5_excluded_count": 36,
+    "g5_shortlist_count": 30,
+    "g5_confirmed_count": 36,
+    "yun_by_split": {
+      "yun_freeze_275": 70,
+      "yun_dev_26": 6,
+      "yun_test_249": 64
+    },
+    "eligible_pool": 372,
+    "funnel": {
+      "include_for_fulltext_not_g5_not_yun": 379,
+      "with_rct_pub_type": 374,
+      "after_title_exclusion": 372,
+      "title_excluded": 2
+    },
+    "ok": true
+  },
+  "articles": [
+    {
+      "position": 1,
+      "role": "primary",
+      "pmcid": "PMC13533546",
+      "doi": "10.1093/ijnp/pyag041",
+      "title": "Effects of lavender oil preparation silexan on different symptoms of major depression - results from a randomized, controlled trial.",
+      "journal": "The international journal of neuropsychopharmacology",
+      "pub_year": "2026",
+      "rank_sha256": "00402bd3592dab109f8a7e3c82cd1f43e51d4d4fa46b52c73ac95b8becd0c1df",
+      "pub_types": [
+        "research-article",
+        "Randomized Controlled Trial",
+        "Journal Article"
+      ],
+      "screening_reason_codes": [],
+      "needs_fulltext_check": true,
+      "reserved_for": "crossval_exploration"
+    },
+    {
+      "position": 2,
+      "role": "primary",
+      "pmcid": "PMC13587535",
+      "doi": "10.1080/07853890.2026.2732292",
+      "title": "Opioid-free analgesia with esketamine-dexmedetomidine versus opioid-based analgesia after gynaecological laparoscopic surgery: a double-blind, randomized, controlled trial.",
+      "journal": "Annals of medicine",
+      "pub_year": "2026",
+      "rank_sha256": "00482a5ec241712670bda4ccd7e412fe4b44d182a105cc041f5822c7a50ef1d5",
+      "pub_types": [
+        "Comparative Study",
+        "Equivalence Trial",
+        "Research Support, Non-U.S. Gov't",
+        "research-article",
+        "Randomized Controlled Trial",
+        "Journal Article"
+      ],
+      "screening_reason_codes": [],
+      "needs_fulltext_check": true,
+      "reserved_for": "crossval_exploration"
+    },
+    {
+      "position": 3,
+      "role": "primary",
+      "pmcid": "PMC13554527",
+      "doi": "10.1177/03000605261464292",
+      "title": "Efficacy of a multimodal conservative rehabilitation program for bladder control in individuals with incomplete spinal cord injury: A randomized controlled trial.",
+      "journal": "The Journal of international medical research",
+      "pub_year": "2026",
+      "rank_sha256": "004a5618d47e7ba5f20b7a1a426a5eb32d4217f289c2b0537458308a0b0654ac",
+      "pub_types": [
+        "research-article",
+        "Randomized Controlled Trial",
+        "Journal Article"
+      ],
+      "screening_reason_codes": [],
+      "needs_fulltext_check": true,
+      "reserved_for": "crossval_exploration"
+    },
+    {
+      "position": 4,
+      "role": "primary",
+      "pmcid": "PMC13581780",
+      "doi": "10.3389/fpubh.2026.1855870",
+      "title": "Effect of a mobile application-based whole-course nutrition management intervention in patients with age-related macular degeneration: a randomized controlled trial.",
+      "journal": "Frontiers in public health",
+      "pub_year": "2026",
+      "rank_sha256": "01113c964d322a654718ce0bfa0c68f8725ed3b82398f16cad7fd8682f3b3130",
+      "pub_types": [
+        "research-article",
+        "Randomized Controlled Trial",
+        "Journal Article"
+      ],
+      "screening_reason_codes": [],
+      "needs_fulltext_check": true,
+      "reserved_for": "crossval_exploration"
+    },
+    {
+      "position": 5,
+      "role": "primary",
+      "pmcid": "PMC13544601",
+      "doi": "10.1113/ep093960",
+      "title": "Physiological and autonomic responses to intermittent low-lung-volume apnoea and pain sensitivity: A randomized controlled pilot trial.",
+      "journal": "Experimental physiology",
+      "pub_year": "2026",
+      "rank_sha256": "01ede0ac037f2ac99cc4262adc1492356dbe72c3fb0ff31ffa10902365efb027",
+      "pub_types": [
+        "research-article",
+        "Randomized Controlled Trial",
+        "Journal Article"
+      ],
+      "screening_reason_codes": [],
+      "needs_fulltext_check": true,
+      "reserved_for": "crossval_exploration"
+    },
+    {
+      "position": 6,
+      "role": "primary",
+      "pmcid": "PMC13613989",
+      "doi": "10.1002/pon.70616",
+      "title": "Making Interventions More Effective: Changes in Theoretical Constructs During Delivery of a Peer-Led Physical Activity Program for Breast Cancer Survivors.",
+      "journal": "Psycho-oncology",
+      "pub_year": "2026",
+      "rank_sha256": "0217238e328f9e8cd22b08ad5d9540fd8d890a74b338e6a7435949656f291cd4",
+      "pub_types": [
+        "research-article",
+        "Randomized Controlled Trial",
+        "Journal Article"
+      ],
+      "screening_reason_codes": [],
+      "needs_fulltext_check": true,
+      "reserved_for": "crossval_exploration"
+    },
+    {
+      "position": 7,
+      "role": "primary",
+      "pmcid": "PMC13493211",
+      "doi": "10.2337/db26-0293",
+      "title": "Ketone Bodies Derived From Medium-Chain Triglycerides Support Brain Metabolism and Function Under Hypoglycemia in Type 1 Diabetes Mellitus.",
+      "journal": "Diabetes",
+      "pub_year": "2026",
+      "rank_sha256": "029948a0827f9377b38feaf4969e8479f74a7b68bd58c93244744e2adce56c9d",
+      "pub_types": [
+        "research-article",
+        "Randomized Controlled Trial",
+        "Journal Article"
+      ],
+      "screening_reason_codes": [],
+      "needs_fulltext_check": true,
+      "reserved_for": "crossval_exploration"
+    },
+    {
+      "position": 8,
+      "role": "primary",
+      "pmcid": "PMC13583812",
+      "doi": "10.1136/bmjopen-2026-120406",
+      "title": "BLIS study: a feasibility randomised controlled trial assessing compliance, acceptability and colonisation with different dosing regimens of the probiotic supplement &lt;i&gt;Streptococcus salivarius&lt;/i&gt; K12 (Bactoblis) in adults in England.",
+      "journal": "BMJ open",
+      "pub_year": "2026",
+      "rank_sha256": "02c37d1c778572234fe683a431b7f18ef98a14d2b2861be4577f643a82b9a788",
+      "pub_types": [
+        "research-article",
+        "Randomized Controlled Trial",
+        "Journal Article"
+      ],
+      "screening_reason_codes": [],
+      "needs_fulltext_check": true,
+      "reserved_for": "crossval_exploration"
+    },
+    {
+      "position": 9,
+      "role": "primary",
+      "pmcid": "PMC13682724",
+      "doi": "10.1200/jco-25-01967",
+      "title": "Mindfulness and Tai Chi for Sleep, Fatigue, and Pain in Distressed People After Cancer Treatment: A Partially Randomized Patient-Preference Comparative Effectiveness Trial.",
+      "journal": "Journal of clinical oncology : official journal of the American Society of Clinical Oncology",
+      "pub_year": "2026",
+      "rank_sha256": "031f3ce290bdfe9606db09f2a41930719a0ec935744febb85ef06822602ac661",
+      "pub_types": [
+        "Comparative Study",
+        "research-article",
+        "Randomized Controlled Trial",
+        "Journal Article"
+      ],
+      "screening_reason_codes": [],
+      "needs_fulltext_check": true,
+      "reserved_for": "crossval_exploration"
+    },
+    {
+      "position": 10,
+      "role": "primary",
+      "pmcid": "PMC13575558",
+      "doi": "10.1158/1078-0432.ccr-26-0805",
+      "title": "Biomarker Analysis from Patients with Metastatic PDAC Treated with TGFβ Antibody NIS793 plus Abraxane + Gemcitabine versus Abraxane + Gemcitabine Alone in a Phase II, Open-Label, Randomized Study.",
+      "journal": "Clinical cancer research : an official journal of the American Association for Cancer Research",
+      "pub_year": "2026",
+      "rank_sha256": "045ec571d3cf630c9295db8bf5821974ab56fc682952c53aff3343b8645953df",
+      "pub_types": [
+        "Clinical Trial, Phase II",
+        "research-article",
+        "Randomized Controlled Trial",
+        "Journal Article"
+      ],
+      "screening_reason_codes": [],
+      "needs_fulltext_check": true,
+      "reserved_for": "crossval_exploration"
+    },
+    {
+      "position": 11,
+      "role": "primary",
+      "pmcid": "PMC13568562",
+      "doi": "10.1080/19490976.2026.2728351",
+      "title": "Probiotic supplementation increases fecal TLR4 agonists without improving disease activity in juvenile idiopathic arthritis: a randomized placebo-controlled trial.",
+      "journal": "Gut microbes",
+      "pub_year": "2026",
+      "rank_sha256": "04897a9ebe18142e911b27b569bef25b4d38c05a2414acafa89b15fe616e980f",
+      "pub_types": [
+        "research-article",
+        "Multicenter Study",
+        "Randomized Controlled Trial",
+        "Journal Article"
+      ],
+      "screening_reason_codes": [],
+      "needs_fulltext_check": true,
+      "reserved_for": "crossval_exploration"
+    },
+    {
+      "position": 12,
+      "role": "primary",
+      "pmcid": "PMC13539392",
+      "doi": "10.1001/jamanetworkopen.2026.31628",
+      "title": "Care Navigation for Methamphetamine Use Disorder: A Randomized Clinical Trial.",
+      "journal": "JAMA network open",
+      "pub_year": "2026",
+      "rank_sha256": "050db436646e183245c7ece04ad9e81378afde47da1072409800d1da384dab5f",
+      "pub_types": [
+        "Research Support, U.S. Gov't, P.H.S.",
+        "research-article",
+        "Randomized Controlled Trial",
+        "Journal Article"
+      ],
+      "screening_reason_codes": [],
+      "needs_fulltext_check": true,
+      "reserved_for": "crossval_exploration"
+    },
+    {
+      "position": 13,
+      "role": "primary",
+      "pmcid": "PMC13599780",
+      "doi": "10.1093/rheumatology/keag420",
+      "title": "Subcutaneous versus intravenous ultra-low-dose rituximab in rheumatoid arthritis: a randomized controlled PK-PD non-inferiority trial.",
+      "journal": "Rheumatology (Oxford, England)",
+      "pub_year": "2026",
+      "rank_sha256": "05e9b5a1a21a848065214517cfb4f3577b20bbacb05d6748fe4ffadfd3f8ba29",
+      "pub_types": [
+        "Comparative Study",
+        "Equivalence Trial",
+        "Research Support, Non-U.S. Gov't",
+        "research-article",
+        "Randomized Controlled Trial",
+        "Journal Article"
+      ],
+      "screening_reason_codes": [],
+      "needs_fulltext_check": true,
+      "reserved_for": "crossval_exploration"
+    },
+    {
+      "position": 14,
+      "role": "primary",
+      "pmcid": "PMC13683044",
+      "doi": "10.1038/s41562-026-02568-4",
+      "title": "Effects of a randomized controlled trial of unconditional cash transfers on epigenetic measures of ageing and cognition in children and mothers.",
+      "journal": "Nature human behaviour",
+      "pub_year": "2026",
+      "rank_sha256": "05f2fc21d93c4f58151081aced0cb23f97524402905af8f5a36e76acd130a898",
+      "pub_types": [
+        "research-article",
+        "Randomized Controlled Trial",
+        "Journal Article"
+      ],
+      "screening_reason_codes": [],
+      "needs_fulltext_check": true,
+      "reserved_for": "crossval_exploration"
+    },
+    {
+      "position": 15,
+      "role": "primary",
+      "pmcid": "PMC13597907",
+      "doi": "10.3389/fpubh.2026.1904708",
+      "title": "A health promotion behavior intervention for women with polycystic ovary syndrome experiencing infertility: a randomized controlled trial.",
+      "journal": "Frontiers in public health",
+      "pub_year": "2026",
+      "rank_sha256": "079216ac775b6b3bbec607d91cc0b2669b689d91fbe4ed10e89becba81e599f0",
+      "pub_types": [
+        "Clinical Trial",
+        "research-article",
+        "Randomized Controlled Trial",
+        "Journal Article"
+      ],
+      "screening_reason_codes": [],
+      "needs_fulltext_check": true,
+      "reserved_for": "crossval_exploration"
+    },
+    {
+      "position": 16,
+      "role": "primary",
+      "pmcid": "PMC13591874",
+      "doi": "10.1186/s12903-026-09810-5",
+      "title": "Effect of β-tricalcium phosphate grafting on implant stability and peri-implant radiodensity following immediate implant placement in sites with jumping gaps exceeding 2 mm: a randomized controlled trial.",
+      "journal": "BMC oral health",
+      "pub_year": "2026",
+      "rank_sha256": "07b46ec1990e6ab0827483ff375cde32ee8420f541d906ee5072c55401e843fc",
+      "pub_types": [
+        "research-article",
+        "Randomized Controlled Trial",
+        "Journal Article"
+      ],
+      "screening_reason_codes": [],
+      "needs_fulltext_check": true,
+      "reserved_for": "crossval_exploration"
+    },
+    {
+      "position": 17,
+      "role": "primary",
+      "pmcid": "PMC13553157",
+      "doi": "10.1111/nicc.70603",
+      "title": "The Effect of Personalised Feedback in Simulation on Knowledge and Skills in the Management of Bleeding During Pregnancy: A Parallel Randomized Controlled Trial.",
+      "journal": "Nursing in critical care",
+      "pub_year": "2026",
+      "rank_sha256": "08a5f86ba27abc6c05225034fa2093e8ef956bf092e213985726d75bd766e254",
+      "pub_types": [
+        "research-article",
+        "Randomized Controlled Trial",
+        "Journal Article"
+      ],
+      "screening_reason_codes": [],
+      "needs_fulltext_check": true,
+      "reserved_for": "crossval_exploration"
+    },
+    {
+      "position": 18,
+      "role": "primary",
+      "pmcid": "PMC13587653",
+      "doi": "10.1002/ejp.70384",
+      "title": "To Ask or Not to Ask: Does Inquiring About Participants' Expectations Influence the Placebo Effect? A Placebo Mechanism Study in Healthy Volunteers.",
+      "journal": "European journal of pain (London, England)",
+      "pub_year": "2026",
+      "rank_sha256": "08c7850d0a9d9b0f80565e00977c7646d6351132034e97f808f1e5fd186d0571",
+      "pub_types": [
+        "research-article",
+        "Randomized Controlled Trial",
+        "Journal Article"
+      ],
+      "screening_reason_codes": [],
+      "needs_fulltext_check": true,
+      "reserved_for": "crossval_exploration"
+    },
+    {
+      "position": 19,
+      "role": "primary",
+      "pmcid": "PMC13724892",
+      "doi": "10.1177/03000605261477885",
+      "title": "Effects of resistant starch on blood pressure and autonomic function in women with the risk of metabolic syndrome: A randomized double-blind pilot study.",
+      "journal": "The Journal of international medical research",
+      "pub_year": "2026",
+      "rank_sha256": "0a1261830fb0c0bd25089abc02a3f69cb78b20566455317d311696c84f03ffbc",
+      "pub_types": [
+        "research-article",
+        "Randomized Controlled Trial",
+        "Journal Article"
+      ],
+      "screening_reason_codes": [],
+      "needs_fulltext_check": true,
+      "reserved_for": "crossval_exploration"
+    },
+    {
+      "position": 20,
+      "role": "primary",
+      "pmcid": "PMC13610706",
+      "doi": "10.3390/nu18182970",
+      "title": "Prenatal Folinic Acid in FRAA-Positive Pregnancies: Preschool Neurodevelopmental Outcomes from a Pilot RCT Follow-Up.",
+      "journal": "Nutrients",
+      "pub_year": "2026",
+      "rank_sha256": "0a169c2a2ed3651b5f9396ac1644ef27584558671792613e71a8c06e5b8878a1",
+      "pub_types": [
+        "research-article",
+        "Randomized Controlled Trial",
+        "Journal Article"
+      ],
+      "screening_reason_codes": [],
+      "needs_fulltext_check": true,
+      "reserved_for": "crossval_exploration"
+    },
+    {
+      "position": 21,
+      "role": "primary",
+      "pmcid": "PMC13645219",
+      "doi": "10.1371/journal.pntd.0014783",
+      "title": "High-dose rifampicin and clarithromycin for 4 weeks versus standard-dose rifampicin and clarithromycin for 8 weeks to treat Buruli ulcer: An open-label, individually randomized, controlled trial in Ghana.",
+      "journal": "PLoS neglected tropical diseases",
+      "pub_year": "2026",
+      "rank_sha256": "0bae62df14f5eedf017142715c0f4e2e271894319c8f4de305e81145e4af7341",
+      "pub_types": [
+        "research-article",
+        "Randomized Controlled Trial",
+        "Journal Article"
+      ],
+      "screening_reason_codes": [],
+      "needs_fulltext_check": true,
+      "reserved_for": "crossval_exploration"
+    },
+    {
+      "position": 22,
+      "role": "primary",
+      "pmcid": "PMC13556510",
+      "doi": "10.1093/jjco/hyag090",
+      "title": "A multicenter randomized phase II/III trial of salvage treatment for refractory primary central nervous system lymphoma using tirabrutinib: JCOG2314 (ReSTART).",
+      "journal": "Japanese journal of clinical oncology",
+      "pub_year": "2026",
+      "rank_sha256": "0d2c05363c08a42ac575ece0625f60390b57fbc3017e0ce6164f921996ce8676",
+      "pub_types": [
+        "Clinical Trial, Phase III",
+        "Clinical Trial, Phase II",
+        "research-article",
+        "Multicenter Study",
+        "Randomized Controlled Trial",
+        "Journal Article"
+      ],
+      "screening_reason_codes": [],
+      "needs_fulltext_check": true,
+      "reserved_for": "crossval_exploration"
+    },
+    {
+      "position": 23,
+      "role": "primary",
+      "pmcid": "PMC13632637",
+      "doi": "10.2147/dddt.s624552",
+      "title": "Effects of Ciprofol- versus Remimazolam-Based Total Intravenous Anesthesia on Postoperative Nausea and Vomiting After Laparoscopic Cholecystectomy: A Randomized Controlled Trial.",
+      "journal": "Drug design, development and therapy",
+      "pub_year": "2026",
+      "rank_sha256": "0dd50f47d36b63cd407f213090df76b3dd2af07d9f846e7b48cc93f208a470e0",
+      "pub_types": [
+        "Comparative Study",
+        "Randomized Controlled Trial",
+        "Journal Article",
+        "case-report"
+      ],
+      "screening_reason_codes": [],
+      "needs_fulltext_check": true,
+      "reserved_for": "crossval_exploration"
+    },
+    {
+      "position": 24,
+      "role": "primary",
+      "pmcid": "PMC13729219",
+      "doi": "10.1128/spectrum.01608-26",
+      "title": "Effect of denture and soft tissue disinfection on edentulous biofilms.",
+      "journal": "Microbiology spectrum",
+      "pub_year": "2026",
+      "rank_sha256": "0e01a40d96751b2c979d38694a193c74243d56284ffea2c43668fe5737dbba88",
+      "pub_types": [
+        "research-article",
+        "Randomized Controlled Trial",
+        "Journal Article"
+      ],
+      "screening_reason_codes": [],
+      "needs_fulltext_check": true,
+      "reserved_for": "crossval_exploration"
+    },
+    {
+      "position": 25,
+      "role": "primary",
+      "pmcid": "PMC13601125",
+      "doi": "10.1007/s00420-026-02229-z",
+      "title": "Improving adaptation in male high-altitude workers through pressurization: a randomized controlled trial on sleep architecture.",
+      "journal": "International archives of occupational and environmental health",
+      "pub_year": "2026",
+      "rank_sha256": "0eb7b1b55f94bc906120e0c0ce639aa12c94295a027f0b2e6df73dbb5ecc7e66",
+      "pub_types": [
+        "research-article",
+        "Randomized Controlled Trial",
+        "Journal Article"
+      ],
+      "screening_reason_codes": [],
+      "needs_fulltext_check": true,
+      "reserved_for": "crossval_exploration"
+    },
+    {
+      "position": 26,
+      "role": "reserve",
+      "pmcid": "PMC13560212",
+      "doi": "10.1186/s12913-026-15555-2",
+      "title": "Process evaluation of a nurse-led transitional care model (Cardiolotse) within a randomized controlled trial aiming to improve care coordination for patients with cardiovascular diseases in Germany.",
+      "journal": "BMC health services research",
+      "pub_year": "2026",
+      "rank_sha256": "0f34ad6c51fecf619f44a9c768c9540ae3bef1bae5f1f2715fa3503661aaeeae",
+      "pub_types": [
+        "research-article",
+        "Randomized Controlled Trial",
+        "Journal Article"
+      ],
+      "screening_reason_codes": [],
+      "needs_fulltext_check": true,
+      "reserved_for": "crossval_exploration"
+    },
+    {
+      "position": 27,
+      "role": "reserve",
+      "pmcid": "PMC13624021",
+      "doi": "10.1007/s00431-026-07427-y",
+      "title": "Oral glucose solution for the treatment of persistent asymptomatic neonatal hypoglycemia: a randomized, double-blind, placebo-controlled trial.",
+      "journal": "European journal of pediatrics",
+      "pub_year": "2026",
+      "rank_sha256": "10f30bfc5d89214e5f64fc1ebca6850f455504946232257b62be4156903beed3",
+      "pub_types": [
+        "research-article",
+        "Multicenter Study",
+        "Randomized Controlled Trial",
+        "Journal Article"
+      ],
+      "screening_reason_codes": [],
+      "needs_fulltext_check": true,
+      "reserved_for": "crossval_exploration"
+    },
+    {
+      "position": 28,
+      "role": "reserve",
+      "pmcid": "PMC13610065",
+      "doi": "10.3390/nu18183022",
+      "title": "Plasma and Brain-Derived Extracellular Vesicle Biomarkers Following a Randomized Controlled Trial of Choline for Neurodevelopment in Fetal Alcohol Spectrum Disorder: A Pilot Analysis.",
+      "journal": "Nutrients",
+      "pub_year": "2026",
+      "rank_sha256": "115d87b3482995dbe5d17ead2607cd8717b8cb7d32df733dd4373f6890cf1965",
+      "pub_types": [
+        "research-article",
+        "Randomized Controlled Trial",
+        "Journal Article"
+      ],
+      "screening_reason_codes": [],
+      "needs_fulltext_check": true,
+      "reserved_for": "crossval_exploration"
+    },
+    {
+      "position": 29,
+      "role": "reserve",
+      "pmcid": "PMC13593208",
+      "doi": "10.1093/eurheartj/ehag206",
+      "title": "Cardiac resynchronization therapy with or without atrioventricular node ablation in atrial fibrillation: the CAAN-AF trial.",
+      "journal": "European heart journal",
+      "pub_year": "2026",
+      "rank_sha256": "117c10aaf35f8cae55e6814e858de833c501915adcc3deafa6a2614d814bacf3",
+      "pub_types": [
+        "research-article",
+        "Multicenter Study",
+        "Randomized Controlled Trial",
+        "Journal Article"
+      ],
+      "screening_reason_codes": [],
+      "needs_fulltext_check": true,
+      "reserved_for": "crossval_exploration"
+    },
+    {
+      "position": 30,
+      "role": "reserve",
+      "pmcid": "PMC13577647",
+      "doi": "10.1051/ject/2026006",
+      "title": "Impact of adenosine in controlled aortic root reperfusion on clinical outcomes among patients undergoing valvular heart surgery.",
+      "journal": "The journal of extra-corporeal technology",
+      "pub_year": "2026",
+      "rank_sha256": "11a5b2eb8c58be27bbd4e8a1618155badb925adadccb5a5d0564b81287d96486",
+      "pub_types": [
+        "research-article",
+        "Randomized Controlled Trial",
+        "Journal Article"
+      ],
+      "screening_reason_codes": [],
+      "needs_fulltext_check": true,
+      "reserved_for": "crossval_exploration"
+    },
+    {
+      "position": 31,
+      "role": "reserve",
+      "pmcid": "PMC13632614",
+      "doi": "10.2147/cia.s634303",
+      "title": "Endovascular Treatment for Patients Aged ≥80 Years with Large Ischemic Stroke.",
+      "journal": "Clinical interventions in aging",
+      "pub_year": "2026",
+      "rank_sha256": "11ccf58d3a472f0f56de95ebbeb320cfbafbb329628b0620b744bedb861a4db5",
+      "pub_types": [
+        "research-article",
+        "Randomized Controlled Trial",
+        "Journal Article"
+      ],
+      "screening_reason_codes": [],
+      "needs_fulltext_check": true,
+      "reserved_for": "crossval_exploration"
+    },
+    {
+      "position": 32,
+      "role": "reserve",
+      "pmcid": "PMC13607715",
+      "doi": "10.3390/ijms27188376",
+      "title": "Biomarker Detection of Lung Cancers Before Clinical Symptoms or the Use of Traditional Imaging Methods in the ITALUNG Trial.",
+      "journal": "International journal of molecular sciences",
+      "pub_year": "2026",
+      "rank_sha256": "126efcee0e1785c0f9a26cd43c6c41dcee4c30e378b54f6a8d3b1b4c166a2bf4",
+      "pub_types": [
+        "research-article",
+        "Multicenter Study",
+        "Randomized Controlled Trial",
+        "Journal Article"
+      ],
+      "screening_reason_codes": [],
+      "needs_fulltext_check": true,
+      "reserved_for": "crossval_exploration"
+    },
+    {
+      "position": 33,
+      "role": "reserve",
+      "pmcid": "PMC13609332",
+      "doi": "10.3390/medicina62091747",
+      "title": "A Comparison of 18-Gauge and 20-Gauge Short Peripheral Catheters in Terms of Pain and Procedural Difficulty: A Randomized Controlled Trial in the Emergency Department.",
+      "journal": "Medicina (Kaunas, Lithuania)",
+      "pub_year": "2026",
+      "rank_sha256": "12851d5e475f32a3be0011a6a20586da9501827ada021f73d5a8f5db95f4f71d",
+      "pub_types": [
+        "Comparative Study",
+        "Equivalence Trial",
+        "research-article",
+        "Randomized Controlled Trial",
+        "Journal Article"
+      ],
+      "screening_reason_codes": [],
+      "needs_fulltext_check": true,
+      "reserved_for": "crossval_exploration"
+    },
+    {
+      "position": 34,
+      "role": "reserve",
+      "pmcid": "PMC13535982",
+      "doi": "10.1002/clc.70464",
+      "title": "Angiography-Based Index of Microcirculatory Resistance in Assessing the MVO and Infarct Size in STEMI Patients.",
+      "journal": "Clinical cardiology",
+      "pub_year": "2026",
+      "rank_sha256": "1429a6a6feca29c45fc7cc0f19650a10c00469caeab4997b42290032833a51fb",
+      "pub_types": [
+        "research-article",
+        "Randomized Controlled Trial",
+        "Journal Article"
+      ],
+      "screening_reason_codes": [],
+      "needs_fulltext_check": true,
+      "reserved_for": "crossval_exploration"
+    },
+    {
+      "position": 35,
+      "role": "reserve",
+      "pmcid": "PMC13578717",
+      "doi": "10.1038/s41598-026-69567-3",
+      "title": "A prospective randomized controlled pilot study of gut microbiome modulation by Nigella sativa seed oil and thymoquinone metabolism in healthy volunteers: implications for gastrointestinal surgery.",
+      "journal": "Scientific reports",
+      "pub_year": "2026",
+      "rank_sha256": "16229ee94a4c98b67c4e0fb9072a574bed0615ae8c49dc393ec3dad58d600e92",
+      "pub_types": [
+        "Research Support, Non-U.S. Gov't",
+        "research-article",
+        "Randomized Controlled Trial",
+        "Journal Article"
+      ],
+      "screening_reason_codes": [],
+      "needs_fulltext_check": true,
+      "reserved_for": "crossval_exploration"
+    }
+  ]
+}

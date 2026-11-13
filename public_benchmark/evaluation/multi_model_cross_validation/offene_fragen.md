@@ -5,6 +5,10 @@ Bezug: [`experiment_plan.md`](experiment_plan.md)
 Zweck: Entscheidungsblatt. Jede Frage blockiert einen konkreten Schritt. Ohne
 Antwort auf F1-F3 ist kein Phase-0-Aufbau sinnvoll.
 
+**Beantwortet am 2026-11-13.** Die Entscheidungen und der Umsetzungsstand stehen
+in [`entscheidungen_20261113.md`](entscheidungen_20261113.md). Dieses Blatt
+bleibt als Fragenstand erhalten und wird nicht nachträglich verändert.
+
 Legende: **[empfohlen]** = Vorschlag aus dem Plan, mit Begründung.
 
 ---
