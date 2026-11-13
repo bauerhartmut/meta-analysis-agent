@@ -1,6 +1,6 @@
 # dCBT-I-Studienabgleich mit Hwang 2025 und Lee 2023
 
-Stand: 2026-11-13T12:25:44Z
+Stand: 2026-11-13T12:31:02Z
 
 ## Befund zur Datenbasis
 
@@ -43,7 +43,7 @@ Die im Auftrag genannten **30 dCBT-I-Studien existieren so nicht**: `data/golden
 - Outcome-Überschneidung: ISI
 - Zeitpunkt Review: 10 Wochen post-treatment
 - Zeitpunkt Projekt: post-treatment (Woche 10)
-- Wochenvergleich: Projekt [10.0] vs. Review [10.0]; Differenz 0.0 Wochen (Toleranz 0.5); übereinstimmend
+- Wochenvergleich (nur Post-Treatment): Projekt [10.0] vs. Review [10.0]; Differenz 0.0 Wochen (Toleranz 0.5); übereinstimmend
 - Review nennt nur Studiencharakteristika; Mittelwerte und SD stehen nicht in Tabelle 1.
 
 ## Nicht zugeordnete Studien

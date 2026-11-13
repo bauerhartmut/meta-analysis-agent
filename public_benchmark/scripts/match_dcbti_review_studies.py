@@ -289,30 +289,93 @@ def _to_weeks(number: str, unit: str) -> float:
     return value * factor
 
 
-def parse_timepoints(text: str | None) -> dict[str, Any]:
-    """Parst Zeitangaben zu Wochen; ohne Zahl bleibt der Status unparsed."""
-    if not text:
-        return {"raw": text, "weeks": [], "status": "missing"}
-    normalized = str(text).lower().replace("–", "-").replace("—", "-")
+TIMEPOINT_MARKER = re.compile(
+    r"(post[\s-]?treatment|post[\s-]?intervention|"
+    r"end of treatment|after treatment|nachbehandlung|behandlungsende|"
+    r"follow[\s-]?up|katamnese|baseline|mid[\s-]?treatment|mid|post\b)",
+    re.IGNORECASE,
+)
+
+
+def _weeks_in_text(text: str) -> list[float]:
     unit = (
         r"(tag(?:e|en)?|day(?:s)?|woche(?:n)?|week(?:s)?|"
         r"monat(?:e|en)?|month(?:s)?|jahr(?:e|en)?|year(?:s)?)"
     )
     number = r"(\d+(?:[.,]\d+)?)"
     weeks: list[float] = []
-    for match in re.finditer(rf"{number}\s*-\s*{number}\s*{unit}", normalized):
+    for match in re.finditer(rf"{number}\s*-\s*{number}\s*{unit}", text):
         weeks.append(_to_weeks(match.group(1), match.group(3)))
         weeks.append(_to_weeks(match.group(2), match.group(3)))
-    for match in re.finditer(rf"{number}\s*{unit}|{unit}\s*{number}", normalized):
+    for match in re.finditer(rf"{number}\s*{unit}|{unit}\s*{number}", text):
         if match.group(1):
             weeks.append(_to_weeks(match.group(1), match.group(2)))
         else:
             weeks.append(_to_weeks(match.group(4), match.group(3)))
-    unique = sorted({round(value, 2) for value in weeks})
+    return sorted({round(value, 2) for value in weeks})
+
+
+def _marker_kind(marker: str) -> str:
+    marker = marker.lower()
+    if marker.startswith("follow") or "katamnese" in marker:
+        return "follow_up"
+    if marker.startswith("baseline") or marker.startswith("mid"):
+        return "other"
+    return "post_treatment"
+
+
+def parse_timepoints(text: str | None) -> dict[str, Any]:
+    """Parst Zeitangaben und trennt Post-Treatment von Follow-up.
+
+    Nur Zahlen im Post-Treatment-Segment duerfen spaeter als Treffer gelten.
+    Follow-up- und Mid-Treatment-Werte werden separat ausgewiesen.
+    """
+    if not text:
+        return {
+            "raw": text, "weeks": [], "post_treatment_weeks": [],
+            "follow_up_weeks": [], "other_weeks": [], "status": "missing",
+        }
+    normalized = str(text).lower().replace("–", "-").replace("—", "-")
+    markers = [
+        (match.start(), match.end(), _marker_kind(match.group()))
+        for match in TIMEPOINT_MARKER.finditer(normalized)
+    ]
+    post: list[float] = []
+    follow: list[float] = []
+    other: list[float] = []
+
+    def assign(weeks: list[float], kind: str) -> None:
+        if kind == "post_treatment":
+            post.extend(weeks)
+        elif kind == "follow_up":
+            follow.extend(weeks)
+        else:
+            other.extend(weeks)
+
+    if not markers:
+        other.extend(_weeks_in_text(normalized))
+    else:
+        # Zahlen vor dem ersten Marker gehoeren zu dessen Zeitpunkt,
+        # z. B. "10 weeks post-treatment" oder "6 months follow-up".
+        assign(_weeks_in_text(normalized[:markers[0][0]]), markers[0][2])
+        for index, (_, end, kind) in enumerate(markers):
+            next_start = (
+                markers[index + 1][0] if index + 1 < len(markers)
+                else len(normalized)
+            )
+            assign(_weeks_in_text(normalized[end:next_start]), kind)
+
+    post = sorted(set(post))
+    follow = sorted(set(follow))
+    other = sorted(set(other))
+    all_weeks = sorted(set(post) | set(follow) | set(other))
     return {
         "raw": text,
-        "weeks": unique,
-        "status": "parsed" if unique else "unparsed",
+        "weeks": all_weeks,
+        "post_treatment_weeks": post,
+        "follow_up_weeks": follow,
+        "other_weeks": other,
+        "status": "parsed" if all_weeks else "unparsed",
     }
 
 
@@ -332,17 +395,25 @@ def compare_timepoints(
         "difference_weeks": None,
         "reason": "",
     }
-    if not ours["weeks"] or not review["weeks"]:
-        result["reason"] = "kein numerischer Wochenwert in beiden Angaben"
+    if not ours["post_treatment_weeks"] or not review["post_treatment_weeks"]:
+        result["reason"] = (
+            "kein Post-Treatment-Zeitpunkt in beiden Angaben; "
+            "Follow-up-Werte zaehlen nicht"
+        )
         return result
     differences = [
-        abs(our - rev) for our in ours["weeks"] for rev in review["weeks"]
+        abs(our - rev)
+        for our in ours["post_treatment_weeks"]
+        for rev in review["post_treatment_weeks"]
     ]
     result["difference_weeks"] = round(min(differences), 2)
     result["match"] = min(differences) <= tolerance_weeks
     result["reason"] = (
         "innerhalb der Wochentoleranz"
         if result["match"] else "ausserhalb der Wochentoleranz"
+    )
+    result["ignored_follow_up_weeks"] = sorted(
+        set(ours["follow_up_weeks"]) | set(review["follow_up_weeks"])
     )
     return result
 
@@ -477,7 +548,7 @@ def build_result() -> dict[str, Any]:
             )
         exclusion_reasons[study_id] = reasons
     return {
-        "version": 2,
+        "version": 3,
         "created_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "scope": (
             "Abgleich projektinterner CBT-I-Primaerschstudien mit den "
@@ -578,8 +649,10 @@ def render_markdown(result: dict[str, Any]) -> str:
                 f"{', '.join(item['outcome_overlap']) or 'keine'}",
                 f"- Zeitpunkt Review: {item['review_timepoint']}",
                 f"- Zeitpunkt Projekt: {item['our_timepoint']}",
-                f"- Wochenvergleich: Projekt {item['timepoint_comparison']['our']['weeks']} "
-                f"vs. Review {item['timepoint_comparison']['review']['weeks']}; "
+                f"- Wochenvergleich (nur Post-Treatment): Projekt "
+                f"{item['timepoint_comparison']['our']['post_treatment_weeks']} "
+                f"vs. Review "
+                f"{item['timepoint_comparison']['review']['post_treatment_weeks']}; "
                 f"Differenz {item['timepoint_comparison']['difference_weeks']} Wochen "
                 f"(Toleranz {item['timepoint_comparison']['tolerance_weeks']}); "
                 f"{'übereinstimmend' if item['timepoint_match'] is True else 'nicht vergleichbar' if item['timepoint_match'] is None else 'abweichend'}",

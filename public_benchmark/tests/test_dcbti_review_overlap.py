@@ -68,27 +68,59 @@ def test_parse_timepoints_in_both_word_orders() -> None:
 
 
 def test_week_comparison_does_not_match_substrings() -> None:
-    comparison = match.compare_timepoints("Woche 1", "10 weeks")
+    comparison = match.compare_timepoints(
+        "Woche 1 post-treatment", "10 weeks post-treatment"
+    )
     assert comparison["match"] is False
     assert comparison["difference_weeks"] == 9.0
 
 
 def test_week_comparison_handles_missing_number() -> None:
-    comparison = match.compare_timepoints("post-treatment", "10 weeks")
+    comparison = match.compare_timepoints("post-treatment", "10 weeks post-treatment")
     assert comparison["match"] is None
-    assert "kein numerischer Wochenwert" in comparison["reason"]
+    assert "kein Post-Treatment-Zeitpunkt" in comparison["reason"]
 
 
 def test_week_comparison_converts_months() -> None:
-    comparison = match.compare_timepoints("6 months", "24 weeks")
-    assert comparison["our"]["weeks"] == [26.07]
-    assert comparison["review"]["weeks"] == [24.0]
+    comparison = match.compare_timepoints(
+        "6 months post-treatment", "24 weeks post-treatment"
+    )
+    assert comparison["our"]["post_treatment_weeks"] == [26.07]
+    assert comparison["review"]["post_treatment_weeks"] == [24.0]
     assert comparison["match"] is False
 
 
 def test_week_comparison_accepts_overlapping_range() -> None:
-    comparison = match.compare_timepoints("9-10 weeks", "10 weeks")
+    comparison = match.compare_timepoints(
+        "9-10 weeks post-treatment", "10 weeks post-treatment"
+    )
     assert comparison["match"] is True
+
+
+def test_parse_separates_post_treatment_from_follow_up() -> None:
+    parsed = match.parse_timepoints(
+        "Post 6 weeks Follow up 6 months, 12 months"
+    )
+    assert parsed["post_treatment_weeks"] == [6.0]
+    assert parsed["follow_up_weeks"] == [26.07, 52.14]
+
+
+def test_follow_up_cannot_rescue_a_post_treatment_mismatch() -> None:
+    comparison = match.compare_timepoints(
+        "10 weeks post-treatment",
+        "Post 6 weeks; Follow up 10 weeks",
+    )
+    assert comparison["review"]["post_treatment_weeks"] == [6.0]
+    assert comparison["review"]["follow_up_weeks"] == [10.0]
+    assert comparison["ignored_follow_up_weeks"] == [10.0]
+    assert comparison["match"] is False
+
+
+def test_follow_up_only_is_not_comparable() -> None:
+    comparison = match.compare_timepoints(
+        "10 weeks post-treatment", "Follow up 10 weeks"
+    )
+    assert comparison["match"] is None
 
 
 def test_freeman_uses_structured_timepoint_comparison() -> None:
