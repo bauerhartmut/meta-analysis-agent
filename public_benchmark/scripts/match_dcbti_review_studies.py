@@ -304,7 +304,11 @@ WEEK_UNIT = (
 WEEK_NUMBER = r"(\d+(?:[.,]\d+)?)"
 # Nur diese Zeichen duerfen zwischen Zahl und nachgestelltem Marker stehen.
 MARKER_CONNECTOR = re.compile(r"^[\s,;:()\[\]\-–—/]*$")
-CLAUSE_BOUNDARY = re.compile(r"[,;.\n]|\band\b|\bund\b|\bthen\b", re.IGNORECASE)
+CLAUSE_BOUNDARY = re.compile(r"[,;\n]|\band\b|\bund\b|\bthen\b", re.IGNORECASE)
+PHRASE_BOUNDARY = re.compile(r"[;,()\n]|(?<!\d)\.(?!\d)")
+# Median- und Streuungsangaben sind keine festen Zeitpunkte. "±" und
+# "median" werden deshalb konservativ aus der Wochenberechnung entfernt.
+UNCERTAIN_TIME = re.compile(r"(median|\bmittelwert\b|±|\+/-)", re.IGNORECASE)
 
 
 def _week_occurrences(text: str) -> list[tuple[float, int, int]]:
@@ -337,13 +341,32 @@ def _week_occurrences(text: str) -> list[tuple[float, int, int]]:
     )
 
 
-def _weeks_in_text(text: str) -> list[float]:
-    return sorted({value for value, _, _ in _week_occurrences(text)})
-
-
 def _clause_end(text: str, start: int) -> int:
     match = CLAUSE_BOUNDARY.search(text, start)
     return match.start() if match else len(text)
+
+
+def _phrase_around(text: str, start: int, end: int) -> str:
+    left = 0
+    for match in PHRASE_BOUNDARY.finditer(text, 0, start):
+        left = match.end()
+    right_match = PHRASE_BOUNDARY.search(text, end)
+    right = right_match.start() if right_match else len(text)
+    return text[left:right]
+
+
+def _is_uncertain(text: str, start: int, end: int) -> bool:
+    return bool(UNCERTAIN_TIME.search(_phrase_around(text, start, end)))
+
+
+def _weeks_in_text(text: str) -> list[float]:
+    return sorted(
+        {
+            value
+            for value, start, end in _week_occurrences(text)
+            if not _is_uncertain(text, start, end)
+        }
+    )
 
 
 def _marker_kind(marker: str) -> str:
@@ -385,6 +408,8 @@ def parse_timepoints(text: str | None) -> dict[str, Any]:
             other.extend(weeks)
 
     for value, start, end in _week_occurrences(normalized):
+        if _is_uncertain(normalized, start, end):
+            continue
         previous = None
         following = None
         for marker_start, marker_end, marker_kind in markers:
@@ -402,7 +427,9 @@ def parse_timepoints(text: str | None) -> dict[str, Any]:
                 after = normalized[
                     following[1]:_clause_end(normalized, following[1])
                 ]
-                suffix = not _weeks_in_text(after)
+                # Auch unsichere Angaben belegen, dass der Marker eine
+                # fuehrende Beschriftung ist und keine nachgestellte.
+                suffix = not _week_occurrences(after)
             if suffix:
                 kind = following[2]
             elif previous:
@@ -609,7 +636,7 @@ def build_result() -> dict[str, Any]:
             )
         exclusion_reasons[study_id] = reasons
     return {
-        "version": 4,
+        "version": 5,
         "created_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "scope": (
             "Abgleich projektinterner CBT-I-Primaerschstudien mit den "

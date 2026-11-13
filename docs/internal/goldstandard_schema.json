@@ -93,7 +93,7 @@
           "properties": {
             "status": {
               "enum": ["parsed", "no_marker", "unparsed", "missing"],
-              "description": "no_marker = Zeitangabe ohne Post-/Follow-up-Marker; zaehlt nicht als Post-Treatment."
+              "description": "no_marker = Zeitangabe ohne Post-/Follow-up-Marker; zaehlt nicht als Post-Treatment. Median- und ±-Angaben werden konservativ nicht als Wochenwert uebernommen."
             },
             "post_treatment_weeks": {
               "type": "array",

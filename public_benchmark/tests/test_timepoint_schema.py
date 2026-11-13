@@ -48,6 +48,14 @@ def test_schema_exposes_structured_timepoint_segments() -> None:
     }
 
 
+def test_segmentation_drops_median_pm_values() -> None:
+    effect = _effect()
+    effect["time_point"] = "follow-up (median 5.8 ± 2.5 years)"
+    segments = schema.segment_effect(effect)["time_point_segments"]
+    assert segments["status"] == "unparsed"
+    assert segments["follow_up_weeks"] == []
+
+
 def test_segmentation_preserves_outcome_values(tmp_path: Path) -> None:
     original = _effect()
     source = tmp_path / "goldstandard.json"

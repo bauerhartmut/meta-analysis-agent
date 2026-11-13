@@ -150,6 +150,37 @@ def test_missing_marker_is_not_treated_as_post_treatment() -> None:
     assert comparison["match"] is None
 
 
+def test_median_and_pm_values_are_not_timepoints() -> None:
+    parsed = match.parse_timepoints("follow-up (median 5.8 ± 2.5 years)")
+    assert parsed["follow_up_weeks"] == []
+    assert parsed["weeks"] == []
+    assert parsed["status"] == "unparsed"
+
+    mixed = match.parse_timepoints(
+        "Post 10 weeks; follow-up median 5.8 ± 2.5 years"
+    )
+    assert mixed["post_treatment_weeks"] == [10.0]
+    assert mixed["follow_up_weeks"] == []
+    assert mixed["weeks"] == [10.0]
+
+    median_only = match.parse_timepoints(
+        "10 weeks post-treatment, median follow-up 5.8 years"
+    )
+    assert median_only["post_treatment_weeks"] == [10.0]
+    assert median_only["follow_up_weeks"] == []
+
+    with_period = match.parse_timepoints(
+        "Post 10 weeks. Follow-up median 5.8 ± 2.5 years"
+    )
+    assert with_period["post_treatment_weeks"] == [10.0]
+    assert with_period["follow_up_weeks"] == []
+
+    comparison = match.compare_timepoints(
+        "10 weeks post-treatment", "follow-up (median 5.8 ± 2.5 years)"
+    )
+    assert comparison["match"] is None
+
+
 def test_suffix_follow_up_is_not_counted_as_post_treatment() -> None:
     for text, expected_post in (
         ("6 weeks post-treatment, 12 weeks follow-up", [6.0]),
