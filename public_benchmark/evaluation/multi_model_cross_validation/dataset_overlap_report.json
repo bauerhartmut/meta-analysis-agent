@@ -1,0 +1,120 @@
+{
+  "created": "2026-11-13",
+  "method": "PMCID- und DOI-Vergleich; PMID-Abbildung ueber Europe PMC",
+  "sets": {
+    "yun_articles": 70,
+    "g5_articles": 30,
+    "crossval_articles": 50
+  },
+  "eururology": {
+    "trials": 20,
+    "dois": 17,
+    "doi_resolved": 4,
+    "overlap_yun_pmcid": [],
+    "overlap_g5_pmcid": [],
+    "overlap_crossval_pmcid": [],
+    "overlap_doi": [],
+    "resolution": {
+      "10.1001/jama.2022.7393": {
+        "pmid": "35569079",
+        "pmcid": "PMC9109000",
+        "title": "Effect of Robot-Assisted Radical Cystectomy With Intracorporeal Urinary Diversion vs Open Radical Cystectomy on 90-Day M"
+      },
+      "10.1007/s00345-022-04029-9": {
+        "pmid": "35590011",
+        "pmcid": "",
+        "title": "Quality of life and secondary outcomes for open versus robot-assisted radical cystectomy: a double-blinded, randomised f"
+      },
+      "10.1016/j.clon.2012.09.010": {
+        "pmid": "23257248",
+        "pmcid": "",
+        "title": "Neoadjuvant androgen deprivation therapy for prostate volume reduction, lower urinary tract symptom relief and quality o"
+      },
+      "10.1016/j.eururo.2009.10.024": {
+        "pmid": "19853987",
+        "pmcid": "",
+        "title": "Prospective randomized controlled trial of robotic versus open radical cystectomy for bladder cancer: perioperative and "
+      },
+      "10.1016/j.eururo.2014.11.043": {
+        "pmid": "25496767",
+        "pmcid": "PMC4424172",
+        "title": "Comparing Open Radical Cystectomy and Robot-assisted Laparoscopic Radical Cystectomy: A Randomized Clinical Trial."
+      },
+      "10.1016/j.eururo.2015.07.038": {
+        "pmid": "26272237",
+        "pmcid": "",
+        "title": "A Single-centre Early Phase Randomised Controlled Three-arm Trial of Open, Robotic, and Laparoscopic Radical Cystectomy "
+      },
+      "10.1016/j.juro.2012.09.077": {
+        "pmid": "23017529",
+        "pmcid": "",
+        "title": "Perioperative outcomes and oncologic efficacy from a pilot prospective randomized clinical trial of open versus robotic "
+      },
+      "10.1016/s0140-6736(18)30996-6": {
+        "pmid": "29976469",
+        "pmcid": "",
+        "title": "Robot-assisted radical cystectomy versus open radical cystectomy in patients with bladder cancer (RAZOR): an open-label,"
+      },
+      "10.1016/s1569-9056(13)60476-5": {
+        "pmid": "",
+        "pmcid": ""
+      },
+      "10.1097/ju.0000000000000384": {
+        "pmid": "31188734",
+        "pmcid": "",
+        "title": "Cardiovascular Morbidity in a Randomized Trial Comparing GnRH Agonist and GnRH Antagonist among Patients with Advanced P"
+      },
+      "10.1097/ju.0000000000002422": {
+        "pmid": "34986007",
+        "pmcid": "PMC12721634",
+        "title": "Open Radical Cystectomy versus Robot-Assisted Radical Cystectomy with Intracorporeal Urinary Diversion: Early Outcomes o"
+      },
+      "10.1111/bju.12818": {
+        "pmid": "24862633",
+        "pmcid": "",
+        "title": "Health-related quality of life from a prospective randomised clinical trial of robot-assisted laparoscopic vs open radic"
+      },
+      "10.1111/bju.15619": {
+        "pmid": "34657367",
+        "pmcid": "",
+        "title": "Open vs robot-assisted radical cystectomy (BORARC): a double-blinded, randomised feasibility study."
+      },
+      "10.1111/cas.13600": {
+        "pmid": "29624800",
+        "pmcid": "PMC5989846",
+        "title": "Efficacy and safety of 3-month dosing regimen of degarelix in Japanese subjects with prostate cancer: A phase III study."
+      },
+      "10.1111/j.1464-410x.2008.08183.x": {
+        "pmid": "19035858",
+        "pmcid": "",
+        "title": "The efficacy and safety of degarelix: a 12-month, comparative, randomized, open-label, parallel-group phase III study in"
+      },
+      "10.1111/j.1464-410x.2012.11107.x": {
+        "pmid": "22500884",
+        "pmcid": "",
+        "title": "Androgen deprivation therapy for volume reduction, lower urinary tract symptom relief and quality of life improvement in"
+      },
+      "10.1159/000345423": {
+        "pmid": "23258223",
+        "pmcid": "",
+        "title": "Degarelix versus goserelin (+ antiandrogen flare protection) in the relief of lower urinary tract symptoms secondary to "
+      }
+    }
+  },
+  "pico_corpus": {
+    "note": "5024 Records, 718 PMIDs",
+    "pmids": 718,
+    "overlap_pmid": []
+  },
+  "glass_trialreviewbench": {
+    "records": 81,
+    "pmids": 45,
+    "overlap_pmid": []
+  },
+  "our_pmids_resolved": 150,
+  "verdict": {
+    "eururology_independent": true,
+    "pico_independent": true,
+    "glass_independent": true
+  }
+}

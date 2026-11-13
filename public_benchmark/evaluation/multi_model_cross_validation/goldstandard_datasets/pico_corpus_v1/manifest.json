@@ -1,0 +1,27 @@
+{
+  "adapter": "adapter_pico_corpus.py",
+  "source": "https://github.com/sociocom/PICO-Corpus",
+  "publication": "Mutinda et al., PICO Corpus, WIESP 2022 (ACL Anthology 2022.wiesp-1.4)",
+  "license": "keine Lizenzdatei im Repository",
+  "abstracts": 1011,
+  "records": 5024,
+  "records_by_label": {
+    "cv-bin-abs": 465,
+    "cv-bin-percent": 1148,
+    "cv-cont-mean": 327,
+    "cv-cont-median": 247,
+    "cv-cont-q1": 4,
+    "cv-cont-q3": 4,
+    "cv-cont-sd": 124,
+    "iv-bin-abs": 556,
+    "iv-bin-percent": 1376,
+    "iv-cont-mean": 366,
+    "iv-cont-median": 270,
+    "iv-cont-q1": 4,
+    "iv-cont-q3": 4,
+    "iv-cont-sd": 129
+  },
+  "records_without_numeric_value": 217,
+  "outcome_linked": false,
+  "note": "keine Relationen zwischen Zahl und Outcome; outcome_id bleibt leer"
+}

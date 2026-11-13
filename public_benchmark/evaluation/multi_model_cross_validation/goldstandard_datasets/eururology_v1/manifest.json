@@ -1,0 +1,48 @@
+{
+  "adapter": "adapter_eururology.py",
+  "source": "eururology_osf_8fzps",
+  "source_document": "https://osf.io/8fzps/",
+  "publication": "Yisha et al., BMC Med Res Methodol 2026;26:33, doi 10.1186/s12874-025-02729-5",
+  "license": "keine Lizenz im OSF-Projekt angegeben",
+  "workbooks": [
+    {
+      "name": "prompt1_chatgpt.xlsx",
+      "sha256": "e4f0709385a72e2c24f72ccc304ca3c3f779ef32a03972e4961a5a103a8e995c",
+      "records": 104
+    },
+    {
+      "name": "prompt1_claude.xlsx",
+      "sha256": "0f7b700ea85d6e54c65550fcc4c75711df5a6942ff5398436ee18a86673d6adf",
+      "records": 104
+    },
+    {
+      "name": "prompt2_chatgpt.xlsx",
+      "sha256": "5e1564e30922857cb4f267f7b47d640e23c59b7216bdafe4aab8b80ea1bdde36",
+      "records": 104
+    },
+    {
+      "name": "prompt2_claude.xlsx",
+      "sha256": "f4b50462ab685df7eefbc657c7449d6628a0ff2bc4cd210457b46c0e19e5a598",
+      "records": 104
+    }
+  ],
+  "records": 104,
+  "records_binary": 41,
+  "records_continuous": 63,
+  "distinct_trials": 20,
+  "distinct_trial_dois": 18,
+  "distinct_outcomes": 104,
+  "skipped_rows": 40,
+  "skipped_reasons": [
+    "Zeile ohne jeden Goldwert",
+    "mehrere Trials in einem Feld, kein Armwert"
+  ],
+  "skipped_by_reason": {
+    "Zeile ohne jeden Goldwert": 36,
+    "mehrere Trials in einem Feld, kein Armwert": 4
+  },
+  "records_with_missing_gold_cells": 22,
+  "gold_columns_consistent_across_workbooks": true,
+  "label_spelling_variants_across_workbooks": 24,
+  "duplicate_record_ids": 0
+}
