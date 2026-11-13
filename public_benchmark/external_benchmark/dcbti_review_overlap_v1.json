@@ -1,0 +1,234 @@
+{
+  "version": 1,
+  "created_at": "2026-11-13T12:18:15Z",
+  "scope": "Abgleich projektinterner CBT-I-Primaerschstudien mit den Studienlisten von Hwang 2025 und Lee 2023; keine Aenderung von Outcome-Werten, kein Modelllauf.",
+  "project_30_documents": {
+    "path": "data/golden_effects/documents.json",
+    "documents": 30,
+    "dcbti_titles": 0,
+    "sleep_related_titles": 5,
+    "sleep_examples": [
+      "A Multicenter, Placebo-controlled Trial of Melatonin for Sleep Disturb",
+      "Effects of Acute Caffeine Ingestion on Reaction Time in Habitual and L",
+      "Withdrawal Symptoms and Executive Functions After 24-Hour Caffeine Abs",
+      "Impaired sleep, depressive symptoms, and pain as determinants of physi",
+      "Consumption of caffeine-containing beverages improves sustained attent"
+    ],
+    "conclusion": "Die 30 eingefrorenen Volltexte sind ein gemischtes Methoden-Sample; keiner ist eine dCBT-I-Studie."
+  },
+  "our_sources": [
+    "data/meta_nachbau/pilot_dcbti/antwortschluessel.json",
+    "data/meta_nachbau/pilot_cbti/antwortschluessel.json"
+  ],
+  "our_studies": [
+    {
+      "study_id": "chan_2021",
+      "source": "pilot_cbti",
+      "citation": "Chan NY et al. A prevention program for insomnia in at-risk adolescents: a randomized controlled study. Pediatrics. 2021;147:1-9.",
+      "doi": "10.1542/peds.2020-006833",
+      "pmcid": null,
+      "surname": "Chan",
+      "year": 2021,
+      "outcomes": [],
+      "timepoint": null,
+      "n_treatment": 121,
+      "n_control": 121
+    },
+    {
+      "study_id": "chan_2022",
+      "source": "pilot_cbti",
+      "citation": "Chan NY et al. Efficacy of email-delivered versus face-to-face group cognitive behavioral therapy for insomnia in youths: a randomized controlled trial. J Adolesc Health. 2022;70:763-73.",
+      "doi": "10.1016/j.jadohealth.2021.11.005",
+      "pmcid": null,
+      "surname": "Chan",
+      "year": 2022,
+      "outcomes": [],
+      "timepoint": null,
+      "n_treatment": 45,
+      "n_control": 45
+    },
+    {
+      "study_id": "de_bruin_2015",
+      "source": "pilot_cbti",
+      "citation": "de Bruin EJ, Dewald-Kaufmann JF, Oort FJ, Bogels SM, Meijer AM. Differential effects of online insomnia treatment on executive functions in adolescents. Sleep Med. 2015;16:510-20.",
+      "doi": "10.1016/j.sleep.2014.12.009",
+      "pmcid": null,
+      "surname": "de Bruin",
+      "year": 2015,
+      "outcomes": [],
+      "timepoint": null,
+      "n_treatment": 18,
+      "n_control": 14
+    },
+    {
+      "study_id": "de_bruin_2018",
+      "source": "pilot_dcbti",
+      "citation": "de Bruin EJ, Bogels SM, Oort FJ, Meijer AM. Improvements of adolescent psychopathology after insomnia treatment: results from a randomized controlled trial over 1 year. J Child Psychol Psychiatry. 2018;59:509-522.",
+      "doi": "10.1111/jcpp.12834",
+      "pmcid": null,
+      "surname": "de Bruin",
+      "year": 2018,
+      "outcomes": [
+        "HSDQi"
+      ],
+      "timepoint": "post-treatment (direkt nach Behandlung)",
+      "n_treatment": 39,
+      "n_control": 39
+    },
+    {
+      "study_id": "egbegi_2021",
+      "source": "pilot_cbti",
+      "citation": "Egbegi DR, Bella-Awusah T, Omigbodun O, Ani C. A controlled trial of cognitive Behavioural therapy-based strategies for insomnia among in-school adolescents in southern Nigeria. Child Adolesc Psychiatry Ment Health. 2021;15:52.",
+      "doi": "10.1186/s13034-021-00406-1",
+      "pmcid": "PMC8465787",
+      "surname": "Egbegi",
+      "year": 2021,
+      "outcomes": [],
+      "timepoint": null,
+      "n_treatment": 21,
+      "n_control": 16
+    },
+    {
+      "study_id": "freeman_2017",
+      "source": "pilot_dcbti",
+      "citation": "Freeman D, Sheaves B, Goodwin GM, Yu LM, Nickless A, Harrison PJ, Emsley R, Luik AI, Foster RG, Wadekar V, et al. The effects of improving sleep on mental health (OASIS): a randomised controlled trial with mediation analysis. Lancet Psychiatry. 2017;4:749-758.",
+      "doi": "10.1016/S2215-0366(17)30328-0",
+      "pmcid": "PMC5614772",
+      "surname": "Freeman",
+      "year": 2017,
+      "outcomes": [
+        "ISI"
+      ],
+      "timepoint": "post-treatment (Woche 10)",
+      "n_treatment": 1891,
+      "n_control": 1864
+    },
+    {
+      "study_id": "fucito_2017",
+      "source": "pilot_dcbti",
+      "citation": "Fucito LM, DeMartini KS, Hanrahan TH, Yaggi HK, Heffern C, Redeker NS. Using sleep interventions to engage and treat heavy-drinking college students: a randomized pilot study. Alcohol Clin Exp Res. 2017;41:798-809.",
+      "doi": "10.1111/acer.13342",
+      "pmcid": "PMC5378596",
+      "surname": "Fucito",
+      "year": 2017,
+      "outcomes": [
+        "PSQI"
+      ],
+      "timepoint": "post-treatment (Woche 5)",
+      "n_treatment": 21,
+      "n_control": 21
+    },
+    {
+      "study_id": "morris_2015",
+      "source": "pilot_dcbti",
+      "citation": "Morris J, Firkins A, Millings A, Mohr C, Redford P, Rowe A. Internet-delivered cognitive behavior therapy for anxiety and insomnia in a higher education context. Anxiety Stress Coping. 2015;29:415-431.",
+      "doi": "10.1080/10615806.2015.1058924",
+      "pmcid": null,
+      "surname": "Morris",
+      "year": 2015,
+      "outcomes": [
+        "PSQI"
+      ],
+      "timepoint": "post-treatment (6 Wochen)",
+      "n_treatment": 48,
+      "n_control": 47
+    },
+    {
+      "study_id": "tomfohr_madsen_2020",
+      "source": "pilot_cbti",
+      "citation": "Tomfohr-Madsen L, Madsen JW, Bonneville D, Virani S, Plourde V, Barlow KM, et al. A pilot randomized controlled trial of cognitive-behavioral therapy for insomnia in adolescents with persistent postconcussion symptoms. J Head Trauma Rehabil. 2020;35:E103-12.",
+      "doi": "10.1097/htr.0000000000000504",
+      "pmcid": null,
+      "surname": "Tomfohr-Madsen",
+      "year": 2020,
+      "outcomes": [],
+      "timepoint": null,
+      "n_treatment": 12,
+      "n_control": 12
+    }
+  ],
+  "our_studies_count": 9,
+  "reviews": {
+    "hwang2025": {
+      "title": "Systematic review and meta-analysis on fully automated digital cognitive behavioral therapy for insomnia",
+      "journal": "npj Digital Medicine 8:157 (2025)",
+      "doi": "10.1038/s41746-025-01514-4",
+      "url": "https://www.nature.com/articles/s41746-025-01514-4",
+      "table_url": "https://www.nature.com/articles/s41746-025-01514-4/tables/1",
+      "included_count": 29,
+      "supplement_note": "Supplementary PDF enthaelt PRISMA-Checkliste und Suchstrategie, keine zusaetzliche Studienliste."
+    },
+    "lee2023": {
+      "title": "Digital cognitive behavioral therapy for insomnia on depression and anxiety: a systematic review and meta-analysis",
+      "journal": "npj Digital Medicine 6:52 (2023)",
+      "doi": "10.1038/s41746-023-00800-3",
+      "url": "https://www.nature.com/articles/s41746-023-00800-3",
+      "table_url": "https://www.nature.com/articles/s41746-023-00800-3/tables/1",
+      "included_count": 22,
+      "supplement_note": "Supplementary PDF enthaelt Suchstrategie und Forest Plots, keine zusaetzliche Studienliste."
+    }
+  },
+  "matches": [
+    {
+      "study_id": "freeman_2017",
+      "review_doi": "10.1038/s41746-023-00800-3",
+      "review_title": "Digital cognitive behavioral therapy for insomnia on depression and anxiety: a systematic review and meta-analysis",
+      "review": "10.1038/s41746-023-00800-3",
+      "matched": true,
+      "matched_by": [
+        "doi",
+        "autor_jahr"
+      ],
+      "review_entry": {
+        "author": "Freeman",
+        "year": 2017,
+        "doi": "10.1016/S2215-0366(17)30328-0",
+        "pmcid": "PMC5614772",
+        "n_total": 3755,
+        "design": "2 parallele Arme (dCBTi, TAU)",
+        "sessions": 6,
+        "timepoint": "10 Wochen post-treatment",
+        "outcomes": [
+          "ISI",
+          "PHQ-9",
+          "GAD-7"
+        ]
+      },
+      "our_outcomes": [
+        "ISI"
+      ],
+      "review_outcomes": [
+        "ISI",
+        "PHQ-9",
+        "GAD-7"
+      ],
+      "outcome_overlap": [
+        "ISI"
+      ],
+      "our_timepoint": "post-treatment (Woche 10)",
+      "review_timepoint": "10 Wochen post-treatment",
+      "timepoint_match": true,
+      "n_ours": 3755,
+      "n_review": 3755,
+      "n_match": true,
+      "note": "Review nennt nur Studiencharakteristika; Mittelwerte und SD stehen nicht in Tabelle 1."
+    }
+  ],
+  "match_count": 1,
+  "unmatched_studies": [
+    "chan_2021",
+    "chan_2022",
+    "de_bruin_2015",
+    "de_bruin_2018",
+    "egbegi_2021",
+    "fucito_2017",
+    "morris_2015",
+    "tomfohr_madsen_2020"
+  ],
+  "limitations": [
+    "Die Review-Tabellen nennen keine PMCIDs; PMCID-Abgleich ist nur fuer Studien moeglich, deren PMCID im Projekt oder in der Referenzliste steht.",
+    "DOI steht in Tabelle 1 nur bei der bestaetigten Zeile; weitere DOIs wurden nicht aus der Referenzliste rekonstruiert.",
+    "Tabelle 1 nennt keine armweisen Mittelwerte oder SD; eine numerische Bestaetigung der Extraktion ist daraus nicht moeglich.",
+    "Die Supplementary-PDFs enthalten keine Studienliste; massgeblich ist Tabelle 1."
+  ]
+}
