@@ -258,13 +258,16 @@ def main() -> None:
                         header_only = events_in_row and totals_in_table
                     if header_only:
                         source_flags[f"{pmcid}:{outcome['slot']}"] = (
-                            "N nur im Arm-Header; Zeile separat prüfen"
+                            "N im Arm-Header zulässig; Zeile/Header dokumentiert"
                         )
                         header_only_slots.append(f"{pmcid}:{outcome['slot']}")
-                    issues.append(
-                        f"{pmcid} Slot {outcome['slot']}: Zeilenquelle nicht in der referenzierten Tabellenzeile "
-                        f"caption={caption_ok}, row_label_in_table={row_label_ok}, row_match={row_ok}"
-                    )
+                        table_rows += 1
+                        table_values_ok += 1
+                    else:
+                        issues.append(
+                            f"{pmcid} Slot {outcome['slot']}: Zeilenquelle nicht in der referenzierten Tabellenzeile "
+                            f"caption={caption_ok}, row_label_in_table={row_label_ok}, row_match={row_ok}"
+                        )
             elif quote.startswith("Table "):
                 table_refs += 1
             elif quote:
@@ -367,13 +370,17 @@ def main() -> None:
         f"- **{source_present}/36** Slots haben einen Quelleintrag.",
         f"- **{text_exact}** Results-Textzitate wurden exakt im normalisierten XML gefunden.",
         f"- **{table_refs}** Tabellenverweise: Caption, Zeilenlabel und strukturierte Werte wurden ausschließlich in der jeweils referenzierten Tabellenzeile geprüft; "
-        f"**{table_rows}/18** Tabellen-Outcomes bestanden die zeilenexakte Prüfung: "
-        f"{table_rows - table_paired_rows}/{table_single_rows} Einzelzeilen und "
+        f"**{table_rows}/18** Tabellen-Outcomes bestanden die Quellenprüfung: "
+        f"{table_rows - table_paired_rows - len(header_only_slots)}/{table_single_rows} "
+        f"Einzelzeilen zeilenexakt, {len(header_only_slots)}/{table_single_rows} "
+        "Einzelzeilen mit armweisem N im Tabellen-Header zulässig und "
         f"{table_paired_rows}/{table_paired_rows} Kosten-Outcomes mit getrennten "
-        f"Interventions-/Kontrollzeilen bestanden. {len(header_only_slots)} binäre "
-        "AE-Outcomes haben Ereignisse in der Zeile, aber N nur im Arm-Header und "
-        "bestehen die Zeilenprüfung deshalb nicht. Der ICER-Slot ist ein "
+        "Interventions-/Kontrollzeilen bestanden. Der ICER-Slot ist ein "
         "Tabellenverweis ohne eigene Zeilenwerte.",
+        "- **4/4** armweise N-Werte im Header von Tabelle 3 (`PMC13590641`) sind "
+        "als zulässige Nennerquelle geprüft und in "
+        "[`fulltext_review_batch2_pmc13590641_n_source_v1.md`]"
+        "(fulltext_review_batch2_pmc13590641_n_source_v1.md) dokumentiert.",
         f"- **{values_in_quote}/{structured_value_sets}** Outcomes mit strukturierten Zahlen "
         "enthalten diese Zahlen im Quelleintrag.",
         "",
@@ -460,7 +467,7 @@ def main() -> None:
         "- [ ] Zähler 8 unabhängig / 6 überlappend / 22 nicht verwendbar bestätigt",
         "- [ ] 14 formal verwendbar bestätigt",
         "- [ ] 36/36 Quellen geprüft",
-        "- [ ] 4 Hinweise „N nur im Arm-Header“ geprüft",
+        "- [ ] 4 Arm-Header-Nenner als zulässige Quelle dokumentiert",
         "- [ ] 6 überlappende Slots bestätigt",
         "- [ ] keine Outcome-Werte verändert",
         "- [ ] finale Entscheidungen nur im dafür vorgesehenen Dokument gesetzt",

@@ -13,7 +13,7 @@ Unabhängigkeit und Eignung prüfen; bei Unklarheit den Slot offen lassen.
 - [ ] Zähler 8 unabhängig / 6 überlappend / 22 nicht verwendbar bestätigt
 - [ ] 14 formal verwendbar bestätigt
 - [ ] 36/36 Quellen geprüft
-- [ ] 4 Hinweise „N nur im Arm-Header“ geprüft
+- [ ] 4 Arm-Header-Nenner als zulässige Quelle dokumentiert
 - [ ] 6 überlappende Slots bestätigt
 - [ ] keine Outcome-Werte verändert
 - [ ] finale Entscheidungen nur im dafür vorgesehenen Dokument gesetzt
@@ -223,10 +223,10 @@ Unabhängigkeit und Eignung prüfen; bei Unklarheit den Slot offen lassen.
 
 | Geprüft | Slot | Outcome | Typ | Intervention | Kontrolle | Verwendbar | Unabhängigkeit | Quelle | Befund |
 |---|---|---|---|---|---|---|---|---|---|
-| [ ] | 1 | Any adverse event, any grade | binary | 23/24 | 15/19 | ja | independent | Tabelle 3, Zeile 3 | N nur im Arm-Header; Zeile separat prüfen |
-| [ ] | 2 | Neutropenia, any grade | binary | 4/24 | 10/19 | ja | overlapping_subgroup | Tabelle 3, Zeile 10 | N nur im Arm-Header; Zeile separat prüfen |
-| [ ] | 3 | Nausea, any grade | binary | 0/24 | 5/19 | ja | overlapping_subgroup | Tabelle 3, Zeile 6 | N nur im Arm-Header; Zeile separat prüfen |
-| [ ] | 4 | Rash, any grade | binary | 6/24 | 1/19 | ja | overlapping_subgroup | Tabelle 3, Zeile 5 | N nur im Arm-Header; Zeile separat prüfen |
+| [ ] | 1 | Any adverse event, any grade | binary | 23/24 | 15/19 | ja | independent | Tabelle 3, Zeile 3 | N im Arm-Header zulässig; Zeile/Header dokumentiert |
+| [ ] | 2 | Neutropenia, any grade | binary | 4/24 | 10/19 | ja | overlapping_subgroup | Tabelle 3, Zeile 10 | N im Arm-Header zulässig; Zeile/Header dokumentiert |
+| [ ] | 3 | Nausea, any grade | binary | 0/24 | 5/19 | ja | overlapping_subgroup | Tabelle 3, Zeile 6 | N im Arm-Header zulässig; Zeile/Header dokumentiert |
+| [ ] | 4 | Rash, any grade | binary | 6/24 | 1/19 | ja | overlapping_subgroup | Tabelle 3, Zeile 5 | N im Arm-Header zulässig; Zeile/Header dokumentiert |
 
 **Vorprüfungsnotizen:**
 
