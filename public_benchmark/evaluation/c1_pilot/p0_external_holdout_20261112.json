@@ -213,5 +213,24 @@
   "no_model_run": true,
   "test_split_used": false,
   "human_review_complete": true,
-  "human_signoff": "complete"
+  "human_signoff": "complete",
+  "fulltext_priority": {
+    "status": "shortlist_ready_pending_fulltext_review",
+    "target_articles": 30,
+    "candidate_count": 415,
+    "manual_includes": 36,
+    "shortlist_count": 30,
+    "shortlist_by_priority": {
+      "hoch": 14,
+      "mittel": 16
+    },
+    "manual_reserve": 6,
+    "rule_based_reserve": 379,
+    "final_selection": false,
+    "model_used": false,
+    "network_used": false,
+    "json_path": "public_benchmark/evaluation/c1_pilot/holdout_p0_20261112/fulltext_candidate_priority_v1.json",
+    "csv_path": "public_benchmark/evaluation/c1_pilot/holdout_p0_20261112/fulltext_candidate_priority_v1.csv",
+    "md_path": "public_benchmark/evaluation/c1_pilot/holdout_p0_20261112/fulltext_candidate_priority_v1.md"
+  }
 }

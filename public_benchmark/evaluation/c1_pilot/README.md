@@ -330,6 +330,10 @@ Plan: [`holdout_plan_20261112.md`](holdout_plan_20261112.md), Schema:
   Volltext-Prüfvorlage für die 36 vorläufigen Einschlüsse mit Eignungscheck,
   Armdefinition und vier Outcome-Slots für N/Mean/SD/Events; keine Schätzung
   oder Umrechnung.
+- [`holdout_p0_20261112/fulltext_candidate_priority_v1.md`](holdout_p0_20261112/fulltext_candidate_priority_v1.md):
+  deterministische Priorisierung aller 415 Volltextkandidaten; 30er-Shortlist
+  aus 14 hohen und 16 mittleren menschlich bestätigten Einschlüssen, sechs
+  bestätigte und 379 regelbasierte Reserve; keine endgültige Auswahl.
 - [`holdout_p0_20261112/fulltext_access_plan_v1.md`](holdout_p0_20261112/fulltext_access_plan_v1.md):
   lokale Zugriffsprüfung für die 36 Volltexte gegen 1.291 `data/fulltext`-Texte,
   101 Metadatensätze und 62 Inbox-Dateien; alle Open Access/Europe PMC,

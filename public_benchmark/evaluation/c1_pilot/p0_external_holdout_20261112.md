@@ -105,6 +105,14 @@ Ausschluessen zusammen.
 Die 415 Volltextkandidaten sind **nicht** endgueltig eingeschlossen. Die 65
 Einzelfallentscheidungen sind eingetragen: **65 von HB**, **0 assistiert durch
 Codebuff**. Die menschliche Gegenpruefung ist abgeschlossen.
+
+Fuer die Artikelauswahl wurden die 415 Kandidaten deterministisch priorisiert:
+**30er-Shortlist** aus 14 hohen und 16 mittleren menschlich bestaetigten
+Einschluessen; sechs bestaetigte Einschluesse und 379 regelbasierte Kandidaten
+bleiben Reserve. Die Shortlist ist keine endgueltige Auswahl. Details:
+[`fulltext_candidate_priority_v1.md`](holdout_p0_20261112/fulltext_candidate_priority_v1.md),
+[`fulltext_candidate_priority_v1.csv`](holdout_p0_20261112/fulltext_candidate_priority_v1.csv),
+[`fulltext_candidate_priority_v1.json`](holdout_p0_20261112/fulltext_candidate_priority_v1.json).
 Mehrfachgruende sind moeglich; die Regelzahlen
 sind nicht additiv.
 
@@ -275,7 +283,8 @@ nachträglich aufgeweicht.
 2. **Erledigt:** Abstract-Screening; 181 ausgeschlossen, 0 manuell offen,
    415 vorlaeufig fuer Volltext (65 Einzelfallentscheidungen, alle menschlich
    freigegeben).
-3. **Als Naechstes:** 415 Volltextkandidaten pruefen und 30 Artikel auswaehlen.
+3. **Als Naechstes:** die 30er-Shortlist im Volltext pruefen und danach 30
+   Artikel und 100 Records endgueltig auswaehlen; Netzabruf nur nach Freigabe.
 4. 100 Records nach C1-Regeln annotieren.
 5. Disjunktheit, Quellen und Werte prüfen.
 6. Manifest befüllen, hashen und einfrieren.
