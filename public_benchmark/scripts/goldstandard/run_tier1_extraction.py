@@ -18,6 +18,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import random
 import re
 import sys
 import threading
@@ -84,7 +85,25 @@ def build_prompt(record: dict[str, Any], text: str, limit: int = 45000) -> str:
     )
 
 
-def call(model: dict[str, Any], prompt: str, key: str, base: str) -> dict[str, Any]:
+def call(
+    model: dict[str, Any], prompt: str, key: str, base: str, attempts: int = 4
+) -> dict[str, Any]:
+    last: dict[str, Any] | None = None
+    for attempt in range(1, attempts + 1):
+        last = _call_once(model, prompt, key, base)
+        status = last.get("http_status")
+        if status == 200 and last.get("content"):
+            return last
+        if status in (429, 500, 502, 503, 504) and attempt < attempts:
+            wait = 5 * attempt + random.uniform(0, 3)
+            print(f"  {model['id']} {status}, warte {wait:.1f}s (Versuch {attempt})", flush=True)
+            time.sleep(wait)
+            continue
+        return last
+    return last or {"http_status": 0, "error": "kein Versuch", "content": ""}
+
+
+def _call_once(model: dict[str, Any], prompt: str, key: str, base: str) -> dict[str, Any]:
     payload = {
         "model": model["id"],
         "messages": [

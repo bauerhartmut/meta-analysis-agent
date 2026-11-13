@@ -117,6 +117,11 @@ def main() -> int:
     parser.add_argument("--predictions", type=Path, default=RUN)
     parser.add_argument("--out", type=Path, default=OUT)
     parser.add_argument("--bootstrap", type=int, default=1000)
+    parser.add_argument(
+        "--common",
+        action="store_true",
+        help="nur Records, die von allen Modellen beantwortet wurden",
+    )
     args = parser.parse_args()
 
     records = [
@@ -130,7 +135,20 @@ def main() -> int:
     predictions = {(row["record_id"], row["model"]): row for row in entries}
     models = sorted({row["model"] for row in entries})
 
-    payload: dict[str, Any] = {"run": str(args.predictions), "records_in_set": len(records), "models": {}}
+    if args.common:
+        answered = [
+            {record_id for (record_id, model), row in predictions.items() if row.get("rows") and model == m}
+            for m in models
+        ]
+        common = set.intersection(*answered) if answered else set()
+        records = [row for row in records if row["record_id"] in common]
+
+    payload: dict[str, Any] = {
+        "run": str(args.predictions),
+        "records_in_set": len(records),
+        "common_subset": args.common,
+        "models": {},
+    }
     for model in models:
         per_record = score(records, predictions, model)
         gold = sum(row["gold"] for row in per_record.values())
