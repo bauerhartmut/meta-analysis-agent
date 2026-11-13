@@ -1,6 +1,6 @@
 {
-  "version": 1,
-  "created_at": "2026-11-13T12:18:15Z",
+  "version": 2,
+  "created_at": "2026-11-13T12:25:44Z",
   "scope": "Abgleich projektinterner CBT-I-Primaerschstudien mit den Studienlisten von Hwang 2025 und Lee 2023; keine Aenderung von Outcome-Werten, kein Modelllauf.",
   "project_30_documents": {
     "path": "data/golden_effects/documents.json",
@@ -207,6 +207,26 @@
       ],
       "our_timepoint": "post-treatment (Woche 10)",
       "review_timepoint": "10 Wochen post-treatment",
+      "timepoint_comparison": {
+        "our": {
+          "raw": "post-treatment (Woche 10)",
+          "weeks": [
+            10.0
+          ],
+          "status": "parsed"
+        },
+        "review": {
+          "raw": "10 Wochen post-treatment",
+          "weeks": [
+            10.0
+          ],
+          "status": "parsed"
+        },
+        "tolerance_weeks": 0.5,
+        "match": true,
+        "difference_weeks": 0.0,
+        "reason": "innerhalb der Wochentoleranz"
+      },
       "timepoint_match": true,
       "n_ours": 3755,
       "n_review": 3755,
@@ -225,6 +245,120 @@
     "morris_2015",
     "tomfohr_madsen_2020"
   ],
+  "exclusion_reasons": {
+    "chan_2021": {
+      "hwang2025": {
+        "criterion": "Erwachsene ≥18 Jahre",
+        "confidence": "hoch",
+        "reason": "Die Stichprobe sind Jugendliche mit einem mittleren Alter von 14,7 Jahren; zudem ein Präventionsprogramm bei subklinischer Insomnie, keine Behandlung einer diagnostizierten Insomnie.",
+        "evidence": "Abstract: 242 adolescents, mean age 14.7 ± 1.8, family history und subthreshold insomnia."
+      },
+      "lee2023": {
+        "criterion": "Erwachsene ≥18 Jahre",
+        "confidence": "hoch",
+        "reason": "Die Stichprobe sind Jugendliche mit einem mittleren Alter von 14,7 Jahren.",
+        "evidence": "Abstract: mean age 14.7 ± 1.8."
+      }
+    },
+    "chan_2022": {
+      "hwang2025": {
+        "criterion": "Erwachsene ≥18 Jahre; vollständig automatisierte dCBT-I",
+        "confidence": "niedrig",
+        "reason": "Die Stichprobe sind 'youths' mit einem Mittelwert von 20,0 ± 2,5 Jahren, ein Teil kann unter 18 sein. Die E-Mail-Self-Help-Bedingung ist nicht eindeutig als vollständig automatisiert ohne Therapeutenkontakt beschrieben.",
+        "evidence": "Abstract: 135 youths, mean age 20.0 ± 2.5; E-Mail-Self-Help versus Gruppentherapie versus Warteliste."
+      },
+      "lee2023": {
+        "criterion": "berichtete Depression- oder Angstmaße; Suchschluss 15.01.2022",
+        "confidence": "mittel",
+        "reason": "Die Outcomes sind Insomnie, präsleep arousal, dysfunktionale Überzeugungen, Schlafhygiene und Tagesfunktion; Depression oder Angst werden nicht berichtet. Die Arbeit ist mit Publikationsjahr 2022 geführt; ob sie vor dem Lee-Suchschluss online verfügbar war, ist nicht belegt.",
+        "evidence": "Abstract listet keine Depression- oder Angstskala; Publikationsjahr 2022."
+      }
+    },
+    "de_bruin_2015": {
+      "hwang2025": {
+        "criterion": "Erwachsene ≥18 Jahre; vollständig automatisierte dCBT-I",
+        "confidence": "hoch",
+        "reason": "Die Stichprobe ist 13-19 Jahre alt (M = 15,9); zudem geleitete Self-Help-Sitzungen, also nicht vollständig automatisiert.",
+        "evidence": "Abstract: 32 adolescents, 13-19 years, six guided self-help online CBTI sessions."
+      },
+      "lee2023": {
+        "criterion": "Erwachsene ≥18 Jahre",
+        "confidence": "hoch",
+        "reason": "Die Stichprobe ist 13-19 Jahre alt (M = 15,9).",
+        "evidence": "Abstract: 13-19 years, M = 15.9."
+      }
+    },
+    "de_bruin_2018": {
+      "hwang2025": {
+        "criterion": "Erwachsene ≥18 Jahre",
+        "confidence": "hoch",
+        "reason": "Die Stichprobe besteht aus Jugendlichen mit einem mittleren Alter von 15,6 Jahren.",
+        "evidence": "Abstract: 116 Teilnehmende, age = 15.6 years, DSM-5-Insomnie."
+      },
+      "lee2023": {
+        "criterion": "Erwachsene ≥18 Jahre",
+        "confidence": "hoch",
+        "reason": "Die Stichprobe besteht aus Jugendlichen mit einem mittleren Alter von 15,6 Jahren.",
+        "evidence": "Abstract: age = 15.6 years; Internet- und Gruppentherapie versus Warteliste."
+      }
+    },
+    "egbegi_2021": {
+      "hwang2025": {
+        "criterion": "Erwachsene ≥18 Jahre; digital gelieferte dCBT-I",
+        "confidence": "hoch",
+        "reason": "Die Stichprobe sind In-School-Adoleszente; die Intervention war eine gruppenbasierte manualisierte CBT vor Ort, nicht digital.",
+        "evidence": "Abstract: 50 in-school adolescents, weekly group-based manualised CBT-based intervention over 5 weeks."
+      },
+      "lee2023": {
+        "criterion": "Erwachsene ≥18 Jahre; dCBT-I",
+        "confidence": "hoch",
+        "reason": "In-School-Adoleszente und eine gruppenbasierte Intervention vor Ort, keine digitale CBT-I.",
+        "evidence": "Abstract: in-school adolescents, group-based manualised intervention."
+      }
+    },
+    "fucito_2017": {
+      "hwang2025": {
+        "criterion": "Ausschluss von Alkoholmissbrauch oder -abhängigkeit",
+        "confidence": "mittel",
+        "reason": "Die Studie rekrutiert ausschließlich Heavy-Drinking-College-Students und adressiert Alkoholkonsum. Das liegt nahe am Hwang-Ausschluss für Alkoholmissbrauch oder -abhängigkeit; eine entsprechende Diagnose ist im Abstract aber nicht belegt.",
+        "evidence": "Abstract: 'Heavy-drinking college students (N = 42)', web-basierte Schlaf-plus-Alkohol-Intervention über 4 Wochen."
+      },
+      "lee2023": {
+        "criterion": "dCBT-I-Programm; berichtete Depression- oder Angstmaße",
+        "confidence": "mittel",
+        "reason": "Die Intervention kombiniert Schlaf- und Alkoholinhalte; Depression oder Angst werden nicht als Outcomes berichtet.",
+        "evidence": "Abstract nennt Alkohol- und Schlafoutcomes, keine Depression- oder Angstskala."
+      }
+    },
+    "morris_2015": {
+      "hwang2025": {
+        "criterion": "Erwachsene mit formaler Insomniediagnose; vollständig automatisierte dCBT-I ohne Therapeutenkontakt",
+        "confidence": "mittel",
+        "reason": "Die Stichprobe sind Studierende mit Angst- und/oder Insomniesymptomen. Der Abstract belegt weder eine formale Insomniediagnose noch, dass der Insomnie-Arm ohne Therapeutenkontakt lief.",
+        "evidence": "Abstract: zwei getrennte Programme ('Anxiety Relief', 'Insomnia Relief'), 6 Wochen, STAI und PSQI; keine Angabe zu Diagnose oder Guidance."
+      },
+      "lee2023": {
+        "criterion": "dCBT-I mit kognitiver Umstrukturierung plus Stimuluskontrolle/Schlafrestriktion; Depression- oder Angstmaß",
+        "confidence": "mittel",
+        "reason": "Transdiagnostisches Angst-/Insomnie-Programm; der Insomnie-Arm ist nicht als multimodales CBT-I mit beiden geforderten Komponenten beschrieben. Angst wurde erhoben, Depression nicht.",
+        "evidence": "Abstract: STAI als Angstmaß, PSQI als Schlafmaß; keine Beschreibung von Cognitive Restructuring plus Stimuluskontrolle/Schlafrestriktion."
+      }
+    },
+    "tomfohr_madsen_2020": {
+      "hwang2025": {
+        "criterion": "Erwachsene ≥18 Jahre; vollständig automatisierte dCBT-I",
+        "confidence": "hoch",
+        "reason": "Die Stichprobe ist 12-18 Jahre alt (M = 15,0); die CBT-I wird nicht als digitale, vollständig automatisierte Intervention beschrieben.",
+        "evidence": "Abstract: N = 24, 12-18 years, M = 15.0, CBT-I versus TAU."
+      },
+      "lee2023": {
+        "criterion": "Erwachsene ≥18 Jahre",
+        "confidence": "hoch",
+        "reason": "Die Stichprobe ist 12-18 Jahre alt (M = 15,0).",
+        "evidence": "Abstract: 12-18 years, M = 15.0."
+      }
+    }
+  },
   "limitations": [
     "Die Review-Tabellen nennen keine PMCIDs; PMCID-Abgleich ist nur fuer Studien moeglich, deren PMCID im Projekt oder in der Referenzliste steht.",
     "DOI steht in Tabelle 1 nur bei der bestaetigten Zeile; weitere DOIs wurden nicht aus der Referenzliste rekonstruiert.",

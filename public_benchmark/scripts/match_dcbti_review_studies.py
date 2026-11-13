@@ -131,6 +131,132 @@ REVIEWS = {
     },
 }
 
+TIME_UNIT_TO_WEEKS = {
+    "day": 1 / 7,
+    "week": 1.0,
+    "month": 4.345,
+    "year": 52.14,
+}
+TIME_TOLERANCE_WEEKS = 0.5
+
+# Plausible Ausschlussgründe je nicht zugeordneter Studie. Die Reviews nennen
+# keine studiengenauen Ausschlussgründe; die Einordnung stützt sich auf die
+# dokumentierten Kriterien und die Studienabstracts.
+EXCLUSION_REASONS = {
+    "morris_2015": {
+        "hwang2025": {
+            "criterion": "Erwachsene mit formaler Insomniediagnose; vollständig automatisierte dCBT-I ohne Therapeutenkontakt",
+            "confidence": "mittel",
+            "reason": "Die Stichprobe sind Studierende mit Angst- und/oder Insomniesymptomen. Der Abstract belegt weder eine formale Insomniediagnose noch, dass der Insomnie-Arm ohne Therapeutenkontakt lief.",
+            "evidence": "Abstract: zwei getrennte Programme ('Anxiety Relief', 'Insomnia Relief'), 6 Wochen, STAI und PSQI; keine Angabe zu Diagnose oder Guidance.",
+        },
+        "lee2023": {
+            "criterion": "dCBT-I mit kognitiver Umstrukturierung plus Stimuluskontrolle/Schlafrestriktion; Depression- oder Angstmaß",
+            "confidence": "mittel",
+            "reason": "Transdiagnostisches Angst-/Insomnie-Programm; der Insomnie-Arm ist nicht als multimodales CBT-I mit beiden geforderten Komponenten beschrieben. Angst wurde erhoben, Depression nicht.",
+            "evidence": "Abstract: STAI als Angstmaß, PSQI als Schlafmaß; keine Beschreibung von Cognitive Restructuring plus Stimuluskontrolle/Schlafrestriktion.",
+        },
+    },
+    "fucito_2017": {
+        "hwang2025": {
+            "criterion": "Ausschluss von Alkoholmissbrauch oder -abhängigkeit",
+            "confidence": "mittel",
+            "reason": "Die Studie rekrutiert ausschließlich Heavy-Drinking-College-Students und adressiert Alkoholkonsum. Das liegt nahe am Hwang-Ausschluss für Alkoholmissbrauch oder -abhängigkeit; eine entsprechende Diagnose ist im Abstract aber nicht belegt.",
+            "evidence": "Abstract: 'Heavy-drinking college students (N = 42)', web-basierte Schlaf-plus-Alkohol-Intervention über 4 Wochen.",
+        },
+        "lee2023": {
+            "criterion": "dCBT-I-Programm; berichtete Depression- oder Angstmaße",
+            "confidence": "mittel",
+            "reason": "Die Intervention kombiniert Schlaf- und Alkoholinhalte; Depression oder Angst werden nicht als Outcomes berichtet.",
+            "evidence": "Abstract nennt Alkohol- und Schlafoutcomes, keine Depression- oder Angstskala.",
+        },
+    },
+    "de_bruin_2018": {
+        "hwang2025": {
+            "criterion": "Erwachsene ≥18 Jahre",
+            "confidence": "hoch",
+            "reason": "Die Stichprobe besteht aus Jugendlichen mit einem mittleren Alter von 15,6 Jahren.",
+            "evidence": "Abstract: 116 Teilnehmende, age = 15.6 years, DSM-5-Insomnie.",
+        },
+        "lee2023": {
+            "criterion": "Erwachsene ≥18 Jahre",
+            "confidence": "hoch",
+            "reason": "Die Stichprobe besteht aus Jugendlichen mit einem mittleren Alter von 15,6 Jahren.",
+            "evidence": "Abstract: age = 15.6 years; Internet- und Gruppentherapie versus Warteliste.",
+        },
+    },
+    "chan_2022": {
+        "hwang2025": {
+            "criterion": "Erwachsene ≥18 Jahre; vollständig automatisierte dCBT-I",
+            "confidence": "niedrig",
+            "reason": "Die Stichprobe sind 'youths' mit einem Mittelwert von 20,0 ± 2,5 Jahren, ein Teil kann unter 18 sein. Die E-Mail-Self-Help-Bedingung ist nicht eindeutig als vollständig automatisiert ohne Therapeutenkontakt beschrieben.",
+            "evidence": "Abstract: 135 youths, mean age 20.0 ± 2.5; E-Mail-Self-Help versus Gruppentherapie versus Warteliste.",
+        },
+        "lee2023": {
+            "criterion": "berichtete Depression- oder Angstmaße; Suchschluss 15.01.2022",
+            "confidence": "mittel",
+            "reason": "Die Outcomes sind Insomnie, präsleep arousal, dysfunktionale Überzeugungen, Schlafhygiene und Tagesfunktion; Depression oder Angst werden nicht berichtet. Die Arbeit ist mit Publikationsjahr 2022 geführt; ob sie vor dem Lee-Suchschluss online verfügbar war, ist nicht belegt.",
+            "evidence": "Abstract listet keine Depression- oder Angstskala; Publikationsjahr 2022.",
+        },
+    },
+    "chan_2021": {
+        "hwang2025": {
+            "criterion": "Erwachsene ≥18 Jahre",
+            "confidence": "hoch",
+            "reason": "Die Stichprobe sind Jugendliche mit einem mittleren Alter von 14,7 Jahren; zudem ein Präventionsprogramm bei subklinischer Insomnie, keine Behandlung einer diagnostizierten Insomnie.",
+            "evidence": "Abstract: 242 adolescents, mean age 14.7 ± 1.8, family history und subthreshold insomnia.",
+        },
+        "lee2023": {
+            "criterion": "Erwachsene ≥18 Jahre",
+            "confidence": "hoch",
+            "reason": "Die Stichprobe sind Jugendliche mit einem mittleren Alter von 14,7 Jahren.",
+            "evidence": "Abstract: mean age 14.7 ± 1.8.",
+        },
+    },
+    "de_bruin_2015": {
+        "hwang2025": {
+            "criterion": "Erwachsene ≥18 Jahre; vollständig automatisierte dCBT-I",
+            "confidence": "hoch",
+            "reason": "Die Stichprobe ist 13-19 Jahre alt (M = 15,9); zudem geleitete Self-Help-Sitzungen, also nicht vollständig automatisiert.",
+            "evidence": "Abstract: 32 adolescents, 13-19 years, six guided self-help online CBTI sessions.",
+        },
+        "lee2023": {
+            "criterion": "Erwachsene ≥18 Jahre",
+            "confidence": "hoch",
+            "reason": "Die Stichprobe ist 13-19 Jahre alt (M = 15,9).",
+            "evidence": "Abstract: 13-19 years, M = 15.9.",
+        },
+    },
+    "egbegi_2021": {
+        "hwang2025": {
+            "criterion": "Erwachsene ≥18 Jahre; digital gelieferte dCBT-I",
+            "confidence": "hoch",
+            "reason": "Die Stichprobe sind In-School-Adoleszente; die Intervention war eine gruppenbasierte manualisierte CBT vor Ort, nicht digital.",
+            "evidence": "Abstract: 50 in-school adolescents, weekly group-based manualised CBT-based intervention over 5 weeks.",
+        },
+        "lee2023": {
+            "criterion": "Erwachsene ≥18 Jahre; dCBT-I",
+            "confidence": "hoch",
+            "reason": "In-School-Adoleszente und eine gruppenbasierte Intervention vor Ort, keine digitale CBT-I.",
+            "evidence": "Abstract: in-school adolescents, group-based manualised intervention.",
+        },
+    },
+    "tomfohr_madsen_2020": {
+        "hwang2025": {
+            "criterion": "Erwachsene ≥18 Jahre; vollständig automatisierte dCBT-I",
+            "confidence": "hoch",
+            "reason": "Die Stichprobe ist 12-18 Jahre alt (M = 15,0); die CBT-I wird nicht als digitale, vollständig automatisierte Intervention beschrieben.",
+            "evidence": "Abstract: N = 24, 12-18 years, M = 15.0, CBT-I versus TAU.",
+        },
+        "lee2023": {
+            "criterion": "Erwachsene ≥18 Jahre",
+            "confidence": "hoch",
+            "reason": "Die Stichprobe ist 12-18 Jahre alt (M = 15,0).",
+            "evidence": "Abstract: 12-18 years, M = 15.0.",
+        },
+    },
+}
+
 DCBTI_PATTERN = re.compile(
     r"digital\s+(cognitive|behaviou?ral)|dcbt|cbt[- ]?i|"
     r"cognitive\s+behaviou?ral\s+therapy\s+for\s+insomnia",
@@ -147,6 +273,78 @@ def normalize_surname(value: str) -> str:
         if text.startswith(prefix) and len(text) > len(prefix):
             text = text[len(prefix):]
     return re.sub(r"[^a-z]", "", text)
+
+
+def _to_weeks(number: str, unit: str) -> float:
+    value = float(number.replace(",", "."))
+    unit = unit.lower()
+    if unit.startswith(("tag", "day")):
+        factor = TIME_UNIT_TO_WEEKS["day"]
+    elif unit.startswith(("woche", "week")):
+        factor = TIME_UNIT_TO_WEEKS["week"]
+    elif unit.startswith(("monat", "month")):
+        factor = TIME_UNIT_TO_WEEKS["month"]
+    else:
+        factor = TIME_UNIT_TO_WEEKS["year"]
+    return value * factor
+
+
+def parse_timepoints(text: str | None) -> dict[str, Any]:
+    """Parst Zeitangaben zu Wochen; ohne Zahl bleibt der Status unparsed."""
+    if not text:
+        return {"raw": text, "weeks": [], "status": "missing"}
+    normalized = str(text).lower().replace("–", "-").replace("—", "-")
+    unit = (
+        r"(tag(?:e|en)?|day(?:s)?|woche(?:n)?|week(?:s)?|"
+        r"monat(?:e|en)?|month(?:s)?|jahr(?:e|en)?|year(?:s)?)"
+    )
+    number = r"(\d+(?:[.,]\d+)?)"
+    weeks: list[float] = []
+    for match in re.finditer(rf"{number}\s*-\s*{number}\s*{unit}", normalized):
+        weeks.append(_to_weeks(match.group(1), match.group(3)))
+        weeks.append(_to_weeks(match.group(2), match.group(3)))
+    for match in re.finditer(rf"{number}\s*{unit}|{unit}\s*{number}", normalized):
+        if match.group(1):
+            weeks.append(_to_weeks(match.group(1), match.group(2)))
+        else:
+            weeks.append(_to_weeks(match.group(4), match.group(3)))
+    unique = sorted({round(value, 2) for value in weeks})
+    return {
+        "raw": text,
+        "weeks": unique,
+        "status": "parsed" if unique else "unparsed",
+    }
+
+
+def compare_timepoints(
+    our_text: str | None,
+    review_text: str | None,
+    tolerance_weeks: float = TIME_TOLERANCE_WEEKS,
+) -> dict[str, Any]:
+    """Vergleicht Zeitpunkte als Wochenwerte statt als Teilstrings."""
+    ours = parse_timepoints(our_text)
+    review = parse_timepoints(review_text)
+    result: dict[str, Any] = {
+        "our": ours,
+        "review": review,
+        "tolerance_weeks": tolerance_weeks,
+        "match": None,
+        "difference_weeks": None,
+        "reason": "",
+    }
+    if not ours["weeks"] or not review["weeks"]:
+        result["reason"] = "kein numerischer Wochenwert in beiden Angaben"
+        return result
+    differences = [
+        abs(our - rev) for our in ours["weeks"] for rev in review["weeks"]
+    ]
+    result["difference_weeks"] = round(min(differences), 2)
+    result["match"] = min(differences) <= tolerance_weeks
+    result["reason"] = (
+        "innerhalb der Wochentoleranz"
+        if result["match"] else "ausserhalb der Wochentoleranz"
+    )
+    return result
 
 
 def load_our_studies() -> tuple[list[dict[str, Any]], list[str]]:
@@ -230,6 +428,7 @@ def build_overlap(study: dict[str, Any], review: dict[str, Any]) -> dict[str, An
     n_ours = None
     if study.get("n_treatment") is not None and study.get("n_control") is not None:
         n_ours = int(study["n_treatment"]) + int(study["n_control"])
+    comparison = compare_timepoints(study.get("timepoint"), entry.get("timepoint"))
     return {
         "review": review["doi"],
         "matched": True,
@@ -240,16 +439,8 @@ def build_overlap(study: dict[str, Any], review: dict[str, Any]) -> dict[str, An
         "outcome_overlap": outcome_overlap,
         "our_timepoint": study.get("timepoint"),
         "review_timepoint": entry.get("timepoint"),
-        "timepoint_match": (
-            entry.get("timepoint") is not None
-            and study.get("timepoint") is not None
-            and "10" in entry["timepoint"]
-            and "10" in study["timepoint"]
-        ) or (
-            entry.get("timepoint") is not None
-            and study.get("timepoint") is not None
-            and entry["timepoint"].lower() == study["timepoint"].lower()
-        ),
+        "timepoint_comparison": comparison,
+        "timepoint_match": comparison["match"],
         "n_ours": n_ours,
         "n_review": n_review,
         "n_match": n_ours is not None and n_review is not None and n_ours == n_review,
@@ -273,8 +464,20 @@ def build_result() -> dict[str, Any]:
                     "review_title": review["title"],
                     **overlap,
                 })
+    unmatched = sorted({
+        study["study_id"] for study in studies
+        if not any(item["study_id"] == study["study_id"] for item in overlaps)
+    })
+    exclusion_reasons: dict[str, dict[str, Any]] = {}
+    for study_id in unmatched:
+        reasons = EXCLUSION_REASONS.get(study_id)
+        if not reasons or set(reasons) != set(REVIEWS):
+            raise ValueError(
+                f"Ausschlussgründe fehlen oder sind unvollständig: {study_id}"
+            )
+        exclusion_reasons[study_id] = reasons
     return {
-        "version": 1,
+        "version": 2,
         "created_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "scope": (
             "Abgleich projektinterner CBT-I-Primaerschstudien mit den "
@@ -299,12 +502,8 @@ def build_result() -> dict[str, Any]:
         },
         "matches": overlaps,
         "match_count": len(overlaps),
-        "unmatched_studies": sorted(
-            {
-                study["study_id"] for study in studies
-                if not any(item["study_id"] == study["study_id"] for item in overlaps)
-            }
-        ),
+        "unmatched_studies": unmatched,
+        "exclusion_reasons": exclusion_reasons,
         "limitations": [
             "Die Review-Tabellen nennen keine PMCIDs; PMCID-Abgleich ist nur fuer Studien moeglich, deren PMCID im Projekt oder in der Referenzliste steht.",
             "DOI steht in Tabelle 1 nur bei der bestaetigten Zeile; weitere DOIs wurden nicht aus der Referenzliste rekonstruiert.",
@@ -379,8 +578,11 @@ def render_markdown(result: dict[str, Any]) -> str:
                 f"{', '.join(item['outcome_overlap']) or 'keine'}",
                 f"- Zeitpunkt Review: {item['review_timepoint']}",
                 f"- Zeitpunkt Projekt: {item['our_timepoint']}",
-                f"- Zeitpunkt übereinstimmend: "
-                f"{'ja' if item['timepoint_match'] else 'nein'}",
+                f"- Wochenvergleich: Projekt {item['timepoint_comparison']['our']['weeks']} "
+                f"vs. Review {item['timepoint_comparison']['review']['weeks']}; "
+                f"Differenz {item['timepoint_comparison']['difference_weeks']} Wochen "
+                f"(Toleranz {item['timepoint_comparison']['tolerance_weeks']}); "
+                f"{'übereinstimmend' if item['timepoint_match'] is True else 'nicht vergleichbar' if item['timepoint_match'] is None else 'abweichend'}",
                 f"- {item['note']}",
                 "",
             ]
@@ -393,6 +595,26 @@ def render_markdown(result: dict[str, Any]) -> str:
         "DOI oder Autor/Jahr. Das ist **kein** Beleg dafür, dass die Studien "
         "fehlerhaft sind; sie sind nur nicht in diesen Reviews enthalten.",
         "",
+        "## Plausible Ausschlussgründe",
+        "",
+        "Die Reviews dokumentieren keine studiengenauen Ausschlussgründe. Die "
+        "folgenden Einordnungen sind aus den publizierten Kriterien und den "
+        "Studienabstracts abgeleitet und als plausibel, nicht als bestätigt "
+        "markiert.",
+        "",
+    ]
+    for study_id in result["unmatched_studies"]:
+        lines.append(f"### {study_id}")
+        lines.append("")
+        for key, label in (("hwang2025", "Hwang 2025"), ("lee2023", "Lee 2023")):
+            reason = result["exclusion_reasons"][study_id][key]
+            lines.append(
+                f"- **{label}:** {reason['reason']} "
+                f"Kriterium: {reason['criterion']}. "
+                f"Konfidenz: {reason['confidence']}. Beleg: {reason['evidence']}"
+            )
+        lines.append("")
+    lines += [
         "## Einordnung",
         "",
         "- Der einzige belastbare Treffer ist **Freeman 2017 (OASIS)** in "

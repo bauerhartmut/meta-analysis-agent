@@ -62,6 +62,57 @@ def test_no_unfounded_matches_for_other_studies() -> None:
             assert match.review_matches(row, review) == []
 
 
+def test_parse_timepoints_in_both_word_orders() -> None:
+    assert match.parse_timepoints("post-treatment (Woche 10)")["weeks"] == [10.0]
+    assert match.parse_timepoints("10 Wochen post-treatment")["weeks"] == [10.0]
+
+
+def test_week_comparison_does_not_match_substrings() -> None:
+    comparison = match.compare_timepoints("Woche 1", "10 weeks")
+    assert comparison["match"] is False
+    assert comparison["difference_weeks"] == 9.0
+
+
+def test_week_comparison_handles_missing_number() -> None:
+    comparison = match.compare_timepoints("post-treatment", "10 weeks")
+    assert comparison["match"] is None
+    assert "kein numerischer Wochenwert" in comparison["reason"]
+
+
+def test_week_comparison_converts_months() -> None:
+    comparison = match.compare_timepoints("6 months", "24 weeks")
+    assert comparison["our"]["weeks"] == [26.07]
+    assert comparison["review"]["weeks"] == [24.0]
+    assert comparison["match"] is False
+
+
+def test_week_comparison_accepts_overlapping_range() -> None:
+    comparison = match.compare_timepoints("9-10 weeks", "10 weeks")
+    assert comparison["match"] is True
+
+
+def test_freeman_uses_structured_timepoint_comparison() -> None:
+    overlap = match.build_overlap(study("freeman_2017"), match.REVIEWS["lee2023"])
+    comparison = overlap["timepoint_comparison"]
+    assert comparison["our"]["weeks"] == [10.0]
+    assert comparison["review"]["weeks"] == [10.0]
+    assert comparison["difference_weeks"] == 0.0
+    assert comparison["match"] is True
+
+
+def test_every_unmatched_study_has_reasons_for_both_reviews() -> None:
+    result = match.build_result()
+    assert result["unmatched_studies"]
+    for study_id in result["unmatched_studies"]:
+        assert set(result["exclusion_reasons"][study_id]) == {
+            "hwang2025", "lee2023"
+        }
+        for reason in result["exclusion_reasons"][study_id].values():
+            assert reason["criterion"]
+            assert reason["reason"]
+            assert reason["confidence"] in {"hoch", "mittel", "niedrig"}
+
+
 def test_thirty_frozen_documents_contain_no_dcbti_study() -> None:
     info = match.inspect_thirty_documents()
     assert info["documents"] == 30
