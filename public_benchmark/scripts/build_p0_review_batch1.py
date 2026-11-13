@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import csv
 import json
+from collections import Counter
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -26,6 +27,7 @@ TARGETS = [
     "PMC13635505",
     "PMC13624796",
 ]
+OVERLAPPING_PMCIDS = {"PMC13624796"}
 
 RECORDS = {
     "PMC13591290": {
@@ -309,10 +311,16 @@ RECORDS = {
 }
 
 
-def load_tables(pmcid: str) -> dict:
-    dossier = json.loads(DOSSIER.read_text(encoding="utf-8"))
-    article = next(a for a in dossier["records"] if a["pmcid"] == pmcid)
+def tables_by_label(article: dict) -> dict:
     return {table["label"]: table for table in article["candidate_tables"]}
+
+
+def classify_independence(pmcid: str, usable: bool) -> str:
+    if not usable:
+        return "not_usable"
+    if pmcid in OVERLAPPING_PMCIDS:
+        return "overlapping_subgroup"
+    return "independent"
 
 
 def main() -> None:
@@ -337,11 +345,12 @@ def main() -> None:
         "records": [],
     }
     csv_rows = []
+    class_counts = Counter()
 
     for pmcid in TARGETS:
         meta = RECORDS[pmcid]
         article = by_id[pmcid]
-        tables = load_tables(pmcid)
+        tables = tables_by_label(article)
         outcomes = []
         for outcome in meta["outcomes"]:
             if outcome["table"]:
@@ -387,17 +396,8 @@ def main() -> None:
             item["source_quote"] = source_quote
             outcomes.append(item)
             usable = bool(outcome["usable"])
-            if usable and pmcid == "PMC13624796":
-                independence = "overlapping_subgroup"
-                payload["overlapping_usable_outcomes"] += 1
-            elif usable:
-                independence = "independent"
-                payload["independent_usable_outcomes"] += 1
-            else:
-                independence = "not_usable"
-                payload["not_usable_or_absent"] += 1
-            if usable:
-                payload["usable_outcomes_including_overlapping"] += 1
+            independence = classify_independence(pmcid, usable)
+            class_counts[independence] += 1
             item["outcome_independence"] = independence
             csv_rows.append(
                 {
@@ -459,6 +459,12 @@ def main() -> None:
             }
         )
 
+    payload["independent_usable_outcomes"] = class_counts["independent"]
+    payload["overlapping_usable_outcomes"] = class_counts["overlapping_subgroup"]
+    payload["not_usable_or_absent"] = class_counts["not_usable"]
+    payload["usable_outcomes_including_overlapping"] = (
+        class_counts["independent"] + class_counts["overlapping_subgroup"]
+    )
     JSON_PATH.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     fieldnames = list(csv_rows[0].keys())
     with CSV_PATH.open("w", encoding="utf-8", newline="") as handle:
