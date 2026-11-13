@@ -154,7 +154,7 @@ def test_median_and_pm_values_are_uncertain_not_unparsed() -> None:
     parsed = match.parse_timepoints("follow-up (median 5.8 ± 2.5 years)")
     assert parsed["follow_up_weeks"] == []
     assert parsed["weeks"] == []
-    assert parsed["uncertain_weeks"] == [130.35]
+    assert parsed["uncertain_weeks"] == [302.41]
     assert parsed["status"] == "uncertain"
 
     mixed = match.parse_timepoints(
@@ -163,7 +163,7 @@ def test_median_and_pm_values_are_uncertain_not_unparsed() -> None:
     assert mixed["post_treatment_weeks"] == [10.0]
     assert mixed["follow_up_weeks"] == []
     assert mixed["weeks"] == [10.0]
-    assert mixed["uncertain_weeks"] == [130.35]
+    assert mixed["uncertain_weeks"] == [302.41]
     assert mixed["status"] == "parsed"
 
     median_only = match.parse_timepoints(
@@ -178,7 +178,7 @@ def test_median_and_pm_values_are_uncertain_not_unparsed() -> None:
     )
     assert with_period["post_treatment_weeks"] == [10.0]
     assert with_period["follow_up_weeks"] == []
-    assert with_period["uncertain_weeks"] == [130.35]
+    assert with_period["uncertain_weeks"] == [302.41]
 
     comparison = match.compare_timepoints(
         "10 weeks post-treatment", "follow-up (median 5.8 ± 2.5 years)"
@@ -187,16 +187,31 @@ def test_median_and_pm_values_are_uncertain_not_unparsed() -> None:
     assert "unsichere" in comparison["reason"]
 
 
-def test_pm_keeps_central_post_value_and_drops_dispersion() -> None:
+def test_pm_keeps_central_post_value_and_does_not_store_dispersion() -> None:
     parsed = match.parse_timepoints("Post 10 weeks ± 2 weeks")
     assert parsed["post_treatment_weeks"] == [10.0]
-    assert parsed["uncertain_weeks"] == [2.0]
+    assert parsed["uncertain_weeks"] == []
     assert parsed["status"] == "parsed"
+    assert "± 2 weeks" in parsed["raw"]
 
     suffixed = match.parse_timepoints("10 weeks post-treatment ± 2 weeks")
     assert suffixed["post_treatment_weeks"] == [10.0]
-    assert suffixed["uncertain_weeks"] == [2.0]
+    assert suffixed["uncertain_weeks"] == []
     assert suffixed["status"] == "parsed"
+
+
+def test_pm_without_median_keeps_raw_text_only() -> None:
+    parsed = match.parse_timepoints("follow-up 5.8 ± 2.5 years")
+    assert parsed["follow_up_weeks"] == []
+    assert parsed["uncertain_weeks"] == []
+    assert parsed["status"] == "uncertain"
+    assert "5.8 ± 2.5 years" in parsed["raw"]
+
+    comparison = match.compare_timepoints(
+        "10 weeks post-treatment", "follow-up 5.8 ± 2.5 years"
+    )
+    assert comparison["match"] is None
+    assert "unsichere" in comparison["reason"]
 
 
 def test_suffix_follow_up_is_not_counted_as_post_treatment() -> None:

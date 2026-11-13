@@ -56,7 +56,7 @@ def test_segmentation_marks_median_pm_values_uncertain() -> None:
     segments = schema.segment_effect(effect)["time_point_segments"]
     assert segments["status"] == "uncertain"
     assert segments["follow_up_weeks"] == []
-    assert segments["uncertain_weeks"] == [130.35]
+    assert segments["uncertain_weeks"] == [302.41]
 
 
 def test_segmentation_preserves_outcome_values(tmp_path: Path) -> None:

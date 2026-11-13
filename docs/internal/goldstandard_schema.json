@@ -111,7 +111,7 @@
             "uncertain_weeks": {
               "type": "array",
               "items": {"type": "number", "minimum": 0},
-              "description": "Median-Werte und ±-Streuungswerte; sichtbar, aber nicht als Zeitpunkt verwendbar."
+              "description": "Belastbare Median-Zentralwerte; ±-Streuungswerte werden nicht gespeichert, sondern stehen nur im Rohtext (raw)."
             },
             "ambiguous_post_treatment": {"type": "boolean"},
             "raw": {"type": ["string", "null"]}

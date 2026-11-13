@@ -310,6 +310,7 @@ PHRASE_BOUNDARY = re.compile(r"[;,()\n]|(?<!\d)\.(?!\d)")
 # dagegen 10 der Zentralwert und nur die Streuung nach dem ± unsicher.
 UNCERTAIN_MEDIAN = re.compile(r"(median|\bmittelwert\b)", re.IGNORECASE)
 UNCERTAIN_DISPERSION = re.compile(r"(±|\+/-)")
+MEDIAN_NUMBER = re.compile(r"median[^0-9]*(\d+(?:[.,]\d+)?)", re.IGNORECASE)
 
 
 def _week_occurrences(text: str) -> list[tuple[float, int, int]]:
@@ -364,7 +365,10 @@ def _phrase_around(text: str, start: int, end: int) -> str:
 def _is_uncertain(text: str, start: int, end: int) -> bool:
     left, right = _phrase_bounds(text, start, end)
     phrase = text[left:right]
-    if UNCERTAIN_MEDIAN.search(phrase):
+    median = UNCERTAIN_MEDIAN.search(phrase)
+    # Eine Median-Angabe hinter dem Wert entwertet ihn nicht, z. B. 10 in
+    # "Post 10 weeks; median follow-up 5.8 years".
+    if median and start >= left + median.end():
         return True
     # Nur die Zahl nach dem ± ist die Streuung. Der Zentralwert davor bleibt
     # ein gueltiger Zeitpunkt, z. B. 10 in "Post 10 weeks ± 2 weeks".
@@ -372,6 +376,19 @@ def _is_uncertain(text: str, start: int, end: int) -> bool:
         if start >= left + match.end():
             return True
     return False
+
+
+def _median_week_value(text: str, start: int, end: int) -> float | None:
+    """Liefert den belastbaren Median-Zentralwert, nicht die Streuung."""
+    left, right = _phrase_bounds(text, start, end)
+    phrase = text[left:right]
+    number = MEDIAN_NUMBER.search(phrase)
+    if not number:
+        return None
+    unit = re.search(WEEK_UNIT, phrase[number.end():], re.IGNORECASE)
+    if not unit:
+        return None
+    return round(_to_weeks(number.group(1), unit.group(1)), 2)
 
 
 def _weeks_in_text(text: str) -> list[float]:
@@ -415,6 +432,7 @@ def parse_timepoints(text: str | None) -> dict[str, Any]:
     follow: list[float] = []
     other: list[float] = []
     uncertain: list[float] = []
+    saw_uncertain = False
 
     def assign(weeks: list[float], kind: str) -> None:
         if kind == "post_treatment":
@@ -426,7 +444,10 @@ def parse_timepoints(text: str | None) -> dict[str, Any]:
 
     for value, start, end in _week_occurrences(normalized):
         if _is_uncertain(normalized, start, end):
-            uncertain.append(value)
+            saw_uncertain = True
+            median_value = _median_week_value(normalized, start, end)
+            if median_value is not None:
+                uncertain.append(median_value)
             continue
         previous = None
         following = None
@@ -466,7 +487,7 @@ def parse_timepoints(text: str | None) -> dict[str, Any]:
     if all_weeks:
         # Ohne Marker ist der Zeitpunkt nicht als Post-Treatment belegt.
         status = "parsed" if markers else "no_marker"
-    elif uncertain_weeks:
+    elif saw_uncertain:
         # Nur Median-/±-Angaben: sichtbar, aber kein belastbarer Zeitpunkt.
         status = "uncertain"
     else:
@@ -500,7 +521,12 @@ def compare_timepoints(
         "reason": "",
     }
     if not ours["post_treatment_weeks"] or not review["post_treatment_weeks"]:
-        if ours["uncertain_weeks"] or review["uncertain_weeks"]:
+        if (
+            ours["status"] == "uncertain"
+            or review["status"] == "uncertain"
+            or ours["uncertain_weeks"]
+            or review["uncertain_weeks"]
+        ):
             result["reason"] = (
                 "nur unsichere Median- oder Plus-Minus-Zeitangabe; "
                 "kein belastbarer Post-Treatment-Zeitpunkt"
@@ -667,7 +693,7 @@ def build_result() -> dict[str, Any]:
             )
         exclusion_reasons[study_id] = reasons
     return {
-        "version": 6,
+        "version": 7,
         "created_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "scope": (
             "Abgleich projektinterner CBT-I-Primaerschstudien mit den "
