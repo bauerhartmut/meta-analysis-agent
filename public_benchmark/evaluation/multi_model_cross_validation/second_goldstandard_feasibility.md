@@ -1,7 +1,7 @@
 # Zweiter Goldstandard mit Armwerten: Prüfung und Vorgehen
 
 Stand: 2026-11-13
-Frage: Kann ein zweiter öffentlicher Goldstandard mit Armwerten die 22
+Frage: Kann ein zweiter öffentlicher Goldstandard mit Armwerten die 28
 GLASS-Cluster sinnvoll erweitern?
 Kurzantwort: **Technisch ja, praktisch nein — außer über Cochrane (Lizenz) oder
 ClinicalTrials.gov (anderer Extraktionsgegenstand).**
@@ -21,7 +21,7 @@ ClinicalTrials.gov (anderer Extraktionsgegenstand).**
 Der Originaldatensatz enthält **81 Ergebniszeilen insgesamt** — nicht 81 von
 mehreren hundert. Die Zielzeilen tragen `HR`/`sample`/`Name` oder
 `Events`/`Total`/`n`; **per-Arm-Spalten gibt es nicht**. Mehr Records oder
-Armwerte sind aus dieser Quelle nicht zu holen, unabhängig vom Aufwand. Die 22
+Armwerte sind aus dieser Quelle nicht zu holen, unabhängig vom Aufwand. Die 28
 Cluster sind die Obergrenze des Datensatzes, nicht eine Auswahl daraus.
 
 ## Befund 2: European Urology hat Armwerte, aber fast keinen Volltext
@@ -73,7 +73,7 @@ McNemar-Test, Alpha 0,05 zweiseitig, Power 0,80):
 
 | Szenario | Records | Cluster | Felder | MDD (ICC 0,1 / 0,2 / Diskordanz 0,15) |
 |---|---:|---:|---:|---|
-| heute (GLASS) | 54 | 22 | 432 | 7,19 / 7,63 / 5,57 pp |
+| heute (GLASS) | 54 | 28 | 432 | 7,02 / 7,32 / 5,44 pp |
 | + EU-Volltext | 74 | 24 | 592 | 6,31 / 6,83 / 4,89 pp |
 | + EU komplett (Autorentabellen) | 158 | 42 | 1.264 | 4,45 / 4,90 / 3,44 pp |
 | AACT, 60 Trials | 60 | 60 | 480 | 6,38 / 6,38 / 4,94 pp |

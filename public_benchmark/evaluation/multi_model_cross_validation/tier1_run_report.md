@@ -8,7 +8,7 @@ Skripte: `run_tier1_extraction.py`, `score_tier1.py`
 
 ## Ergebnis: 54 Records, alle drei Modelle vollständig
 
-182 Gold-Zellen, 54 Records, 22 Cluster. Jedes Modell hat jeden Record
+182 Gold-Zellen, 54 Records, 28 Cluster. Jedes Modell hat jeden Record
 beantwortet.
 
 | Modell | Recall | 95 %-Bootstrap | Precision | Genauigkeit in gefundener Zeile | exakte Records | Zusatzzellen |
@@ -17,7 +17,7 @@ beantwortet.
 | DeepSeek V4.1 Flash | **0,577** | 0,469-0,681 | 0,383 | 0,851 | 8 / 54 | 153 |
 | Qwen 3.5 397B | **0,571** | 0,471-0,670 | 0,510 | 0,897 | 9 / 54 | 88 |
 
-Die Konfidenzintervalle überlappen vollständig. **Mit 54 Records und 22 Clustern
+Die Konfidenzintervalle überlappen vollständig. **Mit 54 Records und 28 Clustern
 ist kein Unterschied zwischen den Modellen nachweisbar.** Das ist kein
 Gleichstandsnachweis: die kleinste nachweisbare Differenz liegt bei dieser
 Größe im Bereich von 9 bis 10 Prozentpunkten.
@@ -106,7 +106,7 @@ nicht bindend war (`finish_reason: stop`).
 
 ## Grenzen
 
-- 54 Records, 22 Cluster, 182 Zellen: für Modellvergleiche zu klein, um
+- 54 Records, 28 Cluster, 182 Zellen: für Modellvergleiche zu klein, um
   Unterschiede unter 9 Prozentpunkten zu erkennen.
 - Precision strukturell benachteiligt (Subgruppenzeilen); Recall ist die
   belastbarere Zahl.

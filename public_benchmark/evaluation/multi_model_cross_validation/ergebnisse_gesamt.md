@@ -64,7 +64,7 @@ PICO-Corpus mit Yun, G5 oder der eigenen Auswahl (DOI- und PMID-Vergleich,
 
 Rohdaten: `runs/tier1_20261113/predictions.jsonl`.
 
-## 4. Hauptergebnis: 54 Records, 182 Gold-Zellen, 22 Cluster
+## 4. Hauptergebnis: 54 Records, 182 Gold-Zellen, 28 Cluster
 
 Auswertung über alle Zellen (Multiset), gemeinsame Teilmenge aller Modelle:
 
@@ -77,7 +77,7 @@ Auswertung über alle Zellen (Multiset), gemeinsame Teilmenge aller Modelle:
 
 Bootstrap: 1000 Runden, Seed 20261113, Clusterung nach Publikation.
 
-**Die Konfidenzintervalle überlappen vollständig. Mit 54 Records und 22 Clustern
+**Die Konfidenzintervalle überlappen vollständig. Mit 54 Records und 28 Clustern
 ist kein Unterschied zwischen den Modellen nachweisbar.** Das ist kein
 Gleichstandsnachweis.
 
@@ -152,7 +152,7 @@ Alpha 0,05 zweiseitig, Power 0,80, 8 Felder je Record):
 
 | Szenario | Records | Cluster | Felder | kleinste nachweisbare Differenz |
 |---|---:|---:|---:|---|
-| heutiger Stand | 54 | 22 | 432 | 7,19 pp (ICC 0,1); 5,57 pp bei Diskordanz 0,15 |
+| heutiger Stand | 54 | 28 | 432 | 7,02 pp (ICC 0,1); 5,44 pp bei Diskordanz 0,15 |
 | + EU-Volltext | 74 | 24 | 592 | 6,31 pp |
 | + EU komplett (Autorentabellen) | 158 | 42 | 1.264 | 4,45 pp |
 | Cochrane, 200 Zeilen / 80 Reviews | 200 | 80 | 1.600 | 3,75 pp |
@@ -178,7 +178,7 @@ licence". Ohne schriftliche Genehmigung ist der Datensatz nicht verwendbar.
 
 ## 10. Grenzen
 
-- 54 Records, 22 Cluster, 182 Zellen: zu klein für Unterschiede unter
+- 54 Records, 28 Cluster, 182 Zellen: zu klein für Unterschiede unter
   7 Prozentpunkten.
 - Precision strukturell benachteiligt (Subgruppenzeilen); Recall ist die
   belastbarere Zahl.
