@@ -129,6 +129,16 @@ Die Marker sind Suchsignale, keine Eignungsentscheidung. Details:
 [`fulltext_review_high_v1.md`](holdout_p0_20261112/fulltext_review_high_v1.md),
 [`fulltext_review_high_v1.csv`](holdout_p0_20261112/fulltext_review_high_v1.csv),
 [`fulltext_review_high_v1.json`](holdout_p0_20261112/fulltext_review_high_v1.json).
+
+Die erste assistierte Volltextprüfung umfasst fünf hohe Prioritäten:
+**20 Outcome-Slots**, davon **12 verwendbar** und **8 nicht verwendbar oder
+nicht berichtet**; **0 finale Entscheidungen**. Nur `PMC13590555` liefert vier
+direkt verwendbare Outcomes. `PMC13587833` liefert drei, `PMC13635505` nur ein
+binäres Outcome. `PMC13591290` ist nur nach Blinding-Status stratifiziert,
+`PMC13624796` poolt zwei RCTs mit überlappenden Subgruppen. Details:
+[`fulltext_review_batch1_v1.md`](holdout_p0_20261112/fulltext_review_batch1_v1.md),
+[`fulltext_review_batch1_v1.csv`](holdout_p0_20261112/fulltext_review_batch1_v1.csv),
+[`fulltext_review_batch1_v1.json`](holdout_p0_20261112/fulltext_review_batch1_v1.json).
 Mehrfachgruende sind moeglich; die Regelzahlen
 sind nicht additiv.
 

@@ -1,0 +1,556 @@
+{
+  "review_id": "p0_fulltext_review_batch1_v1",
+  "created_at": "2026-11-13",
+  "status": "assisted_batch_ready_for_human_confirmation",
+  "scope": "Fünf hohe Prioritäten: PMC13591290, PMC13590555, PMC13587833, PMC13635505, PMC13624796",
+  "articles": 5,
+  "outcome_slots": 20,
+  "usable_outcomes": 12,
+  "not_usable_or_absent": 8,
+  "final_decisions_made": false,
+  "human_confirmation_required": true,
+  "model_used": false,
+  "network_used": false,
+  "source_dossier": "public_benchmark/evaluation/c1_pilot/holdout_p0_20261112/fulltext_review_high_v1.json",
+  "records": [
+    {
+      "pmcid": "PMC13591290",
+      "short_title": "Blinding in a placebo-controlled manual-therapy RCT",
+      "title": "Successful Blinding or Wishful Thinking? A Secondary Analysis of a Randomised Controlled Trial of Manual Therapy",
+      "design": "Sekundäranalyse eines zweiarmigen, placebokontrollierten RCT; 102 randomisiert, 98 analysiert",
+      "arm_n": {
+        "intervention": 49,
+        "control": 49,
+        "randomized": 102,
+        "analyzed": 98
+      },
+      "assisted_eligibility": "uncertain_no_overall_outcome_table",
+      "eligibility_reason": "Zwei parallele Arme und Arm-N sind berichtet, aber die klinischen Outcomes liegen nur stratifiziert nach Blinding-Status vor; kein Gesamtkontrast der randomisierten Arme in der Tabelle.",
+      "risk_notes": [
+        "secondary analysis",
+        "klinische Outcomes nur nach Blinding-Status stratifiziert"
+      ],
+      "human_review": {
+        "reviewer": "offen",
+        "review_date": "offen",
+        "parallel_two_arms_confirmed": null,
+        "randomization_confirmed": null,
+        "no_arm_collapse": null,
+        "outcomes_confirmed": null,
+        "final_decision": "offen"
+      },
+      "outcomes": [
+        {
+          "slot": 1,
+          "outcome": "Pain intensity at 4 weeks, blinded participants",
+          "type": "continuous",
+          "table": "TABLE 3",
+          "row_index": 3,
+          "context_row_index": 2,
+          "intervention": {
+            "label": "Active SMT, blinded",
+            "n": 11,
+            "mean": "19.5",
+            "sd": "11.3"
+          },
+          "control": {
+            "label": "Placebo SMT, blinded",
+            "n": 35,
+            "mean": "22.5",
+            "sd": "21.1"
+          },
+          "usable": false,
+          "note": "Stratifizierte Blinding-Untergruppe, kein randomisierter Gesamtarm-Vergleich.",
+          "source_quote": "TABLE 3 | Treatment effects and adverse events. | Arms: Active SMT / Placebo SMT / Effect (95% CI) | Pain intensity at 4 weeks, mean (SD), NRS | 19.5 (11.3) | 22.5 (21.1) | −3 (−12.7 to 6.7) | Context: Blinded participants a | (n = 11) | (n = 35) |"
+        },
+        {
+          "slot": 2,
+          "outcome": "Pain intensity at 4 weeks, unblinded participants",
+          "type": "continuous",
+          "table": "TABLE 3",
+          "row_index": 8,
+          "context_row_index": 7,
+          "intervention": {
+            "label": "Active SMT, unblinded",
+            "n": 38,
+            "mean": "15.5",
+            "sd": "14.7"
+          },
+          "control": {
+            "label": "Placebo SMT, unblinded",
+            "n": 14,
+            "mean": "42.4",
+            "sd": "23.8"
+          },
+          "usable": false,
+          "note": "Stratifizierte Blinding-Untergruppe, kein randomisierter Gesamtarm-Vergleich.",
+          "source_quote": "TABLE 3 | Treatment effects and adverse events. | Arms: Active SMT / Placebo SMT / Effect (95% CI) | Pain intensity at 4 weeks, mean (SD), NRS | 15.5 (14.7) | 42.4 (23.8) | −26.9 (−40.2 to −13.6) | Context: Unblinded participants c | (n = 38) | (n = 14) |"
+        },
+        {
+          "slot": 3,
+          "outcome": "Unique participants with adverse events, blinded participants",
+          "type": "binary",
+          "table": "TABLE 3",
+          "row_index": 6,
+          "context_row_index": 2,
+          "intervention": {
+            "label": "Active SMT, blinded",
+            "events": 9,
+            "total": 11
+          },
+          "control": {
+            "label": "Placebo SMT, blinded",
+            "events": 32,
+            "total": 35
+          },
+          "usable": false,
+          "note": "Stratifizierte Blinding-Untergruppe; keine armübergreifende Ereignisrate.",
+          "source_quote": "TABLE 3 | Treatment effects and adverse events. | Arms: Active SMT / Placebo SMT / Effect (95% CI) | Unique participants with AEs, No. (%) | 9 (81.8) | 32 (91.4) | −9 (−34 to 15) b | Context: Blinded participants a | (n = 11) | (n = 35) |"
+        },
+        {
+          "slot": 4,
+          "outcome": "Unique participants with adverse events, unblinded participants",
+          "type": "binary",
+          "table": "TABLE 3",
+          "row_index": 11,
+          "context_row_index": 7,
+          "intervention": {
+            "label": "Active SMT, unblinded",
+            "events": 28,
+            "total": 38
+          },
+          "control": {
+            "label": "Placebo SMT, unblinded",
+            "events": 10,
+            "total": 14
+          },
+          "usable": false,
+          "note": "Stratifizierte Blinding-Untergruppe; keine armübergreifende Ereignisrate.",
+          "source_quote": "TABLE 3 | Treatment effects and adverse events. | Arms: Active SMT / Placebo SMT / Effect (95% CI) | Unique participants with AEs, No. (%) | 28 (73.7) | 10 (71.4) | 3 (−25 to 30) b | Context: Unblinded participants c | (n = 38) | (n = 14) |"
+        }
+      ]
+    },
+    {
+      "pmcid": "PMC13590555",
+      "short_title": "Immune-cell changes after HIIT in prostate cancer",
+      "title": "Changes in circulating immune cells and cytokines after high-intensity aerobic exercise in patients with prostate cancer undergoing active surveillance from the ERASE randomized controlled trial",
+      "design": "Sekundäranalyse des ERASE-RCT; zwei Arme, 1:1 randomisiert; 26 HIIT und 26 Usual Care randomisiert",
+      "arm_n": {
+        "intervention": 26,
+        "control": 26,
+        "randomized": 52,
+        "analyzed": "24/25 für die ausgewählten Blutbild-Outcomes"
+      },
+      "assisted_eligibility": "likely_eligible",
+      "eligibility_reason": "Zwei parallele Arme, Randomisierung 1:1, berichtete Arm-N und vier kontinuierliche Outcomes mit N/Mean/SD zu Baseline und Postintervention.",
+      "risk_notes": [
+        "secondary analysis"
+      ],
+      "human_review": {
+        "reviewer": "offen",
+        "review_date": "offen",
+        "parallel_two_arms_confirmed": null,
+        "randomization_confirmed": null,
+        "no_arm_collapse": null,
+        "outcomes_confirmed": null,
+        "final_decision": "offen"
+      },
+      "outcomes": [
+        {
+          "slot": 1,
+          "outcome": "White blood cell count (10^9/L), postintervention",
+          "type": "continuous",
+          "table": "Table 2",
+          "row_index": 4,
+          "control_row_index": 5,
+          "intervention": {
+            "label": "HIIT",
+            "n": 24,
+            "mean": "6.33",
+            "sd": "1.32"
+          },
+          "control": {
+            "label": "Usual care",
+            "n": 25,
+            "mean": "5.78",
+            "sd": "1.17"
+          },
+          "usable": true,
+          "note": "Postintervention; Baselinewerte in derselben Tabelle.",
+          "source_quote": "Table 2 | Effects of high-intensity interval training on complete blood count with differential in men with prostate cancer under active surveillance. | Arms: Baseline / Postintervention / Within-group mean change / Adjusted between-group difference | White blood cell count (10^9/L), postintervention | Intervention: HIIT (n=24) | 6.73 (1.60) | 6.33 (1.32) | -0.40 (-0.76, -0.04) | 0.029 | -0.08 (-0.52, 0.37) | 0.73 | Control: UC (n=25) | 5.95 (1.13) | 5.78 (1.17) | -0.17 (-0.49, 0.14) | 0.27 |  |"
+        },
+        {
+          "slot": 2,
+          "outcome": "Neutrophils (10^9/L), postintervention",
+          "type": "continuous",
+          "table": "Table 2",
+          "row_index": 7,
+          "control_row_index": 8,
+          "intervention": {
+            "label": "HIIT",
+            "n": 24,
+            "mean": "3.75",
+            "sd": "1.01"
+          },
+          "control": {
+            "label": "Usual care",
+            "n": 25,
+            "mean": "3.23",
+            "sd": "0.82"
+          },
+          "usable": true,
+          "note": "Postintervention; Baselinewerte in derselben Tabelle.",
+          "source_quote": "Table 2 | Effects of high-intensity interval training on complete blood count with differential in men with prostate cancer under active surveillance. | Arms: Baseline / Postintervention / Within-group mean change / Adjusted between-group difference | Neutrophils (10^9/L), postintervention | Intervention: HIIT (n=24) | 4.03 (0.99) | 3.75 (1.01) | -0.28 (-0.58, 0.03) | 0.073 | 0.07 (-0.33, 0.47) | 0.73 | Control: UC (n=25) | 3.43 (0.84) | 3.23 (0.82) | -0.20 (-0.48, 0.07) | 0.14 |  |"
+        },
+        {
+          "slot": 3,
+          "outcome": "Lymphocytes (10^9/L), postintervention",
+          "type": "continuous",
+          "table": "Table 2",
+          "row_index": 10,
+          "control_row_index": 11,
+          "intervention": {
+            "label": "HIIT",
+            "n": 24,
+            "mean": "1.61",
+            "sd": "0.57"
+          },
+          "control": {
+            "label": "Usual care",
+            "n": 25,
+            "mean": "1.67",
+            "sd": "0.64"
+          },
+          "usable": true,
+          "note": "Postintervention; Baselinewerte in derselben Tabelle.",
+          "source_quote": "Table 2 | Effects of high-intensity interval training on complete blood count with differential in men with prostate cancer under active surveillance. | Arms: Baseline / Postintervention / Within-group mean change / Adjusted between-group difference | Lymphocytes (10^9/L), postintervention | Intervention: HIIT (n=24) | 1.78 (0.66) | 1.61 (0.57) | -0.17 (-0.40, 0.06) | 0.14 | -0.11 (-0.38, 0.17) | 0.44 | Control: UC (n=25) | 1.67 (0.58) | 1.67 (0.64) | -0.02 (-0.21, 0.17) | 0.83 |  |"
+        },
+        {
+          "slot": 4,
+          "outcome": "Monocytes (10^9/L), postintervention",
+          "type": "continuous",
+          "table": "Table 2",
+          "row_index": 13,
+          "control_row_index": 14,
+          "intervention": {
+            "label": "HIIT",
+            "n": 24,
+            "mean": "0.67",
+            "sd": "0.29"
+          },
+          "control": {
+            "label": "Usual care",
+            "n": 25,
+            "mean": "0.58",
+            "sd": "0.29"
+          },
+          "usable": true,
+          "note": "Postintervention; Baselinewerte in derselben Tabelle.",
+          "source_quote": "Table 2 | Effects of high-intensity interval training on complete blood count with differential in men with prostate cancer under active surveillance. | Arms: Baseline / Postintervention / Within-group mean change / Adjusted between-group difference | Monocytes (10^9/L), postintervention | Intervention: HIIT (n=24) | 0.67 (0.19) | 0.67 (0.29) | 0.00 (-0.09, 0.10) | 0.93 | -0.05 (-0.20, 0.11) | 0.55 | Control: UC (n=25) | 0.55 (0.16) | 0.58 (0.29) | 0.04 (-0.07, 0.14) | 0.50 |  |"
+        }
+      ]
+    },
+    {
+      "pmcid": "PMC13587833",
+      "short_title": "Self-contempt and emotion processing in BPD psychotherapy",
+      "title": "Undoing Self‐Contempt in Borderline Personality Disorder: A Controlled Test of Change in Emotion Processing in Psychotherapy",
+      "design": "Sekundäranalyse eines RCT; GPM vs. TAU; 50 Klienten, 27 GPM und 23 TAU; 29 gesunde Kontrollen nicht Teil des randomisierten Vergleichs",
+      "arm_n": {
+        "intervention": 27,
+        "control": 23,
+        "randomized": 50,
+        "analyzed": 50
+      },
+      "assisted_eligibility": "likely_eligible_three_outcomes",
+      "eligibility_reason": "Zwei randomisierte Klientenarme, Arm-N und drei auswertbare Outcomes zu Time 2; ein viertes unabhängiges Outcome ist in den Tabellen nicht berichtet.",
+      "risk_notes": [
+        "secondary analysis",
+        "kleine Stichprobe",
+        "nur drei unabhängige Outcomes"
+      ],
+      "human_review": {
+        "reviewer": "offen",
+        "review_date": "offen",
+        "parallel_two_arms_confirmed": null,
+        "randomization_confirmed": null,
+        "no_arm_collapse": null,
+        "outcomes_confirmed": null,
+        "final_decision": "offen"
+      },
+      "outcomes": [
+        {
+          "slot": 1,
+          "outcome": "Self-contempt intensity at Time 2",
+          "type": "continuous",
+          "table": "TABLE 1B",
+          "row_index": 3,
+          "intervention": {
+            "label": "GPM",
+            "n": 27,
+            "mean": "3.81",
+            "sd": "0.92"
+          },
+          "control": {
+            "label": "TAU",
+            "n": 23,
+            "mean": "4.22",
+            "sd": "0.67"
+          },
+          "usable": true,
+          "note": "Time 2; Time 1 ist Baseline und nicht als unabhängiges Outcome ausgewählt.",
+          "source_quote": "TABLE 1B | Self‐contempt for clients undergoing GPM and TAU (N = 50). | Arms: GPM (n = 27) Mean (SD) / TAU (n = 23) Mean (SD) / t‐test / p | Time 2 | 3.81 (0.92) | 4.22 (0.67) | 1.74 | 0.04"
+        },
+        {
+          "slot": 2,
+          "outcome": "Presence of self-compassion at Time 2",
+          "type": "binary",
+          "table": "TABLE 2B",
+          "row_index": 3,
+          "intervention": {
+            "label": "GPM",
+            "events": 14,
+            "total": 27
+          },
+          "control": {
+            "label": "TAU",
+            "events": 0,
+            "total": 23
+          },
+          "usable": true,
+          "note": "Tabellenwerte sind Anzahlen; keine Prozentrekonstruktion.",
+          "source_quote": "TABLE 2B | Presence of self‐compassion for clients undergoing GPM and TAU (N = 50). | Arms: GPM (n = 27) Proportion / TAU (n = 23) Proportion / Chi‐square / p | Time 2 | 14 | 0 | 16.56 | 0.00+"
+        },
+        {
+          "slot": 3,
+          "outcome": "Presence of assertive anger at Time 2",
+          "type": "binary",
+          "table": "TABLE 3B",
+          "row_index": 3,
+          "intervention": {
+            "label": "GPM",
+            "events": 19,
+            "total": 27
+          },
+          "control": {
+            "label": "TAU",
+            "events": 2,
+            "total": 23
+          },
+          "usable": true,
+          "note": "Tabellenwerte sind Anzahlen; keine Prozentrekonstruktion.",
+          "source_quote": "TABLE 3B | Presence of assertive anger for clients undergoing GPM and TAU (N = 50). | Arms: GPM (n = 27) Proportion / TAU (n = 23) Proportion / Chi‐square / p | Time 2 | 19 | 2 | 19.39 | 0.00+"
+        },
+        {
+          "slot": 4,
+          "outcome": "Fourth independent outcome",
+          "type": "not_available",
+          "table": "",
+          "row_index": null,
+          "intervention": {},
+          "control": {},
+          "usable": false,
+          "note": "Kein viertes unabhängiges Outcome in den Tabellen; State Self-Esteem wird nur im Text erwähnt, ohne armweise Werte.",
+          "source_quote": ""
+        }
+      ]
+    },
+    {
+      "pmcid": "PMC13635505",
+      "short_title": "Functional response to in-hospital exercise",
+      "title": "Metabolic reserve: baseline cholesterol as a predictor and modulator of response to in-hospital exercise in older adults",
+      "design": "Sekundäranalyse eines zweiarmigen RCT; Intervention 150, Kontrolle 153; funktionale Response als binäres Outcome",
+      "arm_n": {
+        "intervention": 150,
+        "control": 153,
+        "randomized": 303,
+        "analyzed": 303
+      },
+      "assisted_eligibility": "eligible_with_single_binary_outcome",
+      "eligibility_reason": "Zwei parallele Arme und ein berichtetes binäres Outcome mit Events/Total; die weiteren funktionalen Werte liegen nur als Median/IQR oder Regressionsmodelle vor.",
+      "risk_notes": [
+        "secondary analysis",
+        "nur ein auswertbares binäres Outcome",
+        "kontinuierliche SPPB-Werte nicht als Mean/SD berichtet"
+      ],
+      "human_review": {
+        "reviewer": "offen",
+        "review_date": "offen",
+        "parallel_two_arms_confirmed": null,
+        "randomization_confirmed": null,
+        "no_arm_collapse": null,
+        "outcomes_confirmed": null,
+        "final_decision": "offen"
+      },
+      "outcomes": [
+        {
+          "slot": 1,
+          "outcome": "Functional response (SPPB increase >= 1 point), discharge",
+          "type": "binary",
+          "table": "Table 1",
+          "row_index": 13,
+          "intervention": {
+            "label": "Intervention",
+            "events": 128,
+            "total": 150
+          },
+          "control": {
+            "label": "Control",
+            "events": 57,
+            "total": 153
+          },
+          "usable": true,
+          "note": "Events/Total aus Tabelle; 85.3% und 37.3% nicht als Ereigniszahlen rekonstruiert.",
+          "source_quote": "Table 1 | Baseline clinical and nutritional characteristics of the study population. Categorical variables were compared using the chi-square test. Continuous variables are presented as median [interquartile range] and were compared, excluding age, using the Mann–Whitney U test. Age was compared using Student’s T-test. IQR, interquartile range; MNA, Mini Nutritional Assessment; CIRS-G, Cumulative Illness Rating Scale for Geriatrics; SPPB, Short Physical Performance Battery; CRP, C-Reactive Protein. | Arms: Intervention (n = 150) Median (IQR) / Control (n = 153) Median (IQR) / p | Functional response, n (%) | 128 (85.3%) | 57 (37.3%) | <0.001"
+        },
+        {
+          "slot": 2,
+          "outcome": "SPPB change, continuous",
+          "type": "not_available",
+          "table": "",
+          "row_index": null,
+          "intervention": {},
+          "control": {},
+          "usable": false,
+          "note": "Kein armweiser Mean/SD für SPPB zu Entlassung berichtet; Baseline nur Median/IQR.",
+          "source_quote": ""
+        },
+        {
+          "slot": 3,
+          "outcome": "Total cholesterol, continuous",
+          "type": "not_available",
+          "table": "",
+          "row_index": null,
+          "intervention": {},
+          "control": {},
+          "usable": false,
+          "note": "Baseline-Prädiktor, kein Behandlungsoutcome; nur Median/IQR und Regressions-OR.",
+          "source_quote": ""
+        },
+        {
+          "slot": 4,
+          "outcome": "Additional functional outcome",
+          "type": "not_available",
+          "table": "",
+          "row_index": null,
+          "intervention": {},
+          "control": {},
+          "usable": false,
+          "note": "Kein weiteres armweises Outcome mit N/Mean/SD oder Events/Total in den Tabellen.",
+          "source_quote": ""
+        }
+      ]
+    },
+    {
+      "pmcid": "PMC13624796",
+      "short_title": "Dipstick findings and UTI risk with canagliflozin",
+      "title": "Urinary dipstick findings and UTI risk with SGLT2 inhibitors: a post-hoc analysis of the CANVAS and CREDENCE trials",
+      "design": "Post-hoc-Analyse gepoolter Individualdaten aus CANVAS und CREDENCE; zwei RCTs, Canagliflozin vs. Placebo; 3602 Placebo und 5012 Canagliflozin",
+      "arm_n": {
+        "intervention": 5012,
+        "control": 3602,
+        "randomized": 8614,
+        "analyzed": 8614,
+        "trial_count": 2
+      },
+      "assisted_eligibility": "uncertain_pooled_two_trials",
+      "eligibility_reason": "Zwei parallele Arme mit Ereigniszahlen, aber die Analyse poolt zwei separate RCTs und mehrere Subgruppen; kein einzelner RCT und keine unabhängigen vier Outcomes.",
+      "risk_notes": [
+        "post hoc",
+        "pooled analysis of two RCTs",
+        "subgroup overlap",
+        "UTI data truncated in CANVAS"
+      ],
+      "human_review": {
+        "reviewer": "offen",
+        "review_date": "offen",
+        "parallel_two_arms_confirmed": null,
+        "randomization_confirmed": null,
+        "no_arm_collapse": null,
+        "outcomes_confirmed": null,
+        "final_decision": "offen"
+      },
+      "outcomes": [
+        {
+          "slot": 1,
+          "outcome": "First UTI, whole population",
+          "type": "binary",
+          "table": "Table 3:",
+          "row_index": 4,
+          "intervention": {
+            "label": "Canagliflozin",
+            "events": 550,
+            "total": 5012
+          },
+          "control": {
+            "label": "Placebo",
+            "events": 353,
+            "total": 3602
+          },
+          "usable": true,
+          "note": "Gepoolte RCT-Population; Ereignisse/Total, keine Unabhängigkeit zwischen den Subgruppen.",
+          "source_quote": "Table 3: | Effects of canagliflozin versus placebo on UTI outcomes stratified by baseline dipstick results. | Arms: Placebo / Canagliflozin /  / P interaction | Whole | 353/3602 (9.8) | 41.4 | 550/5012 (11.0) | 41.9 | 1.07 (0.93–1.22) |"
+        },
+        {
+          "slot": 2,
+          "outcome": "First UTI, LE normal",
+          "type": "binary",
+          "table": "Table 3:",
+          "row_index": 7,
+          "intervention": {
+            "label": "Canagliflozin",
+            "events": 420,
+            "total": 4522
+          },
+          "control": {
+            "label": "Placebo",
+            "events": 237,
+            "total": 3171
+          },
+          "usable": true,
+          "note": "LE-Subgruppe; überlappt mit Slot 1 und ist kein unabhängiges Outcome.",
+          "source_quote": "Table 3: | Effects of canagliflozin versus placebo on UTI outcomes stratified by baseline dipstick results. | Arms: Placebo / Canagliflozin /  / P interaction | Normal | 237/3171 (7.5) | 30.9 | 420/4522 (9.2) | 34.8 | 1.17 (1.00–1.38) | .20"
+        },
+        {
+          "slot": 3,
+          "outcome": "First UTI, LE abnormal",
+          "type": "binary",
+          "table": "Table 3:",
+          "row_index": 12,
+          "intervention": {
+            "label": "Canagliflozin",
+            "events": 130,
+            "total": 490
+          },
+          "control": {
+            "label": "Placebo",
+            "events": 116,
+            "total": 431
+          },
+          "usable": true,
+          "note": "LE-Subgruppe; überlappt mit Slot 1 und ist kein unabhängiges Outcome.",
+          "source_quote": "Table 3: | Effects of canagliflozin versus placebo on UTI outcomes stratified by baseline dipstick results. | Arms: Placebo / Canagliflozin /  / P interaction | Abnormal | 116/431 (26.9) | 132.8 | 130/490 (26.5) | 122.3 | 0.94 (0.73–1.21) |"
+        },
+        {
+          "slot": 4,
+          "outcome": "First UTI, NIT abnormal",
+          "type": "binary",
+          "table": "Table 3:",
+          "row_index": 15,
+          "intervention": {
+            "label": "Canagliflozin",
+            "events": 45,
+            "total": 173
+          },
+          "control": {
+            "label": "Placebo",
+            "events": 34,
+            "total": 129
+          },
+          "usable": true,
+          "note": "NIT-Subgruppe; überlappt mit Slot 1 und ist kein unabhängiges Outcome.",
+          "source_quote": "Table 3: | Effects of canagliflozin versus placebo on UTI outcomes stratified by baseline dipstick results. | Arms: Placebo / Canagliflozin /  / P interaction | Abnormal | 34/129 (26.4) | 132.2 | 45/173 (26.0) | 118.0 | 0.92 (0.59–1.43) |"
+        }
+      ]
+    }
+  ]
+}

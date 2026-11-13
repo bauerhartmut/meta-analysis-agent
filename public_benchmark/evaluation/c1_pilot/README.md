@@ -342,6 +342,10 @@ Plan: [`holdout_plan_20261112.md`](holdout_plan_20261112.md), Schema:
   assistiertes Volltextdossier der 14 hohen Prioritäten mit Tabelleninventar,
   Arm-Headern, 545 Kandidatenzeilen und Methoden-Snippets; keine finalen
   Entscheidungen, kein Modell.
+- [`holdout_p0_20261112/fulltext_review_batch1_v1.md`](holdout_p0_20261112/fulltext_review_batch1_v1.md):
+  erste assistierte Volltextprüfung von fünf hohen Prioritäten mit Arm-N,
+  Eignungsvorbehalt und 20 Outcome-Slots; 12 verwendbar, 8 leer oder nicht
+  verwendbar, keine finale Entscheidung.
 - [`holdout_p0_20261112/fulltext_access_plan_v1.md`](holdout_p0_20261112/fulltext_access_plan_v1.md):
   lokale Zugriffsprüfung für die 36 Volltexte gegen 1.291 `data/fulltext`-Texte,
   101 Metadatensätze und 62 Inbox-Dateien; alle Open Access/Europe PMC,
