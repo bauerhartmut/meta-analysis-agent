@@ -179,6 +179,12 @@ einer gespeicherten Evidenzzeile, die den Wert im richtigen Feld tatsächlich
 enthält. Fehlt eines davon, bleibt das Feld `unresolved`. Das gilt auch dann,
 wenn die Evidenz-ID zwar existiert, aber eine andere Zahl belegt.
 
+Für jedes Feld zeigt der Server alle gespeicherten Evidenzzeilen als
+Auswahlliste; die bisherige B-Evidenz bleibt sichtbar und eine passende
+A-Quellzeile kann ausgewählt werden. Die Evidenzen für die sieben
+Review-Records werden mit `scripts/ergaenze_review_evidenzen_20261113.py`
+append-only ergänzt; das Skript verändert keine Werte oder Status.
+
 ## 11. Tests
 
 `research_agent/tests/test_verification_system.py` deckt ab:

@@ -130,6 +130,8 @@ class VerificationStore:
         if kind == "record_registered":
             record.update(payload)
             record["record_id"] = record_id
+            # Replay must preserve the event time, not the time of loading.
+            record["created_at"] = event.get("created_at") or record.get("created_at")
             record.setdefault("fields", {})
             record.setdefault("extractions", {})
             record.setdefault("evidence", {})

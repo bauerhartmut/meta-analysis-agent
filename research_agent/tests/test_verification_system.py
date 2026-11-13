@@ -13,6 +13,7 @@ from research_agent.verification.schema import (
     compare_values, transition_field, transition_record,
 )
 from research_agent.verification.store import VerificationStore
+from research_agent.verification.review_server import render
 from research_agent.verification.workflow import (
     finalize_after_review, invalidate_on_source_change,
 )
@@ -215,6 +216,15 @@ def test_audit_chain_detects_tampering(tmp_path):
         VerificationStore(str(path))
 
 
+def test_replay_preserves_record_registration_time(tmp_path):
+    path = tmp_path / "audit.json"
+    store = VerificationStore(str(path))
+    store.register_record("r1", {"document_hash": "x", "outcome_type": "binary",
+                                 "required_fields": []})
+    registered_at = store.events[0]["created_at"]
+    assert VerificationStore(str(path)).record("r1")["created_at"] == registered_at
+
+
 def test_review_requires_reviewer_and_reason_for_not_reported(tmp_path):
     store = VerificationStore(str(tmp_path / "audit.json"))
     store.register_record("r1", {"document_hash": "x", "outcome_type": "continuous",
@@ -321,3 +331,35 @@ def test_finalize_keeps_unresolved_context_field_open(tmp_path):
     store.apply_decision("r1", "intervention_mean", "confirm",
                          reviewer="Pruefer A", evidence_id="ev:value")
     assert finalize_after_review(store, "r1", "Pruefer A") == "pending_review"
+
+
+def test_review_server_lists_all_evidence_for_selection(tmp_path):
+    store = _review_store(tmp_path)
+    store.add_evidence("r1", [{
+        "evidence_id": "ev:source-a", "field": "intervention_mean",
+        "table_id": "md:1", "row_label": "Posttreatment",
+        "column_label": "Group I", "raw_cell": "1.0 (0.5)",
+    }, {
+        "evidence_id": "ev:source-b", "field": "intervention_mean",
+        "table_id": "md:2", "row_label": "Posttreatment",
+        "column_label": "Group I", "raw_cell": "1.0 (0.5)",
+    }])
+    page = render(store)
+    assert '<select name="evidence_id">' in page
+    assert 'ev:source-a' in page and 'ev:source-b' in page
+    assert 'evidence_id" value="ev:' not in page
+
+
+def test_adding_evidence_does_not_change_values_or_status(tmp_path):
+    store = _review_store(tmp_path)
+    before = {name: dict(field)
+              for name, field in store.record("r1")["fields"].items()}
+    store.add_evidence("r1", [{
+        "evidence_id": "ev:only-evidence", "field": "intervention_mean",
+        "table_id": "md:1", "row_label": "Posttreatment",
+        "column_label": "Group I", "raw_cell": "1.0 (0.5)",
+    }])
+    after = {name: dict(field)
+             for name, field in store.record("r1")["fields"].items()}
+    assert before == after
+    assert store.record("r1")["status"] == "pending_review"

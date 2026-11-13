@@ -43,8 +43,43 @@ def _e(value: Any) -> str:
     return html.escape("" if value is None else str(value))
 
 
-def _field_row(record_id: str, name: str, field: Dict[str, Any]) -> str:
-    evidence_id = _e(field.get("evidence_id"))
+def _short(value: Any, limit: int = 72) -> str:
+    text = " ".join(str(value or "").split())
+    return text if len(text) <= limit else text[:limit - 1] + "..."
+
+
+def _evidence_select(record: Dict[str, Any], name: str,
+                     current: str) -> str:
+    items = [
+        (str(evidence_id), evidence)
+        for evidence_id, evidence in (record.get("evidence") or {}).items()
+        if str((evidence or {}).get("field") or "") == name
+    ]
+    if not items:
+        return ('<span class="muted">keine Evidenz</span>'
+                '<input type="hidden" name="evidence_id" value="">')
+    options = []
+    for evidence_id, evidence in items:
+        label = " | ".join(part for part in (
+            str(evidence.get("table_id") or ""),
+            _short(evidence.get("row_label")),
+            _short(evidence.get("column_label")),
+            _short(evidence.get("raw_cell")),
+        ) if part)
+        selected = " selected" if evidence_id == current else ""
+        options.append(
+            f'<option value="{_e(evidence_id)}"{selected}>{_e(label)}</option>'
+        )
+    if current and current not in {item[0] for item in items}:
+        options.insert(0, f'<option value="{_e(current)}" selected>'
+                           f'{_e(_short(current))} (nicht gespeichert)</option>')
+    return ('<select name="evidence_id">'
+            + "".join(options) + "</select>")
+
+
+def _field_row(record_id: str, name: str, field: Dict[str, Any],
+               record: Dict[str, Any]) -> str:
+    evidence_id = str(field.get("evidence_id") or "")
     status = str(field.get("status") or "")
     cls = "ok" if status == "verified" else "bad"
     return f"""
@@ -58,7 +93,7 @@ def _field_row(record_id: str, name: str, field: Dict[str, Any]) -> str:
         <form method="post" action="/decision" class="actions">
           <input type="hidden" name="record_id" value="{_e(record_id)}">
           <input type="hidden" name="field" value="{_e(name)}">
-          <input type="hidden" name="evidence_id" value="{evidence_id}">
+          {_evidence_select(record, name, evidence_id)}
           <input name="reviewer" placeholder="Pruefer" required size="10">
           <input name="value" placeholder="Wert" size="8">
           <input name="note" placeholder="Begruendung" size="18">
@@ -81,7 +116,7 @@ def render(store: VerificationStore) -> str:
     for record_id, record in sorted(store.state["records"].items()):
         status = str(record.get("status") or "")
         fields = record.get("fields") or {}
-        rows = "".join(_field_row(record_id, name, field)
+        rows = "".join(_field_row(record_id, name, field, record)
                        for name, field in sorted(fields.items()))
         validations = "".join(
             f"<li><b>{_e(item.get('severity'))}</b> {_e(item.get('rule'))}: "
