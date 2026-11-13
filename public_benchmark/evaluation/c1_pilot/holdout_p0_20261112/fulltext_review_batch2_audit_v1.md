@@ -25,12 +25,12 @@ Unabhängigkeitsklassen verändert.
 
 - **36/36** Slots haben einen Quelleintrag.
 - **17** Results-Textzitate wurden exakt im normalisierten XML gefunden.
-- **19** Tabellenverweise: Caption, Zeilenlabel und strukturierte Werte wurden ausschließlich innerhalb der jeweils referenzierten Tabelle geprüft; **18/18** Tabellen-Outcomes bestanden die Zeilen-/Werteprüfung. Die zwei Kosten-Outcomes stehen in getrennten Zeilen derselben Tabelle; der ICER-Slot ist ein Tabellenverweis.
+- **19** Tabellenverweise: Caption, Zeilenlabel und strukturierte Werte wurden ausschließlich in der jeweils referenzierten Tabellenzeile geprüft; **14/18** Tabellen-Outcomes bestanden die zeilenexakte Prüfung: 12/16 Einzelzeilen und 2/2 Kosten-Outcomes mit getrennten Interventions-/Kontrollzeilen bestanden. 4 binäre AE-Outcomes haben Ereignisse in der Zeile, aber N nur im Arm-Header und bestehen die Zeilenprüfung deshalb nicht. Der ICER-Slot ist ein Tabellenverweis ohne eigene Zeilenwerte.
 - **20/20** Outcomes mit strukturierten Zahlen enthalten diese Zahlen im Quelleintrag.
 
 Hinweis: Tabellenquellen sind keine zusammenhängenden Fließtextsätze. Die
 Quellenprüfung vergleicht deshalb Caption, Zeilenlabel und strukturierte
-Werte getrennt und ausschließlich innerhalb der referenzierten Tabelle; sie
+Werte ausschließlich in der referenzierten Tabellenzeile; sie
 ersetzt nicht die menschliche Sichtprüfung der Tabelle.
 
 ## Überlappungen
@@ -78,9 +78,13 @@ SHA-256 der unveränderten Batch-2-Dateien:
 
 ## Auditstatus
 
-- Offene Befunde: **0**
+- Offene Befunde: **4**
 - Menschliche Prüfung: **offen**
 - Outcome-Werte geändert: **nein**
 
-Keine Zähler-, Quellen- oder Überlappungsabweichung gefunden. Die
-fachliche Eignung bleibt offen und wird in der Checkliste geprüft.
+### Befunde
+
+- PMC13590641 Slot 1: Zeilenquelle nicht in der referenzierten Tabellenzeile caption=True, row_label_in_table=True, row_match=False
+- PMC13590641 Slot 2: Zeilenquelle nicht in der referenzierten Tabellenzeile caption=True, row_label_in_table=True, row_match=False
+- PMC13590641 Slot 3: Zeilenquelle nicht in der referenzierten Tabellenzeile caption=True, row_label_in_table=True, row_match=False
+- PMC13590641 Slot 4: Zeilenquelle nicht in der referenzierten Tabellenzeile caption=True, row_label_in_table=True, row_match=False

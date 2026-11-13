@@ -99,6 +99,30 @@ def find_table_wrap(root: ET.Element, label: str) -> ET.Element | None:
     return None
 
 
+def extract_table_rows(table_wrap: ET.Element) -> list[str]:
+    rows: list[str] = []
+    for element in table_wrap.iter():
+        if local_name(element.tag) != "tr":
+            continue
+        cells = [
+            element_text(child)
+            for child in element
+            if local_name(child.tag) in {"th", "td"}
+        ]
+        if cells:
+            rows.append(" | ".join(cells))
+    return rows
+
+
+def row_contains(row: str, label: str, values: list[str]) -> bool:
+    if normalize(label) not in normalize(row):
+        return False
+    return all(
+        normalize_number(value) in normalize_number(row)
+        for value in values
+    )
+
+
 def sha256(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
@@ -120,9 +144,13 @@ def main() -> None:
     table_refs = 0
     table_values_ok = 0
     table_rows = 0
+    table_paired_rows = 0
+    table_single_rows = 0
     structured_value_sets = 0
     values_in_quote = 0
     issues: list[str] = []
+    source_flags: dict[str, str] = {}
+    header_only_slots: list[str] = []
 
     for record in records:
         pmcid = record["pmcid"]
@@ -164,18 +192,78 @@ def main() -> None:
                 table_text = normalize(table_raw)
                 caption_ok = normalize(table["caption"]) in table_text
                 row_label_ok = normalize(row["row_label"]) in table_text
-                values = arm_values(outcome)
-                values_ok = all(
-                    normalize_number(value) in normalize_number(table_raw)
-                    for value in values
-                )
-                if caption_ok and row_label_ok and values_ok:
+                xml_rows = extract_table_rows(table_wrap)
+                intervention_values = [
+                    str(outcome["intervention"][key])
+                    for key in ("mean", "sd", "events", "total")
+                    if outcome["intervention"].get(key) is not None
+                ]
+                control_values = [
+                    str(outcome["control"][key])
+                    for key in ("mean", "sd", "events", "total")
+                    if outcome["control"].get(key) is not None
+                ]
+                if outcome.get("control_row_index") is not None:
+                    control_row = next(
+                        (
+                            item
+                            for item in table["rows"]
+                            if item["row_index"] == outcome["control_row_index"]
+                        ),
+                        None,
+                    )
+                    if control_row is None:
+                        issues.append(
+                            f"{pmcid} Slot {outcome['slot']}: Kontrollzeile nicht im Dossier"
+                        )
+                        continue
+                    intervention_ok = any(
+                        row_contains(item, row["row_label"], intervention_values)
+                        for item in xml_rows
+                    )
+                    control_ok = any(
+                        row_contains(item, control_row["row_label"], control_values)
+                        for item in xml_rows
+                    )
+                    row_ok = intervention_ok and control_ok
+                    table_paired_rows += 1
+                else:
+                    all_values = intervention_values + control_values
+                    row_ok = any(
+                        row_contains(item, row["row_label"], all_values)
+                        for item in xml_rows
+                    )
+                    table_single_rows += 1
+                if caption_ok and row_ok:
                     table_rows += 1
                     table_values_ok += 1
                 else:
+                    header_only = False
+                    if outcome["type"] == "binary":
+                        event_values = [
+                            str(outcome["intervention"]["events"]),
+                            str(outcome["control"]["events"]),
+                        ]
+                        events_in_row = any(
+                            row_contains(item, row["row_label"], event_values)
+                            for item in xml_rows
+                        )
+                        totals_in_table = all(
+                            normalize_number(value) in normalize_number(table_raw)
+                            for value in (
+                                str(outcome["intervention"].get("total")),
+                                str(outcome["control"].get("total")),
+                            )
+                        )
+                        header_only = events_in_row and totals_in_table
+                    if header_only:
+                        source_flags[f"{pmcid}:{outcome['slot']}"] = (
+                            "N nur im Arm-Header; Zeile separat prüfen"
+                        )
+                        header_only_slots.append(f"{pmcid}:{outcome['slot']}")
                     issues.append(
-                        f"{pmcid} Slot {outcome['slot']}: Tabellenquelle außerhalb der referenzierten Tabelle "
-                        f"caption={caption_ok}, row={row_label_ok}, values={values_ok}"
+                        f"{pmcid} Slot {outcome['slot']}: Zeilenquelle nicht in der referenzierten Tabellenzeile "
+                        f"caption={caption_ok}, row_label_in_table={row_label_ok}, row_match={row_ok}"
                     )
             elif quote.startswith("Table "):
                 table_refs += 1
@@ -278,15 +366,20 @@ def main() -> None:
         "",
         f"- **{source_present}/36** Slots haben einen Quelleintrag.",
         f"- **{text_exact}** Results-Textzitate wurden exakt im normalisierten XML gefunden.",
-        f"- **{table_refs}** Tabellenverweise: Caption, Zeilenlabel und strukturierte Werte wurden ausschließlich innerhalb der jeweils referenzierten Tabelle geprüft; "
-        f"**{table_rows}/18** Tabellen-Outcomes bestanden die Zeilen-/Werteprüfung. "
-        "Die zwei Kosten-Outcomes stehen in getrennten Zeilen derselben Tabelle; der ICER-Slot ist ein Tabellenverweis.",
+        f"- **{table_refs}** Tabellenverweise: Caption, Zeilenlabel und strukturierte Werte wurden ausschließlich in der jeweils referenzierten Tabellenzeile geprüft; "
+        f"**{table_rows}/18** Tabellen-Outcomes bestanden die zeilenexakte Prüfung: "
+        f"{table_rows - table_paired_rows}/{table_single_rows} Einzelzeilen und "
+        f"{table_paired_rows}/{table_paired_rows} Kosten-Outcomes mit getrennten "
+        f"Interventions-/Kontrollzeilen bestanden. {len(header_only_slots)} binäre "
+        "AE-Outcomes haben Ereignisse in der Zeile, aber N nur im Arm-Header und "
+        "bestehen die Zeilenprüfung deshalb nicht. Der ICER-Slot ist ein "
+        "Tabellenverweis ohne eigene Zeilenwerte.",
         f"- **{values_in_quote}/{structured_value_sets}** Outcomes mit strukturierten Zahlen "
         "enthalten diese Zahlen im Quelleintrag.",
         "",
         "Hinweis: Tabellenquellen sind keine zusammenhängenden Fließtextsätze. Die",
         "Quellenprüfung vergleicht deshalb Caption, Zeilenlabel und strukturierte",
-        "Werte getrennt und ausschließlich innerhalb der referenzierten Tabelle; sie",
+        "Werte ausschließlich in der referenzierten Tabellenzeile; sie",
         "ersetzt nicht die menschliche Sichtprüfung der Tabelle.",
         "",
         "## Überlappungen",
@@ -367,6 +460,7 @@ def main() -> None:
         "- [ ] Zähler 8 unabhängig / 6 überlappend / 22 nicht verwendbar bestätigt",
         "- [ ] 14 formal verwendbar bestätigt",
         "- [ ] 36/36 Quellen geprüft",
+        "- [ ] 4 Hinweise „N nur im Arm-Header“ geprüft",
         "- [ ] 6 überlappende Slots bestätigt",
         "- [ ] keine Outcome-Werte verändert",
         "- [ ] finale Entscheidungen nur im dafür vorgesehenen Dokument gesetzt",
@@ -397,11 +491,12 @@ def main() -> None:
             "|---|---|---|---|---|---|---|---|---|---|",
         ]
         for outcome in record["outcomes"]:
+            source_key = f"{record['pmcid']}:{outcome['slot']}"
             checklist.append(
                 f"| [ ] | {outcome['slot']} | {outcome['outcome']} | {outcome['type']} | "
                 f"{compact_arm(outcome['intervention'])} | {compact_arm(outcome['control'])} | "
                 f"{'ja' if outcome['usable'] else 'nein'} | {outcome['outcome_independence']} | "
-                f"{source_label(outcome)} | offen |"
+                f"{source_label(outcome)} | {source_flags.get(source_key, 'offen')} |"
             )
         checklist += ["", "**Vorprüfungsnotizen:**", ""]
         for outcome in record["outcomes"]:
