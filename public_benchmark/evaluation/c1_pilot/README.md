@@ -338,6 +338,10 @@ Plan: [`holdout_plan_20261112.md`](holdout_plan_20261112.md), Schema:
   freigegebener XML-Abruf der 30 Shortlist-Artikel; 30/30 erfolgreich, keine
   PDFs oder Reservefälle. Roh-XML lokal unter `data/fulltext_inbox/`
   (gitignoriert), SHA-256-Provenienz im Manifest.
+- [`holdout_p0_20261112/fulltext_review_high_v1.md`](holdout_p0_20261112/fulltext_review_high_v1.md):
+  assistiertes Volltextdossier der 14 hohen Prioritäten mit Tabelleninventar,
+  Arm-Headern, 545 Kandidatenzeilen und Methoden-Snippets; keine finalen
+  Entscheidungen, kein Modell.
 - [`holdout_p0_20261112/fulltext_access_plan_v1.md`](holdout_p0_20261112/fulltext_access_plan_v1.md):
   lokale Zugriffsprüfung für die 36 Volltexte gegen 1.291 `data/fulltext`-Texte,
   101 Metadatensätze und 62 Inbox-Dateien; alle Open Access/Europe PMC,

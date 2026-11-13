@@ -120,6 +120,15 @@ Wurzel `article` geparst. Sechs Reservefälle und PDFs wurden nicht abgerufen;
 Volltextwerte sind noch nicht extrahiert. Provenienz:
 [`fulltext_retrieval_manifest_v1.json`](holdout_p0_20261112/fulltext_retrieval_manifest_v1.json),
 [`fulltext_retrieval_v1.md`](holdout_p0_20261112/fulltext_retrieval_v1.md).
+
+Für die 14 hohen Prioritäten liegt ein assistiertes Volltextdossier vor:
+**14 Artikel**, **40 Tabellen mit Arm-Headern**, **545 numerische
+Kandidatenzeilen**, **14 RCT-Signale**, **7 Zweiarm-/Placebo-Signale**. Alle
+14 Artikel tragen mindestens einen Prüfhinweis; **0 finale Entscheidungen**.
+Die Marker sind Suchsignale, keine Eignungsentscheidung. Details:
+[`fulltext_review_high_v1.md`](holdout_p0_20261112/fulltext_review_high_v1.md),
+[`fulltext_review_high_v1.csv`](holdout_p0_20261112/fulltext_review_high_v1.csv),
+[`fulltext_review_high_v1.json`](holdout_p0_20261112/fulltext_review_high_v1.json).
 Mehrfachgruende sind moeglich; die Regelzahlen
 sind nicht additiv.
 

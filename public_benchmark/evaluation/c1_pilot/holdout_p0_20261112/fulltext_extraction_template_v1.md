@@ -15,6 +15,7 @@ Status: **VOLLTEXT-PRÜFUNG OFFEN**; 30/36 XML lokal verfügbar; sechs Reservef�
 
 Die maschinenlesbare Langform steht in `fulltext_extraction_template_v1.csv`: pro Artikel
 4 Outcome-Slots mit je einer Interventions- und Kontrollzeile.
+Prüfdossier der 14 hohen Prioritäten: `fulltext_review_high_v1.md`.
 
 ## 1. PMC13519320 — Dupilumab in chronic obstructive pulmonary disease: a pooled analysis of emergency department visits, hospital admissions, and systemic corticosteroid use.
 

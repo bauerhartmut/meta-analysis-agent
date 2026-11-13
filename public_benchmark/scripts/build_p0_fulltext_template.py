@@ -20,6 +20,7 @@ JSON_PATH = OUT / "fulltext_extraction_template_v1.json"
 CSV_PATH = OUT / "fulltext_extraction_template_v1.csv"
 MD_PATH = OUT / "fulltext_extraction_template_v1.md"
 MANIFEST = OUT / "fulltext_retrieval_manifest_v1.json"
+DOSSIER = OUT / "fulltext_review_high_v1.md"
 OUTCOME_SLOTS = 4
 
 
@@ -300,6 +301,7 @@ def main() -> None:
         "",
         f"Die maschinenlesbare Langform steht in `{CSV_PATH.name}`: pro Artikel",
         f"{OUTCOME_SLOTS} Outcome-Slots mit je einer Interventions- und Kontrollzeile.",
+        f"Prüfdossier der 14 hohen Prioritäten: `{DOSSIER.name}`." if DOSSIER.exists() else "",
         "",
     ]
 

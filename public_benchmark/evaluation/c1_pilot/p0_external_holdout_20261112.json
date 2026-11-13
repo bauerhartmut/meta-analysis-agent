@@ -248,5 +248,20 @@
     "manifest_path": "public_benchmark/evaluation/c1_pilot/holdout_p0_20261112/fulltext_retrieval_manifest_v1.json",
     "summary_path": "public_benchmark/evaluation/c1_pilot/holdout_p0_20261112/fulltext_retrieval_v1.md",
     "raw_directory": "data/fulltext_inbox/p0_20261113_xml/"
+  },
+  "fulltext_review_high": {
+    "status": "assisted_catalog_ready_for_human_review",
+    "articles": 14,
+    "candidate_tables": 40,
+    "candidate_rows": 545,
+    "rct_signal_articles": 14,
+    "two_arm_signal_articles": 7,
+    "risk_articles": 14,
+    "final_decisions_made": false,
+    "model_used": false,
+    "network_used": false,
+    "json_path": "public_benchmark/evaluation/c1_pilot/holdout_p0_20261112/fulltext_review_high_v1.json",
+    "csv_path": "public_benchmark/evaluation/c1_pilot/holdout_p0_20261112/fulltext_review_high_v1.csv",
+    "md_path": "public_benchmark/evaluation/c1_pilot/holdout_p0_20261112/fulltext_review_high_v1.md"
   }
 }
