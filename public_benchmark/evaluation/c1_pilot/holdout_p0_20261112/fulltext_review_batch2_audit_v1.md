@@ -25,12 +25,13 @@ Unabhängigkeitsklassen verändert.
 
 - **36/36** Slots haben einen Quelleintrag.
 - **17** Results-Textzitate wurden exakt im normalisierten XML gefunden.
-- **19** Tabellenverweise: Caption und strukturierte Werte wurden gegen die jeweilige Tabelle geprüft; **18/18** Tabellen-Outcomes bestanden die Zeilen-/Werteprüfung. Die zwei Kosten-Outcomes stehen in getrennten Zeilen; der ICER-Slot ist ein Tabellenverweis.
+- **19** Tabellenverweise: Caption, Zeilenlabel und strukturierte Werte wurden ausschließlich innerhalb der jeweils referenzierten Tabelle geprüft; **18/18** Tabellen-Outcomes bestanden die Zeilen-/Werteprüfung. Die zwei Kosten-Outcomes stehen in getrennten Zeilen derselben Tabelle; der ICER-Slot ist ein Tabellenverweis.
 - **20/20** Outcomes mit strukturierten Zahlen enthalten diese Zahlen im Quelleintrag.
 
 Hinweis: Tabellenquellen sind keine zusammenhängenden Fließtextsätze. Die
 Quellenprüfung vergleicht deshalb Caption, Zeilenlabel und strukturierte
-Werte getrennt; sie ersetzt nicht die menschliche Sichtprüfung der Tabelle.
+Werte getrennt und ausschließlich innerhalb der referenzierten Tabelle; sie
+ersetzt nicht die menschliche Sichtprüfung der Tabelle.
 
 ## Überlappungen
 

@@ -85,6 +85,20 @@ def format_arm_n(arm_n: dict) -> str:
     )
 
 
+def find_table_wrap(root: ET.Element, label: str) -> ET.Element | None:
+    target = normalize(label)
+    for element in root.iter():
+        if local_name(element.tag) != "table-wrap":
+            continue
+        label_element = next(
+            (child for child in element if local_name(child.tag) == "label"),
+            None,
+        )
+        if normalize(element_text(label_element)) == target:
+            return element
+    return None
+
+
 def sha256(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
@@ -140,13 +154,19 @@ def main() -> None:
                         f"{pmcid} Slot {outcome['slot']}: Tabelle/Zeile nicht im Dossier"
                     )
                     continue
-                caption_ok = normalize(table["caption"]) in article_text
-                row_label_ok = normalize(row["row_label"]) in normalize(
-                    element_text(article_root)
-                )
+                table_wrap = find_table_wrap(article_root, outcome["table"])
+                if table_wrap is None:
+                    issues.append(
+                        f"{pmcid} Slot {outcome['slot']}: referenzierte Tabelle nicht im XML"
+                    )
+                    continue
+                table_raw = element_text(table_wrap)
+                table_text = normalize(table_raw)
+                caption_ok = normalize(table["caption"]) in table_text
+                row_label_ok = normalize(row["row_label"]) in table_text
                 values = arm_values(outcome)
                 values_ok = all(
-                    normalize_number(value) in normalize_number(element_text(article_root))
+                    normalize_number(value) in normalize_number(table_raw)
                     for value in values
                 )
                 if caption_ok and row_label_ok and values_ok:
@@ -154,7 +174,7 @@ def main() -> None:
                     table_values_ok += 1
                 else:
                     issues.append(
-                        f"{pmcid} Slot {outcome['slot']}: Tabellenquelle "
+                        f"{pmcid} Slot {outcome['slot']}: Tabellenquelle außerhalb der referenzierten Tabelle "
                         f"caption={caption_ok}, row={row_label_ok}, values={values_ok}"
                     )
             elif quote.startswith("Table "):
@@ -258,15 +278,16 @@ def main() -> None:
         "",
         f"- **{source_present}/36** Slots haben einen Quelleintrag.",
         f"- **{text_exact}** Results-Textzitate wurden exakt im normalisierten XML gefunden.",
-        f"- **{table_refs}** Tabellenverweise: Caption und strukturierte Werte wurden gegen die jeweilige Tabelle geprüft; "
+        f"- **{table_refs}** Tabellenverweise: Caption, Zeilenlabel und strukturierte Werte wurden ausschließlich innerhalb der jeweils referenzierten Tabelle geprüft; "
         f"**{table_rows}/18** Tabellen-Outcomes bestanden die Zeilen-/Werteprüfung. "
-        "Die zwei Kosten-Outcomes stehen in getrennten Zeilen; der ICER-Slot ist ein Tabellenverweis.",
+        "Die zwei Kosten-Outcomes stehen in getrennten Zeilen derselben Tabelle; der ICER-Slot ist ein Tabellenverweis.",
         f"- **{values_in_quote}/{structured_value_sets}** Outcomes mit strukturierten Zahlen "
         "enthalten diese Zahlen im Quelleintrag.",
         "",
         "Hinweis: Tabellenquellen sind keine zusammenhängenden Fließtextsätze. Die",
         "Quellenprüfung vergleicht deshalb Caption, Zeilenlabel und strukturierte",
-        "Werte getrennt; sie ersetzt nicht die menschliche Sichtprüfung der Tabelle.",
+        "Werte getrennt und ausschließlich innerhalb der referenzierten Tabelle; sie",
+        "ersetzt nicht die menschliche Sichtprüfung der Tabelle.",
         "",
         "## Überlappungen",
         "",
