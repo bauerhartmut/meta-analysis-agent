@@ -119,6 +119,8 @@ def extract_arm_header_cells(table_wrap: ET.Element) -> dict[str, str]:
     for element in table_wrap.iter():
         if local_name(element.tag) != "tr":
             continue
+        if not any(local_name(child.tag) == "th" for child in element):
+            continue
         cells = [
             element_text(child)
             for child in element
@@ -138,15 +140,22 @@ def extract_arm_header_cells(table_wrap: ET.Element) -> dict[str, str]:
 
 
 def header_cell_n(cell: str) -> str | None:
+    """Return the exact N from an arm header cell; None if absent."""
     match = re.search(r"\(\s*N\s*=\s*([0-9]+)\s*\)", cell, re.IGNORECASE)
     return match.group(1) if match else None
+
+
+def numeric_tokens(text: str) -> set[str]:
+    """Return exact numeric tokens, normalizing thousands separators."""
+    tokens = re.findall(r"\d{1,3}(?:,\d{3})+(?:\.\d+)?|\d+(?:\.\d+)?", text)
+    return {token.replace(",", "") for token in tokens}
 
 
 def row_contains(row: str, label: str, values: list[str]) -> bool:
     if normalize(label) not in normalize(row):
         return False
     return all(
-        normalize_number(value) in normalize_number(row)
+        normalize_number(value).lstrip(".") in numeric_tokens(row)
         for value in values
     )
 
@@ -170,7 +179,6 @@ def main() -> None:
     source_present = 0
     text_exact = 0
     table_refs = 0
-    table_values_ok = 0
     table_rows = 0
     table_paired_rows = 0
     table_single_rows = 0
@@ -178,7 +186,7 @@ def main() -> None:
     values_in_quote = 0
     issues: list[str] = []
     source_flags: dict[str, str] = {}
-    header_only_slots: list[str] = []
+    header_denominator_slots: list[str] = []
 
     for record in records:
         pmcid = record["pmcid"]
@@ -216,8 +224,7 @@ def main() -> None:
                         f"{pmcid} Slot {outcome['slot']}: referenzierte Tabelle nicht im XML"
                     )
                     continue
-                table_raw = element_text(table_wrap)
-                table_text = normalize(table_raw)
+                table_text = normalize(element_text(table_wrap))
                 caption_ok = normalize(table["caption"]) in table_text
                 row_label_ok = normalize(row["row_label"]) in table_text
                 xml_rows = extract_table_rows(table_wrap)
@@ -264,10 +271,14 @@ def main() -> None:
                     table_single_rows += 1
                 if caption_ok and row_ok:
                     table_rows += 1
-                    table_values_ok += 1
                 else:
-                    header_only = False
-                    if outcome["type"] == "binary":
+                    header_denominator = False
+                    if (
+                        outcome["intervention"].get("total") is not None
+                        and outcome["control"].get("total") is not None
+                        and outcome["intervention"].get("events") is not None
+                        and outcome["control"].get("events") is not None
+                    ):
                         event_values = [
                             str(outcome["intervention"]["events"]),
                             str(outcome["control"]["events"]),
@@ -277,25 +288,29 @@ def main() -> None:
                             for item in xml_rows
                         )
                         header_cells = extract_arm_header_cells(table_wrap)
+                        header_totals = {
+                            arm: header_cell_n(header_cells.get(arm, ""))
+                            for arm in ("intervention", "control")
+                        }
                         totals_in_arm_headers = (
                             bool(header_cells)
-                            and header_cell_n(header_cells["intervention"])
-                            == str(outcome["intervention"].get("total"))
-                            and header_cell_n(header_cells["control"])
-                            == str(outcome["control"].get("total"))
+                            and all(
+                                header_totals[arm]
+                                == str(outcome[arm].get("total"))
+                                for arm in ("intervention", "control")
+                            )
                         )
-                        header_only = (
+                        header_denominator = (
                             caption_ok
                             and events_in_row
                             and totals_in_arm_headers
                         )
-                    if header_only:
+                    if header_denominator:
                         source_flags[f"{pmcid}:{outcome['slot']}"] = (
                             "N in konkreter Arm-Header-Zelle zulässig; Zeile/Header dokumentiert"
                         )
-                        header_only_slots.append(f"{pmcid}:{outcome['slot']}")
+                        header_denominator_slots.append(f"{pmcid}:{outcome['slot']}")
                         table_rows += 1
-                        table_values_ok += 1
                     else:
                         issues.append(
                             f"{pmcid} Slot {outcome['slot']}: Zeilenquelle nicht in der referenzierten Tabellenzeile "
@@ -404,8 +419,8 @@ def main() -> None:
         f"- **{text_exact}** Results-Textzitate wurden exakt im normalisierten XML gefunden.",
         f"- **{table_refs}** Tabellenverweise: Caption und ggf. konkrete Arm-Header-Zellen wurden in der referenzierten Tabelle geprüft; Zeilenlabel und strukturierte Werte ausschließlich in der jeweils referenzierten Zeile; "
         f"**{table_rows}/18** Tabellen-Outcomes bestanden die Quellenprüfung: "
-        f"{table_rows - table_paired_rows - len(header_only_slots)}/{table_single_rows} "
-        f"Einzelzeilen zeilenexakt, {len(header_only_slots)}/{table_single_rows} "
+        f"{table_rows - table_paired_rows - len(header_denominator_slots)}/{table_single_rows} "
+        f"Einzelzeilen zeilenexakt, {len(header_denominator_slots)}/{table_single_rows} "
         "Einzelzeilen mit N in der jeweiligen konkreten Arm-Header-Zelle zulässig und "
         f"{table_paired_rows}/{table_paired_rows} Kosten-Outcomes mit getrennten "
         "Interventions-/Kontrollzeilen bestanden. Der ICER-Slot ist ein "
