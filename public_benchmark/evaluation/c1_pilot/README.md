@@ -359,6 +359,9 @@ Plan: [`holdout_plan_20261112.md`](holdout_plan_20261112.md), Schema:
   Armzeilen; 4 N-Werte in konkreten Arm-Header-Zellen als zulässige Quelle
   dokumentiert, 0 Zähler- oder Überlappungsabweichungen, keine Outcome-Werte
   verändert.
+- [`holdout_p0_20261112/fulltext_review_batch2_audit_update_20261113.md`](holdout_p0_20261112/fulltext_review_batch2_audit_update_20261113.md):
+  Zwischenstand seit der letzten Quellennotiz mit den drei Audit-Schritten,
+  Ergebnissen, Armspaltenzuordnung, offenen Grenzen und nächsten Schritten.
 - [`holdout_p0_20261112/fulltext_review_batch2_pmc13590641_n_source_v1.md`](holdout_p0_20261112/fulltext_review_batch2_pmc13590641_n_source_v1.md):
   Quellenprüfung der vier `PMC13590641`-Slots gegen Tabelle 3; die N-Werte
   `(N = 24)` und `(N = 19)` in den konkreten Arm-Header-Zellen sind als
