@@ -482,11 +482,19 @@ als Modellfehler messen.
 | `validation/checksums.sha256` | SHA-256 für Archive und Schlüsseldateien |
 | `evaluation/README.md` | geplantes Experiment C, noch kein Lauf |
 | `scripts/build_inventory.py` | reproduzierbare Inventarerzeugung |
+| `external_benchmark/external_benchmark_research_v1.md` | Recherche zu Yun, Evidence Inference, PICO und SRDR+ |
+| `external_benchmark/external_benchmark_schema_v1.json` | einheitliches Referenzschema |
+| `external_benchmark/external_benchmark_results_v1.json` | maschinenlesbare Benchmark-Ergebnisse |
+| `external_benchmark/external_benchmark_results_v1.md` | Benchmark-Bericht mit Fehleranalyse |
+| `external_benchmark/external_benchmark_errors_v1.csv` | Einzelabweichungen je Feld |
+| `scripts/run_external_benchmark.py` | reproduzierbarer externer Benchmark |
+| `tests/test_external_benchmark.py` | Tests für Normalisierung, Metriken und Kategorien |
 
 Reproduktion:
 
 ```bash
 python public_benchmark/scripts/build_inventory.py
+python public_benchmark/scripts/run_external_benchmark.py
 ```
 
 Die Rohdaten unter `public_benchmark/raw_data/` sind lokal vorhanden, aber
@@ -504,7 +512,8 @@ SHA-256 gepinnt:
   nicht pro Artikel geprüft.
 - Kein vollständiges Audit aller 699 Yun-Records; geprüft wurden 30
   stratifizierte Records plus die drei Problemfälle.
-- Keine Modellvorhersagen, keine Genauigkeitsmessung, kein Testlauf.
+- Keine neuen Modellvorhersagen in diesem Auftrag; die Genauigkeitsmessung
+  bezieht sich auf den vorhandenen eingefrorenen C1-Testlauf.
 - Keine unabhängige Zweitannotation und kein B-Rücklauf; A/B bleiben
   unverändert.
 - Die Zahlen zu Yun und Evidence Inference stammen aus den gepinnten

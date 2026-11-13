@@ -1,0 +1,128 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://localhost/public_benchmark/external_benchmark_schema_v1.json",
+  "title": "Externer Benchmark: normalisierte Referenzannotation",
+  "description": "Einheitliches Schema fuer eine externe Referenzannotation. Ein Record entspricht genau einem ICO-Tripel mit numerischen Armwerten. Werte werden nie geschaetzt: null bedeutet nicht berichtet oder nicht annotiert. Die Feldnamen entsprechen dem internen Extraktionsschema; die Zuordnung zu Yun et al. 2024 ist im Skript run_external_benchmark.py und in external_benchmark_research_v1.md dokumentiert.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "benchmark_id",
+    "record_id",
+    "source",
+    "study_id",
+    "split",
+    "outcome_type",
+    "ico",
+    "values",
+    "provenance",
+    "available_fields",
+    "unavailable_fields",
+    "usable_for_numeric_benchmark"
+  ],
+  "properties": {
+    "benchmark_id": {
+      "type": "string",
+      "description": "Eindeutige ID, gebildet aus Quelle und Record-ID, z. B. yun2024:12.",
+      "pattern": "^[a-z0-9_]+:[0-9]+$"
+    },
+    "record_id": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Record-ID der Originalquelle."
+    },
+    "source": {
+      "type": "string",
+      "description": "Kurzname der Referenzquelle.",
+      "examples": ["yun2024"]
+    },
+    "study_id": {
+      "type": "string",
+      "description": "Studien-ID der Originalquelle, bei Yun der mit PMC praefigierte PMCID.",
+      "examples": ["PMC2667135"]
+    },
+    "split": {
+      "type": ["string", "null"],
+      "description": "Split der Originalquelle, falls vorhanden.",
+      "examples": ["dev", "test"]
+    },
+    "outcome_type": {
+      "type": "string",
+      "enum": ["continuous", "binary"],
+      "description": "Datentyp des Outcomes; bestimmt die erwarteten Felder."
+    },
+    "ico": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["intervention", "comparator", "outcome"],
+      "properties": {
+        "intervention": {"type": ["string", "null"]},
+        "comparator": {"type": ["string", "null"]},
+        "outcome": {"type": ["string", "null"]}
+      },
+      "description": "ICO-Tripel der Referenzannotation. Diese Texte sind Referenz, keine extrahierten Werte."
+    },
+    "values": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "Numerische Armwerte in internen Feldnamen. null bedeutet nicht berichtet; 0 ist ein gueltiger Wert.",
+      "properties": {
+        "intervention_n": {"$ref": "#/$defs/numberOrNull"},
+        "comparator_n": {"$ref": "#/$defs/numberOrNull"},
+        "intervention_mean": {"$ref": "#/$defs/numberOrNull"},
+        "comparator_mean": {"$ref": "#/$defs/numberOrNull"},
+        "intervention_sd": {"$ref": "#/$defs/numberOrNull"},
+        "comparator_sd": {"$ref": "#/$defs/numberOrNull"},
+        "intervention_events": {"$ref": "#/$defs/numberOrNull"},
+        "comparator_events": {"$ref": "#/$defs/numberOrNull"}
+      }
+    },
+    "original_reference_values": {
+      "type": "object",
+      "description": "Unveraenderte Originalwerte der Quelle vor der Kuratierung, nur zur Provenienz. Nicht fuer das Scoring verwenden.",
+      "additionalProperties": {"$ref": "#/$defs/numberOrNull"}
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["audit_status", "audit_method", "audit_reason", "source_text_path", "value_source"],
+      "properties": {
+        "audit_status": {
+          "type": ["string", "null"],
+          "enum": ["verified_exact", "verified_table", "corrected_with_source", null],
+          "description": "Ergebnis der Quellenpruefung des Referenzwerts."
+        },
+        "audit_method": {"type": ["string", "null"]},
+        "audit_reason": {"type": ["string", "null"]},
+        "source_text_path": {
+          "type": ["string", "null"],
+          "description": "Lokaler Pfad des zugrunde liegenden Volltexts, falls archiviert."
+        },
+        "value_source": {
+          "type": "string",
+          "enum": ["curated_values", "reference_values"],
+          "description": "Gibt an, ob kuratierte oder unkuratierte Werte verwendet wurden."
+        }
+      }
+    },
+    "available_fields": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "Felder mit einem berichteten Wert."
+    },
+    "unavailable_fields": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "Nicht berichtete Werte und grundsaetzlich fehlende Dimensionen wie timepoint, source_span, population, outcome_text."
+    },
+    "usable_for_numeric_benchmark": {
+      "type": "boolean",
+      "description": "true nur, wenn alle fuer den outcome_type erwarteten Felder einen Wert haben."
+    }
+  },
+  "$defs": {
+    "numberOrNull": {
+      "type": ["number", "null"],
+      "description": "Berichteter numerischer Wert oder null. Keine Imputation."
+    }
+  }
+}
