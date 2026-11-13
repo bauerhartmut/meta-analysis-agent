@@ -328,12 +328,16 @@ Plan: [`holdout_plan_20261112.md`](holdout_plan_20261112.md), Schema:
   0 Korrekturvorschläge, Entscheidungen unverändert.
 - [`holdout_p0_20261112/fulltext_extraction_template_v1.md`](holdout_p0_20261112/fulltext_extraction_template_v1.md):
   Volltext-Prüfvorlage für die 36 vorläufigen Einschlüsse mit Eignungscheck,
-  Armdefinition und vier Outcome-Slots für N/Mean/SD/Events; keine Schätzung
-  oder Umrechnung.
+  Armdefinition und vier Outcome-Slots für N/Mean/SD/Events; 30/36 XML lokal
+  verfügbar, sechs Reservefälle nicht abgerufen; keine Schätzung oder Umrechnung.
 - [`holdout_p0_20261112/fulltext_candidate_priority_v1.md`](holdout_p0_20261112/fulltext_candidate_priority_v1.md):
   deterministische Priorisierung aller 415 Volltextkandidaten; 30er-Shortlist
   aus 14 hohen und 16 mittleren menschlich bestätigten Einschlüssen, sechs
   bestätigte und 379 regelbasierte Reserve; keine endgültige Auswahl.
+- [`holdout_p0_20261112/fulltext_retrieval_v1.md`](holdout_p0_20261112/fulltext_retrieval_v1.md):
+  freigegebener XML-Abruf der 30 Shortlist-Artikel; 30/30 erfolgreich, keine
+  PDFs oder Reservefälle. Roh-XML lokal unter `data/fulltext_inbox/`
+  (gitignoriert), SHA-256-Provenienz im Manifest.
 - [`holdout_p0_20261112/fulltext_access_plan_v1.md`](holdout_p0_20261112/fulltext_access_plan_v1.md):
   lokale Zugriffsprüfung für die 36 Volltexte gegen 1.291 `data/fulltext`-Texte,
   101 Metadatensätze und 62 Inbox-Dateien; alle Open Access/Europe PMC,

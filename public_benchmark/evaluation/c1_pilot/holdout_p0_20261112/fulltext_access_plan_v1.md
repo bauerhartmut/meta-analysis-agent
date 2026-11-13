@@ -1,9 +1,10 @@
 # Volltext-Zugriffsplan: 36 P0-Einschlüsse
 
-Stand: 2026-11-12
-Status: **BEREIT FÜR FREIGEGEBENEN ABRUF**; es wurde nichts heruntergeladen.
+Stand: 2026-11-12, Abruf ergänzt 2026-11-13
+Status: **30/30 SHORTLIST-XML ABGERUFEN**; sechs Reservefälle und PDFs
+wurden nicht abgerufen; Volltext-Extraktion offen.
 
-Geprüft wurden drei lokale Bestände:
+Vor dem Abruf geprüft wurden drei lokale Bestände:
 
 - `data/fulltext`: 1291 Textdateien
 - `data/fulltext_metadata`: 101 JSON-Datensätze
@@ -21,7 +22,19 @@ Geprüft wurden drei lokale Bestände:
 | Treffer in Inbox | **0** |
 
 Ein fehlender Treffer ist kein Nachweis der Abwesenheit in anderen Caches;
-die geprüften Pfade und Suchregeln stehen im JSON.
+die geprüften Pfade und Suchregeln stehen im JSON. Die Spalten `Fulltext`,
+`Metadaten`, `Inbox` und `Lokal` dokumentieren den Stand **vor** dem Abruf.
+
+## Abruf 2026-11-13
+
+- Shortlist: **30** Artikel, ausschließlich aus den menschlich bestätigten
+  Einschlüssen.
+- Ergebnis: **30/30 HTTP 200**, **0 Fehler**, **3.481.708 Bytes**.
+- Ablage: `data/fulltext_inbox/p0_20261113_xml/` (gitignoriert).
+- Provenienz: [`fulltext_retrieval_manifest_v1.json`](fulltext_retrieval_manifest_v1.json)
+  mit URL, Bytezahl, SHA-256, XML-Wurzel und Titel pro Datei.
+- Nicht abgerufen: sechs Reservefälle, PDFs, Volltextwerte.
+- Die 30 XML-Dateien sind vollständig geparst und haben die Wurzel `article`.
 
 ## Artikel
 
@@ -67,8 +80,10 @@ die geprüften Pfade und Suchregeln stehen im JSON.
 ## Abrufregel
 
 - Kein Abruf ohne ausdrückliche Freigabe; der Plan selbst startet keinen Netzverkehr.
+- Freigabe am 2026-11-13 ausschließlich für die 30 Shortlist-XMLs; so umgesetzt.
 - Ein Abruf ist ein Netzlauf und wird vorab als solcher dokumentiert.
 - XML ist die Primärquelle; PDF nur als Ergänzung, wenn Tabellen im XML fehlen.
 - Nach dem Abruf werden Dateien und SHA-256 lokal dokumentiert; keine Modellausgabe wird als Volltextbeleg verwendet.
 
-Kein Modelllauf, kein Volltextabruf.
+Kein Modelllauf. XML-Abruf der 30 Shortlist-Artikel abgeschlossen; keine
+PDFs, keine Reservefälle, keine Volltextwerte.

@@ -19,6 +19,7 @@ MANUAL = OUT / "manual_review_decisions_v1.jsonl"
 JSON_PATH = OUT / "fulltext_extraction_template_v1.json"
 CSV_PATH = OUT / "fulltext_extraction_template_v1.csv"
 MD_PATH = OUT / "fulltext_extraction_template_v1.md"
+MANIFEST = OUT / "fulltext_retrieval_manifest_v1.json"
 OUTCOME_SLOTS = 4
 
 
@@ -90,8 +91,12 @@ def main() -> None:
     if set(manual) != {row["pmcid"] for row in signoff["rows"]}:
         raise SystemExit("manual decisions and sign-off list do not contain the same PMCIDs")
 
+    manifest = json.loads(MANIFEST.read_text(encoding="utf-8")) if MANIFEST.exists() else {"records": []}
+    retrieved = {row["pmcid"]: row for row in manifest.get("records", []) if row.get("saved")}
+
     articles = []
     for number, row in enumerate(includes, 1):
+        local = retrieved.get(row["pmcid"])
         articles.append(
             {
                 "article_number": number,
@@ -106,6 +111,11 @@ def main() -> None:
                 "open_question": row["open_question"],
                 "reason_code": row["reason_code"],
                 "screening_decision": "include_for_fulltext",
+                "fulltext_available": bool(local),
+                "fulltext_local_path": local["local_path"] if local else "",
+                "fulltext_sha256": local["sha256"] if local else "",
+                "fulltext_bytes": local["bytes"] if local else None,
+                "fulltext_retrieved_at": manifest.get("started_at", "") if local else "",
                 "reviewer": "offen",
                 "review_date": "offen",
                 "final_decision": "offen",
@@ -129,7 +139,11 @@ def main() -> None:
         "status": "pending_fulltext_review",
         "records": len(articles),
         "model_used": False,
-        "fulltext_retrieved": False,
+        "fulltext_retrieved": len(retrieved) == len(articles),
+        "fulltext_retrieved_scope": "all_36",
+        "fulltext_available_count": len(retrieved),
+        "fulltext_retrieval_status": "partial_shortlist_30_of_36" if retrieved else "not_started",
+        "fulltext_retrieval_manifest": str(MANIFEST.relative_to(ROOT)).replace("\\", "/") if MANIFEST.exists() else "",
         "instructions": {
             "scope": "36 vorlaeufige Einschluesse aus dem konsolidierten Abstract-Screening v2.",
             "no_estimation": "Nur berichtete Werte eintragen; keine Schaetzung, Imputation oder Umrechnung.",
@@ -157,6 +171,11 @@ def main() -> None:
         "pub_year",
         "priority",
         "open_question",
+        "fulltext_available",
+        "fulltext_local_path",
+        "fulltext_sha256",
+        "fulltext_bytes",
+        "fulltext_retrieved_at",
         "reviewer",
         "review_date",
         "final_decision",
@@ -217,6 +236,11 @@ def main() -> None:
                             "pub_year": article["pub_year"],
                             "priority": article["priority"],
                             "open_question": article["open_question"],
+                            "fulltext_available": article["fulltext_available"],
+                            "fulltext_local_path": article["fulltext_local_path"],
+                            "fulltext_sha256": article["fulltext_sha256"],
+                            "fulltext_bytes": article["fulltext_bytes"],
+                            "fulltext_retrieved_at": article["fulltext_retrieved_at"],
                             "reviewer": article["reviewer"],
                             "review_date": article["review_date"],
                             "final_decision": article["final_decision"],
@@ -260,8 +284,9 @@ def main() -> None:
     lines = [
         "# Volltext-Prüfvorlage: 36 vorläufige P0-Einschlüsse",
         "",
-        "Stand: 2026-11-12",
-        "Status: **VOLLTEXT-PRÜFUNG OFFEN**; kein Gate-Pass, keine endgültige Holdout-Auswahl.",
+        "Stand: 2026-11-13",
+        f"Status: **VOLLTEXT-PRÜFUNG OFFEN**; {len(retrieved)}/{len(articles)} XML lokal verfügbar; "
+        "sechs Reservefälle nicht abgerufen; kein Gate-Pass, keine endgültige Holdout-Auswahl.",
         "",
         "## Regeln",
         "",
@@ -284,6 +309,10 @@ def main() -> None:
                 f"## {article['article_number']}. {article['pmcid']} — {article['title']}",
                 "",
                 f"- Quelle: [{article['pmcid']}]({article['source_url']}) · DOI `{article['doi']}`",
+                f"- Lokal: `{article['fulltext_local_path']}` · SHA-256 `{article['fulltext_sha256']}` · "
+                f"{article['fulltext_bytes']} Bytes"
+                if article["fulltext_available"]
+                else "- Lokal: nicht abgerufen (Reservefall)",
                 f"- Journal/Jahr: {article['journal']} ({article['pub_year']})",
                 f"- Screening: vorläufiger Einschluss ({article['reason_code']}); Priorität **{article['priority']}**",
                 f"- Offener Zweifel: {article['open_question']}",
@@ -372,7 +401,7 @@ def main() -> None:
             "- **SE/95%-CI**: nur wörtlich übernehmen; keine Umrechnung in SD.",
             "- **Beleg**: Tabelle/Abbildung/Seite plus wörtliches Zitat; keine Paraphrase.",
             "",
-            "Kein Modelllauf, kein Volltextabruf, keine Testwiederverwendung.",
+            "Kein Modelllauf; 30 Shortlist-XML abgerufen, keine PDFs, keine Testwiederverwendung.",
             "",
         ]
     )
@@ -385,6 +414,7 @@ def main() -> None:
                 "csv_rows": len(articles) * OUTCOME_SLOTS * 2,
                 "outcome_slots": OUTCOME_SLOTS,
                 "status": "pending_fulltext_review",
+                "fulltext_available_count": len(retrieved),
                 "model_used": False,
             },
             ensure_ascii=False,

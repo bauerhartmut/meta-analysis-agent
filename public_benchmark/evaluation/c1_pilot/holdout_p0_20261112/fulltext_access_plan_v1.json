@@ -1,9 +1,9 @@
 {
   "plan_id": "p0_fulltext_access_v1",
   "created_at": "2026-11-12",
-  "status": "ready_for_approved_fetch",
+  "status": "shortlist_xml_retrieved",
   "records": 36,
-  "network_fetch_performed": false,
+  "network_fetch_performed": true,
   "model_used": false,
   "locations_checked": [
     "data/fulltext",
@@ -41,14 +41,19 @@
       "pmc_page_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13519320/",
       "epmc_xml_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13519320/fullTextXML",
       "recommended_route": "europepmc_fulltext_xml",
-      "local_status": "not_present",
-      "local_paths": [],
+      "local_status": "retrieved_xml",
+      "local_paths": [
+        "data/fulltext_inbox/p0_20261113_xml/PMC13519320.xml"
+      ],
       "fulltext_matches": [],
       "metadata_matches": [],
       "local_inbox_files": [],
       "network_required": true,
-      "fetch_status": "not_started",
-      "notes": "Kein lokaler Treffer in fulltext, Metadaten oder Inbox; XML-Abruf erst nach Freigabe."
+      "fetch_status": "retrieved",
+      "notes": "Europe PMC XML am 2026-11-13 abgerufen; SHA-256 und Bytezahl im Abrufmanifest.",
+      "retrieved_at": "2026-11-13T10:08:10.500012+00:00",
+      "sha256": "9d5dc0a092efd8e311848050bb6654d58d27a1ec290bd34b8a173456748f2958",
+      "bytes": 119110
     },
     {
       "pmcid": "PMC13574397",
@@ -61,14 +66,19 @@
       "pmc_page_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13574397/",
       "epmc_xml_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13574397/fullTextXML",
       "recommended_route": "europepmc_fulltext_xml",
-      "local_status": "not_present",
-      "local_paths": [],
+      "local_status": "retrieved_xml",
+      "local_paths": [
+        "data/fulltext_inbox/p0_20261113_xml/PMC13574397.xml"
+      ],
       "fulltext_matches": [],
       "metadata_matches": [],
       "local_inbox_files": [],
       "network_required": true,
-      "fetch_status": "not_started",
-      "notes": "Kein lokaler Treffer in fulltext, Metadaten oder Inbox; XML-Abruf erst nach Freigabe."
+      "fetch_status": "retrieved",
+      "notes": "Europe PMC XML am 2026-11-13 abgerufen; SHA-256 und Bytezahl im Abrufmanifest.",
+      "retrieved_at": "2026-11-13T10:08:10.500012+00:00",
+      "sha256": "8852c3c8f0ca3d81e98e9e0334d0a7b98ec066fcb0ebc304abed7b7d1db5a9dc",
+      "bytes": 53002
     },
     {
       "pmcid": "PMC13587833",
@@ -81,14 +91,19 @@
       "pmc_page_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13587833/",
       "epmc_xml_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13587833/fullTextXML",
       "recommended_route": "europepmc_fulltext_xml",
-      "local_status": "not_present",
-      "local_paths": [],
+      "local_status": "retrieved_xml",
+      "local_paths": [
+        "data/fulltext_inbox/p0_20261113_xml/PMC13587833.xml"
+      ],
       "fulltext_matches": [],
       "metadata_matches": [],
       "local_inbox_files": [],
       "network_required": true,
-      "fetch_status": "not_started",
-      "notes": "Kein lokaler Treffer in fulltext, Metadaten oder Inbox; XML-Abruf erst nach Freigabe."
+      "fetch_status": "retrieved",
+      "notes": "Europe PMC XML am 2026-11-13 abgerufen; SHA-256 und Bytezahl im Abrufmanifest.",
+      "retrieved_at": "2026-11-13T10:08:10.500012+00:00",
+      "sha256": "9be06f3c6b439783305c97acb22f22bcef3a470e7cce1ac06fbee0e89580377d",
+      "bytes": 141078
     },
     {
       "pmcid": "PMC13590555",
@@ -101,14 +116,19 @@
       "pmc_page_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13590555/",
       "epmc_xml_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13590555/fullTextXML",
       "recommended_route": "europepmc_fulltext_xml",
-      "local_status": "not_present",
-      "local_paths": [],
+      "local_status": "retrieved_xml",
+      "local_paths": [
+        "data/fulltext_inbox/p0_20261113_xml/PMC13590555.xml"
+      ],
       "fulltext_matches": [],
       "metadata_matches": [],
       "local_inbox_files": [],
       "network_required": true,
-      "fetch_status": "not_started",
-      "notes": "Kein lokaler Treffer in fulltext, Metadaten oder Inbox; XML-Abruf erst nach Freigabe."
+      "fetch_status": "retrieved",
+      "notes": "Europe PMC XML am 2026-11-13 abgerufen; SHA-256 und Bytezahl im Abrufmanifest.",
+      "retrieved_at": "2026-11-13T10:08:10.500012+00:00",
+      "sha256": "915625142187c49278705f40036360c85b6f2b391250964872d69f7e53e09b7c",
+      "bytes": 157251
     },
     {
       "pmcid": "PMC13590641",
@@ -121,14 +141,19 @@
       "pmc_page_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13590641/",
       "epmc_xml_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13590641/fullTextXML",
       "recommended_route": "europepmc_fulltext_xml",
-      "local_status": "not_present",
-      "local_paths": [],
+      "local_status": "retrieved_xml",
+      "local_paths": [
+        "data/fulltext_inbox/p0_20261113_xml/PMC13590641.xml"
+      ],
       "fulltext_matches": [],
       "metadata_matches": [],
       "local_inbox_files": [],
       "network_required": true,
-      "fetch_status": "not_started",
-      "notes": "Kein lokaler Treffer in fulltext, Metadaten oder Inbox; XML-Abruf erst nach Freigabe."
+      "fetch_status": "retrieved",
+      "notes": "Europe PMC XML am 2026-11-13 abgerufen; SHA-256 und Bytezahl im Abrufmanifest.",
+      "retrieved_at": "2026-11-13T10:08:10.500012+00:00",
+      "sha256": "cbf7dd52c2b90d4d7c7db1479b88c8ba237d32c35826420e6546ca8c2b95a75e",
+      "bytes": 136084
     },
     {
       "pmcid": "PMC13591290",
@@ -141,14 +166,19 @@
       "pmc_page_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13591290/",
       "epmc_xml_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13591290/fullTextXML",
       "recommended_route": "europepmc_fulltext_xml",
-      "local_status": "not_present",
-      "local_paths": [],
+      "local_status": "retrieved_xml",
+      "local_paths": [
+        "data/fulltext_inbox/p0_20261113_xml/PMC13591290.xml"
+      ],
       "fulltext_matches": [],
       "metadata_matches": [],
       "local_inbox_files": [],
       "network_required": true,
-      "fetch_status": "not_started",
-      "notes": "Kein lokaler Treffer in fulltext, Metadaten oder Inbox; XML-Abruf erst nach Freigabe."
+      "fetch_status": "retrieved",
+      "notes": "Europe PMC XML am 2026-11-13 abgerufen; SHA-256 und Bytezahl im Abrufmanifest.",
+      "retrieved_at": "2026-11-13T10:08:10.500012+00:00",
+      "sha256": "4e25807231375ab3724274426345a2dd90814e91e5a7323349c119074c51ae23",
+      "bytes": 103180
     },
     {
       "pmcid": "PMC13596784",
@@ -161,14 +191,19 @@
       "pmc_page_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13596784/",
       "epmc_xml_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13596784/fullTextXML",
       "recommended_route": "europepmc_fulltext_xml",
-      "local_status": "not_present",
-      "local_paths": [],
+      "local_status": "retrieved_xml",
+      "local_paths": [
+        "data/fulltext_inbox/p0_20261113_xml/PMC13596784.xml"
+      ],
       "fulltext_matches": [],
       "metadata_matches": [],
       "local_inbox_files": [],
       "network_required": true,
-      "fetch_status": "not_started",
-      "notes": "Kein lokaler Treffer in fulltext, Metadaten oder Inbox; XML-Abruf erst nach Freigabe."
+      "fetch_status": "retrieved",
+      "notes": "Europe PMC XML am 2026-11-13 abgerufen; SHA-256 und Bytezahl im Abrufmanifest.",
+      "retrieved_at": "2026-11-13T10:08:10.500012+00:00",
+      "sha256": "694b49f81d303ee8db3d4db530f047fab9983a0e5c8099185a6d3eb714c9ec4a",
+      "bytes": 180538
     },
     {
       "pmcid": "PMC13610533",
@@ -181,14 +216,19 @@
       "pmc_page_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13610533/",
       "epmc_xml_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13610533/fullTextXML",
       "recommended_route": "europepmc_fulltext_xml",
-      "local_status": "not_present",
-      "local_paths": [],
+      "local_status": "retrieved_xml",
+      "local_paths": [
+        "data/fulltext_inbox/p0_20261113_xml/PMC13610533.xml"
+      ],
       "fulltext_matches": [],
       "metadata_matches": [],
       "local_inbox_files": [],
       "network_required": true,
-      "fetch_status": "not_started",
-      "notes": "Kein lokaler Treffer in fulltext, Metadaten oder Inbox; XML-Abruf erst nach Freigabe."
+      "fetch_status": "retrieved",
+      "notes": "Europe PMC XML am 2026-11-13 abgerufen; SHA-256 und Bytezahl im Abrufmanifest.",
+      "retrieved_at": "2026-11-13T10:08:10.500012+00:00",
+      "sha256": "a9e4c5555615bbded09267d3ed938b224ca7764ab518e46cf4f40d43d19765f6",
+      "bytes": 118660
     },
     {
       "pmcid": "PMC13613700",
@@ -201,14 +241,19 @@
       "pmc_page_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13613700/",
       "epmc_xml_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13613700/fullTextXML",
       "recommended_route": "europepmc_fulltext_xml",
-      "local_status": "not_present",
-      "local_paths": [],
+      "local_status": "retrieved_xml",
+      "local_paths": [
+        "data/fulltext_inbox/p0_20261113_xml/PMC13613700.xml"
+      ],
       "fulltext_matches": [],
       "metadata_matches": [],
       "local_inbox_files": [],
       "network_required": true,
-      "fetch_status": "not_started",
-      "notes": "Kein lokaler Treffer in fulltext, Metadaten oder Inbox; XML-Abruf erst nach Freigabe."
+      "fetch_status": "retrieved",
+      "notes": "Europe PMC XML am 2026-11-13 abgerufen; SHA-256 und Bytezahl im Abrufmanifest.",
+      "retrieved_at": "2026-11-13T10:08:10.500012+00:00",
+      "sha256": "c937491a4a2a6e414f61ec965bab758d6025cdeb60ef80a14401821b45f900ae",
+      "bytes": 90504
     },
     {
       "pmcid": "PMC13624796",
@@ -221,14 +266,19 @@
       "pmc_page_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13624796/",
       "epmc_xml_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13624796/fullTextXML",
       "recommended_route": "europepmc_fulltext_xml",
-      "local_status": "not_present",
-      "local_paths": [],
+      "local_status": "retrieved_xml",
+      "local_paths": [
+        "data/fulltext_inbox/p0_20261113_xml/PMC13624796.xml"
+      ],
       "fulltext_matches": [],
       "metadata_matches": [],
       "local_inbox_files": [],
       "network_required": true,
-      "fetch_status": "not_started",
-      "notes": "Kein lokaler Treffer in fulltext, Metadaten oder Inbox; XML-Abruf erst nach Freigabe."
+      "fetch_status": "retrieved",
+      "notes": "Europe PMC XML am 2026-11-13 abgerufen; SHA-256 und Bytezahl im Abrufmanifest.",
+      "retrieved_at": "2026-11-13T10:08:10.500012+00:00",
+      "sha256": "4db72ee954ba3fb07fc84cadff943f8d78f59dbeb9acd30c1f50e1c98c3964f6",
+      "bytes": 107034
     },
     {
       "pmcid": "PMC13626740",
@@ -241,14 +291,19 @@
       "pmc_page_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13626740/",
       "epmc_xml_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13626740/fullTextXML",
       "recommended_route": "europepmc_fulltext_xml",
-      "local_status": "not_present",
-      "local_paths": [],
+      "local_status": "retrieved_xml",
+      "local_paths": [
+        "data/fulltext_inbox/p0_20261113_xml/PMC13626740.xml"
+      ],
       "fulltext_matches": [],
       "metadata_matches": [],
       "local_inbox_files": [],
       "network_required": true,
-      "fetch_status": "not_started",
-      "notes": "Kein lokaler Treffer in fulltext, Metadaten oder Inbox; XML-Abruf erst nach Freigabe."
+      "fetch_status": "retrieved",
+      "notes": "Europe PMC XML am 2026-11-13 abgerufen; SHA-256 und Bytezahl im Abrufmanifest.",
+      "retrieved_at": "2026-11-13T10:08:10.500012+00:00",
+      "sha256": "b466ff623fcf08b77d0baba0ec1f89cd9f7954339f045dd71924ec851ce2f1e5",
+      "bytes": 170463
     },
     {
       "pmcid": "PMC13635505",
@@ -261,14 +316,19 @@
       "pmc_page_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13635505/",
       "epmc_xml_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13635505/fullTextXML",
       "recommended_route": "europepmc_fulltext_xml",
-      "local_status": "not_present",
-      "local_paths": [],
+      "local_status": "retrieved_xml",
+      "local_paths": [
+        "data/fulltext_inbox/p0_20261113_xml/PMC13635505.xml"
+      ],
       "fulltext_matches": [],
       "metadata_matches": [],
       "local_inbox_files": [],
       "network_required": true,
-      "fetch_status": "not_started",
-      "notes": "Kein lokaler Treffer in fulltext, Metadaten oder Inbox; XML-Abruf erst nach Freigabe."
+      "fetch_status": "retrieved",
+      "notes": "Europe PMC XML am 2026-11-13 abgerufen; SHA-256 und Bytezahl im Abrufmanifest.",
+      "retrieved_at": "2026-11-13T10:08:10.500012+00:00",
+      "sha256": "b221ecb1df8f2c8de76c0cf4eb0e926728fd86f1a0130cfad407559c06a2f8de",
+      "bytes": 91732
     },
     {
       "pmcid": "PMC13688066",
@@ -281,14 +341,19 @@
       "pmc_page_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13688066/",
       "epmc_xml_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13688066/fullTextXML",
       "recommended_route": "europepmc_fulltext_xml",
-      "local_status": "not_present",
-      "local_paths": [],
+      "local_status": "retrieved_xml",
+      "local_paths": [
+        "data/fulltext_inbox/p0_20261113_xml/PMC13688066.xml"
+      ],
       "fulltext_matches": [],
       "metadata_matches": [],
       "local_inbox_files": [],
       "network_required": true,
-      "fetch_status": "not_started",
-      "notes": "Kein lokaler Treffer in fulltext, Metadaten oder Inbox; XML-Abruf erst nach Freigabe."
+      "fetch_status": "retrieved",
+      "notes": "Europe PMC XML am 2026-11-13 abgerufen; SHA-256 und Bytezahl im Abrufmanifest.",
+      "retrieved_at": "2026-11-13T10:08:10.500012+00:00",
+      "sha256": "fc2b84036059546d985727351e33a68dff5447366534e07855ed48944e372ca5",
+      "bytes": 68926
     },
     {
       "pmcid": "PMC13743599",
@@ -301,14 +366,19 @@
       "pmc_page_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13743599/",
       "epmc_xml_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13743599/fullTextXML",
       "recommended_route": "europepmc_fulltext_xml",
-      "local_status": "not_present",
-      "local_paths": [],
+      "local_status": "retrieved_xml",
+      "local_paths": [
+        "data/fulltext_inbox/p0_20261113_xml/PMC13743599.xml"
+      ],
       "fulltext_matches": [],
       "metadata_matches": [],
       "local_inbox_files": [],
       "network_required": true,
-      "fetch_status": "not_started",
-      "notes": "Kein lokaler Treffer in fulltext, Metadaten oder Inbox; XML-Abruf erst nach Freigabe."
+      "fetch_status": "retrieved",
+      "notes": "Europe PMC XML am 2026-11-13 abgerufen; SHA-256 und Bytezahl im Abrufmanifest.",
+      "retrieved_at": "2026-11-13T10:08:10.500012+00:00",
+      "sha256": "ac88c4486f17841a14c33d8ed2df55b63942e097501f1dd17b7856bd44afa8d9",
+      "bytes": 52092
     },
     {
       "pmcid": "PMC13352180",
@@ -321,14 +391,19 @@
       "pmc_page_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13352180/",
       "epmc_xml_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13352180/fullTextXML",
       "recommended_route": "europepmc_fulltext_xml",
-      "local_status": "not_present",
-      "local_paths": [],
+      "local_status": "retrieved_xml",
+      "local_paths": [
+        "data/fulltext_inbox/p0_20261113_xml/PMC13352180.xml"
+      ],
       "fulltext_matches": [],
       "metadata_matches": [],
       "local_inbox_files": [],
       "network_required": true,
-      "fetch_status": "not_started",
-      "notes": "Kein lokaler Treffer in fulltext, Metadaten oder Inbox; XML-Abruf erst nach Freigabe."
+      "fetch_status": "retrieved",
+      "notes": "Europe PMC XML am 2026-11-13 abgerufen; SHA-256 und Bytezahl im Abrufmanifest.",
+      "retrieved_at": "2026-11-13T10:08:10.500012+00:00",
+      "sha256": "55c393c555f60c8e4abcc6e52f9df62d20e6779756d98e4823d6c9e8957b4495",
+      "bytes": 51200
     },
     {
       "pmcid": "PMC13420175",
@@ -341,14 +416,19 @@
       "pmc_page_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13420175/",
       "epmc_xml_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13420175/fullTextXML",
       "recommended_route": "europepmc_fulltext_xml",
-      "local_status": "not_present",
-      "local_paths": [],
+      "local_status": "retrieved_xml",
+      "local_paths": [
+        "data/fulltext_inbox/p0_20261113_xml/PMC13420175.xml"
+      ],
       "fulltext_matches": [],
       "metadata_matches": [],
       "local_inbox_files": [],
       "network_required": true,
-      "fetch_status": "not_started",
-      "notes": "Kein lokaler Treffer in fulltext, Metadaten oder Inbox; XML-Abruf erst nach Freigabe."
+      "fetch_status": "retrieved",
+      "notes": "Europe PMC XML am 2026-11-13 abgerufen; SHA-256 und Bytezahl im Abrufmanifest.",
+      "retrieved_at": "2026-11-13T10:08:10.500012+00:00",
+      "sha256": "3af1b16a5db65db0e72cda74d23390f4413142a45f60b861997add099c04e31d",
+      "bytes": 110346
     },
     {
       "pmcid": "PMC13458421",
@@ -367,8 +447,8 @@
       "metadata_matches": [],
       "local_inbox_files": [],
       "network_required": true,
-      "fetch_status": "not_started",
-      "notes": "Kein lokaler Treffer in fulltext, Metadaten oder Inbox; XML-Abruf erst nach Freigabe."
+      "fetch_status": "not_requested_reserve",
+      "notes": "Reservefall; im freigegebenen 30er-Abruf nicht angefordert."
     },
     {
       "pmcid": "PMC13533545",
@@ -387,8 +467,8 @@
       "metadata_matches": [],
       "local_inbox_files": [],
       "network_required": true,
-      "fetch_status": "not_started",
-      "notes": "Kein lokaler Treffer in fulltext, Metadaten oder Inbox; XML-Abruf erst nach Freigabe."
+      "fetch_status": "not_requested_reserve",
+      "notes": "Reservefall; im freigegebenen 30er-Abruf nicht angefordert."
     },
     {
       "pmcid": "PMC13541226",
@@ -401,14 +481,19 @@
       "pmc_page_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13541226/",
       "epmc_xml_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13541226/fullTextXML",
       "recommended_route": "europepmc_fulltext_xml",
-      "local_status": "not_present",
-      "local_paths": [],
+      "local_status": "retrieved_xml",
+      "local_paths": [
+        "data/fulltext_inbox/p0_20261113_xml/PMC13541226.xml"
+      ],
       "fulltext_matches": [],
       "metadata_matches": [],
       "local_inbox_files": [],
       "network_required": true,
-      "fetch_status": "not_started",
-      "notes": "Kein lokaler Treffer in fulltext, Metadaten oder Inbox; XML-Abruf erst nach Freigabe."
+      "fetch_status": "retrieved",
+      "notes": "Europe PMC XML am 2026-11-13 abgerufen; SHA-256 und Bytezahl im Abrufmanifest.",
+      "retrieved_at": "2026-11-13T10:08:10.500012+00:00",
+      "sha256": "7118dd185e6faf68d79692c9d37db099368d4b32dc3167403f95c0c93cf573c9",
+      "bytes": 148227
     },
     {
       "pmcid": "PMC13542807",
@@ -421,14 +506,19 @@
       "pmc_page_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13542807/",
       "epmc_xml_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13542807/fullTextXML",
       "recommended_route": "europepmc_fulltext_xml",
-      "local_status": "not_present",
-      "local_paths": [],
+      "local_status": "retrieved_xml",
+      "local_paths": [
+        "data/fulltext_inbox/p0_20261113_xml/PMC13542807.xml"
+      ],
       "fulltext_matches": [],
       "metadata_matches": [],
       "local_inbox_files": [],
       "network_required": true,
-      "fetch_status": "not_started",
-      "notes": "Kein lokaler Treffer in fulltext, Metadaten oder Inbox; XML-Abruf erst nach Freigabe."
+      "fetch_status": "retrieved",
+      "notes": "Europe PMC XML am 2026-11-13 abgerufen; SHA-256 und Bytezahl im Abrufmanifest.",
+      "retrieved_at": "2026-11-13T10:08:10.500012+00:00",
+      "sha256": "c2e2ec6f44a6214abdd5cea2c1bced289c8fd081fb684f991148a6621b015254",
+      "bytes": 116598
     },
     {
       "pmcid": "PMC13555364",
@@ -441,14 +531,19 @@
       "pmc_page_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13555364/",
       "epmc_xml_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13555364/fullTextXML",
       "recommended_route": "europepmc_fulltext_xml",
-      "local_status": "not_present",
-      "local_paths": [],
+      "local_status": "retrieved_xml",
+      "local_paths": [
+        "data/fulltext_inbox/p0_20261113_xml/PMC13555364.xml"
+      ],
       "fulltext_matches": [],
       "metadata_matches": [],
       "local_inbox_files": [],
       "network_required": true,
-      "fetch_status": "not_started",
-      "notes": "Kein lokaler Treffer in fulltext, Metadaten oder Inbox; XML-Abruf erst nach Freigabe."
+      "fetch_status": "retrieved",
+      "notes": "Europe PMC XML am 2026-11-13 abgerufen; SHA-256 und Bytezahl im Abrufmanifest.",
+      "retrieved_at": "2026-11-13T10:08:10.500012+00:00",
+      "sha256": "766b29261c92d03e38e476ce130f8981df0ae2760f690af0f763612f363127ae",
+      "bytes": 152161
     },
     {
       "pmcid": "PMC13573578",
@@ -461,14 +556,19 @@
       "pmc_page_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13573578/",
       "epmc_xml_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13573578/fullTextXML",
       "recommended_route": "europepmc_fulltext_xml",
-      "local_status": "not_present",
-      "local_paths": [],
+      "local_status": "retrieved_xml",
+      "local_paths": [
+        "data/fulltext_inbox/p0_20261113_xml/PMC13573578.xml"
+      ],
       "fulltext_matches": [],
       "metadata_matches": [],
       "local_inbox_files": [],
       "network_required": true,
-      "fetch_status": "not_started",
-      "notes": "Kein lokaler Treffer in fulltext, Metadaten oder Inbox; XML-Abruf erst nach Freigabe."
+      "fetch_status": "retrieved",
+      "notes": "Europe PMC XML am 2026-11-13 abgerufen; SHA-256 und Bytezahl im Abrufmanifest.",
+      "retrieved_at": "2026-11-13T10:08:10.500012+00:00",
+      "sha256": "313e87bbd5dafa2cf80448b0f979a69f6d07587d36b5a28d3a21dc25e94e1ce1",
+      "bytes": 105010
     },
     {
       "pmcid": "PMC13583845",
@@ -481,14 +581,19 @@
       "pmc_page_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13583845/",
       "epmc_xml_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13583845/fullTextXML",
       "recommended_route": "europepmc_fulltext_xml",
-      "local_status": "not_present",
-      "local_paths": [],
+      "local_status": "retrieved_xml",
+      "local_paths": [
+        "data/fulltext_inbox/p0_20261113_xml/PMC13583845.xml"
+      ],
       "fulltext_matches": [],
       "metadata_matches": [],
       "local_inbox_files": [],
       "network_required": true,
-      "fetch_status": "not_started",
-      "notes": "Kein lokaler Treffer in fulltext, Metadaten oder Inbox; XML-Abruf erst nach Freigabe."
+      "fetch_status": "retrieved",
+      "notes": "Europe PMC XML am 2026-11-13 abgerufen; SHA-256 und Bytezahl im Abrufmanifest.",
+      "retrieved_at": "2026-11-13T10:08:10.500012+00:00",
+      "sha256": "7be3eda9b5b41c15d5cdf9ccaca49d2d838d3610b6d06a7b262fbbea8ba176e1",
+      "bytes": 106562
     },
     {
       "pmcid": "PMC13586805",
@@ -507,8 +612,8 @@
       "metadata_matches": [],
       "local_inbox_files": [],
       "network_required": true,
-      "fetch_status": "not_started",
-      "notes": "Kein lokaler Treffer in fulltext, Metadaten oder Inbox; XML-Abruf erst nach Freigabe."
+      "fetch_status": "not_requested_reserve",
+      "notes": "Reservefall; im freigegebenen 30er-Abruf nicht angefordert."
     },
     {
       "pmcid": "PMC13591858",
@@ -521,14 +626,19 @@
       "pmc_page_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13591858/",
       "epmc_xml_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13591858/fullTextXML",
       "recommended_route": "europepmc_fulltext_xml",
-      "local_status": "not_present",
-      "local_paths": [],
+      "local_status": "retrieved_xml",
+      "local_paths": [
+        "data/fulltext_inbox/p0_20261113_xml/PMC13591858.xml"
+      ],
       "fulltext_matches": [],
       "metadata_matches": [],
       "local_inbox_files": [],
       "network_required": true,
-      "fetch_status": "not_started",
-      "notes": "Kein lokaler Treffer in fulltext, Metadaten oder Inbox; XML-Abruf erst nach Freigabe."
+      "fetch_status": "retrieved",
+      "notes": "Europe PMC XML am 2026-11-13 abgerufen; SHA-256 und Bytezahl im Abrufmanifest.",
+      "retrieved_at": "2026-11-13T10:08:10.500012+00:00",
+      "sha256": "7f390267519db7f41b16b12edbfd206002486ee88d599cd36ce7d7b0407968b4",
+      "bytes": 67424
     },
     {
       "pmcid": "PMC13599778",
@@ -541,14 +651,19 @@
       "pmc_page_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13599778/",
       "epmc_xml_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13599778/fullTextXML",
       "recommended_route": "europepmc_fulltext_xml",
-      "local_status": "not_present",
-      "local_paths": [],
+      "local_status": "retrieved_xml",
+      "local_paths": [
+        "data/fulltext_inbox/p0_20261113_xml/PMC13599778.xml"
+      ],
       "fulltext_matches": [],
       "metadata_matches": [],
       "local_inbox_files": [],
       "network_required": true,
-      "fetch_status": "not_started",
-      "notes": "Kein lokaler Treffer in fulltext, Metadaten oder Inbox; XML-Abruf erst nach Freigabe."
+      "fetch_status": "retrieved",
+      "notes": "Europe PMC XML am 2026-11-13 abgerufen; SHA-256 und Bytezahl im Abrufmanifest.",
+      "retrieved_at": "2026-11-13T10:08:10.500012+00:00",
+      "sha256": "c9edf870db02f18b47dc92e6575b2bbe48a2ae9dd2b9c47ab8d0aa089326ef67",
+      "bytes": 89414
     },
     {
       "pmcid": "PMC13602066",
@@ -561,14 +676,19 @@
       "pmc_page_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13602066/",
       "epmc_xml_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13602066/fullTextXML",
       "recommended_route": "europepmc_fulltext_xml",
-      "local_status": "not_present",
-      "local_paths": [],
+      "local_status": "retrieved_xml",
+      "local_paths": [
+        "data/fulltext_inbox/p0_20261113_xml/PMC13602066.xml"
+      ],
       "fulltext_matches": [],
       "metadata_matches": [],
       "local_inbox_files": [],
       "network_required": true,
-      "fetch_status": "not_started",
-      "notes": "Kein lokaler Treffer in fulltext, Metadaten oder Inbox; XML-Abruf erst nach Freigabe."
+      "fetch_status": "retrieved",
+      "notes": "Europe PMC XML am 2026-11-13 abgerufen; SHA-256 und Bytezahl im Abrufmanifest.",
+      "retrieved_at": "2026-11-13T10:08:10.500012+00:00",
+      "sha256": "fdb10a5fc12d09144e9448fb18d1b9ccb2d3e7846afa3dd551bced4b23e3cf2d",
+      "bytes": 119337
     },
     {
       "pmcid": "PMC13610117",
@@ -581,14 +701,19 @@
       "pmc_page_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13610117/",
       "epmc_xml_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13610117/fullTextXML",
       "recommended_route": "europepmc_fulltext_xml",
-      "local_status": "not_present",
-      "local_paths": [],
+      "local_status": "retrieved_xml",
+      "local_paths": [
+        "data/fulltext_inbox/p0_20261113_xml/PMC13610117.xml"
+      ],
       "fulltext_matches": [],
       "metadata_matches": [],
       "local_inbox_files": [],
       "network_required": true,
-      "fetch_status": "not_started",
-      "notes": "Kein lokaler Treffer in fulltext, Metadaten oder Inbox; XML-Abruf erst nach Freigabe."
+      "fetch_status": "retrieved",
+      "notes": "Europe PMC XML am 2026-11-13 abgerufen; SHA-256 und Bytezahl im Abrufmanifest.",
+      "retrieved_at": "2026-11-13T10:08:10.500012+00:00",
+      "sha256": "95eb94e31d76ee10388aabf03ac22c4f251d541e06ffa148574afbd926f2ae9c",
+      "bytes": 101078
     },
     {
       "pmcid": "PMC13610834",
@@ -601,14 +726,19 @@
       "pmc_page_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13610834/",
       "epmc_xml_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13610834/fullTextXML",
       "recommended_route": "europepmc_fulltext_xml",
-      "local_status": "not_present",
-      "local_paths": [],
+      "local_status": "retrieved_xml",
+      "local_paths": [
+        "data/fulltext_inbox/p0_20261113_xml/PMC13610834.xml"
+      ],
       "fulltext_matches": [],
       "metadata_matches": [],
       "local_inbox_files": [],
       "network_required": true,
-      "fetch_status": "not_started",
-      "notes": "Kein lokaler Treffer in fulltext, Metadaten oder Inbox; XML-Abruf erst nach Freigabe."
+      "fetch_status": "retrieved",
+      "notes": "Europe PMC XML am 2026-11-13 abgerufen; SHA-256 und Bytezahl im Abrufmanifest.",
+      "retrieved_at": "2026-11-13T10:08:10.500012+00:00",
+      "sha256": "f2d7f2012d59c8f6395a3dda0e9983314d2e6d28bebc920292d03c6ad17d1389",
+      "bytes": 148092
     },
     {
       "pmcid": "PMC13628872",
@@ -627,8 +757,8 @@
       "metadata_matches": [],
       "local_inbox_files": [],
       "network_required": true,
-      "fetch_status": "not_started",
-      "notes": "Kein lokaler Treffer in fulltext, Metadaten oder Inbox; XML-Abruf erst nach Freigabe."
+      "fetch_status": "not_requested_reserve",
+      "notes": "Reservefall; im freigegebenen 30er-Abruf nicht angefordert."
     },
     {
       "pmcid": "PMC13629817",
@@ -641,14 +771,19 @@
       "pmc_page_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13629817/",
       "epmc_xml_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13629817/fullTextXML",
       "recommended_route": "europepmc_fulltext_xml",
-      "local_status": "not_present",
-      "local_paths": [],
+      "local_status": "retrieved_xml",
+      "local_paths": [
+        "data/fulltext_inbox/p0_20261113_xml/PMC13629817.xml"
+      ],
       "fulltext_matches": [],
       "metadata_matches": [],
       "local_inbox_files": [],
       "network_required": true,
-      "fetch_status": "not_started",
-      "notes": "Kein lokaler Treffer in fulltext, Metadaten oder Inbox; XML-Abruf erst nach Freigabe."
+      "fetch_status": "retrieved",
+      "notes": "Europe PMC XML am 2026-11-13 abgerufen; SHA-256 und Bytezahl im Abrufmanifest.",
+      "retrieved_at": "2026-11-13T10:08:10.500012+00:00",
+      "sha256": "c2b8d662da246b1ace432f3850a6ede81e4e45488964e96f55832da31f943090",
+      "bytes": 112957
     },
     {
       "pmcid": "PMC13630044",
@@ -661,14 +796,19 @@
       "pmc_page_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13630044/",
       "epmc_xml_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13630044/fullTextXML",
       "recommended_route": "europepmc_fulltext_xml",
-      "local_status": "not_present",
-      "local_paths": [],
+      "local_status": "retrieved_xml",
+      "local_paths": [
+        "data/fulltext_inbox/p0_20261113_xml/PMC13630044.xml"
+      ],
       "fulltext_matches": [],
       "metadata_matches": [],
       "local_inbox_files": [],
       "network_required": true,
-      "fetch_status": "not_started",
-      "notes": "Kein lokaler Treffer in fulltext, Metadaten oder Inbox; XML-Abruf erst nach Freigabe."
+      "fetch_status": "retrieved",
+      "notes": "Europe PMC XML am 2026-11-13 abgerufen; SHA-256 und Bytezahl im Abrufmanifest.",
+      "retrieved_at": "2026-11-13T10:08:10.500012+00:00",
+      "sha256": "6b8e90e63ac675ceae541a93a495979f2ad2ef21039154ddcb75571b7141564c",
+      "bytes": 82851
     },
     {
       "pmcid": "PMC13638319",
@@ -687,8 +827,8 @@
       "metadata_matches": [],
       "local_inbox_files": [],
       "network_required": true,
-      "fetch_status": "not_started",
-      "notes": "Kein lokaler Treffer in fulltext, Metadaten oder Inbox; XML-Abruf erst nach Freigabe."
+      "fetch_status": "not_requested_reserve",
+      "notes": "Reservefall; im freigegebenen 30er-Abruf nicht angefordert."
     },
     {
       "pmcid": "PMC13706700",
@@ -701,14 +841,19 @@
       "pmc_page_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13706700/",
       "epmc_xml_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13706700/fullTextXML",
       "recommended_route": "europepmc_fulltext_xml",
-      "local_status": "not_present",
-      "local_paths": [],
+      "local_status": "retrieved_xml",
+      "local_paths": [
+        "data/fulltext_inbox/p0_20261113_xml/PMC13706700.xml"
+      ],
       "fulltext_matches": [],
       "metadata_matches": [],
       "local_inbox_files": [],
       "network_required": true,
-      "fetch_status": "not_started",
-      "notes": "Kein lokaler Treffer in fulltext, Metadaten oder Inbox; XML-Abruf erst nach Freigabe."
+      "fetch_status": "retrieved",
+      "notes": "Europe PMC XML am 2026-11-13 abgerufen; SHA-256 und Bytezahl im Abrufmanifest.",
+      "retrieved_at": "2026-11-13T10:08:10.500012+00:00",
+      "sha256": "29b2578a48ba15a565c90b14d433f976a2f0baa19c1383adba1296e8b5f7a60a",
+      "bytes": 142663
     },
     {
       "pmcid": "PMC13720204",
@@ -721,14 +866,19 @@
       "pmc_page_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13720204/",
       "epmc_xml_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13720204/fullTextXML",
       "recommended_route": "europepmc_fulltext_xml",
-      "local_status": "not_present",
-      "local_paths": [],
+      "local_status": "retrieved_xml",
+      "local_paths": [
+        "data/fulltext_inbox/p0_20261113_xml/PMC13720204.xml"
+      ],
       "fulltext_matches": [],
       "metadata_matches": [],
       "local_inbox_files": [],
       "network_required": true,
-      "fetch_status": "not_started",
-      "notes": "Kein lokaler Treffer in fulltext, Metadaten oder Inbox; XML-Abruf erst nach Freigabe."
+      "fetch_status": "retrieved",
+      "notes": "Europe PMC XML am 2026-11-13 abgerufen; SHA-256 und Bytezahl im Abrufmanifest.",
+      "retrieved_at": "2026-11-13T10:08:10.500012+00:00",
+      "sha256": "fe77762995abf22397e9c7de07de23ea2fe206397b55b592286d97a7baaf8663",
+      "bytes": 238134
     },
     {
       "pmcid": "PMC13689703",
@@ -747,8 +897,21 @@
       "metadata_matches": [],
       "local_inbox_files": [],
       "network_required": true,
-      "fetch_status": "not_started",
-      "notes": "Kein lokaler Treffer in fulltext, Metadaten oder Inbox; XML-Abruf erst nach Freigabe."
+      "fetch_status": "not_requested_reserve",
+      "notes": "Reservefall; im freigegebenen 30er-Abruf nicht angefordert."
     }
-  ]
+  ],
+  "updated_at": "2026-11-13",
+  "retrieval_manifest": "fulltext_retrieval_manifest_v1.json",
+  "retrieval_summary": {
+    "shortlist_articles": 30,
+    "saved": 30,
+    "failed": 0,
+    "total_bytes": 3481708,
+    "pdf_retrieved": false,
+    "reserve_articles_not_requested": 6,
+    "model_used": false
+  },
+  "summary_scope": "pre_fetch_audit",
+  "summary_note": "Die summary-Zahlen dokumentieren den lokalen Bestand vor dem XML-Abruf; retrieval_summary enthält den Abrufstand."
 }

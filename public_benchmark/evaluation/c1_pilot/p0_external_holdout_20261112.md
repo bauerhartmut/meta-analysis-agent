@@ -113,6 +113,13 @@ bleiben Reserve. Die Shortlist ist keine endgueltige Auswahl. Details:
 [`fulltext_candidate_priority_v1.md`](holdout_p0_20261112/fulltext_candidate_priority_v1.md),
 [`fulltext_candidate_priority_v1.csv`](holdout_p0_20261112/fulltext_candidate_priority_v1.csv),
 [`fulltext_candidate_priority_v1.json`](holdout_p0_20261112/fulltext_candidate_priority_v1.json).
+
+Der freigegebene XML-Abruf der 30 Shortlist-Artikel ist abgeschlossen:
+**30/30 HTTP 200**, **0 Fehler**, **3.481.708 Bytes**, alle XML-Dateien mit
+Wurzel `article` geparst. Sechs Reservefälle und PDFs wurden nicht abgerufen;
+Volltextwerte sind noch nicht extrahiert. Provenienz:
+[`fulltext_retrieval_manifest_v1.json`](holdout_p0_20261112/fulltext_retrieval_manifest_v1.json),
+[`fulltext_retrieval_v1.md`](holdout_p0_20261112/fulltext_retrieval_v1.md).
 Mehrfachgruende sind moeglich; die Regelzahlen
 sind nicht additiv.
 
