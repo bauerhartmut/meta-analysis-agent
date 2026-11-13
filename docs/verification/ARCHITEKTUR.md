@@ -174,6 +174,11 @@ Angezeigt werden:
 Aktionen: bestaetigen, korrigieren, "nicht berichtet", "unklar",
 Record ablehnen. Ohne Pruefername wird nichts gespeichert.
 
+Bestätigen und Korrigieren verifizieren nur mit einem vorhandenen Wert und
+einer gespeicherten Evidenzzeile, die den Wert im richtigen Feld tatsächlich
+enthält. Fehlt eines davon, bleibt das Feld `unresolved`. Das gilt auch dann,
+wenn die Evidenz-ID zwar existiert, aber eine andere Zahl belegt.
+
 ## 11. Tests
 
 `research_agent/tests/test_verification_system.py` deckt ab:
@@ -187,6 +192,8 @@ Record ablehnen. Ohne Pruefername wird nichts gespeichert.
 - Verlust der Freigabe nach Quellenaenderung
 - Review-Pflichten
 - Gate: keine unverifizierte Zeile erreicht `build_analysis`
+- Gate prüft Wert und Evidenz erneut, nicht nur den Feldstatus
+- Abschlussprüfung bezieht offene Outcome-/Zeitpunktfelder ein
 
 ## 12. Bewusste Nicht-Ziele
 
