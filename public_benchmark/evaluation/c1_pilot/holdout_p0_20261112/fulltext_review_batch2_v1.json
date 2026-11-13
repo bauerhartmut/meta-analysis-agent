@@ -1,0 +1,1055 @@
+{
+  "review_id": "p0_fulltext_review_batch2_v1",
+  "created_at": "2026-11-13",
+  "status": "assisted_batch_ready_for_human_confirmation",
+  "scope": "Neun verbleibende hohe Prioritäten: PMC13610533, PMC13743599, PMC13613700, PMC13626740, PMC13688066, PMC13519320, PMC13590641, PMC13596784, PMC13574397",
+  "articles": 9,
+  "outcome_slots": 36,
+  "independent_usable_outcomes": 11,
+  "overlapping_usable_outcomes": 3,
+  "not_usable_or_absent": 22,
+  "usable_outcomes_including_overlapping": 14,
+  "final_decisions_made": false,
+  "human_confirmation_required": true,
+  "model_used": false,
+  "network_used": false,
+  "source_dossier": "public_benchmark/evaluation/c1_pilot/holdout_p0_20261112/fulltext_review_high_v1.json",
+  "records": [
+    {
+      "pmcid": "PMC13610533",
+      "short_title": "Chokeberry juice in women with prediabetes",
+      "title": "Effects of Chokeberry Juice Added to a Mediterranean-Style Diet on Glycemic Control and Redox Homeostasis in Women with Prediabetes: A Randomized Controlled Trial",
+      "design": "Randomisierte Substudie innerhalb eines einarmigen Elternprojekts; Intervention 27 / Kontrolle 27; 12 Wochen",
+      "arm_n": {
+        "intervention": 27,
+        "control": 27,
+        "randomized": 54,
+        "analyzed": 54
+      },
+      "assisted_eligibility": "uncertain_nested_substudy_medians",
+      "eligibility_reason": "Zwei randomisierte Arme und Arm-N sind berichtet, aber BMI, Glukose und Redoxwerte liegen als Median (IQR) und Veränderung vor; kein armweises Mean/SD.",
+      "risk_notes": [
+        "nested substudy",
+        "single-group parent project",
+        "median/IQR statt Mean/SD",
+        "kleine Stichprobe"
+      ],
+      "outcome_counts": {
+        "independent_usable": 0,
+        "overlapping_usable": 0,
+        "not_usable": 4
+      },
+      "human_review": {
+        "reviewer": "offen",
+        "review_date": "offen",
+        "parallel_two_arms_confirmed": null,
+        "randomization_confirmed": null,
+        "no_arm_collapse": null,
+        "outcomes_confirmed": null,
+        "final_decision": "offen"
+      },
+      "outcomes": [
+        {
+          "slot": 1,
+          "outcome": "BMI at 3 months",
+          "type": "continuous",
+          "table": "Table 3",
+          "row_index": 3,
+          "intervention": {
+            "label": "Chokeberry juice + Mediterranean diet"
+          },
+          "control": {
+            "label": "Mediterranean diet"
+          },
+          "usable": false,
+          "note": "Median (IQR) und Veränderung; kein armweises Mean/SD. Keine Umrechnung.",
+          "source_quote": "Table 3 | Baseline values and changes in BMI, glycemic, and redox-related parameters after the 3-month intervention in the intervention and control groups. | Arms: Intervention Group / ΔIG / Control Group / ΔCG / p for ΔIG vs. CG / FDR-Adjusted p / H–L est. for ΔIG − ΔCG (95% CI) / Cliff’s δ | BMI(kg/m2) | 25.8(24.6–26.7) | 25.9(23.8–26.9) | −0.4(−1 to 1) | 25.4(24.1–26.3) | 25.8(24.4–26.4) | 0.6(−0.6 to 0.7) | 0.310 | - |  | −0.168 | Context: 3-Monats-Werte; Reihenfolge: Baseline IG, 3 Monate IG, Delta IG, Baseline CG, 3 Monate CG, Delta CG, p, FDR-p, H-L-Effekt, Cliff's delta; Werte sind Median (IQR).",
+          "outcome_independence": "not_usable"
+        },
+        {
+          "slot": 2,
+          "outcome": "Fasting glucose at 3 months",
+          "type": "continuous",
+          "table": "Table 3",
+          "row_index": 4,
+          "intervention": {
+            "label": "Chokeberry juice + Mediterranean diet"
+          },
+          "control": {
+            "label": "Mediterranean diet"
+          },
+          "usable": false,
+          "note": "Median (IQR) und Veränderung; kein armweises Mean/SD. Keine Umrechnung.",
+          "source_quote": "Table 3 | Baseline values and changes in BMI, glycemic, and redox-related parameters after the 3-month intervention in the intervention and control groups. | Arms: Intervention Group / ΔIG / Control Group / ΔCG / p for ΔIG vs. CG / FDR-Adjusted p / H–L est. for ΔIG − ΔCG (95% CI) / Cliff’s δ | FG(mg/dL) | 112(107, 120) | 109(103, 117) | −3(−4 to −2) | 113(108, 118) | 112(108, 118) | −1(−2 to −1) | <0.001 | <0.001 | −2(−3 to −1) | −0.715 | Context: 3-Monats-Werte; Reihenfolge: Baseline IG, 3 Monate IG, Delta IG, Baseline CG, 3 Monate CG, Delta CG, p, FDR-p, H-L-Effekt, Cliff's delta; Werte sind Median (IQR).",
+          "outcome_independence": "not_usable"
+        },
+        {
+          "slot": 3,
+          "outcome": "HbA1c at 3 months",
+          "type": "continuous",
+          "table": "Table 3",
+          "row_index": 5,
+          "intervention": {
+            "label": "Chokeberry juice + Mediterranean diet"
+          },
+          "control": {
+            "label": "Mediterranean diet"
+          },
+          "usable": false,
+          "note": "Median (IQR) und Veränderung; kein armweises Mean/SD. Keine Umrechnung.",
+          "source_quote": "Table 3 | Baseline values and changes in BMI, glycemic, and redox-related parameters after the 3-month intervention in the intervention and control groups. | Arms: Intervention Group / ΔIG / Control Group / ΔCG / p for ΔIG vs. CG / FDR-Adjusted p / H–L est. for ΔIG − ΔCG (95% CI) / Cliff’s δ | HbA1c(mmol/mol) | 44(42, 45) | 41(39, 43) | −3(−3 to −2) | 44(42, 45) | 43(42, 45) | 1(−2 to 1) | <0.001 | <0.001 | −3(−4 to −1) | −0.734 | Context: 3-Monats-Werte; Reihenfolge: Baseline IG, 3 Monate IG, Delta IG, Baseline CG, 3 Monate CG, Delta CG, p, FDR-p, H-L-Effekt, Cliff's delta; Werte sind Median (IQR).",
+          "outcome_independence": "not_usable"
+        },
+        {
+          "slot": 4,
+          "outcome": "2-hour postload glucose at 3 months",
+          "type": "continuous",
+          "table": "Table 3",
+          "row_index": 6,
+          "intervention": {
+            "label": "Chokeberry juice + Mediterranean diet"
+          },
+          "control": {
+            "label": "Mediterranean diet"
+          },
+          "usable": false,
+          "note": "Median (IQR) und Veränderung; kein armweises Mean/SD. Keine Umrechnung.",
+          "source_quote": "Table 3 | Baseline values and changes in BMI, glycemic, and redox-related parameters after the 3-month intervention in the intervention and control groups. | Arms: Intervention Group / ΔIG / Control Group / ΔCG / p for ΔIG vs. CG / FDR-Adjusted p / H–L est. for ΔIG − ΔCG (95% CI) / Cliff’s δ | 2h-PG(mg/dL) | 164(151, 183) | 159(148, 179) | −4(−5 to −2) | 163(157, 180) | 162(157, 178) | −1(−2 to 1) | <0.001 | <0.001 | −3(−5 to −2) | −0.803 | Context: 3-Monats-Werte; Reihenfolge: Baseline IG, 3 Monate IG, Delta IG, Baseline CG, 3 Monate CG, Delta CG, p, FDR-p, H-L-Effekt, Cliff's delta; Werte sind Median (IQR).",
+          "outcome_independence": "not_usable"
+        }
+      ]
+    },
+    {
+      "pmcid": "PMC13743599",
+      "short_title": "Sublingual apomorphine for parkinsonian tremor",
+      "title": "Sublingual apomorphine for Parkinsonian tremor: a post-hoc analysis of pivotal trial data",
+      "design": "Post-hoc-Analyse einer pivotalen 12-Wochen-RCT plus offene 12-Monats-Studie; tremor-dominante Subgruppe 17 SL-APO / 14 Placebo; Post-Werte n=10/10",
+      "arm_n": {
+        "intervention": 17,
+        "control": 14,
+        "randomized": 31,
+        "analyzed": "10/10 mit Post-Werten"
+      },
+      "assisted_eligibility": "eligible_single_post_hoc_outcome",
+      "eligibility_reason": "Zwei randomisierte Arme und ein kontinuierliches Outcome mit n/Mean/SD zu Woche 12; weitere Outcomes sind nur als Veränderung, Prozentwerte oder qualitativ berichtet.",
+      "risk_notes": [
+        "post hoc",
+        "kleine tremor-dominante Subgruppe",
+        "available-case n=10/10",
+        "offene Verlängerung nicht kontrolliert"
+      ],
+      "outcome_counts": {
+        "independent_usable": 1,
+        "overlapping_usable": 0,
+        "not_usable": 3
+      },
+      "human_review": {
+        "reviewer": "offen",
+        "review_date": "offen",
+        "parallel_two_arms_confirmed": null,
+        "randomization_confirmed": null,
+        "no_arm_collapse": null,
+        "outcomes_confirmed": null,
+        "final_decision": "offen"
+      },
+      "outcomes": [
+        {
+          "slot": 1,
+          "outcome": "Tremor index at 30 min post-dose, Week 12",
+          "type": "continuous",
+          "table": "",
+          "row_index": null,
+          "intervention": {
+            "label": "SL-APO",
+            "n": 10,
+            "mean": "5.7",
+            "sd": "3.3"
+          },
+          "control": {
+            "label": "Placebo",
+            "n": 10,
+            "mean": "11.3",
+            "sd": "5.7"
+          },
+          "usable": true,
+          "note": "Post-hoc; nur n=10/10 mit Post-Werten; 17/14 randomisiert.",
+          "source_quote": "Results | Mean ± SD tremor index scores decreased from 11.0 ± 4.8 pre-dose to 5.7 ± 3.3 at 30 min post-intake with SL-APO (n = 10), versus 12.4 ± 4.8 to 11.3 ± 5.7 with placebo (n = 10).",
+          "outcome_independence": "independent"
+        },
+        {
+          "slot": 2,
+          "outcome": "Change in tremor index at 30 min, Week 12",
+          "type": "continuous",
+          "table": "",
+          "row_index": null,
+          "intervention": {
+            "label": "SL-APO"
+          },
+          "control": {
+            "label": "Placebo"
+          },
+          "usable": false,
+          "note": "Within-group change: -5.3 [-7.3; -3.3] mit SL-APO und -1.1 [-2.5; 0.3] mit Placebo; Placebo-SD der Veränderung nicht berichtet.",
+          "source_quote": "Results | The within-group change was − 5.3 [− 7.3; −3.3] with SL‑APO and − 1.1 [− 2.5; 0.3] with placebo, yielding a between-group treatment effect of − 4.4 [− 6.5; −2.3] (p < 0.001; Fig. 1a).",
+          "outcome_independence": "not_usable"
+        },
+        {
+          "slot": 3,
+          "outcome": "Responder (>= MIC) at Week 12",
+          "type": "binary",
+          "table": "",
+          "row_index": null,
+          "intervention": {
+            "label": "SL-APO"
+          },
+          "control": {
+            "label": "Placebo"
+          },
+          "usable": false,
+          "note": "Nur 80% vs. 30% bei n=10/10; keine Ereigniszahlen berichtet, keine Rekonstruktion.",
+          "source_quote": "Results | Based on a calculated MIC of 2.3, responder rates were 80% with SL‑APO and 30% with placebo, supported by cumulative distribution function plots showing a consistent shift toward greater improvement with SL‑APO (Fig. 1c).",
+          "outcome_independence": "not_usable"
+        },
+        {
+          "slot": 4,
+          "outcome": "Rest and postural tremor subscores",
+          "type": "not_available",
+          "table": "",
+          "row_index": null,
+          "intervention": {},
+          "control": {},
+          "usable": false,
+          "note": "Nur qualitative Aussage zu beiden Tremor-Subtypen; keine armweisen Werte.",
+          "source_quote": "Results | Improvements reflected reductions in both rest and postural tremor.",
+          "outcome_independence": "not_usable"
+        }
+      ]
+    },
+    {
+      "pmcid": "PMC13613700",
+      "short_title": "Ureagenesis in the PEPaNIC trial",
+      "title": "Increased ureagenesis revealing metabolic intolerance to enhanced nutrition in the PICU: a secondary analysis of the PEPaNIC RCT",
+      "design": "Sekundäranalyse der PEPaNIC-RCT; Early-PN 665 / Late-PN 663 ohne RRT; 90 Tage",
+      "arm_n": {
+        "intervention": 665,
+        "control": 663,
+        "randomized": 1440,
+        "analyzed": 1328
+      },
+      "assisted_eligibility": "uncertain_secondary_no_arm_counts",
+      "eligibility_reason": "Zwei randomisierte Arme sind berichtet, aber die klinischen Outcomes liegen nur als adjustierte OR/HR und p-Werte vor; keine armweisen Ereigniszahlen oder Time-to-Event-Rohdaten.",
+      "risk_notes": [
+        "secondary analysis",
+        "keine armweisen Ereigniszahlen",
+        "RRT-Patienten ausgeschlossen",
+        "kompetierendes Risiko Tod",
+        "6% fehlende Daten"
+      ],
+      "outcome_counts": {
+        "independent_usable": 0,
+        "overlapping_usable": 0,
+        "not_usable": 4
+      },
+      "human_review": {
+        "reviewer": "offen",
+        "review_date": "offen",
+        "parallel_two_arms_confirmed": null,
+        "randomization_confirmed": null,
+        "no_arm_collapse": null,
+        "outcomes_confirmed": null,
+        "final_decision": "offen"
+      },
+      "outcomes": [
+        {
+          "slot": 1,
+          "outcome": "New infection during PICU stay",
+          "type": "binary",
+          "table": "",
+          "row_index": null,
+          "intervention": {
+            "label": "Early-PN"
+          },
+          "control": {
+            "label": "Late-PN"
+          },
+          "usable": false,
+          "note": "Nur adjustierte Assoziation und p-Wert; keine Ereignisse/Total pro Arm.",
+          "source_quote": "Results | Adjusting for baseline risk factors, randomization to early-PN as compared with late-PN was independently associated with a higher risk of acquiring a new infection in the PICU (p = 0.0063) and a lower likelihood of earlier live discharge from the PICU (p = 0.0068) and the hospital (p = 0.023), but not with 90-day mortality (p = 0.22) (Fig. 3, Additional File 1 Table S2).",
+          "outcome_independence": "not_usable"
+        },
+        {
+          "slot": 2,
+          "outcome": "PICU dependency (time to live discharge)",
+          "type": "time_to_event",
+          "table": "",
+          "row_index": null,
+          "intervention": {
+            "label": "Early-PN"
+          },
+          "control": {
+            "label": "Late-PN"
+          },
+          "usable": false,
+          "note": "Nur adjustierte HR/Modellresultate; keine armweisen Rohdaten oder Ereigniszahlen.",
+          "source_quote": "Results | Adjusting for baseline risk factors, randomization to early-PN as compared with late-PN was independently associated with a higher risk of acquiring a new infection in the PICU (p = 0.0063) and a lower likelihood of earlier live discharge from the PICU (p = 0.0068) and the hospital (p = 0.023), but not with 90-day mortality (p = 0.22) (Fig. 3, Additional File 1 Table S2).",
+          "outcome_independence": "not_usable"
+        },
+        {
+          "slot": 3,
+          "outcome": "90-day mortality",
+          "type": "binary",
+          "table": "",
+          "row_index": null,
+          "intervention": {
+            "label": "Early-PN"
+          },
+          "control": {
+            "label": "Late-PN"
+          },
+          "usable": false,
+          "note": "Nur adjustierte Assoziation und p-Wert; keine Ereignisse/Total pro Arm.",
+          "source_quote": "Results | Adjusting for baseline risk factors, randomization to early-PN as compared with late-PN was independently associated with a higher risk of acquiring a new infection in the PICU (p = 0.0063) and a lower likelihood of earlier live discharge from the PICU (p = 0.0068) and the hospital (p = 0.023), but not with 90-day mortality (p = 0.22) (Fig. 3, Additional File 1 Table S2).",
+          "outcome_independence": "not_usable"
+        },
+        {
+          "slot": 4,
+          "outcome": "Hospital dependency (time to live discharge)",
+          "type": "time_to_event",
+          "table": "",
+          "row_index": null,
+          "intervention": {
+            "label": "Early-PN"
+          },
+          "control": {
+            "label": "Late-PN"
+          },
+          "usable": false,
+          "note": "Nur adjustierte HR/Modellresultate; keine armweisen Rohdaten oder Ereigniszahlen.",
+          "source_quote": "Results | Adjusting for baseline risk factors, randomization to early-PN as compared with late-PN was independently associated with a higher risk of acquiring a new infection in the PICU (p = 0.0063) and a lower likelihood of earlier live discharge from the PICU (p = 0.0068) and the hospital (p = 0.023), but not with 90-day mortality (p = 0.22) (Fig. 3, Additional File 1 Table S2).",
+          "outcome_independence": "not_usable"
+        }
+      ]
+    },
+    {
+      "pmcid": "PMC13626740",
+      "short_title": "Mechanisms of change in depression therapy",
+      "title": "Mechanisms of Change in the Treatment of Depression: On the Role of Attachment, Reappraisal and Suppression",
+      "design": "Sekundäranalyse der OPTIMA-RCT; CBT 101 / ST 97; T3 nach 7 Wochen",
+      "arm_n": {
+        "intervention": 101,
+        "control": 97,
+        "randomized": 198,
+        "analyzed": "82/66 bei T3"
+      },
+      "assisted_eligibility": "likely_eligible_two_arms",
+      "eligibility_reason": "Zwei randomisierte Arme, Arm-N und vier kontinuierliche Outcomes mit N/Mean/SD zu Post-Treatment T3.",
+      "risk_notes": [
+        "secondary analysis",
+        "available-case n zu T3",
+        "Parent-RCT OPTIMA",
+        "nur CBT vs. ST ausgewählt"
+      ],
+      "outcome_counts": {
+        "independent_usable": 4,
+        "overlapping_usable": 0,
+        "not_usable": 0
+      },
+      "human_review": {
+        "reviewer": "offen",
+        "review_date": "offen",
+        "parallel_two_arms_confirmed": null,
+        "randomization_confirmed": null,
+        "no_arm_collapse": null,
+        "outcomes_confirmed": null,
+        "final_decision": "offen"
+      },
+      "outcomes": [
+        {
+          "slot": 1,
+          "outcome": "Depressive symptoms (BDI-II), post-treatment T3",
+          "type": "continuous",
+          "table": "TABLE 1",
+          "row_index": 16,
+          "intervention": {
+            "label": "CBT",
+            "n": 82,
+            "mean": "14.80",
+            "sd": "8.99"
+          },
+          "control": {
+            "label": "ST",
+            "n": 66,
+            "mean": "18.00",
+            "sd": "10.97"
+          },
+          "usable": true,
+          "note": "Post-treatment T3 (Woche 7); verfügbares n.",
+          "source_quote": "TABLE 1 | Means and standard deviations of the mechanisms and depressive symptoms. | Arms: Total sample (n = 198) / CBT (n = 101) / ST (n = 97) | DS | 148 | 16.23 | 10.02 | 82 | 14.80 | 8.99 | 66 | 18.00 | 10.97 | Context: Post-treatment T3 (Woche 7); Spalten: Total n/M/SD, CBT n/M/SD, ST n/M/SD.",
+          "outcome_independence": "independent"
+        },
+        {
+          "slot": 2,
+          "outcome": "Expressive suppression (ERQ), post-treatment T3",
+          "type": "continuous",
+          "table": "TABLE 1",
+          "row_index": 17,
+          "intervention": {
+            "label": "CBT",
+            "n": 79,
+            "mean": "3.53",
+            "sd": "1.47"
+          },
+          "control": {
+            "label": "ST",
+            "n": 60,
+            "mean": "3.73",
+            "sd": "1.45"
+          },
+          "usable": true,
+          "note": "Post-treatment T3 (Woche 7); verfügbares n.",
+          "source_quote": "TABLE 1 | Means and standard deviations of the mechanisms and depressive symptoms. | Arms: Total sample (n = 198) / CBT (n = 101) / ST (n = 97) | ES | 139 | 3.62 | 1.46 | 79 | 3.53 | 1.47 | 60 | 3.73 | 1.45 | Context: Post-treatment T3 (Woche 7); Spalten: Total n/M/SD, CBT n/M/SD, ST n/M/SD.",
+          "outcome_independence": "independent"
+        },
+        {
+          "slot": 3,
+          "outcome": "Cognitive reappraisal (ERQ), post-treatment T3",
+          "type": "continuous",
+          "table": "TABLE 1",
+          "row_index": 18,
+          "intervention": {
+            "label": "CBT",
+            "n": 79,
+            "mean": "4.12",
+            "sd": "1.47"
+          },
+          "control": {
+            "label": "ST",
+            "n": 60,
+            "mean": "3.89",
+            "sd": "1.10"
+          },
+          "usable": true,
+          "note": "Post-treatment T3 (Woche 7); verfügbares n.",
+          "source_quote": "TABLE 1 | Means and standard deviations of the mechanisms and depressive symptoms. | Arms: Total sample (n = 198) / CBT (n = 101) / ST (n = 97) | CR | 139 | 4.02 | 1.32 | 79 | 4.12 | 1.47 | 60 | 3.89 | 1.10 | Context: Post-treatment T3 (Woche 7); Spalten: Total n/M/SD, CBT n/M/SD, ST n/M/SD.",
+          "outcome_independence": "independent"
+        },
+        {
+          "slot": 4,
+          "outcome": "Avoidant attachment (RSQ fear of closeness), post-treatment T3",
+          "type": "continuous",
+          "table": "TABLE 1",
+          "row_index": 19,
+          "intervention": {
+            "label": "CBT",
+            "n": 79,
+            "mean": "2.57",
+            "sd": "1.00"
+          },
+          "control": {
+            "label": "ST",
+            "n": 59,
+            "mean": "2.73",
+            "sd": "0.89"
+          },
+          "usable": true,
+          "note": "Post-treatment T3 (Woche 7); verfügbares n.",
+          "source_quote": "TABLE 1 | Means and standard deviations of the mechanisms and depressive symptoms. | Arms: Total sample (n = 198) / CBT (n = 101) / ST (n = 97) | AV | 138 | 2.64 | 0.95 | 79 | 2.57 | 1.00 | 59 | 2.73 | 0.89 | Context: Post-treatment T3 (Woche 7); Spalten: Total n/M/SD, CBT n/M/SD, ST n/M/SD.",
+          "outcome_independence": "independent"
+        }
+      ]
+    },
+    {
+      "pmcid": "PMC13688066",
+      "short_title": "NCCT markers and andexanet response",
+      "title": "Non‐contrast CT Markers of Hematoma Expansion and Andexanet Response in Factor Xa Inhibitor‐Associated Intracerebral Hemorrhage: An Analysis from ANNEXa‐I Trial",
+      "design": "Post-hoc-Sekundäranalyse der ANNEXa-I-RCT; 434 von 530 ITT mit Bildgebung; Andexanet vs. Usual Care",
+      "arm_n": {
+        "intervention": "nicht berichtet",
+        "control": "nicht berichtet",
+        "randomized": 530,
+        "analyzed": 434
+      },
+      "assisted_eligibility": "uncertain_post_hoc_no_arm_counts",
+      "eligibility_reason": "Randomisierte Arme sind im Design berichtet, aber die HE-Outcomes liegen nur als Gesamtfrequenz, Subgruppeninteraktionen oder adjustierte Assoziationen vor; keine armweisen Ereignisse/Total.",
+      "risk_notes": [
+        "post hoc",
+        "keine armweisen Ereigniszahlen",
+        "434/530 mit Bildgebung",
+        "explorative Interaktionstests",
+        "Bildgebungsselektion"
+      ],
+      "outcome_counts": {
+        "independent_usable": 0,
+        "overlapping_usable": 0,
+        "not_usable": 4
+      },
+      "human_review": {
+        "reviewer": "offen",
+        "review_date": "offen",
+        "parallel_two_arms_confirmed": null,
+        "randomization_confirmed": null,
+        "no_arm_collapse": null,
+        "outcomes_confirmed": null,
+        "final_decision": "offen"
+      },
+      "outcomes": [
+        {
+          "slot": 1,
+          "outcome": "Significant hematoma expansion (>=12.5 ml or >=35%)",
+          "type": "binary",
+          "table": "",
+          "row_index": null,
+          "intervention": {
+            "label": "Andexanet"
+          },
+          "control": {
+            "label": "Usual care"
+          },
+          "usable": false,
+          "note": "Gesamtpopulation 138/434 (31.8%); keine armweisen Ereigniszahlen im Text.",
+          "source_quote": "Patients' Characteristics | Among 530 patients in the intention‐to‐treat population, 434 (197 female, mean age 79.3 ± 8.1 years) had qualifying ICH, baseline NCCT, and follow‐up imaging available for assessment of HE and were included in this study (Figure S2). HE was observed in 138 patients (31.8%).",
+          "outcome_independence": "not_usable"
+        },
+        {
+          "slot": 2,
+          "outcome": "Severe hematoma expansion (>=12.5 ml or >=66%)",
+          "type": "binary",
+          "table": "",
+          "row_index": null,
+          "intervention": {
+            "label": "Andexanet"
+          },
+          "control": {
+            "label": "Usual care"
+          },
+          "usable": false,
+          "note": "Nur definiertes Outcome; keine armweisen Ereigniszahlen im Text.",
+          "source_quote": "Outcomes | The secondary outcome was severe HE, defined as ≥12.5 ml or ≥ 66% increase.",
+          "outcome_independence": "not_usable"
+        },
+        {
+          "slot": 3,
+          "outcome": "HE in hypodensity subgroup",
+          "type": "binary",
+          "table": "",
+          "row_index": null,
+          "intervention": {
+            "label": "Andexanet"
+          },
+          "control": {
+            "label": "Usual care"
+          },
+          "usable": false,
+          "note": "Nur absolute Reduktion 19.5% vs. 8.0% berichtet; keine Ereigniszahlen.",
+          "source_quote": "Treatment Interaction of Andexanet | The absolute reduction in HE with andexanet appeared greater in patients with hypodensity (19.5% vs. 8.0%) than those without.",
+          "outcome_independence": "not_usable"
+        },
+        {
+          "slot": 4,
+          "outcome": "HE in blend-sign subgroup",
+          "type": "binary",
+          "table": "",
+          "row_index": null,
+          "intervention": {
+            "label": "Andexanet"
+          },
+          "control": {
+            "label": "Usual care"
+          },
+          "usable": false,
+          "note": "Nur Interaktions-OR 0.03 (0.00-0.29) vs. 0.60 (0.38-0.96), p=0.01; keine Ereigniszahlen.",
+          "source_quote": "Treatment Interaction of Andexanet | A treatment interaction was observed for the blend sign (OR 0.03, 95% CI 0.00–0.29 for those with blend sign; and OR 0.60, 95% CI 0.38–0.96 for those without, p for interaction = 0.01).",
+          "outcome_independence": "not_usable"
+        }
+      ]
+    },
+    {
+      "pmcid": "PMC13519320",
+      "short_title": "Dupilumab and COPD exacerbation resource use",
+      "title": "Dupilumab in chronic obstructive pulmonary disease: a pooled analysis of emergency department visits, hospital admissions, and systemic corticosteroid use",
+      "design": "Post-hoc-gepoolte Analyse von BOREAS und NOTUS; Dupilumab 938 / Placebo 936; 52 Wochen",
+      "arm_n": {
+        "intervention": 938,
+        "control": 936,
+        "randomized": 1874,
+        "analyzed": 1874,
+        "trial_count": 2
+      },
+      "assisted_eligibility": "uncertain_pooled_two_trials",
+      "eligibility_reason": "Zwei RCTs mit zwei Armen und Ereigniszahlen, aber die Analyse poolt BOREAS und NOTUS; die vier Outcomes überlappen sich und sind nicht als vier unabhängige Outcomes zu zählen.",
+      "risk_notes": [
+        "post hoc",
+        "pooled analysis of two RCTs",
+        "overlapping outcomes",
+        "NOTUS vorzeitig beendet",
+        "keine Adjustierung für multiples Testen"
+      ],
+      "outcome_counts": {
+        "independent_usable": 1,
+        "overlapping_usable": 3,
+        "not_usable": 0
+      },
+      "human_review": {
+        "reviewer": "offen",
+        "review_date": "offen",
+        "parallel_two_arms_confirmed": null,
+        "randomization_confirmed": null,
+        "no_arm_collapse": null,
+        "outcomes_confirmed": null,
+        "final_decision": "offen"
+      },
+      "outcomes": [
+        {
+          "slot": 1,
+          "outcome": "Patients with >=1 ED visit/hospital admission, 52 weeks",
+          "type": "binary",
+          "table": "",
+          "row_index": null,
+          "intervention": {
+            "label": "Dupilumab",
+            "events": 50,
+            "total": 938
+          },
+          "control": {
+            "label": "Placebo",
+            "events": 80,
+            "total": 936
+          },
+          "usable": true,
+          "note": "Gepoolte ITT-Population; Ereignisse/Total aus Text.",
+          "source_quote": "Emergency department visits/hospitalizations | In the pooled ITT population, 5.3% (50 of 938) of patients receiving dupilumab and 8.5% (80 of 936) of patients receiving placebo had 65 and 96 ED visits/hospital admissions, respectively, during the 52-week treatment period.",
+          "outcome_independence": "independent"
+        },
+        {
+          "slot": 2,
+          "outcome": "Patients with >=1 severe exacerbation, 52 weeks",
+          "type": "binary",
+          "table": "",
+          "row_index": null,
+          "intervention": {
+            "label": "Dupilumab",
+            "events": 41,
+            "total": 938
+          },
+          "control": {
+            "label": "Placebo",
+            "events": 60,
+            "total": 936
+          },
+          "usable": true,
+          "note": "Subgruppe mit Überlappung zu Slot 1; exakte Patientenzahlen aus Baseline-Charakteristik.",
+          "source_quote": "Baseline demographics and disease characteristics | Baseline demographics and disease characteristics for the pooled ITT population (dupilumab: N = 938; placebo: N = 936), patients without an exacerbation event during the study (dupilumab: n = 600; placebo: n = 542), and patients with ≥ 1 severe exacerbation (dupilumab: n = 41; placebo: n = 60) or moderate exacerbation(s) only (dupilumab: n = 297; placebo: n = 334) during the study were similar across treatment arms and subgroups (Table 1 and Table S1).",
+          "outcome_independence": "overlapping_subgroup"
+        },
+        {
+          "slot": 3,
+          "outcome": "Patients with systemic corticosteroid use, 52 weeks",
+          "type": "binary",
+          "table": "",
+          "row_index": null,
+          "intervention": {
+            "label": "Dupilumab",
+            "events": 315,
+            "total": 938
+          },
+          "control": {
+            "label": "Placebo",
+            "events": 366,
+            "total": 936
+          },
+          "usable": true,
+          "note": "Überlappt mit Exazerbations-Outcomes; Ereignisse/Total aus Text.",
+          "source_quote": "Systemic corticosteroid use | Overall, 33.6% (315 of 938) of patients receiving dupilumab and 39.1% (366 of 936) receiving placebo reported systemic corticosteroid use during the treatment period.",
+          "outcome_independence": "overlapping_subgroup"
+        },
+        {
+          "slot": 4,
+          "outcome": "Patients with ICU admission, 52 weeks",
+          "type": "binary",
+          "table": "",
+          "row_index": null,
+          "intervention": {
+            "label": "Dupilumab",
+            "events": 3,
+            "total": 938
+          },
+          "control": {
+            "label": "Placebo",
+            "events": 7,
+            "total": 936
+          },
+          "usable": true,
+          "note": "Subgruppe der Hospitalisierten; überlappt mit Slot 1 und Slot 2.",
+          "source_quote": "Severe exacerbations | Of patients receiving dupilumab, 0.3% (3 of 938) had 3 COPD-related admissions to an intensive care unit; of patients receiving placebo, 0.7% (7 of 936) reported 7 admissions to an intensive care unit.",
+          "outcome_independence": "overlapping_subgroup"
+        }
+      ]
+    },
+    {
+      "pmcid": "PMC13590641",
+      "short_title": "Aumolertinib plus radiotherapy in stage III NSCLC",
+      "title": "Induction and concurrent aumolertinib with radiotherapy for EGFR-mutated stage III NSCLC: results of phase III ADVANCE trial and real-world validation",
+      "design": "Phase-III-ADVANCE-RCT, open-label, vorzeitig beendet; Experiment 24 / Kontrolle 19; plus Real-World-Kohorte",
+      "arm_n": {
+        "intervention": 24,
+        "control": 19,
+        "randomized": 43,
+        "analyzed": 43
+      },
+      "assisted_eligibility": "uncertain_safety_only_early_stopped",
+      "eligibility_reason": "Zwei randomisierte Arme und Arm-N sind berichtet; vier Sicherheitsoutcomes mit Events/Total sind extrahierbar, armweise Wirksamkeitsdaten liegen jedoch nicht in vergleichbarer Form vor. Open-label und vorzeitig beendet.",
+      "risk_notes": [
+        "open-label",
+        "vorzeitig beendet",
+        "Safety-Population",
+        "kleine Stichprobe",
+        "Real-World-Kohorte nicht randomisiert"
+      ],
+      "outcome_counts": {
+        "independent_usable": 4,
+        "overlapping_usable": 0,
+        "not_usable": 0
+      },
+      "human_review": {
+        "reviewer": "offen",
+        "review_date": "offen",
+        "parallel_two_arms_confirmed": null,
+        "randomization_confirmed": null,
+        "no_arm_collapse": null,
+        "outcomes_confirmed": null,
+        "final_decision": "offen"
+      },
+      "outcomes": [
+        {
+          "slot": 1,
+          "outcome": "Any adverse event, any grade",
+          "type": "binary",
+          "table": "Table 3",
+          "row_index": 3,
+          "intervention": {
+            "label": "Experiment (aumolertinib + RT)",
+            "events": 23,
+            "total": 24
+          },
+          "control": {
+            "label": "Control (cCRT)",
+            "events": 15,
+            "total": 19
+          },
+          "usable": true,
+          "note": "Any grade; Tabelle führt zusätzlich Grade 1-4.",
+          "source_quote": "Table 3 | Most common adverse events of any cause in > 5% | Arms: Control groupNo. (%) (N = 19) / Experiment groupNo. (%) (N = 24) / P | Any events | 15 (78.9) | 5 (26.3) | 6 (31.6) | 4 (21.1) | 0 (0.0) | 23 (95.8) | 10 (41.7) | 9 (37.5) | 4 (16.7) | 0 (0.0) | 0.32 | Context: Any grade (erste Spalte je Arm); weitere Spalten Grade 1-4.",
+          "outcome_independence": "independent"
+        },
+        {
+          "slot": 2,
+          "outcome": "Neutropenia, any grade",
+          "type": "binary",
+          "table": "Table 3",
+          "row_index": 10,
+          "intervention": {
+            "label": "Experiment (aumolertinib + RT)",
+            "events": 4,
+            "total": 24
+          },
+          "control": {
+            "label": "Control (cCRT)",
+            "events": 10,
+            "total": 19
+          },
+          "usable": true,
+          "note": "Any grade; Tabelle führt zusätzlich Grade 1-4.",
+          "source_quote": "Table 3 | Most common adverse events of any cause in > 5% | Arms: Control groupNo. (%) (N = 19) / Experiment groupNo. (%) (N = 24) / P | Neutropenia | 10 (52.6) | 1 (5.3) | 6 (31.6) | 3 (15.8) | 0 (0.0) | 4 (16.7) | 3 (12.5) | 1 (4.2) | 0 (0.0) | 0 (0.0) | 0.01 | Context: Any grade (erste Spalte je Arm); weitere Spalten Grade 1-4.",
+          "outcome_independence": "independent"
+        },
+        {
+          "slot": 3,
+          "outcome": "Nausea, any grade",
+          "type": "binary",
+          "table": "Table 3",
+          "row_index": 6,
+          "intervention": {
+            "label": "Experiment (aumolertinib + RT)",
+            "events": 0,
+            "total": 24
+          },
+          "control": {
+            "label": "Control (cCRT)",
+            "events": 5,
+            "total": 19
+          },
+          "usable": true,
+          "note": "Any grade; Tabelle führt zusätzlich Grade 1-4.",
+          "source_quote": "Table 3 | Most common adverse events of any cause in > 5% | Arms: Control groupNo. (%) (N = 19) / Experiment groupNo. (%) (N = 24) / P | Nausea | 5 (26.3) | 1 (5.3) | 4 (21.1) | 0 (0.0) | 0 (0.0) | 0 (0.0) | 0 (0.0) | 0 (0.0) | 0 (0.0) | 0 (0.0) | 0.028 | Context: Any grade (erste Spalte je Arm); weitere Spalten Grade 1-4.",
+          "outcome_independence": "independent"
+        },
+        {
+          "slot": 4,
+          "outcome": "Rash, any grade",
+          "type": "binary",
+          "table": "Table 3",
+          "row_index": 5,
+          "intervention": {
+            "label": "Experiment (aumolertinib + RT)",
+            "events": 6,
+            "total": 24
+          },
+          "control": {
+            "label": "Control (cCRT)",
+            "events": 1,
+            "total": 19
+          },
+          "usable": true,
+          "note": "Any grade; Tabelle führt zusätzlich Grade 1-4.",
+          "source_quote": "Table 3 | Most common adverse events of any cause in > 5% | Arms: Control groupNo. (%) (N = 19) / Experiment groupNo. (%) (N = 24) / P | Rash | 1 (5.3) | 0 (0.0) | 1 (5.3) | 0 (0.0) | 0 (0.0) | 6 (25.0) | 4 (16.7) | 2 (8.3) | 0 (0.0) | 0 (0.0) | 0.15 | Context: Any grade (erste Spalte je Arm); weitere Spalten Grade 1-4.",
+          "outcome_independence": "independent"
+        }
+      ]
+    },
+    {
+      "pmcid": "PMC13596784",
+      "short_title": "MATILDA feasibility trial",
+      "title": "Implementing the MATILDA intervention to enhance community participation for older adults with intellectual disability: A feasibility randomised controlled trial and RE-AIM guided process evaluation",
+      "design": "Zweiarmige randomisierte Machbarkeitsstudie; MATILDA 28 / aktive Kontrolle 29; 6 und 12 Monate",
+      "arm_n": {
+        "intervention": 28,
+        "control": 29,
+        "randomized": 57,
+        "analyzed": "52 mit 6-Monats-Daten; 25 MATILDA nach Tod/Withdrawal"
+      },
+      "assisted_eligibility": "uncertain_feasibility_no_timepoint_n",
+      "eligibility_reason": "Zwei randomisierte Arme und Mean/SD zu 6 Monaten sind berichtet, aber das armweise analysierte n pro Zeitpunkt fehlt; die Studie ist eine nicht gepowerte Machbarkeitsstudie.",
+      "risk_notes": [
+        "feasibility trial",
+        "nicht gepowert",
+        "kein armweises n pro Zeitpunkt",
+        "unblinded",
+        "missing data ohne Imputation"
+      ],
+      "outcome_counts": {
+        "independent_usable": 0,
+        "overlapping_usable": 0,
+        "not_usable": 4
+      },
+      "human_review": {
+        "reviewer": "offen",
+        "review_date": "offen",
+        "parallel_two_arms_confirmed": null,
+        "randomization_confirmed": null,
+        "no_arm_collapse": null,
+        "outcomes_confirmed": null,
+        "final_decision": "offen"
+      },
+      "outcomes": [
+        {
+          "slot": 1,
+          "outcome": "Glasgow Anxiety Inventory at 6 months",
+          "type": "continuous",
+          "table": "Table 4",
+          "row_index": 10,
+          "intervention": {
+            "label": "MATILDA",
+            "n": "nicht berichtet",
+            "mean": "18.1",
+            "sd": "8.3"
+          },
+          "control": {
+            "label": "Active control",
+            "n": "nicht berichtet",
+            "mean": "17.1",
+            "sd": "9.1"
+          },
+          "usable": false,
+          "note": "Mean/SD aus Tabelle; armweises analysiertes n pro Zeitpunkt nicht berichtet. N randomisiert 28/29; keine Imputation.",
+          "source_quote": "Table 4 | Mean and standard deviations of the secondary outcome measures for the participants in the MATILDA and Control Arms. | Arms:  / Control Arm /  / MATILDA Arm | Glasgow Anxiety Inventory | 19.6 (9.6) | 17.1 (9.1) | 18.2 (11.2) | 20.7 (10.5) | 18.1 (8.3) | 16 (9.1) | | Context: 6-Monats-Follow-up; Spalten: Control Baseline/6m/12m, MATILDA Baseline/6m/12m.",
+          "outcome_independence": "not_usable"
+        },
+        {
+          "slot": 2,
+          "outcome": "WHO (Five) Well-Being Index at 6 months",
+          "type": "continuous",
+          "table": "Table 4",
+          "row_index": 16,
+          "intervention": {
+            "label": "MATILDA",
+            "n": "nicht berichtet",
+            "mean": "16.4",
+            "sd": "6.2"
+          },
+          "control": {
+            "label": "Active control",
+            "n": "nicht berichtet",
+            "mean": "15.3",
+            "sd": "6.2"
+          },
+          "usable": false,
+          "note": "Mean/SD aus Tabelle; armweises analysiertes n pro Zeitpunkt nicht berichtet. N randomisiert 28/29; keine Imputation.",
+          "source_quote": "Table 4 | Mean and standard deviations of the secondary outcome measures for the participants in the MATILDA and Control Arms. | Arms:  / Control Arm /  / MATILDA Arm | WHO (Five) Well-Being Index | 17.5 (5.3) | 15.3 (6.2) | 18.5 (5.2) | 18.9 (4.7) | 16.4 (6.2) | 18.2 (5.1) | | Context: 6-Monats-Follow-up; Spalten: Control Baseline/6m/12m, MATILDA Baseline/6m/12m.",
+          "outcome_independence": "not_usable"
+        },
+        {
+          "slot": 3,
+          "outcome": "WHOQOL-DIS physical health at 6 months",
+          "type": "continuous",
+          "table": "Table 4",
+          "row_index": 5,
+          "intervention": {
+            "label": "MATILDA",
+            "n": "nicht berichtet",
+            "mean": "3.8",
+            "sd": "0.5"
+          },
+          "control": {
+            "label": "Active control",
+            "n": "nicht berichtet",
+            "mean": "3.7",
+            "sd": "0.5"
+          },
+          "usable": false,
+          "note": "Mean/SD aus Tabelle; armweises analysiertes n pro Zeitpunkt nicht berichtet. N randomisiert 28/29; keine Imputation.",
+          "source_quote": "Table 4 | Mean and standard deviations of the secondary outcome measures for the participants in the MATILDA and Control Arms. | Arms:  / Control Arm /  / MATILDA Arm | Physical Health | 3.5 (0.3) | 3.7 (0.5) | 3 (0.5) | 3.5(0.5) | 3.8 (0.5) | 3 (0.5) | | Context: 6-Monats-Follow-up; Spalten: Control Baseline/6m/12m, MATILDA Baseline/6m/12m.",
+          "outcome_independence": "not_usable"
+        },
+        {
+          "slot": 4,
+          "outcome": "WHOQOL-DIS psychological health at 6 months",
+          "type": "continuous",
+          "table": "Table 4",
+          "row_index": 6,
+          "intervention": {
+            "label": "MATILDA",
+            "n": "nicht berichtet",
+            "mean": "3.4",
+            "sd": "0.5"
+          },
+          "control": {
+            "label": "Active control",
+            "n": "nicht berichtet",
+            "mean": "3.2",
+            "sd": "0.5"
+          },
+          "usable": false,
+          "note": "Mean/SD aus Tabelle; armweises analysiertes n pro Zeitpunkt nicht berichtet. N randomisiert 28/29; keine Imputation.",
+          "source_quote": "Table 4 | Mean and standard deviations of the secondary outcome measures for the participants in the MATILDA and Control Arms. | Arms:  / Control Arm /  / MATILDA Arm | Psychological Health | 3.3 (0.5) | 3.2 (0.5) | 3.3 (0.5) | 3.4 (0.5) | 3.4 (0.5) | 3.2 (0.5) | | Context: 6-Monats-Follow-up; Spalten: Control Baseline/6m/12m, MATILDA Baseline/6m/12m.",
+          "outcome_independence": "not_usable"
+        }
+      ]
+    },
+    {
+      "pmcid": "PMC13574397",
+      "short_title": "Cost-effectiveness of omeprazole for esophageal stricture",
+      "title": "Cost-effectiveness analysis of omeprazole for preventing esophageal stricture in patients with Zargar grade 2b and 3a corrosive esophageal injuries",
+      "design": "Kosteneffektivitätsanalyse der vorausgegangenen RCT; Omeprazol 10 / Standard 10; 4 Wochen",
+      "arm_n": {
+        "intervention": 10,
+        "control": 10,
+        "randomized": 20,
+        "analyzed": 20
+      },
+      "assisted_eligibility": "eligible_single_binary_outcome",
+      "eligibility_reason": "Zwei randomisierte Arme und ein binäres klinisches Outcome mit Ereignissen/Total; die ökonomischen Outcomes sind ohne SD oder numerischen ICER nicht als Mean/SD extrahierbar.",
+      "risk_notes": [
+        "cost-effectiveness analysis",
+        "post hoc",
+        "kleine Stichprobe",
+        "single center",
+        "kurze Nachbeobachtung",
+        "kein SD für Kosten"
+      ],
+      "outcome_counts": {
+        "independent_usable": 1,
+        "overlapping_usable": 0,
+        "not_usable": 3
+      },
+      "human_review": {
+        "reviewer": "offen",
+        "review_date": "offen",
+        "parallel_two_arms_confirmed": null,
+        "randomization_confirmed": null,
+        "no_arm_collapse": null,
+        "outcomes_confirmed": null,
+        "final_decision": "offen"
+      },
+      "outcomes": [
+        {
+          "slot": 1,
+          "outcome": "Esophageal stricture at 4 weeks",
+          "type": "binary",
+          "table": "",
+          "row_index": null,
+          "intervention": {
+            "label": "Omeprazole + standard care",
+            "events": 2,
+            "total": 10
+          },
+          "control": {
+            "label": "Standard care",
+            "events": 7,
+            "total": 10
+          },
+          "usable": true,
+          "note": "Ereignisse/Total aus Text; 20% und 70% nicht rekonstruiert.",
+          "source_quote": "Results | The incidence of corrosive esophageal stricture was 20% (2/10) in the omeprazole group and 70% (7/10) in the standard treatment group (relative risk, 0.29; 95% confidence interval, 0.08–1.05; Fisher’s exact test, P = .070).",
+          "outcome_independence": "independent"
+        },
+        {
+          "slot": 2,
+          "outcome": "Total cost per case, provider perspective (THB)",
+          "type": "continuous",
+          "table": "Table 2",
+          "row_index": 3,
+          "control_row_index": 4,
+          "intervention": {
+            "label": "Omeprazole + standard care",
+            "n": 10,
+            "mean": "12103.32"
+          },
+          "control": {
+            "label": "Standard care",
+            "n": 10,
+            "mean": "16745.62"
+          },
+          "usable": false,
+          "note": "Kosten pro Fall; kein SD berichtet.",
+          "source_quote": "Table 2 | Base case results of health impact. | Arms: Total cost (THB per case) / Total health outcome endpoint (corrosive esophageal stricture rate) / ICER* | Omeprazole plus standard care | 12,103.32 | 0.20 | | Control row: Standard care | 16,745.62 | 0.70 | Dominated** | Context: Provider perspective; Kostenspalte pro Fall, danach Strikturrate und ICER.",
+          "outcome_independence": "not_usable"
+        },
+        {
+          "slot": 3,
+          "outcome": "Total cost per case, patient perspective (THB)",
+          "type": "continuous",
+          "table": "Table 2",
+          "row_index": 7,
+          "control_row_index": 8,
+          "intervention": {
+            "label": "Omeprazole + standard care",
+            "n": 10,
+            "mean": "7652.60"
+          },
+          "control": {
+            "label": "Standard care",
+            "n": 10,
+            "mean": "13129.20"
+          },
+          "usable": false,
+          "note": "Kosten pro Fall; kein SD berichtet.",
+          "source_quote": "Table 2 | Base case results of health impact. | Arms: Total cost (THB per case) / Total health outcome endpoint (corrosive esophageal stricture rate) / ICER* | Omeprazole plus standard care | 7652.60 | 0.20 | | Control row: Standard care | 13,129.20 | 0.70 | Dominated** | Context: Patient perspective; Kostenspalte pro Fall, danach Strikturrate und ICER.",
+          "outcome_independence": "not_usable"
+        },
+        {
+          "slot": 4,
+          "outcome": "Incremental cost-effectiveness ratio (ICER)",
+          "type": "not_available",
+          "table": "",
+          "row_index": null,
+          "intervention": {},
+          "control": {},
+          "usable": false,
+          "note": "Standard care ist dominiert; kein numerischer ICER mit Unsicherheit berichtet.",
+          "source_quote": "Table 2 | Base case results of health impact | Arms: Total cost (THB per case) / Total health outcome endpoint (corrosive esophageal stricture rate) / ICER* | Standard care | 16,745.62 | 0.70 | Dominated** | Context: Provider perspective; Standard care ist dominiert.",
+          "outcome_independence": "not_usable"
+        }
+      ]
+    }
+  ]
+}

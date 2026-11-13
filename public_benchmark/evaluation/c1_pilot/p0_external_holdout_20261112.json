@@ -279,5 +279,21 @@
     "independent_usable_outcomes": 8,
     "overlapping_usable_outcomes": 4,
     "usable_outcomes_including_overlapping": 12
+  },
+  "fulltext_review_batch2": {
+    "status": "assisted_batch_ready_for_human_confirmation",
+    "articles": 9,
+    "outcome_slots": 36,
+    "not_usable_or_absent": 22,
+    "final_decisions_made": false,
+    "human_confirmation_required": true,
+    "model_used": false,
+    "network_used": false,
+    "json_path": "public_benchmark/evaluation/c1_pilot/holdout_p0_20261112/fulltext_review_batch2_v1.json",
+    "csv_path": "public_benchmark/evaluation/c1_pilot/holdout_p0_20261112/fulltext_review_batch2_v1.csv",
+    "md_path": "public_benchmark/evaluation/c1_pilot/holdout_p0_20261112/fulltext_review_batch2_v1.md",
+    "independent_usable_outcomes": 11,
+    "overlapping_usable_outcomes": 3,
+    "usable_outcomes_including_overlapping": 14
   }
 }

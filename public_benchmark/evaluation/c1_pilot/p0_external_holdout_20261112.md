@@ -144,6 +144,21 @@ Subgruppen. Details:
 Mehrfachgruende sind moeglich; die Regelzahlen
 sind nicht additiv.
 
+Die zweite assistierte Volltextprüfung umfasst die neun verbleibenden hohen
+Prioritäten: **36 Outcome-Slots**: **11 unabhängig verwendbar**, **3 überlappend,
+aber nicht unabhängig** (alle aus `PMC13519320`) und **22 nicht verwendbar oder
+nicht berichtet**; formal verwendbar sind damit **14**, unabhängig davon **11**.
+**0 finale Entscheidungen**. Vier unabhängige Outcomes liefern `PMC13626740` und
+`PMC13590641`, je eines `PMC13743599`, `PMC13574397` und `PMC13519320`;
+`PMC13519320` liefert drei weitere überlappende Outcomes. `PMC13610533`
+berichtet Median/IQR, `PMC13613700` nur adjustierte Assoziationen,
+`PMC13688066` keine Armzahlen und `PMC13596784` kein armweises n pro Zeitpunkt;
+bei `PMC13574397` bleiben die ökonomischen Slots ohne SD bzw. numerischen ICER.
+Details:
+[`fulltext_review_batch2_v1.md`](holdout_p0_20261112/fulltext_review_batch2_v1.md),
+[`fulltext_review_batch2_v1.csv`](holdout_p0_20261112/fulltext_review_batch2_v1.csv),
+[`fulltext_review_batch2_v1.json`](holdout_p0_20261112/fulltext_review_batch2_v1.json).
+
 ## 2. Auswahlkriterien
 
 ### 2.1 Einschluss
