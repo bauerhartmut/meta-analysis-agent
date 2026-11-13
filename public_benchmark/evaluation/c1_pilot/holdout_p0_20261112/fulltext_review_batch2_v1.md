@@ -18,11 +18,11 @@ Median/IQR, adjustierte Assoziationen und fehlende Arm-N bleiben leer.
 | [PMC13626740](https://pmc.ncbi.nlm.nih.gov/articles/PMC13626740/) | Sekundäranalyse der OPTIMA-RCT; CBT 101 / ST 97; T3 nach 7 Wochen | Intervention 101 / Kontrolle 97 / randomisiert 198 / analysiert 82/66 bei T3 | likely_eligible_two_arms | 4/4 | 4/4 | 0/4 |
 | [PMC13688066](https://pmc.ncbi.nlm.nih.gov/articles/PMC13688066/) | Post-hoc-Sekundäranalyse der ANNEXa-I-RCT; 434 von 530 ITT mit Bildgebung; Andexanet vs. Usual Care | Intervention nicht berichtet / Kontrolle nicht berichtet / randomisiert 530 / analysiert 434 | uncertain_post_hoc_no_arm_counts | 0/4 | 0/4 | 0/4 |
 | [PMC13519320](https://pmc.ncbi.nlm.nih.gov/articles/PMC13519320/) | Post-hoc-gepoolte Analyse von BOREAS und NOTUS; Dupilumab 938 / Placebo 936; 52 Wochen | Intervention 938 / Kontrolle 936 / randomisiert 1874 / analysiert 1874 / Trials 2 | uncertain_pooled_two_trials | 4/4 | 1/4 | 3/4 |
-| [PMC13590641](https://pmc.ncbi.nlm.nih.gov/articles/PMC13590641/) | Phase-III-ADVANCE-RCT, open-label, vorzeitig beendet; Experiment 24 / Kontrolle 19; plus Real-World-Kohorte | Intervention 24 / Kontrolle 19 / randomisiert 43 / analysiert 43 | uncertain_safety_only_early_stopped | 4/4 | 4/4 | 0/4 |
+| [PMC13590641](https://pmc.ncbi.nlm.nih.gov/articles/PMC13590641/) | Phase-III-ADVANCE-RCT, open-label, vorzeitig beendet; Experiment 24 / Kontrolle 19; plus Real-World-Kohorte | Intervention 24 / Kontrolle 19 / randomisiert 43 / analysiert 43 | uncertain_safety_only_early_stopped | 4/4 | 1/4 | 3/4 |
 | [PMC13596784](https://pmc.ncbi.nlm.nih.gov/articles/PMC13596784/) | Zweiarmige randomisierte Machbarkeitsstudie; MATILDA 28 / aktive Kontrolle 29; 6 und 12 Monate | Intervention 28 / Kontrolle 29 / randomisiert 57 / analysiert 52 mit 6-Monats-Daten; 25 MATILDA nach Tod/Withdrawal | uncertain_feasibility_no_timepoint_n | 0/4 | 0/4 | 0/4 |
 | [PMC13574397](https://pmc.ncbi.nlm.nih.gov/articles/PMC13574397/) | Kosteneffektivitätsanalyse der vorausgegangenen RCT; Omeprazol 10 / Standard 10; 4 Wochen | Intervention 10 / Kontrolle 10 / randomisiert 20 / analysiert 20 | eligible_single_binary_outcome | 1/4 | 1/4 | 0/4 |
 
-Unabhängig verwendbar: **11/36**; überlappend, nicht unabhängig: **3/36**; nicht verwendbar oder nicht berichtet: **22/36**.
+Unabhängig verwendbar: **8/36**; überlappend, nicht unabhängig: **6/36**; nicht verwendbar oder nicht berichtet: **22/36**.
 Formal verwendbar einschließlich überlappender Outcomes: **14/36**.
 
 ## PMC13610533 — Chokeberry juice in women with prediabetes
@@ -234,10 +234,10 @@ Formal verwendbar einschließlich überlappender Outcomes: **14/36**.
 
 | Slot | Outcome | Typ | Intervention | Kontrolle | Verwendbar | Unabhängigkeit | Quelle |
 |---:|---|---|---|---|---|---|---|
-| 1 | Any adverse event, any grade | binary | 23/24 | 15/19 | ja | independent | Any grade; Tabelle führt zusätzlich Grade 1-4. |
-| 2 | Neutropenia, any grade | binary | 4/24 | 10/19 | ja | independent | Any grade; Tabelle führt zusätzlich Grade 1-4. |
-| 3 | Nausea, any grade | binary | 0/24 | 5/19 | ja | independent | Any grade; Tabelle führt zusätzlich Grade 1-4. |
-| 4 | Rash, any grade | binary | 6/24 | 1/19 | ja | independent | Any grade; Tabelle führt zusätzlich Grade 1-4. |
+| 1 | Any adverse event, any grade | binary | 23/24 | 15/19 | ja | independent | Any grade; Sammeloutcome. Tabelle führt zusätzlich Grade 1-4. |
+| 2 | Neutropenia, any grade | binary | 4/24 | 10/19 | ja | overlapping_subgroup | Any grade; spezifische AE, überlappt mit dem Sammeloutcome in Slot 1. |
+| 3 | Nausea, any grade | binary | 0/24 | 5/19 | ja | overlapping_subgroup | Any grade; spezifische AE, überlappt mit dem Sammeloutcome in Slot 1. |
+| 4 | Rash, any grade | binary | 6/24 | 1/19 | ja | overlapping_subgroup | Any grade; spezifische AE, überlappt mit dem Sammeloutcome in Slot 1. |
 
 ### Quellen
 
@@ -324,11 +324,12 @@ Formal verwendbar einschließlich überlappender Outcomes: **14/36**.
 
 ## Konsequenz
 
-11 Outcomes sind unabhängig verwendbar: vier aus `PMC13626740`, vier
-Sicherheitsoutcomes aus `PMC13590641`, eines aus `PMC13743599`, eines
+8 Outcomes sind unabhängig verwendbar: vier aus `PMC13626740`,
+eines aus `PMC13590641` (Sammeloutcome Any AE), eines aus `PMC13743599`, eines
 aus `PMC13574397` und eines aus `PMC13519320`. `PMC13519320` liefert
-drei weitere formal verwendbare, aber überlappende Outcomes aus einer
-gepoolten Analyse zweier RCTs; sie zählen nicht als unabhängig. Vier Artikel
+drei weitere überlappende Outcomes aus einer gepoolten Analyse zweier RCTs;
+`PMC13590641` liefert drei spezifische AEs, die mit dem Sammeloutcome
+überlappen. Sie zählen nicht als unabhängig. Vier Artikel
 bleiben ohne strukturierte Werte: `PMC13610533` (Median/IQR),
 `PMC13613700` (nur adjustierte Assoziationen), `PMC13688066` (keine
 Armzahlen) und `PMC13596784` (kein armweises n pro Zeitpunkt); bei

@@ -349,8 +349,9 @@ Plan: [`holdout_plan_20261112.md`](holdout_plan_20261112.md), Schema:
   finale Entscheidung.
 - [`holdout_p0_20261112/fulltext_review_batch2_v1.md`](holdout_p0_20261112/fulltext_review_batch2_v1.md):
   assistierte Volltextprüfung der neun verbleibenden hohen Prioritäten mit 36
-  Outcome-Slots; 11 unabhängig verwendbar, 3 überlappend aus `PMC13519320`,
-  22 leer oder nicht verwendbar; 14 formal verwendbar, keine finale Entscheidung.
+  Outcome-Slots; 8 unabhängig verwendbar, 6 überlappend (3 aus `PMC13519320`,
+  3 aus `PMC13590641`), 22 leer oder nicht verwendbar; 14 formal verwendbar,
+  keine finale Entscheidung.
 - [`holdout_p0_20261112/fulltext_access_plan_v1.md`](holdout_p0_20261112/fulltext_access_plan_v1.md):
   lokale Zugriffsprüfung für die 36 Volltexte gegen 1.291 `data/fulltext`-Texte,
   101 Metadatensätze und 62 Inbox-Dateien; alle Open Access/Europe PMC,

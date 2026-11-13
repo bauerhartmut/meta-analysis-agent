@@ -145,12 +145,14 @@ Mehrfachgruende sind moeglich; die Regelzahlen
 sind nicht additiv.
 
 Die zweite assistierte Volltextprüfung umfasst die neun verbleibenden hohen
-Prioritäten: **36 Outcome-Slots**: **11 unabhängig verwendbar**, **3 überlappend,
-aber nicht unabhängig** (alle aus `PMC13519320`) und **22 nicht verwendbar oder
-nicht berichtet**; formal verwendbar sind damit **14**, unabhängig davon **11**.
-**0 finale Entscheidungen**. Vier unabhängige Outcomes liefern `PMC13626740` und
-`PMC13590641`, je eines `PMC13743599`, `PMC13574397` und `PMC13519320`;
-`PMC13519320` liefert drei weitere überlappende Outcomes. `PMC13610533`
+Prioritäten: **36 Outcome-Slots**: **8 unabhängig verwendbar**, **6 überlappend,
+aber nicht unabhängig** (3 aus `PMC13519320`, 3 aus `PMC13590641`) und **22 nicht
+verwendbar oder nicht berichtet**; formal verwendbar sind damit **14**, unabhängig
+davon **8**. **0 finale Entscheidungen**. Vier unabhängige Outcomes liefert
+`PMC13626740`, je eines `PMC13590641` (Sammeloutcome Any AE), `PMC13743599`,
+`PMC13574397` und `PMC13519320`; `PMC13519320` liefert drei weitere überlappende
+Outcomes, `PMC13590641` drei spezifische AEs, die mit dem Sammeloutcome
+überlappen. `PMC13610533`
 berichtet Median/IQR, `PMC13613700` nur adjustierte Assoziationen,
 `PMC13688066` keine Armzahlen und `PMC13596784` kein armweises n pro Zeitpunkt;
 bei `PMC13574397` bleiben die ökonomischen Slots ohne SD bzw. numerischen ICER.

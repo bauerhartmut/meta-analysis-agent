@@ -5,8 +5,8 @@
   "scope": "Neun verbleibende hohe Prioritäten: PMC13610533, PMC13743599, PMC13613700, PMC13626740, PMC13688066, PMC13519320, PMC13590641, PMC13596784, PMC13574397",
   "articles": 9,
   "outcome_slots": 36,
-  "independent_usable_outcomes": 11,
-  "overlapping_usable_outcomes": 3,
+  "independent_usable_outcomes": 8,
+  "overlapping_usable_outcomes": 6,
   "not_usable_or_absent": 22,
   "usable_outcomes_including_overlapping": 14,
   "final_decisions_made": false,
@@ -706,8 +706,8 @@
         "Real-World-Kohorte nicht randomisiert"
       ],
       "outcome_counts": {
-        "independent_usable": 4,
-        "overlapping_usable": 0,
+        "independent_usable": 1,
+        "overlapping_usable": 3,
         "not_usable": 0
       },
       "human_review": {
@@ -737,7 +737,7 @@
             "total": 19
           },
           "usable": true,
-          "note": "Any grade; Tabelle führt zusätzlich Grade 1-4.",
+          "note": "Any grade; Sammeloutcome. Tabelle führt zusätzlich Grade 1-4.",
           "source_quote": "Table 3 | Most common adverse events of any cause in > 5% | Arms: Control groupNo. (%) (N = 19) / Experiment groupNo. (%) (N = 24) / P | Any events | 15 (78.9) | 5 (26.3) | 6 (31.6) | 4 (21.1) | 0 (0.0) | 23 (95.8) | 10 (41.7) | 9 (37.5) | 4 (16.7) | 0 (0.0) | 0.32 | Context: Any grade (erste Spalte je Arm); weitere Spalten Grade 1-4.",
           "outcome_independence": "independent"
         },
@@ -758,9 +758,9 @@
             "total": 19
           },
           "usable": true,
-          "note": "Any grade; Tabelle führt zusätzlich Grade 1-4.",
+          "note": "Any grade; spezifische AE, überlappt mit dem Sammeloutcome in Slot 1.",
           "source_quote": "Table 3 | Most common adverse events of any cause in > 5% | Arms: Control groupNo. (%) (N = 19) / Experiment groupNo. (%) (N = 24) / P | Neutropenia | 10 (52.6) | 1 (5.3) | 6 (31.6) | 3 (15.8) | 0 (0.0) | 4 (16.7) | 3 (12.5) | 1 (4.2) | 0 (0.0) | 0 (0.0) | 0.01 | Context: Any grade (erste Spalte je Arm); weitere Spalten Grade 1-4.",
-          "outcome_independence": "independent"
+          "outcome_independence": "overlapping_subgroup"
         },
         {
           "slot": 3,
@@ -779,9 +779,9 @@
             "total": 19
           },
           "usable": true,
-          "note": "Any grade; Tabelle führt zusätzlich Grade 1-4.",
+          "note": "Any grade; spezifische AE, überlappt mit dem Sammeloutcome in Slot 1.",
           "source_quote": "Table 3 | Most common adverse events of any cause in > 5% | Arms: Control groupNo. (%) (N = 19) / Experiment groupNo. (%) (N = 24) / P | Nausea | 5 (26.3) | 1 (5.3) | 4 (21.1) | 0 (0.0) | 0 (0.0) | 0 (0.0) | 0 (0.0) | 0 (0.0) | 0 (0.0) | 0 (0.0) | 0.028 | Context: Any grade (erste Spalte je Arm); weitere Spalten Grade 1-4.",
-          "outcome_independence": "independent"
+          "outcome_independence": "overlapping_subgroup"
         },
         {
           "slot": 4,
@@ -800,9 +800,9 @@
             "total": 19
           },
           "usable": true,
-          "note": "Any grade; Tabelle führt zusätzlich Grade 1-4.",
+          "note": "Any grade; spezifische AE, überlappt mit dem Sammeloutcome in Slot 1.",
           "source_quote": "Table 3 | Most common adverse events of any cause in > 5% | Arms: Control groupNo. (%) (N = 19) / Experiment groupNo. (%) (N = 24) / P | Rash | 1 (5.3) | 0 (0.0) | 1 (5.3) | 0 (0.0) | 0 (0.0) | 6 (25.0) | 4 (16.7) | 2 (8.3) | 0 (0.0) | 0 (0.0) | 0.15 | Context: Any grade (erste Spalte je Arm); weitere Spalten Grade 1-4.",
-          "outcome_independence": "independent"
+          "outcome_independence": "overlapping_subgroup"
         }
       ]
     },

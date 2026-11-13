@@ -292,8 +292,8 @@
     "json_path": "public_benchmark/evaluation/c1_pilot/holdout_p0_20261112/fulltext_review_batch2_v1.json",
     "csv_path": "public_benchmark/evaluation/c1_pilot/holdout_p0_20261112/fulltext_review_batch2_v1.csv",
     "md_path": "public_benchmark/evaluation/c1_pilot/holdout_p0_20261112/fulltext_review_batch2_v1.md",
-    "independent_usable_outcomes": 11,
-    "overlapping_usable_outcomes": 3,
+    "independent_usable_outcomes": 8,
+    "overlapping_usable_outcomes": 6,
     "usable_outcomes_including_overlapping": 14
   }
 }
