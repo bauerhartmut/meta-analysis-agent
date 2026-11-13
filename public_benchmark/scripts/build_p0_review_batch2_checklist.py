@@ -99,8 +99,8 @@ def find_table_wrap(root: ET.Element, label: str) -> ET.Element | None:
     return None
 
 
-def extract_table_rows(table_wrap: ET.Element) -> list[str]:
-    rows: list[str] = []
+def table_row_cells(table_wrap: ET.Element) -> list[list[str]]:
+    rows: list[list[str]] = []
     for element in table_wrap.iter():
         if local_name(element.tag) != "tr":
             continue
@@ -110,7 +110,7 @@ def extract_table_rows(table_wrap: ET.Element) -> list[str]:
             if local_name(child.tag) in {"th", "td"}
         ]
         if cells:
-            rows.append(" | ".join(cells))
+            rows.append(cells)
     return rows
 
 
@@ -151,13 +151,110 @@ def numeric_tokens(text: str) -> set[str]:
     return {token.replace(",", "") for token in tokens}
 
 
-def row_contains(row: str, label: str, values: list[str]) -> bool:
-    if normalize(label) not in normalize(row):
-        return False
+GENERIC_ARM_TOKENS = {
+    "active",
+    "and",
+    "arm",
+    "for",
+    "group",
+    "n",
+    "no",
+    "of",
+    "p",
+    "plus",
+    "sample",
+    "the",
+    "total",
+    "with",
+}
+
+
+def meaningful_tokens(label: str) -> set[str]:
+    return {
+        token
+        for token in normalize(label).split()
+        if token not in GENERIC_ARM_TOKENS and not token.isdigit()
+    }
+
+
+def table_header_groups(table_wrap: ET.Element) -> tuple[list[tuple[int, str]], int]:
+    """Return (column start, label) pairs and the expanded table width."""
+    for element in table_wrap.iter():
+        if local_name(element.tag) != "tr":
+            continue
+        children = [
+            child
+            for child in element
+            if local_name(child.tag) in {"th", "td"}
+        ]
+        if not children or not any(local_name(child.tag) == "th" for child in children):
+            continue
+        groups: list[tuple[int, str]] = []
+        position = 0
+        for child in children:
+            try:
+                span = int(child.get("colspan", "1"))
+            except ValueError:
+                span = 1
+            text = element_text(child)
+            if text:
+                groups.append((position, text))
+            position += max(span, 1)
+        if groups:
+            return groups, position
+    return [], 0
+
+
+def arm_column_ranges(
+    table_wrap: ET.Element,
+    labels: dict[str, str],
+    row_width: int,
+) -> dict[str, tuple[int, int]]:
+    """Map intervention/control labels to column ranges in the header grid."""
+    groups, width = table_header_groups(table_wrap)
+    if not groups:
+        return {}
+    positions: dict[str, int] = {}
+    for role, label in labels.items():
+        target = meaningful_tokens(label)
+        hits = [
+            position
+            for position, header in groups
+            if target & meaningful_tokens(header)
+        ]
+        if len(hits) != 1:
+            return {}
+        positions[role] = hits[0]
+    if len(set(positions.values())) != 2:
+        return {}
+    starts = [position for position, _ in groups]
+    first_start = min(starts)
+    limit = min(width, row_width)
+    ranges: dict[str, tuple[int, int]] = {}
+    for role, position in positions.items():
+        start = 1 if position == first_start else position
+        end = next((value for value in starts if value > position), limit)
+        end = min(end, limit)
+        if start >= end:
+            return {}
+        ranges[role] = (start, end)
+    return ranges
+
+
+def values_in_cells(cells: list[str], values: list[str]) -> bool:
+    tokens: set[str] = set()
+    for cell in cells:
+        tokens.update(numeric_tokens(cell))
     return all(
-        normalize_number(value).lstrip(".") in numeric_tokens(row)
+        normalize_number(value).lstrip(".") in tokens
         for value in values
     )
+
+
+def cells_contain(cells: list[str], label: str, values: list[str]) -> bool:
+    if not cells or normalize(label) not in normalize(cells[0]):
+        return False
+    return values_in_cells(cells, values)
 
 
 def sha256(path: Path) -> str:
@@ -182,6 +279,8 @@ def main() -> None:
     table_rows = 0
     table_paired_rows = 0
     table_single_rows = 0
+    arm_mapped_rows = 0
+    label_only_rows = 0
     structured_value_sets = 0
     values_in_quote = 0
     issues: list[str] = []
@@ -226,8 +325,15 @@ def main() -> None:
                     continue
                 table_text = normalize(element_text(table_wrap))
                 caption_ok = normalize(table["caption"]) in table_text
-                row_label_ok = normalize(row["row_label"]) in table_text
-                xml_rows = extract_table_rows(table_wrap)
+                all_row_cells = table_row_cells(table_wrap)
+                row_cells = (
+                    all_row_cells[outcome["row_index"] - 1]
+                    if 0 < outcome["row_index"] <= len(all_row_cells)
+                    else []
+                )
+                row_label_ok = bool(row_cells) and (
+                    normalize(row["row_label"]) in normalize(row_cells[0])
+                )
                 intervention_values = [
                     str(outcome["intervention"][key])
                     for key in ("mean", "sd", "events", "total")
@@ -238,6 +344,18 @@ def main() -> None:
                     for key in ("mean", "sd", "events", "total")
                     if outcome["control"].get(key) is not None
                 ]
+                arm_ranges = (
+                    arm_column_ranges(
+                        table_wrap,
+                        {
+                            "intervention": outcome["intervention"]["label"],
+                            "control": outcome["control"]["label"],
+                        },
+                        len(row_cells),
+                    )
+                    if intervention_values or control_values
+                    else {}
+                )
                 if outcome.get("control_row_index") is not None:
                     control_row = next(
                         (
@@ -252,22 +370,39 @@ def main() -> None:
                             f"{pmcid} Slot {outcome['slot']}: Kontrollzeile nicht im Dossier"
                         )
                         continue
-                    intervention_ok = any(
-                        row_contains(item, row["row_label"], intervention_values)
-                        for item in xml_rows
+                    control_cells = all_row_cells[outcome["control_row_index"] - 1] if (
+                        0 < outcome["control_row_index"] <= len(all_row_cells)
+                    ) else []
+                    intervention_ok = cells_contain(
+                        row_cells, row["row_label"], intervention_values
                     )
-                    control_ok = any(
-                        row_contains(item, control_row["row_label"], control_values)
-                        for item in xml_rows
+                    control_ok = cells_contain(
+                        control_cells, control_row["row_label"], control_values
                     )
                     row_ok = intervention_ok and control_ok
                     table_paired_rows += 1
                 else:
-                    all_values = intervention_values + control_values
-                    row_ok = any(
-                        row_contains(item, row["row_label"], all_values)
-                        for item in xml_rows
-                    )
+                    if not intervention_values and not control_values:
+                        row_ok = row_label_ok
+                        label_only_rows += 1
+                    elif not arm_ranges:
+                        row_ok = False
+                    else:
+                        intervention_start, intervention_end = arm_ranges["intervention"]
+                        control_start, control_end = arm_ranges["control"]
+                        row_ok = (
+                            row_label_ok
+                            and values_in_cells(
+                                row_cells[intervention_start:intervention_end],
+                                intervention_values,
+                            )
+                            and values_in_cells(
+                                row_cells[control_start:control_end],
+                                control_values,
+                            )
+                        )
+                        if row_ok:
+                            arm_mapped_rows += 1
                     table_single_rows += 1
                 if caption_ok and row_ok:
                     table_rows += 1
@@ -283,9 +418,16 @@ def main() -> None:
                             str(outcome["intervention"]["events"]),
                             str(outcome["control"]["events"]),
                         ]
-                        events_in_row = any(
-                            row_contains(item, row["row_label"], event_values)
-                            for item in xml_rows
+                        events_in_arms = (
+                            bool(arm_ranges)
+                            and values_in_cells(
+                                row_cells[arm_ranges["intervention"][0]:arm_ranges["intervention"][1]],
+                                [event_values[0]],
+                            )
+                            and values_in_cells(
+                                row_cells[arm_ranges["control"][0]:arm_ranges["control"][1]],
+                                [event_values[1]],
+                            )
                         )
                         header_cells = extract_arm_header_cells(table_wrap)
                         header_totals = {
@@ -302,7 +444,7 @@ def main() -> None:
                         )
                         header_denominator = (
                             caption_ok
-                            and events_in_row
+                            and events_in_arms
                             and totals_in_arm_headers
                         )
                     if header_denominator:
@@ -417,7 +559,7 @@ def main() -> None:
         "",
         f"- **{source_present}/36** Slots haben einen Quelleintrag.",
         f"- **{text_exact}** Results-Textzitate wurden exakt im normalisierten XML gefunden.",
-        f"- **{table_refs}** Tabellenverweise: Caption und ggf. konkrete Arm-Header-Zellen wurden in der referenzierten Tabelle geprüft; Zeilenlabel und strukturierte Werte ausschließlich in der jeweils referenzierten Zeile; "
+        f"- **{table_refs}** Tabellenverweise: Caption und ggf. konkrete Arm-Header-Zellen wurden in der referenzierten Tabelle geprüft; Zeilenlabel und strukturierte Werte in der jeweils referenzierten Zeile bzw. den daraus abgeleiteten Armspalten; "
         f"**{table_rows}/18** Tabellen-Outcomes bestanden die Quellenprüfung: "
         f"{table_rows - table_paired_rows - len(header_denominator_slots)}/{table_single_rows} "
         f"Einzelzeilen zeilenexakt, {len(header_denominator_slots)}/{table_single_rows} "
@@ -425,6 +567,10 @@ def main() -> None:
         f"{table_paired_rows}/{table_paired_rows} Kosten-Outcomes mit getrennten "
         "Interventions-/Kontrollzeilen bestanden. Der ICER-Slot ist ein "
         "Tabellenverweis ohne eigene Zeilenwerte.",
+        f"- **{arm_mapped_rows}** Nicht-Header-Outcomes mit strukturierten Werten "
+        "wurden in den aus dem Tabellenkopf abgeleiteten Armspalten geprüft; "
+        f"{label_only_rows} ohne strukturierte Werte nur am Zeilenlabel; "
+        f"{table_paired_rows} Kosten-Outcomes über getrennte Armzeilen.",
         "- **4/4** N-Werte in den konkreten Arm-Header-Zellen von Tabelle 3 "
         "(`PMC13590641`, Control `N = 19`, Experiment `N = 24`) sind als "
         "zulässige Nennerquelle geprüft und in "
@@ -435,8 +581,8 @@ def main() -> None:
         "",
         "Hinweis: Tabellenquellen sind keine zusammenhängenden Fließtextsätze. Die",
         "Quellenprüfung prüft die Caption und ggf. konkrete Arm-Header-Zellen in",
-        "der referenzierten Tabelle; Zeilenlabel und strukturierte Werte",
-        "ausschließlich in der referenzierten Zeile. Sie ersetzt nicht die",
+        "der referenzierten Tabelle; Zeilenlabel und strukturierte Werte in der",
+        "referenzierten Zeile bzw. den abgeleiteten Armspalten. Sie ersetzt nicht die",
         "menschliche Sichtprüfung der Tabelle.",
         "",
         "## Überlappungen",
@@ -594,6 +740,9 @@ def main() -> None:
                 "text_exact": text_exact,
                 "table_refs": table_refs,
                 "table_rows_ok": table_rows,
+                "arm_mapped_rows": arm_mapped_rows,
+                "label_only_rows": label_only_rows,
+                "paired_rows": table_paired_rows,
                 "values_in_quote": values_in_quote,
                 "structured_value_sets": structured_value_sets,
                 "issues": len(issues),

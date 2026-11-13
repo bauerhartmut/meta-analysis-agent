@@ -161,7 +161,9 @@ Details:
 [`fulltext_review_batch2_v1.csv`](holdout_p0_20261112/fulltext_review_batch2_v1.csv),
 [`fulltext_review_batch2_v1.json`](holdout_p0_20261112/fulltext_review_batch2_v1.json).
 Das unabhängige Audit bestätigt **36/36 Quellen**, **0 Zähler- oder
-Überlappungsabweichungen** und **keine geänderten Outcome-Werte**. Vier
+Überlappungsabweichungen** und **keine geänderten Outcome-Werte**. Acht
+Nicht-Header-Outcomes wurden armspaltengenau geprüft; vier ohne strukturierte
+Werte nur am Zeilenlabel, zwei Kosten-Outcomes über getrennte Armzeilen. Vier
 AE-Outcomes aus `PMC13590641` beziehen ihren Nenner aus den konkreten
 Arm-Header-Zellen von Tabelle 3; diese N-Werte sind als zulässige Quelle
 dokumentiert. Die
